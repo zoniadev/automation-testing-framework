@@ -1,4 +1,6 @@
 # Opt-in page locators:
+form_logo = "//*[starts-with(@class, 'form-logo')]"
+register1_button = "//*[@class='btn btn-1']"
 first_name_field = "//input[@id='first-name']"
 email_field = "//input[@id='email']"
 close_popup_button = "//div[@class='book-pop-up-form']//button[@aria-label='Close']"

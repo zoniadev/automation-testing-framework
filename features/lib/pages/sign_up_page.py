@@ -1,8 +1,5 @@
-import time
-
 import common_variables
 from features.lib.pages.base_page_object import BasePage
-from common_variables import *
 
 
 class SignUpPage(BasePage):
@@ -19,7 +16,6 @@ class SignUpPage(BasePage):
         self.populate_cc_details()
         self.click('signup_activate_button')
         self.wait_for_url_change(common_variables.booster_upsale_url)
-        # self.verify_url(common_variables.booster_upsale_url)
 
     def populate_cc_details(self):
         self.switch_to_iframe('signup_cc_number_iframe')

@@ -121,4 +121,22 @@ class BasePage(object):
     def switch_to_default_content(self):
         self.browser.switch_to.default_content()
 
+    def scroll_to_element(self, locator):
+        element = self.find_single_element(locator)
+        self.browser.execute_script("arguments[0].scrollIntoView();", element)
+        print(f'===> Scrolled to element "{locator}"')
+
+    def verify_element_in_viewport(self, locator):
+        element = self.find_single_element(locator)
+        script = """
+        var elem = arguments[0], box = elem.getBoundingClientRect();
+        return box.top >= 0 && box.left >= 0 && 
+               box.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+               box.right <= (window.innerWidth || document.documentElement.clientWidth);
+        """
+        element_visible = self.browser.execute_script(script, element)
+        if element_visible:
+            print(f'===> Verified element {locator} is visible in the displayed part of the page')
+        else:
+            raise Exception(f'Element {locator} is not visible in the displayed part of the page!')
 

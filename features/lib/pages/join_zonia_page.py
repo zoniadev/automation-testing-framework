@@ -9,4 +9,3 @@ class JoinZoniaPage(BasePage):
     def join(self):
         self.click('join_button')
         self.wait_for_url_change(common_variables.sign_up_url)
-        self.verify_url(common_variables.sign_up_url)

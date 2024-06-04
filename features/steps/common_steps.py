@@ -32,3 +32,9 @@ def user_sinn_with_random_data(context):
     page = SignUpPage(context)
     page.sign_up('monthly', name=RD.first_name(), email=RD.email(), password=RD.password())
 
+
+@step('user verify Opt In register buttons')
+def user_fill_opt_in_form(context):
+    page = OptInPage(context)
+    page.verify_register_buttons_navigation()
+

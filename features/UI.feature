@@ -10,5 +10,5 @@ Feature: UI tests
 
   @WIP
   Scenario: test
-    Given user sign-up with random data
+    Given user verify Opt In register buttons
 
