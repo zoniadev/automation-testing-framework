@@ -9,19 +9,21 @@ class OptInPage(BasePage):
         BasePage.__init__(self, context.browser)
 
     def verify_register_buttons_navigation(self):
+        button_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         self.verify_element_visible('form_logo')
         self.verify_element_in_viewport('form_logo')
-        self.scroll_to_element('register1_button')
-        try:
-            self.verify_element_visible('close_popup_button', 5)
-            self.click('close_popup_button')
-        except:
-            pass
-        time.sleep(1)
-        self.click('register1_button')
-        self.verify_element_visible('form_logo')
-        time.sleep(1)
-        self.verify_element_in_viewport('form_logo')
+        for item in button_numbers:
+            self.scroll_to_element(f'register{str(item)}_button')
+            try:
+                self.verify_element_visible('close_popup_button', 5)
+                self.click('close_popup_button')
+            except:
+                pass
+            time.sleep(1)
+            self.click(f'register{str(item)}_button')
+            self.verify_element_visible('form_logo')
+            time.sleep(1)
+            self.verify_element_in_viewport('form_logo')
 
     def register(self, name, email):
         self.verify_element_visible('close_popup_button')
