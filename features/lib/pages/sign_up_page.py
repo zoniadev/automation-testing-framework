@@ -17,16 +17,3 @@ class SignUpPage(BasePage):
         self.click('signup_activate_button')
         self.wait_for_url_change(common_variables.booster_upsale_url)
 
-    def populate_cc_details(self):
-        self.switch_to_iframe('signup_cc_number_iframe')
-        self.enter_text(common_variables.test_cc_number, 'signup_cc_number_field')
-        self.switch_to_default_content()
-        self.switch_to_iframe('signup_cc_expiration_iframe')
-        self.enter_text(common_variables.test_cc_expiration_date, 'signup_cc_expiration_field')
-        self.switch_to_default_content()
-        self.switch_to_iframe('signup_cc_cvv_iframe')
-        self.enter_text(common_variables.test_cc_cvv, 'signup_cc_cvv_field')
-        self.switch_to_default_content()
-        self.switch_to_iframe('signup_cc_zip_iframe')
-        self.enter_text(common_variables.test_cc_zip, 'signup_cc_zip_field')
-        self.switch_to_default_content()

@@ -18,7 +18,7 @@ def before_scenario(context, scenario):
     options = webdriver.ChromeOptions()
     print(f"Executing scenario: '{context.scenario.name}'")
     context.browser = webdriver.Chrome(service=service, options=options)
-    context.browser.get(common_variables.opt_in_url)
+    context.browser.get(common_variables.restore_sleep_start_url)
 
 
 def before_step(context, step):

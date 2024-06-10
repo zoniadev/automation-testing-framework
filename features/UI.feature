@@ -1,4 +1,3 @@
-
 Feature: UI tests
 
   Scenario: Sign Up flow
@@ -8,7 +7,16 @@ Feature: UI tests
       | name         | email                      | password | bill_cycle |
       | John Marston | johnmarston@mailinator.com | 123456   | monthly    |
 
-  @WIP
+
   Scenario: test
     Given user verify Opt In register buttons
+
+
+  @WIP
+  Scenario: Restore Sleep Supplements
+    Given user select to buy "one" bottles in Restore Sleep Supplements page
+    And user select to "upgrade" in "first" Upsell page
+    And user select to "upgrade" in "second" Upsell page
+    And user select to "not upgrade" in "third" Upsell page
+    And user select to "not upgrade" in "fourth" Upsell page
 

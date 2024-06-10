@@ -1,4 +1,5 @@
 import time
+import common_variables
 from pydoc import locate
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -6,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 class BasePage(object):
-    __TIMEOUT = 15
+    __TIMEOUT = 25
 
     def __init__(self, browser):
         self.browser = browser
@@ -16,12 +17,27 @@ class BasePage(object):
         current_url = self.browser.current_url
         assert expected_url == current_url, f"Expected {expected_url}, but got {current_url}"
 
+    def verify_url_contains(self, expected_url):
+        current_url = self.browser.current_url
+        assert expected_url in current_url, f"Expected {expected_url}, but got {current_url}"
+
     def wait_for_url_change(self, expected_url, timeout=__TIMEOUT):
         current_url = self.browser.current_url
         print('===> Waiting for URL change')
         try:
             WebDriverWait(self.browser, timeout).until(EC.url_changes(current_url))
             self.verify_url(expected_url)
+            print(f"===> URL changed successfully to '{expected_url}'")
+        except:
+            actual_url = self.browser.current_url
+            raise Exception(f"URL did not change within the specified time and is '{actual_url}'!")
+
+    def wait_for_partial_url_change(self, expected_url, timeout=__TIMEOUT):
+        current_url = self.browser.current_url
+        print('===> Waiting for URL change')
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.url_changes(current_url))
+            self.verify_url_contains(expected_url)
             print(f"===> URL changed successfully to '{expected_url}'")
         except:
             actual_url = self.browser.current_url
@@ -139,4 +155,18 @@ class BasePage(object):
             print(f'===> Verified element {locator} is visible in the displayed part of the page')
         else:
             raise Exception(f'Element {locator} is not visible in the displayed part of the page!')
+
+    def populate_cc_details(self):
+        self.switch_to_iframe('signup_cc_number_iframe')
+        self.enter_text(common_variables.test_cc_number, 'signup_cc_number_field')
+        self.switch_to_default_content()
+        self.switch_to_iframe('signup_cc_expiration_iframe')
+        self.enter_text(common_variables.test_cc_expiration_date, 'signup_cc_expiration_field')
+        self.switch_to_default_content()
+        self.switch_to_iframe('signup_cc_cvv_iframe')
+        self.enter_text(common_variables.test_cc_cvv, 'signup_cc_cvv_field')
+        self.switch_to_default_content()
+        self.switch_to_iframe('signup_cc_zip_iframe')
+        self.enter_text(common_variables.test_cc_zip, 'signup_cc_zip_field')
+        self.switch_to_default_content()
 
