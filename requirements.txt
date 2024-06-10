@@ -1,0 +1,5 @@
+allure-behave==2.9.45
+allure-python-commons==2.9.45
+behave==1.2.6
+decorator==5.1.0
+selenium==4.21.0
