@@ -15,8 +15,8 @@ Feature: UI tests
   @WIP
   Scenario: Restore Sleep Supplements
     Given user select to buy "one" bottles in Restore Sleep Supplements page
-    And user select to "upgrade" in "first" Upsell page
+    When user select to "upgrade" in "first" Upsell page
     And user select to "upgrade" in "second" Upsell page
-    And user select to "not upgrade" in "third" Upsell page
+    Then user select to "not upgrade" in "third" Upsell page
     And user select to "not upgrade" in "fourth" Upsell page
 
