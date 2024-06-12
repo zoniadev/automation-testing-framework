@@ -16,6 +16,7 @@ def before_feature(context, feature):
 def before_scenario(context, scenario):
     service = Service()
     options = webdriver.ChromeOptions()
+    options.add_argument("--headless")
     print(f"Executing scenario: '{context.scenario.name}'")
     context.browser = webdriver.Chrome(service=service, options=options)
     context.browser.get(common_variables.opt_in_url)
