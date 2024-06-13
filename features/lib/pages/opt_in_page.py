@@ -1,5 +1,5 @@
 import time
-
+from common_functions import random_data as RD
 import common_variables
 from features.lib.pages.base_page_object import BasePage
 
@@ -30,5 +30,15 @@ class OptInPage(BasePage):
         self.click('close_popup_button')
         self.enter_text(name, 'first_name_field')
         self.enter_text(email, 'email_field')
+        self.scroll_to_element('register_button')
         self.click('register_button')
         self.wait_for_url_change(common_variables.join_zonia_url)
+
+    def register_random_user(self):
+        try:
+            self.verify_element_visible('close_popup_button', 5)
+            self.click('close_popup_button')
+        except:
+            print(f'Popup did not appeared')
+        self.enter_text(RD.first_name(), 'first_name_field')
+        self.enter_text(RD.email(), 'email_field')

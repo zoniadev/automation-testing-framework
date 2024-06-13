@@ -1,3 +1,4 @@
+
 Feature: UI tests
 
   Scenario: Sign Up flow
@@ -10,6 +11,10 @@ Feature: UI tests
 
   Scenario: test
     Given user verify Opt In register buttons
+
+  @WIP
+  Scenario: GitHub Actions
+    Given user fill opt-in form with random name and email
 
 
   @WIP

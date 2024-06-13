@@ -1,5 +1,5 @@
-opt_in_url = 'https://nishanranjitkar.com/portfolio/unbroken-opt-in/#form-target'
-# opt_in_url = 'https://staging.zonia.com/beyond-the-brain/'
+# opt_in_url = 'https://nishanranjitkar.com/portfolio/unbroken-opt-in/#form-target'
+opt_in_url = 'https://staging.zonia.com/beyond-the-brain/'
 join_zonia_url = 'https://staging.zonia.com/bb-join-zonia'
 sign_up_url = 'https://staging.zonia.com/bb-signup'
 booster_upsale_url = 'https://staging.zonia.com/bb-booster-packages-monthly'

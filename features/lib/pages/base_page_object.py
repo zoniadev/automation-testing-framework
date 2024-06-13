@@ -76,12 +76,12 @@ class BasePage(object):
         if element.startswith("//"):
             web_driver_wait.until(
                 EC.visibility_of_element_located((By.XPATH, element)),
-                message=f"Element with Xpath {locator} is not present!",
+                message=f"Element '{locator}' with Xpath {element} is not visible!",
             )
         else:
             web_driver_wait.until(
                 EC.visibility_of_element_located((By.CSS_SELECTOR, element)),
-                message=f"Element with CSS {locator} is not present!",
+                message=f"Element '{locator}' with CSS {element} is not visible!",
             )
         print(f"===> Verified element {locator} is present")
 
