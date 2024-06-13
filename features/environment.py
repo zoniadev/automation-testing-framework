@@ -16,11 +16,15 @@ def before_feature(context, feature):
 def before_scenario(context, scenario):
     service = Service()
     options = webdriver.ChromeOptions()
-    options.add_argument("--no-sandbox")
-    options.add_argument("--headless")
+    if context.config.userdata.get("headless"):
+        options.add_argument("--headless")
+        print('===> Running in Headless mode')
+    # Get URL from behave parameters
+    start_page = context.config.userdata.get("start_page")
+    url_to_use = getattr(common_variables, start_page)
     print(f"Executing scenario: '{context.scenario.name}'")
     context.browser = webdriver.Chrome(service=service, options=options)
-    context.browser.get(common_variables.opt_in_url)
+    context.browser.get(url_to_use)
 
 
 def before_step(context, step):

@@ -13,6 +13,12 @@ def user_fill_opt_in_form(context, name, email):
     page.register(name, email)
 
 
+@step('user fill opt-in form with random name and email')
+def user_fill_opt_in_form(context):
+    page = OptInPage(context)
+    page.register_random_user()
+
+
 
 @step('user join Zonia')
 def user_join_zonia(context):

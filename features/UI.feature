@@ -8,7 +8,11 @@ Feature: UI tests
       | name         | email                      | password | bill_cycle |
       | John Marston | johnmarston@mailinator.com | 123456   | monthly    |
 
-  @WIP
+
   Scenario: test
     Given user verify Opt In register buttons
+
+  @WIP
+  Scenario: GitHub Actions
+    Given user fill opt-in form with random name and email
 
