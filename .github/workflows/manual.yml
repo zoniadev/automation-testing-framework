@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Behave tests
         run: |
-          behave --tags @WIP
+          behave --tags @WIP --no-capture -D headless=True -D start_page=opt_in_url
 
       - name: Upload test reports
         uses: actions/upload-artifact@v2
