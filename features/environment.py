@@ -16,7 +16,6 @@ def before_feature(context, feature):
 def before_scenario(context, scenario):
     service = Service()
     options = webdriver.ChromeOptions()
-    # Check for headless parameter (optional)
     if context.config.userdata.get("headless"):
         options.add_argument("--headless")
         print('===> Running in Headless mode')
