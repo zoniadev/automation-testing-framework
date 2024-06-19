@@ -33,10 +33,10 @@ def user_sign_up(context):
         page.sign_up(bill_cycle=row['bill_cycle'], name=row['name'], email=row['email'], password=row['password'])
 
 
-@step('user sign-up with random data')
-def user_sinn_with_random_data(context):
+@step('user sign-up with random user data and bill cycle "{bill_cycle}"')
+def user_sign_up(context, bill_cycle):
     page = SignUpPage(context)
-    page.sign_up('monthly', name=RD.first_name(), email=RD.email(), password=RD.password())
+    page.sign_up_with_random_data(bill_cycle)
 
 
 @step('user verify Opt In register buttons')

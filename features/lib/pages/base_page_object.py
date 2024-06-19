@@ -16,12 +16,26 @@ class BasePage(object):
         current_url = self.browser.current_url
         assert expected_url == current_url, f"Expected {expected_url}, but got {current_url}"
 
+    def verify_url_contains(self, expected_url):
+        current_url = self.browser.current_url
+        assert expected_url in current_url, f"Expected {expected_url}, but got {current_url}"
+
     def wait_for_url_change(self, expected_url, timeout=__TIMEOUT):
         current_url = self.browser.current_url
-        print('===> Waiting for URL change')
+        print(f'===> Waiting for URL change from "{current_url}" to "{expected_url}"')
         try:
             WebDriverWait(self.browser, timeout).until(EC.url_changes(current_url))
             self.verify_url(expected_url)
+            print(f"===> URL changed successfully to '{expected_url}'")
+        except:
+            actual_url = self.browser.current_url
+            raise Exception(f"URL did not change within the specified time and is '{actual_url}'!")
+
+    def wait_for_partial_url_change(self, current_url, expected_url, timeout=__TIMEOUT):
+        print(f'===> Waiting for URL change from "{current_url}" to "{expected_url}"')
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.url_changes(current_url))
+            self.verify_url_contains(expected_url)
             print(f"===> URL changed successfully to '{expected_url}'")
         except:
             actual_url = self.browser.current_url
@@ -79,13 +93,28 @@ class BasePage(object):
             WebDriverWait(self.browser, timeout).until(EC.visibility_of_element_located((By.CSS_SELECTOR, locator)),
                                                        message=f"Element with CSS {locator} is not visible!"),
 
+    def verify_element_clickable(self, locator, timeout=__TIMEOUT):
+        element = locate(f'locators.{locator}')
+        web_driver_wait = WebDriverWait(self.browser, timeout)
+        if element.startswith("//"):
+            web_driver_wait.until(
+                EC.element_to_be_clickable((By.XPATH, element)),
+                message=f"Element '{locator}' with Xpath {element} is not clickable!",
+            )
+        else:
+            web_driver_wait.until(
+                EC.element_to_be_clickable((By.XPATH, element)),
+                message=f"Element '{locator}' with CSS {element} is not clickable!",
+            )
+        print(f"===> Verified element {locator} is clickable")
+
     def enter_text(self, text, locator):
         if text is None:
             raise Exception("Trying to populate field with None!")
         else:
             self.verify_element_visible(locator)
-            print(f"===> Entering text: {text} in: {locator}")
             self.find_single_element(locator).send_keys(text)
+            print(f"===> Entered text: {text} in: {locator}")
             time.sleep(1)
             entered_text = self.find_single_element(locator).get_attribute("value")
             if locator not in ['signup_cc_number_field', 'signup_cc_expiration_field']:
@@ -94,15 +123,15 @@ class BasePage(object):
 
     def click(self, locator):
         self.verify_element_visible(locator)
-        print(f"===> Clicking element: {locator}")
         self.find_single_element(locator).click()
+        print(f"===> Clicked element: {locator}")
 
     def click_by_full_locator(self, locator):
         """This method can be used from methods that construct dynamically the locator instead of using stored
                 elements in locators.py """
         self.verify_element_visible_by_full_locator(locator)
-        print(f"===> Clicking element by full locator: {locator}")
         self.find_single_element_by_full_locator(locator).click()
+        print(f"===> Clicked element by full locator: {locator}")
 
     def get_text(self, locator):
         self.verify_element_visible(locator)

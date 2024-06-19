@@ -13,7 +13,8 @@ register10_button = "//div[starts-with(@class, 'section unbroken-opt-in-section-
 first_name_field = "//input[@id='first-name']"
 email_field = "//input[@id='email']"
 close_popup_button = "//div[@class='book-pop-up-form']//button[@aria-label='Close']"
-register_button = "//div[@class='pop-up-register-form phone-parent-wrapper']//button[contains(text(), 'Register for free now')]"
+# register_button = "//div[starts-with(@class, 'register-form')]//button[contains(@class, 'opt-in-form-submit-btn')]"
+register_button = ".register-form .opt-in-form-submit-btn"
 
 # Join Zonia page locators:
 join_button = "//a[@class='btn btn-1' and contains(text(), 'JOIN ZONIA NOW')]"

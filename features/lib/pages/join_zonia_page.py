@@ -8,4 +8,4 @@ class JoinZoniaPage(BasePage):
 
     def join(self):
         self.click('join_button')
-        self.wait_for_url_change(common_variables.sign_up_url)
+        self.wait_for_partial_url_change(common_variables.join_zonia_url, common_variables.sign_up_url)

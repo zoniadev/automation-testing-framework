@@ -42,3 +42,5 @@ class OptInPage(BasePage):
             print(f'Popup did not appeared')
         self.enter_text(RD.first_name(), 'first_name_field')
         self.enter_text(RD.email(), 'email_field')
+        self.click('register_button')
+        self.wait_for_partial_url_change(common_variables.opt_in_url, common_variables.join_zonia_url)

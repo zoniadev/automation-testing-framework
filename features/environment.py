@@ -16,10 +16,21 @@ def before_feature(context, feature):
 def before_scenario(context, scenario):
     service = Service()
     options = webdriver.ChromeOptions()
-    if context.config.userdata.get("headless"):
+    options.add_argument("--incognito")
+    options.add_argument("start-maximized")
+    prefs = {"profile.default_content_settings.popups": 0,
+             "safebrowsing.enabled": True,
+             "password_manager_enabled": False,
+             "credentials_enable_service": False,
+             "autocomplete_enabled": False,
+             "history.enabled": False,
+             "search.suggest_history_enabled": False}
+    options.add_experimental_option("prefs", prefs)
+    print(f'Headless: {context.config.userdata["headless"]}')
+    if context.config.userdata["headless"] == "true":
         options.add_argument("--headless")
+        options.add_argument("--window-size=2560,1440")
         print('===> Running in Headless mode')
-    # Get URL from behave parameters
     start_page = context.config.userdata.get("start_page")
     url_to_use = getattr(common_variables, start_page)
     print(f"Executing scenario: '{context.scenario.name}'")

@@ -48,6 +48,11 @@ def last_name():
     return fake_last_name
 
 
+def full_name():
+    full_name = f'{first_name()} {last_name()}'
+    return full_name
+
+
 def birthday(birthday_format):
     fake_birthday = faker.date_of_birth(tzinfo=None, minimum_age=20, maximum_age=80)
     formatted_birthday = fake_birthday.strftime(birthday_format)

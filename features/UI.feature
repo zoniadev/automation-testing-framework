@@ -15,4 +15,6 @@ Feature: UI tests
   @WIP
   Scenario: GitHub Actions
     Given user fill opt-in form with random name and email
+    When user join Zonia
+    Then user sign-up with random user data and bill cycle "monthly"
 
