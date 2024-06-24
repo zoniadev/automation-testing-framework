@@ -35,3 +35,24 @@ signup_cc_cvv_field = "//input[@id='cvv']"
 signup_cc_zip_iframe = "//iframe[@id='braintree-hosted-field-postalCode']"
 signup_cc_zip_field = "//input[@id='postal-code']"
 signup_activate_button = "//button[@class='activate-btn']"
+
+#Restore Sleep start page locators:
+add_one_button = "//div[@class='clip-banner']//a[@href='/restore-sleep-signup-1-bottle']"
+
+#Restore Sleep_signup_page locators:
+rs_first_name_field = "//input[@id='form-firstname']"
+rs_last_name_field = "//input[@id='form-lastname']"
+rs_email_field = "//input[@id='form-email']"
+rs_phone_field = "//input[@id='form-phone']"
+rs_address_field = "//input[@id='form-address']"
+rs_city_field = "//input[@id='form-city']"
+rs_country_field = "//input[@id='form-country']"
+rs_state_field = "//input[@id='form-state']"
+rs_zip_field = "//input[@id='form-zip']"
+rs_place_order_button = "//button[@class='product-button']"
+
+#rs_first_upsell locators:
+first_upsell_yes_button = "//*[contains(text(), 'Upgrade My Order')]"
+first_upsell_no_button = "//*[contains(text(), 'No thanks')]"
+# first_upsell_yes_button = "//div[@class='light-box text-center']//h2[contains(text(), 'Upgrade My Order')]"
+# first_upsell_no_button = "//div[@class='light-box text-center']//*[contains(text(), 'No thanks')]"

@@ -12,6 +12,13 @@ restore_life_upsell_url = 'https://staging.zonia.com/bb-rl-6-more-bottles'
 restore_life_downsell_url = 'https://staging.zonia.com/bb-rl-6-discounted-bottles'
 welcome_page_url = 'https://staging.zonia.com/welcome'
 
+restore_sleep_start_url = 'https://staging.zonia.com/restore-sleep-3-free-bottles'
+restore_sleep_first_upsell_url = 'https://staging.zonia.com/restore-sleep-6-more-bottles'
+restore_sleep_second_upsell_url = 'https://zonia.com/rs-restore-life-6-discounted-bottles'
+restore_sleep_third_upsell_url = 'https://zonia.com/rs-restore-detox-6-discounted-bottles'
+restore_sleep_fourth_upsell_url = 'https://zonia.com/rs-trial'
+
+
 test_cc_number = '4242424242424242'
 test_cc_expiration_date = '05/27'
 test_cc_cvv = '123'
