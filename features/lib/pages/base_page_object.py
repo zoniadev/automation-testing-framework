@@ -82,6 +82,21 @@ class BasePage(object):
                 EC.visibility_of_element_located((By.CSS_SELECTOR, element)),
                 message=f"Element '{locator}' with CSS {element} is not visible!",
             )
+        print(f"===> Verified element {locator} is visible")
+
+    def verify_element_present(self, locator, timeout=__TIMEOUT):
+        element = locate(f'locators.{locator}')
+        web_driver_wait = WebDriverWait(self.browser, timeout)
+        if element.startswith("//"):
+            web_driver_wait.until(
+                EC.presence_of_element_located((By.XPATH, element)),
+                message=f"Element '{locator}' with Xpath {element} is not present!",
+            )
+        else:
+            web_driver_wait.until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, element)),
+                message=f"Element '{locator}' with CSS {element} is not present!",
+            )
         print(f"===> Verified element {locator} is present")
 
     def verify_element_visible_by_full_locator(self, locator, timeout=__TIMEOUT):
@@ -113,7 +128,8 @@ class BasePage(object):
         if text is None:
             raise Exception("Trying to populate field with None!")
         else:
-            self.verify_element_visible(locator)
+            # self.verify_element_visible(locator)
+            self.verify_element_present(locator)
             self.find_single_element(locator).send_keys(text)
             print(f"===> Entered text: {text} in: {locator}")
             time.sleep(1)

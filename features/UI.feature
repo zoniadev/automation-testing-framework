@@ -19,7 +19,7 @@ Feature: UI tests
     Then user sign-up with random user data and bill cycle "monthly"
 
 
-  @WIP
+
   Scenario: Restore Sleep Supplements
     Given user select to buy "one" bottles in Restore Sleep Supplements page
     When user select to "upgrade" in "first" Upsell page
