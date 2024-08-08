@@ -21,10 +21,8 @@ def email():
     return fake_email
 
 
-def email_with_added_digits(prefix: str, postfix: str) -> str:
-    email_value = faker.email()
-    email_arr = email_value.split("@")
-    fake_email = prefix + "_" + email_arr[0] + "_" + random_number() + "@" + postfix
+def automation_template_email():
+    fake_email = "automation_tests_" + random_number() + "@" + "gmail.com"
     return fake_email
 
 

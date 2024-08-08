@@ -1,12 +1,15 @@
 import datetime
-import allure
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+import os
+
+from playwright.sync_api import sync_playwright
 import common_variables
 
 
 def before_all(context):
     print("Starting run")
+    common_variables.funnel = context.config.userdata["funnel"]
+    context.playwright = sync_playwright().start()
+    context.browser = context.playwright.chromium.launch(headless=False)
 
 
 def before_feature(context, feature):
@@ -14,28 +17,14 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    service = Service()
-    options = webdriver.ChromeOptions()
-    options.add_argument("--incognito")
-    options.add_argument("start-maximized")
-    prefs = {"profile.default_content_settings.popups": 0,
-             "safebrowsing.enabled": True,
-             "password_manager_enabled": False,
-             "credentials_enable_service": False,
-             "autocomplete_enabled": False,
-             "history.enabled": False,
-             "search.suggest_history_enabled": False}
-    options.add_experimental_option("prefs", prefs)
-    print(f'Headless: {context.config.userdata["headless"]}')
-    if context.config.userdata["headless"] == "true":
-        options.add_argument("--headless")
-        options.add_argument("--window-size=2560,1440")
-        print('===> Running in Headless mode')
     start_page = context.config.userdata.get("start_page")
     url_to_use = getattr(common_variables, start_page)
-    print(f"Executing scenario: '{context.scenario.name}'")
-    context.browser = webdriver.Chrome(service=service, options=options)
-    context.browser.get(url_to_use)
+    context.context = context.browser.new_context(
+        viewport={'width': 1280, 'height': 720},
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+    )
+    context.page = context.context.new_page()
+    context.page.goto(url_to_use)
 
 
 def before_step(context, step):
@@ -47,29 +36,21 @@ def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
         print("Taking screenshots")
-        dtm = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-        context.browser.save_screenshot("screenshots/%s-%s.png" % (context.scenario.name, dtm))
-        allure.attach(
-            context.browser.get_screenshot_as_png(),
-            name="screenshot",
-            attachment_type=allure.attachment_type.PNG,
-        )
     else:
         print(f"Completed step: {context.step.name}")
-    try:
-        stdout = context.stdout_capture.getvalue()
-        if stdout:
-            allure.attach(stdout, name="stdout", attachment_type=allure.attachment_type.TEXT)
-    except Exception:
-        pass
 
 
 def after_scenario(context, scenario):
     if scenario.status == "failed":
         print(f"Failed scenario: '{context.scenario.name}'")
+        screenshot_path = os.path.join('screenshots', f"{scenario.name}.png")
+        context.page.screenshot(path=screenshot_path)
+        print(f"Saved screenshot: '{scenario.name}.png'")
+        print(f"Test failed on page: '{context.page.url}'")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
-    context.browser.quit()
+    context.page.close()
+    context.context.close()
 
 
 def after_feature(context, feature):
@@ -81,3 +62,5 @@ def after_feature(context, feature):
 
 def after_all(context):
     print("Run completed")
+    context.browser.close()
+    context.playwright.stop()
