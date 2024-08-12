@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Behave tests
         run: |
-          behave --tags @WIP --no-capture -D headless=True -D start_page=restore_sleep_start_url -D funnel=restore_sleep_supplement --format html --outfile behave_reports/test_report.html
+          behave --tags @WIP --no-capture -D headless=True -D start_page=restore_sleep_start_url -D funnel=restore_sleep_supplement -f html --outfile behave_reports/report.html
 
       - name: Upload test reports
         uses: actions/upload-artifact@v2
