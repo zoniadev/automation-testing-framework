@@ -25,6 +25,7 @@ class RestoreSleepPage(BasePage):
 
     def buy_bottles(self, amount):
         button_locator = f"ORDER_{amount}_BOTTLES_BUTTON"
+        print(f'===> Buying {amount} bottle...')
         self.find_element(RestoreSleepPageLocators.__dict__[button_locator]).click()
         time.sleep(1)
         self.find_element(RestoreSleepPageLocators.FIRST_NAME_FIELD).press_sequentially(RD.first_name())
@@ -38,3 +39,4 @@ class RestoreSleepPage(BasePage):
         self.find_element(RestoreSleepPageLocators.ZIP_FIELD).press_sequentially(RD.postcode())
         self.populate_cc_details()
         self.verify_element_visible(RestoreSleepPageLocators.NEXT_PAGE_ASSERT_ELEMENT)
+        print(f'===> Successfully bought {amount} bottle')
