@@ -32,7 +32,7 @@ jobs:
         if: always()
         with:
           name: Test reports
-          path: test-reports
+          path: master
 
 env:
   # Allow specifying branch during manual trigger
