@@ -11,7 +11,9 @@ def before_all(context):
     print("Starting run")
     common_variables.funnel = context.config.userdata["funnel"]
     context.playwright = sync_playwright().start()
-    context.browser = context.playwright.chromium.launch(headless=False)
+    headless_str = context.config.userdata.get("headless")
+    headless = headless_str.lower() == "true"
+    context.browser = context.playwright.chromium.launch(headless=headless)
 
 
 def before_feature(context, feature):
