@@ -23,8 +23,10 @@ class BasePage(object):
         self.context = context
 
     def find_element(self, locator):
+        print(f'===> Looking for element "{locator}"...')
         elements = self.context.page.locator(locator).all()
         if elements:
+            print(f'===> Element/s "{locator}" found')
             if len(elements) == 1:
                 return elements[0]
             else:
@@ -33,12 +35,16 @@ class BasePage(object):
             raise Exception(f'No elements found with locator {locator}!')
 
     def verify_element_visible(self, locator):
+        print(f'===> Verifying element "{locator}" is visible...')
         expect(self.find_element(locator)).to_be_visible()
+        print(f'===> Verified element "{locator}" is visible')
 
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
         self.context.page.wait_for_url(f"**/{url}/**", timeout=timeout)
+        print(f'===> URL successfully changed to "{url}"')
 
     def get_text(self, locator):
+        print(f'===> Getting text from element "{locator}"...')
         return self.find_element(locator).text_content()
 
     def verify_element_contain_text(self, locator, expected_text):
@@ -61,6 +67,7 @@ class BasePage(object):
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
     def populate_cc_details(self):
+        print('===> Populating CC details...')
         cc_exp_date = self.context.page.frame_locator(BasePageLocators.CC_EXP_DATE_FRAME).get_by_placeholder(BasePageLocators.CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(BasePageLocators.CC_CVV_FRAME).get_by_placeholder(BasePageLocators.CC_CVV_FIELD)
@@ -69,3 +76,4 @@ class BasePage(object):
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         time.sleep(1)
         self.retry_cc_number_entry()
+        print('===> Populated CC details')
