@@ -21,11 +21,11 @@ jobs:
           python -m pip install -r requirements.txt
 
       - name: Ensure browsers are installed
-        run: python -m playwright install --with-deps
+        run: python -m playwright install chromium --with-deps
 
       - name: Run Behave tests
         run: |
-          behave --tags @WIP --no-capture -D headless=True -D start_page=opt_in_url
+          behave --tags @WIP --no-capture -D headless=True -D start_page=restore_sleep_start_url -D funnel=restore_sleep_supplement
 
       - name: Upload test reports
         uses: actions/upload-artifact@v2
