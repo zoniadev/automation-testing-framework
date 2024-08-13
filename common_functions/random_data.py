@@ -22,7 +22,7 @@ def email():
 
 
 def automation_template_email():
-    fake_email = "automation_tests_" + random_number() + "@" + "gmail.com"
+    fake_email = "automation_tests_" + random_number() + "@" + last_name() + ".com"
     return fake_email
 
 
@@ -33,6 +33,10 @@ def amount(min_amount=10000, max_amount=250000):
 
 def first_name():
     fake_first_name = faker.first_name()
+    return fake_first_name
+
+def automation_first_name():
+    fake_first_name = 'Automation' + faker.first_name()
     return fake_first_name
 
 
@@ -83,19 +87,6 @@ def random_sentence(nb_words=5):
 def random_company():
     fake_company = faker.company()
     return fake_company
-
-
-def gmail_range() -> str:
-    random_integer = list(random_number())
-    random_string = list("abcdefgh")
-    final_random_string = ""
-    shuffle(random_integer)
-    shuffle(random_string)
-    edge_list = zip(random_integer, random_string)
-    for a, b in edge_list:
-        final_random_string += a
-        final_random_string += b
-    return final_random_string
 
 
 def password(length=8):

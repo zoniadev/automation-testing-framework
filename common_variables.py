@@ -10,14 +10,19 @@ restore_life_url = 'https://staging.zonia.com/bb-restore-life-special'
 restore_life_upsell_url = 'https://staging.zonia.com/bb-rl-6-more-bottles'
 restore_life_downsell_url = 'https://staging.zonia.com/bb-rl-6-discounted-bottles'
 welcome_page_url = 'https://staging.zonia.com/welcome'
+user_page_url = 'https://staging.zonia.com/user'
 
 restore_sleep_start_url = 'https://staging.zonia.com/restore-sleep-special'
 restore_sleep_first_upsell_url = 'https://staging.zonia.com/restore-sleep-6-more-bottles'
-restore_sleep_second_upsell_url = 'https://zonia.com/rs-restore-life-6-discounted-bottles'
-restore_sleep_third_upsell_url = 'https://zonia.com/rs-restore-detox-6-discounted-bottles'
-restore_sleep_fourth_upsell_url = 'https://zonia.com/rs-trial'
+restore_sleep_second_upsell_url = 'https://staging.zonia.com/rs-restore-life-6-discounted-bottles'
+restore_sleep_third_upsell_url = 'https://staging.zonia.com/rs-restore-detox-6-discounted-bottles'
+restore_sleep_fourth_upsell_url = 'https://staging.zonia.com/rs-trial'
 
 funnel = ''
+
+supplement_funnel_name = ''
+supplement_funnel_email = ''
+supplement_funnel_password = ''
 
 
 test_cc_number = '4242424242424242'

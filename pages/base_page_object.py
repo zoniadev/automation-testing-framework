@@ -5,7 +5,7 @@ import common_variables
 
 
 class BasePageLocators:
-    PLACE_ORDER_BUTTON = "//button[@type='submit']"
+    PLACE_ORDER_BUTTON = "//button[@data-id='order-btn']"
     CC_NUM_FRAME = '//iframe[@id="braintree-hosted-field-number"]'
     CC_NUM_FIELD = 'Card Number'
     CC_EXP_DATE_FRAME = '//iframe[@id="braintree-hosted-field-expirationDate"]'
@@ -23,24 +23,34 @@ class BasePage(object):
         self.context = context
 
     def find_element(self, locator):
-        print(f'===> Looking for element "{locator}"...')
         elements = self.context.page.locator(locator).all()
-        if elements:
-            print(f'===> Element/s "{locator}" found')
-            if len(elements) == 1:
-                return elements[0]
-            else:
-                return elements[1]
-        else:
+        if not elements:
             raise Exception(f'No elements found with locator {locator}!')
+        visible_elements = [element for element in elements if element.is_visible()]
+        if not visible_elements:
+            raise Exception(f'No visible elements found with locator {locator}!')
+        visible_elements_amount = len(visible_elements)
+        if visible_elements_amount == 1:
+            print(f'===> One visible element with "{locator}" found from total {len(elements)}')
+            return visible_elements[0]
+        else:
+            print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
+            return visible_elements[1]
 
     def verify_element_visible(self, locator):
-        print(f'===> Verifying element "{locator}" is visible...')
         expect(self.find_element(locator)).to_be_visible()
         print(f'===> Verified element "{locator}" is visible')
 
+    def click(self, locator):
+        element = self.find_element(locator)
+        element.scroll_into_view_if_needed()
+        element.click()
+        print(f'===> Clicked element "{locator}"')
+
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
-        self.context.page.wait_for_url(f"**/{url}/**", timeout=timeout)
+        print(f'===> Waiting for URL starting with "{url}"')
+        # self.context.page.wait_for_url(f"**/{url}/**", timeout=timeout)
+        expect(self.context.page).to_have_url(re.compile(f"^{url}.*"))
         print(f'===> URL successfully changed to "{url}"')
 
     def get_text(self, locator):
@@ -67,7 +77,6 @@ class BasePage(object):
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
     def populate_cc_details(self):
-        print('===> Populating CC details...')
         cc_exp_date = self.context.page.frame_locator(BasePageLocators.CC_EXP_DATE_FRAME).get_by_placeholder(BasePageLocators.CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(BasePageLocators.CC_CVV_FRAME).get_by_placeholder(BasePageLocators.CC_CVV_FIELD)
