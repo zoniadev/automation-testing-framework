@@ -27,12 +27,35 @@ jobs:
         run: |
           behave --tags @WIP --no-capture -D headless=True -D start_page=restore_sleep_start_url -D funnel=restore_sleep_supplement -f html --outfile behave_reports/report.html
 
-      - name: Upload test reports
-        uses: actions/upload-artifact@v2
+      - name: Load test report history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: ${{ BRANCH }}
+          path: ${{ BRANCH }}
+
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
-          name: Test reports
-          path: ./behave_reports/report.html
+          gh_pages: ${{ BRANCH }}
+          allure_history: allure_history
+          allure_results: build/allure_results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: ${{ BRANCH }}
+          publish_dir: allure_history
+      # - name: Upload test reports
+      #   uses: actions/upload-artifact@v2
+      #   if: always()
+      #   with:
+      #     name: Test reports
+      #     path: ./behave_reports/report.html
 
 env:
   # Allow specifying branch during manual trigger
