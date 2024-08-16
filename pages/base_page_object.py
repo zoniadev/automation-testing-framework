@@ -49,8 +49,7 @@ class BasePage(object):
 
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
         print(f'===> Waiting for URL starting with "{url}"')
-        # self.context.page.wait_for_url(f"**/{url}/**", timeout=timeout)
-        expect(self.context.page).to_have_url(re.compile(f"^{url}.*"))
+        expect(self.context.page).to_have_url(re.compile(f"^{url}.*"), timeout=timeout)
         print(f'===> URL successfully changed to "{url}"')
 
     def get_text(self, locator):
