@@ -32,14 +32,14 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-          ref: ${{ BRANCH }}
-          path: ${{ BRANCH }}
+          ref: ${{ env.BRANCH }}
+          path: ${{ env.BRANCH }}
 
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
-          gh_pages: ${{ BRANCH }}
+          gh_pages: ${{ env.BRANCH }}
           allure_history: allure_history
           allure_results: build/allure_results
 
@@ -48,7 +48,7 @@ jobs:
         if: always()
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: ${{ BRANCH }}
+          publish_branch: ${{ env.BRANCH }}
           publish_dir: allure_history
       # - name: Upload test reports
       #   uses: actions/upload-artifact@v2
