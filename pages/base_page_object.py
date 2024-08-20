@@ -14,6 +14,7 @@ class BasePageLocators:
     CC_CVV_FIELD = 'Security Code(CCV)'
     CC_ZIP_FRAME = '//iframe[@id="braintree-hosted-field-postalCode"]'
     CC_ZIP_FIELD = 'Billing Zip/Postal Code'
+    LOADER = "//*[@test-id='loader']"
 
 
 class BasePage(object):
@@ -68,10 +69,12 @@ class BasePage(object):
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
                 time.sleep(0.5)
                 self.find_element(BasePageLocators.PLACE_ORDER_BUTTON).click()
-                self.wait_for_navigation(common_variables.restore_sleep_first_upsell_url, timeout=20000)
+                self.context.page.locator(BasePageLocators.LOADER).click()
+                print('Loader found')
                 break
-            except:
+            except Exception as E:
                 print(f'Populating CC number failed on the {attempt + 1} try! Retrying...')
+                print(f'Error: {E}')
         else:
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
@@ -84,4 +87,5 @@ class BasePage(object):
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         time.sleep(1)
         self.retry_cc_number_entry()
+        expect(self.context.page.locator(BasePageLocators.LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')

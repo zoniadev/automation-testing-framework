@@ -41,5 +41,6 @@ class SupplementStartPage(BasePage):
         self.find_element(SupplementSalesPageLocators.STATE_FIELD).press_sequentially('CA')
         self.find_element(SupplementSalesPageLocators.ZIP_FIELD).press_sequentially(RD.postcode())
         self.populate_cc_details()
+        self.wait_for_navigation(common_variables.restore_sleep_first_upsell_url, timeout=20000)
         self.verify_element_visible(SupplementSalesPageLocators.NEXT_PAGE_ASSERT_ELEMENT)
         print(f'===> Successfully bought {amount} bottle')
