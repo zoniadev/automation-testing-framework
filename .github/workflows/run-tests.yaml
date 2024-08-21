@@ -75,7 +75,7 @@ jobs:
 
       - name: Run tests
         run: |
-          behave --tags ${{ github.event.inputs.tags }} --no-capture -D headless=True -D start_page=${{ github.event.inputs.start_page }} -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
+          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D start_page=${{ github.event.inputs.start_page }} -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
 
       - name: Load test report history
         uses: actions/checkout@v3
