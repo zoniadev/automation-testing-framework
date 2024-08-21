@@ -109,4 +109,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
+          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
