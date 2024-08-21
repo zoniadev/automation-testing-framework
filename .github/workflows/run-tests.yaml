@@ -1,0 +1,76 @@
+name: Manual Test Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tags to run'
+        required: true
+        default: '@WIP'
+        type: choice
+        options:
+          - '@WIP'
+          - '@smoke'
+          - '@regression'
+          - '@critical'
+
+      start_page:
+        description: 'Start page URL'
+        required: true
+        default: 'restore_sleep_start_url'
+        type: choice
+        options:
+          - 'restore_sleep_start_url'
+          - 'restore_detox_start_url'
+          - 'restore_life_start_url'
+      funnel:
+        description: 'Funnel'
+        required: true
+        default: 'restore_sleep_supplement'
+        type: choice
+        options:
+          - 'restore_sleep_supplement'
+          - 'restore_detox_supplement'
+          - 'restore_life_supplement'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install -g allure-commandline --save-dev
+
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@latest
+
+      - name: Run tests
+        run: |
+          behave --tags ${{ github.event.inputs.tags }} --no-capture -D headless=True -D start_page=${{ github.event.inputs.start_page }} -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
+
+      - name: Generate Allure report
+        run: |
+          allure generate allure-results --clean -o allure-report
+
+      - name: Upload Allure report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: allure-report
+
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
