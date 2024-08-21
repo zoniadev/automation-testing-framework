@@ -56,7 +56,7 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          npx playwright install
+          playwright install
 
       - name: Run tests
         run: |
