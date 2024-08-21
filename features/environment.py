@@ -9,7 +9,6 @@ SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
 def before_all(context):
     print("Starting run")
-    common_variables.funnel = context.config.userdata["funnel"]
     context.playwright = sync_playwright().start()
     headless_str = context.config.userdata.get("headless")
     headless = headless_str.lower() == "true"
@@ -21,8 +20,8 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    start_page = context.config.userdata.get("start_page")
-    url_to_use = getattr(common_variables, start_page)
+    start_page = context.config.userdata.get("funnel")
+    url_to_use = getattr(common_variables, f'{start_page}_start_url')
     context.context = context.browser.new_context(
         viewport={'width': 1280, 'height': 720},
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
