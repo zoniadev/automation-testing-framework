@@ -14,24 +14,15 @@ on:
           - '@regression'
           - '@critical'
 
-      start_page:
-        description: 'Start page URL'
-        required: true
-        default: 'restore_sleep_start_url'
-        type: choice
-        options:
-          - 'restore_sleep_start_url'
-          - 'restore_detox_start_url'
-          - 'restore_life_start_url'
       funnel:
         description: 'Funnel'
         required: true
-        default: 'restore_sleep_supplement'
+        default: 'restore_sleep'
         type: choice
         options:
-          - 'restore_sleep_supplement'
-          - 'restore_detox_supplement'
-          - 'restore_life_supplement'
+          - 'restore_sleep'
+          - 'restore_detox'
+          - 'restore_life'
 
 jobs:
   test:
@@ -66,16 +57,13 @@ jobs:
             libflite1 \
             libgles2 \
 
-      - name: Setup Chrome
-        uses: browser-actions/setup-chrome@latest
-
-      - name: Install Playwright browsers
+      - name: Install Chromium browser for Playwright 
         run: |
-          playwright install
+          playwright install chromium
 
       - name: Run tests
         run: |
-          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D start_page=${{ github.event.inputs.start_page }} -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
+          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
 
       - name: Load test report history
         uses: actions/checkout@v3
