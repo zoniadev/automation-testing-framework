@@ -108,5 +108,5 @@ jobs:
           authToken: ${{ secrets.GITHUB_TOKEN }}
           context: 'Test report'
           state: 'success'
-          sha: ${{ github.event.pull_request.head.sha }}
+          sha: ${{ github.sha }}
           target_url: zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
