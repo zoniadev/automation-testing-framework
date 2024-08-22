@@ -1,5 +1,5 @@
-# automation-testing-framework
-For automated testing of the Zonia platform
+# Zonia Automation Testing framework
+Latest results can be seen [here](https://zoniadev.github.io/automation-testing-framework)
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
