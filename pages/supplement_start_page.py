@@ -6,8 +6,8 @@ from pages.base_page_object import BasePage
 
 class SupplementSalesPageLocators:
     ORDER_1_BOTTLES_BUTTON = "//*[@test-id='order-bottle-1']"
-    ORDER_3_BOTTLES_BUTTON = "//*[test-id='order-bottle-3']",
-    ORDER_6_BOTTLES_BUTTON = "//*[test-id='order-bottle-6']",
+    ORDER_3_BOTTLES_BUTTON = "//*[@test-id='order-bottle-3']"
+    ORDER_6_BOTTLES_BUTTON = "//*[@test-id='order-bottle-6']"
     FIRST_NAME_FIELD = "//input[@data-id='form-firstname']"
     LAST_NAME_FIELD = "//input[@data-id='form-lastname']"
     EMAIL_FIELD = "//input[@data-id='form-email']"

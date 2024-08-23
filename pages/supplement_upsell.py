@@ -22,6 +22,9 @@ class SupplementUpsellPage(BasePage):
         BasePage.__init__(self, context)
         self.order_delay_timeout = 1
 
+    def change_order_delay_timeout(self, timeout):
+        self.order_delay_timeout = timeout
+
     def chose_upsell(self, upgrade, last_chance):
         if upgrade == 'yes':
             time.sleep(self.order_delay_timeout)

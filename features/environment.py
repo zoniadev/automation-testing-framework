@@ -12,7 +12,7 @@ def before_all(context):
     context.playwright = sync_playwright().start()
     headless_str = context.config.userdata.get("headless")
     headless = headless_str.lower() == "true"
-    context.browser = context.playwright.chromium.launch(headless=headless)
+    context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
 
 
 def before_feature(context, feature):

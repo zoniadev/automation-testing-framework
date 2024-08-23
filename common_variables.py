@@ -21,6 +21,7 @@ restore_sleep_fourth_upsell_url = 'https://staging.zonia.com/rs-trial'
 supplement_funnel_name = ''
 supplement_funnel_email = ''
 supplement_funnel_password = ''
+supplement_funnel_bottles = ''
 
 
 test_cc_number = '4242424242424242'
