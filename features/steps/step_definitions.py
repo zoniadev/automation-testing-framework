@@ -1,4 +1,5 @@
 from behave import step
+import common_variables
 from pages import (
     SupplementStartPage,
     SupplementUpsellPage,
@@ -11,11 +12,14 @@ from pages import (
 def user_fill_opt_in_form(context, amount):
     page = SupplementStartPage(context)
     page.buy_bottles(amount)
+    common_variables.supplement_funnel_bottles = amount
 
 
 @step('user makes following decision in "{upsell_page}" Upsell page')
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
+    if common_variables.supplement_funnel_bottles != '1':
+        page.change_order_delay_timeout(20)
     for row in context.table:
         page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
 
