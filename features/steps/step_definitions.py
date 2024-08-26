@@ -1,4 +1,5 @@
-from behave import step
+# from behave import step
+from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,
@@ -19,7 +20,7 @@ def user_fill_opt_in_form(context, amount):
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
-        page.change_order_delay_timeout(30)
+        page.change_order_delay_timeout(10)
     for row in context.table:
         page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
 
