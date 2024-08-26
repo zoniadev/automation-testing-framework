@@ -20,7 +20,7 @@ def user_fill_opt_in_form(context, amount):
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
-        page.change_order_delay_timeout(10)
+        page.change_order_delay_timeout(30)
     for row in context.table:
         page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
 

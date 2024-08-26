@@ -20,9 +20,9 @@ Feature: UI tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-#      | 1       | yes        | no             | no         | best_value     | no         | most_popular   | accept        | monthly   |
-#      | 3       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 1       | yes        | no             | no         | best_value     | no         | most_popular   | accept        | monthly   |
+      | 3       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 3       | yes        | no             | yes        | no             | no         | best_value     | accept        | annual    |
-#      | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
+      | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
 
 
