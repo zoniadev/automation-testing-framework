@@ -18,7 +18,7 @@ if (!smtpUser || !smtpPass || !smtpHost || !smtpPort) {
 let testSummary = 'Test summary not available.';
 try {
   console.log('1')
-  console.log(fs.readFileSync('../test-summary.txt', 'utf8'));
+  console.log(fs.readFileSync('./test-summary.txt', 'utf8'));
   testSummary = fs.readFileSync('test-summary.txt', 'utf8');
 
 } catch (err) {
