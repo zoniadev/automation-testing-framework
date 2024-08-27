@@ -142,7 +142,7 @@ function colorCodeLineAfterCompleted(line) {
     const undefinedColor = undefined ? colors.Gray : '';
 
     return `<span style="color:${passedColor}">${passed} ${type} passed</span>, ` +
-      `<span style="color:${failedColor}">${failed} failed</span>, ` +
+      `<span style="color:${failedColor}; font-weight:bold;">${failed} failed</span>, ` +
       `<span style="color:${skippedColor}">${skipped} skipped</span>` +
       (undefined ? `, <span style="color:${undefinedColor}">${undefined} undefined</span>` : '');
   });
