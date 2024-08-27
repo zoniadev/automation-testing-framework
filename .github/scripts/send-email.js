@@ -21,8 +21,35 @@ try {
 } catch (err) {
   console.error('Error reading test summary:', err);
 }
+const colors = {
+  Green: "#28a745",
+  Red: "#dc3545",
+  Gray: "#6c757d",
+  Yellow: "#ffc107",
+}
 
 async function sendEmail() {
+  const lines = testSummary.split('\n');
+  let emailContent = '<h1>Test Summary Report</h1>';
+
+  emailContent += '<h2>Test Results:</h2><ul>';
+
+  lines.forEach(line => {
+    if (line.includes('Failed scenario')) {
+      emailContent += `<li style="color:${colors.Red}"><strong>${line}</strong></li>`;
+    } else if (line.includes('Screenshot saved')) {
+      emailContent += `<li style="color:${colors.Gray};">${line}</li>`;
+    } else if (line.includes('Failed feature') || line.includes('Starting run') || line.includes('Run completed')) {
+      emailContent += `<li>${line}</li>`;
+    } else if (line.startsWith('Failed scenario:')) {
+      emailContent += `<li><strong>${line}</strong></li>`;
+    } else {
+      emailContent += `<li>${line}</li>`;
+    }
+  });
+
+  emailContent += '</ul>';
+
   let transporter = nodemailer.createTransport({
     host: smtpHost,
     port: smtpPort,
