@@ -43,7 +43,7 @@ class SupplementUpsellPage(BasePage):
         for attempt in range(max_retries):
             try:
                 time.sleep(1)
-                self.verify_element_visible(SupplementUpsellPageLocators.BUY_MOST_POPULAR_BUTTON)
+                self.verify_element_visible(SupplementUpsellPageLocators.ACTIVATE_MEMBERSHIP_BUTTON)
                 break
             except:
                 print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Retrying...')
