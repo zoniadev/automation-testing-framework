@@ -76,6 +76,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
 
       - name: Load test report history
         uses: actions/checkout@v3

@@ -7,6 +7,7 @@ const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const smtpHost = process.env.SMTP_HOST;
 const smtpPort = process.env.SMTP_PORT;
+const targetURL = process.env.TARGET_URL;
 const colors = {
   Green: "#28a745",
   Red: "#dc3545",
@@ -121,6 +122,8 @@ function formatTestSummary(testSummary) {
   if (inFeature) {
     htmlContent += '</ul>';
   }
+
+  htmlContent += `<p>For more details, please visit the <a href="${targetURL}">test report</a>.</p>`;
 
   return htmlContent;
 }
