@@ -27,7 +27,7 @@ class SupplementStartPage(BasePage):
     def buy_bottles(self, amount):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
-        button_locator = f"ORDER_{amount}_BOTTLES_BUTTON_FAIL"
+        button_locator = f"ORDER_{amount}_BOTTLES_BUTTON"
         print(f'===> Buying {amount} bottle...')
         self.click(SupplementSalesPageLocators.__dict__[button_locator])
         time.sleep(2)
