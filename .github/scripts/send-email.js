@@ -21,44 +21,9 @@ try {
 } catch (err) {
   console.error('Error reading test summary:', err);
 }
-const colors = {
-  Green: "#28a745",
-  Red: "#dc3545",
-  Gray: "#6c757d",
-  Yellow: "#ffc107",
-}
+
 
 async function sendEmail() {
-  const lines = testSummary.split('\n');
-  let emailContent = '<h1>Test Summary Report</h1>';
-  let hasRunCompleted = false;
-  emailContent += '<h2>Test Results:</h2><ul>';
-
-
-  lines.forEach(line => {
-    if (line.includes('Run completed')) {
-      hasRunCompleted = true;
-    }
-
-    if (line.includes('Failed scenario')) {
-      emailContent += `<br><li style="color:${colors.Red}"><strong>${line}</strong></li>`;
-    } else if (line.includes('Screenshot saved')) {
-      emailContent += `<li style="color:${colors.Gray}; padding-left: 10px;">${line}</li>`;
-    } else if (line.includes('Failed feature') || line.includes('Starting run') || line.includes('Run completed')) {
-      emailContent += `<li>${line}</li>`;
-    } else if (line.startsWith('Failed scenario:')) {
-      emailContent += `<li><strong>${line}</strong></li>`;
-    } else {
-      if (hasRunCompleted) {
-        emailContent += line;
-      } else {
-        emailContent += `<li>${line}</li>`;
-      }
-    }
-  });
-
-  emailContent += '</ul>';
-
   let transporter = nodemailer.createTransport({
     host: smtpHost,
     port: smtpPort,
@@ -74,10 +39,75 @@ async function sendEmail() {
     to: 'atanas.atanasov.dev@gmail.com',
     subject: 'Test Failure Report',
     text: `The test has failed. Please check the details below:\n\n${testSummary}`,
-    html: emailContent,
+    html: formatTestSummary(testSummary),
   });
 
   console.log('Message sent: %s', info.messageId);
 }
 
 sendEmail().catch(console.error);
+
+const colors = {
+  Green: "#28a745",
+  Red: "#dc3545",
+  Gray: "#6c757d",
+  Yellow: "#ffc107",
+}
+
+function formatTestSummary(testSummary) {
+
+  // Initialize HTML content
+  let htmlContent = '<h1>Test Summary Report</h1>';
+
+  // Split the summary into lines
+  const lines = testSummary.split('\n');
+
+  let currentFeature = '';
+  let inFeature = false;
+  let completed = false;
+
+  // Helper function to style and append scenario
+  const appendScenario = (scenario, result) => {
+    const color = result === 'failed' ? colors.Red : colors.Green;
+    htmlContent += `<li style="color: ${color};"><strong>${scenario}</strong></li>`;
+  };
+
+  // Process each line
+  lines.forEach(line => {
+    if (completed) {
+      htmlContent += `<br>${line}`;
+    }
+
+    if (line.includes('Executing feature:')) {
+      if (inFeature) {
+        // Close the previous feature section
+        htmlContent += '</ul>';
+      }
+      // Start a new feature section
+      currentFeature = line;
+      htmlContent += `<h2>${currentFeature}</h2><ul>`;
+      inFeature = true;
+    } else if (line.startsWith('Failed scenario:') || line.startsWith('Completed scenario:')) {
+      const status = line.startsWith('Failed') ? 'failed' : 'succeeded';
+      appendScenario(line, status);
+    } else if (line.includes('Failed feature:') || line.includes('Run completed')) {
+      // End the current feature section
+      if (inFeature) {
+        htmlContent += '</ul>';
+        inFeature = false;
+      }
+      // Add additional information
+      htmlContent += `<p><strong>${line}</strong></p>`;
+      if (line.includes('Run completed')) {
+        completed = true; // Set flag to stop processing further lines
+      }
+    }
+  });
+
+  // Close any open feature section
+  if (inFeature) {
+    htmlContent += '</ul>';
+  }
+
+  return htmlContent;
+}
