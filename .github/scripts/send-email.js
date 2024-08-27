@@ -76,7 +76,7 @@ function formatTestSummary(testSummary) {
 
   // Helper function to style and append scenario
   const appendScenario = (scenario, result) => {
-    const color = result === 'failed' ? colors.Red : colors.Green;
+    const color = result === 'failed' ? colors.Red : colors.colors.Green;
     htmlContent += `<li style="color: ${color};"><strong>${scenario}</strong></li>`;
   };
 
@@ -115,7 +115,7 @@ function formatTestSummary(testSummary) {
       if (inFeature) {
         htmlContent += `<li style="padding-left:15px;">${line}</li>`;
       } else {
-        htmlContent += `<br>${line}`;
+        htmlContent += `<br>${colorCodeLineAfterCompleted(line)}`;
       }
     }
   });
@@ -128,4 +128,22 @@ function formatTestSummary(testSummary) {
   htmlContent += `<p>For more details, please visit the <a href="${targetURL}">test report</a>.</p>`;
 
   return htmlContent;
+}
+
+function colorCodeLineAfterCompleted(line) {
+  //X (features/scenarios/steps) passed, Y filed, Z skipped should be colored with colors.Green, Red, Yellow if the X, Y, Z is not 0. 0 values should be gray
+  const regex = /(\d+) (features|scenarios|steps) passed, (\d+) failed, (\d+) skipped(?:, (\d+) undefined)?/;
+
+  return line.replace(regex, (match, passed, type, failed, skipped, undefined) => {
+    // Determine colors based on the values
+    const passedColor = passed != 0 ? colors.Green : colors.Gray;
+    const failedColor = failed != 0 ? colors.Red : colors.Gray;
+    const skippedColor = skipped != 0 ? colors.Yellow : colors.Gray;
+    const undefinedColor = undefined ? colors.Gray : '';
+
+    return `<span style="color:${passedColor}">${passed} ${type} passed</span>, ` +
+      `<span style="color:${failedColor}">${failed} failed</span>, ` +
+      `<span style="color:${skippedColor}">${skipped} skipped</span>` +
+      (undefined ? `, <span style="color:${undefinedColor}">${undefined} undefined</span>` : '');
+  });
 }
