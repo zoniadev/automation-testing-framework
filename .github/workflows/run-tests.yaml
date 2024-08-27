@@ -66,7 +66,6 @@ jobs:
           behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
-        if: failure()
         run: |
           node .github/scripts/send-email.js
         env:
