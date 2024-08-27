@@ -20,12 +20,23 @@ try {
   console.log('1')
   console.log(fs.readFileSync('../test-summary.txt', 'utf8'));
   testSummary = fs.readFileSync('test-summary.txt', 'utf8');
+
+} catch (err) {
+  console.error('Error reading test summary:', err);
+}
+
+try {
   console.log('2')
   console.log(fs.readFileSync('../test-summary.txt', 'utf8'));
+} catch (err) {
+  console.error('Error reading test summary2:', err);
+}
+
+try {
   console.log('3')
   console.log(fs.readFileSync('../../test-summary.txt', 'utf8'));
 } catch (err) {
-  console.error('Error reading test summary:', err);
+  console.error('Error reading test summary3:', err);
 }
 
 async function sendEmail() {
@@ -40,7 +51,7 @@ async function sendEmail() {
   });
 
   let info = await transporter.sendMail({
-    from: `"Test Failure Notifier" <${smtpUser}>`,
+    from: `"Zonia Test Failure Notifier" <${smtpUser}>`,
     to: 'atanas.atanasov.dev@gmail.com',
     subject: 'Test Failure Report',
     text: `The test has failed. Please check the details below:\n\n${testSummary}`,
