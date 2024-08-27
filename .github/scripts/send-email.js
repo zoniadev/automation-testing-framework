@@ -24,8 +24,14 @@ if (!smtpUser || !smtpPass || !smtpHost || !smtpPort) {
 let testSummary = 'Test summary not available.';
 try {
   testSummary = fs.readFileSync('./test-summary.txt', 'utf8');
+  console.log('Test summary:', testSummary);
 } catch (err) {
   console.error('Error reading test summary:', err);
+}
+
+if (!testSummary.includes('Failed scenario:')) {
+  console.log('No failed scenarios found.');
+  process.exit(0);
 }
 
 
@@ -42,7 +48,7 @@ async function sendEmail() {
 
   let info = await transporter.sendMail({
     from: `"Zonia Test Failure Notifier" <${smtpUser}>`,
-    to: 'atanas.atanasov.dev@gmail.com',
+    to: ['atanas.atanasov.dev@gmail.com', 'nkalendzhiev@yahoo.com'],
     subject: 'Test Failure Report',
     text: `The test has failed. Please check the details below:\n\n${testSummary}`,
     html: formatTestSummary(testSummary),
@@ -101,6 +107,12 @@ function formatTestSummary(testSummary) {
       htmlContent += `<p><strong>${line}</strong></p>`;
       if (line.includes('Run completed')) {
         completed = true; // Set flag to stop processing further lines
+      }
+    } else {
+      if (inFeature) {
+        htmlContent += `<li>${line}</li>`;
+      } else {
+        htmlContent += `<p>${line}</p>`;
       }
     }
   });
