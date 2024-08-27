@@ -17,26 +17,9 @@ if (!smtpUser || !smtpPass || !smtpHost || !smtpPort) {
 // Read the test summary
 let testSummary = 'Test summary not available.';
 try {
-  console.log('1')
-  console.log(fs.readFileSync('./test-summary.txt', 'utf8'));
-  testSummary = fs.readFileSync('test-summary.txt', 'utf8');
-
+  testSummary = fs.readFileSync('./test-summary.txt', 'utf8');
 } catch (err) {
   console.error('Error reading test summary:', err);
-}
-
-try {
-  console.log('2')
-  console.log(fs.readFileSync('../test-summary.txt', 'utf8'));
-} catch (err) {
-  console.error('Error reading test summary2:', err);
-}
-
-try {
-  console.log('3')
-  console.log(fs.readFileSync('../../test-summary.txt', 'utf8'));
-} catch (err) {
-  console.error('Error reading test summary3:', err);
 }
 
 async function sendEmail() {
