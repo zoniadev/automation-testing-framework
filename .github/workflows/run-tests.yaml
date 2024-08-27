@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          npm install -g allure-commandline node-mailer --save-dev
+          npm install -g allure-commandline nodemailer --save-dev
 
       - name: Install missing libraries
         run: |
