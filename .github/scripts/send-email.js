@@ -3,10 +3,10 @@ const fs = require('fs');
 const nodemailer = require('nodemailer');
 
 // SMTP credentials from GitHub Secrets
-const smtpUser = process.env.SMTP_USER_NASKO;
-const smtpPass = process.env.SMTP_PASS_NASKO;
-const smtpHost = process.env.SMTP_HOST_NASKO;
-const smtpPort = process.env.SMTP_PORT_NASKO;
+const smtpUser = process.env.SMTP_USER;
+const smtpPass = process.env.SMTP_PASS;
+const smtpHost = process.env.SMTP_HOST;
+const smtpPort = process.env.SMTP_PORT;
 
 // Check if the SMTP credentials are available
 if (!smtpUser || !smtpPass || !smtpHost || !smtpPort) {
