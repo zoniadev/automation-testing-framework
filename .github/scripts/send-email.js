@@ -65,7 +65,7 @@ async function sendEmail() {
     to: 'atanas.atanasov.dev@gmail.com',
     subject: 'Test Failure Report',
     text: `The test has failed. Please check the details below:\n\n${testSummary}`,
-    html: `<b>The test has failed. Please check the details below:</b><pre>${testSummary}</pre>`,
+    html: emailContent,
   });
 
   console.log('Message sent: %s', info.messageId);
