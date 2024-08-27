@@ -109,12 +109,13 @@ function formatTestSummary(testSummary) {
       htmlContent += `<p><strong>${line}</strong></p>`;
       if (line.includes('Run completed')) {
         completed = true; // Set flag to stop processing further lines
+        htmlContent += '<hr>'
       }
     } else {
       if (inFeature) {
         htmlContent += `<li style="padding-left:15px;">${line}</li>`;
       } else {
-        htmlContent += `<p>${line}</p>`;
+        htmlContent += `<br>${line}`;
       }
     }
   });
