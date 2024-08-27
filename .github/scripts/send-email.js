@@ -7,6 +7,12 @@ const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const smtpHost = process.env.SMTP_HOST;
 const smtpPort = process.env.SMTP_PORT;
+const colors = {
+  Green: "#28a745",
+  Red: "#dc3545",
+  Gray: "#6c757d",
+  Yellow: "#ffc107",
+}
 
 // Check if the SMTP credentials are available
 if (!smtpUser || !smtpPass || !smtpHost || !smtpPort) {
@@ -47,12 +53,7 @@ async function sendEmail() {
 
 sendEmail().catch(console.error);
 
-const colors = {
-  Green: "#28a745",
-  Red: "#dc3545",
-  Gray: "#6c757d",
-  Yellow: "#ffc107",
-}
+
 
 function formatTestSummary(testSummary) {
 
