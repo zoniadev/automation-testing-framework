@@ -82,8 +82,9 @@ function formatTestSummary(testSummary) {
 
   // Process each line
   lines.forEach(line => {
-    if (completed) {
-      htmlContent += `<br>${line}`;
+    if (line.includes('Screenshot save:') || line.includes('Screenshot saved to')) {
+      // Skip screenshot lines
+      return;
     }
 
     if (line.includes('Executing feature:')) {
@@ -111,7 +112,7 @@ function formatTestSummary(testSummary) {
       }
     } else {
       if (inFeature) {
-        htmlContent += `<li>${line}</li>`;
+        htmlContent += `<li style="padding-left:15px;">${line}</li>`;
       } else {
         htmlContent += `<p>${line}</p>`;
       }
