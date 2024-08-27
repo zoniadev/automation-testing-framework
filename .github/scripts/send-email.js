@@ -82,7 +82,7 @@ function formatTestSummary(testSummary) {
 
   // Process each line
   lines.forEach(line => {
-    if (line.includes('Screenshot save:') || line.includes('Screenshot saved to')) {
+    if (line.includes('Screenshot saved:') || line.includes('Screenshot saved to')) {
       // Skip screenshot lines
       return;
     }
