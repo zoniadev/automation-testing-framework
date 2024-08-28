@@ -40,7 +40,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          npm install -g allure-commandline --save-dev
+          npm install -g allure-commandline  --save-dev
+          npm install nodemailer --save-dev
 
       - name: Install missing libraries
         run: |
@@ -57,13 +58,25 @@ jobs:
             libflite1 \
             libgles2 \
 
-      - name: Install Chromium browser for Playwright 
+      - name: Install Chromium browser for Playwright
         run: |
           playwright install chromium
 
       - name: Run tests
         run: |
-          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results
+          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+
+      - name: Send failure email
+        if: always()
+        run: |
+          echo "Starting email script..."
+          node .github/scripts/send-email.js
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
 
       - name: Load test report history
         uses: actions/checkout@v3
