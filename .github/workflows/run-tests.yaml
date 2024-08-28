@@ -23,6 +23,8 @@ on:
           - 'restore_sleep'
           - 'restore_detox'
           - 'restore_life'
+  repository_dispatch:
+    types: [Trigger Automation Tests]
 
 jobs:
   test:
