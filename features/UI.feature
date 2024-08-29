@@ -1,7 +1,6 @@
 Feature: UI tests
 
 
-  @WIP
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in Restore Sleep Supplements page
     When user makes following decision in "6 More bottles of Restore Sleep" Upsell page
@@ -26,3 +25,20 @@ Feature: UI tests
       | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
 
 
+  Scenario Outline: Verify button links
+    Given Verify "<element>" links on "<url>" page are "<link>"
+
+    Examples:
+      | element           | url                                        | link       |
+      | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia    | /ad-signup |
+      | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-2  | /ad-signup |
+      | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-fb | /ad-signup |
+
+  @WIP
+  Scenario Outline: Verify button scrolling
+    Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
+
+    Examples:
+      | element                      | url                                | target_element            |
+#      | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/unbroken | FIRST_NAME_REGISTER_FIELD |
+      | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down |

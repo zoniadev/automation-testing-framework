@@ -1,11 +1,12 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,
     SupplementUpsellPage,
     WelcomePage,
     UserPage,
+    BasePage,
 )
 
 
@@ -40,3 +41,17 @@ def user_complete_registration(context):
     page = UserPage(context)
     page.skip_questions()
     page.verify_registration()
+
+
+@step(u'Verify "{element}" links on "{url}" page are "{link}"')
+def verify_button_links(context, element, url, link):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_links_on_a_page(element, link)
+
+
+@step(u'Verify "{element}" scrolling to "{target_element}" on "{url}" page')
+def verify_all_buttons_scroll(context, element, target_element, url):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_scroll(element, target_element)
