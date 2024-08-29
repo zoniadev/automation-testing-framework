@@ -24,7 +24,7 @@ Feature: UI tests
       | 3       | yes        | no             | yes        | no             | no         | best_value     | accept        | annual    |
       | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
 
-
+  @smoke
   Scenario Outline: Verify button links
     Given Verify "<element>" links on "<url>" page are "<link>"
 
@@ -34,11 +34,18 @@ Feature: UI tests
       | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-2  | /ad-signup |
       | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-fb | /ad-signup |
 
-  @WIP
-  Scenario Outline: Verify button scrolling
+  @smoke
+  Scenario Outline: Verify buttons scrolling
     Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
 
     Examples:
-      | element                      | url                                | target_element            |
-#      | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/unbroken | FIRST_NAME_REGISTER_FIELD |
-      | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down |
+      | element                      | url                                                   | target_element            |
+      | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/unbroken                    | FIRST_NAME_REGISTER_FIELD |
+
+  @smoke @WIP
+  Scenario Outline: Verify arrows scrolling
+    Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
+
+    Examples:
+      | element                      | url                                                   | target_element            |
+      | SCROLL_ARROW_BUTTON          | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down               |

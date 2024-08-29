@@ -126,135 +126,54 @@ class BasePage(object):
     def verify_all_buttons_scroll(self, element, target_element):
         buttons = self.find_all_elements(BasePageLocators.__dict__[element])
         errors = []
-
         for index, button in enumerate(buttons, start=1):
             try:
                 if target_element == "scroll_down":
-                    initial_bounding_box = button.bounding_box()
-                    if initial_bounding_box:
-                        initial_top = initial_bounding_box.get('top', None)
-                        button.focus()
-                        self.context.page.wait_for_timeout(500)
-                        button.click()
-                        self.context.page.wait_for_timeout(1000)
-                        # Get the button's new position after clicking
-                        new_bounding_box = button.bounding_box()
-                        if new_bounding_box:
-                            new_top = new_bounding_box.get('top', None)
-                            # Check if the button has moved down, indicating that the page has scrolled
-                            if initial_top is not None and new_top is not None and new_top <= initial_top:
-                                errors.append(f'Button {index} did not scroll down from its initial position!')
-                        else:
-                            errors.append(f'Button {index} does not have a bounding box after clicking!')
-                    else:
-                        errors.append(f'Button {index} does not have a bounding box before clicking!')
+                    # Handle arrows scrolling
+                    button.focus()
+                    self.context.page.wait_for_timeout(500)
+                    initial_position = button.bounding_box()
+                    button.click()
+                    self.context.page.wait_for_timeout(500)
+                    final_position = button.bounding_box()
+                    if initial_position == final_position:
+                        errors.append(f'Button {index} did not scroll down the page!')
                 else:
-                    # Handle target element visibility check
-                    self.context.page.wait_for_selector(BasePageLocators.__dict__[target_element], timeout=5000)
-                    element_handle = self.context.page.query_selector(BasePageLocators.__dict__[target_element])
+                    # Handle button scrolling
+                    target_element_locator = BasePageLocators.__dict__[target_element]
+                    button.click()
+                    self.context.page.wait_for_selector(target_element_locator, timeout=5000)
+                    # Get the target element handle
+                    element_handle = self.context.page.query_selector(target_element_locator)
                     if element_handle:
+                        # Get the bounding box of the target element
                         bounding_box = element_handle.bounding_box()
                         if bounding_box:
                             # Ensure all required keys are present
-                            top = bounding_box.get('top', None)
-                            left = bounding_box.get('left', None)
-                            bottom = bounding_box.get('bottom', None)
-                            right = bounding_box.get('right', None)
-                            if top is not None and left is not None and bottom is not None and right is not None:
-                                # Check if the element is within the viewport (assuming viewport size of 1280x720)
-                                viewport_width = 1280
-                                viewport_height = 720
-                                is_in_viewport = (
-                                        top >= 0 and
-                                        left >= 0 and
-                                        bottom <= viewport_height and
-                                        right <= viewport_width
-                                )
-
-                                if not is_in_viewport:
-                                    errors.append(f'Button {index} did not scroll to "{target_element}"!')
-                            else:
-                                errors.append(
-                                    f'Bounding box for target element "{target_element}" is missing some attributes!')
+                            bounding_box = {key: bounding_box.get(key, 0) for key in ['top', 'left', 'bottom', 'right']}
+                            # Check if the element is within the viewport (assuming viewport size of 1280x720)
+                            viewport_width = 1280
+                            viewport_height = 720
+                            is_in_viewport = (
+                                    bounding_box['top'] >= 0 and
+                                    bounding_box['left'] >= 0 and
+                                    bounding_box['bottom'] <= viewport_height and
+                                    bounding_box['right'] <= viewport_width
+                            )
+                            if not is_in_viewport:
+                                errors.append(f'Button {index} did not scroll to "{target_element}"!')
                         else:
                             errors.append(
-                                f'Bounding box for target element "{target_element}" could not be determined!')
+                                f'Button {index}: The bounding box for the target element "{target_element}" could not be determined!')
                     else:
                         errors.append(
-                            f'Target element "{target_element}" with locator "{BasePageLocators.__dict__[target_element]}" was not found!')
+                            f'Button {index}: The target element "{target_element}" with locator "{target_element_locator}" was not found!')
             except Exception as e:
                 errors.append(f'Button {index} encountered an error: {str(e)}')
-
         # Report errors if any
         if errors:
             error_count = len(errors)
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
-    # def verify_all_buttons_scroll(self, element, target_element):
-    #     buttons = self.find_all_elements(BasePageLocators.__dict__[element])
-    #     errors = []
-    #     for index, button in enumerate(buttons, start=1):
-    #         # Click the button
-    #         if target_element != "scroll_down":
-    #             button.click()
-    #         # Wait for the page to scroll (adjust timeout if necessary)
-    #         self.context.page.wait_for_timeout(1000)  # You may need to adjust this timeout
-    #         if target_element == "scroll_down":
-    #             # Get the button's position before clicking
-    #             initial_bounding_box = button.bounding_box()
-    #             if initial_bounding_box:
-    #                 initial_top = initial_bounding_box.get('top', None)
-    #                 button.focus()
-    #                 # button.click()
-    #                 # Wait for the page to scroll
-    #                 self.context.page.wait_for_timeout(1000)
-    #                 # Get the button's new position after clicking
-    #                 new_bounding_box = button.bounding_box()
-    #                 if new_bounding_box:
-    #                     new_top = new_bounding_box.get('top', None)
-    #                     # Check if the button has moved down, indicating that the page has scrolled
-    #                     if initial_top is not None and new_top is not None and new_top <= initial_top:
-    #                         errors.append(f'Button {index} did not scroll down from its initial position!')
-    #                 else:
-    #                     errors.append(f'Button {index} does not have a bounding box after clicking!')
-    #             else:
-    #                 errors.append(f'Button {index} does not have a bounding box before clicking!')
-    #         else:
-    #             # Check if the target element is visible in the viewport
-    #             self.context.page.wait_for_selector(BasePageLocators.__dict__[target_element], timeout=5000)
-    #             element_handle = self.context.page.query_selector(BasePageLocators.__dict__[target_element])
-    #             if element_handle:
-    #                 bounding_box = element_handle.bounding_box()
-    #                 if bounding_box:
-    #                     # Ensure all required keys are present
-    #                     top = bounding_box.get('top', None)
-    #                     left = bounding_box.get('left', None)
-    #                     bottom = bounding_box.get('bottom', None)
-    #                     right = bounding_box.get('right', None)
-    #                     if top is not None and left is not None and bottom is not None and right is not None:
-    #                         # Check if the element is within the viewport (assuming viewport size of 1280x720)
-    #                         viewport_width = 1280
-    #                         viewport_height = 720
-    #                         is_in_viewport = (
-    #                                 top >= 0 and
-    #                                 left >= 0 and
-    #                                 bottom <= viewport_height and
-    #                                 right <= viewport_width
-    #                         )
-    #
-    #                         if not is_in_viewport:
-    #                             errors.append(f'Button {index} did not scroll to "{target_element}"!')
-    #                     else:
-    #                         errors.append(
-    #                             f'Bounding box for target element "{target_element}" is missing some attributes!')
-    #                 else:
-    #                     errors.append(f'Bounding box for target element "{target_element}" could not be determined!')
-    #             else:
-    #                 errors.append(
-    #                     f'Target element "{target_element}" with locator "{BasePageLocators.__dict__[target_element]}" was not found!')
-    #     # Report errors if any
-    #     if errors:
-    #         error_count = len(errors)
-    #         raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
 
