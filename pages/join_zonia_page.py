@@ -12,6 +12,6 @@ class JoinZoniaPage(BasePage):
         print(f'===> Joining Zonia...')
         self.click(JOIN_ZONIA_BUTTON, 0)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.series}_sign_up_url'), timeout=20000)
-        time.sleep(0.5)
+        time.sleep(1)
         self.verify_element_visible(SIGNUP_NAME_FIELD)
         print(f'===> Successful')

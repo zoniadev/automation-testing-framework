@@ -68,3 +68,4 @@ Feature: UI tests
   Scenario: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
+    When user sign up for "MONTHLY" plan

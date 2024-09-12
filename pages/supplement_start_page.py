@@ -3,6 +3,7 @@ import common_functions.random_data as RD
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
+import locators
 
 
 class SupplementStartPage(BasePage):
@@ -12,9 +13,9 @@ class SupplementStartPage(BasePage):
     def buy_bottles(self, amount):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
-        button_locator = f"ORDER_{amount}_BOTTLES_BUTTON"
         print(f'===> Buying {amount} bottle...')
-        self.click(__dict__[button_locator])
+        button_locator = getattr(locators, f"ORDER_{amount}_BOTTLES_BUTTON")
+        self.click(button_locator)
         time.sleep(2)
         self.find_element(FIRST_NAME_FIELD).press_sequentially(common_variables.supplement_funnel_name)
         self.find_element(LAST_NAME_FIELD).press_sequentially(RD.last_name())

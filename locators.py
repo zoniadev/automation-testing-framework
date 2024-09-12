@@ -60,5 +60,11 @@ REGISTER_BUTTON = "//button[text()='Register for free now']"
 #JoinZoniaPageLocators:
 
 #SignUpPageLocators:
+MONTHLY_RADIO_BUTTON = "//input[@data-cycle='monthly_new']"
+QUARTERLY_RADIO_BUTTON = "//input[@data-cycle='quarterly']"
+ANUALLY_RADIO_BUTTON = "//input[@data-cycle='yearly_new']"
 SIGNUP_NAME_FIELD = "//input[@id='form-name']"
+SIGNUP_EMAIL_FIELD = "//input[@id='form-email']"
+SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
+SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[text()='activate my membership']"
 

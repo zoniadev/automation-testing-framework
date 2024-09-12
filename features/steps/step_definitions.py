@@ -1,5 +1,5 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,
@@ -8,6 +8,7 @@ from pages import (
     UserPage,
     OptInPage,
     JoinZoniaPage,
+    SignUpPage,
     BasePage,
 )
 
@@ -76,3 +77,10 @@ def user_register_in_opt_in_page(context, series):
 def user_join_zonia(context):
     page = JoinZoniaPage(context)
     page.join_zonia()
+
+
+@step(u'user sign up for "{cycle}" plan')
+def user_register_in_signup_page(context, cycle):
+    page = SignUpPage(context)
+    page.select_plan(cycle.upper())
+    page.register_in_signup_page()

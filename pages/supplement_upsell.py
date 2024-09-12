@@ -2,6 +2,7 @@ import time
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
+import locators
 
 
 class SupplementUpsellPage(BasePage):
@@ -23,8 +24,8 @@ class SupplementUpsellPage(BasePage):
                 self.click(DOWNSELL_NO_THANKS_BUTTON)
             else:
                 time.sleep(self.order_delay_timeout)
-                button_locator = f"BUY_{last_chance.upper()}_BUTTON"
-                self.click(__dict__[button_locator])
+                button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
+                self.click(button_locator)
 
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
@@ -44,8 +45,8 @@ class SupplementUpsellPage(BasePage):
         time.sleep(0.5)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)
-            membership_locator = f"MEMBERSHIP_{plan.upper()}_BUTTON"
-            self.click(__dict__[membership_locator])
+            membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
+            self.click(membership_locator)
             time.sleep(1)
             self.click(ACTIVATE_MEMBERSHIP_BUTTON)
         elif decision == 'decline':

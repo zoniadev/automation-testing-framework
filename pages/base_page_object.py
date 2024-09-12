@@ -3,6 +3,7 @@ import time
 from playwright.sync_api import Page, expect
 import common_variables
 from locators import *
+import locators
 
 
 class BasePage(object):
@@ -65,14 +66,14 @@ class BasePage(object):
         expect(self.find_element(locator)).to_have_text(expected_text)
 
 
-    def retry_cc_number_entry(self, max_retries=5):
+    def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
         for attempt in range(max_retries):
             try:
                 cc_number.fill("")
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
                 time.sleep(0.5)
-                self.find_element(PLACE_ORDER_BUTTON).click()
+                self.find_element(submit_button).click()
                 self.context.page.locator(LOADER).click()
                 print('Loader found')
                 break
@@ -82,7 +83,7 @@ class BasePage(object):
         else:
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
-    def populate_cc_details(self):
+    def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
@@ -90,7 +91,7 @@ class BasePage(object):
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         time.sleep(1)
-        self.retry_cc_number_entry()
+        self.retry_cc_number_entry(submit_button=submit_button)
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
 
@@ -99,7 +100,8 @@ class BasePage(object):
         self.context.page.goto(url)
 
     def verify_all_buttons_links_on_a_page(self, element, expected_link):
-        buttons = self.find_all_elements(__dict__[element])
+        locator = getattr(locators, element)
+        buttons = self.find_all_elements(locator)
         errors = []
 
         for index, button in enumerate(buttons, start=1):
@@ -112,7 +114,8 @@ class BasePage(object):
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
     def verify_all_buttons_scroll(self, element, target_element):
-        buttons = self.find_all_elements(__dict__[element])
+        locator = getattr(locators, element)
+        buttons = self.find_all_elements(locator)
         errors = []
         for index, button in enumerate(buttons, start=1):
             try:
@@ -128,7 +131,7 @@ class BasePage(object):
                         errors.append(f'Button {index} did not scroll down the page!')
                 else:
                     # Handle button scrolling
-                    target_element_locator = __dict__[target_element]
+                    target_element_locator = getattr(locators, target_element)
                     button.click()
                     self.context.page.wait_for_selector(target_element_locator, timeout=5000)
                     # Get the target element handle
@@ -165,7 +168,7 @@ class BasePage(object):
 
 
     def verify_all_buttons_redirects_on_a_page(self, element, expected_link):
-        buttons = self.find_all_elements(__dict__[element])
+        buttons = self.find_all_elements(getattr(locators, element))
         errors = []
 
         for index, button in enumerate(buttons, start=1):
