@@ -1,0 +1,3 @@
+Executing step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-gut-health" page
+===> 11 visible elements with "//a[text()='Register for free now']" found from total 12.
+Completed step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-gut-health" page
