@@ -42,7 +42,7 @@ Feature: UI tests
       | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-2           | https://staging.zonia.com/ad-signup |
       | JOIN_ZONIA_BUTTON | https://staging.zonia.com/ad-join-zonia-fb          | https://staging.zonia.com/ad-signup |
 
-  @smoke @WIP
+  @smoke
   Scenario Outline: Verify buttons scrolling
     Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
 
@@ -63,3 +63,8 @@ Feature: UI tests
     Examples:
       | element             | url                                                   | target_element |
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
+
+  @WIP
+  Scenario: Unbroken funnel
+    Given user register in "Unbroken" Opt In page
+    And user join Zonia

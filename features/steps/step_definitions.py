@@ -6,6 +6,8 @@ from pages import (
     SupplementUpsellPage,
     WelcomePage,
     UserPage,
+    OptInPage,
+    JoinZoniaPage,
     BasePage,
 )
 
@@ -62,3 +64,15 @@ def verify_button_redirects(context, element, url, expected_redirect):
     page = BasePage(context)
     page.navigate_to_url(url)
     page.verify_all_buttons_redirects_on_a_page(element, expected_redirect)
+
+
+@step(u'user register in "{series}" Opt In page')
+def user_register_in_opt_in_page(context, series):
+    page = OptInPage(context)
+    page.register_in_opt_in_page()
+
+
+@step(u'user join Zonia')
+def user_join_zonia(context):
+    page = JoinZoniaPage(context)
+    page.join_zonia()
