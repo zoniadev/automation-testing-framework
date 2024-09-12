@@ -55,3 +55,10 @@ def verify_all_buttons_scroll(context, element, target_element, url):
     page = BasePage(context)
     page.navigate_to_url(url)
     page.verify_all_buttons_scroll(element, target_element)
+
+
+@step(u'Verify "{element}" button/s on "{url}" page navigate to "{expected_redirect}"')
+def verify_button_redirects(context, element, url, expected_redirect):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_redirects_on_a_page(element, expected_redirect)

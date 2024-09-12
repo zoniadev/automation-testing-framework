@@ -176,4 +176,17 @@ class BasePage(object):
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
 
+    def verify_all_buttons_redirects_on_a_page(self, element, expected_link):
+        buttons = self.find_all_elements(BasePageLocators.__dict__[element])
+        errors = []
 
+        for index, button in enumerate(buttons, start=1):
+            button.click()
+            self.context.page.wait_for_load_state('load')
+            new_url = self.context.page.url
+            if expected_link != new_url:
+                errors.append(f'Expected button {index} to navigate to  "{expected_link}", but it went to "{new_url}"!')
+            self.context.page.go_back()
+        if errors:
+            error_count = len(errors)
+            raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
