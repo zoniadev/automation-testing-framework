@@ -1,5 +1,6 @@
 import re
 import time
+from urllib.parse import urlparse
 from playwright.sync_api import Page, expect
 import common_variables
 
@@ -15,6 +16,10 @@ class BasePageLocators:
     CC_ZIP_FRAME = '//iframe[@id="braintree-hosted-field-postalCode"]'
     CC_ZIP_FIELD = 'Billing Zip/Postal Code'
     LOADER = "//*[@test-id='loader']"
+    JOIN_ZONIA_BUTTON = "//a[text()='JOIN ZONIA NOW']"
+    REGISTER_FOR_FREE_NOW_BUTTON = "//a[text()='Register for free now']"
+    FIRST_NAME_REGISTER_FIELD = "//input[@id='first-name']"
+    SCROLL_ARROW_BUTTON = "//a[@class='arrow']"
 
 
 class BasePage(object):
@@ -37,6 +42,17 @@ class BasePage(object):
         else:
             print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
             return visible_elements[1]
+
+    def find_all_elements(self, locator):
+        elements = self.context.page.locator(locator).all()
+        if not elements:
+            raise Exception(f'No elements found with locator {locator}!')
+        visible_elements = [element for element in elements if element.is_visible()]
+        if not visible_elements:
+            raise Exception(f'No visible elements found with locator {locator}!')
+        visible_elements_amount = len(visible_elements)
+        print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
+        return visible_elements
 
     def verify_element_visible(self, locator):
         expect(self.find_element(locator)).to_be_visible()
@@ -89,3 +105,88 @@ class BasePage(object):
         self.retry_cc_number_entry()
         expect(self.context.page.locator(BasePageLocators.LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
+
+
+    def navigate_to_url(self, url):
+        self.context.page.goto(url)
+
+    def verify_all_buttons_links_on_a_page(self, element, expected_link):
+        buttons = self.find_all_elements(BasePageLocators.__dict__[element])
+        errors = []
+
+        for index, button in enumerate(buttons, start=1):
+            link = button.get_attribute("href")
+            if link != expected_link:
+                errors.append(f'Expected button {index} link to be "{expected_link}", but it is "{link}"!')
+
+        if errors:
+            error_count = len(errors)
+            raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
+
+    def verify_all_buttons_scroll(self, element, target_element):
+        buttons = self.find_all_elements(BasePageLocators.__dict__[element])
+        errors = []
+        for index, button in enumerate(buttons, start=1):
+            try:
+                if target_element == "scroll_down":
+                    # Handle arrows scrolling
+                    button.focus()
+                    self.context.page.wait_for_timeout(500)
+                    initial_position = button.bounding_box()
+                    button.click()
+                    self.context.page.wait_for_timeout(500)
+                    final_position = button.bounding_box()
+                    if initial_position == final_position:
+                        errors.append(f'Button {index} did not scroll down the page!')
+                else:
+                    # Handle button scrolling
+                    target_element_locator = BasePageLocators.__dict__[target_element]
+                    button.click()
+                    self.context.page.wait_for_selector(target_element_locator, timeout=5000)
+                    # Get the target element handle
+                    element_handle = self.context.page.query_selector(target_element_locator)
+                    if element_handle:
+                        # Get the bounding box of the target element
+                        bounding_box = element_handle.bounding_box()
+                        if bounding_box:
+                            # Ensure all required keys are present
+                            bounding_box = {key: bounding_box.get(key, 0) for key in ['top', 'left', 'bottom', 'right']}
+                            # Check if the element is within the viewport (assuming viewport size of 1280x720)
+                            viewport_width = 1280
+                            viewport_height = 720
+                            is_in_viewport = (
+                                    bounding_box['top'] >= 0 and
+                                    bounding_box['left'] >= 0 and
+                                    bounding_box['bottom'] <= viewport_height and
+                                    bounding_box['right'] <= viewport_width
+                            )
+                            if not is_in_viewport:
+                                errors.append(f'Button {index} did not scroll to "{target_element}"!')
+                        else:
+                            errors.append(
+                                f'Button {index}: The bounding box for the target element "{target_element}" could not be determined!')
+                    else:
+                        errors.append(
+                            f'Button {index}: The target element "{target_element}" with locator "{target_element_locator}" was not found!')
+            except Exception as e:
+                errors.append(f'Button {index} encountered an error: {str(e)}')
+        # Report errors if any
+        if errors:
+            error_count = len(errors)
+            raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
+
+
+    def verify_all_buttons_redirects_on_a_page(self, element, expected_link):
+        buttons = self.find_all_elements(BasePageLocators.__dict__[element])
+        errors = []
+
+        for index, button in enumerate(buttons, start=1):
+            button.click()
+            self.context.page.wait_for_load_state('load')
+            new_url = self.context.page.url
+            if expected_link != new_url:
+                errors.append(f'Expected button {index} to navigate to  "{expected_link}", but it went to "{new_url}"!')
+            self.context.page.go_back()
+        if errors:
+            error_count = len(errors)
+            raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))

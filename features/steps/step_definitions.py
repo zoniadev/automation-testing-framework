@@ -1,10 +1,12 @@
-from behave import step
+# from behave import step
+from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,
     SupplementUpsellPage,
     WelcomePage,
     UserPage,
+    BasePage,
 )
 
 
@@ -19,7 +21,7 @@ def user_fill_opt_in_form(context, amount):
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
-        page.change_order_delay_timeout(20)
+        page.change_order_delay_timeout(30)
     for row in context.table:
         page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
 
@@ -39,3 +41,24 @@ def user_complete_registration(context):
     page = UserPage(context)
     page.skip_questions()
     page.verify_registration()
+
+
+@step(u'Verify "{element}" links on "{url}" page are "{link}"')
+def verify_button_links(context, element, url, link):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_links_on_a_page(element, link)
+
+
+@step(u'Verify "{element}" scrolling to "{target_element}" on "{url}" page')
+def verify_all_buttons_scroll(context, element, target_element, url):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_scroll(element, target_element)
+
+
+@step(u'Verify "{element}" button/s on "{url}" page navigate to "{expected_redirect}"')
+def verify_button_redirects(context, element, url, expected_redirect):
+    page = BasePage(context)
+    page.navigate_to_url(url)
+    page.verify_all_buttons_redirects_on_a_page(element, expected_redirect)
