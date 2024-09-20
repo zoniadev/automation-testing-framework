@@ -20,5 +20,5 @@ class OptInPage(BasePage):
         # self.enter_text(PHONE_FIELD, RD.phone_number())
         self.click(REGISTER_BUTTON)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.series}_join_zonia_url'), timeout=20000)
-        self.verify_element_visible(JOIN_ZONIA_BUTTON)
+        self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)
         print(f'===> Successful')

@@ -18,6 +18,7 @@ class SupplementUpsellPage(BasePage):
             time.sleep(self.order_delay_timeout)
             self.click(YES_UPGRADE_BUTTON)
         elif upgrade == 'no':
+            time.sleep(0.5)
             self.click(NO_THANKS_BUTTON)
             self.verify_downsell_popup()
             if last_chance == 'no':

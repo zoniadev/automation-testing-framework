@@ -55,9 +55,12 @@ OPTIN_NAME_FIELD = "//input[@id='first-name']"
 OPTIN_EMAIL_FIELD = "//input[@id='email']"
 PHONE_CHECKBOX = "//input[@name='hasPhone']"
 OPTIN_PHONE_FIELD = "//input[@id='phone']"
-REGISTER_BUTTON = "//button[text()='Register for free now']"
+# REGISTER_BUTTON = "//button[text()='Register for free now']"
+REGISTER_BUTTON = "//button[@data-id='register-btn']"
+REGISTER_SCROLL_BUTTON = "//*[@data-id='register-btn-scroll']"
 
 #JoinZoniaPageLocators:
+JOIN_ZONIA_ID_BUTTON = "//*[@data-id='register-btn']"
 
 #SignUpPageLocators:
 MONTHLY_RADIO_BUTTON = "//input[@data-cycle='monthly_new']"
@@ -66,5 +69,6 @@ ANUALLY_RADIO_BUTTON = "//input[@data-cycle='yearly_new']"
 SIGNUP_NAME_FIELD = "//input[@id='form-name']"
 SIGNUP_EMAIL_FIELD = "//input[@id='form-email']"
 SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
-SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[text()='activate my membership']"
+# SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[text()='activate my membership']"
+SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@data-id='activate-membership']"
 
