@@ -74,6 +74,7 @@ class BasePage(object):
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
                 time.sleep(0.5)
                 self.find_element(submit_button).click()
+                time.sleep(1)
                 self.context.page.locator(LOADER).click()
                 print('Loader found')
                 break
@@ -83,6 +84,17 @@ class BasePage(object):
         else:
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
+    # def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
+    #     cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
+    #     cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
+    #     cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
+    #     cc_cvv.press_sequentially(common_variables.test_cc_cvv)
+    #     cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
+    #     cc_zip.press_sequentially(common_variables.test_cc_zip)
+    #     time.sleep(1)
+    #     self.retry_cc_number_entry(submit_button=submit_button)
+    #     expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
+    #     print('===> Populated CC details')
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
@@ -90,8 +102,11 @@ class BasePage(object):
         cc_cvv.press_sequentially(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.press_sequentially(common_variables.test_cc_zip)
-        time.sleep(1)
-        self.retry_cc_number_entry(submit_button=submit_button)
+        cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        cc_number.fill("")
+        cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
+        time.sleep(0.5)
+        self.find_element(submit_button).click()
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
 

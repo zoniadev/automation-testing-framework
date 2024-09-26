@@ -10,7 +10,7 @@ class SupplementStartPage(BasePage):
     def __init__(self, context):
         BasePage.__init__(self, context)
 
-    def buy_bottles(self, amount):
+    def supplement_funnel_buy_bottles(self, amount):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'===> Buying {amount} bottle...')

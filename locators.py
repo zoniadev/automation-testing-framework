@@ -8,7 +8,8 @@ CC_CVV_FRAME = '//iframe[@id="braintree-hosted-field-cvv"]'
 CC_CVV_FIELD = 'Security Code(CCV)'
 CC_ZIP_FRAME = '//iframe[@id="braintree-hosted-field-postalCode"]'
 CC_ZIP_FIELD = 'Billing Zip/Postal Code'
-LOADER = "//*[@test-id='loader']"
+# LOADER = "//*[@test-id='loader']"
+LOADER = "//*[@data-id='loader']"
 JOIN_ZONIA_BUTTON = "//a[text()='JOIN ZONIA NOW']"
 REGISTER_FOR_FREE_NOW_BUTTON = "//a[text()='Register for free now']"
 FIRST_NAME_REGISTER_FIELD = "//input[@id='first-name']"
@@ -40,6 +41,15 @@ MEMBERSHIP_MONTHLY_BUTTON = "//*[@data-plan='monthly_new']"
 MEMBERSHIP_QUARTERLY_BUTTON = "//*[@data-plan='quarterly']"
 MEMBERSHIP_ANNUAL_BUTTON = "//*[@data-plan='yearly_new']"
 ACTIVATE_MEMBERSHIP_BUTTON = "//*[@id='register-middle']"
+
+#DocuseriesUpsellPageLocators:
+SILVER_PACKAGE_BUTTON = "//button[@data-id='silver-package-upsell']"
+PLATINUM_PACKAGE_BUTTON = "//button[@data-id='platinum-package-upsell']"
+BUY_MASTERCLASS_BUTTON = "//*[@data-id='buy-masterclass']"
+SKIP_MASTERCLASS_BUTTON = "//*[@data-id='skip-masterclass']"
+BUY_1_BOTTLES_BUTTON = "//*[@data-id='add-order-1']"
+BUY_3_BOTTLES_BUTTON = "//*[@data-id='add-order-3']"
+BUY_6_BOTTLES_BUTTON = "//*[@data-id='add-order-6']"
 
 #UserPageLocators:
 SKIP_QUESTIONS_BUTTON = "//*[@class='skipAndRegister']"

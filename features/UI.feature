@@ -3,13 +3,13 @@ Feature: UI tests
 
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in Restore Sleep Supplements page
-    When user makes following decision in "6 More bottles of Restore Sleep" Upsell page
+    When user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
       | upgrade      | last_chance      |
       | <sl_upgrade> | <sl_last_chance> |
-    And user makes following decision in "Restore Life" Upsell page
+    And user makes following decision in supplement "Restore Life" Upsell page
       | upgrade      | last_chance      |
       | <lf_upgrade> | <lf_last_chance> |
-    And user makes following decision in "Restore Detox" Upsell page
+    And user makes following decision in supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
       | <dt_upgrade> | <dt_last_chance> |
     And user makes following decision in 7 day free membership
@@ -65,7 +65,21 @@ Feature: UI tests
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
 
   @WIP
-  Scenario: Unbroken funnel
+  Scenario Outline: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
     When user sign up for "MONTHLY" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+
+    Examples:
+      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell |
+#      | silver           | no                   | 1          | no                 |
+      | no           | buy                   | no          | no                 |

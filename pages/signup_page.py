@@ -12,14 +12,14 @@ class SignUpPage(BasePage):
 
     def select_plan(self, cycle):
         cycle_radiobutton = getattr(locators, f"{cycle}_RADIO_BUTTON")
-        print(f'===> Selecting {cycle} plan...')
         self.click(cycle_radiobutton)
+        print(f'>>> Selected {cycle} plan')
 
     def register_in_signup_page(self):
-        print(f'===> Registering in Signup page...')
+        print(f'>>> Registering in Signup page...')
         self.enter_text(SIGNUP_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(SIGNUP_EMAIL_FIELD, common_variables.supplement_funnel_email)
         self.enter_text(SIGNUP_PASSWORD_FIELD, RD.password(8))
         self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.series}_booster_upsale_url'), timeout=20000)
-        print(f'===> Successful')
+        print(f'>>> Successfully registered in Signup page')

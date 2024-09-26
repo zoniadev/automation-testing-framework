@@ -16,17 +16,32 @@ from pages import (
 @step('user select to buy "{amount}" bottles in Restore Sleep Supplements page')
 def user_fill_opt_in_form(context, amount):
     page = SupplementStartPage(context)
-    page.buy_bottles(amount)
+    page.supplement_funnel_buy_bottles(amount)
     common_variables.supplement_funnel_bottles = amount
 
 
-@step('user makes following decision in "{upsell_page}" Upsell page')
+@step('user makes following decision in supplement "{upsell_page}" Upsell page')
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
         page.change_order_delay_timeout(30)
     for row in context.table:
-        page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
+        page.chose_supplement_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
+
+
+@step('user makes following decision in docuseries "{upsell_page}" Upsell page')
+def user_select_in_upsell(context, upsell_page):
+    page = SupplementUpsellPage(context)
+    if upsell_page == 'Booster Packages':
+        for row in context.table:
+            page.chose_docuseries_booster_package_upsell(decision=row['decision'])
+    elif upsell_page == 'Masterclass Packages':
+        for row in context.table:
+            page.chose_docuseries_masterclass_upsell(decision=row['decision'])
+    elif upsell_page == 'Restore Detox':
+        # page.change_order_delay_timeout(30)
+        for row in context.table:
+            page.docuseries_buy_bottles(upsell_page, amount=row['bottles'], upsell_downsell=row['upsell_downsell'])
 
 
 @step('user makes following decision in 7 day free membership')
