@@ -13,6 +13,7 @@ class SignUpPage(BasePage):
     def select_plan(self, cycle):
         cycle_radiobutton = getattr(locators, f"{cycle}_RADIO_BUTTON")
         self.click(cycle_radiobutton)
+        time.sleep(0.5)
         print(f'>>> Selected {cycle} plan')
 
     def register_in_signup_page(self):

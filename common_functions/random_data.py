@@ -76,6 +76,11 @@ def town():
     result = fake_town.replace("'", "")
     return result
 
+def state():
+    fake_town = faker.state()
+    result = fake_town.replace("'", "")
+    return result
+
 
 def postcode():
     fake_postcode = faker.postcode()

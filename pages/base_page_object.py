@@ -42,6 +42,12 @@ class BasePage(object):
         expect(self.find_element(locator)).to_be_visible()
         print(f'===> Verified element "{locator}" is visible')
 
+    def verify_element_not_visible(self, locator):
+        elements = self.context.page.locator(locator).all()
+        if elements:
+            raise Exception(f'Element found with locator {locator}!')
+        print(f'===> Verified element "{locator}" is not visible')
+
     def click(self, locator, instance=1):
         element = self.find_element(locator, instance)
         element.scroll_into_view_if_needed()

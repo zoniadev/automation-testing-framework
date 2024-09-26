@@ -82,3 +82,13 @@ SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
 # SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[text()='activate my membership']"
 SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@data-id='activate-membership']"
 
+#SpippingAddressPopupLocators:
+SHIPPING_FULL_NAME_FIELD = "//input[@id='shippingName']"
+SHIPPING_PHONE_FIELD = "//input[@id='shippingPhone']"
+SHIPPING_ADDRESS_FIELD = "//input[@id='shippingAddress']"
+SHIPPING_CITY_FIELD = "//input[@id='city']"
+SHIPPING_STATE_FIELD = "//input[@id='state']"
+SHIPPING_ZIP_FIELD = "//input[@id='postcode']"
+SHIPPING_COUNTRY_FIELD = "//input[@id='country']"
+SHIPPING_SUBMIT_BUTTON = "//button[@id='save-shipping-address']"
+

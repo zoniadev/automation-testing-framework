@@ -3,6 +3,7 @@ import common_variables
 from pages.base_page_object import BasePage
 from locators import *
 import locators
+import common_functions.random_data as RD
 
 
 class SupplementUpsellPage(BasePage):
@@ -68,6 +69,9 @@ class SupplementUpsellPage(BasePage):
             self.click(NO_THANKS_BUTTON)
         self.wait_for_navigation(next_page, timeout=20000)
         print(f'>>> Successfully selected "{decision}" for booster package')
+        if decision == 'platinum':
+            self.populate_shipping_address()
+            common_variables.docuseries_address_already_filled = True
 
 
     def chose_docuseries_masterclass_upsell(self, decision):
@@ -91,23 +95,28 @@ class SupplementUpsellPage(BasePage):
             print('===> Not buying bottles...')
             next_page = common_variables.unbroken_restore_detox_downsell_url
             time.sleep(0.5)
-            self.click(NO_THANKS_BUTTON)
+            # self.click(NO_THANKS_BUTTON, 2)
+            self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
             next_page = common_variables.unbroken_restore_detox_upsell_url
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
-            self.click(button_locator)
+            time.sleep(0.5)
+            self.retry_clicking_button(button_locator, next_page)
             time.sleep(0.5)
             print(f'===> Successfully bought {amount} bottle')
-        self.wait_for_navigation(next_page, timeout=20000)
+            if not common_variables.docuseries_address_already_filled:
+                self.populate_shipping_address()
+        time.sleep(0.5)
         if upsell_downsell == 'upgrade':
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
         elif upsell_downsell == 'no':
             self.click(NO_THANKS_BUTTON)
-            time.sleep(0.5)
-            self.click(DOWNSELL_NO_THANKS_BUTTON)
-            print('===> Not upgrading...')
+            time.sleep(1)
+            if amount != 'no':
+                self.click(DOWNSELL_NO_THANKS_BUTTON)
+                print('===> Not upgrading...')
         else:
             self.click(NO_THANKS_BUTTON)
             time.sleep(0.5)
@@ -116,9 +125,30 @@ class SupplementUpsellPage(BasePage):
             else:
                 self.click(BUY_MOST_POPULAR_BUTTON)
             print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
-            self.wait_for_navigation(common_variables.unbroken_restore_life_url, timeout=20000)
-            print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
+        self.wait_for_navigation(common_variables.unbroken_restore_life_url, timeout=20000)
+        print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
 
+    def populate_shipping_address(self):
+        print('>>>Entering shipping details...')
+        time.sleep(1)
+        self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
+        self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
+        self.enter_text(SHIPPING_ADDRESS_FIELD, RD.address_line())
+        self.enter_text(SHIPPING_CITY_FIELD, RD.town())
+        self.enter_text(SHIPPING_STATE_FIELD, RD.state())
+        self.enter_text(SHIPPING_ZIP_FIELD, RD.postcode())
+        self.enter_text(SHIPPING_COUNTRY_FIELD, 'USA')
+        self.click(SHIPPING_SUBMIT_BUTTON)
+        time.sleep(0.5)
+        print('>>>Successfully entered shipping details')
 
-
-
+    def retry_clicking_button(self, button, next_page):
+        self.click(button)
+        try:
+            self.wait_for_navigation(next_page, timeout=5000)
+        except:
+            print(f'===> Issue with clicking button "{button}", retrying...')
+            self.click(button)
+            time.sleep(0.5)
+            self.wait_for_navigation(next_page, timeout=20000)
+            print('===> Second try was successful')
