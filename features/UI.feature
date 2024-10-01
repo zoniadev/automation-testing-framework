@@ -81,9 +81,10 @@ Feature: UI tests
     And user makes following decision in docuseries "Restore Life" Upsell page
       | bottles      | upsell_downsell      |
       | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
 
     Examples:
       | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
-#      | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
-#      | no               | no                   | no         | no                 | no         | upgrade            |
+#      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
+      | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
+      | no               | no                   | no         | no                 | no         | upgrade            |

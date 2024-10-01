@@ -15,8 +15,6 @@ unbroken_restore_life_downsell_url = 'https://staging.zonia.com/ad-rl-6-discount
 welcome_page_url = 'https://staging.zonia.com/welcome'
 user_page_url = 'https://staging.zonia.com/user'
 
-series = ''
-
 restore_sleep_start_url = 'https://staging.zonia.com/restore-sleep-special'
 restore_sleep_first_upsell_url = 'https://staging.zonia.com/restore-sleep-6-more-bottles'
 restore_sleep_second_upsell_url = 'https://staging.zonia.com/rs-restore-life-6-discounted-bottles'
@@ -34,6 +32,8 @@ supplement_funnel_email = ''
 supplement_funnel_password = ''
 supplement_funnel_bottles = ''
 docuseries_address_already_filled = False
+series = ''
+membership_added = False
 
 
 test_cc_number = '4242424242424242'

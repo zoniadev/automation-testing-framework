@@ -87,27 +87,24 @@ class SupplementUpsellPage(BasePage):
         self.wait_for_navigation(next_page, timeout=20000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
-    def docuseries_buy_bottles(self, upsell_page, amount, upsell_downsell):
+    def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
             next_page_navigation = common_variables.unbroken_restore_life_url
         elif upsell_page == 'Restore Life':
             next_page_navigation = common_variables.welcome_page_url
-        if amount != 'no':
-            self.change_order_delay_timeout(30)
+            if amount != 'no':
+                self.change_order_delay_timeout(30)
         print(f'>>> Selecting "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}...')
         if upsell_downsell not in ['upgrade', 'no', 'best_value', 'most_popular']:
             raise Exception(f'Unsupported "upsell_downsell" value: {upsell_downsell}')
         if amount == 'no':
             print('===> Not buying bottles...')
             next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_downsell_url")
-            # next_page = common_variables.unbroken_restore_detox_downsell_url
             time.sleep(0.5)
-            # self.click(NO_THANKS_BUTTON, 2)
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
             next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_upsell_url")
-            # next_page = common_variables.unbroken_restore_detox_upsell_url
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             time.sleep(self.order_delay_timeout)
             self.retry_clicking_button(button_locator, next_page)
@@ -136,7 +133,7 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(0.5)
                 self.click(BUY_MOST_POPULAR_BUTTON)
             print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
-        self.wait_for_navigation(common_variables.unbroken_restore_life_url, timeout=20000)
+        self.wait_for_navigation(next_page_navigation, timeout=20000)
         print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
 
     def populate_shipping_address(self):

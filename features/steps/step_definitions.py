@@ -41,7 +41,7 @@ def user_select_in_upsell(context, upsell_page):
     elif upsell_page in ['Restore Detox', 'Restore Life']:
         # page.change_order_delay_timeout(30)
         for row in context.table:
-            page.docuseries_buy_bottles(upsell_page, amount=row['bottles'], upsell_downsell=row['upsell_downsell'])
+            page.docuseries_buy_upsells(upsell_page, amount=row['bottles'], upsell_downsell=row['upsell_downsell'])
 
 
 @step('user makes following decision in 7 day free membership')
@@ -49,12 +49,14 @@ def user_select_seven_day_membership(context):
     page = SupplementUpsellPage(context)
     for row in context.table:
         page.chose_seven_day_membership(decision=row['decision'], plan=row['plan'])
+    common_variables.membership_added = True
 
 
 @step('user complete registration')
 def user_complete_registration(context):
     page = WelcomePage(context)
-    page.create_password()
+    if common_variables.membership_added:
+        page.create_password()
     page.skip_linking_social_media_accounts()
     page = UserPage(context)
     page.skip_questions()
