@@ -14,12 +14,18 @@ class SupplementUpsellPage(BasePage):
     def change_order_delay_timeout(self, timeout):
         self.order_delay_timeout = timeout
 
-    def chose_supplement_upsell(self, upgrade, last_chance):
+    def chose_supplement_upsell(self, upsell_page, upgrade, last_chance):
+        if upsell_page == '6 More bottles of Restore Sleep':
+            next_page_navigation = common_variables.restore_sleep_second_upsell_url
+        elif upsell_page == 'Restore Life':
+            next_page_navigation = common_variables.restore_sleep_third_upsell_url
+        elif upsell_page == 'Restore Detox':
+            next_page_navigation = common_variables.restore_sleep_fourth_upsell_url
         if upgrade == 'yes':
             time.sleep(self.order_delay_timeout)
             self.click(YES_UPGRADE_BUTTON)
         elif upgrade == 'no':
-            time.sleep(0.5)
+            time.sleep(1)
             self.click(NO_THANKS_BUTTON)
             self.verify_downsell_popup()
             if last_chance == 'no':
@@ -28,12 +34,16 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(self.order_delay_timeout)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
                 self.click(button_locator)
+        self.wait_for_navigation(next_page_navigation, timeout=20000)
+        print(
+            f'>>> Successfully selected upgrade "{upgrade}" and last chance "{last_chance}" for {upsell_page}')
 
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
             try:
                 time.sleep(1)
                 self.verify_element_visible(BUY_MOST_POPULAR_BUTTON)
+                print('>>> Verified appearence of downsell popup')
                 break
             except:
                 print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Retrying...')

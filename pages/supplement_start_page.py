@@ -28,5 +28,6 @@ class SupplementStartPage(BasePage):
         self.find_element(ZIP_FIELD).press_sequentially(RD.postcode())
         self.populate_cc_details()
         self.wait_for_navigation(common_variables.restore_sleep_first_upsell_url, timeout=20000)
+        time.sleep(0.5)
         self.verify_element_visible(YES_UPGRADE_BUTTON)
         print(f'===> Successfully bought {amount} bottle')

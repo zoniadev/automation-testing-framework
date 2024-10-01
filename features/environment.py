@@ -20,6 +20,7 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    context.console_messages = []
     start_page = context.config.userdata.get("funnel")
     if 'docuseries' in start_page:
         common_variables.series = start_page.split('_')[0]
@@ -31,6 +32,16 @@ def before_scenario(context, scenario):
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
     )
     context.page = context.context.new_page()
+
+    # Listen to console events and capture errors
+    def handle_console_message(msg):
+        # Append all messages to the list with type and text
+        context.console_messages.append({
+            'type': msg.type,
+            'text': msg.text
+        })
+    # Attach the listener to the page
+    context.page.on("console", handle_console_message)
     context.page.goto(url_to_use)
 
 
@@ -42,6 +53,12 @@ def before_step(context, step):
 def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
+        # Filter the captured console messages for errors
+        console_errors = [msg['text'] for msg in context.console_messages if msg['type'] == 'error']
+        if console_errors:
+            print("Captured the following browser console errors:")
+            for error in console_errors:
+                print(f'--- {error}')
         print("Taking screenshots")
         allure.attach(
             context.page.screenshot(),

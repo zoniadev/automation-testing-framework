@@ -26,7 +26,7 @@ def user_select_in_upsell(context, upsell_page):
     if common_variables.supplement_funnel_bottles != '1':
         page.change_order_delay_timeout(30)
     for row in context.table:
-        page.chose_supplement_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
+        page.chose_supplement_upsell(upsell_page, upgrade=row['upgrade'], last_chance=row['last_chance'])
 
 
 @step('user makes following decision in docuseries "{upsell_page}" Upsell page')

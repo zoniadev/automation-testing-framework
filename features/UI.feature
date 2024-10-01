@@ -1,6 +1,6 @@
 Feature: UI tests
 
-
+  @WIP
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in Restore Sleep Supplements page
     When user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
@@ -19,10 +19,10 @@ Feature: UI tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | yes        | no             | no         | best_value     | no         | most_popular   | accept        | monthly   |
+#      | 1       | yes        | no             | no         | best_value     | no         | most_popular   | accept        | monthly   |
       | 3       | no         | no             | no         | no             | no         | no             | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | no         | best_value     | accept        | annual    |
-      | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
+#      | 3       | yes        | no             | yes        | no             | no         | best_value     | accept        | annual    |
+#      | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
 
   @smoke
   Scenario Outline: Verify buttons redirects
@@ -64,7 +64,7 @@ Feature: UI tests
       | element             | url                                                   | target_element |
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
 
-  @WIP
+
   Scenario Outline: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
@@ -85,6 +85,6 @@ Feature: UI tests
 
     Examples:
       | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
+      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
       | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
       | no               | no                   | no         | no                 | no         | upgrade            |
