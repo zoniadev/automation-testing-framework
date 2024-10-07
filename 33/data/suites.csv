@@ -1,5 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Tue Aug 27 11:09:54 GMT 2024","Tue Aug 27 11:10:43 GMT 2024","49083","","","","","","Restore Sleep Supplement funnel -- @1.1 ",""
-"passed","Tue Aug 27 11:13:01 GMT 2024","Tue Aug 27 11:14:40 GMT 2024","98957","","","","","","Restore Sleep Supplement funnel -- @1.4 ",""
-"passed","Tue Aug 27 11:11:22 GMT 2024","Tue Aug 27 11:13:01 GMT 2024","98832","","","","","","Restore Sleep Supplement funnel -- @1.3 ",""
-"passed","Tue Aug 27 11:10:43 GMT 2024","Tue Aug 27 11:11:22 GMT 2024","39222","","","","","","Restore Sleep Supplement funnel -- @1.2 ",""
