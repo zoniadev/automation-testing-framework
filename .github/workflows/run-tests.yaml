@@ -13,6 +13,9 @@ on:
           - '@smoke'
           - '@regression'
           - '@critical'
+          - '@unbroken'
+          - '@restore_gut'
+          - '@restore_sleep'
 
       funnel:
         description: 'Funnel'
@@ -23,6 +26,8 @@ on:
           - 'restore_sleep'
           - 'restore_detox'
           - 'restore_life'
+          - 'restore_gut'
+          - 'unbroken_docuseries'
   repository_dispatch:
     types: [Trigger Automation Tests]
 
