@@ -127,6 +127,8 @@ class SupplementUpsellPage(BasePage):
             time.sleep(0.5)
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
+            if not common_variables.docuseries_address_already_filled:
+                self.populate_shipping_address()
         elif upsell_downsell == 'no':
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
@@ -148,7 +150,8 @@ class SupplementUpsellPage(BasePage):
 
     def populate_shipping_address(self):
         print('>>>Entering shipping details...')
-        time.sleep(1)
+        time.sleep(3)
+        self.verify_element_visible(SHIPPING_FULL_NAME_FIELD)
         self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
         self.enter_text(SHIPPING_ADDRESS_FIELD, RD.address_line())
