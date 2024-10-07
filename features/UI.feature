@@ -118,6 +118,6 @@ Feature: UI tests
 
     Examples:
       | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
-#      | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
+      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
+      | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
       | no               | no                   | no         | no                 | no         | upgrade            |
