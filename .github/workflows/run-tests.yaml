@@ -26,6 +26,7 @@ on:
           - 'restore_sleep'
           - 'restore_detox'
           - 'restore_life'
+          - '@restore_gut'
           - 'unbroken_docuseries'
   repository_dispatch:
     types: [Trigger Automation Tests]
