@@ -1,6 +1,6 @@
 Feature: UI tests
 
-  @WIP
+  @restore_sleep
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in Restore Sleep Supplements page
     When user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
@@ -19,10 +19,43 @@ Feature: UI tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-#      | 1       | yes        | no             | no         | best_value     | no         | most_popular   | accept        | monthly   |
+      | 1       | no         | best_value     | no         | most_popular   | no         | no             | decline       | no        |
+      | 1       | no         | best_value     | no         | best_value     | no         | most_popular   | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 1       | no         | no             | no         | best_value     | no         | best_value     | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 1       | no         | no             | no         | most_popular   | no         | no             | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 1       | no         | most_popular   | no         | best_value     | no         | most_popular   | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 1       | no         | most_popular   | no         | no             | no         | most_popular   | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 1       | no         | best_value     | no         | most_popular   | no         | best_value     | decline       | no        |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
       | 3       | no         | no             | no         | no             | no         | no             | decline       | no        |
-#      | 3       | yes        | no             | yes        | no             | no         | best_value     | accept        | annual    |
-#      | 6       | no         | best_value     | yes        | no             | no         | most_popular   | decline       | no        |
+      | 3       | no         | best_value     | no         | most_popular   | no         | no             | decline       | no        |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 3       | no         | best_value     | no         | best_value     | no         | most_popular   | decline       | no        |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 3       | no         | no             | no         | best_value     | no         | best_value     | decline       | no        |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 3       | no         | no             | no         | no             | no         | best_value     | decline       | no        |
+      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 6       | no         | no             | no         | most_popular   | no         | best_value     | decline       | no        |
+      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 6       | no         | most_popular   | no         | best_value     | no         | best_value     | decline       | no        |
+      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 6       | no         | best_value     | no         | best_value     | no         | no             | decline       | no        |
+      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 6       | no         | best_value     | no         | no             | no         | most_popular   | decline       | no        |
+      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
+      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+
 
   @smoke
   Scenario Outline: Verify buttons redirects
@@ -64,7 +97,7 @@ Feature: UI tests
       | element             | url                                                   | target_element |
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
 
-
+  @WIP @unbroken
   Scenario Outline: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia

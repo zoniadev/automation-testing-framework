@@ -39,7 +39,7 @@ MEMBERSHIP_YES_BUTTON = "//*[@id='register-top-btn']"
 MEMBERSHIP_NO_BUTTON = "//*[@id='skip-registration-top']"
 MEMBERSHIP_MONTHLY_BUTTON = "//*[@data-plan='monthly_new']"
 MEMBERSHIP_QUARTERLY_BUTTON = "//*[@data-plan='quarterly']"
-MEMBERSHIP_ANNUAL_BUTTON = "//*[@data-plan='yearly_new']"
+MEMBERSHIP_ANNUALLY_BUTTON = "//*[@data-plan='yearly_new']"
 ACTIVATE_MEMBERSHIP_BUTTON = "//*[@id='register-middle']"
 
 #DocuseriesUpsellPageLocators:

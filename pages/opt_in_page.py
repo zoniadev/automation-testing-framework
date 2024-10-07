@@ -18,7 +18,7 @@ class OptInPage(BasePage):
         self.enter_text(OPTIN_EMAIL_FIELD, common_variables.supplement_funnel_email)
         # self.click(PHONE_CHECKBOX)
         # self.enter_text(PHONE_FIELD, RD.phone_number())
-        self.click(REGISTER_BUTTON)
+        self.click(REGISTER_BUTTON, 0)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.series}_join_zonia_url'), timeout=20000)
         self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)
         print(f'>>> Successfully registered in Main Opt in page')

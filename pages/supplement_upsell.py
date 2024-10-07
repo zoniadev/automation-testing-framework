@@ -22,7 +22,7 @@ class SupplementUpsellPage(BasePage):
         elif upsell_page == 'Restore Detox':
             next_page_navigation = common_variables.restore_sleep_fourth_upsell_url
         if upgrade == 'yes':
-            time.sleep(self.order_delay_timeout)
+            time.sleep(30)
             self.click(YES_UPGRADE_BUTTON)
         elif upgrade == 'no':
             time.sleep(1)
@@ -31,7 +31,7 @@ class SupplementUpsellPage(BasePage):
             if last_chance == 'no':
                 self.click(DOWNSELL_NO_THANKS_BUTTON)
             else:
-                time.sleep(self.order_delay_timeout)
+                time.sleep(30)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
                 self.click(button_locator)
         self.wait_for_navigation(next_page_navigation, timeout=20000)
