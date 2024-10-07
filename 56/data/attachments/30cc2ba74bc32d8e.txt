@@ -1,0 +1,28 @@
+Executing step: user select to buy "6" bottles in Restore Sleep Supplements page
+===> Buying 6 bottle...
+===> 4 visible elements with "//*[@test-id='order-bottle-6']" found from total 5.
+===> Clicked element "//*[@test-id='order-bottle-6']"
+===> One visible element with "//input[@data-id='form-firstname']" found from total 1
+===> One visible element with "//input[@data-id='form-lastname']" found from total 1
+===> One visible element with "//input[@data-id='form-email']" found from total 1
+===> One visible element with "//input[@data-id='form-phone']" found from total 1
+===> One visible element with "//input[@data-id='form-address']" found from total 1
+===> One visible element with "//input[@data-id='form-city']" found from total 1
+===> One visible element with "//input[@data-id='form-country']" found from total 1
+===> One visible element with "//input[@data-id='form-state']" found from total 1
+===> One visible element with "//input[@data-id='form-zip']" found from total 1
+===> One visible element with "//button[@data-id='order-btn']" found from total 1
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Verified element "//*[@data-id='upgrade-order']" is visible
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in Restore Sleep Supplements page
+Executing step: user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "no" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
