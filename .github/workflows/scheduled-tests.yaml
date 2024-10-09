@@ -1,35 +1,9 @@
-name: Manual Test Run
+name: Scheduled Test Run
 
 on:
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'Tags to run'
-        required: true
-        default: '@WIP'
-        type: choice
-        options:
-          - '@WIP'
-          - '@smoke'
-          - '@regression'
-          - '@critical'
-          - '@unbroken'
-          - '@restore_gut'
-          - '@restore_sleep'
-
-      funnel:
-        description: 'Funnel'
-        required: true
-        default: 'restore_sleep'
-        type: choice
-        options:
-          - 'restore_sleep'
-          - 'restore_detox'
-          - 'restore_life'
-          - 'restore_gut'
-          - 'unbroken_docuseries'
-  repository_dispatch:
-    types: [Trigger Automation Tests]
+  schedule:
+    # Midnight EST -> 5:00 AM UTC
+    - cron: '0 5 * * *'
 
 jobs:
   test:
@@ -71,7 +45,7 @@ jobs:
 
       - name: Run tests
         run: |
-          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          behave --tags @restore_sleep -D headless=True -D funnel=restore_sleep -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()

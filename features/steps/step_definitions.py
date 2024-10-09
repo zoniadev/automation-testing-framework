@@ -6,24 +6,42 @@ from pages import (
     SupplementUpsellPage,
     WelcomePage,
     UserPage,
+    OptInPage,
+    JoinZoniaPage,
+    SignUpPage,
     BasePage,
 )
 
 
-@step('user select to buy "{amount}" bottles in Restore Sleep Supplements page')
-def user_fill_opt_in_form(context, amount):
+@step('user select to buy "{amount}" bottles in "{funnel}" Supplements page')
+def user_fill_opt_in_form(context, amount, funnel):
     page = SupplementStartPage(context)
-    page.buy_bottles(amount)
+    page.supplement_funnel_buy_bottles(amount)
     common_variables.supplement_funnel_bottles = amount
 
 
-@step('user makes following decision in "{upsell_page}" Upsell page')
+@step('user makes following decision in supplement "{upsell_page}" Upsell page')
 def user_select_in_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
         page.change_order_delay_timeout(30)
     for row in context.table:
-        page.chose_upsell(upgrade=row['upgrade'], last_chance=row['last_chance'])
+        page.chose_supplement_upsell(upsell_page, upgrade=row['upgrade'], last_chance=row['last_chance'])
+
+
+@step('user makes following decision in docuseries "{upsell_page}" Upsell page')
+def user_select_in_upsell(context, upsell_page):
+    page = SupplementUpsellPage(context)
+    if upsell_page == 'Booster Packages':
+        for row in context.table:
+            page.chose_docuseries_booster_package_upsell(decision=row['decision'])
+    elif upsell_page == 'Masterclass Packages':
+        for row in context.table:
+            page.chose_docuseries_masterclass_upsell(decision=row['decision'])
+    elif upsell_page in ['Restore Detox', 'Restore Life']:
+        # page.change_order_delay_timeout(30)
+        for row in context.table:
+            page.docuseries_buy_upsells(upsell_page, amount=row['bottles'], upsell_downsell=row['upsell_downsell'])
 
 
 @step('user makes following decision in 7 day free membership')
@@ -31,12 +49,14 @@ def user_select_seven_day_membership(context):
     page = SupplementUpsellPage(context)
     for row in context.table:
         page.chose_seven_day_membership(decision=row['decision'], plan=row['plan'])
+    common_variables.membership_added = True
 
 
 @step('user complete registration')
 def user_complete_registration(context):
     page = WelcomePage(context)
-    page.create_password()
+    if common_variables.membership_added:
+        page.create_password()
     page.skip_linking_social_media_accounts()
     page = UserPage(context)
     page.skip_questions()
@@ -62,3 +82,22 @@ def verify_button_redirects(context, element, url, expected_redirect):
     page = BasePage(context)
     page.navigate_to_url(url)
     page.verify_all_buttons_redirects_on_a_page(element, expected_redirect)
+
+
+@step(u'user register in "{series}" Opt In page')
+def user_register_in_opt_in_page(context, series):
+    page = OptInPage(context)
+    page.register_in_opt_in_page()
+
+
+@step(u'user join Zonia')
+def user_join_zonia(context):
+    page = JoinZoniaPage(context)
+    page.join_zonia()
+
+
+@step(u'user sign up for "{cycle}" plan')
+def user_register_in_signup_page(context, cycle):
+    page = SignUpPage(context)
+    page.select_plan(cycle.upper())
+    page.register_in_signup_page()

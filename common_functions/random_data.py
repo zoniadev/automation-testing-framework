@@ -2,14 +2,17 @@ from random import shuffle
 
 from faker import Faker
 
-faker = Faker(["en_GB"])
+faker = Faker(["en_US"])
 
 
 def phone_number(min=100000000, max=999999999):
     number = str(faker.random_int(min, max))
     phone = "77" + number
     return phone
-
+# def phone_number():
+#     phone_number = faker.phone_number()
+#     formatted_phone_number = faker.format("###-###-####", phone_number)
+#     return formatted_phone_number
 
 def random_number(min=10000000, max=99999999):
     number = str(faker.random_int(min, max))
@@ -70,6 +73,11 @@ def address_line():
 
 def town():
     fake_town = faker.city()
+    result = fake_town.replace("'", "")
+    return result
+
+def state():
+    fake_town = faker.state()
     result = fake_town.replace("'", "")
     return result
 
