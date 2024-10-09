@@ -13,8 +13,8 @@ from pages import (
 )
 
 
-@step('user select to buy "{amount}" bottles in Restore Sleep Supplements page')
-def user_fill_opt_in_form(context, amount):
+@step('user select to buy "{amount}" bottles in "{funnel}" Supplements page')
+def user_fill_opt_in_form(context, amount, funnel):
     page = SupplementStartPage(context)
     page.supplement_funnel_buy_bottles(amount)
     common_variables.supplement_funnel_bottles = amount
