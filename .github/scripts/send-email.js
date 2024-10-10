@@ -76,7 +76,7 @@ function formatTestSummary(testSummary) {
 
   // Helper function to style and append scenario
   const appendScenario = (scenario, result) => {
-    const color = result === 'failed' ? colors.Red : colors.colors.Green;
+    const color = result === 'failed' ? colors.Red : colors.Green;
     htmlContent += `<li style="color: ${color};"><strong>${scenario}</strong></li>`;
   };
 
