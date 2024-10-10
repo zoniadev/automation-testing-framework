@@ -1,7 +1,11 @@
+funnel = ''
+
 unbroken_opt_in_url = 'https://staging.zonia.com/unbroken'
 unbroken_join_zonia_url = 'https://staging.zonia.com/ad-join-zonia'
 unbroken_sign_up_url = 'https://staging.zonia.com/ad-signup'
-unbroken_booster_upsale_url = 'https://staging.zonia.com/ad-booster-packages-monthly'
+unbroken_booster_monthly_upsale_url = 'https://staging.zonia.com/ad-booster-packages-monthly'
+unbroken_booster_quarterly_upsale_url = 'https://staging.zonia.com/ad-booster-packages-quarterly'
+unbroken_booster_annually_upsale_url = 'https://staging.zonia.com/ad-booster-packages-annually'
 unbroken_silver_masterclass_url = 'https://staging.zonia.com/ad-mini-masterclass-series-silver-package'
 unbroken_platinum_masterclass_url = 'https://staging.zonia.com/ad-mini-masterclass-series-platinum-package'
 unbroken_masterclass_url = 'https://staging.zonia.com/ad-mini-masterclass-series'
@@ -32,7 +36,6 @@ supplement_funnel_email = ''
 supplement_funnel_password = ''
 supplement_funnel_bottles = ''
 docuseries_address_already_filled = False
-series = ''
 membership_added = False
 
 

@@ -10,11 +10,11 @@ class SupplementStartPage(BasePage):
     def __init__(self, context):
         BasePage.__init__(self, context)
 
-    def supplement_funnel_buy_bottles(self, amount):
+    def supplement_funnel_buy_bottles(self, amount, funnel):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'===> Buying {amount} bottle...')
-        button_locator = getattr(locators, f"ORDER_{amount}_BOTTLES_BUTTON")
+        button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
         self.click(button_locator)
         time.sleep(2)
         self.find_element(FIRST_NAME_FIELD).press_sequentially(common_variables.supplement_funnel_name)
@@ -27,7 +27,9 @@ class SupplementStartPage(BasePage):
         self.find_element(STATE_FIELD).press_sequentially('CA')
         self.find_element(ZIP_FIELD).press_sequentially(RD.postcode())
         self.populate_cc_details()
-        self.wait_for_navigation(common_variables.restore_sleep_first_upsell_url, timeout=20000)
+        self.wait_for_navigation(
+            getattr(common_variables, f"{funnel.lower().replace(' ', '_')}_first_upsell_url"), timeout=20000)
+        # self.wait_for_navigation(common_variables.restore_sleep_first_upsell_url, timeout=20000)
         time.sleep(0.5)
         self.verify_element_visible(YES_UPGRADE_BUTTON)
         print(f'===> Successfully bought {amount} bottle')

@@ -15,18 +15,20 @@ from pages import (
 
 @step('user select to buy "{amount}" bottles in "{funnel}" Supplements page')
 def user_fill_opt_in_form(context, amount, funnel):
+    common_variables.funnel = funnel.lower().replace(' ', '_')
     page = SupplementStartPage(context)
-    page.supplement_funnel_buy_bottles(amount)
+    page.navigate_to_url(getattr(common_variables, f"{common_variables.funnel}_start_url"))
+    page.supplement_funnel_buy_bottles(amount, funnel)
     common_variables.supplement_funnel_bottles = amount
 
 
-@step('user makes following decision in supplement "{upsell_page}" Upsell page')
-def user_select_in_upsell(context, upsell_page):
+@step('user makes following decision in "{order}" supplement "{upsell_page}" Upsell page')
+def user_select_in_upsell(context, order, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
         page.change_order_delay_timeout(30)
     for row in context.table:
-        page.chose_supplement_upsell(upsell_page, upgrade=row['upgrade'], last_chance=row['last_chance'])
+        page.chose_supplement_upsell(order, upsell_page, upgrade=row['upgrade'], last_chance=row['last_chance'])
 
 
 @step('user makes following decision in docuseries "{upsell_page}" Upsell page')
@@ -86,7 +88,9 @@ def verify_button_redirects(context, element, url, expected_redirect):
 
 @step(u'user register in "{series}" Opt In page')
 def user_register_in_opt_in_page(context, series):
+    common_variables.funnel = series.lower()
     page = OptInPage(context)
+    page.navigate_to_url(getattr(common_variables, f"{series.lower()}_opt_in_url"))
     page.register_in_opt_in_page()
 
 
@@ -100,4 +104,4 @@ def user_join_zonia(context):
 def user_register_in_signup_page(context, cycle):
     page = SignUpPage(context)
     page.select_plan(cycle.upper())
-    page.register_in_signup_page()
+    page.register_in_signup_page(cycle)

@@ -16,11 +16,12 @@ class SignUpPage(BasePage):
         time.sleep(0.5)
         print(f'>>> Selected {cycle} plan')
 
-    def register_in_signup_page(self):
+    def register_in_signup_page(self, cycle):
         print(f'>>> Registering in Signup page...')
         self.enter_text(SIGNUP_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(SIGNUP_EMAIL_FIELD, common_variables.supplement_funnel_email)
-        self.enter_text(SIGNUP_PASSWORD_FIELD, RD.password(8))
+        common_variables.supplement_funnel_password = RD.password(8)
+        self.enter_text(SIGNUP_PASSWORD_FIELD, common_variables.supplement_funnel_password)
         self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
-        self.wait_for_navigation(getattr(common_variables, f'{common_variables.series}_booster_upsale_url'), timeout=20000)
+        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_booster_{cycle}_upsale_url'), timeout=20000)
         print(f'>>> Successfully registered in Signup page')
