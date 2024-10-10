@@ -14,13 +14,7 @@ class SupplementUpsellPage(BasePage):
     def change_order_delay_timeout(self, timeout):
         self.order_delay_timeout = timeout
 
-    def chose_supplement_upsell(self, upsell_page, upgrade, last_chance):
-        if upsell_page == '6 More bottles of Restore Sleep':
-            next_page_navigation = common_variables.restore_sleep_second_upsell_url
-        elif upsell_page == 'Restore Life':
-            next_page_navigation = common_variables.restore_sleep_third_upsell_url
-        elif upsell_page == 'Restore Detox':
-            next_page_navigation = common_variables.restore_sleep_fourth_upsell_url
+    def chose_supplement_upsell(self, order, upsell_page, upgrade, last_chance):
         if upgrade == 'yes':
             time.sleep(30)
             self.click(YES_UPGRADE_BUTTON)
@@ -34,9 +28,22 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(30)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
                 self.click(button_locator)
-        self.wait_for_navigation(next_page_navigation, timeout=20000)
+        self.wait_for_navigation(self.get_supplement_next_page_url(order), timeout=20000)
         print(
             f'>>> Successfully selected upgrade "{upgrade}" and last chance "{last_chance}" for {upsell_page}')
+
+    def get_supplement_next_page_url(self, order):
+        next_order_map = {
+            'first': 'second',
+            'second': 'third',
+            'third': 'fourth'
+        }
+        next_order = next_order_map.get(order)
+        if next_order:
+            return getattr(common_variables, f"{common_variables.funnel}_{next_order}_upsell_url")
+        else:
+            raise Exception(f'Could not construct next supplement page url with given parameters:'
+                            f' "{common_variables.funnel}" and "{order}"!')
 
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
@@ -53,7 +60,7 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
 
     def chose_seven_day_membership(self, decision, plan):
-        self.wait_for_navigation(common_variables.restore_sleep_fourth_upsell_url, timeout=20000)
+        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=20000)
         time.sleep(0.5)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)

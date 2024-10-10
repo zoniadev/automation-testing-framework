@@ -21,12 +21,6 @@ def before_feature(context, feature):
 
 def before_scenario(context, scenario):
     context.console_messages = []
-    start_page = context.config.userdata.get("funnel")
-    if 'docuseries' in start_page:
-        common_variables.series = start_page.split('_')[0]
-        url_to_use = getattr(common_variables, f'{common_variables.series}_opt_in_url')
-    else:
-        url_to_use = getattr(common_variables, f'{start_page}_start_url')
     context.context = context.browser.new_context(
         viewport={'width': 1280, 'height': 720},
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
@@ -42,7 +36,6 @@ def before_scenario(context, scenario):
         })
     # Attach the listener to the page
     context.page.on("console", handle_console_message)
-    context.page.goto(url_to_use)
 
 
 def before_step(context, step):

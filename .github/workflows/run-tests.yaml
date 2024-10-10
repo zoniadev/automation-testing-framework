@@ -4,30 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       tags:
-        description: 'Tags to run'
+        description: 'Tag/s to run (e.g., @WIP @smoke @regression @unbroken @restore_gut)'
         required: true
         default: '@WIP'
-        type: choice
-        options:
-          - '@WIP'
-          - '@smoke'
-          - '@regression'
-          - '@critical'
-          - '@unbroken'
-          - '@restore_gut'
-          - '@restore_sleep'
+        type: string
 
-      funnel:
-        description: 'Funnel'
-        required: true
-        default: 'restore_sleep'
-        type: choice
-        options:
-          - 'restore_sleep'
-          - 'restore_detox'
-          - 'restore_life'
-          - 'restore_gut'
-          - 'unbroken_docuseries'
   repository_dispatch:
     types: [Trigger Automation Tests]
 
@@ -71,7 +52,7 @@ jobs:
 
       - name: Run tests
         run: |
-          behave --tags ${{ github.event.inputs.tags }} -D headless=True -D funnel=${{ github.event.inputs.funnel }} -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          behave --tags "${{ github.event.inputs.tags// / or }}" -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()

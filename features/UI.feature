@@ -3,13 +3,13 @@ Feature: UI tests
   @restore_sleep
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page
-    When user makes following decision in supplement "6 More bottles of Restore Sleep" Upsell page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
       | upgrade      | last_chance      |
       | <sl_upgrade> | <sl_last_chance> |
-    And user makes following decision in supplement "Restore Life" Upsell page
+    And user makes following decision in "second" supplement "Restore Life" Upsell page
       | upgrade      | last_chance      |
       | <lf_upgrade> | <lf_last_chance> |
-    And user makes following decision in supplement "Restore Detox" Upsell page
+    And user makes following decision in "third" supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
       | <dt_upgrade> | <dt_last_chance> |
     And user makes following decision in 7 day free membership
@@ -19,54 +19,35 @@ Feature: UI tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | no         | best_value     | no         | most_popular   | no         | no             | decline       | no        |
-      | 1       | no         | best_value     | no         | best_value     | no         | most_popular   | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 1       | no         | no             | no         | best_value     | no         | best_value     | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 1       | no         | no             | no         | most_popular   | no         | no             | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-      | 1       | no         | most_popular   | no         | best_value     | no         | most_popular   | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 1       | no         | most_popular   | no         | no             | no         | most_popular   | decline       | no        |
-      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 1       | no         | best_value     | no         | most_popular   | no         | best_value     | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 3       | no         | no             | no         | no             | no         | no             | decline       | no        |
-      | 3       | no         | best_value     | no         | most_popular   | no         | no             | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 3       | no         | best_value     | no         | best_value     | no         | most_popular   | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 3       | no         | no             | no         | best_value     | no         | best_value     | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-      | 3       | no         | no             | no         | no             | no         | best_value     | decline       | no        |
-      | 3       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 6       | no         | no             | no         | most_popular   | no         | best_value     | decline       | no        |
-      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 6       | no         | most_popular   | no         | best_value     | no         | best_value     | decline       | no        |
-      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
-      | 6       | no         | best_value     | no         | best_value     | no         | no             | decline       | no        |
-      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-      | 6       | no         | best_value     | no         | no             | no         | most_popular   | decline       | no        |
-      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | quarterly |
-      | 6       | yes        | no             | yes        | no             | yes        | no             | accept        | monthly   |
+      | 1       | no         | no             | yes        | no             | yes        | best_value     | accept        | annually  |
+      | 1       | yes        | no             | yes        | most_popular   | yes        | best_value     | accept        | monthly   |
+      | 1       | yes        | most_popular   | no         | no             | yes        | most_popular   | accept        | quarterly |
+      | 1       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | annually  |
+      | 1       | yes        | best_value     | yes        | best_value     | no         | no             | decline       | no        |
+      | 3       | no         | no             | no         | no             | yes        | most_popular   | accept        | annually  |
+      | 3       | no         | no             | yes        | most_popular   | yes        | most_popular   | decline       | no        |
+      | 3       | yes        | best_value     | yes        | best_value     | yes        | best_value     | accept        | quarterly |
+      | 3       | yes        | most_popular   | no         | no             | no         | no             | accept        | monthly   |
+      | 6       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | quarterly |
+      | 6       | yes        | most_popular   | yes        | best_value     | yes        | most_popular   | accept        | annually  |
+      | 6       | no         | no             | yes        | best_value     | yes        | most_popular   | accept        | monthly   |
+      | 6       | yes        | most_popular   | yes        | most_popular   | yes        | best_value     | decline       | no        |
+      | 6       | yes        | best_value     | no         | no             | yes        | most_popular   | accept        | monthly   |
+      | 6       | no         | no             | no         | no             | yes        | best_value     | decline       | no        |
+      | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
+      | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
 
 
-  @restore_gut @WIP
+  @restore_gut
   Scenario Outline: Restore Gut Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Gut" Supplements page
-    When user makes following decision in supplement "6 More bottles of Restore Gut" Upsell page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
       | upgrade      | last_chance      |
       | <sl_upgrade> | <sl_last_chance> |
-    And user makes following decision in supplement "Restore Detox" Upsell page
+    And user makes following decision in "second" supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
       | <lf_upgrade> | <lf_last_chance> |
-    And user makes following decision in supplement "Restore Sleep" Upsell page
+    And user makes following decision in "third" supplement "Restore Sleep" Upsell page
       | upgrade      | last_chance      |
       | <dt_upgrade> | <dt_last_chance> |
     And user makes following decision in 7 day free membership
@@ -76,7 +57,23 @@ Feature: UI tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | no         | best_value     | no         | most_popular   | no         | no             | decline       | no        |
+      | 1       | no         | no             | yes        | no             | yes        | best_value     | accept        | annually  |
+      | 1       | yes        | most_popular   | no         | no             | yes        | most_popular   | accept        | quarterly |
+      | 1       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | annually  |
+      | 1       | yes        | no             | yes        | most_popular   | yes        | best_value     | accept        | monthly   |
+      | 1       | yes        | best_value     | yes        | best_value     | no         | no             | decline       | no        |
+      | 3       | no         | no             | no         | no             | yes        | most_popular   | accept        | annually  |
+      | 3       | no         | no             | yes        | most_popular   | yes        | most_popular   | decline       | no        |
+      | 3       | yes        | best_value     | yes        | best_value     | yes        | best_value     | accept        | quarterly |
+      | 3       | yes        | most_popular   | no         | no             | no         | no             | accept        | monthly   |
+      | 6       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | quarterly |
+      | 6       | yes        | most_popular   | yes        | best_value     | yes        | most_popular   | accept        | annually  |
+      | 6       | no         | no             | yes        | best_value     | yes        | most_popular   | accept        | monthly   |
+      | 6       | yes        | most_popular   | yes        | most_popular   | yes        | best_value     | decline       | no        |
+      | 6       | yes        | best_value     | no         | no             | yes        | most_popular   | accept        | monthly   |
+      | 6       | no         | no             | no         | no             | yes        | best_value     | decline       | no        |
+      | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
+      | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
 
 
   @smoke
@@ -119,7 +116,7 @@ Feature: UI tests
       | element             | url                                                   | target_element |
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
 
-  @unbroken
+  @unbroken @WIP
   Scenario Outline: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
@@ -140,7 +137,6 @@ Feature: UI tests
 
     Examples:
       | plan        | booster_packages   | masterclass_packages   | rd_bottles   | rd_upsell_downsell   | rl_bottles   | rl_upsell_downsell   |
-      | ----------- | ------------------ | ---------------------- | ------------ | -------------------- | ------------ | -------------------- |
       | quarterly   | platinum           | buy                    | 3            | no                   | 1            | no                   |
       | monthly     | silver             | no                     | 1            | upgrade              | 1            | upgrade              |
       | annually    | no                 | no                     | 3            | most_popular         | no           | no                   |
@@ -158,7 +154,3 @@ Feature: UI tests
       | quarterly   | no                 | no                     | 1            | most_popular         | 1            | most_popular         |
       | quarterly   | silver             | no                     | 1            | upgrade              | 6            | no                   |
       | quarterly   | no                 | buy                    | no           | no                   | no           | no                   |
-#      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | silver           | buy                  | 1          | upgrade            | 1          | best_value         |
-#      | platinum         | buy                  | 3          | most_popular       | 6          | no                 |
-#      | no               | no                   | no         | no                 | no         | upgrade            |
