@@ -38,7 +38,7 @@ Feature: Funnel tests
       | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
 
 
-  @restore_gut @WIP
+  @restore_gut
   Scenario Outline: Restore Gut Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Gut" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
@@ -74,4 +74,9 @@ Feature: Funnel tests
       | 6       | no         | no             | no         | no             | yes        | best_value     | decline       | no        |
       | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
       | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
+
+    @WIP
+    Scenario: Test email
+      Given user select to buy "1" bottles in "Restore Gut" Supplements page
+      Then user complete registration
 
