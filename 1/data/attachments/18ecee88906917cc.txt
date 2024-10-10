@@ -1,0 +1,4 @@
+Executing step: user select to buy "3" bottles in "Restore Sleep" Supplements page
+===> Buying 3 bottle...
+Failed step: user select to buy "3" bottles in "Restore Sleep" Supplements page
+Taking screenshots
