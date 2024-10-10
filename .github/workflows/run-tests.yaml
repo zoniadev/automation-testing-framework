@@ -54,10 +54,13 @@ jobs:
         run: |
           TAGS="${{ github.event.inputs.tags }}"
           if [[ "$TAGS" == *" "* ]]; then
-            TAGS="${TAGS// / or }"
+            TAGS=$(echo "$TAGS" | sed 's/ /" --tags "/g')
+            TAGS="--tags \"$TAGS\""
+          else
+            TAGS="--tags \"$TAGS\""
           fi
           echo "Running tests with tags: $TAGS"
-          behave --tags "$TAGS" -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          behave $TAGS -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()
