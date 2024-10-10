@@ -1,3 +1,0 @@
-Executing step: Verify "JOIN_ZONIA_BUTTON" links on "https://staging.zonia.com/ad-join-zonia" page are "/ad-signup"
-===> 13 visible elements with "//a[text()='JOIN ZONIA NOW']" found from total 15.
-Completed step: Verify "JOIN_ZONIA_BUTTON" links on "https://staging.zonia.com/ad-join-zonia" page are "/ad-signup"
