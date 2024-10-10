@@ -64,10 +64,13 @@ class SupplementUpsellPage(BasePage):
         time.sleep(0.5)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)
-            membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
-            self.click(membership_locator)
-            time.sleep(1)
-            self.click(ACTIVATE_MEMBERSHIP_BUTTON)
+            if plan == 'no':
+                self.click(NO_THANKS_BUTTON)
+            else:
+                membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
+                self.click(membership_locator)
+                time.sleep(1)
+                self.click(ACTIVATE_MEMBERSHIP_BUTTON)
         elif decision == 'decline':
             self.click(MEMBERSHIP_NO_BUTTON)
         time.sleep(1)
