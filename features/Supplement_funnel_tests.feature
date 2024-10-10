@@ -78,5 +78,4 @@ Feature: Funnel tests
     @WIP
     Scenario: Test email
       Given user select to buy "1" bottles in "Restore Gut" Supplements page
-      Then user complete registration
 
