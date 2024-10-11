@@ -61,7 +61,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_seven_day_membership(self, decision, plan):
         self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=20000)
-        time.sleep(0.5)
+        time.sleep(1)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)
             if plan == 'no':
@@ -126,7 +126,7 @@ class SupplementUpsellPage(BasePage):
             next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_upsell_url")
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             print('===> Waiting to avoid payment method error...')
-            time.sleep(self.order_delay_timeout)
+            time.sleep(30)
             self.retry_clicking_button(button_locator, next_page)
             time.sleep(0.5)
             print(f'===> Successfully bought {amount} bottle')
@@ -135,7 +135,7 @@ class SupplementUpsellPage(BasePage):
         time.sleep(0.5)
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
-            time.sleep(self.order_delay_timeout)
+            time.sleep(30)
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
             if not common_variables.docuseries_address_already_filled:
