@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Fri Oct 11 17:03:00 GMT 2024","Fri Oct 11 17:03:25 GMT 2024","25873","","","","","","Unbroken funnel -- @1.3 ",""
+"passed","Fri Oct 11 17:00:03 GMT 2024","Fri Oct 11 17:03:00 GMT 2024","176998","","","","","","Unbroken funnel -- @1.2 ",""
+"failed","Fri Oct 11 16:59:36 GMT 2024","Fri Oct 11 17:00:03 GMT 2024","26698","","","","","","Unbroken funnel -- @1.1 ",""
