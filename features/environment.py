@@ -46,6 +46,7 @@ def before_step(context, step):
 def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
+        print(f"Test failed on page: '{context.page.url}'")
         # Filter the captured console messages for errors
         console_errors = [msg['text'] for msg in context.console_messages if msg['type'] == 'error']
         if console_errors:
@@ -79,7 +80,6 @@ def after_scenario(context, scenario):
         screenshot_path = os.path.join(SCREENSHOTS_DIR, screenshot_filename)
         context.page.screenshot(path=screenshot_path)
         print(f"Screenshot saved: {screenshot_path}")
-        print(f"Test failed on page: '{context.page.url}'")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
     context.page.close()

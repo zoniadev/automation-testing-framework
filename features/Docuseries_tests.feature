@@ -1,6 +1,6 @@
 Feature: Funnel tests
 
-  @unbroken
+  @unbroken @WIP
   Scenario Outline: Unbroken funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
