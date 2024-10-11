@@ -99,6 +99,8 @@ def after_scenario(context, scenario):
             print(f"Screenshot saved: {screenshot_path}")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
+    common_variables.docuseries_address_will_appear = False
+    common_variables.docuseries_address_already_filled = False
 
 
 def after_feature(context, feature):
