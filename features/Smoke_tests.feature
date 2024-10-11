@@ -32,7 +32,7 @@ Feature: Smoke tests
       | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/ad-energy       | FIRST_NAME_REGISTER_FIELD |
       | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/ad-pain-relief  | FIRST_NAME_REGISTER_FIELD |
 
-  @smoke @WIP
+  @smoke
   Scenario Outline: Verify arrows scrolling
     Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
 
