@@ -1,6 +1,0 @@
-Executing step: user select to buy "6" bottles in "Restore Gut" Supplements page
-===> Buying 6 bottle...
-===> 3 visible elements with "//*[@data-id='add-order-6']" found from total 4.
-===> Clicked element "//*[@data-id='add-order-6']"
-Failed step: user select to buy "6" bottles in "Restore Gut" Supplements page
-Taking screenshots
