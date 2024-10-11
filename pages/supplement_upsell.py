@@ -129,7 +129,6 @@ class SupplementUpsellPage(BasePage):
             self.retry_clicking_button(button_locator, next_page)
             time.sleep(0.5)
             print(f'===> Successfully bought {amount} bottle')
-            print(f'%%%%%%% Shipping address filled: {common_variables.docuseries_address_already_filled}')
             if not common_variables.docuseries_address_already_filled:
                 self.populate_shipping_address()
         time.sleep(0.5)
