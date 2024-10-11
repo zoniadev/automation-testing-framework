@@ -132,8 +132,7 @@ class SupplementUpsellPage(BasePage):
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
             self.retry_clicking_button(button_locator, next_page)
-            time.sleep(0.5)
-            print(f'===> Successfully bought {amount} bottle')
+            print(f'===> Successfully bought {amount} bottle/s')
             common_variables.docuseries_address_will_appear = True
         time.sleep(0.5)
         if common_variables.docuseries_address_will_appear:
