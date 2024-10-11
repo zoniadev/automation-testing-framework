@@ -38,7 +38,8 @@ class BasePage(object):
         print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
         return visible_elements
 
-    def verify_element_visible(self, locator):
+    def verify_element_visible(self, locator, timeout=__TIMEOUT):
+        self.context.page.wait_for_selector(locator, timeout=timeout)
         expect(self.find_element(locator)).to_be_visible()
         print(f'===> Verified element "{locator}" is visible')
 

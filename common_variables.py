@@ -35,6 +35,7 @@ supplement_funnel_name = ''
 supplement_funnel_email = ''
 supplement_funnel_password = ''
 supplement_funnel_bottles = ''
+docuseries_address_will_appear = False
 docuseries_address_already_filled = False
 membership_added = False
 
