@@ -125,6 +125,7 @@ class SupplementUpsellPage(BasePage):
             print(f'===> Buying {amount} bottle...')
             next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_upsell_url")
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
+            print('===> Waiting to avoid payment method error...')
             time.sleep(self.order_delay_timeout)
             self.retry_clicking_button(button_locator, next_page)
             time.sleep(0.5)
@@ -133,7 +134,8 @@ class SupplementUpsellPage(BasePage):
                 self.populate_shipping_address()
         time.sleep(0.5)
         if upsell_downsell == 'upgrade':
-            time.sleep(0.5)
+            print('===> Waiting to avoid payment method error...')
+            time.sleep(self.order_delay_timeout)
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
             if not common_variables.docuseries_address_already_filled:
