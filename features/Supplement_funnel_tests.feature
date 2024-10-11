@@ -75,8 +75,3 @@ Feature: Funnel tests
       | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
       | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
 
-    @WIP
-    Scenario: Test email
-      Given user select to buy "1" bottles in "Restore Gut" Supplements page
-      Then user complete registration
-

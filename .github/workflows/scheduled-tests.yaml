@@ -3,8 +3,7 @@ name: Scheduled Test Run
 on:
   schedule:
     # Midnight EST -> 5:00 AM UTC
-#    - cron: '0 5 * * *'
-    - cron: '55 10 * * *'
+    - cron: '0 5 * * *'
 
 jobs:
   test:
@@ -46,7 +45,7 @@ jobs:
 
       - name: Run tests
         run: |
-          behave --tags "@WIP" -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          behave --tags "@restore_sleep or @unbroken" -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()
