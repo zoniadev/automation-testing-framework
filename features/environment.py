@@ -1,5 +1,6 @@
 import datetime
 import os
+import shutil
 import allure
 from playwright.sync_api import sync_playwright
 import common_variables
@@ -82,8 +83,8 @@ def after_scenario(context, scenario):
                 with open(video_path, "rb") as video:
                     allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
         try:
-            os.rmdir(video_dir)
-        except OSError as e:
+            shutil.rmtree(video_dir)
+        except Exception as e:
             print(f"Error deleting video directory: {e}")
     else:
         allure.attach("No video recording found for this scenario.", attachment_type=allure.attachment_type.TEXT)
