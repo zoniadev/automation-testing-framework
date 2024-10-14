@@ -22,22 +22,42 @@ def before_feature(context, feature):
 
 def before_scenario(context, scenario):
     context.console_messages = []
-    context.context = context.browser.new_context(
-        viewport={'width': 1280, 'height': 720},
-        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-        record_video_dir=f"screenshots/videos/{context.scenario.name}",
-        record_video_size={"width": 640, "height": 480}
-    )
+    if context.config.userdata['device'] == 'iphone':
+        device = context.playwright.devices['iPhone 13']
+    elif context.config.userdata['device'] == 'iphone_landscape':
+        device = context.playwright.devices['iPhone 13 landscape']
+    elif context.config.userdata['device'] == 'android':
+        device = context.playwright.devices['Pixel 7']
+    elif context.config.userdata['device'] == 'android_landscape':
+        device = context.playwright.devices['Pixel 7 landscape']
+    elif context.config.userdata['device'] == 'ipad':
+        device = context.playwright.devices['iPad Pro 11']
+    elif context.config.userdata['device'] == 'ipad_landscape':
+        device = context.playwright.devices['iPad Pro 11 landscape']
+    elif context.config.userdata['device'] == 'desktop':
+        device = None
+    else:
+        raise Exception('Error setting device for execution! Possible parameters are "iphone", "iphone_landscape", '
+                        '"android", "android_landscape", "ipad" and "ipad_landscape"')
+    if device:
+        context.context = context.browser.new_context(**device,
+                                                      record_video_dir=f"screenshots/videos/{context.scenario.name}",
+                                                      record_video_size={"width": 640, "height": 480}
+                                                      )
+    else:
+        context.context = context.browser.new_context(
+            viewport={'width': 1280, 'height': 720},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            record_video_dir=f"screenshots/videos/{context.scenario.name}",
+            record_video_size={"width": 640, "height": 480}
+        )
     context.page = context.context.new_page()
 
-    # Listen to console events and capture errors
     def handle_console_message(msg):
-        # Append all messages to the list with type and text
         context.console_messages.append({
             'type': msg.type,
             'text': msg.text
         })
-    # Attach the listener to the page
     context.page.on("console", handle_console_message)
 
 
@@ -50,7 +70,6 @@ def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
         print(f"Test failed on page: '{context.page.url}'")
-        # Filter the captured console messages for errors
         console_errors = [msg['text'] for msg in context.console_messages if msg['type'] == 'error']
         if console_errors:
             print("Captured the following browser console errors:")
