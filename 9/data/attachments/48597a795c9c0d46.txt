@@ -1,0 +1,14 @@
+Executing step: user register in "Unbroken" Opt In page
+>>> Registering in Main Opt in page...
+===> One visible element with "//input[@id='first-name']" found from total 1
+===> Entered "AutomationMatthew" in "//input[@id='first-name']" field
+===> One visible element with "//input[@id='email']" found from total 1
+===> Entered "automation_tests_61965072@Mckay.com" in "//input[@id='email']" field
+===> One visible element with "//button[@data-id='register-btn']" found from total 2
+===> Clicked element "//button[@data-id='register-btn']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+Failed step: user register in "Unbroken" Opt In page
+Test failed on page: 'https://staging.zonia.com/unbroken'
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 502 ()
+Taking screenshots
