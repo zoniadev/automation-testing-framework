@@ -1,0 +1,67 @@
+Executing step: user register in "Unbroken" Opt In page
+>>> Registering in Main Opt in page...
+===> One visible element with "//input[@id='first-name']" found from total 1
+===> Entered "AutomationJesus" in "//input[@id='first-name']" field
+===> One visible element with "//input[@id='email']" found from total 1
+===> Entered "automation_tests_83210211@Martin.com" in "//input[@id='email']" field
+===> One visible element with "//button[@data-id='register-btn']" found from total 2
+===> Clicked element "//button[@data-id='register-btn']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/ad-join-zonia"
+===> 11 visible elements with "//*[@data-id='register-btn']" found from total 12.
+===> Verified element "//*[@data-id='register-btn']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "Unbroken" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> 11 visible elements with "//*[@data-id='register-btn']" found from total 12.
+===> Clicked element "//*[@data-id='register-btn']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/ad-signup"
+===> One visible element with "//input[@id='form-name']" found from total 1
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+===> One visible element with "//input[@data-cycle='monthly_new']" found from total 1
+===> Clicked element "//input[@data-cycle='monthly_new']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> One visible element with "//input[@id='form-name']" found from total 1
+===> Entered "AutomationJesus" in "//input[@id='form-name']" field
+===> One visible element with "//input[@id='form-email']" found from total 1
+===> Entered "automation_tests_83210211@Martin.com" in "//input[@id='form-email']" field
+===> One visible element with "//input[@id='form-password']" found from total 1
+===> Entered "@4gT$2Mg" in "//input[@id='form-password']" field
+Failed step: user sign up for "monthly" plan
+Test failed on page: 'https://staging.zonia.com/ad-signup'
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.37.13/js/player.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.37.13/js/vendor.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-SWU8eS3ZS7iBu0f95ZwwNtEAnRnYFRs4lLCUGetLyOM='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-NioTwhTwQcpkeN7s30hFFzmABl6cn6L76euVM5EYe8w='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-5RC8P951eoWuwGxRWC+51Pkxz7zc/L6joTajbV3OUN8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-ND6a/gBuWmTyrtyaQzDW6X3noBS4Tpvi2KVdMRHz8ZA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4fEnOxI9VHb+ZqzTHXH+yJ+UXM7cvqLuZ1IGUt8Bn8s='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WFy6BmODyKQq1MyqkXYwa6geGi2OAJSWeEYi5DDBNY8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WhdDZATaKbTOIXOCTFLHHIaN4OtttMZZ+MbAkfqxlpk='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/js_opt/modules/utils/vuid.min.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: the server responded with a status of 401 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 401 ()
+--- i
+Taking screenshots
