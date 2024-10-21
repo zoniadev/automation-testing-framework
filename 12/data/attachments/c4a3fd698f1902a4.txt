@@ -1,0 +1,19 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+===> Buying 1 bottle...
+===> 4 visible elements with "//*[@data-id='add-order-1']" found from total 5.
+===> Clicked element "//*[@data-id='add-order-1']"
+===> One visible element with "//input[@id='form-firstname']" found from total 1
+===> One visible element with "//input[@id='form-lastname']" found from total 1
+===> One visible element with "//input[@id='form-email']" found from total 1
+===> One visible element with "//input[@id='form-phone']" found from total 1
+===> One visible element with "//input[@id='form-address']" found from total 1
+===> One visible element with "//input[@id='form-city']" found from total 1
+===> One visible element with "//input[@id='form-country']" found from total 1
+===> One visible element with "//input[@id='form-state']" found from total 1
+===> One visible element with "//input[@id='form-zip']" found from total 1
+===> One visible element with "//button[@data-id='order-btn']" found from total 1
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+Failed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-sleep-signup-1-bottle'
+Taking screenshots
