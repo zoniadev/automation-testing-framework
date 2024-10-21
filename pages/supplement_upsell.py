@@ -100,7 +100,8 @@ class SupplementUpsellPage(BasePage):
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
         if decision != 'no':
-            time.sleep(0.5)
+            print('===> Waiting a bit to avoid payment method error...')
+            time.sleep(10)
             self.click(BUY_MASTERCLASS_BUTTON)
             next_page = common_variables.unbroken_restore_detox_bought_url
         else:
