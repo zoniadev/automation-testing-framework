@@ -25,7 +25,7 @@ def email():
 
 
 def automation_template_email():
-    fake_email = "zoniat-" + last_name() + random_number() + "@gmail.com"
+    fake_email = "zoniat-" + last_name() + "-" + random_number() + "@gmail.com"
     return fake_email
 
 
