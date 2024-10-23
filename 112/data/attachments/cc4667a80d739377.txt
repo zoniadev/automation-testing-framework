@@ -1,0 +1,90 @@
+Executing step: user select to buy "6" bottles in "Restore Gut" Supplements page
+===> Buying 6 bottle...
+===> 3 visible elements with "//*[@data-id='add-order-6']" found from total 4.
+===> Clicked element "//*[@data-id='add-order-6']"
+===> One visible element with "//input[@id='form-firstname']" found from total 1
+===> One visible element with "//input[@id='form-lastname']" found from total 1
+===> One visible element with "//input[@id='form-email']" found from total 1
+===> One visible element with "//input[@id='form-phone']" found from total 1
+===> One visible element with "//input[@id='form-address']" found from total 1
+===> One visible element with "//input[@id='form-city']" found from total 1
+===> One visible element with "//input[@id='form-country']" found from total 1
+===> One visible element with "//input[@id='form-state']" found from total 1
+===> One visible element with "//input[@id='form-zip']" found from total 1
+===> One visible element with "//button[@data-id='order-btn']" found from total 1
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Verified element "//*[@data-id='upgrade-order']" is visible
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+===> 2 visible elements with "//*[@data-id='no-thanks']" found from total 2.
+===> Clicked element "//*[@data-id='no-thanks']"
+===> One visible element with "//*[@data-id='add-order-3']" found from total 1
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> One visible element with "//*[@data-id='downsell-no-thanks']" found from total 1
+===> Clicked element "//*[@data-id='downsell-no-thanks']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+===> 4 visible elements with "//*[@data-id='upgrade-order']" found from total 4.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "best_value" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+===> 5 visible elements with "//*[@data-id='upgrade-order']" found from total 5.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-trial"
+===> URL successfully changed to "https://staging.zonia.com/rg-trial"
+>>> Successfully selected upgrade "yes" and last chance "most_popular" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "https://staging.zonia.com/rg-trial"
+===> URL successfully changed to "https://staging.zonia.com/rg-trial"
+===> One visible element with "//*[@id='register-top-btn']" found from total 1
+===> Clicked element "//*[@id='register-top-btn']"
+===> One visible element with "//*[@data-plan='monthly_new']" found from total 2
+===> Clicked element "//*[@data-plan='monthly_new']"
+===> One visible element with "//*[@id='register-middle']" found from total 1
+===> Clicked element "//*[@id='register-middle']"
+===> Waiting for URL starting with "https://staging.zonia.com/welcome"
+===> URL successfully changed to "https://staging.zonia.com/welcome"
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+===> One visible element with "//*[@placeholder='Enter password']" found from total 1
+===> One visible element with "//*[@class[contains(., 'save-password')] and @type='submit']" found from total 1
+===> Clicked element "//*[@class[contains(., 'save-password')] and @type='submit']"
+===> One visible element with "//button[@class='skip-login']" found from total 1
+Failed step: user complete registration
+Test failed on page: 'https://staging.zonia.com/welcome'
+Captured the following browser console errors:
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.38.0/js/player.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.38.0/js/vendor.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-SWU8eS3ZS7iBu0f95ZwwNtEAnRnYFRs4lLCUGetLyOM='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-yReZqu2jtGRdIH/0hgqryqFBdj67J1NFZ1j3oqYKTRo='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-oMtRjOGvsIhr+i6VJlUqH0qNDAhPOMXQOqdKwLk2uhA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-ND6a/gBuWmTyrtyaQzDW6X3noBS4Tpvi2KVdMRHz8ZA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4fEnOxI9VHb+ZqzTHXH+yJ+UXM7cvqLuZ1IGUt8Bn8s='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WFy6BmODyKQq1MyqkXYwa6geGi2OAJSWeEYi5DDBNY8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WhdDZATaKbTOIXOCTFLHHIaN4OtttMZZ+MbAkfqxlpk='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/js_opt/modules/utils/vuid.min.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: the server responded with a status of 400 ()
+--- You have included the Google Maps JavaScript API multiple times on this page. This may cause unexpected errors.
+Taking screenshots
