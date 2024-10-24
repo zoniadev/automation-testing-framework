@@ -11,7 +11,8 @@ class WelcomePage(BasePage):
 
     def create_password(self):
         common_variables.supplement_funnel_password = RD.password()
-        self.click(PASSWORD_POPUP_FIELD)
+        self.context.page.click(PASSWORD_POPUP_FIELD, timeout=20000)
+        # self.click(PASSWORD_POPUP_FIELD)
         time.sleep(1)
         self.find_element(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
         time.sleep(1)
