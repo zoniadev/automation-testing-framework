@@ -1,0 +1,67 @@
+Executing step: user select to buy "6" bottles in "Restore Gut" Supplements page
+===> Buying 6 bottle...
+===> 3 visible elements with "//*[@data-id='add-order-6']" found from total 4.
+===> Clicked element "//*[@data-id='add-order-6']"
+===> One visible element with "//input[@id='form-firstname']" found from total 1
+===> One visible element with "//input[@id='form-lastname']" found from total 1
+===> One visible element with "//input[@id='form-email']" found from total 1
+===> One visible element with "//input[@id='form-phone']" found from total 1
+===> One visible element with "//input[@id='form-address']" found from total 1
+===> One visible element with "//input[@id='form-city']" found from total 1
+===> One visible element with "//input[@id='form-country']" found from total 1
+===> One visible element with "//input[@id='form-state']" found from total 1
+===> One visible element with "//input[@id='form-zip']" found from total 1
+===> One visible element with "//button[@data-id='order-btn']" found from total 1
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Verified element "//*[@data-id='upgrade-order']" is visible
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "most_popular" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+===> 4 visible elements with "//*[@data-id='upgrade-order']" found from total 4.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "best_value" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+===> 5 visible elements with "//*[@data-id='upgrade-order']" found from total 5.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-trial"
+===> URL successfully changed to "https://staging.zonia.com/rg-trial"
+>>> Successfully selected upgrade "yes" and last chance "most_popular" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "https://staging.zonia.com/rg-trial"
+===> URL successfully changed to "https://staging.zonia.com/rg-trial"
+===> One visible element with "//*[@id='register-top-btn']" found from total 1
+===> Clicked element "//*[@id='register-top-btn']"
+===> One visible element with "//*[@data-plan='yearly_new']" found from total 2
+===> Clicked element "//*[@data-plan='yearly_new']"
+===> One visible element with "//*[@id='register-middle']" found from total 1
+===> Clicked element "//*[@id='register-middle']"
+===> Waiting for URL starting with "https://staging.zonia.com/welcome"
+===> URL successfully changed to "https://staging.zonia.com/welcome"
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+===> One visible element with "//*[@placeholder='Enter password']" found from total 1
+===> One visible element with "//*[@class[contains(., 'save-password')] and @type='submit']" found from total 1
+===> Clicked element "//*[@class[contains(., 'save-password')] and @type='submit']"
+===> One visible element with "//button[@class='skip-login']" found from total 1
+===> Clicked element "//button[@class='skip-login']"
+===> One visible element with "//*[@class='skipAndRegister']" found from total 1
+===> Clicked element "//*[@class='skipAndRegister']"
+===> Getting text from element "//*[@id='subname']"...
+===> One visible element with "//*[@id='subname']" found from total 2
+Email: automation_tests_91194527@Arnold.com
+Pass: k$07Lbef
+Completed step: user complete registration
