@@ -50,13 +50,21 @@ def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
         print(f"Test failed on page: '{context.page.url}'")
+        print("Taking screenshots")
+        if not os.path.exists(SCREENSHOTS_DIR):
+            os.makedirs(SCREENSHOTS_DIR)
+        current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
+        scenario_name = context.scenario.name.replace(" ", "_")
+        screenshot_filename = f"{scenario_name}_{current_time}.png"
+        screenshot_path = os.path.join(SCREENSHOTS_DIR, screenshot_filename)
+        context.page.screenshot(path=screenshot_path)
+        print(f"Screenshot saved: {screenshot_path}")
         # Filter the captured console messages for errors
         console_errors = [msg['text'] for msg in context.console_messages if msg['type'] == 'error']
         if console_errors:
             print("Captured the following browser console errors:")
             for error in console_errors:
                 print(f'--- {error}')
-        print("Taking screenshots")
         allure.attach(
             context.page.screenshot(),
             name="screenshot",
@@ -90,14 +98,6 @@ def after_scenario(context, scenario):
         allure.attach("No video recording found for this scenario.", attachment_type=allure.attachment_type.TEXT)
     if scenario.status == "failed":
         print(f"Failed scenario: '{context.scenario.name}'")
-        if not os.path.exists(SCREENSHOTS_DIR):
-            os.makedirs(SCREENSHOTS_DIR)
-            current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
-            scenario_name = scenario.name.replace(" ", "_")
-            screenshot_filename = f"{scenario_name}_{current_time}.png"
-            screenshot_path = os.path.join(SCREENSHOTS_DIR, screenshot_filename)
-            context.page.screenshot(path=screenshot_path)
-            print(f"Screenshot saved: {screenshot_path}")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
     common_variables.docuseries_address_will_appear = False

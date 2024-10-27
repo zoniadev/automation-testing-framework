@@ -25,7 +25,7 @@ def email():
 
 
 def automation_template_email():
-    fake_email = "automation_tests_" + random_number() + "@" + last_name() + ".com"
+    fake_email = "zoniat-" + last_name() + "-" + random_number() + "@gmail.com"
     return fake_email
 
 
@@ -48,9 +48,12 @@ def middle_name():
     return fake_middle_name
 
 
-def last_name():
-    fake_last_name = faker.last_name()
-    return fake_last_name
+def last_name(retries=5):
+    for _ in range(retries):
+        fake_last_name = faker.last_name()
+        if len(fake_last_name) >= 3:
+            return fake_last_name
+    raise Exception(f"Could not generate a first name with minimum 3 characters after {retries} attempts!")
 
 
 def full_name():
