@@ -28,7 +28,7 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(30)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
                 self.click(button_locator)
-        self.wait_for_navigation(self.get_supplement_next_page_url(order), timeout=20000)
+        self.wait_for_navigation(self.get_supplement_next_page_url(order), timeout=30000)
         print(
             f'>>> Successfully selected upgrade "{upgrade}" and last chance "{last_chance}" for {upsell_page}')
 
@@ -60,7 +60,7 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
 
     def chose_seven_day_membership(self, decision, plan):
-        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=20000)
+        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=30000)
         time.sleep(1)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)
@@ -69,12 +69,12 @@ class SupplementUpsellPage(BasePage):
             else:
                 membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
                 self.click(membership_locator)
-                time.sleep(1)
+                time.sleep(2)
                 self.click(ACTIVATE_MEMBERSHIP_BUTTON)
         elif decision == 'decline':
             self.click(MEMBERSHIP_NO_BUTTON)
         time.sleep(1)
-        self.wait_for_navigation(common_variables.welcome_page_url, timeout=20000)
+        self.wait_for_navigation(common_variables.welcome_page_url, timeout=30000)
 
     def chose_docuseries_booster_package_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for booster package...')
@@ -89,7 +89,7 @@ class SupplementUpsellPage(BasePage):
             next_page = common_variables.unbroken_masterclass_url
             time.sleep(0.5)
             self.click(NO_THANKS_BUTTON)
-        self.wait_for_navigation(next_page, timeout=20000)
+        self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for booster package')
         if decision == 'platinum':
             self.populate_shipping_address()
@@ -100,14 +100,15 @@ class SupplementUpsellPage(BasePage):
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
         if decision != 'no':
-            time.sleep(0.5)
+            print('===> Waiting a bit to avoid payment method error...')
+            time.sleep(10)
             self.click(BUY_MASTERCLASS_BUTTON)
             next_page = common_variables.unbroken_restore_detox_bought_url
         else:
             time.sleep(0.5)
             self.click(SKIP_MASTERCLASS_BUTTON)
             next_page = common_variables.unbroken_restore_detox_not_bought_url
-        self.wait_for_navigation(next_page, timeout=20000)
+        self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
@@ -158,7 +159,7 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(1)
                 self.click(BUY_MOST_POPULAR_BUTTON)
             print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
-        self.wait_for_navigation(next_page_navigation, timeout=20000)
+        self.wait_for_navigation(next_page_navigation, timeout=30000)
         print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
 
 
@@ -187,5 +188,5 @@ class SupplementUpsellPage(BasePage):
             print(f'===> Issue with clicking button "{button}", retrying...')
             self.click(button)
             time.sleep(0.5)
-            self.wait_for_navigation(next_page, timeout=20000)
+            self.wait_for_navigation(next_page, timeout=30000)
             print('===> Second try was successful')
