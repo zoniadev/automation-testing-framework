@@ -68,8 +68,10 @@ jobs:
           TAGS="${{ github.event.inputs.tags }}"
           TAGS=$(echo "$TAGS" | sed 's/ /,/g')
           TAGS="--tags $TAGS"
-          echo "Running tests with tags: $TAGS"
-          behave $TAGS -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          TEST_TYPE=$(echo "${{ github.event.inputs.tags }}" | sed 's/@//g')
+          echo "Running tests with tags: $TAGS and test type: $TEST_TYPE"
+          mkdir -p allure-results/$TEST_TYPE
+          behave $TAGS -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results/$TEST_TYPE | tee test-summary.txt
 
       - name: Send failure email
         if: always()
@@ -96,8 +98,8 @@ jobs:
         if: always()
         with:
           gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: allure-results
+          allure_history: allure-history/$(echo "${{ github.event.inputs.tags }}" | sed 's/@//g')
+          allure_results: allure-results/$(echo "${{ github.event.inputs.tags }}" | sed 's/@//g')
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -105,7 +107,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: allure-history/$(echo "${{ github.event.inputs.tags }}" | sed 's/@//g')
 
       - name: Post the link to the report
         if: always()
