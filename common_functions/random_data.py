@@ -1,5 +1,5 @@
 from random import shuffle
-
+import time
 from faker import Faker
 
 faker = Faker(["en_US"])
@@ -23,9 +23,12 @@ def email():
     fake_email = faker.email()
     return fake_email
 
+def epoch_date():
+    return str(int(time.time()))
+
 
 def automation_template_email():
-    fake_email = "zoniat-" + last_name() + "-" + random_number() + "@gmail.com"
+    fake_email = "zoniat-v2" + last_name() + "-" + epoch_date() + "@gmail.com"
     return fake_email
 
 
