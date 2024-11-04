@@ -40,3 +40,11 @@ Feature: Smoke tests
       | element             | url                                                   | target_element |
       | SCROLL_ARROW_BUTTON | https://staging.zonia.com/ad-booster-packages-monthly | scroll_down    |
 
+  @fast
+  Scenario Outline: Verify buttons scrolling fast test
+    Given Verify "<element>" scrolling to "<target_element>" on "<url>" page
+
+    Examples:
+      | element                      | url                                       | target_element            |
+      | REGISTER_FOR_FREE_NOW_BUTTON | https://staging.zonia.com/ad-detox        | FIRST_NAME_REGISTER_FIELD |
+
