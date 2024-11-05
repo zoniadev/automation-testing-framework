@@ -1,0 +1,97 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+===> Buying 1 bottle...
+===> 4 visible elements with "//*[@data-id='add-order-1']" found from total 5.
+===> Clicked element "//*[@data-id='add-order-1']"
+===> One visible element with "//input[@id='form-firstname']" found from total 1
+===> One visible element with "//input[@id='form-lastname']" found from total 1
+===> One visible element with "//input[@id='form-email']" found from total 1
+===> One visible element with "//input[@id='form-phone']" found from total 1
+===> One visible element with "//input[@id='form-address']" found from total 1
+===> One visible element with "//input[@id='form-city']" found from total 1
+===> One visible element with "//input[@id='form-country']" found from total 1
+===> One visible element with "//input[@id='form-state']" found from total 1
+===> One visible element with "//input[@id='form-zip']" found from total 1
+===> One visible element with "//button[@data-id='order-btn']" found from total 1
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Verified element "//*[@data-id='upgrade-order']" is visible
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+===> 2 visible elements with "//*[@data-id='upgrade-order']" found from total 2.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "best_value" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+===> 4 visible elements with "//*[@data-id='upgrade-order']" found from total 5.
+===> Clicked element "//*[@data-id='upgrade-order']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "most_popular" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+===> 4 visible elements with "//*[@data-id='no-thanks']" found from total 4.
+===> Clicked element "//*[@data-id='no-thanks']"
+===> One visible element with "//*[@data-id='add-order-3']" found from total 1
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> One visible element with "//*[@data-id='downsell-no-thanks']" found from total 1
+===> Clicked element "//*[@data-id='downsell-no-thanks']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-trial"
+===> URL successfully changed to "https://staging.zonia.com/rs-trial"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "https://staging.zonia.com/rs-trial"
+===> URL successfully changed to "https://staging.zonia.com/rs-trial"
+Failed step: user makes following decision in 7 day free membership
+Test failed on page: 'https://staging.zonia.com/rs-trial?oderId=6729ec909768653e1af60f23&id=6729ec909768653e1af60f23'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.4__20241105-100058.png
+Captured the following browser console errors:
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.3/js/player.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.3/js/vendor.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-SWU8eS3ZS7iBu0f95ZwwNtEAnRnYFRs4lLCUGetLyOM='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-Rqo/c+hL6IDGm283VXcidf6WAQP9CBbwJQpIbkop9Tg='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-PPov5coeJNIcOKHqhIvPKedOku6kf2Kh5dtEmri7VAY='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-ND6a/gBuWmTyrtyaQzDW6X3noBS4Tpvi2KVdMRHz8ZA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4fEnOxI9VHb+ZqzTHXH+yJ+UXM7cvqLuZ1IGUt8Bn8s='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WFy6BmODyKQq1MyqkXYwa6geGi2OAJSWeEYi5DDBNY8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WhdDZATaKbTOIXOCTFLHHIaN4OtttMZZ+MbAkfqxlpk='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/js_opt/modules/utils/vuid.min.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to connect to 'https://fresnel-events.vimeocdn.com/add/player-test-impression?beacon=1' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://fresnel-events.vimeocdn.com/add/player-test-impression?beacon=1' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://vod-adaptive-ak.vimeocdn.com/exp=1730804457~acl=%2Fea1f9e82-b899-4a24-840c-23f487212fe3%2F%2A~hmac=5b975817d372fcc6715dfbffa109b149b46442201469b8544a8f08703972a23d/ea1f9e82-b899-4a24-840c-23f487212fe3/v2/playlist/av/primary/playlist.json?omit=av1-hevc&pathsig=8c953e4f~_Jy_k3iVJwzk_cXjv9_HvYY4tgZBvaQntK-5HMSI2IE&rh=30Ylye' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=564a9d050e721af8ea80ced482e008341fd47f511730800857' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
