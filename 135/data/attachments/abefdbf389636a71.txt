@@ -1,0 +1,6 @@
+Executing step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-detox" page
+===> 11 visible elements with "//a[text()='Register for free now']" found from total 12.
+Failed step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-detox" page
+Test failed on page: 'https://staging.zonia.com/ad-detox'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_buttons_scrolling_fast_test_--_@1.1__20241105-101803.png
