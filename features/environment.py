@@ -15,6 +15,10 @@ def before_all(context):
     headless = headless_str.lower() == "true"
     context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
 
+    allure_env_path = os.path.join("allure-results", "environment.properties")
+    with open(allure_env_path, "w") as env_file:
+        env_file.write(f"device={context.config.userdata['device'].capitalize()}\n")
+
 
 def before_feature(context, feature):
     print(f"Executing feature: '{context.feature.name}'")
