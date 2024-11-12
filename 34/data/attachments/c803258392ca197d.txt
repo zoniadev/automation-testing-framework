@@ -1,0 +1,6 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-gut-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_funnel_--_@1.4__20241112-055327.png
