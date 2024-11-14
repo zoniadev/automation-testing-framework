@@ -17,7 +17,7 @@ class OptInPage(BasePage):
         self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(OPTIN_EMAIL_FIELD, common_variables.supplement_funnel_email)
         time.sleep(2)
-        self.click(REGISTER_BUTTON, 0)
+        self.click(REGISTER_BUTTON)
         time.sleep(1)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
         self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)

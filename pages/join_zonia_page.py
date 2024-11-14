@@ -10,7 +10,7 @@ class JoinZoniaPage(BasePage):
 
     def join_zonia(self):
         print(f'>>> Joining Zonia...')
-        self.click(JOIN_ZONIA_ID_BUTTON, 0)
+        self.click(JOIN_ZONIA_ID_BUTTON)
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_sign_up_url'), timeout=20000)
         time.sleep(1)
         self.verify_element_visible(SIGNUP_NAME_FIELD)
