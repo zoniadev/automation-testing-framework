@@ -12,7 +12,10 @@ class BasePage(object):
     def __init__(self, context):
         self.context = context
 
-    def find_element(self, locator, instance=1):
+    def find_element(self, locator):
+        return self.context.page.locator(locator)
+
+    def find_not_unique_element(self, locator, instance=1):
         elements = self.context.page.locator(locator).all()
         if not elements:
             raise Exception(f'No elements found with locator {locator}!')
@@ -49,8 +52,8 @@ class BasePage(object):
             raise Exception(f'Element found with locator {locator}!')
         print(f'===> Verified element "{locator}" is not visible')
 
-    def click(self, locator, instance=1):
-        element = self.find_element(locator, instance)
+    def click(self, locator):
+        element = self.find_element(locator)
         element.scroll_into_view_if_needed()
         element.click()
         print(f'===> Clicked element "{locator}"')
@@ -91,17 +94,6 @@ class BasePage(object):
         else:
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
-    # def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
-    #     cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
-    #     cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
-    #     cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
-    #     cc_cvv.press_sequentially(common_variables.test_cc_cvv)
-    #     cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
-    #     cc_zip.press_sequentially(common_variables.test_cc_zip)
-    #     time.sleep(1)
-    #     self.retry_cc_number_entry(submit_button=submit_button)
-    #     expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
-    #     print('===> Populated CC details')
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
@@ -116,7 +108,6 @@ class BasePage(object):
         self.find_element(submit_button).click()
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
-
 
     def navigate_to_url(self, url):
         self.context.page.goto(url)
@@ -194,12 +185,14 @@ class BasePage(object):
         errors = []
 
         for index, button in enumerate(buttons, start=1):
-            button.click()
-            self.context.page.wait_for_load_state('load')
-            new_url = self.context.page.url
-            if expected_link != new_url:
-                errors.append(f'Expected button {index} to navigate to  "{expected_link}", but it went to "{new_url}"!')
-            self.context.page.go_back()
+            if button.is_visible():
+                button.scroll_into_view_if_needed()
+                button.click()
+                self.context.page.wait_for_load_state('load')
+                new_url = self.context.page.url
+                if expected_link != new_url:
+                    errors.append(f'Expected button {index} to navigate to  "{expected_link}", but it went to "{new_url}"!')
+                self.context.page.go_back()
         if errors:
             error_count = len(errors)
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
