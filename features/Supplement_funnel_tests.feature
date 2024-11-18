@@ -1,6 +1,6 @@
 Feature: Funnel tests
 
-  @restore_sleep
+  @restore_sleep @WIP
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
