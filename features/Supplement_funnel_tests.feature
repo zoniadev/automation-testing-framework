@@ -19,23 +19,22 @@ Feature: Funnel tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | no         | no             | yes        | no             | yes        | best_value     | accept        | annually  |
-      | 1       | yes        | no             | yes        | most_popular   | yes        | best_value     | accept        | monthly   |
-      | 1       | yes        | most_popular   | no         | no             | yes        | most_popular   | accept        | quarterly |
-      | 1       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | annually  |
-      | 1       | yes        | best_value     | yes        | best_value     | no         | no             | decline       | no        |
-      | 3       | no         | no             | no         | no             | yes        | most_popular   | accept        | annually  |
-      | 3       | no         | no             | yes        | most_popular   | yes        | most_popular   | decline       | no        |
-      | 3       | yes        | best_value     | yes        | best_value     | yes        | best_value     | accept        | quarterly |
-      | 3       | yes        | most_popular   | no         | no             | no         | no             | accept        | monthly   |
-      | 6       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | quarterly |
-      | 6       | yes        | most_popular   | yes        | best_value     | yes        | most_popular   | accept        | annually  |
-      | 6       | no         | no             | yes        | best_value     | yes        | most_popular   | accept        | monthly   |
-      | 6       | yes        | most_popular   | yes        | most_popular   | yes        | best_value     | decline       | no        |
-      | 6       | yes        | best_value     | no         | no             | yes        | most_popular   | accept        | monthly   |
-      | 6       | no         | no             | no         | no             | yes        | best_value     | decline       | no        |
-      | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
-      | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
+      | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | accept        | no        |
+      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
+      | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
+      | 1       | no         | best_value     | yes        | no             | no         | best_value     | decline       | no        |
+      | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
+      | 3       | no         | best_value     | yes        | no             | yes        | no             | accept        | annually  |
+      | 3       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | monthly   |
+      | 3       | no         | no             | no         | best_value     | no         | best_value     | accept        | quarterly |
+      | 3       | yes        | no             | no         | most_popular   | no         | most_popular   | decline       | no        |
+      | 3       | no         | most_popular   | no         | most_popular   | yes        | no             | accept        | quarterly |
+      | 6       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | annually  |
+      | 6       | no         | best_value     | no         | best_value     | no         | most_popular   | accept        | annually  |
+      | 6       | yes        | no             | yes        | no             | no         | best_value     | accept        | quarterly |
+      | 6       | no         | most_popular   | no         | best_value     | yes        | no             | decline       | no        |
+      | 6       | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
   @restore_gut
@@ -57,21 +56,20 @@ Feature: Funnel tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | no         | no             | yes        | no             | yes        | best_value     | accept        | annually  |
-      | 1       | yes        | most_popular   | no         | no             | yes        | most_popular   | accept        | quarterly |
-      | 1       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | annually  |
-      | 1       | yes        | no             | yes        | most_popular   | yes        | best_value     | accept        | monthly   |
-      | 1       | yes        | best_value     | yes        | best_value     | no         | no             | decline       | no        |
-      | 3       | no         | no             | no         | no             | yes        | most_popular   | accept        | annually  |
-      | 3       | no         | no             | yes        | most_popular   | yes        | most_popular   | decline       | no        |
-      | 3       | yes        | best_value     | yes        | best_value     | yes        | best_value     | accept        | quarterly |
-      | 3       | yes        | most_popular   | no         | no             | no         | no             | accept        | monthly   |
-      | 6       | yes        | best_value     | yes        | most_popular   | no         | no             | accept        | quarterly |
-      | 6       | yes        | most_popular   | yes        | best_value     | yes        | most_popular   | accept        | annually  |
-      | 6       | no         | no             | yes        | best_value     | yes        | most_popular   | accept        | monthly   |
-      | 6       | yes        | most_popular   | yes        | most_popular   | yes        | best_value     | decline       | no        |
-      | 6       | yes        | best_value     | no         | no             | yes        | most_popular   | accept        | monthly   |
-      | 6       | no         | no             | no         | no             | yes        | best_value     | decline       | no        |
-      | 6       | no         | no             | yes        | most_popular   | no         | no             | accept        | quarterly |
-      | 6       | yes        | best_value     | yes        | best_value     | yes        | no             | accept        | no        |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | accept        | no        |
+      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
+      | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
+      | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
+      | 1       | no         | best_value     | yes        | no             | no         | best_value     | decline       | no        |
+      | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
+      | 3       | no         | most_popular   | no         | most_popular   | yes        | no             | accept        | quarterly |
+      | 3       | no         | best_value     | yes        | no             | yes        | no             | accept        | annually  |
+      | 3       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | monthly   |
+      | 3       | no         | no             | no         | best_value     | no         | best_value     | accept        | quarterly |
+      | 3       | yes        | no             | no         | most_popular   | no         | most_popular   | decline       | no        |
+      | 6       | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
+      | 6       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | annually  |
+      | 6       | no         | best_value     | no         | best_value     | no         | most_popular   | accept        | annually  |
+      | 6       | yes        | no             | yes        | no             | no         | best_value     | accept        | quarterly |
+      | 6       | no         | most_popular   | no         | best_value     | yes        | no             | decline       | no        |
 
