@@ -40,8 +40,19 @@ docuseries_address_already_filled = False
 membership_added = False
 
 
-test_cc_number = '4242424242424242'
+test_cc_number = ''
+test_cc_type = ''
 test_cc_expiration_date = '0527'
 test_cc_cvv = '123'
 test_cc_zip = '1000'
+card_index = 0
+test_cards = [
+            {"number": "4009348888881881", "type": "Visa"},
+            {"number": "5555555555554444", "type": "MasterCard"},
+            {"number": "371449635398431", "type": "American Express"},
+            {"number": "36259600000004", "type": "Diners Club"},
+            {"number": "6011000991300009", "type": "Discover"},
+            {"number": "6221261111117766", "type": "UnionPay"},
+            {"number": "3530111333300000", "type": "JCB"},
+        ]
 
