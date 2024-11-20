@@ -40,7 +40,7 @@ docuseries_address_already_filled = False
 membership_added = False
 
 
-test_cc_number = '4242424242424242'
+test_cc_number = '5555555555554444'
 test_cc_expiration_date = '0527'
 test_cc_cvv = '123'
 test_cc_zip = '1000'
