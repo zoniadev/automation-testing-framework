@@ -4,6 +4,7 @@ import shutil
 import allure
 from playwright.sync_api import sync_playwright
 import common_variables
+from common_functions import cc_random_card as CC
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
@@ -25,6 +26,7 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    CC.pick_payment_card()
     context.console_messages = []
     if context.config.userdata['device'] == 'iphone':
         device = context.playwright.devices['iPhone 13']

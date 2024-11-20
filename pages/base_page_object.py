@@ -4,6 +4,7 @@ from playwright.sync_api import Page, expect
 import common_variables
 from locators import *
 import locators
+import random
 
 
 class BasePage(object):
@@ -196,3 +197,4 @@ class BasePage(object):
         if errors:
             error_count = len(errors)
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
+
