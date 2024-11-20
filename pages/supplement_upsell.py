@@ -16,6 +16,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_supplement_upsell(self, order, upsell_page, upgrade, last_chance):
         if upgrade == 'yes':
+            print('===> Waiting to avoid payment method error...')
             time.sleep(30)
             self.click(YES_UPGRADE_BUTTON)
         elif upgrade == 'no':
@@ -25,6 +26,7 @@ class SupplementUpsellPage(BasePage):
             if last_chance == 'no':
                 self.click(DOWNSELL_NO_THANKS_BUTTON)
             else:
+                print('===> Waiting to avoid payment method error...')
                 time.sleep(30)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
                 self.click(button_locator)
