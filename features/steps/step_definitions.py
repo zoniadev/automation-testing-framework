@@ -1,5 +1,5 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,
@@ -105,3 +105,8 @@ def user_register_in_signup_page(context, cycle):
     page = SignUpPage(context)
     page.select_plan(cycle.upper())
     page.register_in_signup_page(cycle)
+
+@step(u'Test')
+def test(context):
+    page = SupplementStartPage(context)
+    page.navigate_to_url('https://www.google.bg')
