@@ -15,6 +15,7 @@ from pages import (
 
 @step('user select to buy "{amount}" bottles in "{funnel}" Supplements page')
 def user_fill_opt_in_form(context, amount, funnel):
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.funnel = funnel.lower().replace(' ', '_')
     page = SupplementStartPage(context)
     page.navigate_to_url(getattr(common_variables, f"{common_variables.funnel}_start_url"))
@@ -88,6 +89,7 @@ def verify_button_redirects(context, element, url, expected_redirect):
 
 @step(u'user register in "{series}" Opt In page')
 def user_register_in_opt_in_page(context, series):
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.funnel = series.lower()
     page = OptInPage(context)
     page.navigate_to_url(getattr(common_variables, f"{series.lower()}_opt_in_url"))

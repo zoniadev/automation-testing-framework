@@ -98,7 +98,10 @@ class BasePage(object):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
-        cc_cvv.press_sequentially(common_variables.test_cc_cvv)
+        if common_variables.test_cc_type == 'American Express':
+            cc_cvv.press_sequentially('1111')
+        else:
+            cc_cvv.press_sequentially(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
