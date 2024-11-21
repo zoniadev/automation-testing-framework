@@ -1,0 +1,89 @@
+Executing step: user register in "Unbroken" Opt In page
+>>> Registering in Main Opt in page...
+===> Entered "AutomationWalter" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Cain-1732168309@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "Unbroken" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationWalter" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Cain-1732168309@gmail.com" in "//input[@id='form-email']" field
+===> Entered "%K4CnXre" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/ad-booster-packages-quarterly"
+Failed step: user sign up for "quarterly" plan
+Test failed on page: 'https://staging.zonia.com/ad-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_funnel_--_@1.17__20241121-055236.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.17/js/player.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.17/js/vendor.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-SWU8eS3ZS7iBu0f95ZwwNtEAnRnYFRs4lLCUGetLyOM='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-+z0mPMK45qxlAOVam0S73BWeQ8rzsBlyaprzVwey6Ek='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-xybf3FVDr88Ueh3yv/rLIrnWZfB3MaKJ7rCh8dddvZI='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-ND6a/gBuWmTyrtyaQzDW6X3noBS4Tpvi2KVdMRHz8ZA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4fEnOxI9VHb+ZqzTHXH+yJ+UXM7cvqLuZ1IGUt8Bn8s='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WFy6BmODyKQq1MyqkXYwa6geGi2OAJSWeEYi5DDBNY8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WhdDZATaKbTOIXOCTFLHHIaN4OtttMZZ+MbAkfqxlpk='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.17/js/player.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/p/4.39.17/js/vendor.module.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-SWU8eS3ZS7iBu0f95ZwwNtEAnRnYFRs4lLCUGetLyOM='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-NioTwhTwQcpkeN7s30hFFzmABl6cn6L76euVM5EYe8w='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-/rLqGpw0JiCL8pHU/IHbcjYllWIoPpAH6DKLUwD8iW4='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-ND6a/gBuWmTyrtyaQzDW6X3noBS4Tpvi2KVdMRHz8ZA='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-4fEnOxI9VHb+ZqzTHXH+yJ+UXM7cvqLuZ1IGUt8Bn8s='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WFy6BmODyKQq1MyqkXYwa6geGi2OAJSWeEYi5DDBNY8='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to execute inline script because it violates the following Content Security Policy directive: "script-src 'none'". Either the 'unsafe-inline' keyword, a hash ('sha256-WhdDZATaKbTOIXOCTFLHHIaN4OtttMZZ+MbAkfqxlpk='), or a nonce ('nonce-...') is required to enable inline execution.
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/js_opt/modules/utils/vuid.min.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=3b23eb2f53f300e64bc0d42f2dba0788522cf4a61732168315' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=3b23eb2f53f300e64bc0d42f2dba0788522cf4a61732168315' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to load the script 'https://f.vimeocdn.com/js_opt/modules/utils/vuid.min.js' because it violates the following Content Security Policy directive: "script-src 'none'". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=ef0b2c4aac70882150f258b6d9bb25e206b7a6851732168316' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://player-telemetry.vimeo.com/add/player-stats?beacon=1&session-id=ef0b2c4aac70882150f258b6d9bb25e206b7a6851732168316' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://vimeo.com/ablincoln/vuid?pid=3b23eb2f53f300e64bc0d42f2dba0788522cf4a61732168315' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- [Report Only] Refused to connect to 'https://vimeo.com/ablincoln/vuid?pid=3b23eb2f53f300e64bc0d42f2dba0788522cf4a61732168315' because it violates the following Content Security Policy directive: "connect-src 'none'".
+
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
