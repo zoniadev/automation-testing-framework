@@ -26,6 +26,7 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    common_variables.test_cc_type = context.config.userdata['card_type']
     CC.pick_payment_card()
     context.console_messages = []
     if context.config.userdata['device'] == 'iphone':

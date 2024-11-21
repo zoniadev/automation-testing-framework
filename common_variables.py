@@ -49,7 +49,7 @@ card_index = 0
 test_cards = [
             {"number": "4009348888881881", "type": "Visa"},
             {"number": "5555555555554444", "type": "MasterCard"},
-            {"number": "371449635398431", "type": "American Express"},
+            {"number": "378282246310005", "type": "American Express"},
             {"number": "36259600000004", "type": "Diners Club"},
             {"number": "6011000991300009", "type": "Discover"},
             {"number": "6221261111117766", "type": "UnionPay"},
