@@ -20,7 +20,7 @@ Feature: Funnel tests
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
       | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
-      | 1       | no         | most_popular   | no         | no             | no         | best_value     | accept        | no        |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
       | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
       | 1       | no         | best_value     | yes        | no             | no         | best_value     | decline       | no        |
@@ -56,7 +56,7 @@ Feature: Funnel tests
 
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 1       | no         | most_popular   | no         | no             | no         | best_value     | accept        | no        |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
       | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
       | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
