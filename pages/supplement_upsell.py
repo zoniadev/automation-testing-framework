@@ -115,9 +115,17 @@ class SupplementUpsellPage(BasePage):
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
-            next_page_navigation = common_variables.unbroken_restore_life_url
+            if common_variables.funnel == 'ageless':
+                next_page_navigation = common_variables.welcome_page_url
+            else:
+                page_url = f'{common_variables.funnel}_restore_life_url'
+                next_page_navigation = getattr(common_variables, page_url)
         elif upsell_page == 'Restore Life':
-            next_page_navigation = common_variables.welcome_page_url
+            if common_variables.funnel == 'ageless':
+                page_url = f'{common_variables.funnel}_restore_detox_url'
+                next_page_navigation = getattr(common_variables, page_url)
+            else:
+                next_page_navigation = common_variables.welcome_page_url
         print(f'>>> Selecting "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}...')
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
