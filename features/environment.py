@@ -10,7 +10,7 @@ SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
 
 def before_all(context):
-    print("Starting run")
+    print(f"Starting run on {context.config.userdata['device'].capitalize()}")
     context.playwright = sync_playwright().start()
     headless_str = context.config.userdata.get("headless")
     headless = headless_str.lower() == "true"
