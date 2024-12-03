@@ -16,7 +16,9 @@ SCROLL_ARROW_BUTTON = "//a[@class='arrow']"
 
 #SupplementSalesPageLocators:
 BUY_1_BOTTLES_BUTTON = "//*[@unique-id='add-order-1-1']"
+BUY_2_BOTTLES_BUTTON = "//*[@unique-id='add-order-2-1']"
 BUY_3_BOTTLES_BUTTON = "//*[@unique-id='add-order-3-1']"
+BUY_5_BOTTLES_BUTTON = "//*[@unique-id='add-order-5-1']"
 BUY_6_BOTTLES_BUTTON = "//*[@unique-id='add-order-6-1']"
 FIRST_NAME_FIELD = "//input[@id='form-firstname']"
 LAST_NAME_FIELD = "//input[@id='form-lastname']"
