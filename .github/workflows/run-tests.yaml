@@ -116,7 +116,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history/${{ env.RESULTS_DIR }}
-          destination_dir: ${{ env.RESULTS_DIR }}/${{github.run_number}}
+          destination_dir: ${{ env.RESULTS_DIR }}/${{github.run_number}}/
 
       - name: Post the link to the report
         if: always()
