@@ -138,8 +138,11 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
           destination_dir: ${{ env.RESULTS_DIR }}
-          # keep_files: false
-          # force_orphan: false
+          allow_empty_commit: false
+          keep_files: false
+          force_orphan: false
+          enable_jekyll: false
+          exclude_assets: .github
 
       - name: Post the link to the report
         if: always()
