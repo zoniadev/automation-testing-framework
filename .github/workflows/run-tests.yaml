@@ -98,7 +98,7 @@ jobs:
         if: always()
         with:
           gh_pages: gh-pages
-          allure_history: allure-history
+          allure_history: allure-history/$RESULTS_DIR
           allure_results: allure-results/$RESULTS_DIR
 
       - name: Publish test report
