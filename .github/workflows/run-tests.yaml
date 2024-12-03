@@ -29,9 +29,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-    env:
-      RESULTS_DIR: allure-results-empty
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -71,11 +68,9 @@ jobs:
           TAGS="${{ github.event.inputs.tags }}"
           DEVICE="${{ github.event.inputs.device }}"
           TAGS=$(echo "$TAGS" | sed 's/ /,/g')
-          TAGS="--tags $TAGS"n
-          RESULTS_DIR="allure-results-${DEVICE}-${TAGS// /_}"
-          echo "RESULTS_DIR=$RESULTS_DIR" >> $GITHUB_ENV
-          echo "Running tests with tags: $TAGS and device: $DEVICE. Results dir is: $RESULTS_DIR"
-          behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results/$RESULTS_DIR | tee test-summary.txt
+          TAGS="--tags $TAGS"
+          echo "Running tests with tags: $TAGS and device: $DEVICE"
+          behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()
@@ -97,38 +92,13 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Debug allure-results folder
-        if: always()
-        run: ls -R allure-results
-
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: allure-results/${{ env.RESULTS_DIR }}
-          allure_report: allure-report
-          keep_reports: 20
-          subfolder: ${{ env.RESULTS_DIR }}
-
-      - name: Debug - List allure-report contents
-        if: always()
-        run: |
-          echo "Contents of allure-report:"
-          ls -R allure-report
-
-      - name: Debug - List allure-history contents
-        if: always()
-        run: |
-          echo "Contents of allure-history:"
-          ls -R allure-history
-
-      - name: Remove .git directory from allure-history
-        if: always()
-        run: |
-          echo "Removing .git directory from allure-history"
-          sudo rm -rf allure-history/.git
+          allure_results: allure-results
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -137,12 +107,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          destination_dir: ${{ env.RESULTS_DIR }}
-          allow_empty_commit: false
-          keep_files: false
-          force_orphan: false
-          enable_jekyll: false
-          exclude_assets: .github
 
       - name: Post the link to the report
         if: always()
@@ -152,4 +116,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/${{ env.RESULTS_DIR }}/${{ github.run_number }}/
+          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
