@@ -69,8 +69,9 @@ jobs:
           DEVICE="${{ github.event.inputs.device }}"
           TAGS=$(echo "$TAGS" | sed 's/ /,/g')
           TAGS="--tags $TAGS"
-          echo "Running tests with tags: $TAGS and device: $DEVICE"
-          behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          RESULTS_DIR="allure-results-${DEVICE}-${TAGS// /_}"
+          echo "Running tests with tags: $TAGS and device: $DEVICE. Results dir is: $RESULTS_DIR"
+          behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results/$RESULTS_DIR | tee test-summary.txt
 
       - name: Send failure email
         if: always()
@@ -98,7 +99,7 @@ jobs:
         with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: allure-results
+          allure_results: allure-results/$RESULTS_DIR
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -106,7 +107,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history
+          publish_dir: allure-history/$RESULTS_DIR
 
       - name: Post the link to the report
         if: always()
