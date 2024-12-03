@@ -93,13 +93,17 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Debug allure-results folder
+        if: always()
+        run: ls -R allure-results
+
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
           gh_pages: gh-pages
-          allure_history: allure-history/$RESULTS_DIR
-          allure_results: allure-results/$RESULTS_DIR
+          allure_history: allure-history/${{ env.RESULTS_DIR }}
+          allure_results: allure-results/${{ env.RESULTS_DIR }}
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -107,8 +111,8 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history/$RESULTS_DIR
-          destination_dir: $RESULTS_DIR/${{github.run_number}}
+          publish_dir: allure-history/${{ env.RESULTS_DIR }}
+          destination_dir: ${{ env.RESULTS_DIR }}/${{github.run_number}}
 
       - name: Post the link to the report
         if: always()
@@ -118,4 +122,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
+          target_url: https://zoniadev.github.io/automation-testing-framework/${{ env.RESULTS_DIR }}/${{ github.run_number }}
