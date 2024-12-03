@@ -1,0 +1,1 @@
+{"99ae321182b28b381e48a4960e2ecf1a":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"a6a51622cd2ba939","reportUrl":"https://zoniadev.github.io/automation-testing-framework/191//#testresult/a6a51622cd2ba939","status":"passed","time":{"start":1733192087014,"stop":1733192111864,"duration":24850}}]}}
