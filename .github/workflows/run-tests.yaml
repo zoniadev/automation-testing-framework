@@ -29,6 +29,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    env:
+      RESULTS_DIR: allure-results-empty
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -68,8 +71,9 @@ jobs:
           TAGS="${{ github.event.inputs.tags }}"
           DEVICE="${{ github.event.inputs.device }}"
           TAGS=$(echo "$TAGS" | sed 's/ /,/g')
-          TAGS="--tags $TAGS"
+          TAGS="--tags $TAGS"n
           RESULTS_DIR="allure-results-${DEVICE}-${TAGS// /_}"
+          echo "RESULTS_DIR=$RESULTS_DIR" >> $GITHUB_ENV
           echo "Running tests with tags: $TAGS and device: $DEVICE. Results dir is: $RESULTS_DIR"
           behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results/$RESULTS_DIR | tee test-summary.txt
 
