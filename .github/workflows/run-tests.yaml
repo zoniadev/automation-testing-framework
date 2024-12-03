@@ -110,7 +110,7 @@ jobs:
           allure_results: allure-results/${{ env.RESULTS_DIR }}
           allure_report: allure-report
           keep_reports: 20
-          subfolder: ${{ env.RESULTS_DIR }}/${{ github.run_number }}
+          subfolder: ${{ github.run_number }}
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
