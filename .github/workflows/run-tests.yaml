@@ -124,6 +124,12 @@ jobs:
           echo "Contents of allure-history:"
           ls -R allure-history
 
+      - name: Remove .git directory from allure-history
+        if: always()
+        run: |
+          echo "Removing .git directory from allure-history"
+          rm -rf allure-history/.git
+
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
         if: always()
