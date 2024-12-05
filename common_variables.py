@@ -74,6 +74,12 @@ restore_sleep_second_upsell_url = 'https://staging.zonia.com/rs-restore-life-6-d
 restore_sleep_third_upsell_url = 'https://staging.zonia.com/rs-restore-detox-6-discounted-bottles'
 restore_sleep_fourth_upsell_url = 'https://staging.zonia.com/rs-trial'
 
+restore_sleep_b2g3_start_url = 'https://staging.zonia.com/restore-sleep-3-free-bottles'
+restore_sleep_b2g3_first_upsell_url = 'https://staging.zonia.com/restore-sleep-6-more-bottles-2'
+restore_sleep_b2g3_second_upsell_url = 'https://staging.zonia.com/rs-restore-life-6-discounted-bottles-2'
+restore_sleep_b2g3_third_upsell_url = 'https://staging.zonia.com/rs-restore-detox-6-discounted-bottles-2'
+restore_sleep_b2g3_fourth_upsell_url = 'https://staging.zonia.com/rs-trial'
+
 restore_gut_start_url = 'https://staging.zonia.com/restore-gut-special'
 restore_gut_first_upsell_url = 'https://staging.zonia.com/restore-gut-6-more-bottles'
 restore_gut_second_upsell_url = 'https://staging.zonia.com/rg-restore-detox-6-discounted-bottles'
