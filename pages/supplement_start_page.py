@@ -14,8 +14,17 @@ class SupplementStartPage(BasePage):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'===> Buying {amount} bottle...')
-        button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
-        self.click(button_locator)
+        if amount == '11':
+            self.click(BUY_5_BOTTLES_BUTTON)
+            time.sleep(0.5)
+            self.click(BUY_SPECIAL_B4G7_OFFER_BUTTON)
+        elif amount == '5':
+            self.click(BUY_5_BOTTLES_BUTTON)
+            time.sleep(0.5)
+            self.click(BUY_MOST_POPULAR_BUTTON)
+        else:
+            button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
+            self.click(button_locator)
         time.sleep(2)
         self.find_element(FIRST_NAME_FIELD).press_sequentially(common_variables.supplement_funnel_name)
         self.find_element(LAST_NAME_FIELD).press_sequentially(RD.last_name())
