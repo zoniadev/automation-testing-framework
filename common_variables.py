@@ -45,7 +45,7 @@ ageless_restore_detox_upsell_url = 'https://staging.zonia.com/lg-rd-6-more-bottl
 ageless_restore_detox_downsell_url = 'https://staging.zonia.com/lg-rd-6-discounted-bottles'
 
 bb_opt_in_url = 'https://staging.zonia.com/bbmb5e/beyond-the-brain'
-bb_detox_opt_in_url = 'https://staging.zonia.com//bbmb5e/bb-detox'
+bb_detox_opt_in_url = 'https://staging.zonia.com/bbmb5e/bb-detox'
 bb_gut_opt_in_url = 'https://staging.zonia.com/bbmb5e/bb-gut-health'
 bb_memory_opt_in_url = 'https://staging.zonia.com/bbmb5e/bb-memory'
 bb_mood_opt_in_url = 'https://staging.zonia.com/bbmb5e/bb-mood'

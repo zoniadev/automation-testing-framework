@@ -82,13 +82,14 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for booster package...')
         if decision != 'no':
             selection = getattr(locators, f"{decision.upper()}_PACKAGE_BUTTON")
-            next_page = getattr(common_variables, f"unbroken_{decision.lower()}_masterclass_url")
+            next_page = getattr(common_variables, f"{common_variables.funnel}_{decision.lower()}_masterclass_url")
             time.sleep(0.5)
             self.click(selection)
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
         else:
-            next_page = common_variables.unbroken_masterclass_url
+            # next_page = common_variables.unbroken_masterclass_url
+            next_page = getattr(common_variables, f'{common_variables.funnel}_masterclass_url')
             time.sleep(0.5)
             self.click(NO_THANKS_BUTTON)
         self.wait_for_navigation(next_page, timeout=30000)
@@ -105,11 +106,13 @@ class SupplementUpsellPage(BasePage):
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
             self.click(BUY_MASTERCLASS_BUTTON)
-            next_page = common_variables.unbroken_restore_detox_bought_url
+            next_page = getattr(common_variables, f'{common_variables.funnel}_restore_detox_bought_url')
+            # next_page = common_variables.unbroken_restore_detox_bought_url
         else:
             time.sleep(0.5)
             self.click(SKIP_MASTERCLASS_BUTTON)
-            next_page = common_variables.unbroken_restore_detox_not_bought_url
+            next_page = getattr(common_variables, f'{common_variables.funnel}_restore_detox_not_bought_url')
+            # next_page = common_variables.unbroken_restore_detox_not_bought_url
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
@@ -133,12 +136,12 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Unsupported "upsell_downsell" value: {upsell_downsell}')
         if amount == 'no':
             print('===> Not buying bottles...')
-            next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_downsell_url")
+            next_page = getattr(common_variables, f"{common_variables.funnel}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
             time.sleep(0.5)
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
-            next_page = getattr(common_variables, f"unbroken_{upsell_page.lower().replace(' ', '_')}_upsell_url")
+            next_page = getattr(common_variables, f"{common_variables.funnel}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
@@ -194,8 +197,8 @@ class SupplementUpsellPage(BasePage):
         self.click(button)
         try:
             self.wait_for_navigation(next_page, timeout=5000)
-        except:
-            print(f'===> Issue with clicking button "{button}", retrying...')
+        except Exception as e:
+            print(f'===> Issue with clicking button "{button}", retrying... Error: {e}')
             self.click(button)
             time.sleep(0.5)
             self.wait_for_navigation(next_page, timeout=30000)
