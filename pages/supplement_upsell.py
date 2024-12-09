@@ -88,7 +88,6 @@ class SupplementUpsellPage(BasePage):
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
         else:
-            # next_page = common_variables.unbroken_masterclass_url
             next_page = getattr(common_variables, f'{common_variables.funnel}_masterclass_url')
             time.sleep(0.5)
             self.click(NO_THANKS_BUTTON)
@@ -100,18 +99,21 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
+        if common_variables.funnel == 'ageless':
+            upsell3 = 'restore_life'
+        else:
+            upsell3 = 'restore_detox'
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
         if decision != 'no':
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
             self.click(BUY_MASTERCLASS_BUTTON)
-            next_page = getattr(common_variables, f'{common_variables.funnel}_restore_detox_bought_url')
-            # next_page = common_variables.unbroken_restore_detox_bought_url
+            next_page = getattr(common_variables, f'{common_variables.funnel}_{upsell3}_bought_url')
         else:
             time.sleep(0.5)
             self.click(SKIP_MASTERCLASS_BUTTON)
-            next_page = getattr(common_variables, f'{common_variables.funnel}_restore_detox_not_bought_url')
+            next_page = getattr(common_variables, f'{common_variables.funnel}_{upsell3}_not_bought_url')
             # next_page = common_variables.unbroken_restore_detox_not_bought_url
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')

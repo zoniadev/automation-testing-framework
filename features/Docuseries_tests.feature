@@ -40,7 +40,7 @@ Feature: Funnel tests
       | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
 
-  @ageless
+  @ageless @WIP
   Scenario Outline: Ageless Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -80,7 +80,7 @@ Feature: Funnel tests
       | ageless_inflammation | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
 
-  @bb @WIP
+  @bb
   Scenario Outline: BB Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
