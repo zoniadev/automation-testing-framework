@@ -1,0 +1,11 @@
+Executing step: user register in "Unbroken" Opt In page
+Scenario will use "American Express" card "378282246310005"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMichelle" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Young-1733722112@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+Failed step: user register in "Unbroken" Opt In page
+Test failed on page: 'https://staging.zonia.com/ad-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_funnel_--_@1.17__20241209-052857.png
