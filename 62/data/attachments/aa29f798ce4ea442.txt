@@ -1,0 +1,29 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Buying 1 bottle...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+Failed clicking "No Thanks" button on the 1 try! Retrying...
+Failed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Test failed on page: 'https://staging.zonia.com/rs-restore-life-6-discounted-bottles?orderId=6757d1e4537f50f0fd48c4fd'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.2__20241210-053123.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 400 ()
