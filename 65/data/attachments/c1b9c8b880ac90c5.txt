@@ -1,0 +1,21 @@
+Executing step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Buying 3 bottle...
+===> Clicked element "//*[@unique-id='add-order-3-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 3 bottle
+Completed step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-6']"
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+Failed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Test failed on page: 'https://staging.zonia.com/restore-gut-6-more-bottles/?orderId=675bd5a17597c946789477c2'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_funnel_--_@1.8__20241213-063618.png
