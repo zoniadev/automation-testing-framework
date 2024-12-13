@@ -1,0 +1,8 @@
+Executing step: user select to buy "5" bottles in "Restore Sleep B2G3" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Buying 5 bottle...
+===> Clicked element "//*[@unique-id='add-order-5-1']"
+Failed step: user select to buy "5" bottles in "Restore Sleep B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-sleep-3-free-bottles'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_-_Buy_2,_Get_3_Free_bottles_Supplement_funnel_--_@1.12__20241213-101348.png
