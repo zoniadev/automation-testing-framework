@@ -1,0 +1,34 @@
+Executing step: user select to buy "3" bottles in "Restore Sleep" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Buying 3 bottle...
+===> Clicked element "//*[@unique-id='add-order-3-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 3 bottle
+Completed step: user select to buy "3" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+Failed clicking "No Thanks" button on the 1 try! Original error: "LocatorAssertions.to_be_visible: Error: strict mode violation: locator("//*[@data-id='add-order-3']") resolved to 2 elements:
+    1) <div data-id="add-order-3" data-sku="RL-3-final-discount" class="product-order get-downsell">…</div> aka locator("div:nth-child(2) > .price-boxes-section > .product-content > .product-order")
+    2) <a data-id="add-order-3" class="product-button buy-restore-life" data-restore-life-sku="RL-3-final-discount">ADD TO ORDER</a> aka get_by_text("ADD TO ORDER").nth(1)
+
+Call log:
+LocatorAssertions.to_be_visible with timeout 5000ms
+  - waiting for locator("//*[@data-id='add-order-3']")
+". Retrying...
+Failed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Test failed on page: 'https://staging.zonia.com/rs-restore-life-6-discounted-bottles?orderId=675e7290ba63a6db161b2e31'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.11__20241215-061030.png
