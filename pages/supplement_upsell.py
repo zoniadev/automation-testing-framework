@@ -54,8 +54,8 @@ class SupplementUpsellPage(BasePage):
                 self.verify_element_visible(BUY_MOST_POPULAR_BUTTON)
                 print('>>> Verified appearence of downsell popup')
                 break
-            except:
-                print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Retrying...')
+            except Exception as e:
+                print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Original error: "{e}". Retrying...')
                 self.click(NO_THANKS_BUTTON)
 
         else:
