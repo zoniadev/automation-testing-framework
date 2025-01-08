@@ -114,7 +114,6 @@ class SupplementUpsellPage(BasePage):
             time.sleep(0.5)
             self.click(SKIP_MASTERCLASS_BUTTON)
             next_page = getattr(common_variables, f'{common_variables.funnel}_{upsell3}_not_bought_url')
-            # next_page = common_variables.unbroken_restore_detox_not_bought_url
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
@@ -199,8 +198,9 @@ class SupplementUpsellPage(BasePage):
         self.click(button)
         try:
             self.wait_for_navigation(next_page, timeout=5000)
-        except Exception as e:
-            print(f'===> Issue with clicking button "{button}", retrying... Error: {e}')
+        except Exception as E:
+            print(f'===> Issue with clicking button "{button}", retrying...')
+            print(f'Error: {E}')
             self.click(button)
             time.sleep(0.5)
             self.wait_for_navigation(next_page, timeout=30000)
