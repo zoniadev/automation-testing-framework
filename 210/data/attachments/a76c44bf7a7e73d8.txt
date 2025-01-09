@@ -1,0 +1,31 @@
+Executing step: user register in "bb_energy" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationAdriana" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Oconnor-1736416910@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_energy" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-signup"
+===> URL successfully changed to "https://staging.zonia.com/bbmb5e/bb-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationAdriana" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Oconnor-1736416910@gmail.com" in "//input[@id='form-email']" field
+===> Entered "6c#(4Msx" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/bb-booster-packages-quarterly"
+===> URL successfully changed to "https://staging.zonia.com/bb-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
