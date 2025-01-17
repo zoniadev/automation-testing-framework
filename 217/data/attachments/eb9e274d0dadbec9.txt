@@ -1,0 +1,39 @@
+Executing step: user register in "bb_detox" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationWilliam" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Wright-1737101049@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_detox" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-signup"
+===> URL successfully changed to "https://staging.zonia.com/bbmb5e/bb-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationWilliam" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Wright-1737101049@gmail.com" in "//input[@id='form-email']" field
+===> Entered "$^4aW)ao" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/bb-booster-packages-monthly"
+Failed step: user sign up for "monthly" plan
+Test failed on page: 'https://staging.zonia.com/bbmb5e/bb-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.2__20250117-080455.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 500 ()
