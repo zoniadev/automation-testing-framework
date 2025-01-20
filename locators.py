@@ -80,6 +80,7 @@ SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
 SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='activate-membership-1']"
 
 #SpippingAddressPopupLocators:
+SHIPPING_POPUP_TITLE = "h5.modal-title"
 SHIPPING_FULL_NAME_FIELD = "//input[@id='shippingName']"
 SHIPPING_PHONE_FIELD = "//input[@id='shippingPhone']"
 SHIPPING_ADDRESS_FIELD = "//input[@id='shippingAddress']"

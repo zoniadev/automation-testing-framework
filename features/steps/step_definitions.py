@@ -91,6 +91,7 @@ def verify_button_redirects(context, element, url, expected_redirect):
 def user_register_in_opt_in_page(context, series):
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.funnel = series.lower()
+    common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
     page = OptInPage(context)
     page.navigate_to_url(getattr(common_variables, f"{series.lower()}_opt_in_url"))
     page.register_in_opt_in_page()
