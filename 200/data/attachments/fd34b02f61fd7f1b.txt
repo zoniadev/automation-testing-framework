@@ -1,8 +1,0 @@
-Executing step: user select to buy "3" bottles in "Restore Gut" Supplements page
-Scenario will use "American Express" card "378282246310005"
-===> Buying 3 bottle...
-===> Clicked element "//*[@unique-id='add-order-3-1']"
-Failed step: user select to buy "3" bottles in "Restore Gut" Supplements page
-Test failed on page: 'https://staging.zonia.com/restore-gut-signup-3-bottles'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_funnel_--_@1.10__20241213-073544.png
