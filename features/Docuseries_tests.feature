@@ -1,7 +1,7 @@
 Feature: Funnel tests
 
   @unbroken_live
-  Scenario Outline: Unbroken funnel
+  Scenario Outline: Unbroken live funnel
     Given user register in "Unbroken" Opt In page
     And user join Zonia
     When user sign up for "<plan>" plan
