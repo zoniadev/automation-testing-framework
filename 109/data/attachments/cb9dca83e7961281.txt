@@ -1,0 +1,58 @@
+Executing step: user register in "Unbroken" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationSeth" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Williams-1737868721@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "Unbroken" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationSeth" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Williams-1737868721@gmail.com" in "//input[@id='form-email']" field
+===> Entered "+!I3XuCr" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/ad-booster-packages-monthly"
+===> URL successfully changed to "https://staging.zonia.com/ad-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationSeth" in "//input[@id='shippingName']" field
+===> Entered "77538816515" in "//input[@id='shippingPhone']" field
+===> Entered "462 Matthew Court" in "//input[@id='shippingAddress']" field
+===> Entered "Lake Michelleshire" in "//input[@id='city']" field
+===> Entered "Washington" in "//input[@id='state']" field
+===> Entered "77597" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-restore-detox-special-immunity-code"
+===> URL successfully changed to "https://staging.zonia.com/ad-restore-detox-special-immunity-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
