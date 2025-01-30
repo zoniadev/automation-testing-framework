@@ -2,7 +2,7 @@ Feature: Nightly tests
 
   @nightly
   Scenario Outline: Unbroken live nightly
-    Given user register in "Unbroken" Opt In page
+    Given user register in "ad_live" Opt In page
     And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
@@ -23,6 +23,31 @@ Feature: Nightly tests
       | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
       | quarterly | no               | no                   | no         | no                 | no         | no                 |
       | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
+
+
+  @nightly
+  Scenario Outline: Unbroken evergreen funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | ad_ev       | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | ad_ev_detox | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly
