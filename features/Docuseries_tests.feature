@@ -101,22 +101,22 @@ Feature: Funnel tests
 
     Examples:
       | opt_in_page      | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | bb_live          | quarterly | platinum         | buy                  | 3          | no                 | 1          | no                 |
-#      | bb_live_detox    | monthly   | silver           | no                   | 1          | upgrade            | 1          | upgrade            |
-#      | bb_live_gut      | annually  | no               | no                   | 3          | most_popular       | no         | no                 |
-#      | bb_live_memory   | monthly   | no               | buy                  | 3          | upgrade            | 6          | most_popular       |
+      | bb_live          | quarterly | platinum         | buy                  | 3          | no                 | 1          | no                 |
+      | bb_live_detox    | monthly   | silver           | no                   | 1          | upgrade            | 1          | upgrade            |
+      | bb_live_gut      | annually  | no               | no                   | 3          | most_popular       | no         | no                 |
+      | bb_live_memory   | monthly   | no               | buy                  | 3          | upgrade            | 6          | most_popular       |
       | bb_live_mood     | annually  | silver           | no                   | no         | no                 | no          | upgrade       |
-#      | bb_live_sleep    | quarterly | silver           | buy                  | 3          | most_popular       | 3          | upgrade            |
-#      | bb_live_energy   | quarterly | no               | no                   | 6          | no                 | 1          | upgrade            |
-#      | bb_live_immunity | annually  | platinum         | buy                  | 1          | upgrade            | no         | no                 |
-#      | bb_live_detox    | monthly   | platinum         | no                   | 1          | no                 | 3          | most_popular       |
-#      | bb_live_gut      | monthly   | no               | buy                  | no         | no                 | 3          | no                 |
-#      | bb_live_memory   | quarterly | platinum         | no                   | no         | no                 | 6          | upgrade            |
-#      | bb_live_mood     | annually  | platinum         | no                   | 6          | most_popular       | 6          | most_popular       |
-#      | bb_live_sleep    | annually  | no               | no                   | 6          | upgrade            | 3          | upgrade            |
-#      | bb_live_energy   | quarterly | no               | no                   | 1          | most_popular       | 1          | most_popular       |
-#      | bb_live_immunity | quarterly | silver           | no                   | 1          | upgrade            | 6          | no                 |
-#      | bb_live          | quarterly | no               | buy                  | no         | no                 | no         | no                 |
+      | bb_live_sleep    | quarterly | silver           | buy                  | 3          | most_popular       | 3          | upgrade            |
+      | bb_live_energy   | quarterly | no               | no                   | 6          | no                 | 1          | upgrade            |
+      | bb_live_immunity | annually  | platinum         | buy                  | 1          | upgrade            | no         | no                 |
+      | bb_live_detox    | monthly   | platinum         | no                   | 1          | no                 | 3          | most_popular       |
+      | bb_live_gut      | monthly   | no               | buy                  | no         | no                 | 3          | no                 |
+      | bb_live_memory   | quarterly | platinum         | no                   | no         | no                 | 6          | upgrade            |
+      | bb_live_mood     | annually  | platinum         | no                   | 6          | most_popular       | 6          | most_popular       |
+      | bb_live_sleep    | annually  | no               | no                   | 6          | upgrade            | 3          | upgrade            |
+      | bb_live_energy   | quarterly | no               | no                   | 1          | most_popular       | 1          | most_popular       |
+      | bb_live_immunity | quarterly | silver           | no                   | 1          | upgrade            | 6          | no                 |
+      | bb_live          | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
   @bb_evergreen @all_docuseries
   Scenario Outline: BB Evergreen funnel
