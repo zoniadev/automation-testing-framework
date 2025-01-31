@@ -1,0 +1,6 @@
+Executing step: user register in "ad_ev_detowsx" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "ad_ev_detowsx" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.10__20250131-101254.png
