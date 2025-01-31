@@ -157,6 +157,7 @@ class SupplementUpsellPage(BasePage):
             time.sleep(30)
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
+            common_variables.docuseries_address_will_appear = True
         elif upsell_downsell == 'no':
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
@@ -173,6 +174,8 @@ class SupplementUpsellPage(BasePage):
                 time.sleep(1)
                 self.click(BUY_MOST_POPULAR_BUTTON)
             print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
+        if common_variables.docuseries_address_will_appear:
+            self.populate_shipping_address()
         self.wait_for_navigation(next_page_navigation, timeout=30000)
         print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
 
@@ -184,6 +187,7 @@ class SupplementUpsellPage(BasePage):
             time.sleep(3)
             modal_title = self.find_not_unique_element(SHIPPING_POPUP_TITLE)
             actual_title = modal_title.text_content()
+            print(f'Actual title: {actual_title}')
             assert actual_title.strip() == expected_shipping_popup_title, (f"Popup title mismatch! Expected:"
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
