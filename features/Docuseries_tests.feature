@@ -1,6 +1,6 @@
 Feature: Funnel tests
 
-  @unbroken_live
+  @unbroken_live @all_docuseries
   Scenario Outline: Unbroken live funnel
     Given user register in "ad_live" Opt In page
     And user join Zonia
@@ -40,7 +40,7 @@ Feature: Funnel tests
       | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
 
-  @unbroken_evergreen
+  @unbroken_evergreen @all_docuseries
   Scenario Outline: Unbroken evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -80,7 +80,7 @@ Feature: Funnel tests
       | ad_ev              | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
 
-  @bb_live
+  @bb_live @all_docuseries
   Scenario Outline: BB Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -118,7 +118,7 @@ Feature: Funnel tests
       | bb_live_immunity | quarterly | silver           | no                   | 1          | upgrade            | 6          | no                 |
       | bb_live          | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
-  @bb_evergreen
+  @bb_evergreen @all_docuseries
   Scenario Outline: BB Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -158,7 +158,7 @@ Feature: Funnel tests
       | bb_ev          | quarterly | no               | buy                  | no         | no                 | no         | no                 |
 
 
-  @ageless_evergreen
+  @ageless_evergreen @all_docuseries
   Scenario Outline: Ageless Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
