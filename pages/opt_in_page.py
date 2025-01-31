@@ -21,6 +21,8 @@ class OptInPage(BasePage):
         time.sleep(1)
         if common_variables.funnel.startswith('bb_ev'):
             common_variables.funnel = 'bb_ev'
+        elif common_variables.funnel.startswith('ad_ev'):
+            common_variables.funnel = 'ad_ev'
         elif common_variables.funnel.startswith('bb_live'):
             common_variables.funnel = 'bb_live'
         elif common_variables.funnel.startswith('ageless'):
