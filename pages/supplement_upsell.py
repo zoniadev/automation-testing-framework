@@ -182,7 +182,7 @@ class SupplementUpsellPage(BasePage):
 
     def populate_shipping_address(self):
         if not common_variables.docuseries_address_already_filled:
-            expected_shipping_popup_title = "Please enter below your shipping address"
+            expected_shipping_popup_title = "Please enter below your shipping address where we can ship your supplement."
             print('>>>Entering shipping details...')
             time.sleep(3)
             modal_title = self.find_not_unique_element(SHIPPING_POPUP_TITLE)
