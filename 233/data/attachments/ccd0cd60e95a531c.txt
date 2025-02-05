@@ -1,0 +1,52 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationKiara" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Sullivan-1738764497@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_live" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationKiara" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Sullivan-1738764497@gmail.com" in "//input[@id='form-email']" field
+===> Entered "%l00Llt@" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/ad-booster-packages-annually"
+===> URL successfully changed to "https://staging.zonia.com/ad-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+Failed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Test failed on page: 'https://staging.zonia.com/ad-mini-masterclass-series-platinum-package?id=67a370e7fb115f6bfd059b31'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_live_funnel_--_@1.5__20250205-140844.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
