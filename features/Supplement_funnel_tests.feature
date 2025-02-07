@@ -1,6 +1,6 @@
 Feature: Funnel tests
 
-  @restore_sleep
+  @restore_sleep @all_supplements
   Scenario Outline: Restore Sleep Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
@@ -37,7 +37,7 @@ Feature: Funnel tests
       | 6       | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
-  @restore_sleep_b2g3
+  @restore_sleep_b2g3 @all_supplements
   Scenario Outline: Restore Sleep - Buy 2, Get 3 Free bottles Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Sleep B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
@@ -74,7 +74,7 @@ Feature: Funnel tests
       | 11      | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
-  @restore_gut
+  @restore_gut @all_supplements
   Scenario Outline: Restore Gut Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Gut" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
