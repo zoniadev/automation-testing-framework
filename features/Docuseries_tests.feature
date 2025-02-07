@@ -179,7 +179,7 @@ Feature: Funnel tests
       | bb_ev_energy   | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @ageless_evergreen @all_docuseries @WIP
+  @ageless_evergreen @all_docuseries
   Scenario Outline: Ageless Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia

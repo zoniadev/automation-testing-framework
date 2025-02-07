@@ -191,9 +191,6 @@ class SupplementUpsellPage(BasePage):
             assert actual_title.strip() == expected_shipping_popup_title, (f"Popup title mismatch! Expected:"
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
-            # time.sleep(3)
-            # page_content = self.context.page.content()
-            # assert 'Please entera below your shipping address' in page_content, f"Expected address popup title not found in the DOM!"
             self.verify_element_visible(SHIPPING_FULL_NAME_FIELD)
             self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
             self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
