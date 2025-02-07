@@ -23,5 +23,7 @@ class SignUpPage(BasePage):
         common_variables.supplement_funnel_password = RD.password(8)
         self.enter_text(SIGNUP_PASSWORD_FIELD, common_variables.supplement_funnel_password)
         self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
+        if cycle == 'lifetime':
+            cycle = 'monthly'
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
         print(f'>>> Successfully registered in Signup page')
