@@ -1,0 +1,27 @@
+Executing step: user select to buy "6" bottles in "Restore Sleep" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Buying 6 bottle...
+===> Clicked element "//*[@unique-id='add-order-6-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='upgrade-order-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "no" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Waiting for URL starting with "https://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
