@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        PYTHON_VERSION = "3.9"
+        PYTHON_VERSION = "3.11"  // Update the version to 3.11
         VIRTUAL_ENV_NAME = "venv"
     }
 
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh "python -m venv ${VIRTUAL_ENV_NAME}"
+                sh "python3 -m venv ${VIRTUAL_ENV_NAME}"  // Use "python3" to ensure it uses the correct version
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
