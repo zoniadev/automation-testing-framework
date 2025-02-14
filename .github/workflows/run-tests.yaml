@@ -97,7 +97,7 @@ jobs:
         if: always()
         with:
           gh_pages: gh-pages
-          allure_history: allure-history-manual
+          allure_history: allure-history
           allure_results: allure-results
 
       - name: Publish test report
@@ -106,7 +106,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: allure-history-manual
+          publish_dir: allure-history
 
       - name: Post the link to the report
         if: always()
@@ -116,4 +116,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/manual/${{ github.run_number }}
+          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
