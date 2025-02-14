@@ -9,20 +9,21 @@ pipeline {
     parameters {
         string(name: 'BRANCH_NAME', description: 'Enter the branch to test (leave blank for default)')
         string(name: 'BEHAVE_TAGS', description: 'Enter Behave tags to run (e.g., @smoke,@ui)')
-        booleanParam(name: 'HEADLESS', description: 'Run Playwright in headless mode', defaultValue: true) // Added headless option
+        booleanParam(name: 'HEADLESS', description: 'Run Playwright in headless mode', defaultValue: true)
     }
 
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: params.BRANCH_NAME ?: '*/main']], extensions: [], userRemoteConfigs: [[url: 'your_git_repository_url']]])
+                checkout([$class: 'GitSCM', branches: [[name: params.BRANCH_NAME ?: '*/main']], extensions: [], userRemoteConfigs: [[url: 'your_git_repository_url']]]) // Replace 'your_git_repository_url' with your actual repository URL
             }
         }
 
         stage('Set up Python Environment') {
             steps {
                 sh "python -m venv ${VIRTUAL_ENV_NAME}"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate"
+                sh ". ${VIRTUAL_ENV_NAME}/bin/activate" // Activate the virtual environment (Linux/macOS)
+                // For Windows: sh ".\\${VIRTUAL_ENV_NAME}\\Scripts\\activate"
                 sh "pip install -r requirements.txt"
                 sh "playwright install"
                 sh "pip install allure-behave"
@@ -31,7 +32,8 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate"
+                sh ". ${VIRTUAL_ENV_NAME}/bin/activate" // Activate the virtual environment (Linux/macOS)
+                // For Windows: sh ".\\${VIRTUAL_ENV_NAME}\\Scripts\\activate"
 
                 def behaveCommand = "behave --format allure_behave.listener --outdir allure-results"
 
@@ -40,10 +42,10 @@ pipeline {
                 }
 
                 if (params.HEADLESS) {
-                    behaveCommand += " -D headless=True" // Add headless option
+                    behaveCommand += " -D headless=True"
                 }
 
-                sh behaveCommand
+                sh behaveCommand // Execute the constructed command
             }
             post {
                 always {
