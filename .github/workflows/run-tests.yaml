@@ -72,10 +72,6 @@ jobs:
           echo "Running tests with tags: $TAGS and device: $DEVICE"
           behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
-      - name: Get Date
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
-
       - name: Send failure email
         if: always()
         run: |
@@ -86,7 +82,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/on-demand-history/${{ steps.date.outputs.date }}
+          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
 
       - name: Load test report history
         uses: actions/checkout@v3
@@ -96,24 +92,13 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Create timestamp directory structure
-        if: always()
-        run: |
-          mkdir -p allure-history/${{ steps.date.outputs.date }}
-
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
         if: always()
         with:
           gh_pages: gh-pages
-          allure_history: allure-history/${{ steps.date.outputs.date }}
+          allure_history: allure-history
           allure_results: allure-results
-
-      - name: Clean report directory
-        if: always()
-        run: |
-          # Remove any .git directories that might cause problems
-          find allure-history -name ".git" -type d -exec rm -rf {} + 2>/dev/null || true
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -122,35 +107,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          destination_dir: on-demand-history
-          force_orphan: false
-          keep_files: true
-
-      - name: Cleanup Old Reports
-        if: always()
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-          # Check out gh-pages branch to clean up old reports
-          git clone --single-branch --branch gh-pages https://${{ secrets.GITHUB_TOKEN }}@github.com/zoniadev/automation-testing-framework.git cleanup-repo
-          cd cleanup-repo
-          
-          # Check if on-demand-history directory exists
-          if [ -d "on-demand-history" ]; then
-            cd on-demand-history
-            
-            # Keep only the latest 10 reports for on-demand tests
-            ls -t | tail -n +11 | xargs -I {} rm -rf {} || true
-            
-            # Go back to the repo root
-            cd ..
-            
-            # Commit and push changes if needed
-            git add .
-            git commit -m "Cleanup old on-demand reports" || echo "No cleanup needed"
-            git push || echo "No changes to push"
-          fi
 
       - name: Post the link to the report
         if: always()
@@ -160,4 +116,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/on-demand-history/${{ steps.date.outputs.date }}
+          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
