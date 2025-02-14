@@ -43,7 +43,7 @@ pipeline {
                     behaveCommand += " -D headless=True" // Add headless option
                 }
 
-                sh behaveCommand // Execute the constructed command
+                sh behaveCommand
             }
             post {
                 always {
