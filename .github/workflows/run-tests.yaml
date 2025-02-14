@@ -72,6 +72,10 @@ jobs:
           echo "Running tests with tags: $TAGS and device: $DEVICE"
           behave $TAGS -D headless=True -D device=$DEVICE -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
+      - name: Get Date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d_%H-%M-%S')" >> $GITHUB_OUTPUT
+
       - name: Send failure email
         if: always()
         run: |
@@ -82,7 +86,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
+          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/on-demand-reports/${{ steps.date.outputs.date }}
 
       - name: Load test report history
         uses: actions/checkout@v3
@@ -91,6 +95,19 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
+
+      - name: Create on-demand history directory if it doesn't exist
+        if: always()
+        run: |
+          mkdir -p gh-pages/on-demand-history
+
+      - name: Copy existing on-demand history
+        if: always()
+        run: |
+          if [ -d "gh-pages/on-demand-history" ]; then
+            mkdir -p allure-history
+            cp -r gh-pages/on-demand-history/. allure-history/ || true
+          fi
 
       - name: Build test report
         uses: simple-elf/allure-report-action@v1.7
@@ -107,6 +124,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          destination_dir: on-demand-history
 
       - name: Post the link to the report
         if: always()
@@ -116,4 +134,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
+          target_url: https://zoniadev.github.io/automation-testing-framework/on-demand-history
