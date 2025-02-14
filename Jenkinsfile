@@ -35,7 +35,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    def behaveCommand = ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -f allure_behave.listener -o allure-results"
+                    def behaveCommand = ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -f allure_behave.formatter:AllureFormatter -o allure-results"
 
                     if (params.BEHAVE_TAGS) {
                         behaveCommand += " -t '${params.BEHAVE_TAGS}'"
