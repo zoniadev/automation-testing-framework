@@ -28,7 +28,6 @@ pipeline {
                 sh "python3 -m venv ${VIRTUAL_ENV_NAME}"
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
-                sh "npx playwright install-deps"
                 sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
             }
         }
