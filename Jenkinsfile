@@ -15,7 +15,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: params.BRANCH_NAME ?: '*/main']], extensions: [], userRemoteConfigs: [[url: 'your_git_repository_url']]])
+                checkout([$class: 'GitSCM', branches: [[name: params.BRANCH_NAME ?: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/zoniadev/automation-testing-framework.git']]])
             }
         }
 
