@@ -33,7 +33,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh 'venv/bin/activate && behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results'
+                    sh 'behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results'
                 }
             }
             post {
