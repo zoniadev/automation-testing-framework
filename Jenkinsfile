@@ -21,6 +21,8 @@ pipeline {
         stage('Set up Python Environment') {
             steps {
                 sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
                     pip install -r requirements.txt
                     playwright install
                     pip install allure-behave
@@ -31,7 +33,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh 'behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results'
+                    sh '/var/jenkins_home/workspace/Nightly_runs_Nikolay/venv/lib/python3.11/site-packages/ behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results'
                 }
             }
             post {
