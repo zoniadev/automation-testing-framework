@@ -20,10 +20,13 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh "python3 -m venv venv"
-                sh ". venv/bin/activate && pip install -r requirements.txt"
-                sh ". venv/bin/activate && playwright install"
-                sh ". venv/bin/activate && pip install allure-behave"
+                sh '''
+                    python3 -m venv venv
+                    . venv/bin/activate
+                    pip install -r requirements.txt
+                    playwright install
+                    pip install allure-behave
+                '''
             }
         }
 
