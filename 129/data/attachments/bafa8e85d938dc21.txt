@@ -1,0 +1,11 @@
+Executing step: user register in "bb_live_immunity" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationScott" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Robinson-1739599384@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bb-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_live_immunity" Opt In page
