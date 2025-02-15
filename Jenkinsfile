@@ -10,11 +10,8 @@ pipeline {
             steps {
                 checkout([$class: 'GitSCM',
                     branches: [[name: 'main']],
-                    userRemoteConfigs: [[
-                        url: 'https://github.com/zoniadev/automation-testing-framework.git',
-                        credentialsId: 'github-pat'
-                    ]],
-                    extensions: []
+                    extensions: [],
+                    userRemoteConfigs: [[url: 'https://github.com/zoniadev/automation-testing-framework.git']]
                 ])
             }
         }
