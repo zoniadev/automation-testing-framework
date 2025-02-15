@@ -35,7 +35,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 script {
-                    sh ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results"
+                    sh ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -t @quick -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results"
                 }
             }
             post {
