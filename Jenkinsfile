@@ -21,8 +21,6 @@ pipeline {
         stage('Set up Python Environment') {
             steps {
                 sh '''
-                    python3 -m venv venv
-                    . venv/bin/activate
                     pip install -r requirements.txt
                     playwright install
                     pip install allure-behave
