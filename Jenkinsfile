@@ -5,6 +5,11 @@ pipeline {
         cron('H 22 * * *')
     }
 
+    environment {
+        PYTHON_VERSION = "3.11"
+        VIRTUAL_ENV_NAME = "venv"
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -20,20 +25,17 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh '''
-                    python3 -m venv venv
-                    . venv/bin/activate
-                    pip install -r requirements.txt
-                    playwright install
-                    pip install allure-behave
-                '''
+                sh "python3 -m venv ${VIRTUAL_ENV_NAME}"
+                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
+                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
+                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
             }
         }
 
         stage('Run Tests') {
             steps {
                 script {
-                    sh '/var/jenkins_home/workspace/Nightly_runs_Nikolay/venv/lib/python3.11/site-packages/behave/__main__.py -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results'
+                    sh "${VIRTUAL_ENV_NAME}/bin/activate && behave -t @unbroken -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results"
                 }
             }
             post {
