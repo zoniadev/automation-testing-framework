@@ -47,7 +47,7 @@ pipeline {
                     python3 -m venv ${VIRTUAL_ENV_NAME}
 
                     # Activate venv and install all dependencies
-                    . ${VIRTUAL_ENV_NAME}/bin/activate && \
+                    . ${VIRTUAL_ENV_NAME}/bin/activate && playwright install \
                     pip install --upgrade pip && \
                     pip install -r requirements.txt && \
                     playwright install chromium && \
