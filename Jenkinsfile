@@ -25,10 +25,14 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh "python3 -m venv ${VIRTUAL_ENV_NAME}"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
+                sh '''
+                apt-get update && apt-get install -y python3 python3-venv python3-pip
+
+                python3 -m venv ${VIRTUAL_ENV_NAME}
+                . ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt
+                . ${VIRTUAL_ENV_NAME}/bin/activate && playwright install
+                . ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave
+                '''
             }
         }
 
