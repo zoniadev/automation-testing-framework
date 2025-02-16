@@ -25,29 +25,45 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh "python3 -m venv ${VIRTUAL_ENV_NAME}"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
+                script {
+                    sh """
+                    # Ensure virtual environment is created
+                    python3 -m venv ${VIRTUAL_ENV_NAME}
+
+                    # Activate virtual environment and install dependencies
+                    . ${VIRTUAL_ENV_NAME}/bin/activate && \
+                    pip install --upgrade pip && \
+                    pip install -r requirements.txt && \
+                    playwright install && \
+                    pip install allure-behave
+                    """
+                }
             }
         }
 
         stage('Run Tests') {
             steps {
                 script {
-                    def behaveCommand = ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -f allure_behave.formatter:AllureFormatter -o allure-results"
+                    def behaveCommand = """
+                    . ${VIRTUAL_ENV_NAME}/bin/activate && \
+                    behave -f allure_behave.formatter:AllureFormatter -o allure-results
+                    """
 
+                    // Add tags if provided
                     if (params.BEHAVE_TAGS) {
                         behaveCommand += " -t '${params.BEHAVE_TAGS}'"
                     }
 
+                    // Add headless mode option
                     if (params.HEADLESS) {
                         behaveCommand += " -D headless=True"
                     }
 
+                    // Execute the final command
                     sh behaveCommand
                 }
             }
+
             post {
                 always {
                     allure results: [[path: 'allure-results']]
