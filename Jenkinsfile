@@ -27,14 +27,30 @@ pipeline {
             steps {
                 script {
                     sh """
-                    # Ensure virtual environment is created
+                    # Ensure all necessary system libraries are installed
+                    apt-get update && apt-get install -y \
+                        libwoff1 \
+                        libevent-2.1-7 \
+                        libopus0 \
+                        libgstreamer-plugins-base1.0-0 \
+                        libgstreamer1.0-0 \
+                        libharfbuzz-icu0 \
+                        libhyphen0 \
+                        libmanette-0.2-0 \
+                        libflite1 \
+                        libgles2
+
+                    # Start xvfb (Display buffer for headless browser support)
+                    Xvfb :99 -screen 0 1280x1024x24 &
+
+                    # Create and activate virtual environment
                     python3 -m venv ${VIRTUAL_ENV_NAME}
 
-                    # Activate virtual environment and install dependencies
+                    # Activate venv and install all dependencies
                     . ${VIRTUAL_ENV_NAME}/bin/activate && \
                     pip install --upgrade pip && \
                     pip install -r requirements.txt && \
-                    playwright install && \
+                    playwright install chromium && \
                     pip install allure-behave
                     """
                 }
