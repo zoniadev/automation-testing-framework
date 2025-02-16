@@ -26,7 +26,7 @@ pipeline {
         stage('Set up Python Environment') {
             steps {
                 sh '''
-                apt-get update && apt-get install -y python3 python3-venv python3-pip
+                sudo apt-get update && apt-get install -y python3 python3-venv python3-pip
 
                 python3 -m venv ${VIRTUAL_ENV_NAME}
                 . ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt
