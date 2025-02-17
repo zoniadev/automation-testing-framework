@@ -22,8 +22,8 @@ pipeline {
             steps {
                 sh '''
                     # Install system dependencies
-                    sudo apt-get update
-                    sudo apt-get install -y \\
+                    apt-get update
+                    apt-get install -y \\
                         libwoff1 \\
                         libevent-2.1-7 \\
                         libopus0 \\
