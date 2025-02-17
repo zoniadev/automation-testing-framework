@@ -18,14 +18,17 @@ pipeline {
             }
         }
 
-        stage('Install Dependencies') {  // Corrected and simplified
+        stage('Setup Environment and Dependencies') {
             steps {
                 sh '''
-                    . /var/jenkins_home/.bashrc
-                    /var/jenkins_home/venv/bin/pip install --upgrade pip
-                    /var/jenkins_home/venv/bin/pip install -r requirements.txt
-                    /var/jenkins_home/venv/bin/playwright install chromium
-                    /var/jenkins_home/venv/bin/pip install behave allure-behave
+                    # Activate virtual environment
+                    . /var/jenkins_home/venv/bin/activate
+
+                    # Install dependencies
+                    pip install --upgrade pip
+                    pip install -r requirements.txt
+                    playwright install chromium
+                    pip install behave allure-behave
                 '''
             }
         }
@@ -34,7 +37,7 @@ pipeline {
             steps {
                 script {
                     def behaveCommand = """
-                        behave -f allure_behave.formatter:AllureFormatter -o allure-results
+                        -f allure_behave.formatter:AllureFormatter -o allure-results
                     """
 
                     if (params.BEHAVE_TAGS) {
@@ -46,9 +49,13 @@ pipeline {
                     }
 
                     sh """
-                        Xvfb :99 -screen 0 1280x1024x24 &  # Start xvfb
-                        export DISPLAY=:99 # Set display for playwright
-                        /var/jenkins_home/venv/bin/behave ${behaveCommand} # Use the venv behave
+                        # Activate same venv again for the new shell
+                        . /var/jenkins_home/venv/bin/activate
+
+                        # Start Xvfb and run tests
+                        Xvfb :99 -screen 0 1280x1024x24 &
+                        export DISPLAY=:99
+                        behave ${behaveCommand}
                     """
                 }
             }
