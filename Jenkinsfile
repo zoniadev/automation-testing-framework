@@ -21,29 +21,19 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 sh '''
-                    # Install system dependencies
-                    apt-get update
-                    apt-get install -y \\
-                        libwoff1 \\
-                        libevent-2.1-7 \\
-                        libopus0 \\
-                        libgstreamer-plugins-base1.0-0 \\
-                        libgstreamer1.0-0 \\
-                        libharfbuzz-icu0 \\
-                        libhyphen0 \\
-                        libmanette-0.2-0 \\
-                        libflite1 \\
-                        libgles2 \\
+                    # Check if venv exists, if not create it
+                    if [ ! -d "/var/jenkins_home/venv" ]; then
+                        python3 -m venv /var/jenkins_home/venv
+                    fi
 
-                    # Set up Python
-                    python -m venv venv
-                    source venv/bin/activate
+                    # Activate virtual environment
+                    . /var/jenkins_home/venv/bin/activate
 
                     # Install dependencies
+                    pip install --upgrade pip
                     pip install -r requirements.txt
-
-                    # Install Playwright browsers
                     playwright install chromium
+                    pip install behave allure-behave
                 '''
             }
         }
