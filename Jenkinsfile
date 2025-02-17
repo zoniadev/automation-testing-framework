@@ -21,6 +21,7 @@ pipeline {
         stage('Install Dependencies') {  // Corrected and simplified
             steps {
                 sh '''
+                    source /var/jenkins_home/.bashrc
                     /var/jenkins_home/venv/bin/pip install --upgrade pip
                     /var/jenkins_home/venv/bin/pip install -r requirements.txt
                     /var/jenkins_home/venv/bin/playwright install chromium
