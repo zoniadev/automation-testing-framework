@@ -21,6 +21,11 @@ pipeline {
         stage('Setup Environment and Dependencies') {
             steps {
                 sh '''
+                    # Check if venv exists, if not create it
+                    if [ ! -d "/var/jenkins_home/venv" ]; then
+                        python3 -m venv /var/jenkins_home/venv
+                    fi
+
                     # Activate virtual environment
                     . /var/jenkins_home/venv/bin/activate
 
@@ -49,10 +54,7 @@ pipeline {
                     }
 
                     sh """
-                        # Activate same venv again for the new shell
                         . /var/jenkins_home/venv/bin/activate
-
-                        # Start Xvfb and run tests
                         Xvfb :99 -screen 0 1280x1024x24 &
                         export DISPLAY=:99
                         behave ${behaveCommand}
