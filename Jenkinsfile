@@ -54,9 +54,17 @@ pipeline {
                     }
 
                     sh """
+                        # Activate virtual environment
                         . /var/jenkins_home/venv/bin/activate
+
+                        # Start Xvfb and wait for it to be ready
                         Xvfb :99 -screen 0 1280x1024x24 &
+                        sleep 2  # Give Xvfb time to start
+
+                        # Set display before running tests
                         export DISPLAY=:99
+
+                        # Run behave
                         behave ${behaveCommand}
                     """
                 }
