@@ -11,10 +11,13 @@ SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
 def before_all(context):
     print(f"Starting run on {context.config.userdata['device'].capitalize()}")
-    context.playwright = sync_playwright().start()
-    headless_str = context.config.userdata.get("headless")
-    headless = headless_str.lower() == "true"
-    context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
+    try:
+        context.playwright = sync_playwright().start()
+        headless_str = context.config.userdata.get("headless")
+        headless = headless_str.lower() == "true"
+        context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
+    except Exception as e:
+        print(f'Error crating Playwright: {e}')
 
     allure_env_path = os.path.join("allure-results", "environment.properties")
     with open(allure_env_path, "w") as env_file:
