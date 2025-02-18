@@ -5,11 +5,6 @@ pipeline {
         cron('H 22 * * *')
     }
 
-    environment {
-        PYTHON_VERSION = "3.11"
-        VIRTUAL_ENV_NAME = "venv"
-    }
-
     stages {
         stage('Checkout') {
             steps {
@@ -25,17 +20,36 @@ pipeline {
 
         stage('Set up Python Environment') {
             steps {
-                sh "python3 -m venv ${VIRTUAL_ENV_NAME}"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install -r requirements.txt"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && playwright install"
-                sh ". ${VIRTUAL_ENV_NAME}/bin/activate && pip install allure-behave"
+                script {
+                    // Use the pre-configured virtual environment
+                    sh '''
+                        . /venv/bin/activate
+
+                        # Install project-specific requirements
+                        pip install -r requirements.txt
+                    '''
+
+                    // Optional: Set up any environment variables needed for tests
+                    withEnv(['PYTHONPATH=${WORKSPACE}']) {
+                        sh 'echo "Python path set to: $PYTHONPATH"'
+                    }
             }
         }
 
         stage('Run Tests') {
             steps {
                 script {
-                    sh ". ${VIRTUAL_ENV_NAME}/bin/activate && behave -t @unbroken_live -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results"
+                    def behaveCommand = "behave -f allure_behave.formatter:AllureFormatter -o allure-results --tags=@quick -D headless=True"
+                    sh """
+                        # Activate virtual environment
+                        . /venv/bin/activate
+
+                        # Print the command for debugging
+                        echo "Executing command: ${behaveCommand}"
+
+                        # Run behave
+                        ${behaveCommand}
+                    """
                 }
             }
             post {
