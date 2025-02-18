@@ -20,21 +20,20 @@ pipeline {
 
         stage('Setup Environment and Dependencies') {
             steps {
-                sh '''
-                    # Check if venv exists, if not create it
-                    if [ ! -d "/var/jenkins_home/venv" ]; then
-                        python3 -m venv /var/jenkins_home/venv
-                    fi
+                script {
+                    // Use the pre-configured virtual environment
+                    sh '''
+                        source /venv/bin/activate
 
-                    # Activate virtual environment
-                    . /var/jenkins_home/venv/bin/activate
+                        # Install project-specific requirements
+                        pip install -r requirements.txt
+                    '''
 
-                    # Install dependencies
-                    pip install --upgrade pip
-                    pip install -r requirements.txt
-                    playwright install chromium
-                    pip install behave allure-behave
-                '''
+                    // Optional: Set up any environment variables needed for tests
+                    withEnv(['PYTHONPATH=${WORKSPACE}']) {
+                        sh 'echo "Python path set to: $PYTHONPATH"'
+                    }
+                }
             }
         }
 
@@ -55,7 +54,7 @@ pipeline {
 
                     sh """
                         # Activate virtual environment
-                        . /var/jenkins_home/venv/bin/activate
+                        source /venv/bin/activate
 
                         # Run behave
                         behave ${behaveCommand}
