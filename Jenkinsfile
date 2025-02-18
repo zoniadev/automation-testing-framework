@@ -33,6 +33,7 @@ pipeline {
                     withEnv(['PYTHONPATH=${WORKSPACE}']) {
                         sh 'echo "Python path set to: $PYTHONPATH"'
                     }
+                }  // <-- Here is the missing closing brace for the script block
             }
         }
 
