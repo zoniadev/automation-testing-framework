@@ -23,7 +23,7 @@ pipeline {
                 script {
                     // Use the pre-configured virtual environment
                     sh '''
-                        source /venv/bin/activate
+                        . /venv/bin/activate
 
                         # Install project-specific requirements
                         pip install -r requirements.txt
@@ -54,7 +54,7 @@ pipeline {
 
                     sh """
                         # Activate virtual environment
-                        source /venv/bin/activate
+                        . /venv/bin/activate
 
                         # Run behave
                         behave ${behaveCommand}
