@@ -1,0 +1,9 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+>>> Registering in Main Opt in page...
+Failed step: user register in "ad_live" Opt In page
+Test failed on page: 'https://staging.zonia.com/unbroken'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_live_nightly_--_@1.2__20250223-053124.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 503 ()
