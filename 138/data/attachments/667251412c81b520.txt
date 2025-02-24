@@ -1,0 +1,9 @@
+Executing step: user register in "bb_ev_detox" Opt In page
+Scenario will use "American Express" card "378282246310005"
+>>> Registering in Main Opt in page...
+Failed step: user register in "bb_ev_detox" Opt In page
+Test failed on page: 'https://staging.zonia.com/bbmb5e/bb-detox'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_nightly_--_@1.2__20250224-053611.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 503 ()
