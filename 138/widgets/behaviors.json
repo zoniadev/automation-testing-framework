@@ -1,1 +1,0 @@
-{"total":2,"items":[{"uid":"ad5602976d6dfebcdd8bb9c7d0f1e105","name":"Funnel tests","statistic":{"failed":23,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":23}},{"uid":"cb61b3acfe002222e9d23276d8083776","name":"Nightly tests","statistic":{"failed":16,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":16}}]}
