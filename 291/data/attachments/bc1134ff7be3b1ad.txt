@@ -1,0 +1,11 @@
+Executing step: user register in "lg_live_exercise" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationGeorge" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Hampton-1741261175@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/lg-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/lg-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "lg_live_exercise" Opt In page
