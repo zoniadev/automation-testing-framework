@@ -99,7 +99,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
-        if common_variables.funnel_prefix == 'ageless':
+        if common_variables.funnel_prefix == 'lg':
             upsell3 = 'restore_life'
         else:
             upsell3 = 'restore_detox'

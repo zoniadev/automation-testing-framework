@@ -200,30 +200,30 @@ Feature: Docuseries tests
 
     Examples:
       | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | ageless              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
-      | ageless_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
-      | ageless_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | ageless_exercise     | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
-      | ageless_brain        | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
-      | ageless_hormones     | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
-      | ageless_energy       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | ageless_inflammation | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
-      | ageless_bones        | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
-      | ageless              | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
-      | ageless_metabolism   | monthly   | no               | no                   | no         | no                 | no         | no                 |
-      | ageless_skin         | quarterly | silver           | no                   | no         | no                 | no         | upgrade            |
-      | ageless_exercise     | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
-      | ageless_brain        | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
-      | ageless_hormones     | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
-      | ageless_energy       | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
-      | ageless_inflammation | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
-      | ageless_bones        | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | ageless              | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
-      | ageless_metabolism   | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | ageless_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
+      | lg_ev              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
+      | lg_ev_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
+      | lg_ev_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
+      | lg_ev_exercise     | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
+      | lg_ev_brain        | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
+      | lg_ev_hormones     | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
+      | lg_ev_energy       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | lg_ev_inflammation | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
+      | lg_ev_bones        | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
+      | lg_ev              | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
+      | lg_ev_metabolism   | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | lg_ev_skin         | quarterly | silver           | no                   | no         | no                 | no         | upgrade            |
+      | lg_ev_exercise     | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
+      | lg_ev_brain        | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
+      | lg_ev_hormones     | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
+      | lg_ev_energy       | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
+      | lg_ev_inflammation | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
+      | lg_ev_bones        | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | lg_ev              | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
+      | lg_ev_metabolism   | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | lg_ev_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
-  @ageless_live @all_docuseries
+  @ageless_live @all_docuseries @WIP
   Scenario Outline: LG Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -244,26 +244,26 @@ Feature: Docuseries tests
 
     Examples:
       | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | ageless              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
-      | ageless_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
-      | ageless_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | ageless_exercise     | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
-      | ageless_brain        | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
-      | ageless_hormones     | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
-      | ageless_energy       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | ageless_inflammation | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
-      | ageless_bones        | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
-      | ageless              | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
-      | ageless_metabolism   | monthly   | no               | no                   | no         | no                 | no         | no                 |
-      | ageless_skin         | quarterly | silver           | no                   | no         | no                 | no         | upgrade            |
-      | ageless_exercise     | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
-      | ageless_brain        | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
-      | ageless_hormones     | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
-      | ageless_energy       | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
-      | ageless_inflammation | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
-      | ageless_bones        | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | ageless              | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
-      | ageless_metabolism   | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | ageless_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
+      | lg_live              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
+      | lg_live_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
+      | lg_live_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
+      | lg_live_exercise     | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
+      | lg_live_brain        | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
+      | lg_live_hormones     | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
+      | lg_live_energy       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | lg_live_inflammation | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
+      | lg_live_bones        | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
+      | lg_live              | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
+      | lg_live_metabolism   | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | lg_live_skin         | quarterly | silver           | no                   | no         | no                 | no         | upgrade            |
+      | lg_live_exercise     | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
+      | lg_live_brain        | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
+      | lg_live_hormones     | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
+      | lg_live_energy       | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
+      | lg_live_inflammation | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
+      | lg_live_bones        | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | lg_live              | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
+      | lg_live_metabolism   | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | lg_live_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
