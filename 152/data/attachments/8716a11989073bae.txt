@@ -1,0 +1,13 @@
+Executing step: user register in "bb_live_energy" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationDaniel" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Wilson-1741584191@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bb-join-zonia"
+Failed step: user register in "bb_live_energy" Opt In page
+Test failed on page: 'https://staging.zonia.com/bb-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Live_funnel_--_@1.14__20250310-052336.png
+Captured the following browser console errors:
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED
