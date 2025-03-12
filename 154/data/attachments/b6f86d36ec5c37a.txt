@@ -1,9 +1,0 @@
-Executing step: user register in "ageless" Opt In page
-Scenario will use "Diners Club" card "36259600000004"
->>> Registering in Main Opt in page...
-===> Entered "AutomationLaura" in "//input[@id='first-name']" field
-===> Entered "zoniat-v2Oneill-1741760215@gmail.com" in "//input[@id='email']" field
-Failed step: user register in "ageless" Opt In page
-Test failed on page: 'https://staging.zonia.com/lgmb5e/ageless'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Evergreen_nightly_--_@1.1__20250312-061727.png
