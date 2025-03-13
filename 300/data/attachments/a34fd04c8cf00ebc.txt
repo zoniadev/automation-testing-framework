@@ -1,0 +1,11 @@
+Executing step: user register in "bb_live" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationGregory" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Wise-1741878147@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/bb-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_live" Opt In page
