@@ -1,3 +1,0 @@
-Executing step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "https://staging.zonia.com/ad-booster-packages-monthly" page
-===> 11 visible elements with "//a[@class='arrow']" found from total 11.
-Completed step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "https://staging.zonia.com/ad-booster-packages-monthly" page
