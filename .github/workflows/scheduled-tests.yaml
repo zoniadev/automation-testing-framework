@@ -3,7 +3,7 @@ name: Scheduled Test Run
 on:
   schedule:
     # Midnight EST -> 5:00 AM UTC
-    - cron: '0 5 * * *'
+    - cron: '0 21 * * *'
 
 jobs:
   test:
