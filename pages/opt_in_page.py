@@ -14,7 +14,11 @@ class OptInPage(BasePage):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
-        self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
+        print(f'Funnel: {common_variables.funnel_prefix}')
+        if common_variables.funnel_prefix == 'lg':
+            self.enter_text(OPTIN_NAME_FIELD_AD_LIVE, common_variables.supplement_funnel_name)
+        else:
+            self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(OPTIN_EMAIL_FIELD, common_variables.supplement_funnel_email)
         time.sleep(2)
         self.click(REGISTER_BUTTON)

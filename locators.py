@@ -61,6 +61,7 @@ SKIP_LINKING_BUTTON = "//button[@class='skip-login']"
 
 #OptInPageLocators:
 OPTIN_NAME_FIELD = "//input[@id='first-name']"
+OPTIN_NAME_FIELD_AD_LIVE = "//input[@id='name']"
 OPTIN_EMAIL_FIELD = "//input[@id='email']"
 PHONE_CHECKBOX = "//input[@name='hasPhone']"
 OPTIN_PHONE_FIELD = "//input[@id='phone']"
