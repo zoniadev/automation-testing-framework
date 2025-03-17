@@ -1,4 +1,4 @@
-Feature: Funnel tests
+Feature: Supplement tests
 
   @restore_sleep @all_supplements
   Scenario Outline: Restore Sleep Supplement funnel
