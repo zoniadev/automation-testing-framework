@@ -1,0 +1,21 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Buying 1 bottle...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+Failed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-sleep-signup-1-bottle'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.1__20250317-134319.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN

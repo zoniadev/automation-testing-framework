@@ -1,0 +1,11 @@
+Executing step: user register in "ageless_bones" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationShane" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Taylor-1742218461@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ageless_bones" Opt In page

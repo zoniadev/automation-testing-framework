@@ -1,0 +1,38 @@
+Executing step: user register in "ageless_brain" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationSherry" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Brown-1742216977@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ageless_brain" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-signup"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationSherry" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Brown-1742216977@gmail.com" in "//input[@id='form-email']" field
+===> Entered "#&68IdGx" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/lg-booster-packages-annually"
+Failed step: user sign up for "annually" plan
+Test failed on page: 'https://staging.zonia.com/lgmb5e/lg-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Evergreen_funnel_--_@1.5__20250317-131023.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 502 ()
