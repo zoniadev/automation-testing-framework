@@ -14,19 +14,24 @@ class OptInPage(BasePage):
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
-        self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
+        if common_variables.funnel == 'lg_live':
+            self.enter_text(OPTIN_NAME_FIELD_AD_LIVE, common_variables.supplement_funnel_name)
+        else:
+            self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
         self.enter_text(OPTIN_EMAIL_FIELD, common_variables.supplement_funnel_email)
         time.sleep(2)
         self.click(REGISTER_BUTTON)
         time.sleep(1)
         if common_variables.funnel.startswith('bb_ev'):
             common_variables.funnel = 'bb_ev'
-        elif common_variables.funnel.startswith('ad_ev'):
-            common_variables.funnel = 'ad_ev'
         elif common_variables.funnel.startswith('bb_live'):
             common_variables.funnel = 'bb_live'
-        elif common_variables.funnel.startswith('ageless'):
-            common_variables.funnel = 'ageless'
+        elif common_variables.funnel.startswith('ad_ev'):
+            common_variables.funnel = 'ad_ev'
+        elif common_variables.funnel.startswith('lg_ev'):
+            common_variables.funnel = 'lg_ev'
+        elif common_variables.funnel.startswith('lg_live'):
+            common_variables.funnel = 'lg_live'
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
         self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)
         print(f'>>> Successfully registered in Main Opt in page')
