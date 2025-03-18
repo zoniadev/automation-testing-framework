@@ -1,0 +1,6 @@
+Executing step: user register in "ageless" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Failed step: user register in "ageless" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Evergreen_nightly_--_@1.1__20250318-125418.png
