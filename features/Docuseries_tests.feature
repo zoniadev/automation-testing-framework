@@ -244,7 +244,7 @@ Feature: Docuseries tests
 
     Examples:
       | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-#      | lg_live              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
+      | lg_live              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
       | lg_live_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
       | lg_live_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
       | lg_live_exercise     | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
