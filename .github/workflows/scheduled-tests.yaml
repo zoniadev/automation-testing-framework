@@ -45,7 +45,7 @@ jobs:
 
       - name: Run tests
         run: |
-          behave --tags @bb_live,@nightly -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          behave --tags @unbroken_evergreen,@nightly -D headless=True -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()
