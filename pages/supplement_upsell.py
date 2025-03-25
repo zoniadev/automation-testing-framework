@@ -63,7 +63,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_seven_day_membership(self, decision, plan):
         self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=30000)
-        time.sleep(1)
+        time.sleep(5)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)
             if plan == 'no':
@@ -99,7 +99,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
-        if common_variables.funnel_prefix == 'ageless':
+        if common_variables.funnel_prefix == 'lg':
             upsell3 = 'restore_life'
         else:
             upsell3 = 'restore_detox'
@@ -119,13 +119,13 @@ class SupplementUpsellPage(BasePage):
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
-            if common_variables.funnel_prefix == 'ageless':
+            if common_variables.funnel_prefix == 'lg':
                 next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'
                 next_page_navigation = getattr(common_variables, page_url)
         elif upsell_page == 'Restore Life':
-            if common_variables.funnel_prefix == 'ageless':
+            if common_variables.funnel_prefix == 'lg':
                 page_url = f'{common_variables.funnel_prefix}_restore_detox_url'
                 next_page_navigation = getattr(common_variables, page_url)
             else:
