@@ -1,7 +1,0 @@
-Executing step: user register in "lg_live" Opt In page
-Scenario will use "American Express" card "378282246310005"
->>> Registering in Main Opt in page...
-Failed step: user register in "lg_live" Opt In page
-Test failed on page: 'https://staging.zonia.com/ageless/'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Live_funnel_--_@1.10__20250306-115039.png
