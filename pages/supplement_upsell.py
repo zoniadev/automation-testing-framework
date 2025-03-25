@@ -101,6 +101,8 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for masterclass...')
         if common_variables.funnel_prefix == 'lg':
             upsell3 = 'restore_life'
+        elif common_variables.funnel_prefix == 'km':
+            upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
         if common_variables.docuseries_address_will_appear:
@@ -121,6 +123,8 @@ class SupplementUpsellPage(BasePage):
         if upsell_page == 'Restore Detox':
             if common_variables.funnel_prefix == 'lg':
                 next_page_navigation = common_variables.welcome_page_url
+            elif common_variables.funnel_prefix == 'km':
+                next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'
                 next_page_navigation = getattr(common_variables, page_url)
@@ -130,6 +134,9 @@ class SupplementUpsellPage(BasePage):
                 next_page_navigation = getattr(common_variables, page_url)
             else:
                 next_page_navigation = common_variables.welcome_page_url
+        elif upsell_page == 'Restore Sleep':
+            page_url = f'{common_variables.funnel_prefix}_restore_detox_url'
+            next_page_navigation = getattr(common_variables, page_url)
         print(f'>>> Selecting "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}...')
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
@@ -209,7 +216,7 @@ class SupplementUpsellPage(BasePage):
         try:
             self.wait_for_navigation(next_page, timeout=5000)
         except Exception as E:
-            print(f'===> Issue with clicking button "{button}", retrying...')
+            print(f'===> Issue with clicking button "{button}", page was not changed to {next_page}, retrying...')
             print(f'Error: {E}')
             self.click(button)
             time.sleep(0.5)

@@ -199,7 +199,7 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | lg_ev              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
       | lg_ev_metabolism   | annually  | no               | no                   | no         | upgrade            | 3          | best_value         |
       | lg_ev_skin         | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
@@ -223,7 +223,7 @@ Feature: Docuseries tests
       | lg_ev_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
-  @ageless_live @all_docuseries @WIP
+  @ageless_live @all_docuseries
   Scenario Outline: LG Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -287,29 +287,29 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | opt_in_page      | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | bb_live          | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-      | bb_live_detox    | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-      | bb_live_gut      | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | bb_live_memory   | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-      | bb_live_mood     | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | bb_live_sleep    | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-      | bb_live_energy   | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
-      | bb_live_immunity | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-      | bb_live_detox    | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
-      | bb_live_gut      | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-      | bb_live_memory   | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-      | bb_live_mood     | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-      | bb_live_sleep    | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-      | bb_live_energy   | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-      | bb_live_immunity | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-      | bb_live          | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-      | bb_live_detox    | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
-      | bb_live_gut      | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-      | bb_live_memory   | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-      | bb_live_mood     | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | bb_live_sleep    | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-      | bb_live_energy   | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-      | bb_live_immunity | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+      | opt_in_page     | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | km_live         | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | km_live_toxins  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | km_live_sleep   | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | km_live_gut     | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | km_live_adhd    | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | km_live_mystery | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | km_live_mood    | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | km_live_autism  | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | km_live         | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
+      | km_live_toxins  | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | km_live_sleep   | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | km_live_gut     | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+      | km_live_sleep   | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
+      | km_live_adhd    | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
+      | km_live_mystery | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
+      | km_live_mood    | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
+      | km_live_autism  | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
+      | km_live         | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
+      | km_live_toxins  | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
+      | km_live_sleep   | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | km_live_gut     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
+      | km_live_adhd    | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
+      | km_live_mystery | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
