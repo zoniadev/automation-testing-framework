@@ -171,6 +171,8 @@ class SupplementUpsellPage(BasePage):
             if amount != 'no':
                 self.click(DOWNSELL_NO_THANKS_BUTTON)
                 print('===> Not upgrading...')
+            if common_variables.funnel_prefix == 'km' and upsell_page == 'Restore Sleep':
+                self.click(DOWNSELL_NO_THANKS_BUTTON)
         else:
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
