@@ -87,6 +87,7 @@ class SupplementUpsellPage(BasePage):
             self.click(selection)
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
         else:
             next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url')
             time.sleep(0.5)
@@ -156,6 +157,7 @@ class SupplementUpsellPage(BasePage):
             self.retry_clicking_button(button_locator, next_page)
             print(f'===> Successfully bought {amount} bottle/s')
             common_variables.docuseries_address_will_appear = True
+            print('Address popup should appear next page')
         time.sleep(0.5)
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
@@ -165,14 +167,13 @@ class SupplementUpsellPage(BasePage):
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
             common_variables.docuseries_address_will_appear = True
+            print('Address popup should appear next page')
         elif upsell_downsell == 'no':
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
             if amount != 'no':
                 self.click(DOWNSELL_NO_THANKS_BUTTON)
                 print('===> Not upgrading...')
-            if common_variables.funnel_prefix == 'km' and upsell_page == 'Restore Sleep':
-                self.click(DOWNSELL_NO_THANKS_BUTTON)
         else:
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
