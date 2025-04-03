@@ -87,6 +87,7 @@ class SupplementUpsellPage(BasePage):
             self.click(selection)
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
         else:
             next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url')
             time.sleep(0.5)
@@ -101,6 +102,8 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for masterclass...')
         if common_variables.funnel_prefix == 'lg':
             upsell3 = 'restore_life'
+        elif common_variables.funnel_prefix == 'km':
+            upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
         if common_variables.docuseries_address_will_appear:
@@ -121,6 +124,8 @@ class SupplementUpsellPage(BasePage):
         if upsell_page == 'Restore Detox':
             if common_variables.funnel_prefix == 'lg':
                 next_page_navigation = common_variables.welcome_page_url
+            elif common_variables.funnel_prefix == 'km':
+                next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'
                 next_page_navigation = getattr(common_variables, page_url)
@@ -130,6 +135,9 @@ class SupplementUpsellPage(BasePage):
                 next_page_navigation = getattr(common_variables, page_url)
             else:
                 next_page_navigation = common_variables.welcome_page_url
+        elif upsell_page == 'Restore Sleep':
+            page_url = f'{common_variables.funnel_prefix}_restore_detox_url'
+            next_page_navigation = getattr(common_variables, page_url)
         print(f'>>> Selecting "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}...')
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
@@ -149,6 +157,7 @@ class SupplementUpsellPage(BasePage):
             self.retry_clicking_button(button_locator, next_page)
             print(f'===> Successfully bought {amount} bottle/s')
             common_variables.docuseries_address_will_appear = True
+            print('Address popup should appear next page')
         time.sleep(0.5)
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
@@ -158,6 +167,7 @@ class SupplementUpsellPage(BasePage):
             self.click(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
             common_variables.docuseries_address_will_appear = True
+            print('Address popup should appear next page')
         elif upsell_downsell == 'no':
             self.click(NO_THANKS_BUTTON)
             time.sleep(1)
@@ -184,7 +194,7 @@ class SupplementUpsellPage(BasePage):
         if not common_variables.docuseries_address_already_filled:
             expected_shipping_popup_title = "Please enter below your shipping address where we can ship your supplement."
             print('>>>Entering shipping details...')
-            time.sleep(3)
+            time.sleep(10)
             modal_title = self.find_not_unique_element(SHIPPING_POPUP_TITLE)
             actual_title = modal_title.text_content()
             print(f'Actual title: {actual_title}')
@@ -209,7 +219,7 @@ class SupplementUpsellPage(BasePage):
         try:
             self.wait_for_navigation(next_page, timeout=5000)
         except Exception as E:
-            print(f'===> Issue with clicking button "{button}", retrying...')
+            print(f'===> Issue with clicking button "{button}", page was not changed to {next_page}, retrying...')
             print(f'Error: {E}')
             self.click(button)
             time.sleep(0.5)
