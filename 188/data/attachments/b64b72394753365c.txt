@@ -1,0 +1,6 @@
+Executing step: user register in "lg_live" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "lg_live" Opt In page
+Test failed on page: 'chrome-error://chromewebdata/'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Live_nightly_--_@1.1__20250414-224031.png

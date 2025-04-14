@@ -1,0 +1,6 @@
+Executing step: user register in "bb_live" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Failed step: user register in "bb_live" Opt In page
+Test failed on page: 'chrome-error://chromewebdata/'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Live_nightly_--_@1.1__20250414-222858.png

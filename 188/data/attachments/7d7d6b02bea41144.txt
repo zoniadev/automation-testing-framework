@@ -1,0 +1,29 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep B2G3" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Buying 1 bottle...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles-2"
+Failed step: user select to buy "1" bottles in "Restore Sleep B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-sleep-signup-1-bottle-2'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_-_Buy_2,_Get_3_Free_bottles_Supplement_nightly_--_@1.1__20250414-224329.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 401 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 502 ()
