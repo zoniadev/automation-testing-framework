@@ -26,7 +26,7 @@ EMAIL_FIELD = "//input[@id='form-email']"
 PHONE_FIELD = "//input[@id='form-phone']"
 ADDRESS_FIELD = "//input[@id='form-address']"
 CITY_FIELD = "//input[@id='form-city']"
-COUNTRY_FIELD = "//input[@id='form-country']"
+COUNTRY_FIELD = "//*[@id='form-country']"
 STATE_FIELD = "//input[@id='form-state']"
 ZIP_FIELD = "//input[@id='form-zip']"
 

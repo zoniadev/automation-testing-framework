@@ -267,7 +267,7 @@ Feature: Docuseries tests
       | lg_live_skin         | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
-  @km_live @all_docuseries @WIP
+  @km_live @all_docuseries
   Scenario Outline: KM Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
