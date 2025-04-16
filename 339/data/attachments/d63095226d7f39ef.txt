@@ -1,0 +1,11 @@
+Executing step: user register in "km_live_toxins" Opt In page
+Scenario will use "American Express" card "378282246310005"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationHeather" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Mcfarland-1744797440@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/km-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "km_live_toxins" Opt In page
