@@ -1,0 +1,13 @@
+Executing step: user register in "lg_ev" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJacqueline" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Harris-1745363508@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+Failed step: user register in "lg_ev" Opt In page
+Test failed on page: 'https://staging.zonia.com/lgmb5e/ageless'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Evergreen_nightly_--_@1.1__20250422-231253.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 504 ()
