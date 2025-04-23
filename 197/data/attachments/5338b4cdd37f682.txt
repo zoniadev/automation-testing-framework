@@ -1,0 +1,17 @@
+Executing step: user register in "ad_ev" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMatthew" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Rogers-1745443074@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-join-zonia"
+Failed step: user register in "ad_ev" Opt In page
+Test failed on page: 'https://staging.zonia.com/admb5e/unbroken'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.1__20250423-211819.png
+Captured the following browser console errors:
+--- ReferenceError: funnelConfig is not defined
+    at HTMLButtonElement.<anonymous> (https://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:141:31)
+    at HTMLButtonElement.dispatch (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:12444)
+    at r.handle (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:9173)
+    at HTMLButtonElement.sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450) moengage err
