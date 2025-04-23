@@ -150,7 +150,7 @@ restore_gut_fourth_upsell_url = 'https://staging.zonia.com/rg-trial'
 restore_vision_start_url = 'https://staging.zonia.com/restore-vision-special'
 restore_vision_first_upsell_url = 'https://staging.zonia.com/restore-vision-6-more-bottles'
 restore_vision_second_upsell_url = 'https://staging.zonia.com/rv-restore-sleep-6-discounted-bottles'
-restore_vision_third_upsell_url = 'https://staging.zonia.com/rv-restore-retox-6-discounted-bottles'
+restore_vision_third_upsell_url = 'https://staging.zonia.com/rv-restore-detox-6-discounted-bottles'
 restore_vision_fourth_upsell_url = 'https://staging.zonia.com/rv-trial'
 
 supplement_funnel_name = ''
