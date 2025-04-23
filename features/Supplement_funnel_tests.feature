@@ -113,12 +113,12 @@ Feature: Supplement tests
   @restore_vision @all_supplements @WIP
   Scenario Outline: Restore Vision Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Vision" Supplements page
-    When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
       | upgrade      | last_chance      |
-      | <sl_upgrade> | <sl_last_chance> |
+      | <vs_upgrade> | <vs_last_chance> |
     And user makes following decision in "second" supplement "Restore Sleep" Upsell page
       | upgrade      | last_chance      |
-      | <lf_upgrade> | <lf_last_chance> |
+      | <sl_upgrade> | <sl_last_chance> |
     And user makes following decision in "third" supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
       | <dt_upgrade> | <dt_last_chance> |
@@ -128,13 +128,13 @@ Feature: Supplement tests
     Then user complete registration
 
     Examples:
-      | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-#      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
+      | bottles | vs_upgrade | vs_last_chance | sl_upgrade | sl_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
+      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
 #      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 #      | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
 #      | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
 #      | 1       | no         | best_value     | yes        | no             | no         | best_value     | decline       | no        |
-      | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
+#      | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
 #      | 3       | no         | most_popular   | no         | most_popular   | yes        | no             | accept        | quarterly |
 #      | 3       | no         | best_value     | yes        | no             | yes        | no             | accept        | annually  |
 #      | 3       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | monthly   |
