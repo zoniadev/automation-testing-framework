@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"783ebebe02d15a29a47f9a7190a38206","name":"Docuseries tests","statistic":{"failed":22,"broken":0,"skipped":0,"passed":22,"unknown":0,"total":44}},{"uid":"cb61b3acfe002222e9d23276d8083776","name":"Nightly tests","statistic":{"failed":4,"broken":0,"skipped":0,"passed":14,"unknown":0,"total":18}}]}
