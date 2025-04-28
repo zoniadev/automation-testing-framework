@@ -146,6 +146,6 @@ def after_all(context):
     print("Cleaning up the DB from old Automation users...")
     try:
         client = connect_to_mongodb()
-        count_automation_users_older_than_one_month(client)
+        delete_automation_users(client)
     except Exception as e:
         print(f"!!! Automation users cleanup failed: {e}")
