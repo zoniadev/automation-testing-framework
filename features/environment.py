@@ -5,6 +5,7 @@ import allure
 from playwright.sync_api import sync_playwright
 import common_variables
 from common_functions import cc_random_card as CC
+from common_functions.mongo_db import *
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
@@ -142,3 +143,9 @@ def after_all(context):
     print("Run completed")
     context.browser.close()
     context.playwright.stop()
+    print("Cleaning up the DB from old Automation users...")
+    try:
+        client = connect_to_mongodb()
+        delete_automation_users(client)
+    except Exception as e:
+        print(f"!!! Automation users cleanup failed: {e}")
