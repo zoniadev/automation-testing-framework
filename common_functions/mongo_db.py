@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 from pymongo.errors import PyMongoError
-from datetime import datetime, timedelta
+import datetime
 import os
 from urllib.parse import quote_plus
 
@@ -33,7 +33,7 @@ def count_automation_users_older_than_one_month(client):
     db = client[db_name]
     collection = db[collection_name]
 
-    cutoff_date = datetime.utcnow() - timedelta(days=30)
+    cutoff_date = datetime.datetime.utcnow() - datetime.timedelta(days=30)
 
     query = {
         "fullname": {"$regex": "^Automation", "$options": "i"},
@@ -52,7 +52,7 @@ def delete_automation_users(client, days_old=30):
         db = client[db_name]
         collection = db[collection_name]
 
-        cutoff_date = datetime.utcnow() - timedelta(days=days_old)
+        cutoff_date = datetime.datetime.utcnow() - datetime.timedelta(days=days_old)
 
         query = {
             "fullname": {"$regex": "^Automation", "$options": "i"},
