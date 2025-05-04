@@ -1,0 +1,75 @@
+Executing step: user register in "ad_ev_mindset" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationBreanna" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Alvarez-1746343372@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/admb5e/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_ev_mindset" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/admb5e/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationBreanna" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Alvarez-1746343372@gmail.com" in "//input[@id='form-email']" field
+===> Entered "$9(WPk2s" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/ad-booster-packages-annually"
+===> URL successfully changed to "https://staging.zonia.com/ad-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "https://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationBreanna" in "//input[@id='shippingName']" field
+===> Entered "77292441620" in "//input[@id='shippingPhone']" field
+===> Entered "310 Derek Groves" in "//input[@id='shippingAddress']" field
+===> Entered "East Drew" in "//input[@id='city']" field
+===> Entered "Massachusetts" in "//input[@id='state']" field
+===> Entered "85374" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Clicked element "//*[@unique-id='skip-masterclass-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/ad-restore-detox-special"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "1" bottles and "most_popular" in upsell/downsell for Restore Detox...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/ad-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/ad-rd-6-more-bottles"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "https://staging.zonia.com/ad-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/ad-restore-life-special"
+>>> Successfully selected "1" bottles and "most_popular" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
