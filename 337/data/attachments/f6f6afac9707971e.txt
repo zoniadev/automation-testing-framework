@@ -1,6 +1,0 @@
-Executing step: user register in "lg_live" Opt In page
-Scenario will use "Diners Club" card "36259600000004"
-Failed step: user register in "lg_live" Opt In page
-Test failed on page: 'chrome-error://chromewebdata/'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Live_nightly_--_@1.1__20250415-130218.png
