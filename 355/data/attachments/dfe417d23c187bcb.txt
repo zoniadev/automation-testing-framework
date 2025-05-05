@@ -1,0 +1,37 @@
+Executing step: user register in "km_live_mystery" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationRobert" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Smith-1746434196@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/km-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "km_live_mystery" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-signup"
+===> URL successfully changed to "https://staging.zonia.com/km-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+===> Clicked element "//input[@unique-id='lifetime-1']"
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> Entered "AutomationRobert" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Smith-1746434196@gmail.com" in "//input[@id='form-email']" field
+===> Entered "j&^oI3Xo" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/km-booster-packages-lifetime"
+Failed step: user sign up for "lifetime" plan
+Test failed on page: 'https://staging.zonia.com/km-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_funnel_--_@1.6__20250505-083723.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 500 ()
