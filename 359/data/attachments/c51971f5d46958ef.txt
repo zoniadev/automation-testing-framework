@@ -1,0 +1,17 @@
+Executing step: user register in "km_live_toxins" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationDean" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Berg-1747128270@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/km-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "km_live_toxins" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+Failed step: user join Zonia
+Test failed on page: 'https://staging.zonia.com/km-join-zonia'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_funnel_--_@1.19__20250513-092508.png
