@@ -1,0 +1,11 @@
+Executing step: user register in "km_live_sleep" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJerome" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Parker-1748121672@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+Failed step: user register in "km_live_sleep" Opt In page
+Test failed on page: 'https://staging.zonia.com/km-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_funnel_--_@1.11__20250524-212137.png

@@ -1,0 +1,11 @@
+Executing step: user register in "km_live_toxins" Opt In page
+Scenario will use "American Express" card "378282246310005"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationRobert" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2King-1748121644@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+Failed step: user register in "km_live_toxins" Opt In page
+Test failed on page: 'https://staging.zonia.com/km-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_funnel_--_@1.10__20250524-212108.png
