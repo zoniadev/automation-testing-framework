@@ -1,0 +1,11 @@
+Executing step: user register in "km_live_mood" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationRebecca" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Mendez-1748294392@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+Failed step: user register in "km_live_mood" Opt In page
+Test failed on page: 'https://staging.zonia.com/km-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_funnel_--_@1.7__20250526-212017.png
