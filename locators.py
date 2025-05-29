@@ -92,3 +92,6 @@ SHIPPING_ZIP_FIELD = "//input[@id='postcode']"
 SHIPPING_COUNTRY_FIELD = "//input[@id='country']"
 SHIPPING_SUBMIT_BUTTON = "//button[@id='save-shipping-address']"
 
+#CookieBannerPopupLocators:
+ACCEPT_COOKIES_BUTTON = "//div[@id='cookiebanner']//button[text()='Accept']"
+

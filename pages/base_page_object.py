@@ -199,3 +199,17 @@ class BasePage(object):
         if errors:
             error_count = len(errors)
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
+
+    def handle_cookie_banner(self):
+        button = self.find_element(ACCEPT_COOKIES_BUTTON)
+        if button.is_visible():
+            print("Cookie banner detected. Attempting to accept...")
+            try:
+                self.click(ACCEPT_COOKIES_BUTTON)
+                print("Cookie banner accepted.")
+            except TimeoutError:
+                print("Accept button not found within the timeout.")
+            except Exception as e:
+                print(f"An error occurred while handling the cookie banner: {e}")
+        else:
+            print("Cookie banner not detected.")
