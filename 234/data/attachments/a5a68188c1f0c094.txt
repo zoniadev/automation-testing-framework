@@ -1,0 +1,8 @@
+Executing step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+Failed step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-vision-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_Supplement_funnel_--_@1.12__20250530-225917.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 ()
