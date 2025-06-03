@@ -1,0 +1,76 @@
+Executing step: user register in "tf_ev_meals" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationElizabeth" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Johnson-1748932954@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "tf_ev_meals" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationElizabeth" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Johnson-1748932954@gmail.com" in "//input[@id='form-email']" field
+===> Entered "N*^3rKLn" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/tf-booster-packages-annually"
+===> URL successfully changed to "https://staging.zonia.com/tf-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/tf-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/tf-mini-masterclass-series"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-detox-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "6" bottles and "no" in upsell/downsell for Restore Detox...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-6-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/tf-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/tf-rd-6-more-bottles"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationElizabeth" in "//input[@id='shippingName']" field
+===> Entered "77265957081" in "//input[@id='shippingPhone']" field
+===> Entered "514 Stacy Court" in "//input[@id='shippingAddress']" field
+===> Entered "Millsshire" in "//input[@id='city']" field
+===> Entered "Rhode Island" in "//input[@id='state']" field
+===> Entered "53432" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Clicked element "//*[@data-id='downsell-no-thanks']"
+===> Not upgrading...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-life-special"
+>>> Successfully selected "6" bottles and "no" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
