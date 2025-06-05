@@ -359,7 +359,7 @@ Feature: Docuseries tests
 #      | is_live_obesity      | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @is_evergreen @all_docuseries @WIP
+  @is_evergreen @all_docuseries
   Scenario Outline: IS Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -380,32 +380,32 @@ Feature: Docuseries tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-#      | is_ev              | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | is_ev              | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
       | is_ev_brain        | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-#      | is_ev_cancer       | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | is_ev_autoimmunity | quarterly  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-#      | is_ev_gut          | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-#      | is_ev_heart        | quarterly  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-#      | is_ev_obesity      | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
-#      | is_ev_trauma       | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-#      | is_ev              | quarterly | silver         | no                   | 6          | best_value         | 1          | best_value         |
-#      | is_ev_brain        | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-#      | is_ev_cancer       | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-#      | is_ev_autoimmunity | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-#      | is_ev_gut          | annually  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-#      | is_ev_heart        | monthly  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-#      | is_ev_obesity      | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-#      | is_ev_trauma       | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-#      | is_ev              | quarterly  | no               | buy                  | 6          | best_value         | no         | no                 |
-#      | is_ev_brain        | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-#      | is_ev_cancer       | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-#      | is_ev_autoimmunity | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-#      | is_ev_gut          | quarterly  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-#      | is_ev_heart        | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-#      | is_ev_obesity      | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+      | is_ev_cancer       | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | is_ev_autoimmunity | quarterly  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | is_ev_gut          | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | is_ev_heart        | quarterly  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | is_ev_obesity      | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | is_ev_trauma       | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | is_ev              | quarterly | silver         | no                   | 6          | best_value         | 1          | best_value         |
+      | is_ev_brain        | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | is_ev_cancer       | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | is_ev_autoimmunity | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+      | is_ev_gut          | annually  | silver           | no                   | 3          | no                 | 6          | most_popular       |
+      | is_ev_heart        | monthly  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
+      | is_ev_obesity      | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
+      | is_ev_trauma       | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
+      | is_ev              | quarterly  | no               | buy                  | 6          | best_value         | no         | no                 |
+      | is_ev_brain        | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
+      | is_ev_cancer       | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
+      | is_ev_autoimmunity | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | is_ev_gut          | quarterly  | platinum         | no                   | no         | no                 | 1          | most_popular       |
+      | is_ev_heart        | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
+      | is_ev_obesity      | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @tf_evergreen @all_docuseries
+  @tf_evergreen @all_docuseries @WIP
   Scenario Outline: TF Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
