@@ -213,3 +213,10 @@ class BasePage(object):
                 print(f"An error occurred while handling the cookie banner: {e}")
         else:
             print("Cookie banner not detected.")
+
+    def verify_placeholder_text(self, locator, expected_placeholder):
+        element = self.find_element(locator)
+        actual_placeholder = element.get_attribute("placeholder")
+        assert actual_placeholder == expected_placeholder, (
+            f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
+        )

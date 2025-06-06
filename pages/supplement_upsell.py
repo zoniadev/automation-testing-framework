@@ -200,6 +200,7 @@ class SupplementUpsellPage(BasePage):
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
             self.verify_element_visible(SHIPPING_FULL_NAME_FIELD)
+            self.verify_placeholder_text(SHIPPING_FULL_NAME_FIELD, "First and Last Names*")
             self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
             url = self.context.page.url
             if 'rl' in url or 'life' in url:
