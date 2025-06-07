@@ -1,0 +1,19 @@
+Executing step: user register in "km_live_gut" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+>>> Registering in Main Opt in page...
+===> Entered "AutomationPhilip" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Brady-1749333722@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/km-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "km_live_gut" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/km-signup"
+===> URL successfully changed to "https://staging.zonia.com/km-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
