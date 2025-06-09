@@ -204,12 +204,20 @@ class SupplementUpsellPage(BasePage):
             self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
             url = self.context.page.url
             if 'rl' in url or 'life' in url:
-                self.enter_text(SHIPPING_PHONE_FIELD_ALT2, RD.phone_number())
-                self.enter_text(SHIPPING_ADDRESS_FIELD_ALT2, RD.address_line())
-                self.enter_text(SHIPPING_CITY_FIELD_ALT2, RD.town())
-                self.enter_text(SHIPPING_STATE_FIELD_ALT2, RD.state())
-                self.enter_text(SHIPPING_ZIP_FIELD_ALT2, RD.postcode())
-                self.enter_text(SHIPPING_COUNTRY_FIELD_ALT2, 'USA')
+                if common_variables.funnel == 'tf_ev':
+                    self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
+                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
+                    self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
+                    self.enter_text(SHIPPING_STATE_FIELD_ALT, RD.state())
+                    self.enter_text(SHIPPING_ZIP_FIELD_ALT, RD.postcode())
+                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT, 'USA')
+                else:
+                    self.enter_text(SHIPPING_PHONE_FIELD_ALT2, RD.phone_number())
+                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT2, RD.address_line())
+                    self.enter_text(SHIPPING_CITY_FIELD_ALT2, RD.town())
+                    self.enter_text(SHIPPING_STATE_FIELD_ALT2, RD.state())
+                    self.enter_text(SHIPPING_ZIP_FIELD_ALT2, RD.postcode())
+                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT2, 'USA')
             elif 'rd' in url or 'detox' in url:
                 self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
                 self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
