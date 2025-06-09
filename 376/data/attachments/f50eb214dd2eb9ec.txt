@@ -1,0 +1,47 @@
+Executing step: user register in "tf_ev_autoimmunity" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationKristi" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Fisher-1749457097@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "tf_ev_autoimmunity" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationKristi" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Fisher-1749457097@gmail.com" in "//input[@id='form-email']" field
+===> Entered "%Q4G1BZl" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "https://staging.zonia.com/tf-booster-packages-quarterly"
+===> URL successfully changed to "https://staging.zonia.com/tf-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/tf-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/tf-mini-masterclass-series"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-detox-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
