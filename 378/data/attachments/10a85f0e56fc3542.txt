@@ -1,0 +1,20 @@
+Executing step: user register in "tf_ev_allergies" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationBradley" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Johnson-1749475666@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "tf_ev_allergies" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
