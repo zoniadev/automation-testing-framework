@@ -204,7 +204,7 @@ class SupplementUpsellPage(BasePage):
             self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
             url = self.context.page.url
             if 'rl' in url or 'life' in url:
-                if common_variables.funnel in ['tf_ev', 'bb_live', 'bb_ev']:
+                if common_variables.funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev']:
                     self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
                     self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
                     self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
