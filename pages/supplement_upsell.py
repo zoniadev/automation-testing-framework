@@ -100,7 +100,7 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
-        if common_variables.funnel_prefix == 'lg':
+        if common_variables.funnel_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
         elif common_variables.funnel_prefix == 'km':
             upsell3 = 'restore_sleep'
@@ -122,15 +122,13 @@ class SupplementUpsellPage(BasePage):
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
-            if common_variables.funnel_prefix == 'lg':
-                next_page_navigation = common_variables.welcome_page_url
-            elif common_variables.funnel_prefix == 'km':
+            if common_variables.funnel_prefix in ['lg', 'km', 'is']:
                 next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'
                 next_page_navigation = getattr(common_variables, page_url)
         elif upsell_page == 'Restore Life':
-            if common_variables.funnel_prefix == 'lg':
+            if common_variables.funnel_prefix in ['lg', 'is']:
                 page_url = f'{common_variables.funnel_prefix}_restore_detox_url'
                 next_page_navigation = getattr(common_variables, page_url)
             else:
@@ -202,13 +200,38 @@ class SupplementUpsellPage(BasePage):
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
             self.verify_element_visible(SHIPPING_FULL_NAME_FIELD)
+            self.verify_placeholder_text(SHIPPING_FULL_NAME_FIELD, "First and Last Names*")
             self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
-            self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
-            self.enter_text(SHIPPING_ADDRESS_FIELD, RD.address_line())
-            self.enter_text(SHIPPING_CITY_FIELD, RD.town())
-            self.enter_text(SHIPPING_STATE_FIELD, RD.state())
-            self.enter_text(SHIPPING_ZIP_FIELD, RD.postcode())
-            self.enter_text(SHIPPING_COUNTRY_FIELD, 'USA')
+            url = self.context.page.url
+            if 'rl' in url or 'life' in url:
+                if common_variables.funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live']:
+                    self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
+                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
+                    self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
+                    self.enter_text(SHIPPING_STATE_FIELD_ALT, RD.state())
+                    self.enter_text(SHIPPING_ZIP_FIELD_ALT, RD.postcode())
+                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT, 'USA')
+                else:
+                    self.enter_text(SHIPPING_PHONE_FIELD_ALT2, RD.phone_number())
+                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT2, RD.address_line())
+                    self.enter_text(SHIPPING_CITY_FIELD_ALT2, RD.town())
+                    self.enter_text(SHIPPING_STATE_FIELD_ALT2, RD.state())
+                    self.enter_text(SHIPPING_ZIP_FIELD_ALT2, RD.postcode())
+                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT2, 'USA')
+            elif 'rd' in url or 'detox' in url:
+                self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
+                self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
+                self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
+                self.enter_text(SHIPPING_STATE_FIELD_ALT, RD.state())
+                self.enter_text(SHIPPING_ZIP_FIELD_ALT, RD.postcode())
+                self.enter_text(SHIPPING_COUNTRY_FIELD_ALT, 'USA')
+            else:
+                self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
+                self.enter_text(SHIPPING_ADDRESS_FIELD, RD.address_line())
+                self.enter_text(SHIPPING_CITY_FIELD, RD.town())
+                self.enter_text(SHIPPING_STATE_FIELD, RD.state())
+                self.enter_text(SHIPPING_ZIP_FIELD, RD.postcode())
+                self.enter_text(SHIPPING_COUNTRY_FIELD, 'USA')
             self.click(SHIPPING_SUBMIT_BUTTON)
             time.sleep(0.5)
             print('>>>Successfully entered shipping details')
