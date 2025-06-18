@@ -1,0 +1,10 @@
+Executing step: user register in "is_ev_brain" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+Failed step: user register in "is_ev_brain" Opt In page
+Test failed on page: 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/mb/is-brain-health'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_--_@1.18__20250618-190428.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 503 (Service Unavailable: Back-end server is at capacity)
