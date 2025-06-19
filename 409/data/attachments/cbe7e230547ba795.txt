@@ -1,0 +1,17 @@
+Executing step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Buying 3 bottle...
+===> Clicked element "//*[@unique-id='add-order-3-1']"
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/restore-gut-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 3 bottle
+Completed step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='upgrade-order-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/rg-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "no" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
