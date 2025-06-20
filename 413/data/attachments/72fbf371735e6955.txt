@@ -1,0 +1,39 @@
+Executing step: user register in "ad_ev_detox" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTaylor" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Harper-1750409797@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_ev_detox" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-signup"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationTaylor" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Harper-1750409797@gmail.com" in "//input[@id='form-email']" field
+===> Entered "$1EtgEsF" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-booster-packages-monthly"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-mini-masterclass-series"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
