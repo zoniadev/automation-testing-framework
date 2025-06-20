@@ -1,0 +1,5 @@
+Executing step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "https://staging.zonia.com/ad-booster-packages-monthly" page
+Failed step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "https://staging.zonia.com/ad-booster-packages-monthly" page
+Test failed on page: 'chrome-error://chromewebdata/'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_arrows_scrolling_--_@1.1__20250620-084558.png

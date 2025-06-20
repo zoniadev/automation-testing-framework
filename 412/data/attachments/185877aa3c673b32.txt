@@ -1,0 +1,5 @@
+Executing step: Verify "JOIN_ZONIA_BUTTON" button/s on "https://staging.zonia.com/ad-join-zonia" page navigate to "https://staging.zonia.com/ad-signup"
+Failed step: Verify "JOIN_ZONIA_BUTTON" button/s on "https://staging.zonia.com/ad-join-zonia" page navigate to "https://staging.zonia.com/ad-signup"
+Test failed on page: 'chrome-error://chromewebdata/'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_buttons_redirects_--_@1.9__20250620-084554.png

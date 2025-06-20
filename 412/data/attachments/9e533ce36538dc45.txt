@@ -1,0 +1,5 @@
+Executing step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-gut-health" page
+Failed step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "https://staging.zonia.com/ad-gut-health" page
+Test failed on page: 'chrome-error://chromewebdata/'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_buttons_scrolling_--_@1.2__20250620-084556.png
