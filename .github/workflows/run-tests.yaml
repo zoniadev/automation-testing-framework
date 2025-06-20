@@ -76,11 +76,11 @@ jobs:
         run: |
           TAGS="${{ github.event.inputs.tags }}"
           DEVICE="${{ github.event.inputs.device }}"
+          ENVIRONMENT="${{ github.event.inputs.environment }}"
           TAGS=$(echo "$TAGS" | sed 's/ /,/g')
           TAGS="--tags $TAGS"
-          echo "Running tests with tags: $TAGS and device: $DEVICE"
-          ENVIRONMENT="${{ github.event.inputs.environment }}"
-          behave $TAGS -D headless=True -D device=$DEVICE env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
+          echo "Running tests with tags: $TAGS, device: $DEVICE on env: $ENVIRONMENT"
+          behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
 
       - name: Send failure email
         if: always()
