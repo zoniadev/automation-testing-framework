@@ -25,7 +25,7 @@ def before_all(context):
     allure_env_path = os.path.join("allure-results", "environment.properties")
     with open(allure_env_path, "w") as env_file:
         env_file.write(f"Device={context.config.userdata['device'].capitalize()}\n")
-        env_file.write(f"Test run on={env.capitalize()}\n")
+        env_file.write(f"Test_run_on={env.capitalize()}\n")
 
 
 def before_feature(context, feature):
