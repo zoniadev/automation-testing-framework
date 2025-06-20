@@ -21,6 +21,10 @@ def before_all(context):
     with open(allure_env_path, "w") as env_file:
         env_file.write(f"device={context.config.userdata['device'].capitalize()}\n")
 
+    env = context.config.userdata.get("env")
+    env_key = f"base_url_{env}"
+    common_variables.used_base_url = getattr(common_variables, env_key)
+
 
 def before_feature(context, feature):
     print(f"Executing feature: '{context.feature.name}'")

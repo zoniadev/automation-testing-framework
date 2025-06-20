@@ -21,6 +21,15 @@ on:
           - android_landscape
           - iPad
           - ipad_landscape
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - new
+
 
   repository_dispatch:
     types: [Trigger Automation Tests]
