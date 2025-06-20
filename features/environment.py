@@ -12,6 +12,11 @@ SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
 def before_all(context):
     print(f"Starting run on {context.config.userdata['device'].capitalize()}")
+    env = context.config.userdata.get("env")
+    env_key = f"base_url_{env}"
+    common_variables.used_base_url = getattr(common_variables, env_key)
+    print(f"Starting run in {env.capitalize()} env")
+
     context.playwright = sync_playwright().start()
     headless_str = context.config.userdata.get("headless")
     headless = headless_str.lower() == "true"
@@ -19,11 +24,8 @@ def before_all(context):
 
     allure_env_path = os.path.join("allure-results", "environment.properties")
     with open(allure_env_path, "w") as env_file:
-        env_file.write(f"device={context.config.userdata['device'].capitalize()}\n")
-
-    env = context.config.userdata.get("env")
-    env_key = f"base_url_{env}"
-    common_variables.used_base_url = getattr(common_variables, env_key)
+        env_file.write(f"Device={context.config.userdata['device'].capitalize()}\n")
+        env_file.write(f"Test run on={env.capitalize()}\n")
 
 
 def before_feature(context, feature):
