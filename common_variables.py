@@ -1,7 +1,8 @@
 funnel = ''
 funnel_prefix = ''
-base_url = 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com'
-# base_url = 'http://staging.zonia.com'
+base_url_new = 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com'
+base_url_staging = 'http://staging.zonia.com'
+used_base_url = ''
 
 ad_live_opt_in_url = '/unbroken'
 ad_live_join_zonia_url = '/ad-join-zonia'

@@ -59,7 +59,7 @@ class BasePage(object):
         print(f'===> Clicked element "{locator}"')
 
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
-        base_url = common_variables.base_url
+        base_url = common_variables.used_base_url
         full_url_pattern = re.compile(f"^{re.escape(base_url)}{url}.*")
         print(f'===> Waiting for URL starting with "{base_url}{url}"')
         expect(self.context.page).to_have_url(full_url_pattern, timeout=timeout)
@@ -115,7 +115,7 @@ class BasePage(object):
         print('===> Populated CC details')
 
     def navigate_to_url(self, url):
-        base_url = common_variables.base_url
+        base_url = common_variables.used_base_url
         full_url = base_url + url
         self.context.page.goto(full_url)
 
