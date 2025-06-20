@@ -188,6 +188,7 @@ class BasePage(object):
 
 
     def verify_all_buttons_redirects_on_a_page(self, element, expected_link):
+        full_expected_link = f'{common_variables.used_base_url}{expected_link}'
         buttons = self.find_all_elements(getattr(locators, element))
         errors = []
 
@@ -197,8 +198,8 @@ class BasePage(object):
                 button.click()
                 self.context.page.wait_for_load_state('load')
                 new_url = self.context.page.url
-                if expected_link != new_url:
-                    errors.append(f'Expected button {index} to navigate to  "{expected_link}", but it went to "{new_url}"!')
+                if full_expected_link != new_url:
+                    errors.append(f'Expected button {index} to navigate to  "{full_expected_link}", but it went to "{new_url}"!')
                 self.context.page.go_back()
         if errors:
             error_count = len(errors)
