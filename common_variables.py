@@ -217,6 +217,8 @@ restore_vision_second_upsell_url = 'rv-restore-sleep-6-discounted-bottles'
 restore_vision_third_upsell_url = 'rv-restore-detox-6-discounted-bottles'
 restore_vision_fourth_upsell_url = 'rv-trial'
 
+zonia_blog_url = "blog"
+
 supplement_funnel_name = ''
 supplement_funnel_email = ''
 supplement_funnel_password = ''

@@ -405,7 +405,7 @@ Feature: Docuseries tests
       | is_ev_obesity      | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @tf_evergreen @all_docuseries @WIP
+  @tf_evergreen @all_docuseries
   Scenario Outline: TF Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia

@@ -9,6 +9,7 @@ from pages import (
     OptInPage,
     JoinZoniaPage,
     SignUpPage,
+    BlogPage,
     BasePage,
 )
 
@@ -107,3 +108,10 @@ def user_register_in_signup_page(context, cycle):
     page = SignUpPage(context)
     page.select_plan(cycle.upper())
     page.register_in_signup_page(cycle)
+
+@step(u'Verify banners redirects in "{dropdown}" and "{dropdown_category}"')
+def user_register_in_signup_page(context, dropdown, dropdown_category):
+    page = BlogPage(context)
+    page.open_blog_page()
+    page.select_blog_dropdown_category(dropdown, dropdown_category)
+    page.verify_visible_banner_redirects()
