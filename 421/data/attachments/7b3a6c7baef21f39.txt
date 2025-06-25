@@ -1,0 +1,53 @@
+Executing step: user register in "ad_ev_mindset" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationAmy" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Aguirre-1750856346@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_ev_mindset" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-signup"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/admb5e/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationAmy" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Aguirre-1750856346@gmail.com" in "//input[@id='form-email']" field
+===> Entered "!12%+N@f" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-booster-packages-annually"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+Address popup should appear next page
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+Failed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Test failed on page: 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/ad-mini-masterclass-series-platinum-package?id=null'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.13__20250625-125938.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
