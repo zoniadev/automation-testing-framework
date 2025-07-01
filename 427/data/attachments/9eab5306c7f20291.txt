@@ -1,0 +1,20 @@
+Executing step: user register in "is_ev_autoimmunity" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationRobert" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Ford-1751365218@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/mb/is-join-zonia"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/mb/is-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "is_ev_autoimmunity" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/mb/is-signup"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/mb/is-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
