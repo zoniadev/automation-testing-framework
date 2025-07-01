@@ -1,0 +1,39 @@
+Executing step: user register in "ad_ev_pain" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationAnthony" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Ford-1751405616@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_ev_pain" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-signup"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationAnthony" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Ford-1751405616@gmail.com" in "//input[@id='form-email']" field
+===> Entered "o&gP#2Lm" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/ad-booster-packages-annually"
+===> URL successfully changed to "http://staging.zonia.com/ad-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-mini-masterclass-series-silver-package"
+===> URL successfully changed to "http://staging.zonia.com/ad-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
