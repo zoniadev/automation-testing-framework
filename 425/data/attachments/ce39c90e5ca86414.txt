@@ -1,0 +1,12 @@
+Executing step: user register in "bb_ev_immunity" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationBenjamin" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Buchanan-1751354691@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/bbmb5e/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_ev_immunity" Opt In page
