@@ -1,4 +1,4 @@
-Feature: Smoke tests
+Feature: Blog tests
 
   @WIP
   Scenario Outline: Verify banners redirects
