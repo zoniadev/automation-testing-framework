@@ -58,6 +58,11 @@ class BasePage(object):
         element.click()
         print(f'===> Clicked element "{locator}"')
 
+    def hover(self, locator):
+        element = self.find_element(locator)
+        element.hover()
+        print(f'===> Hovered over element "{locator}"')
+
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
         base_url = common_variables.used_base_url
         full_url_pattern = re.compile(f"^{re.escape(base_url)}{url}.*")

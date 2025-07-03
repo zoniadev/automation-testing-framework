@@ -5,3 +5,4 @@ from .user_page import *
 from .opt_in_page import *
 from .join_zonia_page import *
 from .signup_page import *
+from .blog_page import *
