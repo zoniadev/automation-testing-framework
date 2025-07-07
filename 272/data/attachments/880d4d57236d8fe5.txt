@@ -1,0 +1,12 @@
+Executing step: user register in "ad_ev_brain" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMaria" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Davis-1751923516@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_ev_brain" Opt In page
