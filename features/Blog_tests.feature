@@ -1,6 +1,6 @@
 Feature: Blog tests
 
-  @WIP
+  @blog
   Scenario Outline: Verify banners redirects
     Given Verify banners redirects in "<dropdown>" and "<dropdown_category>"
 
