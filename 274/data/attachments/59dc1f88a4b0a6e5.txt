@@ -1,0 +1,9 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-vision-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_Supplement_funnel_--_@1.1__20250709-214048.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 503 (Service Temporarily Unavailable)
