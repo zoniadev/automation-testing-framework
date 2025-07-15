@@ -25,7 +25,7 @@ def user_fill_opt_in_form(context, amount, funnel):
 
 
 @step('user makes following decision in "{order}" supplement "{upsell_page}" Upsell page')
-def user_select_in_upsell(context, order, upsell_page):
+def user_select_in_supplement_upsell(context, order, upsell_page):
     page = SupplementUpsellPage(context)
     if common_variables.supplement_funnel_bottles != '1':
         page.change_order_delay_timeout(30)
@@ -34,7 +34,7 @@ def user_select_in_upsell(context, order, upsell_page):
 
 
 @step('user makes following decision in docuseries "{upsell_page}" Upsell page')
-def user_select_in_upsell(context, upsell_page):
+def user_select_in_docuseries_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if upsell_page == 'Booster Packages':
         for row in context.table:
@@ -104,14 +104,22 @@ def user_join_zonia(context):
 
 
 @step(u'user sign up for "{cycle}" plan')
-def user_register_in_signup_page(context, cycle):
+def user_sign_up_for_cycle_plan(context, cycle):
     page = SignUpPage(context)
     page.select_plan(cycle.upper())
     page.register_in_signup_page(cycle)
 
+
 @step(u'Verify banners redirects in "{dropdown}" and "{dropdown_category}"')
-def user_register_in_signup_page(context, dropdown, dropdown_category):
+def verify_banners_in_category(context, dropdown, dropdown_category):
     page = BlogPage(context)
     page.open_blog_page()
     page.select_blog_dropdown_category(dropdown, dropdown_category)
     page.verify_visible_banner_redirects()
+
+
+@step(u'Verify banners redirects in this week articles')
+def verify_banners_in_this_week_articles(context):
+    page = BlogPage(context)
+    page.open_blog_page()
+    page.check_this_week_articles()

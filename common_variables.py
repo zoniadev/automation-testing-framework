@@ -3,6 +3,15 @@ funnel_prefix = ''
 base_url_new = 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/'
 base_url_staging = 'http://staging.zonia.com/'
 used_base_url = ''
+zonia_blog_url = "blog"
+
+supplement_funnel_name = ''
+supplement_funnel_email = ''
+supplement_funnel_password = ''
+supplement_funnel_bottles = ''
+docuseries_address_will_appear = False
+docuseries_address_already_filled = False
+membership_added = False
 
 ad_live_opt_in_url = 'unbroken'
 ad_live_join_zonia_url = 'ad-join-zonia'
@@ -217,15 +226,12 @@ restore_vision_second_upsell_url = 'rv-restore-sleep-6-discounted-bottles'
 restore_vision_third_upsell_url = 'rv-restore-detox-6-discounted-bottles'
 restore_vision_fourth_upsell_url = 'rv-trial'
 
-zonia_blog_url = "blog"
+restore_detox_start_url = 'restore-detox-special'
+restore_detox_first_upsell_url = 'restore-detox-6-more-bottles'
+restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'
+restore_detox_third_upsell_url = 'rd-trial'
 
-supplement_funnel_name = ''
-supplement_funnel_email = ''
-supplement_funnel_password = ''
-supplement_funnel_bottles = ''
-docuseries_address_will_appear = False
-docuseries_address_already_filled = False
-membership_added = False
+blog_this_week_article = 'this-week-post'
 
 test_cc_number = ''
 test_cc_type = ''

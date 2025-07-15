@@ -62,7 +62,11 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
 
     def chose_seven_day_membership(self, decision, plan):
-        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}_fourth_upsell_url"), timeout=30000)
+        if common_variables.funnel == 'restore_detox':
+            next_upsell = '_third_upsell_url'
+        else:
+            next_upsell = '_fourth_upsell_url'
+        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}{next_upsell}"), timeout=30000)
         time.sleep(5)
         if decision == 'accept':
             self.click(MEMBERSHIP_YES_BUTTON)

@@ -1,19 +1,26 @@
 import re
 import time
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page, expect, Locator
 import common_variables
 from locators import *
 import locators
 
 
 class BasePage(object):
-    __TIMEOUT = 15000
+    __TIMEOUT = 30000
+    _HIGHLIGHT_DELAY_MS = 2000
 
     def __init__(self, context):
         self.context = context
 
+    def get_timeout(self):
+        return BasePage.__TIMEOUT
+
     def find_element(self, locator):
-        return self.context.page.locator(locator)
+        element = self.context.page.locator(locator)
+        element.scroll_into_view_if_needed()
+        self.highlight_element(element)
+        return element
 
     def find_not_unique_element(self, locator, instance=1):
         elements = self.context.page.locator(locator).all()
@@ -54,7 +61,6 @@ class BasePage(object):
 
     def click(self, locator):
         element = self.find_element(locator)
-        element.scroll_into_view_if_needed()
         element.click()
         print(f'===> Clicked element "{locator}"')
 
@@ -85,6 +91,7 @@ class BasePage(object):
 
     def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        self.highlight_element(cc_number)
         for attempt in range(max_retries):
             try:
                 cc_number.fill("")
@@ -103,15 +110,19 @@ class BasePage(object):
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
+        self.highlight_element(cc_exp_date)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
+        self.highlight_element(cc_cvv)
         if common_variables.test_cc_type == 'American Express':
             cc_cvv.press_sequentially('1111')
         else:
             cc_cvv.press_sequentially(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
+        self.highlight_element(cc_zip)
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        self.highlight_element(cc_number)
         cc_number.fill("")
         cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
         time.sleep(0.5)
@@ -146,6 +157,7 @@ class BasePage(object):
             try:
                 if target_element == "scroll_down":
                     # Handle arrows scrolling
+                    self.highlight_element(button)
                     button.focus()
                     self.context.page.wait_for_timeout(500)
                     initial_position = button.bounding_box()
@@ -157,6 +169,7 @@ class BasePage(object):
                 else:
                     # Handle button scrolling
                     target_element_locator = getattr(locators, target_element)
+                    self.highlight_element(button)
                     button.click()
                     self.context.page.wait_for_selector(target_element_locator, timeout=5000)
                     # Get the target element handle
@@ -199,6 +212,7 @@ class BasePage(object):
 
         for index, button in enumerate(buttons, start=1):
             if button.is_visible():
+                self.highlight_element(button)
                 button.scroll_into_view_if_needed()
                 button.click()
                 self.context.page.wait_for_load_state('load')
@@ -230,3 +244,16 @@ class BasePage(object):
         assert actual_placeholder == expected_placeholder, (
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
         )
+
+    def highlight_element(self, ctrl_locator: Locator, timeout_ms: int = None):
+        if timeout_ms is None:
+            timeout_ms = self._HIGHLIGHT_DELAY_MS
+        if ctrl_locator.is_visible():
+            ctrl_locator.evaluate("""(el) => {
+                el.style.outline = '3px solid red'; // Temporary visual indicator
+                el.style.transition = 'outline 0.5s ease';
+            }""")
+            time.sleep(timeout_ms / 1000)
+            ctrl_locator.evaluate("""(el) => {
+                el.style.outline = ''; // Clear the outline
+            }""")
