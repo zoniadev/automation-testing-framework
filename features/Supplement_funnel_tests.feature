@@ -147,7 +147,7 @@ Feature: Supplement tests
       | 6       | no         | most_popular   | no         | best_value     | yes        | no             | decline       | no        |
 
 
-  @restore_detox @all_supplements @WIP
+  @restore_detox @all_supplements
   Scenario Outline: Restore Detox Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Detox" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page

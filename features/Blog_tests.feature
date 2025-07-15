@@ -7,3 +7,8 @@ Feature: Blog tests
     Examples:
       | dropdown | dropdown_category  |
       | health   | 'Organs & Systems' |
+
+
+  @blog @WIP
+  Scenario: Verify banners in This Week articles
+    Given Verify banners redirects in this week articles
