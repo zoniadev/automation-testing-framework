@@ -12,6 +12,9 @@ class BasePage(object):
     def __init__(self, context):
         self.context = context
 
+    def get_timeout(self):
+        return BasePage.__TIMEOUT
+
     def find_element(self, locator):
         return self.context.page.locator(locator)
 

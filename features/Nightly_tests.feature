@@ -276,7 +276,7 @@ Feature: Nightly tests
     Given user select to buy "<bottles>" bottles in "Restore Gut" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
       | upgrade      | last_chance      |
-      | <sl_upgrade> | <sl_last_chance> |
+      | <rg_upgrade> | <rg_last_chance> |
     And user makes following decision in "second" supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
       | <lf_upgrade> | <lf_last_chance> |
@@ -289,6 +289,49 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
+      | bottles | rg_upgrade | rg_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
       | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
+
+
+  @nightly
+  Scenario Outline: Restore Vision Supplement nightly
+    Given user select to buy "<bottles>" bottles in "Restore Vision" Supplements page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+      | upgrade      | last_chance      |
+      | <vs_upgrade> | <vs_last_chance> |
+    And user makes following decision in "second" supplement "Restore Sleep" Upsell page
+      | upgrade      | last_chance      |
+      | <sl_upgrade> | <sl_last_chance> |
+    And user makes following decision in "third" supplement "Restore Detox" Upsell page
+      | upgrade      | last_chance      |
+      | <dt_upgrade> | <dt_last_chance> |
+    And user makes following decision in 7 day free membership
+      | decision        | plan        |
+      | <memb_decision> | <memb_plan> |
+    Then user complete registration
+
+    Examples:
+      | bottles | vs_upgrade | vs_last_chance | sl_upgrade | sl_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
+
+
+  @nightly
+  Scenario Outline: Restore Detox Supplement nightly
+    Given user select to buy "<bottles>" bottles in "Restore Detox" Supplements page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+      | upgrade      | last_chance      |
+      | <dt_upgrade> | <dt_last_chance> |
+    And user makes following decision in "second" supplement "Restore Life" Upsell page
+      | upgrade      | last_chance      |
+      | <lf_upgrade> | <lf_last_chance> |
+    And user makes following decision in 7 day free membership
+      | decision        | plan        |
+      | <memb_decision> | <memb_plan> |
+    Then user complete registration
+
+    Examples:
+      | bottles | dt_upgrade | dt_last_chance | lf_upgrade | lf_last_chance | memb_decision | memb_plan |
+      | 1       | no         | no             | no         | no             | decline       | no        |
+      | 1       | no         | best_value     | no         | most_popular   | accept        | monthly   |
