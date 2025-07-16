@@ -1,0 +1,19 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep B2G3" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Buying 1 bottle...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+Failed step: user select to buy "1" bottles in "Restore Sleep B2G3" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-sleep-signup-1-bottle-2'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_-_Buy_2,_Get_3_Free_bottles_Supplement_nightly_--_@1.2__20250716-085411.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+

@@ -1,8 +1,0 @@
-Executing step: user register in "lg_live_metabolism" Opt In page
-Scenario will use "Discover" card "6011000991300009"
-Failed step: user register in "lg_live_metabolism" Opt In page
-Test failed on page: 'http://staging.zonia.com/lg-metabolism'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Live_nightly_--_@1.2__20250715-213843.png
-Captured the following browser console errors:
---- Failed to load resource: the server responded with a status of 404 (Not Found)

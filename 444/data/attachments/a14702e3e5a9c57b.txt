@@ -1,0 +1,12 @@
+Executing step: user register in "bb_ev" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationAlexander" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Jones-1752654993@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "bb_ev" Opt In page
