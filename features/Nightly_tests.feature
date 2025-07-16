@@ -171,8 +171,8 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | lg_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
-      | lg_live_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | km_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly
@@ -196,8 +196,8 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | lg_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
-      | lg_live_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | is_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly
@@ -221,8 +221,8 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | lg_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
-      | lg_live_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | tf_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly
