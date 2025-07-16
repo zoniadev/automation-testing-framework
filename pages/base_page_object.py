@@ -17,25 +17,33 @@ class BasePage(object):
         return BasePage.__TIMEOUT
 
     def find_element(self, locator):
-        element = self.context.page.locator(locator)
-        element.scroll_into_view_if_needed()
-        self.highlight_element(element)
-        return element
+        return self.context.page.locator(locator)
 
     def find_not_unique_element(self, locator, instance=1):
-        elements = self.context.page.locator(locator).all()
-        if not elements:
-            raise Exception(f'No elements found with locator {locator}!')
-        visible_elements = [element for element in elements if element.is_visible()]
-        if not visible_elements:
-            raise Exception(f'No visible elements found with locator {locator}!')
-        visible_elements_amount = len(visible_elements)
-        if visible_elements_amount == 1:
-            print(f'===> One visible element with "{locator}" found from total {len(elements)}')
-            return visible_elements[0]
-        else:
-            print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
-            return visible_elements[instance]
+        timeout = self.get_timeout()
+        poll_interval = 0.2  # seconds
+        deadline = time.time() + (timeout / 1000)
+        while time.time() < deadline:
+            elements = self.context.page.locator(locator).all()
+            visible_elements = [e for e in elements if e.is_visible()]
+            if visible_elements:
+                visible_elements_amount = len(visible_elements)
+                if visible_elements_amount == 1:
+                    print(f'===> One visible element with "{locator}" found from total {len(elements)}')
+                    return visible_elements[0]
+                elif visible_elements_amount > 1:
+                    print(
+                        f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
+                    if instance < visible_elements_amount:
+                        return visible_elements[instance]
+                    else:
+                        print(f"===> Waiting for instance {instance} to appear...")
+            else:
+                print(f'===> No visible elements with "{locator}" yet...')
+            time.sleep(poll_interval)
+        raise Exception(
+            f"Timeout exceeded: waited {timeout}ms for visible elements for locator '{locator}'."
+        )
 
     def find_all_elements(self, locator):
         elements = self.context.page.locator(locator).all()
@@ -61,11 +69,15 @@ class BasePage(object):
 
     def click(self, locator):
         element = self.find_element(locator)
+        element.scroll_into_view_if_needed()
+        self.highlight_element(element)
         element.click()
         print(f'===> Clicked element "{locator}"')
 
     def hover(self, locator):
         element = self.find_element(locator)
+        element.scroll_into_view_if_needed()
+        self.highlight_element(element)
         element.hover()
         print(f'===> Hovered over element "{locator}"')
 
@@ -81,7 +93,10 @@ class BasePage(object):
         return self.find_element(locator).text_content()
 
     def enter_text(self, locator, text):
-        self.find_element(locator).press_sequentially(text)
+        element = self.find_element(locator)
+        element.scroll_into_view_if_needed()
+        self.highlight_element(element)
+        element.press_sequentially(text)
         print(f'===> Entered "{text}" in "{locator}" field')
 
 
@@ -91,13 +106,17 @@ class BasePage(object):
 
     def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        cc_number.scroll_into_view_if_needed()
         self.highlight_element(cc_number)
         for attempt in range(max_retries):
             try:
                 cc_number.fill("")
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
                 time.sleep(0.5)
-                self.find_element(submit_button).click()
+                submit = self.find_element(submit_button)
+                submit.scroll_into_view_if_needed()
+                self.highlight_element(submit)
+                submit.click()
                 time.sleep(1)
                 self.context.page.locator(LOADER).click()
                 print('Loader found')
@@ -110,23 +129,30 @@ class BasePage(object):
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
+        cc_exp_date.scroll_into_view_if_needed()
         self.highlight_element(cc_exp_date)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
+        cc_cvv.scroll_into_view_if_needed()
         self.highlight_element(cc_cvv)
         if common_variables.test_cc_type == 'American Express':
             cc_cvv.press_sequentially('1111')
         else:
             cc_cvv.press_sequentially(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
+        cc_zip.scroll_into_view_if_needed()
         self.highlight_element(cc_zip)
         cc_zip.press_sequentially(common_variables.test_cc_zip)
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        cc_number.scroll_into_view_if_needed()
         self.highlight_element(cc_number)
         cc_number.fill("")
         cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
         time.sleep(0.5)
-        self.find_element(submit_button).click()
+        submit = self.find_element(submit_button)
+        submit.scroll_into_view_if_needed()
+        self.highlight_element(submit)
+        submit.click()
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
 
@@ -161,6 +187,8 @@ class BasePage(object):
                     button.focus()
                     self.context.page.wait_for_timeout(500)
                     initial_position = button.bounding_box()
+                    button.scroll_into_view_if_needed()
+                    self.highlight_element(button)
                     button.click()
                     self.context.page.wait_for_timeout(500)
                     final_position = button.bounding_box()
@@ -169,6 +197,7 @@ class BasePage(object):
                 else:
                     # Handle button scrolling
                     target_element_locator = getattr(locators, target_element)
+                    button.scroll_into_view_if_needed()
                     self.highlight_element(button)
                     button.click()
                     self.context.page.wait_for_selector(target_element_locator, timeout=5000)
@@ -212,8 +241,8 @@ class BasePage(object):
 
         for index, button in enumerate(buttons, start=1):
             if button.is_visible():
-                self.highlight_element(button)
                 button.scroll_into_view_if_needed()
+                self.highlight_element(button)
                 button.click()
                 self.context.page.wait_for_load_state('load')
                 new_url = self.context.page.url
@@ -225,21 +254,29 @@ class BasePage(object):
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
     def handle_cookie_banner(self):
-        button = self.find_element(ACCEPT_COOKIES_BUTTON)
-        if button.is_visible():
-            print("Cookie banner detected. Attempting to accept...")
-            try:
-                self.click(ACCEPT_COOKIES_BUTTON)
-                print("Cookie banner accepted.")
-            except TimeoutError:
-                print("Accept button not found within the timeout.")
-            except Exception as e:
-                print(f"An error occurred while handling the cookie banner: {e}")
-        else:
-            print("Cookie banner not detected.")
+        try:
+            button = self.context.page.locator(ACCEPT_COOKIES_BUTTON)
+            if button.count() > 0 and button.is_visible(timeout=1000):  # Short timeout
+                print("Cookie banner detected. Attempting to accept...")
+                try:
+                    accept = self.find_element(ACCEPT_COOKIES_BUTTON)
+                    accept.scroll_into_view_if_needed()
+                    self.highlight_element(accept)
+                    accept.click()
+                    print("Cookie banner accepted.")
+                except TimeoutError:
+                    print("Accept button not found within the timeout.")
+                except Exception as e:
+                    print(f"An error occurred while handling the cookie banner: {e}")
+            else:
+                print("Cookie banner not detected.")
+        except Exception as e:
+            print(f"Error while checking cookie banner: {e}")
 
     def verify_placeholder_text(self, locator, expected_placeholder):
         element = self.find_element(locator)
+        element.scroll_into_view_if_needed()
+        self.highlight_element(element)
         actual_placeholder = element.get_attribute("placeholder")
         assert actual_placeholder == expected_placeholder, (
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
