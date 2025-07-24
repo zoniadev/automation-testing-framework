@@ -170,8 +170,8 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | opt_in_page        | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | km_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | opt_in_page     | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | km_live         | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
@@ -195,7 +195,7 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | opt_in_page      | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | is_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
@@ -220,9 +220,35 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | opt_in_page        | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | tf_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | opt_in_page | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | tf_ev       | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
+
+
+  @nightly
+  Scenario Outline: TWL Evergreen nightly
+    Given user register in "twl_ev" Opt In page
+    And user join Zonia in screening page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan    | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | monthly | platinum         | buy                  | 6          | upgrade            | 1          | upgrade            |
+      | monthly | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly

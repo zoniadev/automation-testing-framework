@@ -9,6 +9,6 @@ Feature: Blog tests
       | health   | 'Organs & Systems' |
 
 
-  @blog @WIP
+  @blog
   Scenario: Verify banners in This Week articles
     Given Verify banners redirects in this week articles

@@ -106,7 +106,7 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for masterclass...')
         if common_variables.funnel_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
-        elif common_variables.funnel_prefix == 'km':
+        elif common_variables.funnel_prefix in ['km', 'twl']:
             upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
@@ -126,7 +126,7 @@ class SupplementUpsellPage(BasePage):
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
-            if common_variables.funnel_prefix in ['lg', 'km', 'is']:
+            if common_variables.funnel_prefix in ['lg', 'km', 'is', 'twl']:
                 next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'

@@ -102,6 +102,11 @@ def user_join_zonia(context):
     page = JoinZoniaPage(context)
     page.join_zonia()
 
+@step(u'user join Zonia in screening page')
+def user_join_zonia_in_screening(context):
+    page = JoinZoniaPage(context)
+    page.join_zonia_screening()
+
 
 @step(u'user sign up for "{cycle}" plan')
 def user_sign_up_for_cycle_plan(context, cycle):

@@ -451,9 +451,10 @@ Feature: Docuseries tests
       | tf_ev_hormones       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @twl_evergreen @all_docuseries
+  @twl_evergreen @all_docuseries @WIP
   Scenario Outline: TWL Evergreen funnel
-    Given user register in "twl_evergreen" Opt In page
+    Given user register in "twl_ev" Opt In page
+    And user join Zonia in screening page
     And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
