@@ -39,6 +39,12 @@ class OptInPage(BasePage):
             common_variables.funnel = 'is_ev'
         elif common_variables.funnel.startswith('tf_ev'):
             common_variables.funnel = 'tf_ev'
-        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
+        elif common_variables.funnel.startswith('twl_evergreen'):
+            common_variables.funnel = 'twl_ev'
+        if common_variables.funnel == 'twl_ev':
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_screening_url'),
+                                     timeout=20000)
+        else:
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
         self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)
         print(f'>>> Successfully registered in Main Opt in page')
