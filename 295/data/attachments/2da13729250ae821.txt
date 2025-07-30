@@ -1,0 +1,12 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMichelle" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Jordan-1753915476@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "twl_ev" Opt In page
