@@ -246,6 +246,12 @@ restore_vision_second_upsell_url = 'rv-restore-sleep-6-discounted-bottles'
 restore_vision_third_upsell_url = 'rv-restore-detox-6-discounted-bottles'
 restore_vision_fourth_upsell_url = 'rv-trial'
 
+restore_vision_b2g3_start_url = 'restore-vision-3-free-bottles'
+restore_vision_b2g3_first_upsell_url = 'restore-vision-6-more-bottles-2'
+restore_vision_b2g3_second_upsell_url = 'rv-restore-sleep-6-discounted-bottles-2'
+restore_vision_b2g3_third_upsell_url = 'rv-restore-detox-6-discounted-bottles-2'
+restore_vision_b2g3_fourth_upsell_url = 'rv-trial-2'
+
 restore_detox_start_url = 'restore-detox-special'
 restore_detox_first_upsell_url = 'restore-detox-6-more-bottles'
 restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'

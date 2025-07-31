@@ -1,6 +1,6 @@
 Feature: Docuseries tests
 
-  @unbroken_live @all_docuseries @WIP
+  @unbroken_live @all_docuseries
   Scenario Outline: Unbroken live funnel
     Given user register in "ad_live" Opt In page
     And user join Zonia
