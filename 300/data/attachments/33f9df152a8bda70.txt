@@ -1,0 +1,12 @@
+Executing step: user register in "tf_ev_meals" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJohn" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Cunningham-1754347376@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "tf_ev_meals" Opt In page

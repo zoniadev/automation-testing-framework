@@ -1,0 +1,12 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationLori" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Pope-1754345134@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/ad-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "ad_live" Opt In page
