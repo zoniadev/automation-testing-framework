@@ -1,0 +1,12 @@
+Executing step: user register in "lg_live_metabolism" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationDaniel" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Foster-1754433241@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/lg-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "lg_live_metabolism" Opt In page
