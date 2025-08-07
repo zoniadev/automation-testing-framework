@@ -335,28 +335,28 @@ Feature: Docuseries tests
     Examples:
       | opt_in_page   | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | km_ev         | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-#      | km_ev_toxins  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-#      | km_ev_sleep   | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | km_ev_gut     | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-#      | km_ev_focus   | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-#      | km_ev_mystery | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-#      | km_ev_mood    | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
-#      | km_ev_autism  | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-#      | km_ev         | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
-#      | km_ev_toxins  | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-#      | km_ev_sleep   | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-#      | km_ev_gut     | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-#      | km_ev_sleep   | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-#      | km_ev_focus   | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-#      | km_ev_mystery | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-#      | km_ev_mood    | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-#      | km_ev_autism  | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
-#      | km_ev         | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-#      | km_ev_toxins  | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-#      | km_ev_sleep   | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-#      | km_ev_gut     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-#      | km_ev_focus   | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-#      | km_ev_mystery | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+      | km_ev_toxins  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | km_ev_sleep   | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | km_ev_gut     | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | km_ev_focus   | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | km_ev_mystery | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | km_ev_mood    | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | km_ev_autism  | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | km_ev         | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
+      | km_ev_toxins  | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | km_ev_sleep   | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | km_ev_gut     | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+      | km_ev_sleep   | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
+      | km_ev_focus   | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
+      | km_ev_mystery | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
+      | km_ev_mood    | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
+      | km_ev_autism  | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
+      | km_ev         | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
+      | km_ev_toxins  | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
+      | km_ev_sleep   | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | km_ev_gut     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
+      | km_ev_focus   | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
+      | km_ev_mystery | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 #  @is_live @all_docuseries
 #  Scenario Outline: IS Live funnel

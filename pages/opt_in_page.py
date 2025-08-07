@@ -39,6 +39,8 @@ class OptInPage(BasePage):
             common_variables.funnel = 'is_ev'
         elif common_variables.funnel.startswith('tf_ev'):
             common_variables.funnel = 'tf_ev'
+        elif common_variables.funnel.startswith('km_ev'):
+            common_variables.funnel = 'km_ev'
         elif common_variables.funnel.startswith('twl_evergreen'):
             common_variables.funnel = 'twl_ev'
         if common_variables.funnel == 'twl_ev':
