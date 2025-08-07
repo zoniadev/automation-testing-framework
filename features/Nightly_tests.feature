@@ -176,6 +176,31 @@ Feature: Nightly tests
 
 
   @nightly
+  Scenario Outline: KM Evergreen nightly
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page     | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | km_live         | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
+
+
+  @nightly
   Scenario Outline: IS Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
