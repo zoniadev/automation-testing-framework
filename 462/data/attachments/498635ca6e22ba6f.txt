@@ -1,0 +1,20 @@
+Executing step: user register in "km_ev" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMaria" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Gould-1754576789@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-join-zonia"
+===> Verified element "//*[@unique-id='register-btn-1']" is visible
+>>> Successfully registered in Main Opt in page
+Completed step: user register in "km_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
