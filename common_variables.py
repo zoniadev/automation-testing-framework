@@ -12,6 +12,7 @@ supplement_funnel_bottles = ''
 docuseries_address_will_appear = False
 docuseries_address_already_filled = False
 membership_added = False
+is_replay_weekend = False
 
 ad_live_opt_in_url = 'unbroken'
 ad_live_join_zonia_url = 'ad-join-zonia'
@@ -43,6 +44,14 @@ ad_ev_energy_opt_in_url = 'admb5e/ad-energy'
 ad_ev_pain_opt_in_url = 'admb5e/ad-pain-relief'
 ad_ev_join_zonia_url = 'admb5e/ad-join-zonia'
 ad_ev_sign_up_url = 'admb5e/ad-signup'
+
+ad_live_rw_main_url = 'ad-replay-weekend'
+ad_live_rw_sales_url = 'ad-join-zonia-bonuses'
+ad_live_rw_signup_url = 'ad-signup-bonuses'
+
+ad_ev_rw_main_url = 'admb5e/ad-replay-weekend'
+ad_ev_rw_sales_url = 'admb5e/ad-join-zonia-bonuses'
+ad_ev_rw_signup_url = 'admb5e/ad-signup-bonuses'
 
 lg_live_opt_in_url = 'ageless'
 lg_live_metabolism_opt_in_url = 'lg-metabolism'

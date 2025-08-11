@@ -313,7 +313,7 @@ Feature: Docuseries tests
       | km_live_mystery | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @km_evergreen @all_docuseries @WIP
+  @km_evergreen @all_docuseries
   Scenario Outline: KM Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia

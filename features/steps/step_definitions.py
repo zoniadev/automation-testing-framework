@@ -100,7 +100,10 @@ def user_register_in_opt_in_page(context, series):
 @step(u'user join Zonia')
 def user_join_zonia(context):
     page = JoinZoniaPage(context)
-    page.join_zonia()
+    if common_variables.is_replay_weekend:
+        page.join_zonia_replay_weekend()
+    else:
+        page.join_zonia()
 
 @step(u'user join Zonia in screening page')
 def user_join_zonia_in_screening(context):

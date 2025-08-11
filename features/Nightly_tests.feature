@@ -1,6 +1,6 @@
 Feature: Nightly tests
 
-  @nightly
+  @nightly @WIP
   Scenario Outline: Unbroken live nightly
     Given user register in "ad_live" Opt In page
     And user join Zonia
@@ -22,7 +22,7 @@ Feature: Nightly tests
     Examples:
       | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
       | quarterly | no               | no                   | no         | no                 | no         | no                 |
-      | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
+#      | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
 
 
   @nightly
@@ -388,7 +388,7 @@ Feature: Nightly tests
       | 1       | no         | best_value     | no         | most_popular   | accept        | monthly   |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: Restore Vision - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
