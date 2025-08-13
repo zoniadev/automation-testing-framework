@@ -1,0 +1,24 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationAlex" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Pennington-1755087565@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page
+>>> Joining Zonia on screening page...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/twl-join-zonia"
+Failed step: user join Zonia in screening page
+Test failed on page: 'http://staging.zonia.com/twl-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TWL_Evergreen_nightly_--_@1.2__20250813-121953.png
+Captured the following browser console errors:
+--- TypeError: Cannot read properties of undefined (reading 'checked')
+    at http://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:150:35 moengage err
+--- false moengage err
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
