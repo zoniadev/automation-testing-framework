@@ -1,0 +1,30 @@
+Executing step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+===> Buying 6 bottle...
+===> Clicked element "//*[@unique-id='add-order-6-1']"
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for 6 More bottles of Restore Vision
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@data-id='add-order-6']"
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "best_value" for Restore Sleep
+Completed step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
