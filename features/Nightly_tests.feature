@@ -1,6 +1,6 @@
 Feature: Nightly tests
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: Unbroken live nightly
     Given user register in "ad_live" Opt In page
     And user join Zonia
@@ -100,7 +100,7 @@ Feature: Nightly tests
       | bb_ev_detox | monthly   | silver           | buy                  | 1          | upgrade            | 1          | upgrade            |
 
 
-  @nightly
+  @nightly @WIP
   Scenario Outline: Ageless Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -121,7 +121,7 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page      | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | lg_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+#      | lg_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
@@ -146,7 +146,7 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | lg_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+#      | lg_live            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | lg_live_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 

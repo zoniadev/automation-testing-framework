@@ -37,8 +37,9 @@ def user_select_in_supplement_upsell(context, order, upsell_page):
 def user_select_in_docuseries_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if upsell_page == 'Booster Packages':
-        for row in context.table:
-            page.chose_docuseries_booster_package_upsell(decision=row['decision'])
+        if not common_variables.is_replay_weekend:
+            for row in context.table:
+                page.chose_docuseries_booster_package_upsell(decision=row['decision'])
     elif upsell_page == 'Masterclass Packages':
         for row in context.table:
             page.chose_docuseries_masterclass_upsell(decision=row['decision'])

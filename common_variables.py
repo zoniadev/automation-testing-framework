@@ -90,6 +90,14 @@ lg_ev_bones_opt_in_url = 'lgmb5e/lg-bones-muscles'
 lg_ev_join_zonia_url = 'lgmb5e/lg-join-zonia'
 lg_ev_sign_up_url = 'lgmb5e/lg-signup'
 
+lg_live_rw_main_url = 'lg-replay-weekend'
+lg_live_rw_sales_url = 'lg-join-zonia-bonuses'
+lg_live_rw_signup_url = 'lg-signup-bonuses'
+
+lg_ev_rw_main_url = 'lgmb5e/lg-replay-weekend'
+lg_ev_rw_sales_url = 'lgmb5e/lg-join-zonia-bonuses'
+lg_ev_rw_signup_url = 'lgmb5e/lg-signup-bonuses'
+
 bb_live_opt_in_url = 'beyond-the-brain'
 bb_live_detox_opt_in_url = 'bb-detox'
 bb_live_gut_opt_in_url = 'bb-gut-health'
@@ -125,6 +133,14 @@ bb_ev_energy_opt_in_url = 'bbmb5e/bb-energy'
 bb_ev_immunity_opt_in_url = 'bbmb5e/bb-immunity'
 bb_ev_join_zonia_url = 'bbmb5e/bb-join-zonia'
 bb_ev_sign_up_url = 'bbmb5e/bb-signup'
+
+bb_live_rw_main_url = 'bb-replay-weekend'
+bb_live_rw_sales_url = 'bb-join-zonia-bonuses'
+bb_live_rw_signup_url = 'bb-signup-bonuses'
+
+bb_ev_rw_main_url = 'bbmb5e/bb-replay-weekend'
+bb_ev_rw_sales_url = 'bbmb5e/bb-join-zonia-bonuses'
+bb_ev_rw_signup_url = 'bbmb5e/bb-signup-bonuses'
 
 km_live_opt_in_url = 'young-and-thriving'
 km_live_toxins_opt_in_url = 'km-toxins'
@@ -162,6 +178,14 @@ km_ev_autism_opt_in_url = 'kmmb5e/km-neurodevelopment'
 km_ev_join_zonia_url = 'kmmb5e/km-join-zonia'
 km_ev_sign_up_url = 'kmmb5e/km-signup'
 
+km_live_rw_main_url = 'km-replay-weekend'
+km_live_rw_sales_url = 'km-join-zonia-bonuses'
+km_live_rw_signup_url = 'km-signup-bonuses'
+
+km_ev_rw_main_url = 'kmmb5e/km-replay-weekend'
+km_ev_rw_sales_url = 'kmmb5e/km-join-zonia-bonuses'
+km_ev_rw_signup_url = 'kmmb5e/km-signup-bonuses'
+
 is_live_opt_in_url = 'immune-for-life'
 is_live_brain_opt_in_url = 'is-brain-health'
 is_live_cancer_opt_in_url = 'is-cancer'
@@ -198,6 +222,14 @@ is_ev_trauma_opt_in_url = 'mb/is-trauma'
 is_ev_join_zonia_url = 'mb/is-join-zonia'
 is_ev_sign_up_url = 'mb/is-signup'
 
+is_live_rw_main_url = 'is-replay-weekend'
+is_live_rw_sales_url = 'is-join-zonia-bonuses'
+is_live_rw_signup_url = 'is-signup-bonuses'
+
+is_ev_rw_main_url = 'mb5e/is-replay-weekend'
+is_ev_rw_sales_url = 'mb5e/is-join-zonia-bonuses'
+is_ev_rw_signup_url = 'mb5e/is-signup-bonuses'
+
 tf_ev_opt_in_url = 'mb2/toxin-free'
 tf_ev_meals_opt_in_url = 'mb2/tf-12-detox-meals'
 tf_ev_detoxification_opt_in_url = 'mb2/tf-18-herbs-detoxification'
@@ -223,6 +255,14 @@ tf_restore_life_url = 'tf-restore-life-special'
 tf_restore_life_upsell_url = 'tf-rl-6-more-bottles'
 tf_restore_life_downsell_url = 'tf-rl-6-discounted-bottles'
 
+tf_live_rw_main_url = 'tf-replay-weekend'
+tf_live_rw_sales_url = 'tf-join-zonia-bonuses'
+tf_live_rw_signup_url = 'tf-signup-bonuses'
+
+tf_ev_rw_main_url = 'mb2/tf-replay-weekend'
+tf_ev_rw_sales_url = 'mb2/tf-join-zonia-bonuses'
+tf_ev_rw_signup_url = 'mb2/tf-signup-bonuses'
+
 twl_ev_opt_in_url = 'thriving-without-limits'
 twl_ev_screening_url = 'thriving-without-limits-live-adr4mxdr52'
 twl_ev_join_zonia_url = 'twl-join-zonia'
@@ -241,6 +281,14 @@ twl_restore_sleep_downsell_url = 'twl-rs-6-discounted-bottles'
 twl_restore_detox_url = 'twl-restore-detox-special'
 twl_restore_detox_upsell_url = 'twl-rd-6-more-bottles'
 twl_restore_detox_downsell_url = 'twl-rd-6-discounted-bottles'
+
+twl_live_rw_main_url = 'twl-replay-weekend'
+twl_live_rw_sales_url = 'twl-join-zonia-bonuses'
+twl_live_rw_signup_url = 'twl-signup-bonuses'
+
+twl_ev_rw_main_url = 'mb2/twl-replay-weekend'
+twl_ev_rw_sales_url = 'mb2/twl-join-zonia-bonuses'
+twl_ev_rw_signup_url = 'mb2/twl-signup-bonuses'
 
 restore_sleep_start_url = 'restore-sleep-special'
 restore_sleep_first_upsell_url = 'restore-sleep-6-more-bottles'
