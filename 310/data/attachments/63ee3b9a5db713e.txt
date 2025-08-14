@@ -1,0 +1,14 @@
+Executing step: user register in "lg_live" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTammy" in "//input[@data-id='first-name']" field
+===> Entered "zoniat-v2Ferguson-1755210523@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-join-zonia"
+Failed step: user register in "lg_live" Opt In page
+Test failed on page: 'http://staging.zonia.com/lg-replay-weekend'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Ageless_Live_nightly_--_@1.1__20250814-222908.png
+Captured the following browser console errors:
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED
