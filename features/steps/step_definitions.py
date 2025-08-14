@@ -102,10 +102,15 @@ def user_join_zonia(context):
     page = JoinZoniaPage(context)
     page.join_zonia()
 
-@step(u'user join Zonia in screening page')
-def user_join_zonia_in_screening(context):
+@step(u'user join Zonia in screening page "{route}"')
+def user_join_zonia_in_screening(context, route):
+    direct = ''
+    if route == 'directly':
+        direct = True
+    else:
+        direct = False
     page = JoinZoniaPage(context)
-    page.join_zonia_screening()
+    page.join_zonia_screening(direct)
 
 
 @step(u'user sign up for "{cycle}" plan')
