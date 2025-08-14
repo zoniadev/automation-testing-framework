@@ -497,9 +497,44 @@ Feature: Docuseries tests
 
 
   @twl_evergreen @all_docuseries
-  Scenario Outline: TWL Evergreen funnel
+  Scenario Outline: TWL Evergreen regular funnel
     Given user register in "twl_ev" Opt In page
-    And user join Zonia in screening page
+    And user join Zonia in screening page "regular"
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | monthly   | silver           | no                   | no         | no                 | no         | no                 |
+      | quarterly | no               | no                   | 6          | best_value         | no         | upgrade            |
+      | lifetime  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
+      | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
+      | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
+      | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
+      | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
+      | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
+      | lifetime  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
+
+
+  @twl_evergreen @all_docuseries
+  Scenario Outline: TWL Evergreen direct funnel
+    Given user register in "twl_ev" Opt In page
+    And user join Zonia in screening page "directly"
     And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
@@ -528,14 +563,3 @@ Feature: Docuseries tests
       | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
       | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
       | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
-      | monthly   | silver           | no                   | no         | no                 | no         | no                 |
-      | quarterly | no               | no                   | 6          | best_value         | no         | upgrade            |
-      | lifetime  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
-      | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
-      | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
-      | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
-      | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
-      | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
-      | lifetime  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |

@@ -16,10 +16,17 @@ class JoinZoniaPage(BasePage):
         self.verify_element_visible(SIGNUP_NAME_FIELD)
         print(f'>>> Successfully joined Zonia')
 
-    def join_zonia_screening(self):
+    def join_zonia_screening(self, direct):
         print(f'>>> Joining Zonia on screening page...')
-        self.click(JOIN_ZONIA_ID_BUTTON)
-        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
+        if direct:
+            self.click(JOIN_ZONIA_ID_BUTTON)
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_sign_up_url'),
+                                     timeout=20000)
+        else:
+            self.context.page.reload(wait_until="domcontentloaded")
+            self.verify_element_visible(JOIN_ZONIA_ID_BUTTON_TWL, timeout=30000)
+            self.click(JOIN_ZONIA_ID_BUTTON_TWL)
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
         time.sleep(1)
         print(f'>>> Successfully navigated to join Zonia from screening page')
 
