@@ -70,6 +70,7 @@ REGISTER_SCROLL_BUTTON = "//*[@unique-id='register-btn-scroll-1']"
 
 #JoinZoniaPageLocators:
 JOIN_ZONIA_ID_BUTTON = "//*[@unique-id='register-btn-1']"
+JOIN_ZONIA_ID_BUTTON_TWL = "//*[@unique-id='register-btn-3']"
 
 #SignUpPageLocators:
 MONTHLY_RADIO_BUTTON = "//input[@unique-id='monthly_new-1']"

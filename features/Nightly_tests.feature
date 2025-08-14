@@ -250,10 +250,35 @@ Feature: Nightly tests
       | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
-  Scenario Outline: TWL Evergreen nightly
+  @nightly @WIP
+  Scenario Outline: TWL Evergreen direct nightly
     Given user register in "twl_ev" Opt In page
-    And user join Zonia in screening page
+    And user join Zonia in screening page "directly"
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan    | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | monthly | platinum         | buy                  | 6          | upgrade            | 1          | upgrade            |
+      | monthly | no               | no                   | no         | no                 | no         | no                 |
+
+
+  @nightly @WIP
+  Scenario Outline: TWL Evergreen regular nightly
+    Given user register in "twl_ev" Opt In page
+    And user join Zonia in screening page "regular"
     And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
@@ -388,7 +413,7 @@ Feature: Nightly tests
       | 1       | no         | best_value     | no         | most_popular   | accept        | monthly   |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: Restore Vision - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
