@@ -535,7 +535,6 @@ Feature: Docuseries tests
   Scenario Outline: TWL Evergreen direct funnel
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
-    And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
       | decision           |
