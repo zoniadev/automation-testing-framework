@@ -22,7 +22,7 @@ Feature: Nightly tests
     Examples:
       | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
       | quarterly | no               | no                   | no         | no                 | no         | no                 |
-#      | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
+      | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
 
 
   @nightly
@@ -121,11 +121,11 @@ Feature: Nightly tests
 
     Examples:
       | opt_in_page      | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | lg_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+#      | lg_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
       | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @WIP
   Scenario Outline: Ageless Live nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia

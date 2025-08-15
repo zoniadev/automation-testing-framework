@@ -531,7 +531,7 @@ Feature: Docuseries tests
       | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
-  @twl_evergreen @all_docuseries @WIP
+  @twl_evergreen @all_docuseries
   Scenario Outline: TWL Evergreen direct funnel
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
