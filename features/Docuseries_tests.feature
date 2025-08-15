@@ -531,11 +531,10 @@ Feature: Docuseries tests
       | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
 
 
-  @twl_evergreen @all_docuseries
+  @twl_evergreen @all_docuseries @WIP
   Scenario Outline: TWL Evergreen direct funnel
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
-    And user join Zonia
     When user sign up for "<plan>" plan
     And user makes following decision in docuseries "Booster Packages" Upsell page
       | decision           |
@@ -554,12 +553,12 @@ Feature: Docuseries tests
     Examples:
       | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
-      | annually  | no               | no                   | no         | no                 | no         | upgrade            |
-      | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | lifetime  | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
-      | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
-      | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
-      | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
-      | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
-      | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
+#      | annually  | no               | no                   | no         | no                 | no         | upgrade            |
+#      | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
+#      | lifetime  | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
+#      | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
+#      | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
+#      | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
+#      | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
+#      | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
+#      | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |

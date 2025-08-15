@@ -100,7 +100,7 @@ Feature: Nightly tests
       | bb_ev_detox | monthly   | silver           | buy                  | 1          | upgrade            | 1          | upgrade            |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: Ageless Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -250,7 +250,7 @@ Feature: Nightly tests
       | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: TWL Evergreen direct nightly
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
@@ -275,7 +275,7 @@ Feature: Nightly tests
       | monthly | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: TWL Evergreen regular nightly
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "regular"
