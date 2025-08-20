@@ -27,6 +27,9 @@ class SignUpPage(BasePage):
             if cycle == 'lifetime':
                 cycle = 'monthly'
         if common_variables.is_replay_weekend:
+            if cycle in ['lifetime', 'annually']:
+                common_variables.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
             self.wait_for_navigation(
                 getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url'),
                 timeout=30000)

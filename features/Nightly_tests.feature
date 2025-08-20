@@ -100,7 +100,7 @@ Feature: Nightly tests
       | bb_ev_detox | monthly   | silver           | buy                  | 1          | upgrade            | 1          | upgrade            |
 
 
-  @nightly @WIP
+  @nightly
   Scenario Outline: Ageless Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
