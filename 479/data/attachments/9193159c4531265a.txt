@@ -1,0 +1,109 @@
+Executing step: user register in "lg_live" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMelanie" in "//input[@data-id='first-name']" field
+===> Entered "zoniat-v2Mckinney-1755692986@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-join-zonia"
+>>> Navigation via lg_live_join_zonia_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/lg-join-zonia.*')'
+Actual value: http://staging.zonia.com/lg-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+
+===> Waiting for URL starting with "http://staging.zonia.com/lg-replay-weekend"
+===> URL successfully changed to "http://staging.zonia.com/lg-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "lg_live" Opt In page
+Executing step: user join Zonia
+===> Clicked element "//a[text()='JOIN ZONIA NOW']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-join-zonia-bonuses"
+===> URL successfully changed to "http://staging.zonia.com/lg-join-zonia-bonuses"
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-signup-bonuses"
+===> URL successfully changed to "http://staging.zonia.com/lg-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationMelanie" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Mckinney-1755692986@gmail.com" in "//input[@id='form-email']" field
+===> Entered "TF@8IErI" in "//input[@id='form-password']" field
+===> Populated CC details
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/lg-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/lg-mini-masterclass-series"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationMelanie" in "//input[@id='shippingName']" field
+===> Entered "77741289508" in "//input[@id='shippingPhone']" field
+===> Entered "961 Eric Keys" in "//input[@id='shippingAddress']" field
+===> Entered "Emilystad" in "//input[@id='city']" field
+===> Entered "Oregon" in "//input[@id='state']" field
+===> Entered "21098" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/lg-restore-life-special-longevity-code"
+===> URL successfully changed to "http://staging.zonia.com/lg-restore-life-special-longevity-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
