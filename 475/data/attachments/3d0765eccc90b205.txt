@@ -1,0 +1,11 @@
+Executing step: user register in "is_ev_trauma" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationLeroy" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Hawkins-1755674807@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev_trauma" Opt In page
