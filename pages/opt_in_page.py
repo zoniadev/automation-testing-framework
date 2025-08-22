@@ -47,6 +47,28 @@ class OptInPage(BasePage):
             self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_screening_url'),
                                      timeout=20000)
         else:
-            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
-        self.verify_element_visible(JOIN_ZONIA_ID_BUTTON)
-        print(f'>>> Successfully registered in Main Opt in page')
+            attempted = []
+            def try_nav(attr_name: str) -> bool:
+                url_suffix = getattr(common_variables, attr_name, None)
+                if not url_suffix:
+                    return False
+                attempted.append(f'{attr_name}="{url_suffix}"')
+                try:
+                    self.wait_for_navigation(url_suffix, timeout=20000)
+                    return True
+                except Exception as e:
+                    print(f'>>> Navigation via {attr_name} failed: {e}')
+                    return False
+            rw_attr = f'{common_variables.funnel}_rw_main_url'
+            default_attr = f'{common_variables.funnel}_join_zonia_url'
+
+            if try_nav(default_attr):
+                common_variables.is_replay_weekend = False
+                print('>>> Continuing with noramal flow!')
+            elif try_nav(rw_attr):
+                common_variables.is_replay_weekend = True
+                print('>>> Continuing with Replay Weekend flow!')
+            else:
+                raise AssertionError(
+                    'Failed to navigate after opt-in. Tried: ' + (', '.join(attempted) or 'no configured URLs')
+                )

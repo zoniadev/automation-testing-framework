@@ -26,5 +26,13 @@ class SignUpPage(BasePage):
         if common_variables.funnel_prefix not in ['km', 'twl', 'ad']:
             if cycle == 'lifetime':
                 cycle = 'monthly'
-        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
+        if common_variables.is_replay_weekend:
+            if cycle in ['lifetime', 'annually']:
+                common_variables.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
+            self.wait_for_navigation(
+                getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url'),
+                timeout=30000)
+        else:
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
         print(f'>>> Successfully registered in Signup page')

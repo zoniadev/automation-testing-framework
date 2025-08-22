@@ -29,3 +29,10 @@ class JoinZoniaPage(BasePage):
             self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_join_zonia_url'), timeout=20000)
         time.sleep(1)
         print(f'>>> Successfully navigated to join Zonia from screening page')
+
+    def join_zonia_replay_weekend(self):
+        self.click(JOIN_ZONIA_BUTTON)
+        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_rw_sales_url'), timeout=20000)
+        self.click(JOIN_ZONIA_ID_BUTTON)
+        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_rw_signup_url'), timeout=20000)
+        print(f'>>> Successfully joined Zonia from replay weekend pages')
