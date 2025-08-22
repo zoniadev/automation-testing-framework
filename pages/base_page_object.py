@@ -55,10 +55,10 @@ class BasePage(object):
             raise Exception(f'Element found with locator {locator}!')
         print(f'===> Verified element "{locator}" is not visible')
 
-    def click(self, locator):
+    def click(self, locator, force=False):
         element = self.find_element(locator)
         element.scroll_into_view_if_needed()
-        element.click()
+        element.click(force=force)
         print(f'===> Clicked element "{locator}"')
 
     def hover(self, locator):
@@ -118,7 +118,8 @@ class BasePage(object):
         cc_number.fill("")
         cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
         time.sleep(0.5)
-        self.find_element(submit_button).click()
+        # self.close_chat_popup()
+        self.find_element(submit_button).click(force=True)
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
 
@@ -233,3 +234,14 @@ class BasePage(object):
         assert actual_placeholder == expected_placeholder, (
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
         )
+
+    def close_chat_popup(self):
+        time.sleep(10)
+        chat_frame = self.context.page.frame_locator(CHAT_FRAME)
+        close_chat_button = chat_frame.locator(CHAT_CLOSE_BUTTON)
+        if close_chat_button.is_visible():
+            print('===> Chat popup is visible, closing it.')
+            close_chat_button.click()
+        else:
+            print('===> Chat popup is NOT visible, continuing flow.')
+            pass
