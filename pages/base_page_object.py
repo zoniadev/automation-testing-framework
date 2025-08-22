@@ -55,10 +55,10 @@ class BasePage(object):
             raise Exception(f'Element found with locator {locator}!')
         print(f'===> Verified element "{locator}" is not visible')
 
-    def click(self, locator, force=False):
+    def click(self, locator):
         element = self.find_element(locator)
         element.scroll_into_view_if_needed()
-        element.click(force=force)
+        element.click()
         print(f'===> Clicked element "{locator}"')
 
     def hover(self, locator):
@@ -105,6 +105,7 @@ class BasePage(object):
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
+        self.disable_chat()
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
@@ -118,8 +119,7 @@ class BasePage(object):
         cc_number.fill("")
         cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
         time.sleep(0.5)
-        # self.close_chat_popup()
-        self.find_element(submit_button).click(force=True)
+        self.find_element(submit_button).click()
         expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
         print('===> Populated CC details')
 
@@ -235,13 +235,12 @@ class BasePage(object):
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
         )
 
-    def close_chat_popup(self):
-        time.sleep(10)
-        chat_frame = self.context.page.frame_locator(CHAT_FRAME)
-        close_chat_button = chat_frame.locator(CHAT_CLOSE_BUTTON)
-        if close_chat_button.is_visible():
-            print('===> Chat popup is visible, closing it.')
-            close_chat_button.click()
-        else:
-            print('===> Chat popup is NOT visible, continuing flow.')
-            pass
+    def disable_chat(self):
+        page = self.context.page
+        page.evaluate("""() => {
+            const el = document.querySelector("#fc_frame");
+            if (el) el.remove();
+        }""")
+
+
+
