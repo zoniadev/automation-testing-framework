@@ -1,6 +1,6 @@
 Feature: Nightly tests
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: Unbroken live nightly
     Given user register in "ad_live" Opt In page
     And user join Zonia
@@ -25,7 +25,7 @@ Feature: Nightly tests
       | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: Unbroken evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -50,7 +50,7 @@ Feature: Nightly tests
       | ad_ev_detox | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: BB Live nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -75,7 +75,7 @@ Feature: Nightly tests
       | bb_live_detox | monthly   | silver           | buy                  | 1          | upgrade            | 1          | upgrade            |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: BB Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -100,7 +100,7 @@ Feature: Nightly tests
       | bb_ev_detox | monthly   | silver           | buy                  | 1          | upgrade            | 1          | upgrade            |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: Ageless Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -125,7 +125,7 @@ Feature: Nightly tests
       | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: Ageless Live nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -150,7 +150,7 @@ Feature: Nightly tests
       | lg_live_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: KM Live nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -175,7 +175,7 @@ Feature: Nightly tests
       | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: KM Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -200,7 +200,7 @@ Feature: Nightly tests
       | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: IS Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -225,7 +225,7 @@ Feature: Nightly tests
       | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_docuseries
   Scenario Outline: TF Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -250,7 +250,7 @@ Feature: Nightly tests
       | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @WIP
+  @nightly @nightly_docuseries
   Scenario Outline: TWL Evergreen direct nightly
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
@@ -275,7 +275,7 @@ Feature: Nightly tests
       | monthly | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @WIP
+  @nightly @nightly_docuseries
   Scenario Outline: TWL Evergreen regular nightly
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "regular"
@@ -301,7 +301,7 @@ Feature: Nightly tests
       | monthly | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Sleep Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
@@ -324,7 +324,7 @@ Feature: Nightly tests
       | 1       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | monthly   |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Sleep - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
@@ -347,7 +347,7 @@ Feature: Nightly tests
       | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Gut Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Gut" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
@@ -370,7 +370,7 @@ Feature: Nightly tests
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Vision Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
@@ -393,7 +393,7 @@ Feature: Nightly tests
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Detox Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Detox" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
@@ -413,7 +413,7 @@ Feature: Nightly tests
       | 1       | no         | best_value     | no         | most_popular   | accept        | monthly   |
 
 
-  @nightly
+  @nightly @nightly_supplement
   Scenario Outline: Restore Vision - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
