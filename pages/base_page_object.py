@@ -105,6 +105,7 @@ class BasePage(object):
             raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
+        self.disable_chat()
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
@@ -233,3 +234,13 @@ class BasePage(object):
         assert actual_placeholder == expected_placeholder, (
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
         )
+
+    def disable_chat(self):
+        page = self.context.page
+        page.evaluate("""() => {
+            const el = document.querySelector("#fc_frame");
+            if (el) el.remove();
+        }""")
+
+
+
