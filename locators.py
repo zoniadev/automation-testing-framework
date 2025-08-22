@@ -108,3 +108,7 @@ SHIPPING_SUBMIT_BUTTON = "//button[@id='save-shipping-address']"
 #CookieBannerPopupLocators:
 ACCEPT_COOKIES_BUTTON = "//div[@id='cookiebanner']//button[text()='Accept']"
 
+#ChatLocators:
+CHAT_FRAME = '//iframe[@title="Chat"]'
+CHAT_CLOSE_BUTTON = '//*[@aria-label="Close widget"]'
+
