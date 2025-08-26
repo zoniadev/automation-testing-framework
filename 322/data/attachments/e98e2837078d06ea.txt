@@ -1,0 +1,33 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationWilliam" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Wood-1756243951@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia"
+>>> Navigation via ad_live_join_zonia_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/ad-join-zonia.*')'
+Actual value: http://staging.zonia.com/unbroken 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+
+===> Waiting for URL starting with "http://staging.zonia.com/ad-replay-weekend"
+>>> Navigation via ad_live_rw_main_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/ad-replay-weekend.*')'
+Actual value: http://staging.zonia.com/ad-join-zonia 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-join-zonia"
+
+Failed step: user register in "ad_live" Opt In page
+Test failed on page: 'http://staging.zonia.com/ad-join-zonia'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_live_funnel_--_@1.8__20250826-213324.png
