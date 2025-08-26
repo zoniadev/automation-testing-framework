@@ -1,0 +1,11 @@
+Executing step: user register in "km_live_mystery" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTheresa" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Walker-1756161747@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_live_mystery" Opt In page

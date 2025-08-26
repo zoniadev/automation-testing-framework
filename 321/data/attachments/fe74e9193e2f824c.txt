@@ -1,0 +1,69 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTheresa" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Cabrera-1756158616@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia"
+>>> Navigation via ad_live_join_zonia_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/ad-join-zonia.*')'
+Actual value: http://staging.zonia.com/ad-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/unbroken"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/ad-replay-weekend"
+
+===> Waiting for URL starting with "http://staging.zonia.com/ad-replay-weekend"
+===> URL successfully changed to "http://staging.zonia.com/ad-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "ad_live" Opt In page
+Executing step: user join Zonia
+===> Clicked element "//a[text()='JOIN ZONIA NOW']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia-bonuses"
+===> URL successfully changed to "http://staging.zonia.com/ad-join-zonia-bonuses"
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-signup-bonuses"
+===> URL successfully changed to "http://staging.zonia.com/ad-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
