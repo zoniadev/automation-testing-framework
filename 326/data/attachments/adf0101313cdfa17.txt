@@ -1,0 +1,118 @@
+Executing step: user register in "is_ev" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTaylor" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Pace-1756593331@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationTaylor" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Pace-1756593331@gmail.com" in "//input[@id='form-email']" field
+===> Entered "!66IDByy" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/is-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/is-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/is-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/is-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationTaylor" in "//input[@id='shippingName']" field
+===> Entered "77135697038" in "//input[@id='shippingPhone']" field
+===> Entered "32 Evelyn Vista" in "//input[@id='shippingAddress']" field
+===> Entered "New Andrew" in "//input[@id='city']" field
+===> Entered "Nevada" in "//input[@id='state']" field
+===> Entered "54154" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/is-restore-life-special"
+===> URL successfully changed to "http://staging.zonia.com/is-restore-life-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "3" bottles and "upgrade" in upsell/downsell for Restore Life...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-3-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/is-rl-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-3-1']", page was not changed to is-rl-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/is-rl-6-more-bottles.*')'
+Actual value: http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08 
+Call log:
+PageAssertions.to_have_url with timeout 5000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/is-restore-life-special?id=68b37cc9e82f0ef384718e08"
+
+Failed step: user makes following decision in docuseries "Restore Life" Upsell page
+Test failed on page: 'http://staging.zonia.com/is-rl-6-more-bottles?id=68b37cc9e82f0ef384718e08'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_nightly_--_@1.1__20250830-223726.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:822:170
+    at xd.cG (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:737:557)
+    at xd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:295:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:205:362)
+    at bb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:391)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:168:533)
+    at xd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:229:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:205:362)
+    at k.Hb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:205:559)
+--- You have included the Google Maps JavaScript API multiple times on this page. This may cause unexpected errors.
