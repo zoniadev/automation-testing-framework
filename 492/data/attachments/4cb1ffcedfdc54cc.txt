@@ -1,0 +1,10 @@
+Executing step: user register in "bb_ev_energy" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+Failed step: user register in "bb_ev_energy" Opt In page
+Test failed on page: 'http://zonia22stage.us-west-2.elasticbeanstalk.com/bbmb5e/bb-energy'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.15__20250909-113638.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway)
