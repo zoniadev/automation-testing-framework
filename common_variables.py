@@ -1,6 +1,6 @@
 funnel = ''
 funnel_prefix = ''
-base_url_new = 'http://zonia-staging-env-node20-fe.jwemwd9t79.us-west-2.elasticbeanstalk.com/'
+base_url_new = 'http://zonia22stage.us-west-2.elasticbeanstalk.com/'
 base_url_staging = 'http://staging.zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
