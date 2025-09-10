@@ -1,0 +1,11 @@
+Executing step: user register in "km_ev_focus" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationMeghan" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Phelps-1757502217@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_focus" Opt In page
