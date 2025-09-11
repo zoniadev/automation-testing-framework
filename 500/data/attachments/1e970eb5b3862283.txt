@@ -1,0 +1,43 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationBrent" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Romero-1757573005@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "directly"
+>>> Joining Zonia on screening page...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-signup"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-signup"
+>>> Successfully navigated to join Zonia from screening page
+Completed step: user join Zonia in screening page "directly"
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationBrent" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Romero-1757573005@gmail.com" in "//input[@id='form-email']" field
+===> Entered "!9o5AoNi" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-booster-packages-annually"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-mini-masterclass-series-silver-package"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Clicked element "//*[@unique-id='skip-masterclass-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-sleep-special"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-sleep-special"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
