@@ -1,0 +1,29 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTina" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Nichols-1757630682@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "directly"
+>>> Joining Zonia on screening page...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/twl-signup"
+===> URL successfully changed to "http://staging.zonia.com/twl-signup"
+>>> Successfully navigated to join Zonia from screening page
+Completed step: user join Zonia in screening page "directly"
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationTina" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Nichols-1757630682@gmail.com" in "//input[@id='form-email']" field
+===> Entered "w*th44Tr" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/twl-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/twl-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
