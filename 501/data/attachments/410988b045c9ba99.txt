@@ -1,0 +1,90 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationKelly" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Mann-1757580345@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "directly"
+>>> Joining Zonia on screening page...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-signup"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-signup"
+>>> Successfully navigated to join Zonia from screening page
+Completed step: user join Zonia in screening page "directly"
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationKelly" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Mann-1757580345@gmail.com" in "//input[@id='form-email']" field
+===> Entered "v@!w1Fw3" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-booster-packages-monthly"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-mini-masterclass-series-silver-package"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-sleep-special-resilience-code"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-sleep-special-resilience-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "6" bottles and "most_popular" in upsell/downsell for Restore Sleep...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-6-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-rs-6-more-bottles"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-rs-6-more-bottles"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationKelly" in "//input[@id='shippingName']" field
+===> Entered "77608302529" in "//input[@id='shippingPhone']" field
+===> Entered "167 Graham Summit" in "//input[@id='shippingAddress']" field
+===> Entered "West Lynnfurt" in "//input[@id='city']" field
+===> Entered "Missouri" in "//input[@id='state']" field
+===> Entered "23497" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Clicked element "//*[@data-id='add-order-3']"
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-detox-special"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-restore-detox-special"
+>>> Successfully selected "6" bottles and "most_popular" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "1" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-rd-6-more-bottles"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/twl-rd-6-more-bottles"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='upgrade-order-1']"
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/welcome"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/welcome"
+>>> Successfully selected "1" bottles and "upgrade" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
