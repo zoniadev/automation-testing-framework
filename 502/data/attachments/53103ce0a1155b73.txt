@@ -1,0 +1,172 @@
+Executing step: user register in "tf_ev_autoimmunity" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJames" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Brown-1757594526@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_autoimmunity" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/mb2/tf-signup"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/mb2/tf-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationJames" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Brown-1757594526@gmail.com" in "//input[@id='form-email']" field
+===> Entered "!Z8QMwHX" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-booster-packages-quarterly"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Clicked element "//button[@unique-id='silver-package-upsell-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-mini-masterclass-series"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-mini-masterclass-series"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-detox-special"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-detox-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "no" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Not buying bottles...
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-rd-6-discounted-bottles"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-rd-6-discounted-bottles"
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='upgrade-order-1']"
+===> Upgrading order...
+Address popup should appear next page
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationJames" in "//input[@id='shippingName']" field
+===> Entered "77519076536" in "//input[@unique-identifier='shippingPhone-1']" field
+===> Entered "84 Lopez Junction" in "//input[@unique-identifier='shippingAddress-1']" field
+===> Entered "Williamschester" in "//input[@unique-identifier='city-1']" field
+===> Entered "Vermont" in "//input[@unique-identifier='state-1']" field
+===> Entered "34940" in "//input[@unique-identifier='postcode-1']" field
+===> Entered "USA" in "//input[@unique-identifier='country-1']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special"
+===> URL successfully changed to "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special"
+>>> Successfully selected "no" bottles and "upgrade" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "6" bottles and "best_value" in upsell/downsell for Restore Life...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Clicked element "//*[@unique-id='add-order-6-1']"
+===> Waiting for URL starting with "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-rl-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-6-1']", page was not changed to tf-rl-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^http://zonia22stage\\.us\\-west\\-2\\.elasticbeanstalk\\.com/tf-rl-6-more-bottles.*')'
+Actual value: http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7 
+Call log:
+PageAssertions.to_have_url with timeout 5000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-restore-life-special?id=68c2c3e2f9a2d4f5efea9bc7"
+
+Failed step: user makes following decision in docuseries "Restore Life" Upsell page
+Test failed on page: 'http://zonia22stage.us-west-2.elasticbeanstalk.com/tf-rl-6-more-bottles?id=68c2c3e2f9a2d4f5efea9bc7'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_funnel_--_@1.4__20250911-124432.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Failed to load resource: the server responded with a status of 404 (Not Found)
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
