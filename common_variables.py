@@ -308,6 +308,12 @@ restore_gut_second_upsell_url = 'rg-restore-detox-6-discounted-bottles'
 restore_gut_third_upsell_url = 'rg-restore-sleep-6-discounted-bottles'
 restore_gut_fourth_upsell_url = 'rg-trial'
 
+restore_gut_b2g3_start_url = 'restore-gut-3-free-bottles'
+restore_gut_b2g3_first_upsell_url = 'restore-gut-6-more-bottles-2'
+restore_gut_b2g3_second_upsell_url = 'rs-restore-detox-6-discounted-bottles-2'
+restore_gut_b2g3_third_upsell_url = 'rs-restore-sleep-6-discounted-bottles-2'
+restore_gut_b2g3_fourth_upsell_url = 'rs-trial'
+
 restore_vision_start_url = 'restore-vision-special'
 restore_vision_first_upsell_url = 'restore-vision-6-more-bottles'
 restore_vision_second_upsell_url = 'rv-restore-sleep-6-discounted-bottles'
