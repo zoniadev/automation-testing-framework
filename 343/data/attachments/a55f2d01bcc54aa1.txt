@@ -1,0 +1,10 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJennifer" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Ryan-1758062808@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
