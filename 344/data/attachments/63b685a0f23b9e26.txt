@@ -1,0 +1,125 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationTerri" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Patterson-1758145934@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_live" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-signup"
+===> URL successfully changed to "http://staging.zonia.com/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+===> Clicked element "//input[@unique-id='quarterly-1']"
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationTerri" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Patterson-1758145934@gmail.com" in "//input[@id='form-email']" field
+===> Entered "CZ0@4Vqx" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/ad-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/ad-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/ad-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Clicked element "//*[@unique-id='buy-masterclass-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-restore-detox-special-immunity-code"
+Failed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Test failed on page: 'http://staging.zonia.com/ad-mini-masterclass-series'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_live_funnel_--_@1.17__20250917-215319.png
+Captured the following browser console errors:
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:826:170
+    at zd.FE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:718:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:290:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:391)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:809:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:826:170
+    at zd.FE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:718:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:290:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:391)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:809:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:826:170
+    at zd.FE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:718:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:290:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:809:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Refused to load the script 'https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015' because it violates the following Content Security Policy directive: "script-src 'self' 'unsafe-inline' *.braintreegateway.com *.braintree-api.com". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway)
