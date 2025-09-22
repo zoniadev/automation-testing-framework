@@ -1,0 +1,47 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJonathan" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Walker-1758581530@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "directly"
+>>> Joining Zonia on screening page...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/twl-signup"
+===> URL successfully changed to "http://staging.zonia.com/twl-signup"
+>>> Successfully navigated to join Zonia from screening page
+Completed step: user join Zonia in screening page "directly"
+Executing step: user sign up for "monthly" plan
+===> Clicked element "//input[@unique-id='monthly_new-1']"
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationJonathan" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Walker-1758581530@gmail.com" in "//input[@id='form-email']" field
+===> Entered "W$*65nFi" in "//input[@id='form-password']" field
+Failed step: user sign up for "monthly" plan
+Test failed on page: 'http://staging.zonia.com/twl-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TWL_Evergreen_direct_nightly_--_@1.2__20250922-225252.png
+Captured the following browser console errors:
+--- TypeError: Cannot read properties of undefined (reading 'checked')
+    at http://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:150:35 moengage err
+--- false moengage err
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:826:170
+    at zd.EE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:717:558)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:292:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:391)
+    at $a (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:809:228
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
