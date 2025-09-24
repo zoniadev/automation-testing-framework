@@ -1,0 +1,52 @@
+Executing step: user register in "ad_live" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationLisa" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Odonnell-1758663874@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_live" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/ad-signup"
+===> URL successfully changed to "http://staging.zonia.com/ad-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+===> Clicked element "//input[@unique-id='yearly_new-1']"
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> Entered "AutomationLisa" in "//input[@id='form-name']" field
+===> Entered "zoniat-v2Odonnell-1758663874@gmail.com" in "//input[@id='form-email']" field
+===> Entered "w!5W))3q" in "//input[@id='form-password']" field
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/ad-booster-packages-annually"
+===> URL successfully changed to "http://staging.zonia.com/ad-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+===> Clicked element "//button[@unique-id='platinum-package-upsell-1']"
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+===> One visible element with "h5.modal-title" found from total 2
+Actual title: Please enter below your shipping address where we can ship your supplement.
+===> Verified element "//input[@id='shippingName']" is visible
+===> Entered "AutomationLisa" in "//input[@id='shippingName']" field
+===> Entered "77853241533" in "//input[@id='shippingPhone']" field
+===> Entered "649 Scott Neck" in "//input[@id='shippingAddress']" field
+===> Entered "New Anthonyport" in "//input[@id='city']" field
+===> Entered "Arkansas" in "//input[@id='state']" field
+===> Entered "99907" in "//input[@id='postcode']" field
+===> Entered "USA" in "//input[@id='country']" field
+===> Clicked element "//button[@id='save-shipping-address']"
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
