@@ -57,7 +57,7 @@ USER_MENU_BUTTON = "//li[@id='top_header_menu_account']//a[@id='subname']"
 #WelcomePageLocators:
 PASSWORD_POPUP_FIELD = "//*[@placeholder='Enter password']"
 SAVE_PASSWORD_BUTTON = "//*[@class[contains(., 'save-password')] and @type='submit']"
-SKIP_LINKING_BUTTON = "//button[@class='skip-login']"
+SKIP_LINKING_BUTTON = "//*[@class='home-button']"
 
 #OptInPageLocators:
 OPTIN_NAME_FIELD = "//input[@id='first-name']"
