@@ -250,7 +250,7 @@ Feature: Nightly tests
       | tf_ev_meals | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @nightly_docuseries @WIP
+  @nightly @nightly_docuseries
   Scenario Outline: TWL Evergreen direct nightly
     Given user register in "twl_ev" Opt In page
     And user join Zonia in screening page "directly"
@@ -271,7 +271,7 @@ Feature: Nightly tests
 
     Examples:
       | plan    | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-#      | monthly | platinum         | buy                  | 6          | upgrade            | 1          | upgrade            |
+      | monthly | platinum         | buy                  | 6          | upgrade            | 1          | upgrade            |
       | monthly | no               | no                   | no         | no                 | no         | no                 |
 
 
