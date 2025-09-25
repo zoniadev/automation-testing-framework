@@ -133,7 +133,7 @@ Feature: Supplement tests
 #      | 1       | no         | most_popular   | no         | no             | no         | best_value     | decline       | no        |
 #      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 #      | 1       | no         | best_value     | no         | most_popular   | no         | most_popular   | accept        | quarterly |
-      | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
+#      | 1       | no         | most_popular   | yes        | no             | no         | most_popular   | accept        | monthly   |
 #      | 1       | no         | best_value     | yes        | no             | no         | best_value     | decline       | no        |
 #      | 1       | yes        | no             | no         | best_value     | no         | no             | accept        | annually  |
 #      | 2       | no         | most_popular   | no         | most_popular   | yes        | no             | accept        | quarterly |
@@ -141,7 +141,7 @@ Feature: Supplement tests
 #      | 2       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | monthly   |
 #      | 2       | no         | no             | no         | best_value     | no         | best_value     | accept        | quarterly |
 #      | 2       | yes        | no             | no         | most_popular   | no         | most_popular   | decline       | no        |
-#      | 5       | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
+      | 5       | yes        | no             | no         | most_popular   | yes        | no             | accept        | monthly   |
 #      | 5       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | annually  |
 #      | 5       | no         | best_value     | no         | best_value     | no         | most_popular   | accept        | annually  |
 #      | 5       | yes        | no             | yes        | no             | no         | best_value     | accept        | quarterly |
