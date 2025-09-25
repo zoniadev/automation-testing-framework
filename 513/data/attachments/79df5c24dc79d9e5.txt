@@ -1,0 +1,19 @@
+Executing step: user register in "km_live" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Entered "AutomationJeffrey" in "//input[@id='first-name']" field
+===> Entered "zoniat-v2Burton-1758779754@gmail.com" in "//input[@id='email']" field
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_live" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Clicked element "//*[@unique-id='register-btn-1']"
+===> Waiting for URL starting with "http://staging.zonia.com/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/km-signup"
+===> Verified element "//input[@id='form-name']" is visible
+>>> Successfully joined Zonia
+Completed step: user join Zonia
