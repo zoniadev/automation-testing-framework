@@ -34,6 +34,7 @@ class BasePage(object):
             try:
                 # Ensure the field is cleared before typing
                 cc_number.fill("")
+                time.sleep(0.5)
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
                 # Short buffer before clicking to let final validation/formatting finish
                 self.context.page.wait_for_timeout(500)
@@ -55,6 +56,7 @@ class BasePage(object):
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         self.disable_chat()
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
+        time.sleep(0.5)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date, delay=50)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
         if common_variables.test_cc_type == 'American Express':
@@ -75,6 +77,7 @@ class BasePage(object):
         base_url = common_variables.used_base_url
         full_url = base_url + url
         self.context.page.goto(full_url)
+        print(f'===> Navigated to {full_url}')
 
     def verify_all_buttons_links_on_a_page(self, element, expected_link):
         locator = getattr(locators, element)
