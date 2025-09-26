@@ -15,57 +15,6 @@ class BasePage(object):
     def get_timeout(self):
         return BasePage.__TIMEOUT
 
-    def find_element(self, locator):
-        return self.context.page.locator(locator)
-
-    def find_not_unique_element(self, locator, instance=1):
-        elements = self.context.page.locator(locator).all()
-        if not elements:
-            raise Exception(f'No elements found with locator {locator}!')
-        visible_elements = [element for element in elements if element.is_visible()]
-        if not visible_elements:
-            raise Exception(f'No visible elements found with locator {locator}!')
-        visible_elements_amount = len(visible_elements)
-        if visible_elements_amount == 1:
-            print(f'===> One visible element with "{locator}" found from total {len(elements)}')
-            return visible_elements[0]
-        else:
-            print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
-            return visible_elements[instance]
-
-    def find_all_elements(self, locator):
-        elements = self.context.page.locator(locator).all()
-        if not elements:
-            raise Exception(f'No elements found with locator {locator}!')
-        visible_elements = [element for element in elements if element.is_visible()]
-        if not visible_elements:
-            raise Exception(f'No visible elements found with locator {locator}!')
-        visible_elements_amount = len(visible_elements)
-        print(f'===> {visible_elements_amount} visible elements with "{locator}" found from total {len(elements)}.')
-        return visible_elements
-
-    def verify_element_visible(self, locator, timeout=__TIMEOUT):
-        self.context.page.wait_for_selector(locator, timeout=timeout)
-        expect(self.find_element(locator)).to_be_visible()
-        print(f'===> Verified element "{locator}" is visible')
-
-    def verify_element_not_visible(self, locator):
-        elements = self.context.page.locator(locator).all()
-        if elements:
-            raise Exception(f'Element found with locator {locator}!')
-        print(f'===> Verified element "{locator}" is not visible')
-
-    def click(self, locator):
-        element = self.find_element(locator)
-        element.scroll_into_view_if_needed()
-        element.click()
-        print(f'===> Clicked element "{locator}"')
-
-    def hover(self, locator):
-        element = self.find_element(locator)
-        element.hover()
-        print(f'===> Hovered over element "{locator}"')
-
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
         base_url = common_variables.used_base_url
         full_url_pattern = re.compile(f"^{re.escape(base_url)}{url}.*")
@@ -73,55 +22,54 @@ class BasePage(object):
         expect(self.context.page).to_have_url(full_url_pattern, timeout=timeout)
         print(f'===> URL successfully changed to "{base_url}{url}"')
 
-    def get_text(self, locator):
-        print(f'===> Getting text from element "{locator}"...')
-        return self.find_element(locator).text_content()
-
-    def enter_text(self, locator, text):
-        self.find_element(locator).press_sequentially(text)
-        print(f'===> Entered "{text}" in "{locator}" field')
-
-
     def verify_element_contain_text(self, locator, expected_text):
-        expect(self.find_element(locator)).to_have_text(expected_text)
-
+        expect(self.context.page.locator(locator)).to_have_text(expected_text)
 
     def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
+        self.disable_chat()
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        cc_number.wait_for(state="visible", timeout=15000)
         for attempt in range(max_retries):
+            print(f'Attempting CC number entry (Attempt {attempt + 1}/{max_retries})...')
             try:
+                # Ensure the field is cleared before typing
                 cc_number.fill("")
                 cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
-                time.sleep(0.5)
-                self.find_element(submit_button).click()
-                time.sleep(1)
-                self.context.page.locator(LOADER).click()
-                print('Loader found')
-                break
+                # Short buffer before clicking to let final validation/formatting finish
+                self.context.page.wait_for_timeout(500)
+                self.context.page.locator(submit_button).click()
+                # Check for Success: Wait for the loader to disappear
+                expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
+                print('✅ CC details populated successfully and loader disappeared.')
+                return  # Success! Exit the function.
             except Exception as E:
-                print(f'Populating CC number failed on the {attempt + 1} try! Retrying...')
-                print(f'Error: {E}')
-        else:
-            raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
+                # Check if the failure was the loader not disappearing (meaning the transaction failed)
+                # or if it was an issue with populating the field.
+                if attempt == max_retries - 1:
+                    # Last attempt failed, raise the final error
+                    raise Exception(
+                        f'Entering CC number and submission failed after {max_retries} retries! Last Error: {E}')
+                print(f'⚠️ Submission or number entry failed on attempt {attempt + 1}. Retrying...')
+        raise Exception(f'Entering CC number was not successful after {max_retries} retries!')
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         self.disable_chat()
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
-        cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date)
+        cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date, delay=50)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
         if common_variables.test_cc_type == 'American Express':
-            cc_cvv.press_sequentially('1111')
+            cc_cvv.fill('1111')
         else:
-            cc_cvv.press_sequentially(common_variables.test_cc_cvv)
+            cc_cvv.fill(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
-        cc_zip.press_sequentially(common_variables.test_cc_zip)
-        cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
-        cc_number.fill("")
-        cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
-        time.sleep(0.5)
-        self.find_element(submit_button).click()
-        expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
-        print('===> Populated CC details')
+        cc_zip.fill(common_variables.test_cc_zip)
+        self.retry_cc_number_entry(submit_button=submit_button)
+        # cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
+        # cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
+        # time.sleep(0.5)
+        # self.context.page.locator(submit_button).click()
+        # expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
+        # print('===> Populated CC details')
 
     def navigate_to_url(self, url):
         base_url = common_variables.used_base_url
@@ -130,7 +78,7 @@ class BasePage(object):
 
     def verify_all_buttons_links_on_a_page(self, element, expected_link):
         locator = getattr(locators, element)
-        buttons = self.find_all_elements(locator)
+        buttons = self.context.page.locator(locator).all()
         errors = []
 
         for index, button in enumerate(buttons, start=1):
@@ -144,7 +92,7 @@ class BasePage(object):
 
     def verify_all_buttons_scroll(self, element, target_element):
         locator = getattr(locators, element)
-        buttons = self.find_all_elements(locator)
+        buttons = self.context.page.locator(locator).all()
         errors = []
         for index, button in enumerate(buttons, start=1):
             try:
@@ -198,7 +146,7 @@ class BasePage(object):
 
     def verify_all_buttons_redirects_on_a_page(self, element, expected_link):
         full_expected_link = f'{common_variables.used_base_url}{expected_link}'
-        buttons = self.find_all_elements(getattr(locators, element))
+        buttons = self.context.page.locator(getattr(locators, element)).all()
         errors = []
 
         for index, button in enumerate(buttons, start=1):
@@ -215,11 +163,11 @@ class BasePage(object):
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
     def handle_cookie_banner(self):
-        button = self.find_element(ACCEPT_COOKIES_BUTTON)
+        button = self.context.page.locator(ACCEPT_COOKIES_BUTTON)
         if button.is_visible():
             print("Cookie banner detected. Attempting to accept...")
             try:
-                self.click(ACCEPT_COOKIES_BUTTON)
+                self.context.page.locator(ACCEPT_COOKIES_BUTTON).click()
                 print("Cookie banner accepted.")
             except TimeoutError:
                 print("Accept button not found within the timeout.")
@@ -229,7 +177,7 @@ class BasePage(object):
             print("Cookie banner not detected.")
 
     def verify_placeholder_text(self, locator, expected_placeholder):
-        element = self.find_element(locator)
+        element = self.context.page.locator(locator)
         actual_placeholder = element.get_attribute("placeholder")
         assert actual_placeholder == expected_placeholder, (
             f"Placeholder mismatch! Expected: '{expected_placeholder}', Actual: '{actual_placeholder}'"
@@ -241,6 +189,3 @@ class BasePage(object):
             const el = document.querySelector("#fc_frame");
             if (el) el.remove();
         }""")
-
-
-

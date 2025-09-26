@@ -1,5 +1,5 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 from pages import (
     SupplementStartPage,

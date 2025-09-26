@@ -11,15 +11,9 @@ class WelcomePage(BasePage):
 
     def create_password(self):
         common_variables.supplement_funnel_password = RD.password()
-        self.context.page.click(PASSWORD_POPUP_FIELD, timeout=20000)
-        # self.click(PASSWORD_POPUP_FIELD)
-        time.sleep(1)
-        self.find_element(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
-        time.sleep(1)
-        self.click(SAVE_PASSWORD_BUTTON)
+        self.context.page.locator(PASSWORD_POPUP_FIELD).click(timeout=20000)
+        self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
+        self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_linking_social_media_accounts(self):
-        self.click(SKIP_LINKING_BUTTON)
-        time.sleep(1)
-
-
+        self.context.page.locator(SKIP_LINKING_BUTTON).click()
