@@ -1,0 +1,9 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Buying 1 bottle...
+Attempting CC number entry (Attempt 1/5)...
+✅ CC details populated successfully and loader disappeared.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page

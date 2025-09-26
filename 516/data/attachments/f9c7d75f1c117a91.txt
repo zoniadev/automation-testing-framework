@@ -1,0 +1,10 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-gut-signup-1-bottle-2'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_nightly_--_@1.2__20250926-083051.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
