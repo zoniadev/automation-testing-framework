@@ -31,8 +31,11 @@ class SupplementStartPage(BasePage):
         self.context.page.locator(PHONE_FIELD).fill(RD.phone_number())
         self.context.page.locator(ADDRESS_FIELD).fill(RD.address_line())
         self.context.page.locator(CITY_FIELD).fill(RD.town())
-        self.context.page.locator(COUNTRY_FIELD).select_option('USA')
-        # self.context.page.locator(COUNTRY_FIELD).fill('USA')
+        print(f'Funnel: {common_variables.funnel}')
+        if common_variables.funnel in ['restore_vision', 'restore_vision_b2g3']:
+            self.context.page.locator(COUNTRY_FIELD).select_option('USA')
+        else:
+            self.context.page.locator(COUNTRY_FIELD).fill('USA')
         self.context.page.locator(STATE_FIELD).fill('CA')
         self.context.page.locator(ZIP_FIELD).fill(RD.postcode())
         self.populate_cc_details()
