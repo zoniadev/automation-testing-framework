@@ -39,12 +39,12 @@ class BasePage(object):
                 # Short buffer before clicking to let final validation/formatting finish
                 self.context.page.wait_for_timeout(500)
                 self.context.page.locator(submit_button).click()
-                # Check for Success: Wait for the loader to disappear
-                expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
-                print('✅ CC details populated successfully and loader disappeared.')
+                # Check for Success: Wait for the cc number field to disappear, indicating navigation
+                expect(cc_number).not_to_be_visible(timeout=20000)
+                print('✅ CC number entry successful, navigating away from payment form.')
                 return  # Success! Exit the function.
             except Exception as E:
-                # Check if the failure was the loader not disappearing (meaning the transaction failed)
+                # Check if the failure was the element not disappearing (meaning the transaction failed)
                 # or if it was an issue with populating the field.
                 if attempt == max_retries - 1:
                     # Last attempt failed, raise the final error

@@ -9,6 +9,7 @@ class UserPage(BasePage):
         super().__init__(context)
 
     def skip_questions(self):
+        time.sleep(0.5)
         self.context.page.locator(SKIP_QUESTIONS_BUTTON).click()
 
     def verify_registration(self):

@@ -16,4 +16,5 @@ class WelcomePage(BasePage):
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_linking_social_media_accounts(self):
+        time.sleep(0.5)
         self.context.page.locator(SKIP_LINKING_BUTTON).click()
