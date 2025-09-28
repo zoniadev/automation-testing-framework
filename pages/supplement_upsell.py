@@ -70,13 +70,14 @@ class SupplementUpsellPage(BasePage):
             self.context.page.locator(MEMBERSHIP_YES_BUTTON).click()
             if plan == 'no':
                 self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.wait_for_navigation(common_variables.welcome_page_url, timeout=30000)
             else:
                 membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
                 self.context.page.locator(membership_locator).click()
-                self.context.page.locator(ACTIVATE_MEMBERSHIP_BUTTON).click()
+                self.retry_clicking_button(ACTIVATE_MEMBERSHIP_BUTTON, common_variables.welcome_page_url)
+                # self.context.page.locator(ACTIVATE_MEMBERSHIP_BUTTON).click()
         elif decision == 'decline':
-            self.context.page.locator(MEMBERSHIP_NO_BUTTON).click()
-        self.wait_for_navigation(common_variables.welcome_page_url, timeout=30000)
+            self.retry_clicking_button(MEMBERSHIP_NO_BUTTON, common_variables.welcome_page_url)
 
     def chose_docuseries_booster_package_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for booster package...')

@@ -114,7 +114,7 @@ Feature: Supplement tests
   @restore_gut_b2g3 @all_supplements
   Scenario Outline: Restore Gut - Buy 2, Get 3 Free bottles Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Gut B2G3" Supplements page
-    When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
       | upgrade      | last_chance      |
       | <vs_upgrade> | <vs_last_chance> |
     And user makes following decision in "second" supplement "Restore Detox" Upsell page

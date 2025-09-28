@@ -371,6 +371,29 @@ Feature: Nightly tests
 
 
   @nightly @nightly_supplement
+  Scenario Outline: Restore Gut - Buy 2, Get 3 Free bottles Supplement nightly
+    Given user select to buy "<bottles>" bottles in "Restore Gut B2G3" Supplements page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+      | upgrade      | last_chance      |
+      | <rg_upgrade> | <rg_last_chance> |
+    And user makes following decision in "second" supplement "Restore Detox" Upsell page
+      | upgrade      | last_chance      |
+      | <lf_upgrade> | <lf_last_chance> |
+    And user makes following decision in "third" supplement "Restore Sleep" Upsell page
+      | upgrade      | last_chance      |
+      | <dt_upgrade> | <dt_last_chance> |
+    And user makes following decision in 7 day free membership
+      | decision        | plan        |
+      | <memb_decision> | <memb_plan> |
+    Then user complete registration
+
+    Examples:
+      | bottles | rg_upgrade | rg_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
+
+
+  @nightly @nightly_supplement
   Scenario Outline: Restore Vision Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
