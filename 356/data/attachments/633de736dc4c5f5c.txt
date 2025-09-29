@@ -1,0 +1,19 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Buying 1 bottle...
+===> Clicked element "//*[@unique-id='add-order-1-1']"
+===> Populated CC details
+===> Waiting for URL starting with "http://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-sleep-6-more-bottles"
+===> Verified element "//*[@unique-id='upgrade-order-1']" is visible
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+===> Clicked element "//*[@unique-id='no-thanks-1']"
+===> Verified element "//*[@data-id='add-order-3']" is visible
+>>> Verified appearence of downsell popup
+===> Clicked element "//*[@data-id='downsell-no-thanks']"
+===> Waiting for URL starting with "http://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
