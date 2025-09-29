@@ -25,7 +25,10 @@ class SupplementStartPage(BasePage):
         else:
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             self.context.page.locator(button_locator).click()
-        self.context.page.locator(FIRST_NAME_FIELD).fill(common_variables.supplement_funnel_name)
+        name_locator = self.context.page.locator(FIRST_NAME_FIELD)
+        expect(name_locator).to_be_editable()
+        name_locator.fill(common_variables.supplement_funnel_name)
+        # self.context.page.locator(FIRST_NAME_FIELD).fill(common_variables.supplement_funnel_name)
         self.context.page.locator(LAST_NAME_FIELD).fill(RD.last_name())
         self.context.page.locator(EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
         self.context.page.locator(PHONE_FIELD).fill(RD.phone_number())
