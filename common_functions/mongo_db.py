@@ -7,14 +7,14 @@ from urllib.parse import quote_plus
 
 def connect_to_mongodb():
     username = "automationtests"
-    password = quote_plus("QAZwsx@123")  # Make sure to encode special characters
+    password = quote_plus("030vRUeShdZaSZfx")  # Make sure to encode special characters
 
-    cluster_url = os.getenv("MONGO_CLUSTER_URL", "mongodb6stage.uh1qx.mongodb.net")
+    cluster_url = os.getenv("MONGO_CLUSTER_URL", "mongodb8stage.uh1qx.mongodb.net")
     db_name = os.getenv("MONGO_DB_NAME", "GoHealthyUsers")  # Replace with your actual DB name
 
     connection_string = (
         f"mongodb+srv://{username}:{password}@{cluster_url}/{db_name}"
-        "?retryWrites=true&w=majority&appName=MongoDB6Stage"
+        "?retryWrites=true&w=majority&appName=MongoDB8Stage"
     )
 
     try:
@@ -44,7 +44,7 @@ def count_automation_users_older_than_one_month(client):
     print(f"===> Number of Automation users older than one month: {automation_users_count}")
 
 
-def delete_automation_users(client, days_old=30):
+def delete_automation_users(client, days_old=3):
     db_name = os.getenv("MONGO_DB_NAME", "GoHealthyUsers")
     collection_name = "users"
 

@@ -4,11 +4,12 @@ from pages.base_page_object import BasePage
 from locators import *
 import locators
 import common_functions.random_data as RD
+from playwright.sync_api import expect
 
 
 class SupplementUpsellPage(BasePage):
     def __init__(self, context):
-        BasePage.__init__(self, context)
+        super().__init__(context)
         self.order_delay_timeout = 1
 
     def change_order_delay_timeout(self, timeout):
@@ -18,18 +19,17 @@ class SupplementUpsellPage(BasePage):
         if upgrade == 'yes':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
-            self.click(YES_UPGRADE_BUTTON)
+            self.context.page.locator(YES_UPGRADE_BUTTON).click()
         elif upgrade == 'no':
-            time.sleep(1)
-            self.click(NO_THANKS_BUTTON)
+            self.context.page.locator(NO_THANKS_BUTTON).click()
             self.verify_downsell_popup()
             if last_chance == 'no':
-                self.click(DOWNSELL_NO_THANKS_BUTTON)
+                self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
             else:
                 print('===> Waiting to avoid payment method error...')
                 time.sleep(30)
                 button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
-                self.click(button_locator)
+                self.context.page.locator(button_locator).click()
         self.wait_for_navigation(self.get_supplement_next_page_url(order), timeout=30000)
         print(
             f'>>> Successfully selected upgrade "{upgrade}" and last chance "{last_chance}" for {upsell_page}')
@@ -50,13 +50,12 @@ class SupplementUpsellPage(BasePage):
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
             try:
-                time.sleep(1)
-                self.verify_element_visible(BUY_MOST_POPULAR_BUTTON)
+                expect(self.context.page.locator(BUY_MOST_POPULAR_BUTTON)).to_be_visible()
                 print('>>> Verified appearence of downsell popup')
                 break
             except Exception as e:
                 print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Original error: "{e}". Retrying...')
-                self.click(NO_THANKS_BUTTON)
+                self.context.page.locator(NO_THANKS_BUTTON).click()
 
         else:
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
@@ -67,35 +66,31 @@ class SupplementUpsellPage(BasePage):
         else:
             next_upsell = '_fourth_upsell_url'
         self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}{next_upsell}"), timeout=30000)
-        time.sleep(5)
         if decision == 'accept':
-            self.click(MEMBERSHIP_YES_BUTTON)
+            self.context.page.locator(MEMBERSHIP_YES_BUTTON).click()
             if plan == 'no':
-                self.click(NO_THANKS_BUTTON)
+                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.wait_for_navigation(common_variables.welcome_page_url, timeout=30000)
             else:
                 membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
-                self.click(membership_locator)
-                time.sleep(2)
-                self.click(ACTIVATE_MEMBERSHIP_BUTTON)
+                self.context.page.locator(membership_locator).click()
+                self.retry_clicking_button(ACTIVATE_MEMBERSHIP_BUTTON, common_variables.welcome_page_url)
+                # self.context.page.locator(ACTIVATE_MEMBERSHIP_BUTTON).click()
         elif decision == 'decline':
-            self.click(MEMBERSHIP_NO_BUTTON)
-        time.sleep(1)
-        self.wait_for_navigation(common_variables.welcome_page_url, timeout=30000)
+            self.retry_clicking_button(MEMBERSHIP_NO_BUTTON, common_variables.welcome_page_url)
 
     def chose_docuseries_booster_package_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for booster package...')
         if decision != 'no':
             selection = getattr(locators, f"{decision.upper()}_PACKAGE_BUTTON")
             next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{decision.lower()}_masterclass_url")
-            time.sleep(0.5)
-            self.click(selection)
+            self.context.page.locator(selection).click()
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
                 print('Address popup should appear next page')
         else:
             next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url')
-            time.sleep(0.5)
-            self.click(NO_THANKS_BUTTON)
+            self.context.page.locator(NO_THANKS_BUTTON).click()
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for booster package')
         if decision == 'platinum':
@@ -115,11 +110,10 @@ class SupplementUpsellPage(BasePage):
         if decision != 'no':
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
-            self.click(BUY_MASTERCLASS_BUTTON)
+            self.context.page.locator(BUY_MASTERCLASS_BUTTON).click()
             next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_{upsell3}_bought_url')
         else:
-            time.sleep(0.5)
-            self.click(SKIP_MASTERCLASS_BUTTON)
+            self.context.page.locator(SKIP_MASTERCLASS_BUTTON).click()
             next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_{upsell3}_not_bought_url')
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
@@ -148,7 +142,6 @@ class SupplementUpsellPage(BasePage):
         if amount == 'no':
             print('===> Not buying bottles...')
             next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
-            time.sleep(0.5)
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
@@ -160,31 +153,26 @@ class SupplementUpsellPage(BasePage):
             print(f'===> Successfully bought {amount} bottle/s')
             common_variables.docuseries_address_will_appear = True
             print('Address popup should appear next page')
-        time.sleep(0.5)
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
-            self.click(YES_UPGRADE_BUTTON)
+            self.context.page.locator(YES_UPGRADE_BUTTON).click()
             print('===> Upgrading order...')
             common_variables.docuseries_address_will_appear = True
             print('Address popup should appear next page')
         elif upsell_downsell == 'no':
-            self.click(NO_THANKS_BUTTON)
-            time.sleep(1)
+            self.context.page.locator(NO_THANKS_BUTTON).click()
             if amount != 'no':
-                self.click(DOWNSELL_NO_THANKS_BUTTON)
+                self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
                 print('===> Not upgrading...')
         else:
-            self.click(NO_THANKS_BUTTON)
-            time.sleep(1)
+            self.context.page.locator(NO_THANKS_BUTTON).click()
             if upsell_downsell == 'best_value':
-                time.sleep(1)
-                self.click(BUY_BEST_VALUE_BUTTON)
+                self.context.page.locator(BUY_BEST_VALUE_BUTTON).click()
             else:
-                time.sleep(1)
-                self.click(BUY_MOST_POPULAR_BUTTON)
+                self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
             print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
@@ -196,59 +184,56 @@ class SupplementUpsellPage(BasePage):
         if not common_variables.docuseries_address_already_filled:
             expected_shipping_popup_title = "Please enter below your shipping address where we can ship your supplement."
             print('>>>Entering shipping details...')
-            time.sleep(10)
-            modal_title = self.find_not_unique_element(SHIPPING_POPUP_TITLE)
+            modal_title = self.context.page.locator(SHIPPING_POPUP_TITLE)
             actual_title = modal_title.text_content()
             print(f'Actual title: {actual_title}')
             assert actual_title.strip() == expected_shipping_popup_title, (f"Popup title mismatch! Expected:"
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
-            self.verify_element_visible(SHIPPING_FULL_NAME_FIELD)
-            self.verify_placeholder_text(SHIPPING_FULL_NAME_FIELD, "First and Last Names*")
-            self.enter_text(SHIPPING_FULL_NAME_FIELD, common_variables.supplement_funnel_name)
+            expect(self.context.page.locator(SHIPPING_FULL_NAME_FIELD)).to_be_visible()
+            assert self.context.page.locator(SHIPPING_FULL_NAME_FIELD).get_attribute("placeholder") == "First and Last Names*"
+            self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(common_variables.supplement_funnel_name)
             url = self.context.page.url
             if 'rl' in url or 'life' in url:
                 if common_variables.funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live']:
-                    self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
-                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
-                    self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
-                    self.enter_text(SHIPPING_STATE_FIELD_ALT, RD.state())
-                    self.enter_text(SHIPPING_ZIP_FIELD_ALT, RD.postcode())
-                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT, 'USA')
+                    self.context.page.locator(SHIPPING_PHONE_FIELD_ALT).fill(RD.phone_number())
+                    self.context.page.locator(SHIPPING_ADDRESS_FIELD_ALT).fill(RD.address_line())
+                    self.context.page.locator(SHIPPING_CITY_FIELD_ALT).fill(RD.town())
+                    self.context.page.locator(SHIPPING_STATE_FIELD_ALT).fill(RD.state())
+                    self.context.page.locator(SHIPPING_ZIP_FIELD_ALT).fill(RD.postcode())
+                    self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT).fill('USA')
                 else:
-                    self.enter_text(SHIPPING_PHONE_FIELD_ALT2, RD.phone_number())
-                    self.enter_text(SHIPPING_ADDRESS_FIELD_ALT2, RD.address_line())
-                    self.enter_text(SHIPPING_CITY_FIELD_ALT2, RD.town())
-                    self.enter_text(SHIPPING_STATE_FIELD_ALT2, RD.state())
-                    self.enter_text(SHIPPING_ZIP_FIELD_ALT2, RD.postcode())
-                    self.enter_text(SHIPPING_COUNTRY_FIELD_ALT2, 'USA')
+                    self.context.page.locator(SHIPPING_PHONE_FIELD_ALT2).fill(RD.phone_number())
+                    self.context.page.locator(SHIPPING_ADDRESS_FIELD_ALT2).fill(RD.address_line())
+                    self.context.page.locator(SHIPPING_CITY_FIELD_ALT2).fill(RD.town())
+                    self.context.page.locator(SHIPPING_STATE_FIELD_ALT2).fill(RD.state())
+                    self.context.page.locator(SHIPPING_ZIP_FIELD_ALT2).fill(RD.postcode())
+                    self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT2).fill('USA')
             elif 'rd' in url or 'detox' in url:
-                self.enter_text(SHIPPING_PHONE_FIELD_ALT, RD.phone_number())
-                self.enter_text(SHIPPING_ADDRESS_FIELD_ALT, RD.address_line())
-                self.enter_text(SHIPPING_CITY_FIELD_ALT, RD.town())
-                self.enter_text(SHIPPING_STATE_FIELD_ALT, RD.state())
-                self.enter_text(SHIPPING_ZIP_FIELD_ALT, RD.postcode())
-                self.enter_text(SHIPPING_COUNTRY_FIELD_ALT, 'USA')
+                self.context.page.locator(SHIPPING_PHONE_FIELD_ALT).fill(RD.phone_number())
+                self.context.page.locator(SHIPPING_ADDRESS_FIELD_ALT).fill(RD.address_line())
+                self.context.page.locator(SHIPPING_CITY_FIELD_ALT).fill(RD.town())
+                self.context.page.locator(SHIPPING_STATE_FIELD_ALT).fill(RD.state())
+                self.context.page.locator(SHIPPING_ZIP_FIELD_ALT).fill(RD.postcode())
+                self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT).fill('USA')
             else:
-                self.enter_text(SHIPPING_PHONE_FIELD, RD.phone_number())
-                self.enter_text(SHIPPING_ADDRESS_FIELD, RD.address_line())
-                self.enter_text(SHIPPING_CITY_FIELD, RD.town())
-                self.enter_text(SHIPPING_STATE_FIELD, RD.state())
-                self.enter_text(SHIPPING_ZIP_FIELD, RD.postcode())
-                self.enter_text(SHIPPING_COUNTRY_FIELD, 'USA')
-            self.click(SHIPPING_SUBMIT_BUTTON)
-            time.sleep(0.5)
+                self.context.page.locator(SHIPPING_PHONE_FIELD).fill(RD.phone_number())
+                self.context.page.locator(SHIPPING_ADDRESS_FIELD).fill(RD.address_line())
+                self.context.page.locator(SHIPPING_CITY_FIELD).fill(RD.town())
+                self.context.page.locator(SHIPPING_STATE_FIELD).fill(RD.state())
+                self.context.page.locator(SHIPPING_ZIP_FIELD).fill(RD.postcode())
+                self.context.page.locator(SHIPPING_COUNTRY_FIELD).fill('USA')
+            self.context.page.locator(SHIPPING_SUBMIT_BUTTON).click()
             print('>>>Successfully entered shipping details')
             common_variables.docuseries_address_already_filled = True
 
     def retry_clicking_button(self, button, next_page):
-        self.click(button)
+        self.context.page.locator(button).click()
         try:
             self.wait_for_navigation(next_page, timeout=5000)
         except Exception as E:
             print(f'===> Issue with clicking button "{button}", page was not changed to {next_page}, retrying...')
             print(f'Error: {E}')
-            self.click(button)
-            time.sleep(0.5)
+            self.context.page.locator(button).click()
             self.wait_for_navigation(next_page, timeout=30000)
             print('===> Second try was successful')

@@ -7,7 +7,7 @@ from common_functions.parse_csv import parse_banner_mapping
 
 class BlogPage(BasePage):
     def __init__(self, context):
-        BasePage.__init__(self, context)
+        super().__init__(context)
 
 
     def open_blog_page(self):
@@ -15,9 +15,9 @@ class BlogPage(BasePage):
 
     def select_blog_dropdown_category(self, dropdown, selection):
         dropdown_element = f"//a[@class='{dropdown} dropdown-toggle']"
-        self.hover(dropdown_element)
+        self.context.page.locator(dropdown_element).hover()
         dropdown_category = f"//li[a[contains(text(), {selection})]]"
-        self.click(dropdown_category)
+        self.context.page.locator(dropdown_category).click()
 
     def verify_visible_banner_redirects(self):
         self.context.page.wait_for_load_state("load", timeout=BasePage.get_timeout(self))
@@ -38,9 +38,11 @@ class BlogPage(BasePage):
             print(f"🔍 Clicking banner: {banner_id}")
             if banner_id not in redirect_map:
                 raise AssertionError(f"❌ Banner '{banner_id}' is visible but not found in redirect CSV")
-            self.verify_element_visible(f'[data-id="{banner_id}"]')
+            banner_locator = self.context.page.locator(f'[data-id="{banner_id}"]')
+            if not banner_locator.is_visible():
+                raise AssertionError(f"❌ Banner '{banner_id}' is not visible")
             with self.context.page.context.expect_page() as new_page_info:
-                self.context.page.locator(f'[data-id="{banner_id}"]').click()
+                banner_locator.click()
             new_page = new_page_info.value
             opened_pages.append((banner_id, new_page))
         # Step 3: Now go through each opened page and verify its URL
@@ -57,6 +59,5 @@ class BlogPage(BasePage):
         article_base_id = common_variables.blog_this_week_article
         for i in range(3):
             full_id = f'{article_base_id}-{i}'
-            self.click(f'#{full_id}')
-            self.context.page.wait_for_load_state("load", timeout=BasePage.get_timeout(self))
+            self.context.page.locator(f'#{full_id}').click()
             self.verify_visible_banner_redirects()

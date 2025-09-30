@@ -8,7 +8,7 @@ from locators import *
 
 class OptInPage(BasePage):
     def __init__(self, context):
-        BasePage.__init__(self, context)
+        super().__init__(context)
 
     def register_in_opt_in_page(self):
         self.handle_cookie_banner()
@@ -16,13 +16,11 @@ class OptInPage(BasePage):
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
         if common_variables.funnel == 'lg_live':
-            self.enter_text(OPTIN_NAME_FIELD_AD_LIVE, common_variables.supplement_funnel_name)
+            self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(common_variables.supplement_funnel_name)
         else:
-            self.enter_text(OPTIN_NAME_FIELD, common_variables.supplement_funnel_name)
-        self.enter_text(OPTIN_EMAIL_FIELD, common_variables.supplement_funnel_email)
-        time.sleep(2)
-        self.click(REGISTER_BUTTON)
-        time.sleep(1)
+            self.context.page.locator(OPTIN_NAME_FIELD).fill(common_variables.supplement_funnel_name)
+        self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
+        self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
         if common_variables.funnel.startswith('bb_ev'):
             common_variables.funnel = 'bb_ev'
         elif common_variables.funnel.startswith('bb_live'):

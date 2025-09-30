@@ -8,36 +8,41 @@ import locators
 
 class SupplementStartPage(BasePage):
     def __init__(self, context):
-        BasePage.__init__(self, context)
+        super().__init__(context)
 
     def supplement_funnel_buy_bottles(self, amount, funnel):
+        self.disable_chat()
+        from playwright.sync_api import expect
         common_variables.supplement_funnel_email = RD.automation_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'===> Buying {amount} bottle...')
         if amount == '11':
-            self.click(BUY_5_BOTTLES_BUTTON)
-            time.sleep(0.5)
-            self.click(BUY_SPECIAL_B4G7_OFFER_BUTTON)
+            self.context.page.locator(BUY_5_BOTTLES_BUTTON).click()
+            self.context.page.locator(BUY_SPECIAL_B4G7_OFFER_BUTTON).click()
         elif amount == '5':
-            self.click(BUY_5_BOTTLES_BUTTON)
-            time.sleep(0.5)
-            self.click(BUY_MOST_POPULAR_BUTTON)
+            self.context.page.locator(BUY_5_BOTTLES_BUTTON).click()
+            self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
         else:
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
-            self.click(button_locator)
-        time.sleep(2)
-        self.find_element(FIRST_NAME_FIELD).press_sequentially(common_variables.supplement_funnel_name)
-        self.find_element(LAST_NAME_FIELD).press_sequentially(RD.last_name())
-        self.find_element(EMAIL_FIELD).press_sequentially(common_variables.supplement_funnel_email)
-        self.find_element(PHONE_FIELD).press_sequentially(RD.phone_number())
-        self.find_element(ADDRESS_FIELD).press_sequentially(RD.address_line())
-        self.find_element(CITY_FIELD).press_sequentially(RD.town())
-        self.find_element(COUNTRY_FIELD).press_sequentially('USA')
-        self.find_element(STATE_FIELD).press_sequentially('CA')
-        self.find_element(ZIP_FIELD).press_sequentially(RD.postcode())
+            self.context.page.locator(button_locator).click()
+        name_locator = self.context.page.locator(FIRST_NAME_FIELD)
+        expect(name_locator).to_be_editable()
+        name_locator.fill(common_variables.supplement_funnel_name)
+        # self.context.page.locator(FIRST_NAME_FIELD).fill(common_variables.supplement_funnel_name)
+        self.context.page.locator(LAST_NAME_FIELD).fill(RD.last_name())
+        self.context.page.locator(EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
+        self.context.page.locator(PHONE_FIELD).fill(RD.phone_number())
+        self.context.page.locator(ADDRESS_FIELD).fill(RD.address_line())
+        self.context.page.locator(CITY_FIELD).fill(RD.town())
+        print(f'Funnel: {common_variables.funnel}')
+        if common_variables.funnel in ['restore_vision', 'restore_vision_b2g3']:
+            self.context.page.locator(COUNTRY_FIELD).select_option('USA')
+        else:
+            self.context.page.locator(COUNTRY_FIELD).fill('USA')
+        self.context.page.locator(STATE_FIELD).fill('CA')
+        self.context.page.locator(ZIP_FIELD).fill(RD.postcode())
         self.populate_cc_details()
         self.wait_for_navigation(
             getattr(common_variables, f"{funnel.lower().replace(' ', '_')}_first_upsell_url"), timeout=30000)
-        time.sleep(0.5)
-        self.verify_element_visible(YES_UPGRADE_BUTTON)
+        expect(self.context.page.locator(YES_UPGRADE_BUTTON)).to_be_visible()
         print(f'===> Successfully bought {amount} bottle')
