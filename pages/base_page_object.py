@@ -26,12 +26,12 @@ class BasePage(object):
         expect(self.context.page.locator(locator)).to_have_text(expected_text)
 
     def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
-        self.disable_chat()
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
         cc_number.wait_for(state="visible", timeout=15000)
         for attempt in range(max_retries):
             print(f'Attempting CC number entry (Attempt {attempt + 1}/{max_retries})...')
             try:
+                self.disable_chat()
                 # Ensure the field is cleared before typing
                 cc_number.fill("")
                 time.sleep(0.5)
@@ -66,12 +66,6 @@ class BasePage(object):
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.fill(common_variables.test_cc_zip)
         self.retry_cc_number_entry(submit_button=submit_button)
-        # cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
-        # cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
-        # time.sleep(0.5)
-        # self.context.page.locator(submit_button).click()
-        # expect(self.context.page.locator(LOADER)).not_to_be_visible(timeout=20000)
-        # print('===> Populated CC details')
 
     def navigate_to_url(self, url):
         base_url = common_variables.used_base_url
