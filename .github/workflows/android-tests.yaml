@@ -1,0 +1,29 @@
+name: Android Tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag/s to run (e.g., @WIP @smoke @regression @unbroken @restore_gut)'
+        required: false
+        default: '@WIP'
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        required: false
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - new
+  schedule:
+    - cron: '0 21 * * *'
+
+jobs:
+  android:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      device: android
+      tags: ${{ github.event_name == 'schedule' && '@restore_vision,@unbroken_live,@nightly' || inputs.tags }}
+      environment: ${{ github.event_name == 'schedule' && 'staging' || inputs.environment }}
+    secrets: inherit
