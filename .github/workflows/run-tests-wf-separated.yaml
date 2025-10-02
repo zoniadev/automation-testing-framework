@@ -1,0 +1,44 @@
+name: Manual Test Run
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Tag/s to run (e.g., @WIP @smoke @regression @unbroken @restore_gut)'
+        required: true
+        default: '@WIP'
+        type: string
+      device:
+        description: 'Device to run tests on'
+        required: true
+        default: 'desktop'
+        type: choice
+        options:
+          - desktop
+          - iphone
+          - iphone_landscape
+          - android
+          - android_landscape
+          - ipad
+          - ipad_landscape
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - new
+
+  repository_dispatch:
+    types: [Trigger Automation Tests]
+
+jobs:
+  manual:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      device: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.device || github.event.inputs.device }}
+      tags: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.tags || github.event.inputs.tags }}
+      environment: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.environment || github.event.inputs.environment }}
+      report_scope: ${{ format('manual/{0}', github.event_name == 'repository_dispatch' && github.event.client_payload.device || github.event.inputs.device) }}
+    secrets: inherit

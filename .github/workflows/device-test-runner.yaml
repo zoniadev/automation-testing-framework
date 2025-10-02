@@ -1,0 +1,168 @@
+name: Device Test Runner
+
+on:
+  workflow_call:
+    inputs:
+      device:
+        required: true
+        type: string
+      tags:
+        required: false
+        type: string
+        default: ''
+      environment:
+        required: false
+        type: string
+        default: 'staging'
+      report_scope:
+        required: false
+        type: string
+        default: ''
+    secrets:
+      SMTP_USER_NASKO:
+        required: true
+      SMTP_PASS_NASKO:
+        required: true
+      SMTP_HOST_NASKO:
+        required: true
+      SMTP_PORT_NASKO:
+        required: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      DEVICE: ${{ inputs.device }}
+      REPORT_SCOPE: ${{ inputs.report_scope != '' && inputs.report_scope || inputs.device }}
+      REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          npm install -g allure-commandline --save-dev
+          npm install nodemailer --save-dev
+
+      - name: Install missing libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libwoff1 \
+            libevent-2.1-7 \
+            libopus0 \
+            libgstreamer-plugins-base1.0-0 \
+            libgstreamer1.0-0 \
+            libharfbuzz-icu0 \
+            libhyphen0 \
+            libmanette-0.2-0 \
+            libflite1 \
+            libgles2
+
+      - name: Install Chromium browser for Playwright
+        run: |
+          playwright install chromium
+
+      - name: Run tests
+        run: |
+          set -euo pipefail
+          DEVICE="${{ inputs.device }}"
+          TAGS_INPUT="${{ inputs.tags }}"
+          ENVIRONMENT="${{ inputs.environment }}"
+          mkdir -p "allure-results/$REPORT_SCOPE"
+          if [ -n "$TAGS_INPUT" ]; then
+            TAGS_INPUT=$(echo "$TAGS_INPUT" | tr ' ' ',' | sed 's/,\{2,\}/,/g' | sed 's/^,//;s/,$//')
+            TAGS="--tags $TAGS_INPUT"
+          else
+            TAGS=""
+          fi
+          echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT"
+          behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
+        shell: bash
+
+      - name: Send failure email
+        if: always()
+        run: |
+          echo "Starting email script..."
+          node .github/scripts/send-email.js
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ github.run_number }}
+
+      - name: Load test report history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Prepare Allure workspace
+        if: always()
+        run: |
+          set -euo pipefail
+          DEVICE="${{ inputs.device }}"
+          mkdir -p allure-history
+          if [ -d gh-pages ]; then
+            rsync -a --exclude '.git' gh-pages/ allure-history/
+          fi
+          mkdir -p "allure-history/$REPORT_SCOPE"
+        shell: bash
+
+      - name: Generate Allure report
+        if: always()
+        run: |
+          set -euo pipefail
+          DEVICE="${{ inputs.device }}"
+          RUN_ID="${{ github.run_number }}"
+          RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/latest/history"
+
+          if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
+            echo "No allure results found for $DEVICE. Skipping report generation."
+            exit 0
+          fi
+
+          if [ -d "$HISTORY_SNAPSHOT" ]; then
+            mkdir -p "$RESULTS_DIR/history"
+            rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
+          fi
+
+          allure generate "$RESULTS_DIR" --clean -o "allure-history/$REPORT_SCOPE/$RUN_ID"
+          rm -rf "allure-history/$REPORT_SCOPE/latest"
+          cp -R "allure-history/$REPORT_SCOPE/$RUN_ID" "allure-history/$REPORT_SCOPE/latest"
+        shell: bash
+
+      - name: Ensure Jekyll is disabled
+        if: always()
+        run: |
+          touch allure-history/.nojekyll
+        shell: bash
+
+      - name: Publish test report
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+
+      - name: Post the link to the report
+        if: always()
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: 'Test report'
+          state: 'success'
+          sha: ${{ github.sha }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ github.run_number }}
+
