@@ -1,3 +1,0 @@
-Executing step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "ad-booster-packages-monthly" page
-===> Navigated to http://staging.zonia.com/ad-booster-packages-monthly
-Completed step: Verify "SCROLL_ARROW_BUTTON" scrolling to "scroll_down" on "ad-booster-packages-monthly" page
