@@ -86,18 +86,6 @@ jobs:
           behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
-      - name: Send failure email
-        if: always()
-        run: |
-          echo "Starting email script..."
-          node .github/scripts/send-email.js
-        env:
-          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ github.run_number }}
-
       - name: Load test report history
         uses: actions/checkout@v3
         if: always()
@@ -118,12 +106,52 @@ jobs:
           mkdir -p "allure-history/$REPORT_SCOPE"
         shell: bash
 
+      - name: Determine report sequence
+        if: always()
+        run: |
+          set -euo pipefail
+          REPORT_SCOPE="${REPORT_SCOPE}"
+          HISTORY_ROOT="allure-history/$REPORT_SCOPE"
+          SEQUENCE_FILE="$HISTORY_ROOT/sequence.txt"
+
+          mkdir -p "$HISTORY_ROOT"
+
+          LAST_SEQUENCE=0
+          if [ -f "$SEQUENCE_FILE" ]; then
+            VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
+            if [ -n "$VALUE" ]; then
+              LAST_SEQUENCE="$VALUE"
+            fi
+          fi
+
+          NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
+          while [ -d "$HISTORY_ROOT/$NEXT_SEQUENCE" ]; do
+            NEXT_SEQUENCE=$((NEXT_SEQUENCE + 1))
+          done
+
+          printf '%s\n' "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
+          echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
+          echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE."
+        shell: bash
+
+      - name: Send failure email
+        if: always()
+        run: |
+          echo "Starting email script..."
+          node .github/scripts/send-email.js
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_SEQUENCE }}
+
       - name: Generate Allure report
         if: always()
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-          RUN_ID="${{ github.run_number }}"
+          REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
           RESULTS_DIR="allure-results/$REPORT_SCOPE"
           HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/latest/history"
 
@@ -137,9 +165,9 @@ jobs:
             rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
           fi
 
-          allure generate "$RESULTS_DIR" --clean -o "allure-history/$REPORT_SCOPE/$RUN_ID"
+          allure generate "$RESULTS_DIR" --clean -o "allure-history/$REPORT_SCOPE/$REPORT_SEQUENCE"
           rm -rf "allure-history/$REPORT_SCOPE/latest"
-          cp -R "allure-history/$REPORT_SCOPE/$RUN_ID" "allure-history/$REPORT_SCOPE/latest"
+          cp -R "allure-history/$REPORT_SCOPE/$REPORT_SEQUENCE" "allure-history/$REPORT_SCOPE/latest"
         shell: bash
 
       - name: Ensure Jekyll is disabled
@@ -164,5 +192,6 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ github.run_number }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_SEQUENCE }}
+
 
