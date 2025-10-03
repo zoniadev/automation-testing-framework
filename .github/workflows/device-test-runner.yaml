@@ -18,6 +18,10 @@ on:
         required: false
         type: string
         default: ''
+      report_name:
+        required: false
+        type: string
+        default: ''
     secrets:
       SMTP_USER_NASKO:
         required: true
@@ -34,6 +38,7 @@ jobs:
     env:
       DEVICE: ${{ inputs.device }}
       REPORT_SCOPE: ${{ inputs.report_scope != '' && inputs.report_scope || inputs.device }}
+      REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
       - name: Checkout code
@@ -103,35 +108,36 @@ jobs:
           if [ -d gh-pages ]; then
             rsync -a --exclude '.git' gh-pages/ allure-history/
           fi
-          mkdir -p "allure-history/$REPORT_SCOPE"
+            mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
         shell: bash
 
       - name: Determine report sequence
         if: always()
         run: |
           set -euo pipefail
-          REPORT_SCOPE="${REPORT_SCOPE}"
-          HISTORY_ROOT="allure-history/$REPORT_SCOPE"
-          SEQUENCE_FILE="$HISTORY_ROOT/sequence.txt"
+            REPORT_SCOPE="${REPORT_SCOPE}"
+            REPORT_NAME="${REPORT_NAME}"
+            HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
+            SEQUENCE_FILE="$HISTORY_ROOT/.sequence"
 
-          mkdir -p "$HISTORY_ROOT"
+            mkdir -p "$HISTORY_ROOT"
 
-          LAST_SEQUENCE=0
-          if [ -f "$SEQUENCE_FILE" ]; then
-            VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
-            if [ -n "$VALUE" ]; then
-              LAST_SEQUENCE="$VALUE"
+            LAST_SEQUENCE=0
+            if [ -f "$SEQUENCE_FILE" ]; then
+              VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
+              if [ -n "$VALUE" ]; then
+                LAST_SEQUENCE="$VALUE"
+              fi
             fi
-          fi
 
-          NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
-          while [ -d "$HISTORY_ROOT/$NEXT_SEQUENCE" ]; do
-            NEXT_SEQUENCE=$((NEXT_SEQUENCE + 1))
-          done
+            NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
+            while [ -d "$HISTORY_ROOT/$NEXT_SEQUENCE" ]; do
+              NEXT_SEQUENCE=$((NEXT_SEQUENCE + 1))
+            done
 
-          printf '%s\n' "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
-          echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
-          echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE."
+            printf "%s\n" "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
+            echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
+            echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE and name $REPORT_NAME."
         shell: bash
 
       - name: Send failure email
@@ -144,30 +150,32 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_SEQUENCE }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
 
       - name: Generate Allure report
         if: always()
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-          REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
-          RESULTS_DIR="allure-results/$REPORT_SCOPE"
-          HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/latest/history"
+            REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
+            REPORT_NAME="${REPORT_NAME}"
+            RESULTS_DIR="allure-results/$REPORT_SCOPE"
+            HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
 
-          if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
-            echo "No allure results found for $DEVICE. Skipping report generation."
-            exit 0
-          fi
+            if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
+              echo "No allure results found for $DEVICE. Skipping report generation."
+              exit 0
+            fi
 
-          if [ -d "$HISTORY_SNAPSHOT" ]; then
-            mkdir -p "$RESULTS_DIR/history"
-            rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
-          fi
+            if [ -d "$HISTORY_SNAPSHOT" ]; then
+              mkdir -p "$RESULTS_DIR/history"
+              rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
+            fi
 
-          allure generate "$RESULTS_DIR" --clean -o "allure-history/$REPORT_SCOPE/$REPORT_SEQUENCE"
-          rm -rf "allure-history/$REPORT_SCOPE/latest"
-          cp -R "allure-history/$REPORT_SCOPE/$REPORT_SEQUENCE" "allure-history/$REPORT_SCOPE/latest"
+            OUTPUT_DIR="allure-history/$REPORT_SCOPE/$REPORT_NAME/$REPORT_SEQUENCE"
+            allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
+            rm -rf "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
+            cp -R "$OUTPUT_DIR" "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
         shell: bash
 
       - name: Ensure Jekyll is disabled
@@ -192,6 +200,7 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_SEQUENCE }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+
 
 

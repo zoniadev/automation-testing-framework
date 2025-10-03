@@ -37,6 +37,7 @@ jobs:
   manual:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
+      report_name: desktop-manual-run
       device: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.device || github.event.inputs.device }}
       tags: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.tags || github.event.inputs.tags }}
       environment: ${{ github.event_name == 'repository_dispatch' && github.event.client_payload.environment || github.event.inputs.environment }}
