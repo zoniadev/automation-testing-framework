@@ -1,0 +1,270 @@
+Executing step: user register in "km_live" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to http://staging.zonia.com/young-and-thriving
+Cookie banner not detected.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_live" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/km-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/km-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/km-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/km-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+Actual title: Please enter below your shipping address where we can ship your supplement.
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/km-restore-sleep-special-resilience-code"
+===> URL successfully changed to "http://staging.zonia.com/km-restore-sleep-special-resilience-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "3" bottles and "upgrade" in upsell/downsell for Restore Sleep...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/km-rs-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-3-1']", page was not changed to km-rs-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/km-rs-6-more-bottles.*')'
+Actual value: http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411 
+Call log:
+PageAssertions.to_have_url with timeout 5000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/km-restore-sleep-special-resilience-code?id=68e4409568f8339e74db3411"
+
+Failed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Test failed on page: 'http://staging.zonia.com/km-rs-6-more-bottles?id=68e4409568f8339e74db3411'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Live_nightly_--_@1.1__20251006-222128.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:391)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:391)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 400 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 400 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: the server responded with a status of 400 ()
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at t (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:10169)
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.JE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.68.0/bundle.min.js:2:36450)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
