@@ -1,0 +1,76 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to http://staging.zonia.com/restore-sleep-special
+===> Buying 1 bottle...
+Funnel: restore_sleep
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-sleep-6-more-bottles"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rs-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Sleep
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rs-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rs-trial"
+===> URL successfully changed to "http://staging.zonia.com/rs-trial"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rs-trial"
+===> URL successfully changed to "http://staging.zonia.com/rs-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome"
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+Failed step: user complete registration
+Test failed on page: 'http://staging.zonia.com/welcome'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_nightly_--_@1.1__20251006-071616.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID
+--- TypeError: Failed to fetch
+    at https://browser.sentry-cdn.com/7.120.4/bundle.tracing.replay.min.js:2:11612
+    at dataTagSendData (https://stapecdn.com/dtag/v8.js:1:2348)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:838:170
+    at zd.KE (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:727:557)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:291:187)
+    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:466)
+    at ab (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:170:209)
+    at Za (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:169:527)
+    at zd.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:230:473)
+    at k.invoke (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:362)
+    at k.Kb (https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:206:559)
+    at https://www.googletagmanager.com/gtm.js?id=GTM-KS8CWFR5:820:227
+    at sentryWrapped (https://browser.sentry-cdn.com/7.120.4/bundle.tracing.replay.min.js:2:199576)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
