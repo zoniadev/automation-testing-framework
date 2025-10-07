@@ -17,4 +17,6 @@ class WelcomePage(BasePage):
 
     def skip_linking_social_media_accounts(self):
         time.sleep(0.5)
+        self.handle_cookie_banner()
         self.context.page.locator(SKIP_LINKING_BUTTON).click()
+        print('===> Skipped linking social media accounts')

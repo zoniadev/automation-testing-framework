@@ -32,6 +32,7 @@ class BasePage(object):
             print(f'Attempting CC number entry (Attempt {attempt + 1}/{max_retries})...')
             try:
                 self.disable_chat()
+                time.sleep(0.5)
                 # Ensure the field is cleared before typing
                 cc_number.fill("")
                 time.sleep(0.5)
@@ -159,19 +160,14 @@ class BasePage(object):
             error_count = len(errors)
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
-    def handle_cookie_banner(self):
-        button = self.context.page.locator(ACCEPT_COOKIES_BUTTON)
-        if button.is_visible():
-            print("Cookie banner detected. Attempting to accept...")
-            try:
-                self.context.page.locator(ACCEPT_COOKIES_BUTTON).click()
-                print("Cookie banner accepted.")
-            except TimeoutError:
-                print("Accept button not found within the timeout.")
-            except Exception as e:
-                print(f"An error occurred while handling the cookie banner: {e}")
-        else:
-            print("Cookie banner not detected.")
+    def handle_cookie_banner(self, timeout=5000):
+        banner = self.context.page.locator(ACCEPT_COOKIES_BUTTON)
+        try:
+            banner.wait_for(state="visible", timeout=timeout)
+            banner.click()
+            print("===> Cookie banner accepted.")
+        except Exception:
+            print("===> Cookie banner not present or not visible.")
 
     def verify_placeholder_text(self, locator, expected_placeholder):
         element = self.context.page.locator(locator)

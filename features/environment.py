@@ -1,5 +1,6 @@
 import datetime
 import os
+import re
 import shutil
 import allure
 from playwright.sync_api import sync_playwright
@@ -61,10 +62,23 @@ def before_scenario(context, scenario):
     else:
         context.context = context.browser.new_context(
             viewport={'width': 1280, 'height': 720},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 ZoniaTestingBrowser",
             record_video_dir=f"screenshots/videos/{context.scenario.name}",
             record_video_size={"width": 640, "height": 480}
         )
+    third_party_routes = [
+        re.compile(r".*liflolrb\.marketise\.me/.*"),
+        re.compile(r".*browser\.sentry-cdn\.com/.*"),
+        re.compile(r".*js\.sentry-cdn\.com/.*"),  # add this
+        re.compile(r".*stapecdn\.com/.*"),
+        re.compile(r".*googletagmanager\.com/.*"),
+    ]
+    def _block_third_party(route):
+        route.fulfill(status=204, body="")
+
+    for blocked_route in third_party_routes:
+        context.context.route(blocked_route, _block_third_party)
+
     context.page = context.context.new_page()
 
     def handle_console_message(msg):

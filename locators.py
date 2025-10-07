@@ -57,7 +57,7 @@ USER_MENU_BUTTON = "//li[@id='top_header_menu_account']//a[@id='subname']"
 #WelcomePageLocators:
 PASSWORD_POPUP_FIELD = "//*[@placeholder='Enter password']"
 SAVE_PASSWORD_BUTTON = "//*[@class[contains(., 'save-password')] and @type='submit']"
-SKIP_LINKING_BUTTON = "//*[@class='home-button']"
+SKIP_LINKING_BUTTON = "//*[@unique-id='home-btn-1']"
 
 #OptInPageLocators:
 OPTIN_NAME_FIELD = "//input[@id='first-name']"
@@ -106,7 +106,7 @@ SHIPPING_COUNTRY_FIELD_ALT2 = "//input[@unique-identifier='country-2']"
 SHIPPING_SUBMIT_BUTTON = "//button[@id='save-shipping-address']"
 
 #CookieBannerPopupLocators:
-ACCEPT_COOKIES_BUTTON = "//div[@id='cookiebanner']//button[text()='Accept']"
+ACCEPT_COOKIES_BUTTON = "//button[@class='cookie-close-btn']"
 
 #ChatLocators:
 CHAT_FRAME = '//iframe[@title="Chat"]'
