@@ -59,6 +59,7 @@ def before_scenario(context, scenario):
                                                       record_video_dir=f"screenshots/videos/{context.scenario.name}",
                                                       record_video_size={"width": 640, "height": 480}
                                                       )
+        common_variables.mobile_run = True
     else:
         context.context = context.browser.new_context(
             viewport={'width': 1280, 'height': 720},
