@@ -1,9 +1,0 @@
-Executing step: user register in "tf_ev_meals" Opt In page
-Scenario will use "UnionPay" card "6221261111117766"
-===> Navigated to http://staging.zonia.com/mb2/tf-12-detox-meals
-===> Cookie banner not present or not visible.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "tf_ev_meals" Opt In page
