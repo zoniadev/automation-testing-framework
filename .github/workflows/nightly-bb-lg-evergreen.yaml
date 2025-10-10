@@ -2,7 +2,7 @@ name: Nightly BB and LG Evergreen
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   test:
