@@ -1,0 +1,16 @@
+name: Nightly TF and IS Evergreen
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-tf-is-evergreen
+      device: desktop
+      tags: '@tf_evergreen,@is_evergreen'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit
