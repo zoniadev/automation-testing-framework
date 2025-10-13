@@ -230,7 +230,7 @@ class SupplementUpsellPage(BasePage):
     def retry_clicking_button(self, button, next_page):
         self.context.page.locator(button).click()
         try:
-            self.wait_for_navigation(next_page, timeout=5000)
+            self.wait_for_navigation(next_page, timeout=15000)
         except Exception as E:
             print(f'===> Issue with clicking button "{button}", page was not changed to {next_page}, retrying...')
             print(f'Error: {E}')
