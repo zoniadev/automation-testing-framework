@@ -17,9 +17,13 @@ class OptInPage(BasePage):
         print(f'>>> Registering in Main Opt in page...')
         if common_variables.funnel == 'lg_live':
             self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(common_variables.supplement_funnel_name)
+            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
+        elif common_variables.mobile_run:
+            self.context.page.locator(MOBILE_OPTIN_NAME_FIELD).type(common_variables.supplement_funnel_name)
+            self.context.page.locator(MOBILE_OPTIN_EMAIL_FIELD).type(common_variables.supplement_funnel_email, delay=50)
         else:
             self.context.page.locator(OPTIN_NAME_FIELD).fill(common_variables.supplement_funnel_name)
-        self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
+            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
         self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
         if common_variables.funnel.startswith('bb_ev'):
             common_variables.funnel = 'bb_ev'

@@ -61,8 +61,10 @@ SKIP_LINKING_BUTTON = "//*[@unique-id='home-btn-1']"
 
 #OptInPageLocators:
 OPTIN_NAME_FIELD = "//input[@id='first-name']"
+MOBILE_OPTIN_NAME_FIELD = "//input[@id='first-name-2']"
 OPTIN_NAME_FIELD_AD_LIVE = "//input[@data-id='first-name']"
 OPTIN_EMAIL_FIELD = "//input[@id='email']"
+MOBILE_OPTIN_EMAIL_FIELD = "//input[@unique-identifier='email-2-1']"
 PHONE_CHECKBOX = "//input[@name='hasPhone']"
 OPTIN_PHONE_FIELD = "//input[@id='phone']"
 REGISTER_BUTTON = "//*[@unique-id='register-btn-1']"
