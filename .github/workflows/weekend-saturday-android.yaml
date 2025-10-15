@@ -3,6 +3,7 @@ name: Weekend Saturday Android
 on:
   schedule:
     - cron: '0 11 * * 6'
+  workflow_dispatch:
 
 jobs:
   test:
