@@ -1,0 +1,16 @@
+name: Nightly Current Live Series
+
+on:
+  schedule:
+    - cron: '0 18 * * *'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-current_live_series
+      device: desktop
+      tags: '@ageless_live'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit

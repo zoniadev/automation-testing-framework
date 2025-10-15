@@ -1,0 +1,16 @@
+name: Weekend Sunday Android Landscape
+
+on:
+  schedule:
+    - cron: '0 7 * * 0'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: weekend-sunday-android_landscape
+      device: android_landscape
+      tags: '@bb_evergreen,@nightly'
+      environment: staging
+      report_scope: mobile
+    secrets: inherit

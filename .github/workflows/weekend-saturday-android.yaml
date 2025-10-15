@@ -1,0 +1,16 @@
+name: Weekend Saturday Android
+
+on:
+  schedule:
+    - cron: '0 11 * * 6'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: weekend-saturday-android
+      device: android
+      tags: '@bb_evergreen,@nightly'
+      environment: staging
+      report_scope: mobile
+    secrets: inherit

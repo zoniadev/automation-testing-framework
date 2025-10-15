@@ -1,0 +1,16 @@
+name: Nightly Restore Vision, Gut, and Life
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-restore-vision-gut-life
+      device: desktop
+      tags: '@restore_vision,@restore_gut,@restore_life'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit

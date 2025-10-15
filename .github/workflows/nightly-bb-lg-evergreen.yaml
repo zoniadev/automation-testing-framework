@@ -1,0 +1,16 @@
+name: Nightly BB and LG Evergreen
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-bb-lg-evergreen
+      device: desktop
+      tags: '@bb_evergreen,@ageless_evergreen'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit
