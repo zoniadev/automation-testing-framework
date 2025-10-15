@@ -3,6 +3,7 @@ name: Weekend Saturday iPhone
 on:
   schedule:
     - cron: '0 7 * * 6'
+  workflow_dispatch:
 
 jobs:
   test:

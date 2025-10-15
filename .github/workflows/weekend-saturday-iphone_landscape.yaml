@@ -3,6 +3,7 @@ name: Weekend Saturday iPhone Landscape
 on:
   schedule:
     - cron: '0 9 * * 6'
+  workflow_dispatch:
 
 jobs:
   test:
