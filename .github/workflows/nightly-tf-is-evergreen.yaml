@@ -2,7 +2,7 @@ name: Nightly TF and IS Evergreen
 
 on:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 0 * * *'
 
 jobs:
   test:

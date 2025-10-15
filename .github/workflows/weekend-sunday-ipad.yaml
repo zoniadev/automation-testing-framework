@@ -1,0 +1,16 @@
+name: Weekend Sunday iPad
+
+on:
+  schedule:
+    - cron: '0 9 * * 0'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: weekend-sunday-ipad
+      device: ipad
+      tags: '@bb_evergreen,@nightly'
+      environment: staging
+      report_scope: mobile
+    secrets: inherit

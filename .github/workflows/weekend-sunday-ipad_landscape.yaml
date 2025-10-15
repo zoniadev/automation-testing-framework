@@ -1,0 +1,16 @@
+name: Weekend Sunday iPad Landscape
+
+on:
+  schedule:
+    - cron: '0 11 * * 0'
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: weekend-sunday-ipad_landscape
+      device: ipad_landscape
+      tags: '@bb_evergreen,@nightly'
+      environment: staging
+      report_scope: mobile
+    secrets: inherit
