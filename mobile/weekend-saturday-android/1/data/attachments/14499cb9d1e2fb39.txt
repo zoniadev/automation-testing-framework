@@ -1,0 +1,121 @@
+Executing step: user register in "tf_ev_meals" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to http://staging.zonia.com/mb2/tf-12-detox-meals
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+>>> Navigation via tf_ev_join_zonia_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/mb2/tf-join-zonia.*')'
+Actual value: http://staging.zonia.com/mb2/tf-12-detox-meals 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-replay-weekend"
+>>> Navigation via tf_ev_rw_main_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/mb2/tf-replay-weekend.*')'
+Actual value: http://staging.zonia.com/mb2/tf-12-detox-meals 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/mb2/tf-12-detox-meals"
+
+Failed step: user register in "tf_ev_meals" Opt In page
+Test failed on page: 'http://staging.zonia.com/mb2/tf-12-detox-meals'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_nightly_--_@1.2__20251015-080821.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
