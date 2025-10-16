@@ -1,0 +1,9 @@
+Executing step: user register in "ad_ev_detox" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/admb5e/ad-detox
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_ev_detox" Opt In page
