@@ -11,7 +11,7 @@ jobs:
     with:
       report_name: weekend-sunday-ipad_landscape
       device: ipad_landscape
-      tags: '@bb_evergreen,@nightly'
+      tags: '@nightly_supplement'
       environment: staging
       report_scope: mobile
     secrets: inherit
