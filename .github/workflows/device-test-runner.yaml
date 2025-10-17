@@ -157,8 +157,8 @@ jobs:
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-            REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
-            REPORT_NAME="${REPORT_NAME}"
+            REPORT_SEQUENCE="${{ env.REPORT_SEQUENCE:?REPORT_SEQUENCE not set}}"
+            REPORT_NAME="${{ env.REPORT_NAME }}"
             RESULTS_DIR="allure-results/$REPORT_SCOPE"
             HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
 
@@ -176,6 +176,25 @@ jobs:
             allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
             rm -rf "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
             cp -R "$OUTPUT_DIR" "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
+        shell: bash
+
+      - name: Create redirect files
+        if: always()
+        run: |
+          set -euo pipefail
+          REPORT_SCOPE="${{ env.REPORT_SCOPE }}"
+          REPORT_NAME="${{ env.REPORT_NAME }}"
+          REPORT_SEQUENCE="${{ env.REPORT_SEQUENCE }}"
+          REPORT_NAME_REDIRECT_FILE="allure-history/$REPORT_SCOPE/$REPORT_NAME/index.html"
+          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_SEQUENCE/\">latest report for $REPORT_NAME</a>.</p></body></html>" > "$REPORT_NAME_REDIRECT_FILE"
+          REPORT_SCOPE_REDIRECT_FILE="allure-history/$REPORT_SCOPE/index.html"
+          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_NAME/$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_NAME/$REPORT_SEQUENCE/\">latest report for the $REPORT_SCOPE scope</a>.</p></body></html>" > "$REPORT_SCOPE_REDIRECT_FILE"
+        shell: bash
+
+      - name: Generate portal page
+        if: always()
+        run: |
+          node .github/scripts/generate-portal.js
         shell: bash
 
       - name: Ensure Jekyll is disabled
@@ -201,6 +220,3 @@ jobs:
           state: 'success'
           sha: ${{ github.sha }}
           target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
-
-
-
