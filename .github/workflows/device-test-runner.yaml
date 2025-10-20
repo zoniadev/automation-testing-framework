@@ -157,7 +157,7 @@ jobs:
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-            REPORT_SEQUENCE="${{ env.REPORT_SEQUENCE:?REPORT_SEQUENCE not set}}"
+            REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
             REPORT_NAME="${{ env.REPORT_NAME }}"
             RESULTS_DIR="allure-results/$REPORT_SCOPE"
             HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
