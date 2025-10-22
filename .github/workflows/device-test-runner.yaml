@@ -91,6 +91,16 @@ jobs:
           behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
+      - name: Copy environment properties
+        if: always()
+        run: |
+          set -euo pipefail
+          RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          if [ -f "allure-results/environment.properties" ]; then
+            cp "allure-results/environment.properties" "$RESULTS_DIR/environment.properties"
+          fi
+        shell: bash
+
       - name: Load test report history
         uses: actions/checkout@v3
         if: always()
