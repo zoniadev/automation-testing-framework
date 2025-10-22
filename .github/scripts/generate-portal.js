@@ -19,9 +19,17 @@ for (const scope of scopes) {
         const summaryPath = path.join(scopeDir, report, 'latest', 'widgets', 'summary.json');
         if (fs.existsSync(summaryPath)) {
             const fileStats = fs.statSync(summaryPath);
-            const mtime = new Date(fileStats.mtime);
+            const summary = JSON.parse(fs.readFileSync(summaryPath));
+            let reportTimestamp;
 
-            const sofiaTime = new Date(mtime.getTime() + (3 * 60 * 60 * 1000));
+            if (summary.time && typeof summary.time.stop === 'number') {
+                reportTimestamp = new Date(summary.time.stop);
+            } else {
+                // Fallback to file modification time if 'time.stop' is not available or not a number
+                reportTimestamp = new Date(fileStats.mtime);
+            }
+
+            const sofiaTime = new Date(reportTimestamp.getTime() + (3 * 60 * 60 * 1000));
 
             const day = pad(sofiaTime.getUTCDate());
             const month = pad(sofiaTime.getUTCMonth() + 1);
@@ -31,7 +39,6 @@ for (const scope of scopes) {
 
             const formattedLastRun = `${day}.${month}.${year} ${hours}:${minutes}`;
 
-            const summary = JSON.parse(fs.readFileSync(summaryPath));
             const stats = summary.statistic;
             const passed = stats.passed || 0;
             const failed = (stats.failed || 0) + (stats.broken || 0);
@@ -41,7 +48,7 @@ for (const scope of scopes) {
                 name: report,
                 passed: passed,
                 failed: failed,
-                lastRun: mtime,
+                lastRun: reportTimestamp,
                 formattedLastRun: formattedLastRun,
                 reportUrl: reportUrl
             });

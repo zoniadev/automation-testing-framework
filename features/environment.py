@@ -23,7 +23,15 @@ def before_all(context):
     headless = headless_str.lower() == "true"
     context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
 
-    allure_env_path = os.path.join("allure-results", "environment.properties")
+    allure_results_dir = "allure-results"
+    if hasattr(context.config, 'outfile') and context.config.outfile:
+        allure_results_dir = context.config.outfile
+
+    # The directory is created in the GitHub Actions workflow, but let's be safe.
+    if not os.path.exists(allure_results_dir):
+        os.makedirs(allure_results_dir)
+
+    allure_env_path = os.path.join(allure_results_dir, "environment.properties")
     with open(allure_env_path, "w") as env_file:
         env_file.write(f"Device={context.config.userdata['device'].capitalize()}\n")
         env_file.write(f"Test_run_on={env.capitalize()}\n")
@@ -52,8 +60,8 @@ def before_scenario(context, scenario):
     elif context.config.userdata['device'] == 'desktop':
         device = None
     else:
-        raise Exception('Error setting device for execution! Possible parameters are "iphone", "iphone_landscape", '
-                        '"android", "android_landscape", "ipad" and "ipad_landscape"')
+        raise Exception('Error setting device for execution! Possible parameters are "iphone", '
+                        '"iphone_landscape", "android", "android_landscape", "ipad" and "ipad_landscape"')
     if device:
         context.context = context.browser.new_context(**device,
                                                       record_video_dir=f"screenshots/videos/{context.scenario.name}",
