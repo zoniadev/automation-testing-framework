@@ -29,101 +29,27 @@ on:
         options:
           - staging
           - new
-
+      report_scope:
+        description: 'Report scope grouping (e.g., manual, nightly, mobile)'
+        required: false
+        default: 'manual'
+        type: string
+      report_name:
+        description: 'Report name (subfolder); empty uses scope/device defaults'
+        required: false
+        default: ''
+        type: string
 
   repository_dispatch:
     types: [Trigger Automation Tests]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.9"
-
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          npm install -g allure-commandline  --save-dev
-          npm install nodemailer --save-dev
-
-      - name: Install missing libraries
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libwoff1 \
-            libevent-2.1-7 \
-            libopus0 \
-            libgstreamer-plugins-base1.0-0 \
-            libgstreamer1.0-0 \
-            libharfbuzz-icu0 \
-            libhyphen0 \
-            libmanette-0.2-0 \
-            libflite1 \
-            libgles2 \
-
-      - name: Install Chromium browser for Playwright
-        run: |
-          playwright install chromium
-
-      - name: Run tests
-        run: |
-          TAGS="${{ github.event.inputs.tags }}"
-          DEVICE="${{ github.event.inputs.device }}"
-          ENVIRONMENT="${{ github.event.inputs.environment }}"
-          TAGS=$(echo "$TAGS" | sed 's/ /,/g')
-          TAGS="--tags $TAGS"
-          echo "Running tests with tags: $TAGS, device: $DEVICE on env: $ENVIRONMENT"
-          behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o allure-results | tee test-summary.txt
-
-      - name: Send failure email
-        if: always()
-        run: |
-          echo "Starting email script..."
-          node .github/scripts/send-email.js
-        env:
-          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
-
-      - name: Load test report history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Build test report
-        uses: simple-elf/allure-report-action@v1.7
-        if: always()
-        with:
-          gh_pages: gh-pages
-          allure_history: allure-history
-          allure_results: allure-results
-
-      - name: Publish test report
-        uses: peaceiris/actions-gh-pages@v3
-        if: always()
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: allure-history
-
-      - name: Post the link to the report
-        if: always()
-        uses: Sibz/github-status-action@v1
-        with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: 'Test report'
-          state: 'success'
-          sha: ${{ github.sha }}
-          target_url: https://zoniadev.github.io/automation-testing-framework/${{ github.run_number }}
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      device: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.device || 'desktop') || inputs.device }}
+      tags: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.tags || '') || inputs.tags }}
+      environment: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.environment || 'staging') || inputs.environment }}
+      report_scope: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.report_scope || 'manual') || (inputs.report_scope || 'manual') }}
+      report_name: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.report_name || '') || (inputs.report_name || '') }}
+    secrets: inherit
