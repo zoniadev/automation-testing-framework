@@ -40,16 +40,13 @@ on:
         default: ''
         type: string
 
-  repository_dispatch:
-    types: [Trigger Automation Tests]
-
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      device: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.device || 'desktop') || inputs.device }}
-      tags: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.tags || '') || inputs.tags }}
-      environment: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.environment || 'staging') || inputs.environment }}
-      report_scope: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.report_scope || 'manual') || (inputs.report_scope || 'manual') }}
-      report_name: ${{ github.event_name == 'repository_dispatch' && (github.event.client_payload.report_name || '') || (inputs.report_name || '') }}
+      device: ${{ inputs.device }}
+      tags: ${{ inputs.tags }}
+      environment: ${{ inputs.environment }}
+      report_scope: ${{ inputs.report_scope }}
+      report_name: ${{ inputs.report_name }}
     secrets: inherit
