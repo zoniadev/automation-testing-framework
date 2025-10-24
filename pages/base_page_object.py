@@ -182,3 +182,18 @@ class BasePage(object):
             const el = document.querySelector("#fc_frame");
             if (el) el.remove();
         }""")
+
+    def safe_fill(self, locator, value, timeout=30000):
+        # Wait for page to settle (safe even if already loaded)
+        self.context.page.wait_for_load_state("networkidle", timeout=timeout)
+        self.disable_chat()
+        # Re-resolve locator to avoid stale references
+        field = self.context.page.locator(locator)
+        # Defensive checks with generous timeout
+        expect(field).to_be_attached(timeout=timeout)
+        expect(field).to_be_visible(timeout=timeout)
+        expect(field).to_be_editable(timeout=timeout)
+        # Fill and verify
+        field.fill(value, timeout=timeout)
+        expect(field).to_have_value(value, timeout=timeout)
+
