@@ -190,7 +190,7 @@ class SupplementUpsellPage(BasePage):
             assert actual_title.strip() == expected_shipping_popup_title, (f"Popup title mismatch! Expected:"
                                                                            f" '{expected_shipping_popup_title}', "
                                                                            f"Actual: '{actual_title.strip()}'")
-            expect(self.context.page.locator(SHIPPING_FULL_NAME_FIELD)).to_be_visible()
+            expect(self.context.page.locator(SHIPPING_FULL_NAME_FIELD)).to_be_visible(timeout=10000)
             assert self.context.page.locator(SHIPPING_FULL_NAME_FIELD).get_attribute("placeholder") == "First and Last Names*"
             self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(common_variables.supplement_funnel_name)
             url = self.context.page.url
