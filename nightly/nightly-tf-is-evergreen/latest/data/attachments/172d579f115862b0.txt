@@ -1,0 +1,15 @@
+Executing step: user register in "is_ev_gut" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/mb/is-gut-health
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev_gut" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia

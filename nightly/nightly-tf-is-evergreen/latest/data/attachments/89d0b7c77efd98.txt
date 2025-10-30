@@ -1,0 +1,15 @@
+Executing step: user register in "tf_ev_liver" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/mb2/tf-liver
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_liver" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
