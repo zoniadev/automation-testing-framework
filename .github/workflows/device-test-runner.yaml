@@ -41,6 +41,15 @@ jobs:
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
+      - name: Clean workspace (free up space)
+        run: |
+          echo "Cleaning up workspace to free disk space..."
+          sudo rm -rf /tmp/*
+          sudo rm -rf $RUNNER_TEMP/*
+          sudo rm -rf $GITHUB_WORKSPACE/*
+          echo "Disk usage after cleanup:"
+          df -h /
+
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -74,6 +83,9 @@ jobs:
         run: |
           playwright install chromium
 
+      - name: Check disk usage before tests
+        run: df -h /
+
       - name: Run tests
         run: |
           set -euo pipefail
@@ -90,6 +102,10 @@ jobs:
           echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT"
           behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
+
+      - name: Check disk usage after tests
+        if: always()
+        run: df -h /
 
       - name: Copy environment properties
         if: always()
