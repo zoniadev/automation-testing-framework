@@ -116,7 +116,7 @@ jobs:
           fi
         shell: bash
 
-      # ⛔️ Removed: old 'Load test report history' step that checked out gh-pages
+      #Removed: old 'Load test report history' step that checked out gh-pages
 
       - name: Prepare Allure workspace
         if: always()
@@ -227,7 +227,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          keep_files: true  # ✅ Keeps existing reports & prevents branch recreation errors
+          keep_files: true  #Keeps existing reports & prevents branch recreation errors
 
       - name: Post the link to the report
         if: always()
