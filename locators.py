@@ -13,6 +13,9 @@ JOIN_ZONIA_BUTTON = "//a[text()='JOIN ZONIA NOW']"
 REGISTER_FOR_FREE_NOW_BUTTON = "//a[text()='Register for free now']"
 FIRST_NAME_REGISTER_FIELD = "//input[@id='first-name']"
 SCROLL_ARROW_BUTTON = "//a[@class='arrow']"
+SKIP_SURVEY_BUTTON = "//*[@unique-identifier='skip-survey-btn-1']"
+SKIP_HEALTH_TRACK_BUTTON = '//*[@id="skip-health-track-btn"]'
+GO_TO_ZONIA_BUTTON = "//*[@unique-identifier='go-to-zonia-btn-1']"
 
 #SupplementSalesPageLocators:
 BUY_1_BOTTLES_BUTTON = "//*[@unique-id='add-order-1-1']"

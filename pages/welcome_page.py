@@ -15,8 +15,12 @@ class WelcomePage(BasePage):
         self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
-    def skip_linking_social_media_accounts(self):
-        time.sleep(0.5)
-        self.handle_cookie_banner()
-        self.context.page.locator(SKIP_LINKING_BUTTON).click()
-        print('===> Skipped linking social media accounts')
+    def skip_survey(self):
+        self.context.page.locator(SKIP_SURVEY_BUTTON).click()
+        self.wait_for_navigation(common_variables.survery_page_url, timeout=30000)
+        print('===> Skipped survery')
+        self.context.page.locator(SKIP_HEALTH_TRACK_BUTTON).click()
+        print('===> Skipped health track')
+        self.wait_for_navigation(common_variables.client_welcome_page_url, timeout=30000)
+        self.context.page.locator(GO_TO_ZONIA_BUTTON).click()
+        print('===> Navigated to user home page')

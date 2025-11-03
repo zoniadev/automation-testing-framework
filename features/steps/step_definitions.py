@@ -61,9 +61,8 @@ def user_complete_registration(context):
     page = WelcomePage(context)
     if common_variables.membership_added:
         page.create_password()
-    page.skip_linking_social_media_accounts()
+    page.skip_survey()
     page = UserPage(context)
-    page.skip_questions()
     page.verify_registration()
 
 

@@ -33,6 +33,8 @@ ad_restore_life_url = 'ad-restore-life-special'
 ad_restore_life_upsell_url = 'ad-rl-6-more-bottles'
 ad_restore_life_downsell_url = 'ad-rl-6-discounted-bottles'
 welcome_page_url = 'welcome'
+survery_page_url = 'b2c/survey/survey'
+client_welcome_page_url = 'client-welcome'
 user_page_url = 'user'
 
 ad_ev_opt_in_url = 'admb5e/unbroken'
