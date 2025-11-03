@@ -43,10 +43,9 @@ jobs:
     steps:
       - name: Clean workspace (free up space)
         run: |
-          echo "Cleaning up workspace to free disk space..."
+          echo "Cleaning up temporary space..."
           sudo rm -rf /tmp/*
           sudo rm -rf $RUNNER_TEMP/*
-          sudo rm -rf $GITHUB_WORKSPACE/*
           echo "Disk usage after cleanup:"
           df -h /
 
