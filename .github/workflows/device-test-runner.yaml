@@ -116,13 +116,7 @@ jobs:
           fi
         shell: bash
 
-      - name: Load test report history
-        uses: actions/checkout@v3
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
+      #Removed: old 'Load test report history' step that checked out gh-pages
 
       - name: Prepare Allure workspace
         if: always()
@@ -130,10 +124,8 @@ jobs:
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
           mkdir -p allure-history
-          if [ -d gh-pages ]; then
-            rsync -a --exclude '.git' gh-pages/ allure-history/
-          fi
-            mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          echo "Preparing Allure history directory..."
+          mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
         shell: bash
 
       - name: Determine report sequence
@@ -235,6 +227,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          keep_files: true  #Keeps existing reports & prevents branch recreation errors
 
       - name: Post the link to the report
         if: always()
