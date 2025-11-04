@@ -44,6 +44,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Free disk space
+        run: |
+          sudo rm -rf /usr/share/dotnet || true
+          sudo rm -rf /opt/ghc || true
+          sudo rm -rf /usr/local/lib/android || true
+          sudo apt-get clean || true
+          sudo rm -rf /var/lib/apt/lists/* || true
+        shell: bash
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -101,24 +110,30 @@ jobs:
           fi
         shell: bash
 
-      - name: Load test report history
-        uses: actions/checkout@v3
+      - name: Load test report history (sparse)
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
+          fetch-depth: 1
+          sparse-checkout: |
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/history
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/.sequence
+            allure-history/**/latest/widgets/summary.json
+          sparse-checkout-cone: true
 
       - name: Prepare Allure workspace
         if: always()
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-          mkdir -p allure-history
-          if [ -d gh-pages ]; then
-            rsync -a --exclude '.git' gh-pages/ allure-history/
+          mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          # Bring in only the sparse-checked history and summaries for portal generation
+          if [ -d gh-pages/allure-history ]; then
+            rsync -a --prune-empty-dirs gh-pages/allure-history/ allure-history/
           fi
-            mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
         shell: bash
 
       - name: Determine report sequence
@@ -170,7 +185,7 @@ jobs:
             REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
             REPORT_NAME="${{ env.REPORT_NAME }}"
             RESULTS_DIR="allure-results/$REPORT_SCOPE"
-            HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
+            HISTORY_SNAPSHOT="gh-pages/allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
 
             if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
               echo "No allure results found for $DEVICE. Skipping report generation."
@@ -220,6 +235,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          keep_files: true
 
       - name: Post the link to the report
         if: always()
