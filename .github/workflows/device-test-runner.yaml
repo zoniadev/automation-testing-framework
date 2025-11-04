@@ -121,8 +121,8 @@ jobs:
           sparse-checkout: |
             allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/history
             allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/.sequence
-            allure-history/**/latest/widgets/summary.json
-          sparse-checkout-cone: true
+          sparse-checkout-cone-mode: false
+          filter: blob:none
 
       - name: Prepare Allure workspace
         if: always()
