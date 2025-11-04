@@ -41,14 +41,6 @@ jobs:
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
-      - name: Clean workspace (free up space)
-        run: |
-          echo "Cleaning up temporary space..."
-          sudo rm -rf /tmp/*
-          sudo rm -rf $RUNNER_TEMP/*
-          echo "Disk usage after cleanup:"
-          df -h /
-
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -82,9 +74,6 @@ jobs:
         run: |
           playwright install chromium
 
-      - name: Check disk usage before tests
-        run: df -h /
-
       - name: Run tests
         run: |
           set -euo pipefail
@@ -102,10 +91,6 @@ jobs:
           behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
-      - name: Check disk usage after tests
-        if: always()
-        run: df -h /
-
       - name: Copy environment properties
         if: always()
         run: |
@@ -116,22 +101,13 @@ jobs:
           fi
         shell: bash
 
-      #Removed: old 'Load test report history' step that checked out gh-pages
-
-      - name: Load existing gh-pages
-        if: always()
+      - name: Load test report history
         uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
-
-      - name: Restore previous reports
-        if: always()
-        run: |
-          set -euo pipefail
-          mkdir -p allure-history
-          rsync -a --exclude '.git' gh-pages/ allure-history/
-        shell: bash
 
       - name: Prepare Allure workspace
         if: always()
@@ -139,8 +115,10 @@ jobs:
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
           mkdir -p allure-history
-          echo "Preparing Allure history directory..."
-          mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          if [ -d gh-pages ]; then
+            rsync -a --exclude '.git' gh-pages/ allure-history/
+          fi
+            mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
         shell: bash
 
       - name: Determine report sequence
@@ -242,7 +220,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          keep_files: true  #Keeps existing reports & prevents branch recreation errors
 
       - name: Post the link to the report
         if: always()
