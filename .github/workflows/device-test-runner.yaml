@@ -118,6 +118,21 @@ jobs:
 
       #Removed: old 'Load test report history' step that checked out gh-pages
 
+      - name: Load existing gh-pages
+        if: always()
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Restore previous reports
+        if: always()
+        run: |
+          set -euo pipefail
+          mkdir -p allure-history
+          rsync -a --exclude '.git' gh-pages/ allure-history/
+        shell: bash
+
       - name: Prepare Allure workspace
         if: always()
         run: |
