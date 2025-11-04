@@ -137,6 +137,19 @@ jobs:
           sparse-checkout-cone-mode: false
           filter: blob:none
 
+      - name: Load report directory tree for portal
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages-tree
+          fetch-depth: 1
+          sparse-checkout: |
+            allure-history
+          sparse-checkout-cone-mode: true
+          filter: blob:none
+
       - name: Prepare Allure workspace
         if: always()
         run: |
