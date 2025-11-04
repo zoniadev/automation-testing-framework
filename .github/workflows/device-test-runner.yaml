@@ -44,13 +44,24 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Free disk space
+      - name: Free disk space (light)
         run: |
-          sudo rm -rf /usr/share/dotnet || true
-          sudo rm -rf /opt/ghc || true
-          sudo rm -rf /usr/local/lib/android || true
-          sudo apt-get clean || true
-          sudo rm -rf /var/lib/apt/lists/* || true
+          set -euo pipefail
+          echo "Disk usage before cleanup:" && df -h /
+          FREE_MB=$(df -Pm / | awk 'NR==2{print $4}')
+          THRESHOLD_MB=20000
+          if [ "$FREE_MB" -ge "$THRESHOLD_MB" ]; then
+            echo ">=20GB free (${FREE_MB} MB). Skipping cleanup."
+            exit 0
+          fi
+          SDK="/usr/local/lib/android/sdk"
+          if [ -d "$SDK" ]; then
+            echo "Cleaning selected Android SDK components..."
+            sudo rm -rf "$SDK/system-images" || true
+            sudo rm -rf "$SDK/emulator" || true
+            sudo rm -rf "$SDK/ndk" || true
+          fi
+          echo "Disk usage after cleanup:" && df -h /
         shell: bash
 
       - name: Set up Python
@@ -121,6 +132,7 @@ jobs:
           sparse-checkout: |
             allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/history
             allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/.sequence
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/index.html
           sparse-checkout-cone-mode: false
           filter: blob:none
 
@@ -144,12 +156,21 @@ jobs:
             REPORT_NAME="${REPORT_NAME}"
             HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
             SEQUENCE_FILE="$HISTORY_ROOT/.sequence"
+            INDEX_FILE="$HISTORY_ROOT/index.html"
 
             mkdir -p "$HISTORY_ROOT"
 
             LAST_SEQUENCE=0
             if [ -f "$SEQUENCE_FILE" ]; then
               VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
+              if [ -n "$VALUE" ]; then
+                LAST_SEQUENCE="$VALUE"
+              fi
+            fi
+
+            # Fallback: derive last sequence from index.html redirect if .sequence is missing
+            if [ "$LAST_SEQUENCE" -eq 0 ] && [ -f "$INDEX_FILE" ]; then
+              VALUE=$(sed -n 's/.*url=\"\.\///;s/\/.\+//p' "$INDEX_FILE" | tr -dc '0-9' | head -n 1)
               if [ -n "$VALUE" ]; then
                 LAST_SEQUENCE="$VALUE"
               fi
