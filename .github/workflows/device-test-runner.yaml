@@ -179,14 +179,16 @@ jobs:
               VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
               if [ -n "$VALUE" ]; then
                 LAST_SEQUENCE="$VALUE"
+                echo "Detected LAST_SEQUENCE from .sequence: $LAST_SEQUENCE"
               fi
             fi
 
             # Fallback: derive last sequence from index.html redirect if .sequence is missing
             if [ "$LAST_SEQUENCE" -eq 0 ] && [ -f "$INDEX_FILE" ]; then
-              VALUE=$(sed -n 's/.*url=\"\.\///;s/\/.\+//p' "$INDEX_FILE" | tr -dc '0-9' | head -n 1)
+              VALUE=$(grep -oE 'url=\./[0-9]+' "$INDEX_FILE" | grep -oE '[0-9]+' | head -n 1)
               if [ -n "$VALUE" ]; then
                 LAST_SEQUENCE="$VALUE"
+                echo "Detected LAST_SEQUENCE from index.html redirect: $LAST_SEQUENCE"
               fi
             fi
 
@@ -249,6 +251,22 @@ jobs:
           echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_SEQUENCE/\">latest report for $REPORT_NAME</a>.</p></body></html>" > "$REPORT_NAME_REDIRECT_FILE"
           REPORT_SCOPE_REDIRECT_FILE="allure-history/$REPORT_SCOPE/index.html"
           echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_NAME/$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_NAME/$REPORT_SEQUENCE/\">latest report for the $REPORT_SCOPE scope</a>.</p></body></html>" > "$REPORT_SCOPE_REDIRECT_FILE"
+        shell: bash
+
+      - name: Materialize all summary.json for portal
+        if: always()
+        run: |
+          set -euo pipefail
+          ROOT="gh-pages-tree/allure-history"
+          if [ -d "$ROOT" ]; then
+            mapfile -t files < <(find "$ROOT" -type f -path "*/latest/widgets/summary.json" || true)
+            if [ "${#files[@]}" -gt 0 ]; then
+              for f in "${files[@]}"; do
+                rel=${f#gh-pages-tree/}
+                git -C gh-pages-tree checkout -- "$rel" || true
+              done
+            fi
+          fi
         shell: bash
 
       - name: Generate portal page
