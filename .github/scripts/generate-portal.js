@@ -6,8 +6,14 @@ function pad(num) {
   return num < 10 ? '0' + num : num;
 }
 
-const historyDir = 'allure-history';
-const portalManifest = path.join(historyDir, 'portal.json');
+const historyDirOut = 'allure-history';
+const portalManifest = path.join(historyDirOut, 'portal.json');
+// Prefer a directory-tree checkout for enumeration if present
+const historyDirTree = fs.existsSync(path.join('gh-pages-tree', 'allure-history'))
+  ? path.join('gh-pages-tree', 'allure-history')
+  : (fs.existsSync(path.join('gh-pages', 'allure-history'))
+      ? path.join('gh-pages', 'allure-history')
+      : historyDirOut);
 
 // Gather current run context from environment
 const REPORT_SCOPE = process.env.REPORT_SCOPE;
@@ -15,7 +21,11 @@ const REPORT_NAME = process.env.REPORT_NAME;
 
 // Helper to read summary for a given scope/name
 function readSummary(scope, name) {
-  const summaryPath = path.join(historyDir, scope, name, 'latest', 'widgets', 'summary.json');
+  // Try from workspace first, then from tree checkout to trigger lazy blob fetch if needed
+  let summaryPath = path.join(historyDirOut, scope, name, 'latest', 'widgets', 'summary.json');
+  if (!fs.existsSync(summaryPath)) {
+    summaryPath = path.join(historyDirTree, scope, name, 'latest', 'widgets', 'summary.json');
+  }
   if (!fs.existsSync(summaryPath)) return null;
   const fileStats = fs.statSync(summaryPath);
   const summary = JSON.parse(fs.readFileSync(summaryPath));
@@ -41,6 +51,36 @@ if (fs.existsSync(portalManifest)) {
     console.warn('Failed to parse portal.json, starting fresh.');
     entries = [];
   }
+}
+
+// Ensure entries include all scopes/names found in the directory tree
+try {
+  if (fs.existsSync(historyDirTree)) {
+    const scopes = fs.readdirSync(historyDirTree).filter(s => fs.statSync(path.join(historyDirTree, s)).isDirectory());
+    const byKey = new Map(entries.map(e => [e.key, e]));
+    for (const scope of scopes) {
+      const scopeDir = path.join(historyDirTree, scope);
+      const names = fs.readdirSync(scopeDir).filter(n => fs.statSync(path.join(scopeDir, n)).isDirectory());
+      for (const name of names) {
+        const key = `${scope}__${name}`;
+        if (!byKey.has(key)) {
+          const s = readSummary(scope, name);
+          byKey.set(key, {
+            key,
+            scope,
+            name,
+            lastRun: s ? s.ts.getTime() : 0,
+            passed: s ? s.passed : 0,
+            failed: s ? s.failed : 0,
+            reportUrl: `./${scope}/${name}/`
+          });
+        }
+      }
+    }
+    entries = Array.from(byKey.values());
+  }
+} catch (e) {
+  console.warn('Directory enumeration failed:', e.message);
 }
 
 // Update/insert current run entry based on local summary
@@ -133,5 +173,7 @@ const html = `
   </html>
 `;
 
-fs.writeFileSync(path.join(historyDir, 'index.html'), html);
+// Ensure output directory exists
+if (!fs.existsSync(historyDirOut)) fs.mkdirSync(historyDirOut, { recursive: true });
+fs.writeFileSync(path.join(historyDirOut, 'index.html'), html);
 console.log('Portal page generated successfully.');
