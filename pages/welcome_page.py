@@ -16,9 +16,11 @@ class WelcomePage(BasePage):
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_survey(self):
+        time.sleep(1)
         self.context.page.locator(SKIP_SURVEY_BUTTON).click()
         self.wait_for_navigation(common_variables.survery_page_url, timeout=30000)
         print('===> Skipped survery')
+        time.sleep(1)
         self.context.page.locator(SKIP_HEALTH_TRACK_BUTTON).click()
         print('===> Skipped health track')
         self.wait_for_navigation(common_variables.client_welcome_page_url, timeout=30000)
