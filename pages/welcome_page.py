@@ -1,4 +1,5 @@
 import time
+import random
 import common_functions.random_data as RD
 import common_variables
 from pages.base_page_object import BasePage
@@ -18,10 +19,16 @@ class WelcomePage(BasePage):
     def skip_survey(self):
         time.sleep(1)
         self.context.page.locator(SKIP_SURVEY_BUTTON).click()
-        self.wait_for_navigation(common_variables.survery_page_url, timeout=30000)
+        self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
         print('===> Skipped survery')
         time.sleep(1)
-        self.context.page.locator(SKIP_HEALTH_TRACK_BUTTON).click()
+        random_heath_track_selection = ['stress-management-sleep', 'energy-reboot', 'autoimmunity-immune-rejuventaion',
+                                        'brain-power-boost', 'metabolic-health-weight-managment', 'cancer-support',
+                                        'skip-health-track-btn']
+        random_selection = random.choice(random_heath_track_selection)
+        element_to_select = f'//*[@id="{random_selection}"]'
+        print(f'===> Selecting {random_selection} in Health Track')
+        self.context.page.locator(element_to_select).click()
         print('===> Skipped health track')
         self.wait_for_navigation(common_variables.client_welcome_page_url, timeout=30000)
         self.context.page.locator(GO_TO_ZONIA_BUTTON).click()
