@@ -38,6 +38,7 @@ class SupplementStartPage(BasePage):
             self.context.page.locator(COUNTRY_FIELD).fill('USA')
         self.context.page.locator(STATE_FIELD).fill('CA')
         self.context.page.locator(ZIP_FIELD).fill(RD.postcode())
+        print(f'===> User email is: {common_variables.supplement_funnel_email}')
         self.populate_cc_details()
         self.wait_for_navigation(
             getattr(common_variables, f"{funnel.lower().replace(' ', '_')}_first_upsell_url"), timeout=30000)
