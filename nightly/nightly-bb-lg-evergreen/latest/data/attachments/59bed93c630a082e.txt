@@ -1,0 +1,9 @@
+Executing step: user register in "bb_ev_energy" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/bbmb5e/bb-energy
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "bb_ev_energy" Opt In page
