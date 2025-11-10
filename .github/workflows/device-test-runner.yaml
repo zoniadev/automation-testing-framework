@@ -163,6 +163,7 @@ jobs:
         shell: bash
 
       - name: Determine report sequence
+        id: determine-sequence
         if: always()
         run: |
           set -euo pipefail
@@ -199,6 +200,7 @@ jobs:
 
             printf "%s\n" "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
             echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
+            echo "report_sequence=$NEXT_SEQUENCE" >> "$GITHUB_OUTPUT"
             echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE and name $REPORT_NAME."
         shell: bash
 
@@ -212,7 +214,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine-sequence.outputs.report_sequence }}
 
       - name: Generate Allure report
         if: always()
@@ -246,7 +248,7 @@ jobs:
           set -euo pipefail
           REPORT_SCOPE="${{ env.REPORT_SCOPE }}"
           REPORT_NAME="${{ env.REPORT_NAME }}"
-          REPORT_SEQUENCE="${{ env.REPORT_SEQUENCE }}"
+          REPORT_SEQUENCE="${{ steps.determine-sequence.outputs.report_sequence }}"
           REPORT_NAME_REDIRECT_FILE="allure-history/$REPORT_SCOPE/$REPORT_NAME/index.html"
           echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_SEQUENCE/\">latest report for $REPORT_NAME</a>.</p></body></html>" > "$REPORT_NAME_REDIRECT_FILE"
           REPORT_SCOPE_REDIRECT_FILE="allure-history/$REPORT_SCOPE/index.html"
@@ -298,4 +300,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine-sequence.outputs.report_sequence }}
