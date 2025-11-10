@@ -22,8 +22,8 @@ class WelcomePage(BasePage):
         self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
         print('===> Skipped survery')
         time.sleep(1)
-        random_heath_track_selection = ['stress-management-sleep', 'energy-reboot', 'autoimmunity-immune-rejuventaion',
-                                        'brain-power-boost', 'metabolic-health-weight-managment', 'cancer-support',
+        random_heath_track_selection = ['stress-management-sleep-lbl', 'energy-reboot-lbl', 'autoimmunity-immune-rejuventaion-lbl',
+                                        'brain-power-boost-lbl', 'metabolic-health-weight-managment-lbl', 'cancer-support-lbl',
                                         'skip-health-track-btn']
         random_selection = random.choice(random_heath_track_selection)
         element_to_select = f'//*[@id="{random_selection}"]'
