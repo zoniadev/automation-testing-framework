@@ -100,12 +100,18 @@ jobs:
         shell: bash
 
       - name: Load test report history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
+          sparse-checkout: |
+            portal.json
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/.sequence
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/history
+            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/widgets/summary.json
+          sparse-checkout-cone: false
 
       - name: Prepare Allure workspace
         if: always()
@@ -213,6 +219,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          keep_files: true
           include-hidden-files: true
 
       - name: Post the link to the report
