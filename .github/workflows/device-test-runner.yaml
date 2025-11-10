@@ -1,5 +1,4 @@
 name: Device Test Runner
-
 on:
   workflow_call:
     inputs:
@@ -31,7 +30,6 @@ on:
         required: true
       SMTP_PORT_NASKO:
         required: true
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -43,26 +41,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Free disk space (light)
-        run: |
-          set -euo pipefail
-          echo "Disk usage before cleanup:" && df -h /
-          FREE_MB=$(df -Pm / | awk 'NR==2{print $4}')
-          THRESHOLD_MB=20000
-          if [ "$FREE_MB" -ge "$THRESHOLD_MB" ]; then
-            echo ">=20GB free (${FREE_MB} MB). Skipping cleanup."
-            exit 0
-          fi
-          SDK="/usr/local/lib/android/sdk"
-          if [ -d "$SDK" ]; then
-            echo "Cleaning selected Android SDK components..."
-            sudo rm -rf "$SDK/system-images" || true
-            sudo rm -rf "$SDK/emulator" || true
-            sudo rm -rf "$SDK/ndk" || true
-          fi
-          echo "Disk usage after cleanup:" && df -h /
-        shell: bash
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -121,87 +99,51 @@ jobs:
           fi
         shell: bash
 
-      - name: Load test report history (sparse)
-        uses: actions/checkout@v4
+      - name: Load test report history
+        uses: actions/checkout@v3
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
-          fetch-depth: 1
-          sparse-checkout: |
-            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/latest/history
-            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/.sequence
-            allure-history/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/index.html
-            allure-history/portal.json
-          sparse-checkout-cone-mode: false
-          filter: blob:none
-
-      - name: Load report directory tree for portal
-        uses: actions/checkout@v4
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages-tree
-          fetch-depth: 1
-          sparse-checkout: |
-            allure-history
-          sparse-checkout-cone-mode: true
-          filter: blob:none
 
       - name: Prepare Allure workspace
         if: always()
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-          mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
-          # Bring in only the sparse-checked history and summaries for portal generation
-          if [ -d gh-pages/allure-history ]; then
-            rsync -a --prune-empty-dirs gh-pages/allure-history/ allure-history/
+          mkdir -p allure-history
+          if [ -d gh-pages ]; then
+            rsync -a --exclude '.git' gh-pages/ allure-history/
           fi
+          mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
         shell: bash
 
-      - name: Determine report sequence
-        id: determine-sequence
+      - name: Determine report sequence id
+        id: determine_sequence
         if: always()
         run: |
           set -euo pipefail
-            REPORT_SCOPE="${REPORT_SCOPE}"
-            REPORT_NAME="${REPORT_NAME}"
-            HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
-            SEQUENCE_FILE="$HISTORY_ROOT/.sequence"
-            INDEX_FILE="$HISTORY_ROOT/index.html"
-
-            mkdir -p "$HISTORY_ROOT"
-
-            LAST_SEQUENCE=0
-            if [ -f "$SEQUENCE_FILE" ]; then
-              VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
-              if [ -n "$VALUE" ]; then
-                LAST_SEQUENCE="$VALUE"
-                echo "Detected LAST_SEQUENCE from .sequence: $LAST_SEQUENCE"
-              fi
+          REPORT_SCOPE="${REPORT_SCOPE}"
+          REPORT_NAME="${REPORT_NAME}"
+          HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          SEQUENCE_FILE="$HISTORY_ROOT/.sequence"
+          mkdir -p "$HISTORY_ROOT"
+          LAST_SEQUENCE=0
+          if [ -f "$SEQUENCE_FILE" ]; then
+            VALUE=$(head -n 1 "$SEQUENCE_FILE" | tr -dc '0-9')
+            if [ -n "$VALUE" ]; then
+              LAST_SEQUENCE="$VALUE"
             fi
-
-            # Fallback: derive last sequence from index.html redirect if .sequence is missing
-            if [ "$LAST_SEQUENCE" -eq 0 ] && [ -f "$INDEX_FILE" ]; then
-              VALUE=$(grep -oE 'url=\./[0-9]+' "$INDEX_FILE" | grep -oE '[0-9]+' | head -n 1)
-              if [ -n "$VALUE" ]; then
-                LAST_SEQUENCE="$VALUE"
-                echo "Detected LAST_SEQUENCE from index.html redirect: $LAST_SEQUENCE"
-              fi
-            fi
-
-            NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
-            while [ -d "$HISTORY_ROOT/$NEXT_SEQUENCE" ]; do
-              NEXT_SEQUENCE=$((NEXT_SEQUENCE + 1))
-            done
-
-            printf "%s\n" "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
-            echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
-            echo "report_sequence=$NEXT_SEQUENCE" >> "$GITHUB_OUTPUT"
-            echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE and name $REPORT_NAME."
+          fi
+          NEXT_SEQUENCE=$((LAST_SEQUENCE + 1))
+          while [ -d "$HISTORY_ROOT/$NEXT_SEQUENCE" ]; do
+            NEXT_SEQUENCE=$((NEXT_SEQUENCE + 1))
+          done
+          printf "%s\n" "$NEXT_SEQUENCE" > "$SEQUENCE_FILE"
+          echo "REPORT_SEQUENCE=$NEXT_SEQUENCE" >> "$GITHUB_ENV"
+          echo "report_sequence=$NEXT_SEQUENCE" >> "$GITHUB_OUTPUT"
+          echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE and name $REPORT_NAME."
         shell: bash
 
       - name: Send failure email
@@ -214,32 +156,29 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine-sequence.outputs.report_sequence }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine_sequence.outputs.report_sequence }}
 
       - name: Generate Allure report
         if: always()
         run: |
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
-            REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
-            REPORT_NAME="${{ env.REPORT_NAME }}"
-            RESULTS_DIR="allure-results/$REPORT_SCOPE"
-            HISTORY_SNAPSHOT="gh-pages/allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
-
-            if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
-              echo "No allure results found for $DEVICE. Skipping report generation."
-              exit 0
-            fi
-
-            if [ -d "$HISTORY_SNAPSHOT" ]; then
-              mkdir -p "$RESULTS_DIR/history"
-              rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
-            fi
-
-            OUTPUT_DIR="allure-history/$REPORT_SCOPE/$REPORT_NAME/$REPORT_SEQUENCE"
-            allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
-            rm -rf "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
-            cp -R "$OUTPUT_DIR" "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
+          REPORT_SEQUENCE="${REPORT_SEQUENCE:?REPORT_SEQUENCE not set}"
+          REPORT_NAME="${{ env.REPORT_NAME }}"
+          RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          HISTORY_SNAPSHOT="allure-history/$REPORT_SCOPE/$REPORT_NAME/latest/history"
+          if [ ! -d "$RESULTS_DIR" ] || [ -z "$(ls -A "$RESULTS_DIR" 2>/dev/null)" ]; then
+            echo "No allure results found for $DEVICE. Skipping report generation."
+            exit 0
+          fi
+          if [ -d "$HISTORY_SNAPSHOT" ]; then
+            mkdir -p "$RESULTS_DIR/history"
+            rsync -a --delete "$HISTORY_SNAPSHOT/" "$RESULTS_DIR/history/"
+          fi
+          OUTPUT_DIR="allure-history/$REPORT_SCOPE/$REPORT_NAME/$REPORT_SEQUENCE"
+          allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
+          rm -rf "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
+          cp -R "$OUTPUT_DIR" "allure-history/$REPORT_SCOPE/$REPORT_NAME/latest"
         shell: bash
 
       - name: Create redirect files
@@ -248,27 +187,11 @@ jobs:
           set -euo pipefail
           REPORT_SCOPE="${{ env.REPORT_SCOPE }}"
           REPORT_NAME="${{ env.REPORT_NAME }}"
-          REPORT_SEQUENCE="${{ steps.determine-sequence.outputs.report_sequence }}"
+          REPORT_SEQUENCE="${{ steps.determine_sequence.outputs.report_sequence }}"
           REPORT_NAME_REDIRECT_FILE="allure-history/$REPORT_SCOPE/$REPORT_NAME/index.html"
           echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_SEQUENCE/\">latest report for $REPORT_NAME</a>.</p></body></html>" > "$REPORT_NAME_REDIRECT_FILE"
           REPORT_SCOPE_REDIRECT_FILE="allure-history/$REPORT_SCOPE/index.html"
           echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$REPORT_NAME/$REPORT_SEQUENCE/\"></head><body><p>Redirecting to the <a href=\"./$REPORT_NAME/$REPORT_SEQUENCE/\">latest report for the $REPORT_SCOPE scope</a>.</p></body></html>" > "$REPORT_SCOPE_REDIRECT_FILE"
-        shell: bash
-
-      - name: Materialize all summary.json for portal
-        if: always()
-        run: |
-          set -euo pipefail
-          ROOT="gh-pages-tree/allure-history"
-          if [ -d "$ROOT" ]; then
-            mapfile -t files < <(find "$ROOT" -type f -path "*/latest/widgets/summary.json" || true)
-            if [ "${#files[@]}" -gt 0 ]; then
-              for f in "${files[@]}"; do
-                rel=${f#gh-pages-tree/}
-                git -C gh-pages-tree checkout -- "$rel" || true
-              done
-            fi
-          fi
         shell: bash
 
       - name: Generate portal page
@@ -290,7 +213,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          keep_files: true
+          include-hidden-files: true
 
       - name: Post the link to the report
         if: always()
@@ -300,4 +223,4 @@ jobs:
           context: 'Test report'
           state: 'success'
           sha: ${{ github.sha }}
-          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine-sequence.outputs.report_sequence }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ steps.determine_sequence.outputs.report_sequence }}
