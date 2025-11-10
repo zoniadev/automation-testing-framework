@@ -49,7 +49,7 @@ async function sendEmail() {
 
   let info = await transporter.sendMail({
     from: `"Zonia Test Failure Notifier" <${smtpUser}>`,
-    to: ['atanas.atanasov.dev@gmail.com', 'nkalendzhiev@yahoo.com', 'healthywithstefan@gmail.com', 'skukudov.zonia@gmail.com', 'gergana.zonia@gmail.com'],
+    to: ['atanas.atanasov.dev@gmail.com', 'nkalendzhiev@yahoo.com', 'healthywithstefan@gmail.com', 'skukudov.zonia@gmail.com', 'gergana.zonia@gmail.com', 'tsvetan.zonia@gmail.com'],
     subject: 'Test Failure Report',
     text: `The test has failed. Please check the details below:\n\n${testSummary}`,
     html: formatTestSummary(testSummary),
