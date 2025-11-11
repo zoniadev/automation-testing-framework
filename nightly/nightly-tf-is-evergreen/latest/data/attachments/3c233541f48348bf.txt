@@ -1,0 +1,9 @@
+Executing step: user register in "is_ev_autoimmunity" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to http://staging.zonia.com/mb/is-autoimmunity
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev_autoimmunity" Opt In page
