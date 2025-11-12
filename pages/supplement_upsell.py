@@ -217,12 +217,12 @@ class SupplementUpsellPage(BasePage):
                 self.context.page.locator(SHIPPING_ZIP_FIELD_ALT).fill(RD.postcode())
                 self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT).fill('USA')
             elif 'welcome' in url:
-                self.context.page.locator(SHIPPING_PHONE_FIELD_ALT2).fill(RD.phone_number())
-                self.context.page.locator(SHIPPING_ADDRESS_FIELD_ALT2).fill(RD.address_line())
-                self.context.page.locator(SHIPPING_CITY_FIELD_ALT2).fill(RD.town())
-                self.context.page.locator(SHIPPING_STATE_FIELD_ALT2).fill(RD.state())
-                self.context.page.locator(SHIPPING_ZIP_FIELD_ALT2).fill(RD.postcode())
-                self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT2).fill('USA')
+                self.context.page.locator(SHIPPING_PHONE_FIELD_ALT).fill(RD.phone_number())
+                self.context.page.locator(SHIPPING_ADDRESS_FIELD_ALT).fill(RD.address_line())
+                self.context.page.locator(SHIPPING_CITY_FIELD_ALT).fill(RD.town())
+                self.context.page.locator(SHIPPING_STATE_FIELD_ALT).fill(RD.state())
+                self.context.page.locator(SHIPPING_ZIP_FIELD_ALT).fill(RD.postcode())
+                self.context.page.locator(SHIPPING_COUNTRY_FIELD_ALT).fill('USA')
             else:
                 self.context.page.locator(SHIPPING_PHONE_FIELD).fill(RD.phone_number())
                 self.context.page.locator(SHIPPING_ADDRESS_FIELD).fill(RD.address_line())
