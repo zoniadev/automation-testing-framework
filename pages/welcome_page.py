@@ -13,7 +13,9 @@ class WelcomePage(BasePage):
     def create_password(self):
         common_variables.supplement_funnel_password = RD.password()
         self.context.page.locator(PASSWORD_POPUP_FIELD).click(timeout=20000)
+        time.sleep(0.5)
         self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
+        time.sleep(0.5)
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_survey(self):
