@@ -1,0 +1,39 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+Failed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-sleep-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.1__20251114-031851.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header.
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized)
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
+--- Failed to load resource: the server responded with a status of 400 ()
+--- %c%d font-size:0;color:transparent NaN
+--- %c%d font-size:0;color:transparent NaN
