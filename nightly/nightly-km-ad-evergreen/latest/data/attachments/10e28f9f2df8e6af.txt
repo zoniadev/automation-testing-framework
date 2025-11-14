@@ -1,0 +1,15 @@
+Executing step: user register in "km_ev_toxins" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/kmmb5e/km-toxins
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_toxins" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
