@@ -1,0 +1,35 @@
+Executing step: user register in "lg_ev_skin" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/lgmb5e/lg-skin-health
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/lgmb5e/lg-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "lg_ev_skin" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/lgmb5e/lg-signup"
+===> URL successfully changed to "http://staging.zonia.com/lgmb5e/lg-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Moore-1763421018@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/lg-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/lg-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/lg-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/lg-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+Actual title: Please enter below your shipping address where we can ship your supplement.
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
