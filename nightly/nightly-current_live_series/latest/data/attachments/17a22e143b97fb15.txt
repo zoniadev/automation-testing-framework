@@ -1,0 +1,60 @@
+Executing step: user register in "lg_live_brain" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/lg-brain-health
+===> Cookie banner not present or not visible.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/lg-join-zonia"
+>>> Navigation via lg_live_join_zonia_url failed: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/lg-join-zonia.*')'
+Actual value: http://staging.zonia.com/lg-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-brain-health"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-brain-health"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-brain-health"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-brain-health"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "http://staging.zonia.com/lg-replay-weekend"
+
+===> Waiting for URL starting with "http://staging.zonia.com/lg-replay-weekend"
+===> URL successfully changed to "http://staging.zonia.com/lg-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "lg_live_brain" Opt In page
