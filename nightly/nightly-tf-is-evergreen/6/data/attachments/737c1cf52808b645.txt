@@ -1,9 +1,0 @@
-Executing step: user register in "tf_ev" Opt In page
-Scenario will use "Diners Club" card "36259600000004"
-===> Navigated to http://staging.zonia.com/mb2/toxin-free
-===> Cookie banner not present or not visible.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "tf_ev" Opt In page

@@ -1,9 +1,0 @@
-Executing step: user register in "lg_ev" Opt In page
-Scenario will use "JCB" card "3530111333300000"
-===> Navigated to http://staging.zonia.com/lgmb5e/ageless
-===> Cookie banner not present or not visible.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/lgmb5e/lg-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/lgmb5e/lg-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "lg_ev" Opt In page
