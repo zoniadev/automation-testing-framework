@@ -161,13 +161,21 @@ class BasePage(object):
             raise AssertionError(f"{error_count} errors found:\n" + "\n".join(errors))
 
     def handle_cookie_banner(self, timeout=5000):
-        banner = self.context.page.locator(ACCEPT_COOKIES_BUTTON)
-        try:
-            banner.wait_for(state="visible", timeout=timeout)
-            banner.click()
-            print("===> Cookie banner accepted.")
-        except Exception:
-            print("===> Cookie banner not present or not visible.")
+        possible_locators = [
+            ACCEPT_COOKIES_BUTTON,
+            CLOSE_COOKIE_BANNER_BUTTON
+        ]
+        for selector in possible_locators:
+            banner = self.context.page.locator(selector)
+            try:
+                banner.wait_for(state="visible", timeout=timeout)
+                banner.click()
+                print(f"===> Cookie banner accepted using selector: {selector}")
+                return
+            except Exception:
+                continue
+        else:
+            print("===> No cookie banner found or none matched known selectors.")
 
     def verify_placeholder_text(self, locator, expected_placeholder):
         element = self.context.page.locator(locator)
