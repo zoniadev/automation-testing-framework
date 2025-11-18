@@ -112,6 +112,7 @@ SHIPPING_SUBMIT_BUTTON = "//button[@id='save-shipping-address']"
 
 #CookieBannerPopupLocators:
 ACCEPT_COOKIES_BUTTON = "//button[@class='cookie-close-btn']"
+CLOSE_COOKIE_BANNER_BUTTON = "//button[@data-bs-dismiss='alert' and contains(@class, 'btn-close')]"
 
 #ChatLocators:
 CHAT_FRAME = '//iframe[@title="Chat"]'

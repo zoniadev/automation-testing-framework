@@ -19,7 +19,7 @@ on:
           - iphone_landscape
           - android
           - android_landscape
-          - iPad
+          - ipad
           - ipad_landscape
       environment:
         description: 'Environment to run tests against'

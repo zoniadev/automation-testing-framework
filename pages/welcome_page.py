@@ -20,6 +20,7 @@ class WelcomePage(BasePage):
 
     def skip_survey(self):
         time.sleep(1)
+        self.handle_cookie_banner()
         self.context.page.locator(SKIP_SURVEY_BUTTON).click()
         self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
         print('===> Skipped survery')
@@ -33,5 +34,6 @@ class WelcomePage(BasePage):
         self.context.page.locator(element_to_select).click()
         print('===> Skipped health track')
         self.wait_for_navigation(common_variables.client_welcome_page_url, timeout=30000)
+        self.handle_cookie_banner()
         self.context.page.locator(GO_TO_ZONIA_BUTTON).click()
         print('===> Navigated to user home page')
