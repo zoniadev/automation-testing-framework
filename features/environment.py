@@ -105,19 +105,23 @@ def after_step(context, step):
         scenario_name = context.scenario.name.replace(" ", "_")
         screenshot_filename = f"{scenario_name}_{current_time}.png"
         screenshot_path = os.path.join(SCREENSHOTS_DIR, screenshot_filename)
-        context.page.screenshot(path=screenshot_path)
-        print(f"Screenshot saved: {screenshot_path}")
+        try:
+            context.page.screenshot(path=screenshot_path)
+            print(f"Screenshot saved: {screenshot_path}")
+            with open(screenshot_path, "rb") as image_file:
+                allure.attach(
+                    image_file.read(),
+                    name="screenshot",
+                    attachment_type=allure.attachment_type.PNG,
+                )
+        except Exception as e:
+            print(f"Error taking or attaching screenshot: {e}")
         # Filter the captured console messages for errors
         console_errors = [msg['text'] for msg in context.console_messages if msg['type'] == 'error']
         if console_errors:
             print("Captured the following browser console errors:")
             for error in console_errors:
                 print(f'--- {error}')
-        allure.attach(
-            context.page.screenshot(),
-            name="screenshot",
-            attachment_type=allure.attachment_type.PNG,
-        )
     else:
         print(f"Completed step: {context.step.name}")
     try:
