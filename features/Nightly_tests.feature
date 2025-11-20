@@ -389,7 +389,7 @@ Feature: Nightly tests
 
     Examples:
       | bottles | rg_upgrade | rg_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
-      | 7       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 
 
