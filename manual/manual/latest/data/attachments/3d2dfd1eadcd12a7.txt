@@ -1,0 +1,71 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/thriving-without-limits
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "directly"
+>>> Joining Zonia on screening page...
+===> Waiting for URL starting with "http://staging.zonia.com/twl-signup"
+===> URL successfully changed to "http://staging.zonia.com/twl-signup"
+>>> Successfully navigated to join Zonia from screening page
+Completed step: user join Zonia in screening page "directly"
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Pierce-1763637447@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/twl-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/twl-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/twl-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/twl-mini-masterclass-series-platinum-package"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+Actual title: Please enter below your shipping address where we can ship your supplement.
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/twl-restore-sleep-special-resilience-code"
+===> URL successfully changed to "http://staging.zonia.com/twl-restore-sleep-special-resilience-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "6" bottles and "upgrade" in upsell/downsell for Restore Sleep...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/twl-rs-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/twl-rs-6-more-bottles"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/twl-restore-detox-special"
+===> URL successfully changed to "http://staging.zonia.com/twl-restore-detox-special"
+>>> Successfully selected "6" bottles and "upgrade" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "1" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/twl-rd-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/twl-rd-6-more-bottles"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome"
+>>> Successfully selected "1" bottles and "upgrade" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page

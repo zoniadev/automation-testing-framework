@@ -1,0 +1,23 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/thriving-without-limits
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
+Executing step: user join Zonia in screening page "regular"
+>>> Joining Zonia on screening page...
+Failed step: user join Zonia in screening page "regular"
+Test failed on page: 'http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
+Captured the following browser console errors:
+--- TypeError: Cannot read properties of undefined (reading 'checked')
+    at http://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:156:35 moengage err (Source: http://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js)
+--- false moengage err (Source: http://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js)
