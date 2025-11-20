@@ -69,7 +69,7 @@ def before_scenario(context, scenario):
     third_party_routes = [
         re.compile(r".*liflolrb\.marketise\.me/.*"),
         re.compile(r".*browser\.sentry-cdn\.com/.*"),
-        re.compile(r".*js\.sentry-cdn\.com/.*"),  # add this
+        re.compile(r".*js\.sentry-cdn\.com/.*"),
         re.compile(r".*stapecdn\.com/.*"),
         re.compile(r".*googletagmanager\.com/.*"),
     ]
@@ -78,6 +78,8 @@ def before_scenario(context, scenario):
 
     for blocked_route in third_party_routes:
         context.context.route(blocked_route, _block_third_party)
+
+    context.context.route("**/*.{woff,woff2,ttf,otf}", lambda route: route.abort())
 
     context.page = context.context.new_page()
 
