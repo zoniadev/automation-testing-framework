@@ -66,20 +66,28 @@ def before_scenario(context, scenario):
             record_video_dir=f"screenshots/videos/{context.scenario.name}",
             record_video_size={"width": 640, "height": 480}
         )
+
+    # --- UPDATED BLOCKING LOGIC ---
     third_party_routes = [
         re.compile(r".*liflolrb\.marketise\.me/.*"),
         re.compile(r".*browser\.sentry-cdn\.com/.*"),
         re.compile(r".*js\.sentry-cdn\.com/.*"),
         re.compile(r".*stapecdn\.com/.*"),
         re.compile(r".*googletagmanager\.com/.*"),
+        # Added Vimeo to stop the 403 Forbidden error
+        re.compile(r".*player\.vimeo\.com/.*"),
     ]
+
     def _block_third_party(route):
+        # We accept these as 'success' (204 No Content) so the browser doesn't complain
         route.fulfill(status=204, body="")
 
     for blocked_route in third_party_routes:
         context.context.route(blocked_route, _block_third_party)
 
-    context.context.route("**/*.{woff,woff2,ttf,otf}", lambda route: route.abort())
+    # THE FIX: Fulfill fonts with success (200) but empty body.
+    # This tricks the browser into thinking the font loaded instantly.
+    context.context.route("**/*.{woff,woff2,ttf,otf}", lambda route: route.fulfill(status=200, body=""))
 
     context.page = context.context.new_page()
 
@@ -87,8 +95,9 @@ def before_scenario(context, scenario):
         context.console_messages.append({
             'type': msg.type,
             'text': msg.text,
-            'location': msg.location
+            'location': msg.location  # capturing location for debug
         })
+
     context.page.on("console", handle_console_message)
 
 
