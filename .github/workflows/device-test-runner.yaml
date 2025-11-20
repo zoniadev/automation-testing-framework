@@ -34,7 +34,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       DEVICE: ${{ inputs.device }}
       REPORT_SCOPE: ${{ inputs.report_scope != '' && inputs.report_scope || inputs.device }}
