@@ -1,0 +1,8 @@
+Executing step: user select to buy "7" bottles in "Restore Gut" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to http://staging.zonia.com/restore-gut-special
+===> Buying 7 bottle...
+Failed step: user select to buy "7" bottles in "Restore Gut" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-gut-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_nightly_--_@1.1__20251120-094650.png
