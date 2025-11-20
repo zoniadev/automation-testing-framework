@@ -106,7 +106,12 @@ def after_step(context, step):
         screenshot_filename = f"{scenario_name}_{current_time}.png"
         screenshot_path = os.path.join(SCREENSHOTS_DIR, screenshot_filename)
         try:
-            context.page.screenshot(path=screenshot_path)
+            context.page.screenshot(
+                path=screenshot_path,
+                timeout=5000,
+                animations="disabled",
+                caret="hide"
+            )
             print(f"Screenshot saved: {screenshot_path}")
             with open(screenshot_path, "rb") as image_file:
                 allure.attach(
