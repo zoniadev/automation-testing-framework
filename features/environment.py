@@ -86,7 +86,8 @@ def before_scenario(context, scenario):
     def handle_console_message(msg):
         context.console_messages.append({
             'type': msg.type,
-            'text': msg.text
+            'text': msg.text,
+            'location': msg.location
         })
     context.page.on("console", handle_console_message)
 
@@ -123,22 +124,36 @@ def after_step(context, step):
                 )
         except Exception as e:
             print(f"Error taking or attaching screenshot: {e}")
-        # Filter the captured console messages for errors
-        if hasattr(context, 'console_messages'):
-            # Filter for errors using dictionary syntax
-            console_errors = [msg for msg in context.console_messages if msg.get('type') == 'error']
+            # --- FILTER CONSOLE LOGS HERE ---
+            if hasattr(context, 'console_messages'):
+                # 1. Define the noise to ignore
+                ignored_phrases = [
+                    "Cross-Origin-Opener-Policy",
+                    "potentially-trustworthy-origin",
+                    "Failed to load resource: the server responded with a status of 404"
+                    # Optional: ignore 404s if you want
+                ]
+                # 2. Filter the messages
+                clean_errors = []
+                for msg in context.console_messages:
+                    if msg.get('type') == 'error':
+                        text = msg.get('text', '')
 
-            if console_errors:
-                print("Captured the following browser console errors:")
-                for msg in console_errors:
-                    # Safe access to text
-                    error_text = msg.get('text', 'No error text found')
+                        # Check if the message contains any of the ignored phrases
+                        is_noise = any(phrase in text for phrase in ignored_phrases)
 
-                    # Attempt to get location data if it exists in the dict
-                    location = msg.get('location', {})
-                    url = location.get('url', 'unknown source')
+                        if not is_noise:
+                            clean_errors.append(msg)
+                # 3. Print only the real errors
+                if clean_errors:
+                    print("Captured the following browser console errors:")
+                    for msg in clean_errors:
+                        error_text = msg.get('text', 'No error text found')
 
-                    print(f"--- {error_text} (Source: {url})")
+                        # Get location data (requires the update in before_scenario)
+                        location = msg.get('location', {})
+                        url = location.get('url', 'unknown source')
+                        print(f"--- {error_text} (Source: {url})")
     else:
         print(f"Completed step: {context.step.name}")
     try:
