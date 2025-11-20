@@ -1,9 +1,0 @@
-Executing step: user register in "km_live_mystery" Opt In page
-Scenario will use "JCB" card "3530111333300000"
-===> Navigated to http://staging.zonia.com/km-mystery
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/km-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/km-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "km_live_mystery" Opt In page
