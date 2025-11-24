@@ -1,0 +1,25 @@
+Executing step: user register in "ad_ev_inflammation" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/admb5e/ad-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_ev_inflammation" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-signup"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Rojas-1764016208@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/ad-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/ad-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
