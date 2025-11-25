@@ -24,7 +24,7 @@ Feature: Docuseries tests
       | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
       | annually  | no               | no                   | no         | no                 | no         | upgrade            |
       | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | lifetime | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
+      | lifetime  | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
       | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
       | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
@@ -32,7 +32,7 @@ Feature: Docuseries tests
       | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
       | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
       | monthly   | silver           | no                   | no         | no                 | no         | no                 |
-      | lifetime | no               | no                   | 6          | best_value         | no         | upgrade            |
+      | lifetime  | no               | no                   | 6          | best_value         | no         | upgrade            |
       | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
       | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
       | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
@@ -562,3 +562,49 @@ Feature: Docuseries tests
       | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
       | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
       | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
+
+
+  @cr_live @all_docuseries @WIP
+  Scenario Outline: CR Live funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page          | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | cr_live              | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | cr_live_immune       | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | cr_live_toxins       | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | cr_live_female       | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | cr_live_emotions     | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | cr_live_inflammation | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | cr_live_stress       | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | cr_live_obesity      | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | cr_live              | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
+      | cr_live_immune       | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | cr_live_toxins       | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | cr_live_female       | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+      | cr_live_emotions     | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
+      | cr_live_inflammation | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
+      | cr_live_stress       | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
+      | cr_live_obesity      | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
+      | cr_live              | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
+      | cr_live_immune       | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
+      | cr_live_toxins       | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
+      | cr_live_female       | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | cr_live_emotions     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
+      | cr_live_inflammation | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
+      | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
