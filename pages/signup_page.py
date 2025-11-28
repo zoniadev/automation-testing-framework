@@ -23,7 +23,7 @@ class SignUpPage(BasePage):
         self.context.page.locator(SIGNUP_PASSWORD_FIELD).fill(common_variables.supplement_funnel_password)
         print(f'===> User email is: {common_variables.supplement_funnel_email}')
         self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
-        if common_variables.funnel_prefix not in ['km', 'twl', 'ad']:
+        if common_variables.funnel_prefix not in ['km', 'twl', 'ad', 'cr']:
             if cycle == 'lifetime':
                 cycle = 'monthly'
         if common_variables.is_replay_weekend:
