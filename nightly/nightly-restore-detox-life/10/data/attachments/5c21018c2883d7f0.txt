@@ -1,0 +1,32 @@
+Executing step: user select to buy "3" bottles in "Restore Detox" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/restore-detox-special
+===> Buying 3 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Rodriguez-1764302760@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> Successfully bought 3 bottle
+Completed step: user select to buy "3" bottles in "Restore Detox" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for 6 More bottles of Restore Detox
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome"
+Completed step: user makes following decision in 7 day free membership
