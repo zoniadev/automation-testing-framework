@@ -564,7 +564,7 @@ Feature: Docuseries tests
       | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
 
 
-  @cr_live @all_docuseries @WIP
+  @cr_live @all_docuseries
   Scenario Outline: CR Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
