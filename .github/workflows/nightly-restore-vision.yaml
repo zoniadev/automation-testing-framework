@@ -1,0 +1,17 @@
+name: Nightly Restore Vision
+
+on:
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-restore-vision
+      device: desktop
+      tags: '@restore_vision'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit

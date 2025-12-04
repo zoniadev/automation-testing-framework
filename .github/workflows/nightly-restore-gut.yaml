@@ -1,4 +1,4 @@
-name: Nightly Restore Detox and Sleep
+name: Nightly Restore Gut
 
 on:
   schedule:
@@ -9,9 +9,9 @@ jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-restore-detox-life
+      report_name: nightly-restore-gut
       device: desktop
-      tags: '@restore_detox,@restore_sleep'
+      tags: '@restore_gut'
       environment: staging
       report_scope: nightly
     secrets: inherit

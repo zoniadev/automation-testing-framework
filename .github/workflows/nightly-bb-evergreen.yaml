@@ -1,17 +1,17 @@
-name: Nightly TF and IS Evergreen
+name: Nightly BB Evergreen
 
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 20 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-tf-is-evergreen
+      report_name: nightly-bb-evergreen
       device: desktop
-      tags: '@tf_evergreen,@is_evergreen'
+      tags: '@bb_evergreen'
       environment: staging
       report_scope: nightly
     secrets: inherit

@@ -1,0 +1,17 @@
+name: Nightly Restore Life
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-restore-life
+      device: desktop
+      tags: '@restore_life'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit
