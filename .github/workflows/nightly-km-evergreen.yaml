@@ -1,0 +1,17 @@
+name: Nightly KM Evergreen
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-km-evergreen
+      device: desktop
+      tags: '@km_evergreen'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit

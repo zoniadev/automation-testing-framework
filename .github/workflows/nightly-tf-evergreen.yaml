@@ -1,17 +1,17 @@
-name: Nightly Restore Vision, Gut, and Life
+name: Nightly TF Evergreen
 
 on:
   schedule:
-    - cron: '0 4 * * *'
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-restore-vision-gut-life
+      report_name: nightly-tf-evergreen
       device: desktop
-      tags: '@restore_vision,@restore_gut,@restore_life'
+      tags: '@tf_evergreen'
       environment: staging
       report_scope: nightly
     secrets: inherit

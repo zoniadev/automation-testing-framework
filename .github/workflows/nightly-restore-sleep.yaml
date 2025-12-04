@@ -1,0 +1,17 @@
+name: Nightly Restore Sleep
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-restore-sleep
+      device: desktop
+      tags: '@restore_sleep'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit
