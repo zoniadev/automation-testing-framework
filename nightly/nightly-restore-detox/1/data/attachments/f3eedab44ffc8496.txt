@@ -1,0 +1,45 @@
+Executing step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to http://staging.zonia.com/restore-detox-special
+===> Buying 1 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Stevenson-1764904545@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Detox
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+>>> Successfully selected upgrade "yes" and last chance "no" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome"
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+===> Cookie banner accepted using selector: //button[@data-bs-dismiss='alert' and contains(@class, 'btn-close')]
+===> Waiting for URL starting with "http://staging.zonia.com/b2c/survey/survey"
+===> URL successfully changed to "http://staging.zonia.com/b2c/survey/survey"
+===> Skipped survery
+===> Selecting skip-health-track-btn in Health Track
+===> Skipped health track
+===> Waiting for URL starting with "http://staging.zonia.com/client-welcome"
+===> URL successfully changed to "http://staging.zonia.com/client-welcome"
+===> No cookie banner found or none matched known selectors.
+===> Navigated to user home page
+===> Verified registration
+Email: zoniat-v2Stevenson-1764904545@gmail.com
+Pass: %Z7Vj09T
+Completed step: user complete registration
