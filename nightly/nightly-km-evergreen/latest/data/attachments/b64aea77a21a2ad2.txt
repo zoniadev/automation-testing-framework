@@ -1,0 +1,11 @@
+Executing step: user register in "km_ev_mood" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/kmmb5e/km-mood
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "km_ev_mood" Opt In page
+Test failed on page: 'http://staging.zonia.com/kmmb5e/km-mood'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Evergreen_funnel_--_@1.7__20251205-223238.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
