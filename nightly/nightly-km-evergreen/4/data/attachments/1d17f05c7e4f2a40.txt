@@ -1,0 +1,56 @@
+Executing step: user register in "km_ev_sleep" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to http://staging.zonia.com/kmmb5e/km-sleep
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_sleep" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hancock-1765148537@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/km-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/km-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Waiting for URL starting with "http://staging.zonia.com/km-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/km-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/km-restore-sleep-special-resilience-code"
+===> URL successfully changed to "http://staging.zonia.com/km-restore-sleep-special-resilience-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "3" bottles and "upgrade" in upsell/downsell for Restore Sleep...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/km-rs-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/km-rs-6-more-bottles"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+Actual title: Please enter below your shipping address where we can ship your supplement.
+>>>Successfully entered shipping details
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/km-restore-detox-special"
+===> URL successfully changed to "http://staging.zonia.com/km-restore-detox-special"
+>>> Successfully selected "3" bottles and "upgrade" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
