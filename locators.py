@@ -118,3 +118,6 @@ CLOSE_COOKIE_BANNER_BUTTON = "//button[@data-bs-dismiss='alert' and contains(@cl
 CHAT_FRAME = '//iframe[@title="Chat"]'
 CHAT_CLOSE_BUTTON = '//*[@aria-label="Close widget"]'
 
+#PatientCareLocators:
+PATIENT_CARE_JOIN_BUTTON = "//*[@data-testid='join-zonia-today-desktop']"
+

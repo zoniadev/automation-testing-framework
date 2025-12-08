@@ -33,6 +33,10 @@ class SignUpPage(BasePage):
             self.wait_for_navigation(
                 getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url'),
                 timeout=30000)
+        elif common_variables.funnel_prefix == 'pc':
+            self.wait_for_navigation(
+                getattr(common_variables, f'{common_variables.funnel_prefix}_restore_sleep_url'),
+                timeout=30000)
         else:
             self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
         print(f'>>> Successfully registered in Signup page')

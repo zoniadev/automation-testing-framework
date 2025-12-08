@@ -11,8 +11,14 @@ class JoinZoniaPage(BasePage):
 
     def join_zonia(self):
         print(f'>>> Joining Zonia...')
-        self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
-        self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_sign_up_url'), timeout=20000)
+        if common_variables.funnel_prefix == 'pc':
+            button_to_use = PATIENT_CARE_JOIN_BUTTON
+            next_url = getattr(common_variables, f'{common_variables.funnel}_sign_up_url')
+        else:
+            button_to_use = PATIENT_CARE_JOIN_BUTTON
+            next_url = getattr(common_variables, f'{common_variables.funnel}_sign_up_url')
+        self.context.page.locator(button_to_use).click()
+        self.wait_for_navigation(next_url, timeout=20000)
         expect(self.context.page.locator(SIGNUP_NAME_FIELD)).to_be_visible()
         print(f'>>> Successfully joined Zonia')
 

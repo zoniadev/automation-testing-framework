@@ -1,6 +1,7 @@
 # from behave import step
 from common_functions.custom_step_decorator import step
 import common_variables
+import common_functions.random_data as RD
 from pages import (
     SupplementStartPage,
     SupplementUpsellPage,
@@ -136,3 +137,14 @@ def verify_banners_in_this_week_articles(context):
     page = BlogPage(context)
     page.open_blog_page()
     page.check_this_week_articles()
+
+
+@step(u'user is on the Patient Care sales page')
+def user_open_patient_care_page(context):
+    common_variables.funnel = 'pc'
+    common_variables.funnel_prefix = 'pc'
+    common_variables.supplement_funnel_email = RD.automation_template_email()
+    common_variables.supplement_funnel_name = RD.automation_first_name()
+    page = JoinZoniaPage(context)
+    page.handle_cookie_banner()
+    page.navigate_to_url(getattr(common_variables, "pc_sales_page_url"))
