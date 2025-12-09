@@ -1,0 +1,11 @@
+Executing step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user select to buy "6" bottles in "Restore Vision" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-vision-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_Supplement_funnel_--_@1.16__20251209-055110.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Refused to execute script from 'http://staging.zonia.com/assets/js/html5.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_TIMED_OUT (Source: unknown source)
