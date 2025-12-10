@@ -120,7 +120,7 @@ class SupplementUpsellPage(BasePage):
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
         if upsell_page == 'Restore Detox':
-            if common_variables.funnel_prefix in ['lg', 'km', 'is', 'twl']:
+            if common_variables.funnel_prefix in ['lg', 'km', 'is', 'twl', 'pc']:
                 next_page_navigation = common_variables.welcome_page_url
             else:
                 page_url = f'{common_variables.funnel_prefix}_restore_life_url'
