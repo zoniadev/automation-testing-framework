@@ -28,8 +28,12 @@ def epoch_date():
 
 
 def automation_template_email():
-    fake_email = "zoniat-v2" + last_name() + "-" + epoch_date() + "@gmail.com"
+    fake_email = "gerganazonia82" + last_name() + "-" + epoch_date() + "@gmail.com"
     return fake_email
+
+def geri_template_email():
+    geri_email = "gerganazonia82" + "+" + epoch_date() + "@gmail.com"
+    return geri_email
 
 
 def amount(min_amount=10000, max_amount=250000):

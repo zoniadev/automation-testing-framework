@@ -11,7 +11,8 @@ class WelcomePage(BasePage):
         BasePage.__init__(self, context)
 
     def create_password(self):
-        common_variables.supplement_funnel_password = RD.password()
+        # common_variables.supplement_funnel_password = RD.password()
+        common_variables.supplement_funnel_password = 'Pass123@@'
         self.context.page.locator(PASSWORD_POPUP_FIELD).click(timeout=20000)
         time.sleep(0.5)
         self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)

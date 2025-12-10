@@ -12,7 +12,8 @@ class OptInPage(BasePage):
 
     def register_in_opt_in_page(self):
         self.handle_cookie_banner()
-        common_variables.supplement_funnel_email = RD.automation_template_email()
+        # common_variables.supplement_funnel_email = RD.automation_template_email()
+        common_variables.supplement_funnel_email = RD.geri_template_email()
         common_variables.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
         if common_variables.funnel == 'lg_live':
