@@ -1,0 +1,8 @@
+Executing step: user register in "twl_ev" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to http://staging.zonia.com/thriving-without-limits
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+===> URL successfully changed to "http://staging.zonia.com/thriving-without-limits-live-adr4mxdr52"
+Completed step: user register in "twl_ev" Opt In page
