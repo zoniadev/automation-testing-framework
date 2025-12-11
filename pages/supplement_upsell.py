@@ -168,8 +168,9 @@ class SupplementUpsellPage(BasePage):
         elif upsell_downsell == 'no':
             self.context.page.locator(NO_THANKS_BUTTON).click()
             if amount != 'no':
-                self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
-                print('===> Not upgrading...')
+                if common_variables.funnel_prefix not in ['pc']:
+                    self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
+                    print('===> Not upgrading...')
         else:
             self.context.page.locator(NO_THANKS_BUTTON).click()
             if upsell_downsell == 'best_value':
