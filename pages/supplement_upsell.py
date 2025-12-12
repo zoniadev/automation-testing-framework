@@ -144,7 +144,10 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Unsupported "upsell_downsell" value: {upsell_downsell}')
         if amount == 'no':
             print('===> Not buying bottles...')
-            next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
+            if common_variables.funnel_prefix != 'pc':
+                next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
+            else:
+                next_page = next_page_navigation
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
@@ -166,18 +169,23 @@ class SupplementUpsellPage(BasePage):
             common_variables.docuseries_address_will_appear = True
             print('Address popup should appear next page')
         elif upsell_downsell == 'no':
-            self.context.page.locator(NO_THANKS_BUTTON).click()
-            if amount != 'no':
-                if common_variables.funnel_prefix not in ['pc']:
-                    self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
-                    print('===> Not upgrading...')
-        else:
-            self.context.page.locator(NO_THANKS_BUTTON).click()
-            if upsell_downsell == 'best_value':
-                self.context.page.locator(BUY_BEST_VALUE_BUTTON).click()
+            if common_variables.funnel_prefix == 'pc':
+                if amount != 'no':
+                    self.context.page.locator(NO_THANKS_BUTTON).click()
             else:
-                self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
-            print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
+                self.context.page.locator(NO_THANKS_BUTTON).click()
+                if amount != 'no':
+                    if common_variables.funnel_prefix not in ['pc']:
+                        self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
+                        print('===> Not upgrading...')
+        else:
+            if common_variables.funnel_prefix != 'pc':
+                self.context.page.locator(NO_THANKS_BUTTON).click()
+                if upsell_downsell == 'best_value':
+                    self.context.page.locator(BUY_BEST_VALUE_BUTTON).click()
+                else:
+                    self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
+                print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
         if common_variables.docuseries_address_will_appear:
             self.populate_shipping_address()
         self.wait_for_navigation(next_page_navigation, timeout=30000)

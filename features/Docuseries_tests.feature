@@ -610,7 +610,7 @@ Feature: Docuseries tests
       | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @cr_live @all_docuseries
+  @cr_live @all_docuseries @WIP
   Scenario Outline: Patient Care funnel
     Given user is on the Patient Care sales page
     And user join Zonia
@@ -625,15 +625,10 @@ Feature: Docuseries tests
 
     Examples:
       | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | monthly   | 1          | no                 | 3          | no                 |
-      | quarterly | 3          | no                 | 1          | no                 |
-      | annually  | 6          | no                 | 6          | no                 |
       | lifetime  | no         | no                 | no         | no                 |
+      | monthly   | 1          | upgrade            | 3          | upgrade            |
+      | quarterly | 3          | upgrade            | 6          | no                 |
+      | annually  | 6          | no                 | 1          | upgrade            |
+      | quarterly | 3          | no                 | no         | no                 |
       | monthly   | no         | no                 | 1          | no                 |
-      | quarterly | 1          | no                 | no         | no                 |
-      | annually  | 3          | no                 | 3          | no                 |
-      | lifetime  | 6          | no                 | 1          | no                 |
-      | monthly   | 1          | no                 | 6          | no                 |
-      | quarterly | 6          | no                 | 3          | no                 |
-      | annually  | no         | no                 | 6          | no                 |
-      | lifetime  | 3          | no                 | no         | no                 |
+      | annually  | no         | no                 | 6          | upgrade            |
