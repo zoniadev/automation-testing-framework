@@ -1,0 +1,83 @@
+Executing step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/restore-gut-3-free-bottles
+===> Buying 1 bottle...
+Funnel: restore_gut_b2g3
+===> User email is: zoniat-v2Glover-1765711193@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-gut-6-more-bottles-2"
+===> URL successfully changed to "http://staging.zonia.com/restore-gut-6-more-bottles-2"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rg-restore-detox-6-discounted-bottles-2"
+===> URL successfully changed to "http://staging.zonia.com/rg-restore-detox-6-discounted-bottles-2"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rg-restore-sleep-6-discounted-bottles-2"
+===> URL successfully changed to "http://staging.zonia.com/rg-restore-sleep-6-discounted-bottles-2"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rg-trial"
+===> URL successfully changed to "http://staging.zonia.com/rg-trial"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rg-trial"
+===> URL successfully changed to "http://staging.zonia.com/rg-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> Issue with clicking button "//*[@id='skip-registration-top']", page was not changed to welcome, retrying...
+Error: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/welcome.*')'
+Actual value: http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=693e9d64baeb08f26264c79e"
+
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome"
+===> Second try was successful
+Completed step: user makes following decision in 7 day free membership
