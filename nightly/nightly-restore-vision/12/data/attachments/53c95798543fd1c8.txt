@@ -1,0 +1,107 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/restore-vision-special
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Oliver-1765862722@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles"
+>>> Successfully selected upgrade "no" and last chance "best_value" for 6 More bottles of Restore Vision
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles"
+>>> Successfully selected upgrade "yes" and last chance "no" for Restore Sleep
+Completed step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rv-trial"
+===> URL successfully changed to "http://staging.zonia.com/rv-trial"
+>>> Successfully selected upgrade "no" and last chance "best_value" for Restore Detox
+Completed step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rv-trial"
+===> URL successfully changed to "http://staging.zonia.com/rv-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> Issue with clicking button "//*[@id='skip-registration-top']", page was not changed to welcome, retrying...
+Error: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/welcome.*')'
+Actual value: http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad"
+
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+Failed step: user makes following decision in 7 day free membership
+Test failed on page: 'http://staging.zonia.com/rv-trial-2?oderId=6940ed4df9c4a13cc3ff81ad&id=6940ed4df9c4a13cc3ff81ad'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_Supplement_funnel_--_@1.5__20251216-052802.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Refused to execute script from 'http://staging.zonia.com/assets/js/html5.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Refused to execute script from 'http://staging.zonia.com/assets/js/html5.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 502 (Bad Gateway) (Source: unknown source)
