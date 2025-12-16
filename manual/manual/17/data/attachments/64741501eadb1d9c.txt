@@ -1,0 +1,29 @@
+Executing step: user is on the Patient Care sales page
+===> No cookie banner found or none matched known selectors.
+===> Navigated to http://staging.zonia.com/patientcare
+Completed step: user is on the Patient Care sales page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/signup-patientcare"
+===> URL successfully changed to "http://staging.zonia.com/signup-patientcare"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Anderson-1765869579@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/clp-restore-sleep-special"
+===> URL successfully changed to "http://staging.zonia.com/clp-restore-sleep-special"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "http://staging.zonia.com/clp-restore-detox-special"
+===> URL successfully changed to "http://staging.zonia.com/clp-restore-detox-special"
+===> Waiting for URL starting with "http://staging.zonia.com/clp-restore-detox-special"
+===> URL successfully changed to "http://staging.zonia.com/clp-restore-detox-special"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
