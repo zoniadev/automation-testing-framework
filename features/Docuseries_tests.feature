@@ -610,7 +610,7 @@ Feature: Docuseries tests
       | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @cr_live @all_docuseries
+  @pc_live @all_docuseries
   Scenario Outline: Patient Care funnel
     Given user is on the Patient Care sales page
     And user join Zonia
