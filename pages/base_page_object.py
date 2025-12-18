@@ -20,7 +20,13 @@ class BasePage(object):
         full_url_pattern = re.compile(f"^{re.escape(base_url)}{re.escape(url)}.*")
         print(f'===> Waiting for URL starting with "{base_url}{url}"')
         expect(self.context.page).to_have_url(full_url_pattern, timeout=timeout)
-        print(f'===> URL successfully changed to "{base_url}{url}"')
+        print(f'===> URL successfully changed to "{self.context.page.url}"')
+        # Special check for the welcome page
+        if url == common_variables.welcome_page_url:
+            print('===> Performing additional check for "mode" parameter on welcome page.')
+            # This will assert that the final URL contains either "?mode=" or "&mode="
+            expect(self.context.page).to_have_url(re.compile(r"(\?|&)mode="))
+            print('===> "mode" parameter confirmed.')
 
     def verify_element_contain_text(self, locator, expected_text):
         expect(self.context.page.locator(locator)).to_have_text(expected_text)
@@ -204,4 +210,3 @@ class BasePage(object):
         # Fill and verify
         field.fill(value, timeout=timeout)
         expect(field).to_have_value(value, timeout=timeout)
-
