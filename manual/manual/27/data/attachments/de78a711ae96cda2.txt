@@ -1,0 +1,28 @@
+Executing step: user register in "is_ev_trauma" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to http://staging.zonia.com/mb/is-trauma
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev_trauma" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-signup"
+Failed step: user join Zonia
+Test failed on page: 'http://staging.zonia.com/mb/is-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_--_@1.8__20251218-135134.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- %c MoEngage %c %c error %c %c Initialization  color: white; background: #41AE55; border-radius: 5px;  color: white; background: #cc0a0a; border-radius: 5px;  color: white; background: #48beab; border-radius: 5px; Error in getting Web SDK Settings. This might indicate that the App is blocked. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)

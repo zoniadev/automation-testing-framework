@@ -1,9 +1,0 @@
-Executing step: user register in "bb_ev" Opt In page
-Scenario will use "Visa" card "4009348888881881"
-===> Navigated to http://staging.zonia.com/bbmb5e/beyond-the-brain
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/bbmb5e/bb-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/bbmb5e/bb-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "bb_ev" Opt In page
