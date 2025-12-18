@@ -608,3 +608,27 @@ Feature: Docuseries tests
       | cr_live_emotions     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
       | cr_live_inflammation | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
       | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+
+
+  @pc_live @all_docuseries
+  Scenario Outline: Patient Care funnel
+    Given user is on the Patient Care sales page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | lifetime  | no         | no                 | no         | no                 |
+      | monthly   | 1          | upgrade            | 3          | upgrade            |
+      | quarterly | 3          | upgrade            | 6          | no                 |
+      | annually  | 6          | no                 | 1          | upgrade            |
+      | quarterly | 3          | no                 | no         | no                 |
+      | monthly   | no         | no                 | 1          | no                 |
+      | annually  | no         | no                 | 6          | upgrade            |

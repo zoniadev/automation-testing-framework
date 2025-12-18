@@ -326,6 +326,25 @@ Feature: Nightly tests
       | cr_live_immune | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
+  @nightly @nightly_docuseries
+  Scenario Outline: Patient Care nightly
+    Given user is on the Patient Care sales page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | quarterly | no         | no                 | no         | no                 |
+      | monthly   | 1          | upgrade            | 3          | upgrade            |
+
+
   @nightly @nightly_supplement
   Scenario Outline: Restore Sleep Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page
