@@ -1,0 +1,25 @@
+Executing step: user select to buy "6" bottles in "Restore Detox" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/restore-detox-special
+===> Buying 6 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Moore-1766114069@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-detox-6-more-bottles?orderId=6944c31f698ed44a55663ff5"
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Detox" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rd-restore-life-6-discounted-bottles?orderId=6944c31f698ed44a55663ff5"
+>>> Successfully selected upgrade "yes" and last chance "no" for 6 More bottles of Restore Detox
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
