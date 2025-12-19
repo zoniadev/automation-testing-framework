@@ -1,0 +1,31 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to http://staging.zonia.com/restore-vision-special
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Freeman-1766122170@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-vision-6-more-bottles?orderId=6944e2c502de2efda2de0482"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-sleep-6-discounted-bottles-2?orderId=6944e2c502de2efda2de0482"
+>>> Successfully selected upgrade "yes" and last chance "no" for 6 More bottles of Restore Vision
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rv-restore-detox-6-discounted-bottles-2?orderId=6944e2c502de2efda2de0482"
+>>> Successfully selected upgrade "no" and last chance "best_value" for Restore Sleep
+Completed step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "http://staging.zonia.com/rv-trial"
+===> URL successfully changed to "http://staging.zonia.com/rv-trial-2?oderId=6944e2c502de2efda2de0482&id=6944e2c502de2efda2de0482"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "third" supplement "Restore Detox" Upsell page
