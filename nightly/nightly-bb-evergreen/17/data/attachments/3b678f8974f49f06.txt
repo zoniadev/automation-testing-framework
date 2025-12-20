@@ -1,0 +1,86 @@
+Executing step: user register in "bb_ev_memory" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/bbmb5e/bb-memory
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/bbmb5e/bb-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "bb_ev_memory" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/bbmb5e/bb-signup"
+===> URL successfully changed to "http://staging.zonia.com/bbmb5e/bb-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2James-1766263681@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/bb-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/bb-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/bb-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/bb-mini-masterclass-series-platinum-package?id=69470b93f68de0fb8aad2244"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/bb-restore-detox-special-gut-brain-reset"
+===> URL successfully changed to "http://staging.zonia.com/bb-restore-detox-special-gut-brain-reset?id=69470b93f68de0fb8aad2244"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "6" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/bb-rd-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/bb-rd-6-more-bottles?id=69470b93f68de0fb8aad2244"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/bb-restore-life-special"
+===> URL successfully changed to "http://staging.zonia.com/bb-restore-life-special?id=69470b93f68de0fb8aad2244"
+>>> Successfully selected "6" bottles and "upgrade" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "3" bottles and "most_popular" in upsell/downsell for Restore Life...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/bb-rl-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/bb-rl-6-more-bottles?id=69470b93f68de0fb8aad2244"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome?mode=standard&id=69470b93f68de0fb8aad2244"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "3" bottles and "most_popular" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page
+Executing step: user complete registration
+===> Cookie banner accepted using selector: //button[@data-bs-dismiss='alert' and contains(@class, 'btn-close')]
+===> Waiting for URL starting with "http://staging.zonia.com/b2c/survey/survey"
+===> URL successfully changed to "http://staging.zonia.com/b2c/survey/survey"
+===> Skipped survery
+===> Selecting skip-health-track-btn in Health Track
+===> Skipped health track
+===> Waiting for URL starting with "http://staging.zonia.com/client-welcome"
+===> URL successfully changed to "http://staging.zonia.com/client-welcome?healthtrack=skipped"
+===> No cookie banner found or none matched known selectors.
+===> Navigated to user home page
+===> Verified registration
+Email: zoniat-v2James-1766263681@gmail.com
+Pass: O_%v3Pyn
+Completed step: user complete registration
