@@ -1,9 +1,0 @@
-Executing step: user register in "lg_ev_exercise" Opt In page
-Scenario will use "UnionPay" card "6221261111117766"
-Failed step: user register in "lg_ev_exercise" Opt In page
-Test failed on page: 'http://staging.zonia.com/lgmb5e/lg-exercise'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Evergreen_funnel_--_@1.13__20251230-234727.png
-Captured the following browser console errors:
---- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
---- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
