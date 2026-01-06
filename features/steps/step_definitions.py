@@ -54,15 +54,18 @@ def user_select_seven_day_membership(context):
     page = SupplementUpsellPage(context)
     for row in context.table:
         page.chose_seven_day_membership(decision=row['decision'], plan=row['plan'])
-    common_variables.membership_added = True
+        if row['decision'] == 'accept' and row['plan'] != 'no':
+            common_variables.membership_added = True
+        else:
+            common_variables.membership_added = False
 
 
 @step('user complete registration')
 def user_complete_registration(context):
     page = WelcomePage(context)
+    page.create_password()
     if common_variables.membership_added:
-        page.create_password()
-    page.skip_survey()
+        page.skip_survey()
     page = UserPage(context)
     page.verify_registration()
 
