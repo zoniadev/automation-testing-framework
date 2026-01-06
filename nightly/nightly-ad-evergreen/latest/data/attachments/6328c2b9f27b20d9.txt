@@ -1,0 +1,34 @@
+Executing step: user register in "ad_ev_pain" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/admb5e/ad-pain-relief
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_ev_pain" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/admb5e/ad-signup"
+===> URL successfully changed to "http://staging.zonia.com/admb5e/ad-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Trevino-1767728884@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/ad-booster-packages-monthly"
+===> URL successfully changed to "http://staging.zonia.com/ad-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/ad-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/ad-mini-masterclass-series-platinum-package?id=695d6705ff46f2eb5a4c961c"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
