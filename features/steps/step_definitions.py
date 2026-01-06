@@ -1,5 +1,5 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 import common_functions.random_data as RD
 from pages import (
@@ -18,6 +18,7 @@ from pages import (
 @step('user select to buy "{amount}" bottles in "{funnel}" Supplements page')
 def user_fill_opt_in_form(context, amount, funnel):
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
+    common_variables.flow_type = 'supplement'
     common_variables.funnel = funnel.lower().replace(' ', '_')
     page = SupplementStartPage(context)
     page.navigate_to_url(getattr(common_variables, f"{common_variables.funnel}_start_url"))
@@ -63,8 +64,11 @@ def user_select_seven_day_membership(context):
 @step('user complete registration')
 def user_complete_registration(context):
     page = WelcomePage(context)
-    page.create_password()
-    if common_variables.membership_added:
+    if common_variables.flow_type == 'supplement':
+        page.create_password()
+        if common_variables.membership_added:
+            page.skip_survey()
+    if common_variables.flow_type == 'docuseries':
         page.skip_survey()
     page = UserPage(context)
     page.verify_registration()
@@ -94,6 +98,7 @@ def verify_button_redirects(context, element, url, expected_redirect):
 @step(u'user register in "{series}" Opt In page')
 def user_register_in_opt_in_page(context, series):
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
+    common_variables.flow_type = 'docuseries'
     common_variables.funnel = series.lower()
     common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
     page = OptInPage(context)
@@ -144,6 +149,7 @@ def verify_banners_in_this_week_articles(context):
 
 @step(u'user is on the Patient Care sales page')
 def user_open_patient_care_page(context):
+    common_variables.flow_type = 'docuseries'
     common_variables.funnel = 'pc'
     common_variables.funnel_prefix = 'pc'
     common_variables.supplement_funnel_email = RD.automation_template_email()

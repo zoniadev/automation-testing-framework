@@ -5,6 +5,7 @@ base_url_staging = 'http://staging.zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
 mobile_run = False
+flow_type = ''
 
 supplement_funnel_name = ''
 supplement_funnel_email = ''
