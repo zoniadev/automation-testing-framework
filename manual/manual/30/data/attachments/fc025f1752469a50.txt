@@ -1,0 +1,20 @@
+Executing step: user is on the Patient Care sales page
+===> No cookie banner found or none matched known selectors.
+===> Navigated to http://staging.zonia.com/patientcare
+Completed step: user is on the Patient Care sales page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/signup-patientcare"
+===> URL successfully changed to "http://staging.zonia.com/signup-patientcare"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Martinez-1767717400@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/clp-restore-sleep-special"
+===> URL successfully changed to "http://staging.zonia.com/clp-restore-sleep-special"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
