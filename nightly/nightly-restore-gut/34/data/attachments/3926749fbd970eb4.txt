@@ -1,0 +1,108 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/restore-gut-special
+===> Buying 1 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Drake-1767757855@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-gut-6-more-bottles-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rg-restore-detox-6-discounted-bottles-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+>>> Successfully selected upgrade "no" and last chance "best_value" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rg-restore-sleep-6-discounted-bottles-2?orderId=695dd82bd2ae2f1d9f47f7e2&id=695dd82bd2ae2f1d9f47f7e2"
+>>> Successfully selected upgrade "yes" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rg-trial"
+===> URL successfully changed to "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+>>> Successfully selected upgrade "no" and last chance "best_value" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rg-trial"
+===> URL successfully changed to "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> Issue with clicking button "//*[@id='skip-registration-top']", page was not changed to welcome, retrying...
+Error: Page URL expected to be 're.compile('^http://staging\\.zonia\\.com/welcome.*')'
+Actual value: http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+  -   locator resolved to <html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+  -   unexpected value "http://staging.zonia.com/rg-trial-2?orderId=695dd82bd2ae2f1d9f47f7e2"
+
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome?mode=standard"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+===> Second try was successful
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+===> No cookie banner found or none matched known selectors.
+Failed step: user complete registration
+Test failed on page: 'http://staging.zonia.com/user'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_funnel_--_@1.5__20260107-035349.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden) (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 (Not Found) (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
