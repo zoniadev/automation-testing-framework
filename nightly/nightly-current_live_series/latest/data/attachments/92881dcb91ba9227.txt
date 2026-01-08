@@ -1,0 +1,47 @@
+Executing step: user register in "cr_live_emotions" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/cr-emotions
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "cr_live_emotions" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-signup"
+===> URL successfully changed to "http://staging.zonia.com/cr-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Rogers-1767899369@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/cr-booster-packages-lifetime"
+===> URL successfully changed to "http://staging.zonia.com/cr-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/cr-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "http://staging.zonia.com/cr-mini-masterclass-series-platinum-package?id=696000fdf98d0330151dd5f1"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+Failed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Test failed on page: 'http://staging.zonia.com/cr-mini-masterclass-series-platinum-package?id=696000fdf98d0330151dd5f1'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_funnel_--_@1.21__20260108-191001.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 403 (Forbidden) (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
