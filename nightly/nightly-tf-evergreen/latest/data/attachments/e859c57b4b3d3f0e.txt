@@ -1,0 +1,25 @@
+Executing step: user register in "tf_ev_detoxification" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to http://staging.zonia.com/mb2/tf-18-herbs-detoxification
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_detoxification" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Griffin-1767839730@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/tf-booster-packages-annually"
+===> URL successfully changed to "http://staging.zonia.com/tf-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
