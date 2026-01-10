@@ -1,0 +1,12 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to http://staging.zonia.com/restore-gut-special
+===> Buying 1 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Olson-1768015860@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-gut-6-more-bottles-2?orderId=6961c7ffb0fc379fe8310be0"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut" Supplements page
