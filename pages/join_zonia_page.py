@@ -40,3 +40,8 @@ class JoinZoniaPage(BasePage):
         self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_rw_signup_url'), timeout=20000)
         print(f'>>> Successfully joined Zonia from replay weekend pages')
+
+    def join_zonia_bonus_episode(self):
+        self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
+        next_page = f'{common_variables.funnel_prefix}-signup-bonuses'
+        self.wait_for_navigation(next_page, timeout=20000)
