@@ -610,7 +610,7 @@ Feature: Docuseries tests
       | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @cr_bonus_episodes @all_docuseries @WIP
+  @cr_bonus_episodes @all_docuseries
   Scenario Outline: CR Bonus Episodes funnel
     Given user is on the bonus episode "<episode>" page
     When user sign up for "<plan>" plan
@@ -627,7 +627,7 @@ Feature: Docuseries tests
 
     Examples:
       | episode | plan     | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | 11      | annually | no                   | 1          | upgrade            | no         | upgrade            |
+      | 11      | annually | no                   | 1          | upgrade            | no         | upgrade            |
       | 12      | monthly  | buy                  | no         | upgrade            | 3          | most_popular       |
 
 
