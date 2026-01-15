@@ -1,0 +1,4 @@
+Executing step: user is on the Patient Care sales page
+===> No cookie banner found or none matched known selectors.
+===> Navigated to http://staging.zonia.com/patientcare
+Completed step: user is on the Patient Care sales page
