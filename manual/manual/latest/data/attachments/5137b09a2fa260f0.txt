@@ -1,0 +1,24 @@
+Executing step: user is on the bonus episode "12" page
+===> Navigated to http://staging.zonia.com/cr-episode-12-live-zm6v1xnak1
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia-bonuses-ep12"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia-bonuses-ep12"
+===> Waiting for URL starting with "http://staging.zonia.com/cr-signup-bonuses"
+===> URL successfully changed to "http://staging.zonia.com/cr-signup-bonuses"
+Completed step: user is on the bonus episode "12" page
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Thomas-1768468708@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/cr-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/cr-mini-masterclass-series"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+===> URL successfully changed to "http://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
