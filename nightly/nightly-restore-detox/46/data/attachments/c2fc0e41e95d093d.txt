@@ -1,0 +1,34 @@
+Executing step: user select to buy "3" bottles in "Restore Detox" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to http://staging.zonia.com/restore-detox-special
+===> Buying 3 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Harrison-1768792271@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-detox-6-more-bottles?orderId=696da0d9ed0a3f313dac24e4"
+===> Successfully bought 3 bottle
+Completed step: user select to buy "3" bottles in "Restore Detox" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-restore-life-6-discounted-bottles"
+===> URL successfully changed to "http://staging.zonia.com/rd-restore-life-6-discounted-bottles?orderId=696da0d9ed0a3f313dac24e4"
+>>> Successfully selected upgrade "no" and last chance "best_value" for 6 More bottles of Restore Detox
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Life" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for Restore Life
+Completed step: user makes following decision in "second" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "http://staging.zonia.com/rd-trial"
+===> URL successfully changed to "http://staging.zonia.com/rd-trial"
+===> Waiting for URL starting with "http://staging.zonia.com/welcome"
+===> URL successfully changed to "http://staging.zonia.com/welcome?mode=standard"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+Completed step: user makes following decision in 7 day free membership
