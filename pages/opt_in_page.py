@@ -76,3 +76,8 @@ class OptInPage(BasePage):
                 raise AssertionError(
                     'Failed to navigate after opt-in. Tried: ' + (', '.join(attempted) or 'no configured URLs')
                 )
+
+    def register_in_bonus_episode_page(self, episode):
+        self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
+        next_page = f'{common_variables.funnel_prefix}-join-zonia-bonuses-ep{episode}'
+        self.wait_for_navigation(next_page, timeout=20000)

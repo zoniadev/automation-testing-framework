@@ -6,6 +6,7 @@ used_base_url = ''
 zonia_blog_url = "blog"
 mobile_run = False
 flow_type = ''
+bonus_episode = False
 
 supplement_funnel_name = ''
 supplement_funnel_email = ''
@@ -318,6 +319,8 @@ cr_restore_sleep_downsell_url = 'cr-rs-6-discounted-bottles'
 cr_restore_life_url = 'cr-restore-life-special'
 cr_restore_life_upsell_url = 'cr-rl-6-more-bottles'
 cr_restore_life_downsell_url = 'cr-rl-6-discounted-bottles'
+cr_bonus_episode_11_url = 'cr-episode-11-live-l4n22al2je'
+cr_bonus_episode_12_url = 'cr-episode-12-live-zm6v1xnak1'
 
 pc_sales_page_url = 'patientcare'
 pc_sign_up_url = 'signup-patientcare'

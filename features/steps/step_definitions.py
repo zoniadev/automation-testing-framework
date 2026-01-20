@@ -157,3 +157,20 @@ def user_open_patient_care_page(context):
     page = JoinZoniaPage(context)
     page.handle_cookie_banner()
     page.navigate_to_url(getattr(common_variables, "pc_sales_page_url"))
+
+
+@step(u'user is on the bonus episode "{episode}" page')
+def user_open_patient_care_page(context, episode):
+    common_variables.flow_type = 'docuseries'
+    common_variables.bonus_episode = True
+    common_variables.funnel = 'cr_bonus'
+    common_variables.funnel_prefix = 'cr'
+    common_variables.supplement_funnel_email = RD.automation_template_email()
+    common_variables.supplement_funnel_name = RD.automation_first_name()
+    page = OptInPage(context)
+    page.navigate_to_url(getattr(common_variables, f'{common_variables.funnel_prefix}_bonus_episode_{episode}_url'))
+    page.register_in_bonus_episode_page(episode)
+    page = JoinZoniaPage(context)
+    page.join_zonia_bonus_episode()
+
+
