@@ -86,6 +86,13 @@ SIGNUP_NAME_FIELD = "//input[@id='form-name']"
 SIGNUP_EMAIL_FIELD = "//input[@id='form-email']"
 SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
 SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='activate-membership-1']"
+PAYPAL_BUTTON = "//*[@unique-identifier='paypal-button-1']"
+
+#PaypalLocators:
+PAYPAL_EMAIL_FIELD = "//input[@id='email']"
+PAYPAL_NEXT_BUTTON = "//button[@id='btnNext']"
+PAYPAL_PASSWORD_FIELD = "//input[@id='password']"
+PAYPAL_LOGIN_BUTTON = "//button[@id='btnLogin']"
 
 #SpippingAddressPopupLocators:
 SHIPPING_POPUP_TITLE = "#shippingModal h5.modal-title"

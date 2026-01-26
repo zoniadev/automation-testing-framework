@@ -17,6 +17,9 @@ docuseries_address_already_filled = False
 membership_added = False
 is_replay_weekend = False
 
+paypal_email = 'stefan.test@zonia.com'
+paypal_password = '@Zonia123'
+
 ad_live_opt_in_url = 'unbroken'
 ad_live_join_zonia_url = 'ad-join-zonia'
 ad_live_sign_up_url = 'ad-signup'
@@ -321,6 +324,17 @@ cr_restore_life_upsell_url = 'cr-rl-6-more-bottles'
 cr_restore_life_downsell_url = 'cr-rl-6-discounted-bottles'
 cr_bonus_episode_11_url = 'cr-episode-11-live-l4n22al2je'
 cr_bonus_episode_12_url = 'cr-episode-12-live-zm6v1xnak1'
+
+cr_ev_opt_in_url = 'crmb5e/cancer-unraveled'
+cr_ev_immune_opt_in_url = 'crmb5e/cr-immunity'
+cr_ev_toxins_opt_in_url = 'crmb5e/cr-toxins'
+cr_ev_female_opt_in_url = 'crmb5e/cr-female-cancers'
+cr_ev_trauma_opt_in_url = 'crmb5e/cr-emotions'
+cr_ev_aging_opt_in_url = 'crmb5e/cr-inflammation'
+cr_ev_stress_opt_in_url = 'crmb5e/cr-chronic-stress'
+cr_ev_obesity_opt_in_url = 'crmb5e/cr-obesity'
+cr_ev_join_zonia_url = 'crmb5e/cr-join-zonia'
+cr_ev_sign_up_url = 'crmb5e/cr-signup'
 
 pc_sales_page_url = 'patientcare'
 pc_sign_up_url = 'signup-patientcare'

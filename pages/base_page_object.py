@@ -10,7 +10,9 @@ class BasePage(object):
     __TIMEOUT = 15000
 
     def __init__(self, context):
-        self.context = context
+        self.context = context  # Behave context
+        self.page = context.page  # Playwright Page
+        self.browser_context = context.page.context  # Playwright BrowserContext
 
     def get_timeout(self):
         return BasePage.__TIMEOUT
@@ -210,3 +212,11 @@ class BasePage(object):
         # Fill and verify
         field.fill(value, timeout=timeout)
         expect(field).to_have_value(value, timeout=timeout)
+
+    def switch_to_new_tab(self, trigger_method):
+        with self.context.page.context.expect_page() as new_page_info:
+            trigger_method()
+        new_page = new_page_info.value
+        new_page.wait_for_load_state()
+        print(f'===> Switched to new tab: "{new_page.url}"')
+        return new_page

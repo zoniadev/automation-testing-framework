@@ -327,6 +327,31 @@ Feature: Nightly tests
 
 
   @nightly @nightly_docuseries
+  Scenario Outline: CR Evergreen nightly
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page  | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | cr_ev        | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | cr_ev_immune | monthly   | no               | no                   | no         | no                 | no         | no                 |
+
+
+  @nightly @nightly_docuseries
   Scenario Outline: Patient Care nightly
     Given user is on the Patient Care sales page
     And user join Zonia
