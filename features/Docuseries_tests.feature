@@ -631,7 +631,7 @@ Feature: Docuseries tests
       | 12      | monthly  | buy                  | no         | upgrade            | 3          | most_popular       |
 
 
-  @cr_evergreen @all_docuseries @WIP
+  @cr_evergreen @all_docuseries
   Scenario Outline: CR Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -653,28 +653,28 @@ Feature: Docuseries tests
     Examples:
       | opt_in_page   | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
       | cr_ev         | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-#      | cr_ev_immune  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-#      | cr_ev_toxins  | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | cr_ev_female  | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-#      | cr_ev_trauma  | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-#      | cr_ev_aging   | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-#      | cr_ev_stress  | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
-#      | cr_ev_obesity | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-#      | cr_ev         | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
-#      | cr_ev_immune  | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-#      | cr_ev_toxins  | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-#      | cr_ev_female  | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-#      | cr_ev_trauma  | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-#      | cr_ev_aging   | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-#      | cr_ev_stress  | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-#      | cr_ev_obesity | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-#      | cr_ev         | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
-#      | cr_ev_immune  | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-#      | cr_ev_toxins  | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-#      | cr_ev_female  | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-#      | cr_ev_trauma  | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-#      | cr_ev_aging   | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-#      | cr_ev_stress  | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+      | cr_ev_immune  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | cr_ev_toxins  | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | cr_ev_female  | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | cr_ev_trauma  | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | cr_ev_aging   | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | cr_ev_stress  | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | cr_ev_obesity | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | cr_ev         | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
+      | cr_ev_immune  | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | cr_ev_toxins  | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | cr_ev_female  | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+      | cr_ev_trauma  | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
+      | cr_ev_aging   | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
+      | cr_ev_stress  | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
+      | cr_ev_obesity | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
+      | cr_ev         | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
+      | cr_ev_immune  | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
+      | cr_ev_toxins  | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
+      | cr_ev_female  | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
+      | cr_ev_trauma  | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
+      | cr_ev_aging   | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
+      | cr_ev_stress  | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
   @pc_live @all_docuseries
