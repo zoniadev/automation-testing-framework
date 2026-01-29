@@ -336,6 +336,14 @@ cr_ev_obesity_opt_in_url = 'crmb5e/cr-obesity'
 cr_ev_join_zonia_url = 'crmb5e/cr-join-zonia'
 cr_ev_sign_up_url = 'crmb5e/cr-signup'
 
+cr_live_rw_main_url = 'cr-replay-weekend'
+cr_live_rw_sales_url = 'cr-join-zonia-bonuses'
+cr_live_rw_signup_url = 'cr-signup-bonuses'
+
+cr_ev_rw_main_url = 'crmb5e/cr-replay-weekend'
+cr_ev_rw_sales_url = 'crmb5e/cr-join-zonia-bonuses'
+cr_ev_rw_signup_url = 'crmb5e/cr-signup-bonuses'
+
 pc_sales_page_url = 'patientcare'
 pc_sign_up_url = 'signup-patientcare'
 pc_restore_sleep_url = 'clp-restore-sleep-special'
