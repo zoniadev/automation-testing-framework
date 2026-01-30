@@ -1,0 +1,17 @@
+name: Nightly CR Evergreen
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      report_name: nightly-cr-evergreen
+      device: desktop
+      tags: '@cr_evergreen'
+      environment: staging
+      report_scope: nightly
+    secrets: inherit
