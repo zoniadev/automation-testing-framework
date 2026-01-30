@@ -17,9 +17,6 @@ docuseries_address_already_filled = False
 membership_added = False
 is_replay_weekend = False
 
-paypal_email = 'stefan.test@zonia.com'
-paypal_password = '@Zonia123'
-
 ad_live_opt_in_url = 'unbroken'
 ad_live_join_zonia_url = 'ad-join-zonia'
 ad_live_sign_up_url = 'ad-signup'

@@ -132,22 +132,6 @@ def user_sign_up_for_cycle_plan(context, cycle):
     page.register_in_signup_page(cycle)
 
 
-@step(u'user sign up in "{series}" for "{plan}" with Paypal')
-def user_sign_up_for_cycle_plan_with_paypal(context, series, plan):
-    print(f'Scenario will use Paypal payment')
-    common_variables.flow_type = 'docuseries'
-    common_variables.funnel = series.lower()
-    common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
-    common_variables.supplement_funnel_email = RD.automation_template_email()
-    common_variables.supplement_funnel_name = RD.automation_first_name()
-    page = SignUpPage(context)
-    signup_path = getattr(common_variables, f"{series.lower()}_sign_up_url")
-    target_url = f"{signup_path}-2"
-    page.navigate_to_url(target_url)
-    page.select_plan(plan.upper())
-    page.register_in_signup_page(plan, paypal=True)
-
-
 @step(u'Verify banners redirects in "{dropdown}" and "{dropdown_category}"')
 def verify_banners_in_category(context, dropdown, dropdown_category):
     page = BlogPage(context)
