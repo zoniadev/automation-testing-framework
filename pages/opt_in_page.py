@@ -47,6 +47,8 @@ class OptInPage(BasePage):
             common_variables.funnel = 'twl_ev'
         elif common_variables.funnel.startswith('cr_live'):
             common_variables.funnel = 'cr_live'
+        elif common_variables.funnel.startswith('cr_ev'):
+            common_variables.funnel = 'cr_ev'
         if common_variables.funnel == 'twl_ev':
             self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_screening_url'),
                                      timeout=20000)
