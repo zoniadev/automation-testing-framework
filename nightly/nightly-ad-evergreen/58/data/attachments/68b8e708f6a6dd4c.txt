@@ -1,0 +1,6 @@
+Executing step: user register in "ad_ev_pain" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user register in "ad_ev_pain" Opt In page
+Test failed on page: 'http://staging.zonia.com/admb5e/ad-pain-relief'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.16__20260130-200511.png
