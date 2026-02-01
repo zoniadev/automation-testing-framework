@@ -1,0 +1,36 @@
+Executing step: user register in "cr_live_immune" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/cr-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "cr_live_immune" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+Failed step: user join Zonia
+Test failed on page: 'http://staging.zonia.com/cr-join-zonia'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_funnel_--_@1.2__20260201-183212.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
