@@ -1,6 +1,0 @@
-Executing step: user register in "cr_live_inflammation" Opt In page
-Scenario will use "JCB" card "3530111333300000"
-Failed step: user register in "cr_live_inflammation" Opt In page
-Test failed on page: 'http://staging.zonia.com/cr-inflammation'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_funnel_--_@1.14__20260201-185537.png

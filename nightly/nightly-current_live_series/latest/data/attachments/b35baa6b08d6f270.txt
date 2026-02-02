@@ -1,6 +1,0 @@
-Executing step: user register in "cr_live_emotions" Opt In page
-Scenario will use "UnionPay" card "6221261111117766"
-Failed step: user register in "cr_live_emotions" Opt In page
-Test failed on page: 'http://staging.zonia.com/cr-emotions'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_funnel_--_@1.13__20260201-185506.png
