@@ -1,0 +1,6 @@
+Executing step: user select to buy "6" bottles in "Restore Detox" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user select to buy "6" bottles in "Restore Detox" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-detox-special'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Detox_Supplement_funnel_--_@1.9__20260204-034046.png
