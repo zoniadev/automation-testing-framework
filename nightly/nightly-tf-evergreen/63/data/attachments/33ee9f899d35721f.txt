@@ -1,0 +1,12 @@
+Executing step: user register in "tf_ev_autoimmunity" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Failed step: user register in "tf_ev_autoimmunity" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+
