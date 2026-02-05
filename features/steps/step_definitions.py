@@ -39,7 +39,11 @@ def user_select_in_supplement_upsell(context, order, upsell_page):
 def user_select_in_docuseries_upsell(context, upsell_page):
     page = SupplementUpsellPage(context)
     if upsell_page == 'Booster Packages':
-        if not common_variables.is_replay_weekend:
+        if common_variables.bonus_episode or common_variables.is_replay_weekend:
+            reason = "bonus episode" if common_variables.bonus_episode else "replay weekend"
+            print(f"===> Skipping Booster Packages upsell because this flow is for {reason}")
+            return
+        else:
             for row in context.table:
                 page.chose_docuseries_booster_package_upsell(decision=row['decision'])
     elif upsell_page == 'Masterclass Packages':
@@ -111,6 +115,8 @@ def user_join_zonia(context):
     page = JoinZoniaPage(context)
     if common_variables.is_replay_weekend:
         page.join_zonia_replay_weekend()
+    elif common_variables.is_screening_flow:
+        page.join_zonia_episode()
     else:
         page.join_zonia()
 
@@ -159,18 +165,23 @@ def user_open_patient_care_page(context):
     page.navigate_to_url(getattr(common_variables, "pc_sales_page_url"))
 
 
-@step(u'user is on the bonus episode "{episode}" page')
-def user_open_patient_care_page(context, episode):
+@step(u'user is on the "{series}" episode "{episode}" page')
+def user_is_on_episode_page(context, series, episode):
     common_variables.flow_type = 'docuseries'
-    common_variables.bonus_episode = True
-    common_variables.funnel = 'cr_bonus'
-    common_variables.funnel_prefix = 'cr'
+    if episode in ['11', '12']:
+        common_variables.bonus_episode = True
+    else:
+        common_variables.is_screening_flow = True
+    common_variables.funnel = series.lower()
+    common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
+    if episode in ['11', '12']:
+        page_url = f'{common_variables.funnel_prefix}_bonus_episode_{episode}_url'
+    else:
+        page_url = f'{common_variables.funnel_prefix}_episode_{episode}_url'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
     page = OptInPage(context)
-    page.navigate_to_url(getattr(common_variables, f'{common_variables.funnel_prefix}_bonus_episode_{episode}_url'))
-    page.register_in_bonus_episode_page(episode)
-    page = JoinZoniaPage(context)
-    page.join_zonia_bonus_episode()
+    page.navigate_to_url(getattr(common_variables, page_url))
+    page.register_in_episode_page(episode)
 
 

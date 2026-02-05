@@ -326,7 +326,7 @@ Feature: Nightly tests
       | cr_live_immune | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @nightly_docuseries @WIP
+  @nightly @nightly_docuseries
   Scenario Outline: CR Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
