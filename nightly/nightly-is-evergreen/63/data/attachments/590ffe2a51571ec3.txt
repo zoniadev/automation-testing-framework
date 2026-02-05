@@ -1,0 +1,25 @@
+Executing step: user register in "is_ev" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to http://staging.zonia.com/mb/immune-for-life
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb/is-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb/is-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Lopez-1770329828@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/is-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/is-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
