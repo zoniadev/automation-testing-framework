@@ -41,7 +41,12 @@ class JoinZoniaPage(BasePage):
         self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_rw_signup_url'), timeout=20000)
         print(f'>>> Successfully joined Zonia from replay weekend pages')
 
-    def join_zonia_bonus_episode(self):
+    def join_zonia_episode(self):
         self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
-        next_page = f'{common_variables.funnel_prefix}-signup-bonuses'
+        if common_variables.funnel == 'cr_bonus':
+            next_page = getattr(common_variables, f'{common_variables.funnel}_rw_signup_url')
+        elif common_variables.funnel == 'cr_live':
+            next_page = getattr(common_variables, f'{common_variables.funnel}_sign_up_url')
+        else:
+            raise Exception(f'Unsupported parameter {common_variables.funnel}!')
         self.wait_for_navigation(next_page, timeout=20000)

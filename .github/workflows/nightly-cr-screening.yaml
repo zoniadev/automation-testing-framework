@@ -1,4 +1,4 @@
-name: Nightly Restore Life
+name: Nightly CR screening episodes
 
 on:
   schedule:
@@ -9,9 +9,9 @@ jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-restore-life
+      report_name: nightly-cr-screening
       device: desktop
-      tags: '@restore_life'
+      tags: '@cr_screening'
       environment: staging
       report_scope: nightly
     secrets: inherit

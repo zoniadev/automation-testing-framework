@@ -610,10 +610,14 @@ Feature: Docuseries tests
       | cr_live_stress       | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
-  @cr_bonus_episodes @all_docuseries
-  Scenario Outline: CR Bonus Episodes funnel
-    Given user is on the bonus episode "<episode>" page
+  @cr_screening @all_docuseries
+  Scenario Outline: CR Live screening funnel
+    Given user is on the "cr_live" episode "<episode>" page
+    And user join Zonia
     When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
     And user makes following decision in docuseries "Masterclass Packages" Upsell page
       | decision               |
       | <masterclass_packages> |
@@ -626,9 +630,19 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | episode | plan     | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | 11      | annually | no                   | 1          | upgrade            | no         | upgrade            |
-      | 12      | monthly  | buy                  | no         | upgrade            | 3          | most_popular       |
+      | episode | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | 2       | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | 3       | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | 4       | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | 5       | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | 6       | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | 7       | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | 8       | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+      | 9       | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
+      | 10      | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
+      | 11      | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
+      | 12      | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
 
 
   @cr_evergreen @all_docuseries
