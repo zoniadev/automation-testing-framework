@@ -1,0 +1,11 @@
+Executing step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Scenario will use "American Express" card "378282246310005"
+Failed step: user select to buy "3" bottles in "Restore Gut" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-gut-special'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
