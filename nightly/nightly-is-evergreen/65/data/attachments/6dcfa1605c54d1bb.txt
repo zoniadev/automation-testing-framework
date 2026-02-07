@@ -1,0 +1,12 @@
+Executing step: user register in "is_ev_cancer" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Failed step: user register in "is_ev_cancer" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+
