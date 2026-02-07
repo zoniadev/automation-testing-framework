@@ -1,0 +1,11 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'http://staging.zonia.com/restore-sleep-special'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
