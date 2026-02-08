@@ -1,0 +1,9 @@
+Executing step: user register in "cr_ev_aging" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to http://staging.zonia.com/crmb5e/cr-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "cr_ev_aging" Opt In page
+Test failed on page: 'http://staging.zonia.com/crmb5e/cr-inflammation'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Evergreen_funnel_--_@1.22__20260208-074736.png
