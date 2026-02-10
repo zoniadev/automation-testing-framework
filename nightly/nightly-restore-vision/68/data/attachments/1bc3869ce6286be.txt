@@ -1,0 +1,12 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to http://staging.zonia.com/restore-vision-special
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Beasley-1770703854@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-vision-6-more-bottles?orderId=698acbfac884db6e5b2c82e8"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page
