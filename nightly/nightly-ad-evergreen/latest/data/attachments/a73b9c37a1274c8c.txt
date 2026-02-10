@@ -1,0 +1,6 @@
+Executing step: user register in "ad_ev_gut" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Failed step: user register in "ad_ev_gut" Opt In page
+Test failed on page: 'http://staging.zonia.com/admb5e/ad-gut-health'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.3__20260210-200246.png
