@@ -1,0 +1,31 @@
+Executing step: user register in "tf_ev_autoimmunity" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to http://staging.zonia.com/mb2/tf-autoimmunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_autoimmunity" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Thomas-1770779069@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/tf-booster-packages-quarterly"
+===> URL successfully changed to "http://staging.zonia.com/tf-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Waiting for URL starting with "http://staging.zonia.com/tf-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/tf-mini-masterclass-series"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
