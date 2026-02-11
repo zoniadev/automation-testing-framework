@@ -1,0 +1,9 @@
+Executing step: user register in "lg_ev" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to http://staging.zonia.com/lgmb5e/ageless
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/lgmb5e/lg-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "lg_ev" Opt In page
