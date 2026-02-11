@@ -1,0 +1,6 @@
+Executing step: user register in "ad_ev_inflammation" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "ad_ev_inflammation" Opt In page
+Test failed on page: 'http://staging.zonia.com/admb5e/ad-inflammation'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.6__20260211-200555.png
