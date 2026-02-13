@@ -1,0 +1,11 @@
+Executing step: user register in "tf_ev_cancer" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Failed step: user register in "tf_ev_cancer" Opt In page
+Test failed on page: 'http://staging.zonia.com/mb2/tf-cancer'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
