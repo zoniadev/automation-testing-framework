@@ -1,0 +1,15 @@
+Executing step: user register in "ad_ev_gut" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/admb5e/ad-gut-health
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/admb5e/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_ev_gut" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-signup"
+===> URL successfully changed to "https://staging.zonia.com/admb5e/ad-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
