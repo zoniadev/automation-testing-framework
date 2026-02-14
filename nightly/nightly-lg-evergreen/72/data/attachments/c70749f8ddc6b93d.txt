@@ -1,0 +1,25 @@
+Executing step: user register in "lg_ev" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/lgmb5e/ageless
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "lg_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-signup"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Johnson-1771026898@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/lg-booster-packages-annually"
+===> URL successfully changed to "https://staging.zonia.com/lg-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
