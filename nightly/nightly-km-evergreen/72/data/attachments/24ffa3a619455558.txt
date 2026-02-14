@@ -1,0 +1,25 @@
+Executing step: user register in "km_ev_toxins" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://staging.zonia.com/kmmb5e/km-toxins
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_toxins" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "https://staging.zonia.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hall-1771110239@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/km-booster-packages-quarterly"
+===> URL successfully changed to "https://staging.zonia.com/km-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
