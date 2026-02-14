@@ -1,9 +1,0 @@
-Executing step: user is on the "cr_live" episode "5" page
-===> Navigated to http://staging.zonia.com/cr-episode-5-live-15t7f75fib
-===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia-2"
-===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia-2"
-Completed step: user is on the "cr_live" episode "5" page
-Executing step: user join Zonia
-===> Waiting for URL starting with "http://staging.zonia.com/cr-signup"
-===> URL successfully changed to "http://staging.zonia.com/cr-signup"
-Completed step: user join Zonia
