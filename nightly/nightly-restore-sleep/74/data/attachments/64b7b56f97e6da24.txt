@@ -1,0 +1,17 @@
+Executing step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/restore-sleep-special
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-sleep-signup-1-bottle'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Target page, context or browser has been closed
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
