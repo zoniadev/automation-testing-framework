@@ -1,0 +1,25 @@
+Executing step: user register in "km_ev_autism" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/kmmb5e/km-neurodevelopment
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_autism" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "https://staging.zonia.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Torres-1771283241@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/km-booster-packages-lifetime"
+===> URL successfully changed to "https://staging.zonia.com/km-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
