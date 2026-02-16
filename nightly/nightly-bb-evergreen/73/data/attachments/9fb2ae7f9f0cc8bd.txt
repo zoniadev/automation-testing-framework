@@ -1,0 +1,6 @@
+Executing step: user register in "bb_ev_memory" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "bb_ev_memory" Opt In page
+Test failed on page: 'https://staging.zonia.com/bbmb5e/bb-memory'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.20__20260216-211623.png
