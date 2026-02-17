@@ -1,0 +1,11 @@
+Executing step: user register in "tf_ev_liver" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+Failed step: user register in "tf_ev_liver" Opt In page
+Test failed on page: 'https://staging.zonia.com/mb2/tf-liver'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
