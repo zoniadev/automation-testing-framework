@@ -2,6 +2,7 @@ import re
 import time
 from playwright.sync_api import Page, expect
 import common_variables
+from common_functions.url_manager import URLManager
 from locators import *
 import locators
 
@@ -22,7 +23,7 @@ class BasePage(object):
         expect(self.context.page).to_have_url(full_url_pattern, timeout=timeout)
         print(f'===> URL successfully changed to "{self.context.page.url}"')
         # Special check for the welcome page
-        if url == common_variables.welcome_page_url:
+        if url == URLManager.get_url('welcome_page_url'):
             print('===> Performing additional check for "mode" parameter on welcome page.')
             # This will assert that the final URL contains either "?mode=" or "&mode="
             expect(self.context.page).to_have_url(re.compile(r"(\?|&)mode="))
@@ -34,6 +35,9 @@ class BasePage(object):
     def retry_cc_number_entry(self, max_retries=5, submit_button=PLACE_ORDER_BUTTON):
         cc_number = self.context.page.frame_locator(CC_NUM_FRAME).get_by_placeholder(CC_NUM_FIELD)
         cc_number.wait_for(state="visible", timeout=15000)
+        
+        test_cc_number = self.context.test_data['cc_number']
+        
         for attempt in range(max_retries):
             print(f'Attempting CC number entry (Attempt {attempt + 1}/{max_retries})...')
             try:
@@ -42,7 +46,7 @@ class BasePage(object):
                 # Ensure the field is cleared before typing
                 cc_number.fill("")
                 time.sleep(0.5)
-                cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
+                cc_number.press_sequentially(test_cc_number, delay=50)
                 # Short buffer before clicking to let final validation/formatting finish
                 self.context.page.wait_for_timeout(500)
                 self.context.page.locator(submit_button).click()
@@ -62,11 +66,14 @@ class BasePage(object):
 
     def populate_cc_details(self, submit_button=PLACE_ORDER_BUTTON):
         self.disable_chat()
+        
+        test_cc_type = self.context.test_data['cc_type']
+        
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         time.sleep(0.5)
         cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date, delay=50)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
-        if common_variables.test_cc_type == 'American Express':
+        if test_cc_type == 'American Express':
             cc_cvv.fill('1111')
         else:
             cc_cvv.fill(common_variables.test_cc_cvv)

@@ -34,8 +34,25 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    common_variables.test_cc_type = context.config.userdata['card_type']
-    CC.pick_payment_card()
+    # Initialize scenario-specific state in context
+    context.test_data = {
+        'funnel': '',
+        'funnel_prefix': '',
+        'email': '',
+        'name': '',
+        'password': '',
+        'bottles': '',
+        'address_will_appear': False,
+        'address_already_filled': False,
+        'membership_added': False,
+        'is_replay_weekend': False,
+        'is_screening_flow': False,
+        'bonus_episode': False,
+        'flow_type': '',
+        'cc_type': context.config.userdata['card_type']
+    }
+    
+    CC.pick_payment_card(context)
     context.console_messages = []
     if context.config.userdata['device'] == 'iphone':
         device = context.playwright.devices['iPhone 13']
@@ -58,7 +75,7 @@ def before_scenario(context, scenario):
                                                       record_video_dir=f"screenshots/videos/{context.scenario.name}",
                                                       record_video_size={"width": 640, "height": 480}
                                                       )
-        common_variables.mobile_run = True
+        context.test_data['mobile_run'] = True
     else:
         context.context = context.browser.new_context(
             viewport={'width': 1280, 'height': 720},
@@ -66,6 +83,8 @@ def before_scenario(context, scenario):
             record_video_dir=f"screenshots/videos/{context.scenario.name}",
             record_video_size={"width": 640, "height": 480}
         )
+        context.test_data['mobile_run'] = False
+        
     third_party_routes = [
         re.compile(r".*liflolrb\.marketise\.me/.*"),
         re.compile(r".*browser\.sentry-cdn\.com/.*"),
@@ -167,8 +186,6 @@ def after_scenario(context, scenario):
         print(f"Failed scenario: '{context.scenario.name}'")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
-    common_variables.docuseries_address_will_appear = False
-    common_variables.docuseries_address_already_filled = False
 
 
 def after_feature(context, feature):

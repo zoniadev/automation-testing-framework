@@ -1,5 +1,4 @@
 import time
-import common_variables
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -9,12 +8,14 @@ class UserPage(BasePage):
         super().__init__(context)
 
     def verify_registration(self):
+        name = self.context.test_data['name']
+        email = self.context.test_data['email']
+        password = self.context.test_data['password']
+        
         name_on_page = self.context.page.locator(USER_MENU_BUTTON).inner_text()
-        assert common_variables.supplement_funnel_name in name_on_page, (f'Expected name to be '
-                                                                         f'"{common_variables.supplement_funnel_name}",'
+        assert name in name_on_page, (f'Expected name to be '
+                                                                         f'"{name}",'
                                                                          f' but it is "{name_on_page}"!')
         print('===> Verified registration')
-        print(f'Email: {common_variables.supplement_funnel_email}')
-        print(f'Pass: {common_variables.supplement_funnel_password}')
-
-
+        print(f'Email: {email}')
+        print(f'Pass: {password}')
