@@ -1,0 +1,66 @@
+Executing step: user register in "bb_ev_sleep" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/bbmb5e/bb-sleep
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+>>> Navigation via bb_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/bbmb5e/bb\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/bbmb5e/bb-sleep 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-sleep"
+
+===> Waiting for URL starting with "https://staging.zonia.com/bbmb5e/bb-replay-weekend"
+>>> Navigation via bb_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/bbmb5e/bb\\-replay\\-weekend.*')'
+Actual value: https://staging.zonia.com/bbmb5e/bb-join-zonia 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bbmb5e/bb-join-zonia"
+
+Failed step: user register in "bb_ev_sleep" Opt In page
+Test failed on page: 'https://staging.zonia.com/bbmb5e/bb-join-zonia'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.14__20260219-210828.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
