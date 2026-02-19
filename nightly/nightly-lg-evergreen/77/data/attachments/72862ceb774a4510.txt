@@ -1,0 +1,67 @@
+Executing step: user register in "lg_ev_hormones" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/lgmb5e/lg-hormones
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "lg_ev_hormones" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-signup"
+===> URL successfully changed to "https://staging.zonia.com/lgmb5e/lg-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hancock-1771458297@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/lg-booster-packages-monthly"
+===> URL successfully changed to "https://staging.zonia.com/lg-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Waiting for URL starting with "https://staging.zonia.com/lg-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/lg-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Waiting for URL starting with "https://staging.zonia.com/lg-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/lg-restore-life-special"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "1" bottles and "no" in upsell/downsell for Restore Life...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/lg-rl-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/lg-rl-6-more-bottles?id=69964f348da48caf0af7dd28"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Not upgrading...
+===> Waiting for URL starting with "https://staging.zonia.com/lg-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/lg-restore-detox-special?id=69964f348da48caf0af7dd28"
+>>> Successfully selected "1" bottles and "no" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "1" bottles and "best_value" in upsell/downsell for Restore Detox...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/lg-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/lg-rd-6-more-bottles?id=69964f348da48caf0af7dd28"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+===> Not upgrading, but getting best_value downsell...
+===> Waiting for URL starting with "https://staging.zonia.com/welcome"
+===> URL successfully changed to "https://staging.zonia.com/welcome?id=69964f348da48caf0af7dd28&mode=standard"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "1" bottles and "best_value" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
