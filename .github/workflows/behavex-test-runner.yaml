@@ -51,11 +51,10 @@ jobs:
           
           echo "🚀 Running BehaveX with $PARALLEL_PROCESSES workers..."
           
+          # FIX: Force short temp path to avoid "AF_UNIX path too long" error
+          export TMPDIR=/tmp
+          
           # Run BehaveX
-          # -t: Tags
-          # -n: Parallel processes
-          # --parallel-scheme scenario: Split by scenario (crucial for Outlines)
-          # -o: Output dir
           behavex -t $TAGS \
             --parallel-processes $PARALLEL_PROCESSES \
             --parallel-scheme scenario \
