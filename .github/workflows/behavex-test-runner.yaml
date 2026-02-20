@@ -1,7 +1,10 @@
 name: BehaveX Hardcoded Test
 
 on:
-  workflow_dispatch: # Manual trigger button
+  workflow_dispatch: # Manual trigger
+  push:              # Auto-trigger on push so it appears in Actions tab
+    branches:
+      - '**'         # Run on any branch where this file exists
 
 jobs:
   test-behavex:
@@ -10,7 +13,7 @@ jobs:
       # --- HARDCODED CONFIGURATION ---
       DEVICE: 'desktop'
       ENVIRONMENT: 'staging'
-      TAGS: '@nightly_docuseries'
+      TAGS: '@unbroken_live'
       PARALLEL_PROCESSES: '2'
       REPORT_SCOPE: 'behavex-test' # Isolated scope
       REPORT_NAME: 'parallel-validation'
