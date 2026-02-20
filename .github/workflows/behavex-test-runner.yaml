@@ -46,8 +46,9 @@ jobs:
         run: |
           set -euo pipefail
           
-          RESULTS_DIR="allure-results/$REPORT_SCOPE"
-          mkdir -p "$RESULTS_DIR"
+          # Raw output from BehaveX
+          BEHAVEX_OUTPUT="behavex_output"
+          mkdir -p "$BEHAVEX_OUTPUT"
           
           echo "🚀 Running BehaveX with $PARALLEL_PROCESSES workers..."
           
@@ -61,21 +62,31 @@ jobs:
             -D headless=True \
             -D device=$DEVICE \
             -D env=$ENVIRONMENT \
-            -o "$RESULTS_DIR" \
+            -o "$BEHAVEX_OUTPUT" \
             --no-capture \
             --no-capture-stderr || true
             
-          # Fix BehaveX output structure for Allure
-          if [ -d "$RESULTS_DIR/results" ]; then
-            echo "📂 Moving BehaveX JSON results to root..."
-            mv "$RESULTS_DIR"/results/* "$RESULTS_DIR/"
-            rmdir "$RESULTS_DIR/results"
-          fi
+          # --- PREPARE ALLURE INPUT ---
+          # BehaveX creates nested folders. We need to flatten all JSON/PNG files into one folder for Allure.
+          ALLURE_INPUT="allure-results/$REPORT_SCOPE"
+          mkdir -p "$ALLURE_INPUT"
+          
+          echo "📂 Flattening results for Allure..."
+          
+          # Find all result files and copy them to the clean input dir
+          find "$BEHAVEX_OUTPUT" -name "*.json" -exec cp {} "$ALLURE_INPUT/" \;
+          find "$BEHAVEX_OUTPUT" -name "*.png" -exec cp {} "$ALLURE_INPUT/" \;
+          find "$BEHAVEX_OUTPUT" -name "*.webm" -exec cp {} "$ALLURE_INPUT/" \;
+          find "$BEHAVEX_OUTPUT" -name "environment.properties" -exec cp {} "$ALLURE_INPUT/" \;
+          
+          echo "✅ Results prepared in $ALLURE_INPUT"
+          ls -l "$ALLURE_INPUT" | head -n 10
         shell: bash
 
       - name: Copy environment properties
         if: always()
         run: |
+          # Ensure environment.properties is present (if not already copied by find)
           if [ -f "allure-results/environment.properties" ]; then
             cp "allure-results/environment.properties" "allure-results/$REPORT_SCOPE/environment.properties"
           fi
@@ -112,6 +123,8 @@ jobs:
           
           OUTPUT_DIR="$HISTORY_ROOT/$NEXT_SEQ"
           RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          
+          echo "📊 Generating report from $RESULTS_DIR..."
           
           # Generate
           allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
