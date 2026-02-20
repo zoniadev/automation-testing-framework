@@ -1,0 +1,141 @@
+name: BehaveX Hardcoded Test
+
+on:
+  workflow_dispatch: # Manual trigger button
+
+jobs:
+  test-behavex:
+    runs-on: ubuntu-latest
+    env:
+      # --- HARDCODED CONFIGURATION ---
+      DEVICE: 'desktop'
+      ENVIRONMENT: 'staging'
+      TAGS: '@nightly_docuseries'
+      PARALLEL_PROCESSES: '2'
+      REPORT_SCOPE: 'behavex-test' # Isolated scope
+      REPORT_NAME: 'parallel-validation'
+      REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install behavex
+          npm install -g allure-commandline --save-dev
+
+      - name: Install missing libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwoff1 libevent-2.1-7 libopus0 libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libharfbuzz-icu0 libhyphen0 libmanette-0.2-0 libflite1 libgles2
+
+      - name: Install Chromium
+        run: playwright install chromium
+
+      - name: Run BehaveX (Parallel)
+        run: |
+          set -euo pipefail
+          
+          RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          mkdir -p "$RESULTS_DIR"
+          
+          echo "🚀 Running BehaveX with $PARALLEL_PROCESSES workers..."
+          
+          # Run BehaveX
+          # -t: Tags
+          # -n: Parallel processes
+          # --parallel-scheme scenario: Split by scenario (crucial for Outlines)
+          # -o: Output dir
+          behavex -t $TAGS \
+            --parallel-processes $PARALLEL_PROCESSES \
+            --parallel-scheme scenario \
+            -D headless=True \
+            -D device=$DEVICE \
+            -D env=$ENVIRONMENT \
+            -o "$RESULTS_DIR" \
+            --no-capture \
+            --no-capture-stderr || true
+            
+          # Fix BehaveX output structure for Allure
+          if [ -d "$RESULTS_DIR/results" ]; then
+            echo "📂 Moving BehaveX JSON results to root..."
+            mv "$RESULTS_DIR"/results/* "$RESULTS_DIR/"
+            rmdir "$RESULTS_DIR/results"
+          fi
+        shell: bash
+
+      - name: Copy environment properties
+        if: always()
+        run: |
+          if [ -f "allure-results/environment.properties" ]; then
+            cp "allure-results/environment.properties" "allure-results/$REPORT_SCOPE/environment.properties"
+          fi
+
+      # --- REPORT GENERATION (Standard Logic) ---
+      
+      - name: Load history
+        uses: actions/checkout@v3
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+
+      - name: Prepare Allure workspace
+        if: always()
+        run: |
+          mkdir -p allure-history
+          if [ -d gh-pages ]; then
+            rsync -a --exclude '.git' gh-pages/ allure-history/
+          fi
+
+      - name: Generate Report
+        if: always()
+        run: |
+          # Simple sequence generator for this test
+          HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          mkdir -p "$HISTORY_ROOT"
+          
+          # Calculate next sequence
+          LAST_SEQ=$(ls "$HISTORY_ROOT" | grep -E '^[0-9]+$' | sort -n | tail -1 || echo "0")
+          NEXT_SEQ=$((LAST_SEQ + 1))
+          echo "REPORT_SEQUENCE=$NEXT_SEQ" >> "$GITHUB_ENV"
+          
+          OUTPUT_DIR="$HISTORY_ROOT/$NEXT_SEQ"
+          RESULTS_DIR="allure-results/$REPORT_SCOPE"
+          
+          # Generate
+          allure generate "$RESULTS_DIR" --clean -o "$OUTPUT_DIR"
+          
+          # Update 'latest'
+          rm -rf "$HISTORY_ROOT/latest"
+          cp -R "$OUTPUT_DIR" "$HISTORY_ROOT/latest"
+          
+          # Create redirect
+          echo "<!DOCTYPE html><html><head><meta http-equiv=\"refresh\" content=\"0; url=./$NEXT_SEQ/\"></head></html>" > "$HISTORY_ROOT/index.html"
+        shell: bash
+
+      - name: Publish to GitHub Pages
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
+
+      - name: Post Link
+        if: always()
+        uses: Sibz/github-status-action@v1
+        with:
+          authToken: ${{ secrets.GITHUB_TOKEN }}
+          context: 'BehaveX Report'
+          state: 'success'
+          sha: ${{ github.sha }}
+          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}

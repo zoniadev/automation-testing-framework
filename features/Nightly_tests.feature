@@ -50,7 +50,7 @@ Feature: Nightly tests
       | ad_ev_detox | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
-  @nightly @nightly_docuseries
+  @nightly @nightly_docuseries @WIP
   Scenario Outline: BB Live nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia

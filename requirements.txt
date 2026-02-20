@@ -1,6 +1,7 @@
 allure-behave==2.9.45
 allure-python-commons==2.9.45
 behave==1.2.6
+behavex==4.6.0
 decorator==5.1.0
 faker==25.8.0
 playwright~=1.45.1

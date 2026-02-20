@@ -3,12 +3,27 @@ import time
 import common_functions.random_data as RD
 from common_functions.url_manager import URLManager
 from pages.base_page_object import BasePage
-from locators import *
 
 
 class OptInPage(BasePage):
     def __init__(self, context):
         super().__init__(context)
+        
+        # --- Locators ---
+        self.name_input = self.page.locator("input[id='first-name']")
+        self.mobile_name_input = self.page.locator("input[id='first-name-2']")
+        self.ad_live_name_input = self.page.locator("input[data-id='first-name']")
+        
+        self.email_input = self.page.locator("input[id='email']")
+        self.mobile_email_input = self.page.locator("input[unique-identifier='email-2-1']")
+        
+        self.phone_checkbox = self.page.locator("input[name='hasPhone']")
+        self.phone_input = self.page.locator("input[id='phone']")
+        
+        self.register_button = self.page.locator("button[unique-id='register-btn-1'], a[unique-id='register-btn-1']")
+        self.register_scroll_button = self.page.locator("*[unique-id='register-btn-scroll-1']")
+        
+        self.join_zonia_id_button = self.page.locator("*[unique-id='register-btn-1']")
 
     def register_in_opt_in_page(self):
         self.handle_cookie_banner()
@@ -24,16 +39,16 @@ class OptInPage(BasePage):
         email = self.context.test_data['email']
         
         if funnel == 'lg_live':
-            self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(email)
+            self.ad_live_name_input.fill(name)
+            self.email_input.fill(email)
         elif self.context.test_data.get('mobile_run'):
-            self.context.page.locator(MOBILE_OPTIN_NAME_FIELD).type(name)
-            self.context.page.locator(MOBILE_OPTIN_EMAIL_FIELD).type(email, delay=50)
+            self.mobile_name_input.type(name)
+            self.mobile_email_input.type(email, delay=50)
         else:
-            self.context.page.locator(OPTIN_NAME_FIELD).fill(name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(email)
+            self.name_input.fill(name)
+            self.email_input.fill(email)
             
-        self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
+        self.register_button.click(timeout=30000)
         
         # Update funnel logic using context
         if funnel.startswith('bb_ev'):
@@ -100,7 +115,7 @@ class OptInPage(BasePage):
                 )
 
     def register_in_episode_page(self, episode):
-        self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
+        self.join_zonia_id_button.click()
         funnel = self.context.test_data['funnel']
         funnel_prefix = self.context.test_data['funnel_prefix']
         

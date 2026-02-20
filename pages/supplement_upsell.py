@@ -1,8 +1,6 @@
 import time
 from common_functions.url_manager import URLManager
 from pages.base_page_object import BasePage
-from locators import *
-import locators
 import common_functions.random_data as RD
 from playwright.sync_api import expect
 
@@ -11,25 +9,111 @@ class SupplementUpsellPage(BasePage):
     def __init__(self, context):
         super().__init__(context)
         self.order_delay_timeout = 1
+        
+        # --- Locators ---
+        self.yes_upgrade_button = self.page.locator("*[unique-id='upgrade-order-1']")
+        self.no_thanks_button = self.page.locator("*[unique-id='no-thanks-1']")
+        self.downsell_no_thanks_button = self.page.locator("*[data-id='downsell-no-thanks']")
+        self.buy_best_value_button = self.page.locator("*[data-id='add-order-6']")
+        self.buy_most_popular_button = self.page.locator("*[data-id='add-order-3']")
+        self.buy_special_b4g7_offer_button = self.page.locator("*[data-id='add-order-7']")
+        
+        self.membership_yes_button = self.page.locator("*[id='register-top-btn']")
+        self.membership_no_button = self.page.locator("*[id='skip-registration-top']")
+        self.membership_monthly_button = self.page.locator("*[unique-id='monthly_new-1']")
+        self.membership_quarterly_button = self.page.locator("*[unique-id='quarterly-1']")
+        self.membership_annually_button = self.page.locator("*[unique-id='yearly_new-1']")
+        self.activate_membership_button = self.page.locator("*[id='register-middle']")
+        
+        self.silver_package_button = self.page.locator("button[unique-id='silver-package-upsell-1']")
+        self.platinum_package_button = self.page.locator("button[unique-id='platinum-package-upsell-1']")
+        self.buy_masterclass_button = self.page.locator("*[unique-id='buy-masterclass-1']")
+        self.skip_masterclass_button = self.page.locator("*[unique-id='skip-masterclass-1']")
+        
+        # Shipping Popup Locators
+        self.shipping_popup_title = self.page.locator("#shippingModal h5.modal-title")
+        self.shipping_full_name_field = self.page.locator("input[id='shippingName']")
+        self.shipping_phone_field = self.page.locator("input[id='shippingPhone']")
+        self.shipping_phone_field_alt = self.page.locator("input[unique-identifier='shippingPhone-1']")
+        self.shipping_phone_field_alt2 = self.page.locator("input[unique-identifier='shippingPhone-2']")
+        self.shipping_address_field = self.page.locator("input[id='shippingAddress']")
+        self.shipping_address_field_alt = self.page.locator("input[unique-identifier='shippingAddress-1']")
+        self.shipping_address_field_alt2 = self.page.locator("input[unique-identifier='shippingAddress-2']")
+        self.shipping_city_field = self.page.locator("input[id='city']")
+        self.shipping_city_field_alt = self.page.locator("input[unique-identifier='city-1']")
+        self.shipping_city_field_alt2 = self.page.locator("input[unique-identifier='city-2']")
+        self.shipping_state_field = self.page.locator("input[id='state']")
+        self.shipping_state_field_alt = self.page.locator("input[unique-identifier='state-1']")
+        self.shipping_state_field_alt2 = self.page.locator("input[unique-identifier='state-2']")
+        self.shipping_zip_field = self.page.locator("input[id='postcode']")
+        self.shipping_zip_field_alt = self.page.locator("input[unique-identifier='postcode-1']")
+        self.shipping_zip_field_alt2 = self.page.locator("input[unique-identifier='postcode-2']")
+        self.shipping_country_field = self.page.locator("input[id='country']")
+        self.shipping_country_field_alt = self.page.locator("input[unique-identifier='country-1']")
+        self.shipping_country_field_alt2 = self.page.locator("input[unique-identifier='country-2']")
+        self.shipping_submit_button = self.page.locator("button[id='save-shipping-address']")
+        
+        # Bottle buttons for dynamic lookup
+        self.buy_1_bottles_button = self.page.locator("*[unique-id='add-order-1-1']")
+        self.buy_2_bottles_button = self.page.locator("*[unique-id='add-order-2-1']")
+        self.buy_3_bottles_button = self.page.locator("*[unique-id='add-order-3-1']")
+        self.buy_5_bottles_button = self.page.locator("*[unique-id='add-order-5-1']")
+        self.buy_6_bottles_button = self.page.locator("*[unique-id='add-order-6-1']")
 
     def change_order_delay_timeout(self, timeout):
         self.order_delay_timeout = timeout
+
+    def get_buy_button(self, last_chance):
+        """Returns the locator for the buy button based on last chance string."""
+        button_map = {
+            '1_BOTTLES': self.buy_1_bottles_button,
+            '2_BOTTLES': self.buy_2_bottles_button,
+            '3_BOTTLES': self.buy_3_bottles_button,
+            '5_BOTTLES': self.buy_5_bottles_button,
+            '6_BOTTLES': self.buy_6_bottles_button,
+            'BEST_VALUE': self.buy_best_value_button,
+            'MOST_POPULAR': self.buy_most_popular_button,
+            'SPECIAL_B4G7_OFFER': self.buy_special_b4g7_offer_button
+        }
+        key = f"{last_chance.upper()}_BUTTON" if "BOTTLES" in last_chance.upper() else last_chance.upper()
+        # Handle the weird naming convention from original code: BUY_BEST_VALUE_BUTTON vs BUY_1_BOTTLES_BUTTON
+        # The input 'last_chance' seems to be like 'best_value' or '1_bottles' (implied from original getattr)
+        
+        # Let's try to match the original getattr logic: f"BUY_{last_chance.upper()}_BUTTON"
+        # If last_chance is 'best_value', key is 'BEST_VALUE'.
+        # If last_chance is '1_bottles', key is '1_BOTTLES'.
+        
+        # Actually, looking at original code: getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
+        # So if last_chance is 'best_value', it looks for locators.BUY_BEST_VALUE_BUTTON
+        
+        lookup_key = f"{last_chance.upper()}"
+        if lookup_key in button_map:
+            return button_map[lookup_key]
+            
+        # Fallback for bottle counts which might be passed as just numbers or 'X_bottles'
+        # If passed as '1', we need '1_BOTTLES'
+        if lookup_key.isdigit():
+             lookup_key = f"{lookup_key}_BOTTLES"
+             
+        if lookup_key in button_map:
+            return button_map[lookup_key]
+            
+        raise ValueError(f"Unknown buy button for: {last_chance}")
 
     def chose_supplement_upsell(self, order, upsell_page, upgrade, last_chance):
         if upgrade == 'yes':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
-            self.context.page.locator(YES_UPGRADE_BUTTON).click()
+            self.yes_upgrade_button.click()
         elif upgrade == 'no':
-            self.context.page.locator(NO_THANKS_BUTTON).click()
+            self.no_thanks_button.click()
             self.verify_downsell_popup()
             if last_chance == 'no':
-                self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
+                self.downsell_no_thanks_button.click()
             else:
                 print('===> Waiting to avoid payment method error...')
                 time.sleep(30)
-                button_locator = getattr(locators, f"BUY_{last_chance.upper()}_BUTTON")
-                self.context.page.locator(button_locator).click()
+                self.get_buy_button(last_chance).click()
         self.wait_for_navigation(self._get_supplement_next_page_url(order), timeout=30000)
         print(
             f'>>> Successfully selected upgrade "{upgrade}" and last chance "{last_chance}" for {upsell_page}')
@@ -52,12 +136,12 @@ class SupplementUpsellPage(BasePage):
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
             try:
-                expect(self.context.page.locator(BUY_MOST_POPULAR_BUTTON)).to_be_visible()
+                expect(self.buy_most_popular_button).to_be_visible()
                 print('>>> Verified appearence of downsell popup')
                 break
             except Exception as e:
                 print(f'Failed clicking "No Thanks" button on the {attempt + 1} try! Original error: "{e}". Retrying...')
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.no_thanks_button.click()
 
         else:
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
@@ -70,32 +154,49 @@ class SupplementUpsellPage(BasePage):
             next_upsell = '_fourth_upsell_url'
         self.wait_for_navigation(URLManager.get_url(f"{funnel}{next_upsell}"), timeout=30000)
         if decision == 'accept':
-            self.context.page.locator(MEMBERSHIP_YES_BUTTON).click()
+            self.membership_yes_button.click()
             if plan == 'no':
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.no_thanks_button.click()
                 self.wait_for_navigation(URLManager.get_url('welcome_page_url'), timeout=30000)
             else:
-                membership_locator = getattr(locators, f"MEMBERSHIP_{plan.upper()}_BUTTON")
-                self.context.page.locator(membership_locator).click()
-                self.retry_clicking_button(ACTIVATE_MEMBERSHIP_BUTTON, URLManager.get_url('welcome_page_url'))
-                # self.context.page.locator(ACTIVATE_MEMBERSHIP_BUTTON).click()
+                # Map plan to button
+                plan_map = {
+                    'MONTHLY': self.membership_monthly_button,
+                    'QUARTERLY': self.membership_quarterly_button,
+                    'ANNUALLY': self.membership_annually_button
+                }
+                if plan.upper() in plan_map:
+                    plan_map[plan.upper()].click()
+                else:
+                    raise ValueError(f"Unknown membership plan: {plan}")
+                    
+                self.retry_clicking_button(self.activate_membership_button, URLManager.get_url('welcome_page_url'))
         elif decision == 'decline':
-            self.retry_clicking_button(MEMBERSHIP_NO_BUTTON, URLManager.get_url('welcome_page_url'))
+            self.retry_clicking_button(self.membership_no_button, URLManager.get_url('welcome_page_url'))
 
     def chose_docuseries_booster_package_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for booster package...')
         funnel_prefix = self.context.test_data['funnel_prefix']
         
         if decision != 'no':
-            selection = getattr(locators, f"{decision.upper()}_PACKAGE_BUTTON")
+            # Map decision to button
+            package_map = {
+                'SILVER': self.silver_package_button,
+                'PLATINUM': self.platinum_package_button
+            }
+            if decision.upper() in package_map:
+                selection = package_map[decision.upper()]
+            else:
+                raise ValueError(f"Unknown package decision: {decision}")
+                
             next_page = URLManager.get_url(f"{funnel_prefix}_{decision.lower()}_masterclass_url")
-            self.context.page.locator(selection).click()
+            selection.click()
             if decision == 'platinum':
                 self.context.test_data['address_will_appear'] = True
                 print('Address popup should appear next page')
         else:
             next_page = URLManager.get_url(f'{funnel_prefix}_masterclass_url')
-            self.context.page.locator(NO_THANKS_BUTTON).click()
+            self.no_thanks_button.click()
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for booster package')
         if decision == 'platinum':
@@ -116,10 +217,10 @@ class SupplementUpsellPage(BasePage):
         if decision != 'no':
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
-            self.context.page.locator(BUY_MASTERCLASS_BUTTON).click()
+            self.buy_masterclass_button.click()
             next_page = URLManager.get_url(f'{funnel_prefix}_{upsell3}_bought_url')
         else:
-            self.context.page.locator(SKIP_MASTERCLASS_BUTTON).click()
+            self.skip_masterclass_button.click()
             next_page = URLManager.get_url(f'{funnel_prefix}_{upsell3}_not_bought_url')
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
@@ -157,11 +258,14 @@ class SupplementUpsellPage(BasePage):
                 next_page = URLManager.get_url(f"{funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
             else:
                 next_page = next_page_navigation
-            self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
+            self.retry_clicking_button(self.no_thanks_button, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
             next_page = URLManager.get_url(f"{funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
-            button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
+            
+            # Map amount to button
+            button_locator = self.get_buy_button(f"{amount}_BOTTLES")
+            
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
             self.retry_clicking_button(button_locator, next_page)
@@ -176,26 +280,26 @@ class SupplementUpsellPage(BasePage):
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
-            self.context.page.locator(YES_UPGRADE_BUTTON).click()
+            self.yes_upgrade_button.click()
             print('===> Upgrading order...')
             self.context.test_data['address_will_appear'] = True
             print('Address popup should appear next page')
         elif upsell_downsell == 'no':
             if funnel_prefix == 'pc':
                 if amount != 'no':
-                    self.context.page.locator(NO_THANKS_BUTTON).click()
+                    self.no_thanks_button.click()
             else:
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.no_thanks_button.click()
                 if amount != 'no':
-                    self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
+                    self.downsell_no_thanks_button.click()
                     print('===> Not upgrading...')
         elif upsell_downsell in ['best_value', 'most_popular']:
             if funnel_prefix != 'pc':
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self.no_thanks_button.click()
                 if upsell_downsell == 'best_value':
-                    self.context.page.locator(BUY_BEST_VALUE_BUTTON).click()
+                    self.buy_best_value_button.click()
                 else:
-                    self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
+                    self.buy_most_popular_button.click()
                 print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
 
     def _maybe_populate_shipping_address(self):
@@ -221,28 +325,27 @@ class SupplementUpsellPage(BasePage):
     def _verify_shipping_popup(self):
         """Verifies the shipping popup is visible and has the correct title."""
         expected_title = "Please enter below your shipping address where we can ship your supplement."
-        modal_title = self.context.page.locator(SHIPPING_POPUP_TITLE)
-        actual_title = modal_title.text_content()
+        actual_title = self.shipping_popup_title.text_content()
         assert actual_title.strip() == expected_title, (
             f"Popup title mismatch! Expected: '{expected_title}', Actual: '{actual_title.strip()}'"
         )
-        expect(self.context.page.locator(SHIPPING_FULL_NAME_FIELD)).to_be_visible(timeout=10000)
-        assert self.context.page.locator(SHIPPING_FULL_NAME_FIELD).get_attribute("placeholder") == "First and Last Names*"
+        expect(self.shipping_full_name_field).to_be_visible(timeout=10000)
+        assert self.shipping_full_name_field.get_attribute("placeholder") == "First and Last Names*"
 
     def _get_shipping_locators(self):
         """Returns the correct set of locators based on the current URL and funnel."""
-        url = self.context.page.url
+        url = self.page.url
         funnel = self.context.test_data['funnel']
         
         if 'rl' in url or 'life' in url:
             if funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live', 'cr_live', 'cr_bonus', 'cr_ev', 'cr_1ep']:
-                return SHIPPING_PHONE_FIELD_ALT, SHIPPING_ADDRESS_FIELD_ALT, SHIPPING_CITY_FIELD_ALT, SHIPPING_STATE_FIELD_ALT, SHIPPING_ZIP_FIELD_ALT, SHIPPING_COUNTRY_FIELD_ALT
+                return self.shipping_phone_field_alt, self.shipping_address_field_alt, self.shipping_city_field_alt, self.shipping_state_field_alt, self.shipping_zip_field_alt, self.shipping_country_field_alt
             else:
-                return SHIPPING_PHONE_FIELD_ALT2, SHIPPING_ADDRESS_FIELD_ALT2, SHIPPING_CITY_FIELD_ALT2, SHIPPING_STATE_FIELD_ALT2, SHIPPING_ZIP_FIELD_ALT2, SHIPPING_COUNTRY_FIELD_ALT2
+                return self.shipping_phone_field_alt2, self.shipping_address_field_alt2, self.shipping_city_field_alt2, self.shipping_state_field_alt2, self.shipping_zip_field_alt2, self.shipping_country_field_alt2
         elif 'rd' in url or 'detox' in url or 'welcome' in url:
-            return SHIPPING_PHONE_FIELD_ALT, SHIPPING_ADDRESS_FIELD_ALT, SHIPPING_CITY_FIELD_ALT, SHIPPING_STATE_FIELD_ALT, SHIPPING_ZIP_FIELD_ALT, SHIPPING_COUNTRY_FIELD_ALT
+            return self.shipping_phone_field_alt, self.shipping_address_field_alt, self.shipping_city_field_alt, self.shipping_state_field_alt, self.shipping_zip_field_alt, self.shipping_country_field_alt
         else:
-            return SHIPPING_PHONE_FIELD, SHIPPING_ADDRESS_FIELD, SHIPPING_CITY_FIELD, SHIPPING_STATE_FIELD, SHIPPING_ZIP_FIELD, SHIPPING_COUNTRY_FIELD
+            return self.shipping_phone_field, self.shipping_address_field, self.shipping_city_field, self.shipping_state_field, self.shipping_zip_field, self.shipping_country_field
 
     def _fill_shipping_form(self, locators):
         """Fills the shipping form using the provided locators."""
@@ -250,14 +353,14 @@ class SupplementUpsellPage(BasePage):
         
         name = self.context.test_data['name']
         
-        self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(name)
-        self.context.page.locator(phone_locator).fill(RD.phone_number())
-        self.context.page.locator(address_locator).fill(RD.address_line())
-        self.context.page.locator(city_locator).fill(RD.town())
-        self.context.page.locator(state_locator).fill(RD.state())
-        self.context.page.locator(zip_locator).fill(RD.postcode())
-        self.context.page.locator(country_locator).fill('USA')
-        self.context.page.locator(SHIPPING_SUBMIT_BUTTON).click()
+        self.shipping_full_name_field.fill(name)
+        phone_locator.fill(RD.phone_number())
+        address_locator.fill(RD.address_line())
+        city_locator.fill(RD.town())
+        state_locator.fill(RD.state())
+        zip_locator.fill(RD.postcode())
+        country_locator.fill('USA')
+        self.shipping_submit_button.click()
 
     def populate_shipping_address(self):
         """Orchestrates the process of populating the shipping address."""
@@ -272,12 +375,13 @@ class SupplementUpsellPage(BasePage):
             self.context.test_data['address_already_filled'] = True
 
     def retry_clicking_button(self, button, next_page):
-        self.context.page.locator(button).click()
+        # button is now a Locator object
+        button.click()
         try:
             self.wait_for_navigation(next_page, timeout=15000)
         except Exception as E:
-            print(f'===> Issue with clicking button "{button}", page was not changed to {next_page}, retrying...')
+            print(f'===> Issue with clicking button, page was not changed to {next_page}, retrying...')
             print(f'Error: {E}')
-            self.context.page.locator(button).click()
+            button.click()
             self.wait_for_navigation(next_page, timeout=30000)
             print('===> Second try was successful')

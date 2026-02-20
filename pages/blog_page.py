@@ -1,7 +1,6 @@
 import common_variables
+from common_functions.url_manager import URLManager
 from pages.base_page_object import BasePage
-from locators import *
-from common_variables import *
 from common_functions.parse_csv import parse_banner_mapping
 
 
@@ -9,21 +8,22 @@ class BlogPage(BasePage):
     def __init__(self, context):
         super().__init__(context)
 
-
     def open_blog_page(self):
-        self.navigate_to_url(common_variables.zonia_blog_url)
+        self.navigate_to_url(URLManager.get_url('zonia_blog_url'))
 
     def select_blog_dropdown_category(self, dropdown, selection):
-        dropdown_element = f"//a[@class='{dropdown} dropdown-toggle']"
-        self.context.page.locator(dropdown_element).hover()
-        dropdown_category = f"//li[a[contains(text(), {selection})]]"
-        self.context.page.locator(dropdown_category).click()
+        # Dynamic locators based on arguments
+        dropdown_element = self.page.locator(f"//a[@class='{dropdown} dropdown-toggle']")
+        dropdown_element.hover()
+        
+        dropdown_category = self.page.locator(f"//li[a[contains(text(), {selection})]]")
+        dropdown_category.click()
 
     def verify_visible_banner_redirects(self):
-        self.context.page.wait_for_load_state("load", timeout=BasePage.get_timeout(self))
+        self.page.wait_for_load_state("load", timeout=BasePage.get_timeout(self))
         redirect_map = parse_banner_mapping()
         # Step 1: Capture the visible banner IDs
-        visible_ids = self.context.page.eval_on_selector_all(
+        visible_ids = self.page.eval_on_selector_all(
             '.blog-banner',
             '''nodes => nodes
                 .filter(n => n.offsetParent !== null && !n.disabled)
@@ -38,10 +38,12 @@ class BlogPage(BasePage):
             print(f"🔍 Clicking banner: {banner_id}")
             if banner_id not in redirect_map:
                 raise AssertionError(f"❌ Banner '{banner_id}' is visible but not found in redirect CSV")
-            banner_locator = self.context.page.locator(f'[data-id="{banner_id}"]')
+            
+            banner_locator = self.page.locator(f'[data-id="{banner_id}"]')
+            
             if not banner_locator.is_visible():
                 raise AssertionError(f"❌ Banner '{banner_id}' is not visible")
-            with self.context.page.context.expect_page() as new_page_info:
+            with self.context.context.expect_page() as new_page_info:
                 banner_locator.click()
             new_page = new_page_info.value
             opened_pages.append((banner_id, new_page))
@@ -56,8 +58,8 @@ class BlogPage(BasePage):
             new_page.close()
 
     def check_this_week_articles(self):
-        article_base_id = common_variables.blog_this_week_article
+        article_base_id = URLManager.get_url('blog_this_week_article')
         for i in range(3):
             full_id = f'{article_base_id}-{i}'
-            self.context.page.locator(f'#{full_id}').click()
+            self.page.locator(f'#{full_id}').click()
             self.verify_visible_banner_redirects()
