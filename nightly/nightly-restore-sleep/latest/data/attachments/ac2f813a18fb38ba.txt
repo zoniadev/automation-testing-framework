@@ -1,0 +1,12 @@
+Executing step: user select to buy "6" bottles in "Restore Sleep" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/restore-sleep-special
+===> Buying 6 bottle...
+Funnel: restore_sleep
+===> User email is: zoniat-v2Fischer-1771651674@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/restore-sleep-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-sleep-6-more-bottles?orderId=69994266334d207ae5110ed8"
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Sleep" Supplements page
