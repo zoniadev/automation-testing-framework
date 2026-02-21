@@ -1,9 +1,0 @@
-Executing step: user register in "cr_live_stress" Opt In page
-Scenario will use "MasterCard" card "5555555555554444"
-===> Navigated to https://staging.zonia.com/cr-chronic-stress
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
-===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "cr_live_stress" Opt In page

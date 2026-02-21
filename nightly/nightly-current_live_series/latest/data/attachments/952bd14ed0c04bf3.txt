@@ -1,0 +1,100 @@
+Executing step: user register in "cr_live_female" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://staging.zonia.com/cr-female-cancers
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
+>>> Navigation via cr_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/cr\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/cr-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-female-cancers"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-female-cancers"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-female-cancers"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-female-cancers"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+
+===> Waiting for URL starting with "https://staging.zonia.com/cr-replay-weekend"
+===> URL successfully changed to "https://staging.zonia.com/cr-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "cr_live_female" Opt In page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> Waiting for URL starting with "https://staging.zonia.com/cr-signup-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Stephens-1771699003@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/cr-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/cr-mini-masterclass-series?id=6999fb60cc73e5bf08c252b8"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+===> Skipping Booster Packages upsell because this flow is for replay weekend
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-sleep-special-cancer-proof?id=6999fb60cc73e5bf08c252b8"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "upgrade" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-rs-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/cr-rs-6-discounted-bottles?id=6999fb60cc73e5bf08c252b8"
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-life-special?id=6999fb60cc73e5bf08c252b8"
+>>> Successfully selected "no" bottles and "upgrade" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page

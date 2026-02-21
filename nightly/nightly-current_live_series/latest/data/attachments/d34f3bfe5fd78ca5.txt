@@ -1,0 +1,74 @@
+Executing step: user register in "cr_live_emotions" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/cr-emotions
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
+>>> Navigation via cr_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/cr\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/cr-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-emotions"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-emotions"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-emotions"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-emotions"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+
+===> Waiting for URL starting with "https://staging.zonia.com/cr-replay-weekend"
+===> URL successfully changed to "https://staging.zonia.com/cr-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "cr_live_emotions" Opt In page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> Waiting for URL starting with "https://staging.zonia.com/cr-signup-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Lawrence-1771700464@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/cr-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/cr-mini-masterclass-series?id=699a0115cc73e5bf08c25a8a"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
