@@ -1,0 +1,11 @@
+Executing step: user register in "km_ev_sleep" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "km_ev_sleep" Opt In page
+Test failed on page: 'https://staging.zonia.com/kmmb5e/km-sleep'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
