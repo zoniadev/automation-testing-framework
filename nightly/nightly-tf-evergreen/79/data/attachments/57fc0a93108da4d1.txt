@@ -1,0 +1,90 @@
+Executing step: user register in "tf_ev_autoimmunity" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/mb2/tf-autoimmunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_autoimmunity" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Smith-1771644202@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/tf-booster-packages-monthly"
+===> URL successfully changed to "https://staging.zonia.com/tf-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/tf-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-detox-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "3" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-rd-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-3-1']", page was not changed to tf-rd-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/tf\\-rd\\-6\\-more\\-bottles.*')'
+Actual value: https://staging.zonia.com/tf-restore-detox-special 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-detox-special"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-detox-special"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-detox-special"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-detox-special"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-detox-special"
+
+Failed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Test failed on page: 'https://staging.zonia.com/tf-restore-detox-special'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+
+Captured the following browser console errors:
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
+--- Access to fetch at 'https://ipapi.co/json/' from origin 'https://staging.zonia.com' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaque response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled. (Source: unknown source)
+--- Failed to load resource: net::ERR_FAILED (Source: unknown source)
