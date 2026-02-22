@@ -1,0 +1,32 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/restore-gut-special
+===> Buying 1 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Allen-1771759266@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-gut-6-more-bottles-2?orderId=699ae6ad1daa33474e6ae2ec"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-detox-6-discounted-bottles-2?orderId=699ae6ad1daa33474e6ae2ec"
+>>> Successfully selected upgrade "no" and last chance "best_value" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rg-restore-sleep-6-discounted-bottles-2?orderId=699ae6ad1daa33474e6ae2ec&id=699ae6ad1daa33474e6ae2ec"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/rg-trial"
+===> URL successfully changed to "https://staging.zonia.com/rg-trial-2?orderId=699ae6ad1daa33474e6ae2ec"
+>>> Successfully selected upgrade "yes" and last chance "no" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
