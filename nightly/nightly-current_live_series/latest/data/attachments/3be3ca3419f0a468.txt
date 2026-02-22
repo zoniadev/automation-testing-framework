@@ -1,0 +1,61 @@
+Executing step: user register in "cr_live_immune" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/cr-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
+>>> Navigation via cr_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/cr\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/cr-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-immunity"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-immunity"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-immunity"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-immunity"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-replay-weekend"
+
+===> Waiting for URL starting with "https://staging.zonia.com/cr-replay-weekend"
+===> URL successfully changed to "https://staging.zonia.com/cr-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "cr_live_immune" Opt In page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia-bonuses"
+===> Waiting for URL starting with "https://staging.zonia.com/cr-signup-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/cr-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
