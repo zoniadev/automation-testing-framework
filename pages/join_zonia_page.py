@@ -47,6 +47,8 @@ class JoinZoniaPage(BasePage):
             next_page = getattr(common_variables, f'{common_variables.funnel}_rw_signup_url')
         elif common_variables.funnel == 'cr_live':
             next_page = getattr(common_variables, f'{common_variables.funnel}_sign_up_url')
+        elif common_variables.funnel == 'cr_1ep':
+            next_page = getattr(common_variables, f'{common_variables.funnel}_join_zonia_url')
         else:
             raise Exception(f'Unsupported parameter {common_variables.funnel}!')
         self.wait_for_navigation(next_page, timeout=20000)

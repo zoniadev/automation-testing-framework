@@ -222,7 +222,7 @@ class SupplementUpsellPage(BasePage):
         url = self.context.page.url
         funnel = common_variables.funnel
         if 'rl' in url or 'life' in url:
-            if funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live', 'cr_live', 'cr_bonus', 'cr_ev']:
+            if funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live', 'cr_live', 'cr_bonus', 'cr_ev', 'cr_1ep']:
                 return SHIPPING_PHONE_FIELD_ALT, SHIPPING_ADDRESS_FIELD_ALT, SHIPPING_CITY_FIELD_ALT, SHIPPING_STATE_FIELD_ALT, SHIPPING_ZIP_FIELD_ALT, SHIPPING_COUNTRY_FIELD_ALT
             else:
                 return SHIPPING_PHONE_FIELD_ALT2, SHIPPING_ADDRESS_FIELD_ALT2, SHIPPING_CITY_FIELD_ALT2, SHIPPING_STATE_FIELD_ALT2, SHIPPING_ZIP_FIELD_ALT2, SHIPPING_COUNTRY_FIELD_ALT2

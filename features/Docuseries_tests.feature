@@ -691,6 +691,38 @@ Feature: Docuseries tests
       | cr_ev_stress  | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
 
 
+  @cr_1ep @all_docuseries
+  Scenario Outline: CR 1 episode funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia in 1 episode page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page    | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | cr_1ep         | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | cr_1ep_immune  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | cr_1ep_toxins  | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | cr_1ep_female  | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
+      | cr_1ep_trauma  | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
+      | cr_1ep_aging   | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
+      | cr_1ep_stress  | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+      | cr_1ep_obesity | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
+
+
   @pc_live @all_docuseries
   Scenario Outline: Patient Care funnel
     Given user is on the Patient Care sales page
