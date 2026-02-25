@@ -1,0 +1,9 @@
+Executing step: user register in "cr_live_stress" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://staging.zonia.com/cr-chronic-stress
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "cr_live_stress" Opt In page
+Test failed on page: 'https://staging.zonia.com/cr-chronic-stress'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_funnel_--_@1.15__20260225-193313.png
