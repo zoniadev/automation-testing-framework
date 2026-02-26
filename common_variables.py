@@ -415,6 +415,9 @@ restore_detox_third_upsell_url = 'rd-trial'
 
 blog_this_week_article = 'this-week-post'
 
+fs_opt_in_url = 'face-scan'
+fs_join_zonia_url = 'fs-join-zonia'
+
 test_cc_number = ''
 test_cc_type = ''
 test_cc_expiration_date = '0527'

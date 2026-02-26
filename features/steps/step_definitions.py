@@ -12,6 +12,7 @@ from pages import (
     SignUpPage,
     BlogPage,
     BasePage,
+    FaceScanPage,
 )
 
 
@@ -192,3 +193,8 @@ def user_is_on_episode_page(context, series, episode):
     page.register_in_episode_page(episode)
 
 
+@step(u'user fills face scan form with')
+def user_fills_face_scan_form(context):
+    page = FaceScanPage(context)
+    for row in context.table:
+        page.fill_face_scan_form(row)
