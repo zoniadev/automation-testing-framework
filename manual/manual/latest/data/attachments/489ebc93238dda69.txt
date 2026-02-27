@@ -1,8 +1,0 @@
-Executing step: user register in "cr_1ep_obesity" Opt In page
-Scenario will use "Visa" card "4009348888881881"
-===> Navigated to https://staging.zonia.com/crmb1e/cr-obesity
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
-===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
-Completed step: user register in "cr_1ep_obesity" Opt In page
