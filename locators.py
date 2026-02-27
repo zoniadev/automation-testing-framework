@@ -141,3 +141,6 @@ GENDER_OPTION_MALE = "//select[@unique-identifier='gender-1']/option[@value='mal
 FIRST_NAME_FIELD_SCAN = "//input[@unique-identifier='firstName-1']"
 EMAIL_FIELD_SCAN = "//input[@unique-identifier='email-1']"
 SUBMIT_FACE_SCAN_FORM_BUTTON = "//button[@unique-identifier='submitBtn-1']"
+
+#FaceScanJoinZoniaLocators:
+FACE_SCAN_JOIN_ZONIA_BUTTON = "//button[@unique-identifier='join-zonia-risk-free-cta-main']"

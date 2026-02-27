@@ -259,8 +259,8 @@ Feature: Supplement tests
   @face_scan @all_supplements @WIP
   Scenario: Face Scan funnel
     Given user fills face scan form with
-      | height | weight | smoke | blood_pressure | diabetic | age | gender | first_name | email          |
-      | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   | Alex       | alex@email.com |
+      | height | weight | smoke | blood_pressure | diabetic | age | gender | first_name | email                 |
+      | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   | Nick       | nick_sample@gmail.com |
 
 #    When user select to buy "<bottles>" bottles in "Restore Detox" Supplements page
 #    And user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
