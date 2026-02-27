@@ -254,3 +254,26 @@ Feature: Supplement tests
       | 3       | yes        | no             | no         | most_popular   | accept        | quarterly |
       | 3       | no         | most_popular   | no         | best_value     | decline       | no        |
       | 1       | no         | no             | yes        | no             | accept        | quarterly |
+
+
+  @face_scan @all_supplements @WIP
+  Scenario: Face Scan funnel
+    Given user fills face scan form with
+      | height | weight | smoke | blood_pressure | diabetic | age | gender | first_name | email          |
+      | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   | Alex       | alex@email.com |
+
+#    When user select to buy "<bottles>" bottles in "Restore Detox" Supplements page
+#    And user makes following decision in "first" supplement "6 More bottles of Restore Detox" Upsell page
+#      | upgrade      | last_chance      |
+#      | <dt_upgrade> | <dt_last_chance> |
+#    And user makes following decision in "second" supplement "Restore Life" Upsell page
+#      | upgrade      | last_chance      |
+#      | <lf_upgrade> | <lf_last_chance> |
+#    And user makes following decision in 7 day free membership
+#      | decision        | plan        |
+#      | <memb_decision> | <memb_plan> |
+#    Then user complete registration
+#
+#    Examples:
+#      | bottles | dt_upgrade | dt_last_chance | lf_upgrade | lf_last_chance | memb_decision | memb_plan |
+#      | 1       | yes        | no             | yes        | no             | accept        | annually  |

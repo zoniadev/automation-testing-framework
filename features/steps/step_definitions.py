@@ -196,5 +196,6 @@ def user_is_on_episode_page(context, series, episode):
 @step(u'user fills face scan form with')
 def user_fills_face_scan_form(context):
     page = FaceScanPage(context)
+    page.navigate_to_url(getattr(common_variables, "fs_opt_in_url"))
     for row in context.table:
         page.fill_face_scan_form(row)

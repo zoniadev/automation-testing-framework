@@ -1,4 +1,3 @@
-import common_variables
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -34,10 +33,11 @@ class FaceScanPage(BasePage):
                 raise Exception('Invalid Face Scan form.')
             locator, action = field_map[key]
             if action == 'fill':
-                self.page.locator(locator).fill(str(value))
+                self.context.page.locator(locator).fill(str(value))
             elif action == 'select':
-                self.page.locator(locator).select_option(value=value)
-            self.page.locator(SUBMIT_FACE_SCAN_FORM_BUTTON).click()
-            self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
-                                     timeout=20000)
-            print(f'>>> Successfully filled HearthAge screening form and navigated to Face Scan page')
+                self.context.page.locator(locator).click()
+                self.context.page.locator(locator).select_option(value=value)
+        self.context.page.locator(SUBMIT_FACE_SCAN_FORM_BUTTON).click()
+        self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
+                                 timeout=20000)
+        print(f'>>> Successfully filled HearthAge screening form and navigated to Face Scan page')
