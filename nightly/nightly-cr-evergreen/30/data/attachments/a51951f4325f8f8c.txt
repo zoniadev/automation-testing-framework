@@ -1,0 +1,15 @@
+Executing step: user register in "cr_ev_aging" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/crmb5e/cr-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "cr_ev_aging" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb5e/cr-inflammation'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+  - fonts loaded
+
