@@ -747,7 +747,7 @@ Feature: Docuseries tests
       | annually  | no         | no                 | 6          | upgrade            |
 
 
-    @face_scan @all_supplements @WIP
+  @face_scan @all_supplements @WIP
   Scenario Outline: Face Scan funnel
     Given user fills face scan form with
       | height | weight | smoke | blood_pressure | diabetic | age | gender |
