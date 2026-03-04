@@ -16,6 +16,7 @@ SCROLL_ARROW_BUTTON = "//a[@class='arrow']"
 SKIP_SURVEY_BUTTON = "//*[@unique-identifier='skip-survey-btn-1']"
 SKIP_HEALTH_TRACK_BUTTON = '//*[@id="skip-health-track-btn"]'
 GO_TO_ZONIA_BUTTON = "//*[@unique-identifier='go-to-zonia-btn-1']"
+FS_GO_TO_ZONIA_BUTTON = "//*[@unique-id='fs-go-to-zonia-btn']"
 
 #SupplementSalesPageLocators:
 BUY_1_BOTTLES_BUTTON = "//*[@unique-id='add-order-1-1']"
@@ -78,14 +79,16 @@ JOIN_ZONIA_ID_BUTTON = "//*[@unique-id='register-btn-1']"
 JOIN_ZONIA_ID_BUTTON_TWL = "//*[@unique-id='register-btn-3']"
 
 #SignUpPageLocators:
-MONTHLY_RADIO_BUTTON = "//input[@unique-id='monthly_new-1']"
-QUARTERLY_RADIO_BUTTON = "//input[@unique-id='quarterly-1']"
-ANNUALLY_RADIO_BUTTON = "//input[@unique-id='yearly_new-1']"
-LIFETIME_RADIO_BUTTON = "//input[@unique-id='lifetime-1']"
+MONTHLY_RADIO_BUTTON = "//*[@unique-id='monthly_new-1']"
+QUARTERLY_RADIO_BUTTON = "//*[@unique-id='quarterly-1']"
+ANNUALLY_RADIO_BUTTON = "//*[@unique-id='yearly_new-1']"
+LIFETIME_RADIO_BUTTON = "//*[@unique-id='lifetime-1']"
 SIGNUP_NAME_FIELD = "//input[@id='form-name']"
 SIGNUP_EMAIL_FIELD = "//input[@id='form-email']"
 SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
+FS_AGREE_CHECKBOX = "//input[@unique-identifier='fc-signup-terms-consent-1']"
 SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='activate-membership-1']"
+FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='fc-signup-activate-membership-button']"
 
 #SpippingAddressPopupLocators:
 SHIPPING_POPUP_TITLE = "#shippingModal h5.modal-title"
@@ -143,4 +146,4 @@ EMAIL_FIELD_SCAN = "//input[@unique-identifier='email-1']"
 SUBMIT_FACE_SCAN_FORM_BUTTON = "//button[@unique-identifier='submitBtn-1']"
 
 #FaceScanJoinZoniaLocators:
-FACE_SCAN_JOIN_ZONIA_BUTTON = "//button[@unique-identifier='join-zonia-risk-free-cta-main']"
+FACE_SCAN_JOIN_ZONIA_BUTTON = "//*[@unique-id='join-zonia-risk-free-cta-main']"

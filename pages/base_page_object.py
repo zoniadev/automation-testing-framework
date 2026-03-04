@@ -75,6 +75,8 @@ class BasePage(object):
             cc_cvv.fill(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.fill(common_variables.test_cc_zip)
+        if common_variables.funnel_prefix == 'fs':
+            self.context.page.locator(FS_AGREE_CHECKBOX).click()
         self.retry_cc_number_entry(submit_button=submit_button)
 
     def navigate_to_url(self, url):

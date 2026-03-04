@@ -118,6 +118,10 @@ def user_join_zonia(context):
         page.join_zonia_replay_weekend()
     elif common_variables.is_screening_flow:
         page.join_zonia_episode()
+    elif common_variables.funnel_prefix == 'fs':
+        page = FaceScanPage(context)
+        page.navigate_to_url(getattr(common_variables, f"fs_join_zonia_url"))
+        page.fs_join_zonia()
     else:
         page.join_zonia()
 
@@ -195,7 +199,15 @@ def user_is_on_episode_page(context, series, episode):
 
 @step(u'user fills face scan form with')
 def user_fills_face_scan_form(context):
+    common_variables.supplement_funnel_email = RD.automation_template_email()
+    common_variables.supplement_funnel_name = RD.automation_first_name()
+    common_variables.flow_type = 'docuseries'
+    common_variables.funnel = 'face_scan'
+    common_variables.funnel_prefix = 'fs'
     page = FaceScanPage(context)
     page.navigate_to_url(getattr(common_variables, "fs_opt_in_url"))
     for row in context.table:
-        page.fill_face_scan_form(row)
+        row_data = dict(row.items())
+        row_data['first_name'] = common_variables.supplement_funnel_name
+        row_data['email'] = common_variables.supplement_funnel_email
+        page.fill_face_scan_form(row_data)

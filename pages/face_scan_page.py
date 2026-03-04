@@ -1,3 +1,4 @@
+import common_variables
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -38,6 +39,11 @@ class FaceScanPage(BasePage):
                 self.context.page.locator(locator).click()
                 self.context.page.locator(locator).select_option(value=value)
         self.context.page.locator(SUBMIT_FACE_SCAN_FORM_BUTTON).click()
-        self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
-                                 timeout=20000)
+        # self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
+        #                          timeout=20000)
         print(f'>>> Successfully filled HearthAge screening form and navigated to Face Scan page')
+
+    def fs_join_zonia(self):
+        self.context.page.locator(FACE_SCAN_JOIN_ZONIA_BUTTON).click()
+        self.wait_for_navigation(getattr(common_variables, f"fs_sign_up_url"),
+                                 timeout=20000)

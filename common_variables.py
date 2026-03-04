@@ -372,6 +372,17 @@ pc_restore_sleep_upsell_url = 'clp-rs-6-more-bottles'
 pc_restore_detox_url = 'clp-restore-detox-special'
 pc_restore_detox_upsell_url = 'clp-rd-6-more-bottles'
 
+fs_opt_in_url = 'face-scan'
+fs_join_zonia_url = 'fs-join-zonia'
+fs_sign_up_url = 'fs-signup'
+fs_restore_sleep_url = 'fs-restore-sleep-special'
+fs_restore_sleep_upsell_url = 'fs-rs-6-more-bottles'
+fs_restore_sleep_downsell_url = 'fs-rs-6-discounted-bottles'
+fs_restore_detox_url = 'fs-restore-detox-special'
+fs_restore_detox_upsell_url = 'fs-rd-6-more-bottles'
+fs_restore_detox_downsell_url = 'fs-rd-6-discounted-bottles'
+fs_welcome_page_url = 'fs-welcome'
+
 restore_sleep_start_url = 'restore-sleep-special'
 restore_sleep_first_upsell_url = 'restore-sleep-6-more-bottles'
 restore_sleep_second_upsell_url = 'rs-restore-life-6-discounted-bottles'
@@ -414,9 +425,6 @@ restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'
 restore_detox_third_upsell_url = 'rd-trial'
 
 blog_this_week_article = 'this-week-post'
-
-fs_opt_in_url = 'face-scan'
-fs_join_zonia_url = 'fs-join-zonia'
 
 test_cc_number = ''
 test_cc_type = ''
