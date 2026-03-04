@@ -1,0 +1,4 @@
+Executing step: user fills face scan form with
+===> Navigated to https://staging.zonia.com/face-scan
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with
