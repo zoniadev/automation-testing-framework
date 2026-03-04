@@ -172,6 +172,7 @@ def user_open_patient_care_page(context):
     common_variables.funnel_prefix = 'pc'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     page = JoinZoniaPage(context)
     page.handle_cookie_banner()
     page.navigate_to_url(getattr(common_variables, "pc_sales_page_url"))
@@ -192,6 +193,7 @@ def user_is_on_episode_page(context, series, episode):
         page_url = f'{common_variables.funnel_prefix}_episode_{episode}_url'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     page = OptInPage(context)
     page.navigate_to_url(getattr(common_variables, page_url))
     page.register_in_episode_page(episode)
@@ -201,6 +203,7 @@ def user_is_on_episode_page(context, series, episode):
 def user_fills_face_scan_form(context):
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.flow_type = 'docuseries'
     common_variables.funnel = 'face_scan'
     common_variables.funnel_prefix = 'fs'
