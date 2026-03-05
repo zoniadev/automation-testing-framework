@@ -1,0 +1,35 @@
+Executing step: user fills face scan form with
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/face-scan
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with
+Executing step: user join Zonia
+===> Navigated to https://staging.zonia.com/fs-join-zonia
+===> Waiting for URL starting with "https://staging.zonia.com/fs-signup"
+===> URL successfully changed to "https://staging.zonia.com/fs-signup"
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Castillo-1772701022@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+⚠️ Submission or number entry failed on attempt 1. Retrying...
+Attempting CC number entry (Attempt 2/5)...
+⚠️ Submission or number entry failed on attempt 2. Retrying...
+Attempting CC number entry (Attempt 3/5)...
+⚠️ Submission or number entry failed on attempt 3. Retrying...
+Attempting CC number entry (Attempt 4/5)...
+⚠️ Submission or number entry failed on attempt 4. Retrying...
+Attempting CC number entry (Attempt 5/5)...
+Failed step: user sign up for "lifetime" plan
+Test failed on page: 'https://staging.zonia.com/fs-signup'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Face_Scan_funnel_--_@1.21__20260305-085910.png
+Captured the following browser console errors:
+--- Unsafe attempt to load URL https://gohealthy-videos-captions.s3.us-west-2.amazonaws.com/1979-dr.michelle-leary-obesity-show-the-philosophy-of-metabolic-weight-loss-3-action-phases-to-drop-weight.vtt from frame with URL https://staging.zonia.com/fs-join-zonia. Domains, protocols and ports must match.
+ (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 429 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 429 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 429 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 429 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 429 () (Source: unknown source)
