@@ -1,0 +1,6 @@
+Executing step: user register in "cr_ev_trauma" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Failed step: user register in "cr_ev_trauma" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb5e/cr-emotions'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Evergreen_funnel_--_@1.21__20260307-073309.png
