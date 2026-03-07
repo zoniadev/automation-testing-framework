@@ -1,0 +1,111 @@
+Executing step: user register in "cr_live_emotions" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/cr-emotions
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "cr_live_emotions" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-signup"
+===> URL successfully changed to "https://staging.zonia.com/cr-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Jackson-1772910982@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/cr-booster-packages-lifetime"
+===> URL successfully changed to "https://staging.zonia.com/cr-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/cr-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "https://staging.zonia.com/cr-mini-masterclass-series-platinum-package?id=69ac79a1eb89961f54eae885"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-sleep-special"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-sleep-special?id=69ac79a1eb89961f54eae885"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-rs-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/cr-rs-6-discounted-bottles?id=69ac79a1eb89961f54eae885"
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "1" bottles and "most_popular" in upsell/downsell for Restore Life...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-rl-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-1-1']", page was not changed to cr-rl-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/cr\\-rl\\-6\\-more\\-bottles.*')'
+Actual value: https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/cr-restore-life-special?id=69ac79a1eb89961f54eae885"
+
+Failed step: user makes following decision in docuseries "Restore Life" Upsell page
+Test failed on page: 'https://staging.zonia.com/cr-rl-6-more-bottles?id=69ac79a1eb89961f54eae885'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
