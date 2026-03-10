@@ -396,6 +396,27 @@ Feature: Nightly tests
       | monthly   | 1          | upgrade            | 3          | upgrade            |
 
 
+  @nightly @nightly_docuseries
+  Scenario Outline: Face Scan nightly
+    Given user fills face scan form with
+      | height | weight | smoke | blood_pressure | diabetic | age | gender |
+      | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   |
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | quarterly | 3          | upgrade            | 1          | upgrade            |
+      | monthly   | no         | no                 | no         | no                 |
+
+
   @nightly @nightly_supplement
   Scenario Outline: Restore Sleep Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep" Supplements page

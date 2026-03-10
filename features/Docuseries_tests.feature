@@ -747,7 +747,7 @@ Feature: Docuseries tests
       | annually  | no         | no                 | 6          | upgrade            |
 
 
-  @face_scan @all_supplements @WIP
+  @face_scan @all_supplements
   Scenario Outline: Face Scan funnel
     Given user fills face scan form with
       | height | weight | smoke | blood_pressure | diabetic | age | gender |
@@ -766,15 +766,11 @@ Feature: Docuseries tests
       | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | quarterly | 3          | upgrade            | 1          | upgrade            |
       | monthly   | no         | no                 | no         | no                 |
-      # TODO: investigate next row (going to downsell 2B instead of welcome)
       | annually  | 6          | no                 | 3          | no                 |
       | monthly   | 3          | most_popular       | 1          | most_popular       |
-      # TODO: investigate next row (shipping form not loading)
       | lifetime  | no         | upgrade            | 6          | best_value         |
       | annually  | 1          | best_value         | 6          | most_popular       |
-      # TODO: investigate next row (going to downsell 2B instead of welcome)
       | lifetime  | 1          | most_popular       | 1          | no                 |
-      # TODO: investigate next row (orderid=null)
       | monthly   | no         | no                 | 3          | upgrade            |
       | quarterly | 3          | most_popular       | no         | no                 |
       | quarterly | 6          | best_value         | 1          | best_value         |
@@ -782,16 +778,12 @@ Feature: Docuseries tests
       | monthly   | 6          | upgrade            | 3          | most_popular       |
       | lifetime  | 3          | no                 | 6          | most_popular       |
       | lifetime  | 3          | best_value         | 3          | upgrade            |
-      # TODO: investigate next row (shipping form not loading)
       | annually  | no         | upgrade            | 1          | upgrade            |
-      # TODO: investigate next row (going to downsell 2B instead of welcome)
       | monthly   | 1          | best_value         | 6          | no                 |
       | lifetime  | 6          | best_value         | no         | no                 |
       | quarterly | no         | no                 | no         | no                 |
       | quarterly | 1          | upgrade            | 3          | most_popular       |
       | monthly   | 3          | upgrade            | no         | no                 |
-      # TODO: investigate next row (orderid=null)
       | lifetime  | no         | no                 | 1          | most_popular       |
       | monthly   | 1          | no                 | 6          | best_value         |
-      # TODO: investigate next row (shipping form not loading)
       | annually  | no         | no                 | no         | upgrade            |
