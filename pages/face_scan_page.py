@@ -39,8 +39,8 @@ class FaceScanPage(BasePage):
                 self.context.page.locator(locator).click()
                 self.context.page.locator(locator).select_option(value=value)
         self.context.page.locator(SUBMIT_FACE_SCAN_FORM_BUTTON).click()
-        # self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
-        #                          timeout=20000)
+        self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
+                                 timeout=30000)
         print(f'>>> Successfully filled HearthAge screening form and navigated to Face Scan page')
 
     def fs_join_zonia(self):
