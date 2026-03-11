@@ -440,7 +440,7 @@ Feature: Nightly tests
       | 1       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | monthly   |
 
 
-  @nightly @nightly_supplement @WIP
+  @nightly @nightly_supplement
   Scenario Outline: Restore Sleep - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
