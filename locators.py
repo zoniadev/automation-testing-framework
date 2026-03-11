@@ -16,6 +16,7 @@ SCROLL_ARROW_BUTTON = "//a[@class='arrow']"
 SKIP_SURVEY_BUTTON = "//*[@unique-identifier='skip-survey-btn-1']"
 SKIP_HEALTH_TRACK_BUTTON = '//*[@id="skip-health-track-btn"]'
 GO_TO_ZONIA_BUTTON = "//*[@unique-identifier='go-to-zonia-btn-1']"
+FS_GO_TO_ZONIA_BUTTON = "//*[@unique-id='fs-go-to-zonia-btn']"
 
 #SupplementSalesPageLocators:
 BUY_1_BOTTLES_BUTTON = "//*[@unique-id='add-order-1-1']"
@@ -78,14 +79,16 @@ JOIN_ZONIA_ID_BUTTON = "//*[@unique-id='register-btn-1']"
 JOIN_ZONIA_ID_BUTTON_TWL = "//*[@unique-id='register-btn-3']"
 
 #SignUpPageLocators:
-MONTHLY_RADIO_BUTTON = "//input[@unique-id='monthly_new-1']"
-QUARTERLY_RADIO_BUTTON = "//input[@unique-id='quarterly-1']"
-ANNUALLY_RADIO_BUTTON = "//input[@unique-id='yearly_new-1']"
-LIFETIME_RADIO_BUTTON = "//input[@unique-id='lifetime-1']"
+MONTHLY_RADIO_BUTTON = "//*[@unique-id='monthly_new-1']"
+QUARTERLY_RADIO_BUTTON = "//*[@unique-id='quarterly-1']"
+ANNUALLY_RADIO_BUTTON = "//*[@unique-id='yearly_new-1']"
+LIFETIME_RADIO_BUTTON = "//*[@unique-id='lifetime-1']"
 SIGNUP_NAME_FIELD = "//input[@id='form-name']"
 SIGNUP_EMAIL_FIELD = "//input[@id='form-email']"
 SIGNUP_PASSWORD_FIELD = "//input[@id='form-password']"
+FS_AGREE_CHECKBOX = "//input[@unique-identifier='fc-signup-terms-consent-1']"
 SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='activate-membership-1']"
+FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON = "//button[@unique-id='fc-signup-activate-membership-button']"
 
 #SpippingAddressPopupLocators:
 SHIPPING_POPUP_TITLE = "#shippingModal h5.modal-title"
@@ -121,3 +124,26 @@ CHAT_CLOSE_BUTTON = '//*[@aria-label="Close widget"]'
 #PatientCareLocators:
 PATIENT_CARE_JOIN_BUTTON = "//*[@data-testid='join-zonia-today-desktop']"
 
+#FaceScanLocators:
+HEIGHT_FIELD = "//input[@unique-identifier='height-1']"
+WEIGHT_FIELD = "//input[@unique-identifier='weight-1']"
+SMOKE_SELECT = "//select[@unique-identifier='smoke-1']"
+SMOKE_OPTION_NO = "//select[@unique-identifier='smoke-1']/option[@value='No']"
+SMOKE_OPTION_YES = "//select[@unique-identifier='smoke-1']/option[@value='Yes']"
+BLOOD_PRESSURE_SELECT = "//select[@unique-identifier='bloodPressureMedication-1']"
+BLOOD_PRESSURE_OPTION_NO = "//select[@unique-identifier='bloodPressureMedication-1']/option[@value='No']"
+BLOOD_PRESSURE_OPTION_YES = "//select[@unique-identifier='bloodPressureMedication-1']/option[@value='Yes']"
+DIABETIC_SELECT = "//select[@unique-identifier='diabetic-1']"
+DIABETIC_OPTION_NO = "//select[@unique-identifier='diabetic-1']/option[@value='No']"
+DIABETIC_OPTION_TYPE_1 = "//select[@unique-identifier='diabetic-1']/option[@value='Type 1']"
+DIABETIC_OPTION_TYPE_2 = "//select[@unique-identifier='diabetic-1']/option[@value='Type 2']"
+AGE_FIELD = "//input[@unique-identifier='age-1']"
+GENDER_SELECT = "//select[@unique-identifier='gender-1']"
+GENDER_OPTION_FEMALE = "//select[@unique-identifier='gender-1']/option[@value='female']"
+GENDER_OPTION_MALE = "//select[@unique-identifier='gender-1']/option[@value='male']"
+FIRST_NAME_FIELD_SCAN = "//input[@unique-identifier='firstName-1']"
+EMAIL_FIELD_SCAN = "//input[@unique-identifier='email-1']"
+SUBMIT_FACE_SCAN_FORM_BUTTON = "//button[@unique-identifier='submitBtn-1']"
+
+#FaceScanJoinZoniaLocators:
+FACE_SCAN_JOIN_ZONIA_BUTTON = "//*[@unique-id='join-zonia-risk-free-cta-main']"

@@ -12,6 +12,7 @@ from pages import (
     SignUpPage,
     BlogPage,
     BasePage,
+    FaceScanPage,
 )
 
 
@@ -117,6 +118,10 @@ def user_join_zonia(context):
         page.join_zonia_replay_weekend()
     elif common_variables.is_screening_flow:
         page.join_zonia_episode()
+    elif common_variables.funnel_prefix == 'fs':
+        page = FaceScanPage(context)
+        page.navigate_to_url(getattr(common_variables, f"fs_join_zonia_url"))
+        page.fs_join_zonia()
     else:
         page.join_zonia()
 
@@ -167,6 +172,7 @@ def user_open_patient_care_page(context):
     common_variables.funnel_prefix = 'pc'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     page = JoinZoniaPage(context)
     page.handle_cookie_banner()
     page.navigate_to_url(getattr(common_variables, "pc_sales_page_url"))
@@ -187,8 +193,24 @@ def user_is_on_episode_page(context, series, episode):
         page_url = f'{common_variables.funnel_prefix}_episode_{episode}_url'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     page = OptInPage(context)
     page.navigate_to_url(getattr(common_variables, page_url))
     page.register_in_episode_page(episode)
 
 
+@step(u'user fills face scan form with')
+def user_fills_face_scan_form(context):
+    common_variables.supplement_funnel_email = RD.automation_template_email()
+    common_variables.supplement_funnel_name = RD.automation_first_name()
+    print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
+    common_variables.flow_type = 'docuseries'
+    common_variables.funnel = 'face_scan'
+    common_variables.funnel_prefix = 'fs'
+    page = FaceScanPage(context)
+    page.navigate_to_url(getattr(common_variables, "fs_opt_in_url"))
+    for row in context.table:
+        row_data = dict(row.items())
+        row_data['first_name'] = common_variables.supplement_funnel_name
+        row_data['email'] = common_variables.supplement_funnel_email
+        page.fill_face_scan_form(row_data)

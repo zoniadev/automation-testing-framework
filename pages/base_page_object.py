@@ -16,9 +16,12 @@ class BasePage(object):
         return BasePage.__TIMEOUT
 
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
-        base_url = common_variables.used_base_url
-        full_url_pattern = re.compile(f"^{re.escape(base_url)}{re.escape(url)}.*")
-        print(f'===> Waiting for URL starting with "{base_url}{url}"')
+        if url.startswith("http"):
+            full_url_pattern = url
+        else:
+            base_url = common_variables.used_base_url
+            full_url_pattern = re.compile(f"^{re.escape(base_url)}{re.escape(url)}.*")
+            print(f'===> Waiting for URL starting with "{base_url}{url}"')
         expect(self.context.page).to_have_url(full_url_pattern, timeout=timeout)
         print(f'===> URL successfully changed to "{self.context.page.url}"')
         # Special check for the welcome page
@@ -72,6 +75,8 @@ class BasePage(object):
             cc_cvv.fill(common_variables.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
         cc_zip.fill(common_variables.test_cc_zip)
+        if common_variables.funnel_prefix == 'fs':
+            self.context.page.locator(FS_AGREE_CHECKBOX).click()
         self.retry_cc_number_entry(submit_button=submit_button)
 
     def navigate_to_url(self, url):

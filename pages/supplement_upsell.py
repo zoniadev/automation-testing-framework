@@ -121,19 +121,21 @@ class SupplementUpsellPage(BasePage):
         """Determines the next page URL based on the upsell page and funnel."""
         funnel_prefix = common_variables.funnel_prefix
         if upsell_page == 'Restore Detox':
-            if funnel_prefix in ['lg', 'km', 'is', 'twl', 'pc']:
+            if funnel_prefix in ('lg', 'km', 'is', 'twl', 'pc'):
                 return common_variables.welcome_page_url
+            elif funnel_prefix == 'fs':
+                return common_variables.fs_welcome_page_url
             else:
                 page_url = f'{funnel_prefix}_restore_life_url'
                 return getattr(common_variables, page_url)
         elif upsell_page == 'Restore Life':
-            if funnel_prefix in ['lg', 'is']:
+            if funnel_prefix in ('lg', 'is'):
                 page_url = f'{funnel_prefix}_restore_detox_url'
                 return getattr(common_variables, page_url)
             else:
                 return common_variables.welcome_page_url
         elif upsell_page == 'Restore Sleep':
-            if funnel_prefix in ['cr']:
+            if funnel_prefix in ('cr'):
                 page_url = f'{funnel_prefix}_restore_life_url'
             else:
                 page_url = f'{funnel_prefix}_restore_detox_url'
