@@ -53,19 +53,28 @@ def before_scenario(context, scenario):
         device = None
     else:
         raise Exception('Error setting device for execution! Possible parameters are "iphone", "iphone_landscape", "android", "android_landscape", "ipad" and "ipad_landscape"')
+
+    record_video_str = context.config.userdata.get("record_video", "true")
+    context.record_video = record_video_str.lower() == "true"
+
+    context_args = {}
     if device:
-        context.context = context.browser.new_context(**device,
-                                                      record_video_dir=f"screenshots/videos/{context.scenario.name}",
-                                                      record_video_size={"width": 640, "height": 480}
-                                                      )
+        context_args.update(device)
         common_variables.mobile_run = True
     else:
-        context.context = context.browser.new_context(
-            viewport={'width': 1280, 'height': 720},
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 ZoniaTestingBrowser",
-            record_video_dir=f"screenshots/videos/{context.scenario.name}",
-            record_video_size={"width": 640, "height": 480}
-        )
+        context_args.update({
+            "viewport": {'width': 1280, 'height': 720},
+            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 ZoniaTestingBrowser"
+        })
+
+    if context.record_video:
+        context_args.update({
+            "record_video_dir": f"screenshots/videos/{context.scenario.name}",
+            "record_video_size": {"width": 640, "height": 480}
+        })
+
+    context.context = context.browser.new_context(**context_args)
+
     third_party_routes = [
         re.compile(r".*liflolrb\.marketise\.me/.*"),
         re.compile(r".*browser\.sentry-cdn\.com/.*"),
@@ -148,21 +157,24 @@ def after_step(context, step):
 
 
 def after_scenario(context, scenario):
-    video_dir = f"screenshots/videos/{context.scenario.name}"
     context.page.close()
     context.context.close()
-    if os.path.exists(video_dir):
-        if scenario.status == "failed":
-            video_path = os.path.join(video_dir, os.listdir(video_dir)[0])
-            if video_path.endswith(".webm"):
-                with open(video_path, "rb") as video:
-                    allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
-        try:
-            shutil.rmtree(video_dir)
-        except Exception as e:
-            print(f"Error deleting video directory: {e}")
-    else:
-        allure.attach("No video recording found for this scenario.", attachment_type=allure.attachment_type.TEXT)
+
+    if context.record_video:
+        video_dir = f"screenshots/videos/{context.scenario.name}"
+        if os.path.exists(video_dir):
+            if scenario.status == "failed":
+                video_path = os.path.join(video_dir, os.listdir(video_dir)[0])
+                if video_path.endswith(".webm"):
+                    with open(video_path, "rb") as video:
+                        allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
+            try:
+                shutil.rmtree(video_dir)
+            except Exception as e:
+                print(f"Error deleting video directory: {e}")
+        else:
+            allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
+
     if scenario.status == "failed":
         print(f"Failed scenario: '{context.scenario.name}'")
     else:

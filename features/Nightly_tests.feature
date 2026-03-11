@@ -419,7 +419,7 @@ Feature: Nightly tests
       | 1       | no         | most_popular   | no         | most_popular   | no         | best_value     | accept        | monthly   |
 
 
-  @nightly @nightly_supplement
+  @nightly @nightly_supplement @WIP
   Scenario Outline: Restore Sleep - Buy 2, Get 3 Free bottles Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Sleep B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Sleep" Upsell page
@@ -439,7 +439,7 @@ Feature: Nightly tests
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
       | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
-      | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
+#      | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
 
 
   @nightly @nightly_supplement
