@@ -1,4 +1,4 @@
-name: Nightly CR screening episodes
+name: Nightly Face Scan
 
 on:
   schedule:
@@ -9,9 +9,9 @@ jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-cr-screening
+      report_name: nightly-face-scan
       device: desktop
-      tags: '@cr_screening'
+      tags: '@face_scan'
       environment: staging
       report_scope: nightly
     secrets: inherit
