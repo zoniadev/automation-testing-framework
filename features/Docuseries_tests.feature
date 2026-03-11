@@ -745,3 +745,45 @@ Feature: Docuseries tests
       | quarterly | 3          | no                 | no         | no                 |
       | monthly   | no         | no                 | 1          | no                 |
       | annually  | no         | no                 | 6          | upgrade            |
+
+
+  @face_scan @all_supplements
+  Scenario Outline: Face Scan funnel
+    Given user fills face scan form with
+      | height   | weight   | smoke   | blood_pressure   | diabetic   | age   | gender   |
+      | <height> | <weight> | <smoke> | <blood_pressure> | <diabetic> | <age> | <gender> |
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell | height | weight | smoke | blood_pressure | diabetic | age | gender |
+      | quarterly | 3          | upgrade            | 1          | upgrade            | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   |
+      | monthly   | no         | no                 | no         | no                 | 165    | 60     | No    | No             | No       | 28  | female |
+      | annually  | 6          | no                 | 3          | no                 | 180    | 85     | No    | Yes            | Type 1   | 45  | male   |
+      | monthly   | 3          | most_popular       | 1          | most_popular       | 160    | 55     | Yes   | No             | No       | 30  | female |
+      | lifetime  | no         | upgrade            | 6          | best_value         | 170    | 70     | No    | No             | Type 2   | 50  | male   |
+      | annually  | 1          | best_value         | 6          | most_popular       | 155    | 50     | No    | Yes            | No       | 60  | female |
+      | lifetime  | 1          | most_popular       | 1          | no                 | 185    | 90     | Yes   | No             | Type 1   | 40  | male   |
+      | monthly   | no         | no                 | 3          | upgrade            | 168    | 65     | No    | No             | No       | 35  | female |
+      | quarterly | 3          | most_popular       | no         | no                 | 178    | 80     | No    | Yes            | Type 2   | 55  | male   |
+      | quarterly | 6          | best_value         | 1          | best_value         | 162    | 58     | Yes   | No             | No       | 25  | female |
+      | annually  | 3          | most_popular       | 3          | best_value         | 172    | 75     | No    | No             | Type 1   | 42  | male   |
+      | monthly   | 6          | upgrade            | 3          | most_popular       | 158    | 52     | No    | Yes            | No       | 65  | female |
+      | lifetime  | 3          | no                 | 6          | most_popular       | 182    | 88     | Yes   | No             | Type 2   | 48  | male   |
+      | lifetime  | 3          | best_value         | 3          | upgrade            | 166    | 62     | No    | No             | No       | 32  | female |
+      | annually  | no         | upgrade            | 1          | upgrade            | 176    | 78     | No    | Yes            | Type 1   | 52  | male   |
+      | monthly   | 1          | best_value         | 6          | no                 | 164    | 56     | Yes   | No             | No       | 29  | female |
+      | lifetime  | 6          | best_value         | no         | no                 | 174    | 76     | No    | No             | Type 2   | 46  | male   |
+      | quarterly | no         | no                 | no         | no                 | 160    | 54     | No    | Yes            | No       | 62  | female |
+      | quarterly | 1          | upgrade            | 3          | most_popular       | 180    | 86     | Yes   | No             | Type 1   | 38  | male   |
+      | monthly   | 3          | upgrade            | no         | no                 | 168    | 64     | No    | No             | No       | 34  | female |
+      | lifetime  | no         | no                 | 1          | most_popular       | 178    | 82     | No    | Yes            | Type 2   | 54  | male   |
+      | monthly   | 1          | no                 | 6          | best_value         | 162    | 59     | Yes   | No             | No       | 26  | female |
+      | annually  | no         | no                 | no         | upgrade            | 172    | 74     | No    | No             | Type 1   | 44  | male   |
