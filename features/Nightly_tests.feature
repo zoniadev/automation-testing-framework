@@ -460,7 +460,7 @@ Feature: Nightly tests
     Examples:
       | bottles | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
       | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
-#      | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
+      | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
 
 
   @nightly @nightly_supplement
