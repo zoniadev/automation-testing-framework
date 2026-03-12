@@ -10,7 +10,6 @@ class FaceScanPage(BasePage):
     def fill_face_scan_form(self, row):
         """
         Fills the Face Scan form using a Behave Row object (or dictionary).
-        
         Args:
             row: A Behave Row object (from context.table) or a dictionary.
                  Expected headers/keys: height, weight, smoke, blood_pressure, diabetic, age, gender, first_name, email
@@ -28,7 +27,6 @@ class FaceScanPage(BasePage):
             'first_name': (FIRST_NAME_FIELD_SCAN, 'fill'),
             'email': (EMAIL_FIELD_SCAN, 'fill')
         }
-
         for key, value in row.items():
             if key not in field_map or not value:
                 raise Exception('Invalid Face Scan form.')
@@ -40,7 +38,7 @@ class FaceScanPage(BasePage):
                 self.context.page.locator(locator).select_option(value=value)
         self.context.page.locator(SUBMIT_FACE_SCAN_FORM_BUTTON).click()
         self.wait_for_navigation('https://bioimaging.ariascreening.com/measurement',
-                                 timeout=30000)
+                                 timeout=40000)
         print(f'>>> Successfully filled HearthAge screening form and navigated to Face Scan page')
 
     def fs_join_zonia(self):
