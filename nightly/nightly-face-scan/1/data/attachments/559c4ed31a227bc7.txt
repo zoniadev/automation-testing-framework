@@ -1,0 +1,47 @@
+Executing step: user fills face scan form with
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://staging.zonia.com/face-scan
+===> URL successfully changed to "https://bioimaging.ariascreening.com/measurement"
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with
+Executing step: user join Zonia
+===> Navigated to https://staging.zonia.com/fs-join-zonia
+===> Waiting for URL starting with "https://staging.zonia.com/fs-signup"
+===> URL successfully changed to "https://staging.zonia.com/fs-signup"
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Sandoval-1773291885@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/fs-restore-sleep-special"
+===> URL successfully changed to "https://staging.zonia.com/fs-restore-sleep-special"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-rs-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/fs-rs-6-discounted-bottles"
+===> Waiting for URL starting with "https://staging.zonia.com/fs-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/fs-restore-detox-special"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "3" bottles and "upgrade" in upsell/downsell for Restore Detox...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/fs-rd-6-more-bottles?id=69b249a999ccd657d4bf7b71"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "https://staging.zonia.com/fs-welcome"
+===> URL successfully changed to "https://staging.zonia.com/fs-welcome?mode=standard&id=69b249a999ccd657d4bf7b71"
+>>> Successfully selected "3" bottles and "upgrade" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
