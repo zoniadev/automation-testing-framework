@@ -1,0 +1,56 @@
+Executing step: user fills face scan form with
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://staging.zonia.com/face-scan
+===> URL successfully changed to "https://bioimaging.ariascreening.com/measurement"
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with
+Executing step: user join Zonia
+===> Navigated to https://staging.zonia.com/fs-join-zonia
+===> Waiting for URL starting with "https://staging.zonia.com/fs-signup"
+===> URL successfully changed to "https://staging.zonia.com/fs-signup"
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Wagner-1773378236@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/fs-restore-sleep-special"
+===> URL successfully changed to "https://staging.zonia.com/fs-restore-sleep-special"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "3" bottles and "most_popular" in upsell/downsell for Restore Sleep...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-rs-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/fs-rs-6-more-bottles?id=69b39af5dabf255731da5db9"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/fs-restore-detox-special?orderId=69b39af5dabf255731da5db9"
+>>> Successfully selected "3" bottles and "most_popular" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "3" bottles and "best_value" in upsell/downsell for Restore Detox...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/fs-rd-6-more-bottles?id=69b39af5dabf255731da5db9"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+===> Not upgrading, but getting best_value downsell...
+===> Waiting for URL starting with "https://staging.zonia.com/fs-welcome"
+===> URL successfully changed to "https://staging.zonia.com/fs-welcome?mode=standard&id=69b39af5dabf255731da5db9"
+>>> Successfully selected "3" bottles and "best_value" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Executing step: user complete registration
+===> No cookie banner found or none matched known selectors.
+===> Navigated to user home page
+===> Verified registration
+Email: zoniat-v2Wagner-1773378236@gmail.com
+Pass: GI#z3_Zc
+Completed step: user complete registration
