@@ -1,0 +1,36 @@
+Executing step: user register in "lg_ev_energy" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/lgmb5e/lg-energy
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-join-zonia"
+>>> Navigation via lg_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/lgmb5e/lg\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/lgmb5e/lg-energy 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/lgmb5e/lg-energy"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/lgmb5e/lg-energy"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/lgmb5e/lg-energy"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/lgmb5e/lg-energy"
+
+===> Waiting for URL starting with "https://staging.zonia.com/lgmb5e/lg-replay-weekend"
+>>> Navigation via lg_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/lgmb5e/lg\\-replay\\-weekend.*')'
+Actual value: https://staging.zonia.com/lgmb5e/lg-energy 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html>…</html>
+  -   unexpected value "https://staging.zonia.com/lgmb5e/lg-energy"
+
+Failed step: user register in "lg_ev_energy" Opt In page
+Test failed on page: 'https://staging.zonia.com/lgmb5e/lg-energy'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Evergreen_funnel_--_@1.7__20260314-234650.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 504 () (Source: unknown source)
