@@ -1,6 +1,0 @@
-Executing step: user register in "bb_ev" Opt In page
-Scenario will use "MasterCard" card "5555555555554444"
-Failed step: user register in "bb_ev" Opt In page
-Test failed on page: 'http://staging.zonia.com/bbmb5e/beyond-the-brain'
-Taking screenshots
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.9__20260121-205225.png
