@@ -1,9 +1,0 @@
-Executing step: user register in "cr_live_inflammation" Opt In page
-Scenario will use "UnionPay" card "6221261111117766"
-===> Navigated to https://staging.zonia.com/cr-inflammation
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia"
-===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "cr_live_inflammation" Opt In page
