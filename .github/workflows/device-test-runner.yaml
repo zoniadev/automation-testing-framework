@@ -42,10 +42,10 @@ jobs:
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.9"
 
@@ -102,7 +102,7 @@ jobs:
         shell: bash
 
       - name: Load test report history
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: always()
         continue-on-error: true
         with:
@@ -119,6 +119,18 @@ jobs:
             rsync -a --exclude '.git' gh-pages/ allure-history/
           fi
             mkdir -p "allure-history/$REPORT_SCOPE/$REPORT_NAME"
+        shell: bash
+
+      - name: Clean up old reports
+        if: always()
+        run: |
+          set -euo pipefail
+          # Keep only reports from the last 7 days to keep gh-pages size manageable
+          echo "Cleaning up reports older than 7 days in allure-history..."
+          # Using find to locate directories that are older than 7 days, excluding the root and latest dirs
+          # We only want to delete sequence directories (numbers)
+          find allure-history -mindepth 3 -maxdepth 3 -type d -mtime +7 -name '[0-9]*' -exec rm -rf {} +
+          echo "Cleanup complete."
         shell: bash
 
       - name: Determine report sequence
@@ -215,7 +227,7 @@ jobs:
 
       - name: Publish test report
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
@@ -223,10 +235,15 @@ jobs:
 
       - name: Post the link to the report
         if: always()
-        uses: Sibz/github-status-action@v1
-        with:
-          authToken: ${{ secrets.GITHUB_TOKEN }}
-          context: 'Test report'
-          state: 'success'
-          sha: ${{ github.sha }}
-          target_url: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /repos/${{ github.repository }}/statuses/${{ github.sha }} \
+            -f state='success' \
+            -f target_url="$TARGET_URL" \
+            -f context='Test report'
