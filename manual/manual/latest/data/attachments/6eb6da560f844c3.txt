@@ -1,0 +1,6 @@
+Executing step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "ad-detox" page
+===> Navigated to https://staging.zonia.com/ad-detox
+Failed step: Verify "REGISTER_FOR_FREE_NOW_BUTTON" scrolling to "FIRST_NAME_REGISTER_FIELD" on "ad-detox" page
+Test failed on page: 'https://staging.zonia.com/ad-detox'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_buttons_scrolling_fast_test_--_@1.1__20260316-092040.png
