@@ -36,7 +36,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       DEVICE: ${{ inputs.device }}
       REPORT_SCOPE: ${{ inputs.report_scope != '' && inputs.report_scope || inputs.device }}
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
@@ -198,18 +197,6 @@ jobs:
             echo "Using report sequence $NEXT_SEQUENCE for scope $REPORT_SCOPE and name $REPORT_NAME."
         shell: bash
 
-      - name: Send failure email
-        if: always()
-        run: |
-          echo "Starting email script..."
-          node .github/scripts/send-email.js
-        env:
-          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
-          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
-
       - name: Generate Allure report
         if: always()
         run: |
@@ -283,3 +270,15 @@ jobs:
             -f state='success' \
             -f target_url="$TARGET_URL" \
             -f context='Test report'
+
+      - name: Send failure email
+        if: always()
+        run: |
+          echo "Starting email script..."
+          node .github/scripts/send-email.js
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
