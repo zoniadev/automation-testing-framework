@@ -36,6 +36,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       DEVICE: ${{ inputs.device }}
       REPORT_SCOPE: ${{ inputs.report_scope != '' && inputs.report_scope || inputs.device }}
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
@@ -125,11 +126,46 @@ jobs:
         if: always()
         run: |
           set -euo pipefail
-          # Keep only reports from the last 7 days to keep gh-pages size manageable
-          echo "Cleaning up reports older than 7 days in allure-history..."
-          # Using find to locate directories that are older than 7 days, excluding the root and latest dirs
-          # We only want to delete sequence directories (numbers)
-          find allure-history -mindepth 3 -maxdepth 3 -type d -mtime +7 -name '[0-9]*' -exec rm -rf {} +
+          HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
+          # Keep the last 10 reports
+          KEEP_LAST=10
+
+          if [ ! -d "$HISTORY_ROOT" ]; then
+            echo "No history root found, skipping cleanup."
+            exit 0
+          fi
+
+          # Find all numbered directories, ensuring it handles no-matches gracefully
+          DIRS=$(find "$HISTORY_ROOT" -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -V)
+
+          # Handle case where no directories are found
+          if [ -z "$DIRS" ]; then
+            echo "Found 0 historical reports. No cleanup needed."
+            exit 0
+          fi
+
+          # Count how many directories we have
+          COUNT=$(echo "$DIRS" | wc -l)
+
+          if [ "$COUNT" -le "$KEEP_LAST" ]; then
+            echo "Found $COUNT reports, which is less than or equal to the retention number of $KEEP_LAST. No cleanup needed."
+            exit 0
+          fi
+
+          # Determine how many directories to delete
+          DELETE_COUNT=$((COUNT - KEEP_LAST))
+
+          # Get the list of directories to delete (the oldest ones)
+          DELETE_DIRS=$(echo "$DIRS" | head -n "$DELETE_COUNT")
+
+          echo "Found $COUNT total reports. Deleting the oldest $DELETE_COUNT to keep the last $KEEP_LAST."
+          echo "The following report directories will be deleted:"
+          # Use a loop to print for better formatting in GH logs
+          echo "$DELETE_DIRS" | while IFS= read -r dir; do echo "  - $dir"; done
+
+          # Delete the old directories
+          echo "$DELETE_DIRS" | xargs rm -rf
+
           echo "Cleanup complete."
         shell: bash
 
