@@ -1,9 +1,0 @@
-Executing step: user register in "cr_ev_female" Opt In page
-Scenario will use "UnionPay" card "6221261111117766"
-===> Navigated to http://staging.zonia.com/crmb5e/cr-female-cancers
-===> No cookie banner found or none matched known selectors.
->>> Registering in Main Opt in page...
-===> Waiting for URL starting with "http://staging.zonia.com/crmb5e/cr-join-zonia"
-===> URL successfully changed to "http://staging.zonia.com/crmb5e/cr-join-zonia"
->>> Continuing with noramal flow!
-Completed step: user register in "cr_ev_female" Opt In page
