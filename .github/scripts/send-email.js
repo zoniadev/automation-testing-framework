@@ -73,6 +73,7 @@ function formatTestSummary(testSummary) {
   let currentFeature = '';
   let inFeature = false;
   let completed = false;
+  let skipRedundantFailingList = false;
 
   // Helper function to style and append scenario
   const appendScenario = (scenario, result) => {
@@ -82,11 +83,36 @@ function formatTestSummary(testSummary) {
 
   // Process each line
   lines.forEach(line => {
-    if (line.includes('Screenshot saved:') || line.includes('Screenshot saved to')) {
-      // Skip screenshot lines
+    // 1. Explicitly ignore noisy lines
+    if (
+      line.includes('Screenshot saved:') ||
+      line.includes('Screenshot saved to') ||
+      line.includes('HOOK-ERROR') ||
+      line.includes('Cleaning up the DB') ||
+      line.includes('Connected to MongoDB') ||
+      line.includes('Deleted') && line.includes('user(s)') ||
+      line.trim() === '' // Ignore empty lines to prevent excessive spacing
+    ) {
       return;
     }
 
+    // 2. Handle the "Failing scenarios:" block to skip it, but KEEP the stats below it
+    if (line.startsWith('Failing scenarios:')) {
+      skipRedundantFailingList = true;
+      return; // Skip this specific line
+    }
+
+    if (skipRedundantFailingList) {
+      // While in the block, ignore lines that look like file paths (the redundant list)
+      if (line.trim().startsWith('features/')) {
+        return; // Skip the redundant path line
+      } else {
+        // Once we hit something that isn't a file path (like the stats block), stop skipping
+        skipRedundantFailingList = false;
+      }
+    }
+
+    // 3. Process normal lines
     if (line.includes('Executing feature:')) {
       if (inFeature) {
         // Close the previous feature section
@@ -113,9 +139,18 @@ function formatTestSummary(testSummary) {
       }
     } else {
       if (inFeature) {
+        // Only add list items if we are actually inside a feature block and it's not noise
         htmlContent += `<li style="padding-left:15px;">${line}</li>`;
       } else {
-        htmlContent += `<br>${colorCodeLineAfterCompleted(line)}`;
+        // If we are outside a feature (usually at the end), color code the stats
+        const coloredLine = colorCodeLineAfterCompleted(line);
+        if (coloredLine !== line) {
+             // Only add a break if it's one of the stats lines
+             htmlContent += `<br>${coloredLine}`;
+        } else {
+             // Plain text outside a feature block (e.g. "Took 30m0.306s")
+             htmlContent += `<br>${line}`;
+        }
       }
     }
   });
@@ -125,25 +160,34 @@ function formatTestSummary(testSummary) {
     htmlContent += '</ul>';
   }
 
-  htmlContent += `<p>For more details, please visit the <a href="${targetURL}">test report</a>.</p>`;
+  htmlContent += `<br><p>For more details, please visit the <a href="${targetURL}">test report</a>.</p>`;
 
   return htmlContent;
 }
 
 function colorCodeLineAfterCompleted(line) {
   //X (features/scenarios/steps) passed, Y filed, Z skipped should be colored with colors.Green, Red, Yellow if the X, Y, Z is not 0. 0 values should be gray
-  const regex = /(\d+) (features|scenarios|steps) passed, (\d+) failed, (\d+) skipped(?:, (\d+) undefined)?/;
+  const regex = /(\d+) (features|scenarios|steps) passed, (\d+) failed, (\d+) skipped(?:, (\d+) undefined)?(?:, (\d+) untested)?/;
 
-  return line.replace(regex, (match, passed, type, failed, skipped, undefined) => {
+  return line.replace(regex, (match, passed, type, failed, skipped, undefined, untested) => {
     // Determine colors based on the values
     const passedColor = passed != 0 ? colors.Green : colors.Gray;
     const failedColor = failed != 0 ? colors.Red : colors.Gray;
     const skippedColor = skipped != 0 ? colors.Yellow : colors.Gray;
     const undefinedColor = undefined ? colors.Gray : '';
+    const untestedColor = untested ? colors.Gray : '';
 
-    return `<span style="color:${passedColor}">${passed} ${type} passed</span>, ` +
+    let result = `<span style="color:${passedColor}">${passed} ${type} passed</span>, ` +
       `<span style="color:${failedColor}; font-weight:bold;">${failed} failed</span>, ` +
-      `<span style="color:${skippedColor}">${skipped} skipped</span>` +
-      (undefined ? `, <span style="color:${undefinedColor}">${undefined} undefined</span>` : '');
+      `<span style="color:${skippedColor}">${skipped} skipped</span>`;
+
+    if (undefined) {
+        result += `, <span style="color:${undefinedColor}">${undefined} undefined</span>`;
+    }
+    if (untested) {
+        result += `, <span style="color:${untestedColor}">${untested} untested</span>`;
+    }
+
+    return result;
   });
 }
