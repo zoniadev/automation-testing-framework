@@ -13,6 +13,7 @@ from pages import (
     BlogPage,
     BasePage,
     FaceScanPage,
+    VideoPlayerPage,
 )
 
 
@@ -214,3 +215,25 @@ def user_fills_face_scan_form(context):
         row_data['first_name'] = common_variables.supplement_funnel_name
         row_data['email'] = common_variables.supplement_funnel_email
         page.fill_face_scan_form(row_data)
+
+
+@step('user initiates the video play')
+def user_initiate_video_play(context):
+    video_page = VideoPlayerPage(context)
+    video_page.play_video()
+
+
+@step('the video player is loaded on the page')
+def video_player_loaded(context):
+    video_page = VideoPlayerPage(context.page)
+    video_page.verify_video_is_loaded()
+
+@step('the video is actively playing')
+def video_player_playing(context):
+    video_page = VideoPlayerPage(context.page)
+    video_page.verify_video_is_playing()
+
+@step('the media stream network requests are successful')
+def video_player_network(context):
+    video_page = VideoPlayerPage(context.page)
+    video_page.verify_hls_stream_network()

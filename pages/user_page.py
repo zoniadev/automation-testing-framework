@@ -1,4 +1,3 @@
-import time
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *

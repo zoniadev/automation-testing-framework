@@ -147,3 +147,7 @@ SUBMIT_FACE_SCAN_FORM_BUTTON = "//button[@unique-identifier='submitBtn-1']"
 
 #FaceScanJoinZoniaLocators:
 FACE_SCAN_JOIN_ZONIA_BUTTON = "//*[@unique-id='join-zonia-risk-free-cta-main']"
+
+#VideoPlayerPageLocators:
+VIDEO_ELEMENT = "//video"
+PLAY_VIDEO_BUTTON = "//button[contains(@class, 'playCoverVideo')]"
