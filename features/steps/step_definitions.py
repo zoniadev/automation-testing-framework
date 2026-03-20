@@ -225,15 +225,28 @@ def user_initiate_video_play(context):
 
 @step('the video player is loaded on the page')
 def video_player_loaded(context):
-    video_page = VideoPlayerPage(context.page)
+    video_page = VideoPlayerPage(context)
     video_page.verify_video_is_loaded()
 
 @step('the video is actively playing')
 def video_player_playing(context):
-    video_page = VideoPlayerPage(context.page)
+    video_page = VideoPlayerPage(context)
     video_page.verify_video_is_playing()
 
 @step('the media stream network requests are successful')
 def video_player_network(context):
-    video_page = VideoPlayerPage(context.page)
+    video_page = VideoPlayerPage(context)
     video_page.verify_hls_stream_network()
+
+
+@step('user log in Zonia portal')
+def user_log_in_zonia_portal(context):
+    page = BasePage(context)
+    page.navigate_to_url(getattr(common_variables, "zonia_login_url"))
+    page.log_in_zonia_portal()
+
+
+@step(u'user navigates to video "{video}"')
+def step_impl(context, video):
+    video_page = VideoPlayerPage(context)
+    video_page.navigate_to_video(video)

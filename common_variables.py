@@ -441,3 +441,8 @@ test_cards = [
     {"number": "6221261111117766", "type": "UnionPay"},
     {"number": "3530111333300000", "type": "JCB"},
 ]
+
+video_user_email = 'automationqanikiforzonia321@gmail.com'
+video_user_pass = 'pass123@@'
+zonia_login_url = 'login'
+zonia_portal_url = 'user'

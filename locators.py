@@ -149,5 +149,11 @@ SUBMIT_FACE_SCAN_FORM_BUTTON = "//button[@unique-identifier='submitBtn-1']"
 FACE_SCAN_JOIN_ZONIA_BUTTON = "//*[@unique-id='join-zonia-risk-free-cta-main']"
 
 #VideoPlayerPageLocators:
-VIDEO_ELEMENT = "//video"
+ACTIVE_VIDEO_TEMPLATE = "video[poster*='{value}']:visible"
 PLAY_VIDEO_BUTTON = "//button[contains(@class, 'playCoverVideo')]"
+
+#LoginPageLocators:
+LOGIN_EMAIL_FIELD = "input[name='email']:not([placeholder])"
+LOGIN_PASSWORD_FIELD = "input[name='password']:not([placeholder])"
+LOGIN_SUBMIT_BUTTON = "role=button[name='log in']"
+
