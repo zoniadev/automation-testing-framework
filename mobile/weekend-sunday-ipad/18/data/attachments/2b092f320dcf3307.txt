@@ -1,0 +1,12 @@
+Executing step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/restore-vision-3-free-bottles
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-vision-signup-1-bottle-2'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Target page, context or browser has been closed
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- [Report Only] Refused to frame 'https://www.google.com/' because an ancestor violates the following Content Security Policy directive: "frame-ancestors 'self'".
+ (Source: unknown source)
