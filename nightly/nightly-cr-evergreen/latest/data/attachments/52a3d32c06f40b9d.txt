@@ -1,0 +1,9 @@
+Executing step: user register in "cr_ev_trauma" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://staging.zonia.com/crmb5e/cr-emotions
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/crmb5e/cr-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/crmb5e/cr-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "cr_ev_trauma" Opt In page
