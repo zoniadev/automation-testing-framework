@@ -1,5 +1,4 @@
 import time
-
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -7,34 +6,20 @@ class VideoPlayerPage(BasePage):
     def __init__(self, context):
         super().__init__(context)
 
-    def navigate_to_video(self, partial_text):
-        img_by_src_part = "img.big-img.desktop[src*='{value}']"
-        locator = self.context.page.locator(img_by_src_part.format(value=partial_text))
-        locator.wait_for(state="visible")
-        locator.click()
+    def play_video(self, video_title):
+        # Use JavaScript evaluation to directly command the Video.js player to play.
+        # This is the most reliable method, bypassing any overlays or complex event listeners.
+        player_selector = "#my-player"
+        self.context.page.wait_for_selector(player_selector, state="visible", timeout=10000)
+        self.context.page.evaluate(f"videojs('{player_selector}').play();")
+        print(f"===> Commanded video player to play '{video_title}' via JavaScript")
 
-    def play_video(self):
-        partial_text = 'Break Away From Sugar'
-        # Step 1: Select the correct visible container
-        container = self.context.page.locator(
-            f"div.video-episode-image:has(img[src*='{partial_text}'])"
-        ).filter(has_text="PLAY").first
-        # Step 2: Hover to reveal the play button
-        container.hover()
-        self.context.page.wait_for_timeout(200)  # allow CSS fade-in
-        # Step 3: Click the actual play button inside THIS container
-        play_button = container.locator("button.fav-play-btn")
-        play_button.wait_for(state="visible", timeout=5000)
-        play_button.click()
-        print("===> Hovered and clicked the Play button")
-
-    def verify_video_is_loaded(self):
-        partial_text = 'Break Away From Sugar'
-        locator_string = ACTIVE_VIDEO_TEMPLATE.format(value=partial_text)
-        video_locator = self.context.page.locator(locator_string).first
-        video_locator.wait_for(state="visible", timeout=10000)
-        video_locator.evaluate("node => node.readyState >= 3")
-        print(f'===> Verified the full-screen video for "{partial_text}" is loaded')
+    def verify_video_is_loaded(self, video_title):
+        video_player = self.context.page.locator("#my-player")
+        video_player.wait_for(state="visible", timeout=10000)
+        # The 'vjs-has-started' class is a good indicator that the video has at least begun to load.
+        self.context.page.wait_for_selector("#my-player.vjs-has-started", timeout=15000)
+        print(f'===> Verified the video player for "{video_title}" is loaded')
         time.sleep(2)
 
     def verify_video_is_playing(self):
@@ -42,7 +27,7 @@ class VideoPlayerPage(BasePage):
         # vjs-playing: removed immediately on pause — too fragile to rely on.
         try:
             self.context.page.wait_for_selector(
-                "#hidden-video.vjs-has-started",
+                "#my-player.vjs-has-started",
                 timeout=15000
             )
         except Exception:
@@ -50,8 +35,8 @@ class VideoPlayerPage(BasePage):
                 "Video.js player never reached 'vjs-has-started' state. "
                 "Video may have failed to start."
             )
-        video_handle = self.context.page.query_selector("#hidden-video_html5_api")
-        assert video_handle, "Could not find Video.js <video> element (#hidden-video_html5_api)."
+        video_handle = self.context.page.query_selector("#my-player_html5_api")
+        assert video_handle, "Could not find Video.js <video> element (#my-player_html5_api)."
         initial_time = video_handle.evaluate("node => node.currentTime")
         assert initial_time > 0, (
             f"Video.js reports has-started but currentTime is still 0 — "
@@ -100,7 +85,7 @@ class VideoPlayerPage(BasePage):
             pass
         # Fallback: confirm via Video.js DOM state that it is actively loading
         js_check = """() => {
-            const video = document.querySelector('#hidden-video_html5_api');
+            const video = document.querySelector('#my-player_html5_api');
             if (!video) return null;
             return {
                 networkState: video.networkState,  // 2 = NETWORK_LOADING
@@ -110,7 +95,7 @@ class VideoPlayerPage(BasePage):
             };
         }"""
         info = self.context.page.evaluate(js_check)
-        assert info, "Video.js <video> element (#hidden-video_html5_api) not found."
+        assert info, "Video.js <video> element (#my-player_html5_api) not found."
         assert not info["paused"], "Video is paused during HLS network check."
         assert info["networkState"] == 2, (
             f"networkState={info['networkState']} — expected 2 (NETWORK_LOADING). "

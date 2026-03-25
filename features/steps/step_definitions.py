@@ -220,13 +220,13 @@ def user_fills_face_scan_form(context):
 @step('user initiates the video play')
 def user_initiate_video_play(context):
     video_page = VideoPlayerPage(context)
-    video_page.play_video()
+    video_page.play_video(context.video_title)
 
 
 @step('the video player is loaded on the page')
 def video_player_loaded(context):
     video_page = VideoPlayerPage(context)
-    video_page.verify_video_is_loaded()
+    video_page.verify_video_is_loaded(context.video_title)
 
 @step('the video is actively playing')
 def video_player_playing(context):
@@ -246,7 +246,8 @@ def user_log_in_zonia_portal(context):
     page.log_in_zonia_portal()
 
 
-@step(u'user navigates to video "{video}"')
-def step_impl(context, video):
-    video_page = VideoPlayerPage(context)
-    video_page.navigate_to_video(video)
+@step('user navigates to the "{video_title}" video page')
+def user_navigates_to_video_page(context, video_title):
+    context.video_title = video_title
+    page = UserPage(context)
+    page.navigate_to_video(video_title)
