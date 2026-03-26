@@ -9,12 +9,20 @@ class VideoPlayerPage(BasePage):
     def play_video(self, video_title):
         # Use JavaScript evaluation to directly command the Video.js player to play.
         # This is the most reliable method, bypassing any overlays or complex event listeners.
-        player_selector = "#my-player"
-        self.context.page.wait_for_selector(player_selector, state="visible", timeout=10000)
-        self.context.page.evaluate(f"videojs('{player_selector}').play();")
-        print(f"===> Commanded video player to play '{video_title}' via JavaScript")
+        if 'AAC -' not in video_title:
+            series, episode = video_title.split(" - ", 1)
+            self.context.page.locator(EPISODE_CONTAINER_BY_TITLE.format(value=episode)).hover()
+            self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).wait_for(state="visible")
+            self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).click()
+            self.context.page.locator(FINAL_PLAY_BUTTON).click()
+            print(f"===> Commanded video player to play '{video_title}'")
+        else:
+            player_selector = "#my-player"
+            self.context.page.wait_for_selector(player_selector, state="visible", timeout=10000)
+            self.context.page.evaluate(f"videojs('{player_selector}').play();")
+            print(f"===> Commanded video player to play '{video_title}' via JavaScript")
 
-    def verify_video_is_loaded(self, video_title):
+    def verify_aac_video_is_loaded(self, video_title):
         video_player = self.context.page.locator("#my-player")
         video_player.wait_for(state="visible", timeout=10000)
         # The 'vjs-has-started' class is a good indicator that the video has at least begun to load.
@@ -22,7 +30,7 @@ class VideoPlayerPage(BasePage):
         print(f'===> Verified the video player for "{video_title}" is loaded')
         time.sleep(2)
 
-    def verify_video_is_playing(self):
+    def verify_aac_video_is_playing(self):
         # vjs-has-started: set by Video.js once playback begins, never removed.
         # vjs-playing: removed immediately on pause — too fragile to rely on.
         try:
@@ -109,3 +117,17 @@ class VideoPlayerPage(BasePage):
             f"(networkState={info['networkState']}, readyState={info['readyState']}, "
             f"currentTime={info['currentTime']:.3f}s)"
         )
+
+    def verify_series_video(self):
+        videos = self.context.page.locator("video")
+        count = videos.count()
+        playing = None
+        for i in range(count):
+            t1 = videos.nth(i).evaluate("el => el.currentTime")
+            time.sleep(1)
+            t2 = videos.nth(i).evaluate("el => el.currentTime")
+            if t2 > t1:
+                playing = i
+                break
+        assert playing is not None, "No playing video detected"
+        print(f"===> Video is playing (video index {playing})")

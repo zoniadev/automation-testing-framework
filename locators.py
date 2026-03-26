@@ -57,6 +57,24 @@ SKIP_MASTERCLASS_BUTTON = "//*[@unique-id='skip-masterclass-1']"
 #UserPageLocators:
 SKIP_QUESTIONS_BUTTON = "//*[@class='skipAndRegister']"
 USER_MENU_BUTTON = "//li[@id='top_header_menu_account']//a[@id='subname']"
+BROWSE_BUTTON = "//*[@unique-identifier='cat-submenu-1']"
+FILTER_NOW_BUTTON = "//button[contains(@class,'filter-checked') and normalize-space()='filter now']"
+SEARCH_SHOWS_BUTTON = "//*[@unique-identifier='pills-shows-tab-1']"
+SHOW_THUMBNAIL = "//img[@class='big-img' and contains(@src, '{value}')]"
+EPISODE_CONTAINER_BY_TITLE = (
+    "//img[contains(@class,'img-responsive') and "
+    "contains(@class,'mobile-hide') and "
+    "contains(@src, '{value}') and "
+    "@alt='thumbnail']/ancestor::div[contains(@class,'video-episode-image')]"
+)
+PLAY_BUTTON_IN_CONTAINER = (
+    "//img[contains(@class,'img-responsive') and "
+    "contains(@class,'mobile-hide') and "
+    "contains(@src, '{value}') and "
+    "@alt='thumbnail']/ancestor::div[contains(@class,'video-episode-image')]"
+    "//button[contains(@class,'fav-play-btn')]"
+)
+FINAL_PLAY_BUTTON = "//button[@title='Play Video']"
 
 #WelcomePageLocators:
 PASSWORD_POPUP_FIELD = "//*[@placeholder='Enter password']"

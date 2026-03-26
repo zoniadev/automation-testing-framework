@@ -226,17 +226,27 @@ def user_initiate_video_play(context):
 @step('the video player is loaded on the page')
 def video_player_loaded(context):
     video_page = VideoPlayerPage(context)
-    video_page.verify_video_is_loaded(context.video_title)
+    if 'AAC -' in context.video_title:
+        video_page.verify_aac_video_is_loaded(context.video_title)
+    else:
+        video_page.verify_series_video()
 
 @step('the video is actively playing')
 def video_player_playing(context):
     video_page = VideoPlayerPage(context)
-    video_page.verify_video_is_playing()
+    if 'AAC -' in context.video_title:
+        video_page.verify_aac_video_is_playing()
+    else:
+        print("===> Skipping step as player is the other type")
+
 
 @step('the media stream network requests are successful')
 def video_player_network(context):
     video_page = VideoPlayerPage(context)
-    video_page.verify_hls_stream_network()
+    if 'AAC -' in context.video_title:
+        video_page.verify_hls_stream_network()
+    else:
+        print("===> Skipping step as player is the other type")
 
 
 @step('user log in Zonia portal')

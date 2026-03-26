@@ -11,6 +11,7 @@ Feature: Video playability tests
 
     Examples:
       | video_title                  |
-      | First Hardcoded Video Title  |
-      | Second Hardcoded Video Title |
-      | Third Hardcoded Video Title  |
+      | AAC - Understanding Your Aging Trajectory  |
+      | AAC - The Ultimate Diet for Aging Gracefully |
+      | cancer360 - Comprehensive Protocol for Breast Self-Exam  |
+#      | immune-for-life-test-cover-10e - The Truth About Your Immunity and Our Broken Medical System  |

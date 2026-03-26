@@ -425,6 +425,7 @@ restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'
 restore_detox_third_upsell_url = 'rd-trial'
 
 blog_this_week_article = 'this-week-post'
+search_results_page = 'user/search_results'
 
 test_cc_number = ''
 test_cc_type = ''

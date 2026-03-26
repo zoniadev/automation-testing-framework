@@ -20,11 +20,18 @@ class UserPage(BasePage):
         # This is a placeholder for the hardcoded navigation logic.
         # You will need to replace the comments with actual Playwright commands
         # to navigate to the video pages.
-        if video_title == "First Hardcoded Video Title":
+        if video_title == "AAC - Understanding Your Aging Trajectory":
             self.navigate_to_url('user/aac-3/1')
-        elif video_title == "Second Hardcoded Video Title":
-            self.navigate_to_url('user/aac-3/4')
-        elif video_title == "Third Hardcoded Video Title":
+        elif video_title == "AAC - The Ultimate Diet for Aging Gracefully":
             self.navigate_to_url('user/aac-3/4')
         else:
-            raise ValueError(f"Navigation logic for video '{video_title}' is not defined.")
+            self.search_for_series_and_episode(video_title)
+
+    def search_for_series_and_episode(self, series_title):
+        self.navigate_to_url(common_variables.search_results_page)
+        self.context.page.locator(SEARCH_SHOWS_BUTTON).click()
+        series, episode = series_title.split(" - ", 1)
+        self.context.page.locator(SHOW_THUMBNAIL.format(value=series)).click()
+        print(f'===> Opened series: {series_title}')
+
+
