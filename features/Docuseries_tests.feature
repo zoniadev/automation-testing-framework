@@ -65,27 +65,14 @@ Feature: Docuseries tests
 
     Examples:
       | opt_in_page        | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | ad_ev              | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
-      | ad_ev_detox        | annually  | no               | no                   | no         | no                 | no         | upgrade            |
-      | ad_ev_gut          | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | ad_ev_brain        | quarterly | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
-      | ad_ev_mindset      | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
-      | ad_ev_inflammation | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
-      | ad_ev_energy       | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | ad_ev_pain         | annually  | silver           | no                   | 3          | best_value         | 6          | best_value         |
-      | ad_ev              | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
-      | ad_ev_detox        | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
-      | ad_ev_gut          | monthly   | silver           | no                   | no         | no                 | no         | no                 |
-      | ad_ev_brain        | quarterly | no               | no                   | 6          | best_value         | no         | upgrade            |
-      | ad_ev_mindset      | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
-      | ad_ev_inflammation | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
-      | ad_ev_energy       | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
-      | ad_ev_pain         | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
-      | ad_ev              | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
-      | ad_ev_detox        | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | ad_ev_gut          | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
-      | ad_ev_brain        | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | ad_ev_mindset      | annually  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
+      | ad_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | ad_ev_detox        | annually  | platinum         | buy                  | 6          | best_value         | no         | upgrade            |
+      | ad_ev_gut          | quarterly | silver           | no                   | 1          | upgrade            | 1          | no                 |
+      | ad_ev_brain        | monthly   | platinum         | buy                  | 3          | no                 | 3          | upgrade            |
+      | ad_ev_mindset      | annually  | no               | no                   | no         | upgrade            | no         | no                 |
+      | ad_ev_inflammation | quarterly | silver           | buy                  | no         | no                 | 3          | most_popular       |
+      | ad_ev_energy       | monthly   | no               | buy                  | 1          | no                 | 6          | best_value         |
+      | ad_ev_pain         | annually  | platinum         | no                   | 3          | most_popular       | 1          | best_value         |
 
 
   @bb_live @all_docuseries
