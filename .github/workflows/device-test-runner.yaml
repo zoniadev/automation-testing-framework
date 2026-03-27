@@ -81,6 +81,7 @@ jobs:
           sudo apt-get install -y google-chrome-stable
 
       - name: Install Chromium browser for Playwright
+        if: inputs.browser != 'chrome'
         run: |
           playwright install chromium
 
@@ -99,7 +100,7 @@ jobs:
             TAGS=""
           fi
           echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT with browser: $BROWSER"
-          behave --no-capture $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
+          behave $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
       - name: Copy environment properties
