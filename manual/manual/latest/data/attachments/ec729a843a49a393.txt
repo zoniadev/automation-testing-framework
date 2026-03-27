@@ -1,0 +1,12 @@
+Executing step: Verify banners redirects in this week articles
+===> Navigated to https://staging.zonia.com/blog
+🔍 Clicking banner: RG-3-425x425px
+🔍 Clicking banner: Blog Banner-RV-1-425x300px-Optimized
+Failed step: Verify banners redirects in this week articles
+Test failed on page: 'https://staging.zonia.com/how-to-ferment-vegetables-at-home'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_banners_in_This_Week_articles_20260327-111913.png
+Captured the following browser console errors:
+--- [Report Only] Refused to load the script 'https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.IdpIFrameHttp.en_US.tWnNtQr-ZgE.2018.O/am=AgAO/d=1/rs=AOaEmlFxKdyZMgEniQTdWC8a1g1PS9m88g/m=base' because it violates the following Content Security Policy directive: "script-src 'unsafe-inline' 'unsafe-eval' blob: data:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 400 () (Source: unknown source)
