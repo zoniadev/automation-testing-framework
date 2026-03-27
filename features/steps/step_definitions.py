@@ -13,6 +13,7 @@ from pages import (
     BlogPage,
     BasePage,
     FaceScanPage,
+    VideoPlayerPage,
 )
 
 
@@ -214,3 +215,49 @@ def user_fills_face_scan_form(context):
         row_data['first_name'] = common_variables.supplement_funnel_name
         row_data['email'] = common_variables.supplement_funnel_email
         page.fill_face_scan_form(row_data)
+
+
+@step('user initiates the video play')
+def user_initiate_video_play(context):
+    video_page = VideoPlayerPage(context)
+    video_page.play_video(context.video_title)
+
+
+@step('the video player is loaded on the page')
+def video_player_loaded(context):
+    video_page = VideoPlayerPage(context)
+    if 'AAC -' in context.video_title:
+        video_page.verify_aac_video_is_loaded(context.video_title)
+    else:
+        video_page.verify_series_video()
+
+@step('the video is actively playing')
+def video_player_playing(context):
+    video_page = VideoPlayerPage(context)
+    if 'AAC -' in context.video_title:
+        video_page.verify_aac_video_is_playing()
+    else:
+        print("===> Skipping step as player is the other type")
+
+
+@step('the media stream network requests are successful')
+def video_player_network(context):
+    video_page = VideoPlayerPage(context)
+    if 'AAC -' in context.video_title:
+        video_page.verify_hls_stream_network()
+    else:
+        print("===> Skipping step as player is the other type")
+
+
+@step('user log in Zonia portal')
+def user_log_in_zonia_portal(context):
+    page = BasePage(context)
+    page.navigate_to_url(getattr(common_variables, "zonia_login_url"))
+    page.log_in_zonia_portal()
+
+
+@step('user navigates to the "{video_title}" video page')
+def user_navigates_to_video_page(context, video_title):
+    context.video_title = video_title
+    page = UserPage(context)
+    page.navigate_to_video(video_title)

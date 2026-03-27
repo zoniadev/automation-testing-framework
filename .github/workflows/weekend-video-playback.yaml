@@ -1,0 +1,17 @@
+name: Weekend Video Playback Tests
+
+on:
+  schedule:
+    - cron: '0 2 * * 6' # Runs at 2 AM UTC on Saturday
+  workflow_dispatch: # Allows manual runs
+
+jobs:
+  test:
+    uses: ./.github/workflows/device-test-runner.yaml
+    with:
+      device: 'desktop'
+      tags: '@video_playback'
+      browser: 'chrome'
+      environment: 'staging'
+      report_scope: 'weekend-video'
+    secrets: inherit

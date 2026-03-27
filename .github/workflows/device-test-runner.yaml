@@ -10,6 +10,10 @@ on:
         required: false
         type: string
         default: ''
+      browser:
+        required: false
+        type: string
+        default: 'chromium'
       environment:
         required: false
         type: string
@@ -70,7 +74,15 @@ jobs:
             libflite1 \
             libgles2
 
+      - name: Install Google Chrome (if specified)
+        if: inputs.browser == 'chrome'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+          playwright install # Install Playwright dependencies including ffmpeg
+
       - name: Install Chromium browser for Playwright
+        if: inputs.browser != 'chrome'
         run: |
           playwright install chromium
 
@@ -79,6 +91,7 @@ jobs:
           set -euo pipefail
           DEVICE="${{ inputs.device }}"
           TAGS_INPUT="${{ inputs.tags }}"
+          BROWSER="${{ inputs.browser }}"
           ENVIRONMENT="${{ inputs.environment }}"
           mkdir -p "allure-results/$REPORT_SCOPE"
           if [ -n "$TAGS_INPUT" ]; then
@@ -87,8 +100,8 @@ jobs:
           else
             TAGS=""
           fi
-          echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT"
-          behave $TAGS -D headless=True -D device=$DEVICE -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
+          echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT with browser: $BROWSER"
+          behave $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
       - name: Copy environment properties
