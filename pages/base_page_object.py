@@ -215,3 +215,11 @@ class BasePage(object):
         # Fill and verify
         field.fill(value, timeout=timeout)
         expect(field).to_have_value(value, timeout=timeout)
+
+    def log_in_zonia_portal(self):
+        self.handle_cookie_banner()
+        self.context.page.locator(LOGIN_EMAIL_FIELD).fill(common_variables.video_user_email)
+        self.context.page.locator(LOGIN_PASSWORD_FIELD).fill(common_variables.video_user_pass)
+        self.context.page.locator(LOGIN_SUBMIT_BUTTON).click()
+        self.wait_for_navigation(common_variables.zonia_portal_url, timeout=20000)
+

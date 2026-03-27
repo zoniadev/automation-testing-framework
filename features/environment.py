@@ -21,7 +21,17 @@ def before_all(context):
     context.playwright = sync_playwright().start()
     headless_str = context.config.userdata.get("headless")
     headless = headless_str.lower() == "true"
-    context.browser = context.playwright.chromium.launch(headless=headless, slow_mo=200)
+    browser_type = context.config.userdata.get("browser")
+
+    if browser_type == "chrome":
+        context.browser = context.playwright.chromium.launch(channel="chrome",
+                                                            headless=headless,
+                                                             slow_mo=200,
+                                                             args=["--autoplay-policy=no-user-gesture-required"])
+    else:
+        context.browser = context.playwright.chromium.launch(headless=headless,
+                                                             slow_mo=200,
+                                                             args=["--autoplay-policy=no-user-gesture-required"])
 
     allure_env_path = os.path.join("allure-results", "environment.properties")
     with open(allure_env_path, "w") as env_file:
@@ -117,7 +127,7 @@ def after_step(context, step):
         try:
             context.page.screenshot(
                 path=screenshot_path,
-                timeout=5000,
+                timeout=30000,
                 animations="disabled",
                 caret="hide"
             )

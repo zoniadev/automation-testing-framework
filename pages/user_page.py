@@ -1,4 +1,3 @@
-import time
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
@@ -16,5 +15,23 @@ class UserPage(BasePage):
         print('===> Verified registration')
         print(f'Email: {common_variables.supplement_funnel_email}')
         print(f'Pass: {common_variables.supplement_funnel_password}')
+
+    def navigate_to_video(self, video_title):
+        # This is a placeholder for the hardcoded navigation logic.
+        # You will need to replace the comments with actual Playwright commands
+        # to navigate to the video pages.
+        if video_title == "AAC - Understanding Your Aging Trajectory":
+            self.navigate_to_url('user/aac-3/1')
+        elif video_title == "AAC - The Ultimate Diet for Aging Gracefully":
+            self.navigate_to_url('user/aac-3/4')
+        else:
+            self.search_for_series_and_episode(video_title)
+
+    def search_for_series_and_episode(self, series_title):
+        self.navigate_to_url(common_variables.search_results_page)
+        self.context.page.locator(SEARCH_SHOWS_BUTTON).click()
+        series, episode = series_title.split(" - ", 1)
+        self.context.page.locator(SHOW_THUMBNAIL.format(value=series)).click()
+        print(f'===> Opened series: {series_title}')
 
 

@@ -425,6 +425,7 @@ restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'
 restore_detox_third_upsell_url = 'rd-trial'
 
 blog_this_week_article = 'this-week-post'
+search_results_page = 'user/search_results'
 
 test_cc_number = ''
 test_cc_type = ''
@@ -441,3 +442,8 @@ test_cards = [
     {"number": "6221261111117766", "type": "UnionPay"},
     {"number": "3530111333300000", "type": "JCB"},
 ]
+
+video_user_email = 'nightlytests@gmail.com'
+video_user_pass = '12345678'
+zonia_login_url = 'login'
+zonia_portal_url = 'user'
