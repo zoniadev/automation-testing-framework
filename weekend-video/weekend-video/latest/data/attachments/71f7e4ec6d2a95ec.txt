@@ -1,0 +1,18 @@
+Executing step: user log in Zonia portal
+===> Navigated to https://staging.zonia.com/login
+===> Cookie banner accepted using selector: //button[@class='cookie-close-btn']
+===> Waiting for URL starting with "https://staging.zonia.com/user"
+===> URL successfully changed to "https://staging.zonia.com/user"
+Completed step: user log in Zonia portal
+Executing step: user navigates to the "AAC - Understanding Your Aging Trajectory" video page
+===> Navigated to https://staging.zonia.com/user/aac-3/1
+Completed step: user navigates to the "AAC - Understanding Your Aging Trajectory" video page
+Executing step: user initiates the video play
+===> Commanded video player to play 'AAC - Understanding Your Aging Trajectory' via JavaScript
+Completed step: user initiates the video play
+Executing step: the video player is loaded on the page
+===> Verified the video player for "AAC - Understanding Your Aging Trajectory" is loaded
+Completed step: the video player is loaded on the page
+Executing step: the video is actively playing
+===> Verified video is playing via Video.js (time advanced from 2.061s to 4.069s)
+Completed step: the video is actively playing
