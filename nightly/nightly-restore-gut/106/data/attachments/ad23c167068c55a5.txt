@@ -1,8 +1,0 @@
-Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
-Scenario will use "MasterCard" card "5555555555554444"
-===> Navigated to https://staging.zonia.com/restore-gut-special
-===> Buying 1 bottle...
-Failed step: user select to buy "1" bottles in "Restore Gut" Supplements page
-Test failed on page: 'https://staging.zonia.com/restore-gut-signup-1-bottle-2'
-Taking screenshots
-Error taking or attaching screenshot: Page.screenshot: Target page, context or browser has been closed
