@@ -1,0 +1,6 @@
+Executing step: user register in "cr_1ep_stress" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+Failed step: user register in "cr_1ep_stress" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb1e/cr-chronic-stress'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.7__20260331-181840.png
