@@ -1,0 +1,293 @@
+Executing step: user register in "cr_1ep_immune" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/crmb1e/cr-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+Completed step: user register in "cr_1ep_immune" Opt In page
+Executing step: user join Zonia in 1 episode page
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-join-zonia-2"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-join-zonia-2"
+Completed step: user join Zonia in 1 episode page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-signup"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Johnson-1775033511@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/cr-booster-packages-annually"
+===> URL successfully changed to "https://staging.zonia.com/cr-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-mini-masterclass-series-silver-package"
+===> URL successfully changed to "https://staging.zonia.com/cr-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "6" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-rs-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/cr-rs-6-more-bottles?id=69ccdcec272777763f70570c"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Not upgrading...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/cr-restore-life-special?id=69ccdcec272777763f70570c"
+>>> Successfully selected "6" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "3" bottles and "no" in upsell/downsell for Restore Life...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/cr-rl-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/cr-rl-6-more-bottles?id=69ccdcec272777763f70570c"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+===> Not upgrading...
+===> Waiting for URL starting with "https://staging.zonia.com/welcome"
+===> URL successfully changed to "https://staging.zonia.com/welcome?mode=standard&id=69ccdcec272777763f70570c"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "3" bottles and "no" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page
+Executing step: user complete registration
+===> Cookie banner accepted using selector: //button[@data-bs-dismiss='alert' and contains(@class, 'btn-close')]
+===> Waiting for URL starting with "https://staging.zonia.com/b2c/survey/survey"
+Failed step: user complete registration
+Test failed on page: 'https://staging.zonia.com/b2c/survey/?skip=1'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_nightly_--_@1.2__20260401-085420.png
+Captured the following browser console errors:
+--- [Report Only] Refused to load the script 'https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.IdpIFrameHttp.en_US.Be-NgWsqv80.2018.O/am=AAAO/d=1/rs=AOaEmlFq-Po_-8cJ2JoUEx5iPhiOgz4JTA/m=base' because it violates the following Content Security Policy directive: "script-src 'unsafe-inline' 'unsafe-eval' blob: data:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 400 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 (Unauthorized) (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- %c%d font-size:0;color:transparent NaN (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 401 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load module script: Expected a JavaScript module script but the server responded with a MIME type of "text/html". Strict MIME type checking is enforced for module scripts per HTML spec. (Source: unknown source)
