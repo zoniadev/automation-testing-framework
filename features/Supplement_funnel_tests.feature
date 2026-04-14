@@ -275,7 +275,7 @@ Feature: Supplement tests
 
     Examples:
       | bottles | rc_upgrade | rc_last_chance | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | memb_decision | memb_plan |
-#      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
-#      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 3       | no         | best_value     | no         | most_popular   | no         | best_value     | accept        | quarterly |
-#      | 6       | no         | most_popular   | no         | best_value     | no         | most_popular   | accept        | monthly   |
+      | 6       | no         | most_popular   | no         | best_value     | no         | most_popular   | accept        | monthly   |
