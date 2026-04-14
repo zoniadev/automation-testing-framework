@@ -424,6 +424,12 @@ restore_detox_first_upsell_url = 'restore-detox-6-more-bottles'
 restore_detox_second_upsell_url = 'rd-restore-life-6-discounted-bottles'
 restore_detox_third_upsell_url = 'rd-trial'
 
+restore_collagen_start_url = 'restore-collagen-special'
+restore_collagen_first_upsell_url = 'restore-collagen-6-more-bottles'
+restore_collagen_second_upsell_url = 'rc-restore-sleep-6-discounted-bottles'
+restore_collagen_third_upsell_url = 'rc-restore-life-6-discounted-bottles'
+restore_collagen_fourth_upsell_url = 'rc-trial'
+
 blog_this_week_article = 'this-week-post'
 search_results_page = 'user/search_results'
 
