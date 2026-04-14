@@ -256,7 +256,7 @@ Feature: Supplement tests
       | 1       | no         | no             | yes        | no             | accept        | quarterly |
 
 
-  @restore_collagen @all_supplements @WIP
+  @restore_collagen @all_supplements
   Scenario Outline: Restore Collagen Supplement funnel
     Given user select to buy "<bottles>" bottles in "Restore Collagen" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Collagen" Upsell page
