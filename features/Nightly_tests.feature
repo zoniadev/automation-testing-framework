@@ -573,3 +573,26 @@ Feature: Nightly tests
       | bottles | vs_upgrade | vs_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
       | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 1       | no         | most_popular   | no         | best_value     | no         | best_value     | accept        | quarterly |
+
+
+  @nightly @nightly_supplement
+  Scenario Outline: Restore Collagen Supplement nightly
+    Given user select to buy "<bottles>" bottles in "Restore Collagen" Supplements page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Collagen" Upsell page
+      | upgrade      | last_chance      |
+      | <rc_upgrade> | <rc_last_chance> |
+    And user makes following decision in "second" supplement "Restore Sleep" Upsell page
+      | upgrade      | last_chance      |
+      | <sl_upgrade> | <sl_last_chance> |
+    And user makes following decision in "third" supplement "Restore Life" Upsell page
+      | upgrade      | last_chance      |
+      | <lf_upgrade> | <lf_last_chance> |
+    And user makes following decision in 7 day free membership
+      | decision        | plan        |
+      | <memb_decision> | <memb_plan> |
+    Then user complete registration
+
+    Examples:
+      | bottles | rc_upgrade | rc_last_chance | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | memb_decision | memb_plan |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
