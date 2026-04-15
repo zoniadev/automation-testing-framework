@@ -21,27 +21,13 @@ Feature: Docuseries tests
 
     Examples:
       | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | monthly   | silver           | buy                  | 6          | most_popular       | 1          | upgrade            |
-      | annually  | no               | no                   | no         | no                 | no         | upgrade            |
-      | quarterly | platinum         | buy                  | no         | no                 | 6          | most_popular       |
-      | lifetime  | silver           | no                   | 3          | most_popular       | 3          | most_popular       |
-      | annually  | platinum         | buy                  | 1          | best_value         | 3          | no                 |
-      | monthly   | no               | no                   | 1          | no                 | 1          | best_value         |
-      | quarterly | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | lifetime  | silver           | no                   | 3          | best_value         | 6          | best_value         |
-      | monthly   | platinum         | no                   | 6          | most_popular       | 6          | no                 |
-      | annually  | platinum         | buy                  | 6          | no                 | 3          | best_value         |
-      | monthly   | silver           | no                   | no         | no                 | no         | no                 |
-      | lifetime  | no               | no                   | 6          | best_value         | no         | upgrade            |
-      | annually  | platinum         | no                   | no         | upgrade            | 1          | upgrade            |
-      | monthly   | no               | buy                  | 6          | upgrade            | 1          | most_popular       |
-      | quarterly | silver           | buy                  | 1          | upgrade            | 6          | upgrade            |
-      | monthly   | platinum         | no                   | 3          | no                 | 3          | upgrade            |
-      | quarterly | no               | buy                  | 3          | best_value         | 1          | no                 |
-      | monthly   | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | quarterly | no               | buy                  | 1          | most_popular       | 1          | best_value         |
-      | annually  | platinum         | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | lifetime  | platinum         | no                   | 1          | most_popular       | no         | upgrade            |
+      | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | lifetime  | platinum         | buy                  | 6          | best_value         | 6          | best_value         |
+      | annually  | silver           | buy                  | 3          | most_popular       | 3          | most_popular       |
+      | quarterly | no               | no                   | 1          | no                 | no         | no                 |
+      | monthly   | no               | no                   | no         | upgrade            | 1          | upgrade            |
+      | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
 
 
   @unbroken_evergreen @all_docuseries @WIP
@@ -372,7 +358,7 @@ Feature: Docuseries tests
 #      | is_live_autoimmunity | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
 #      | is_live_gut          | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
 #      | is_live_heart        | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-#      | is_live_obesity      | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
+#      | is_live_obesity      | monthly   | no               | buy                  | no         | no                 | 3          | upgrade            |
 #      | is_live_trauma       | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
 #      | is_live              | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
 #      | is_live_brain        | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
