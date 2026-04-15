@@ -20,16 +20,17 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | monthly   | no               | no                   | no         | no                 | no         | no                 |
-      | lifetime  | platinum         | buy                  | 6          | best_value         | 6          | best_value         |
-      | annually  | silver           | buy                  | 3          | most_popular       | 3          | most_popular       |
-      | quarterly | no               | no                   | 1          | upgrade            | 1          | upgrade            |
-      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
-      | annually  | platinum         | no                   | no         | no                 | 1          | upgrade            |
+      | outline | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | quarterly | no               | no                   | 1          | upgrade            | no         | no                 |
+      | 6       | annually  | no               | buy                  | no         | upgrade            | 6          | most_popular       |
+      | 7       | quarterly | platinum         | buy                  | 3          | most_popular       | 1          | best_value         |
 
 
-  @unbroken_evergreen @all_docuseries @WIP
+  @unbroken_evergreen @all_docuseries
   Scenario Outline: Unbroken evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -49,18 +50,19 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | opt_in_page        | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | ad_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
-      | ad_ev_detox        | annually  | platinum         | buy                  | 6          | best_value         | no         | upgrade            |
-      | ad_ev_gut          | quarterly | silver           | no                   | 1          | upgrade            | 1          | no                 |
-      | ad_ev_brain        | monthly   | platinum         | buy                  | 3          | no                 | 3          | upgrade            |
-      | ad_ev_mindset      | annually  | no               | no                   | no         | upgrade            | no         | no                 |
-      | ad_ev_inflammation | quarterly | silver           | buy                  | no         | no                 | 3          | most_popular       |
-      | ad_ev_energy       | monthly   | no               | buy                  | 1          | no                 | 6          | best_value         |
-      | ad_ev_pain         | annually  | platinum         | no                   | 3          | most_popular       | 1          | best_value         |
+      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | ad_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | ad_ev_detox        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | ad_ev_gut          | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | ad_ev_brain        | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | ad_ev_mindset      | quarterly | no               | no                   | 1          | upgrade            | no         | no                 |
+      | 6       | ad_ev_inflammation | annually  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | ad_ev_energy       | quarterly | platinum         | no                   | 3          | no                 | no         | upgrade            |
+      | 8       | ad_ev_pain         | monthly   | silver           | buy                  | 6          | most_popular       | 3          | most_popular       |
+      | 9       | ad_ev              | annually  | platinum         | buy                  | 3          | best_value         | 1          | best_value         |
 
 
-  @bb_live @all_docuseries
+  @bb_live @all_docuseries @WIP
   Scenario Outline: BB Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -80,16 +82,16 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | opt_in_page      | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | bb_live          | monthly   | no               | no                   | no         | no                 | no         | no                 |
-      | bb_live_detox    | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
-      | bb_live_gut      | annually  | no               | no                   | no         | no                 | 1          | no                 |
-      | bb_live_memory   | monthly   | no               | no                   | no         | best_value         | no         | no                 |
-      | bb_live_mood     | quarterly | no               | no                   | 6          | no                 | no         | no                 |
-      | bb_live_sleep    | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
-      | bb_live_energy   | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-      | bb_live_immunity | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
-      | bb_live          | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | outline | opt_in_page      | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | bb_live          | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | bb_live_detox    | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | bb_live_gut      | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | bb_live_memory   | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | bb_live_mood     | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+      | 6       | bb_live_sleep    | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | bb_live_energy   | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+      | 8       | bb_live_immunity | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9       | bb_live          | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
   @bb_evergreen @all_docuseries
   Scenario Outline: BB Evergreen funnel
@@ -111,30 +113,17 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | opt_in_page    | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | bb_ev          | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-      | bb_ev_detox    | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-      | bb_ev_gut      | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | bb_ev_memory   | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-      | bb_ev_mood     | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-      | bb_ev_sleep    | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-      | bb_ev_energy   | monthly   | no               | no                   | no         | no                 | 3          | upgrade            |
-      | bb_ev_immunity | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-      | bb_ev          | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
-      | bb_ev_detox    | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-      | bb_ev_gut      | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-      | bb_ev_memory   | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-      | bb_ev_mood     | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-      | bb_ev_sleep    | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-      | bb_ev_energy   | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-      | bb_ev_immunity | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-      | bb_ev          | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
-      | bb_ev_detox    | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-      | bb_ev_gut      | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-      | bb_ev_memory   | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-      | bb_ev_mood     | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-      | bb_ev_sleep    | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-      | bb_ev_energy   | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+      | outline | opt_in_page    | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | bb_ev          | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | bb_ev_detox    | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | bb_ev_gut      | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | bb_ev_memory   | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | bb_ev_mood     | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+      | 6       | bb_ev_sleep    | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | bb_ev_energy   | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+      | 8       | bb_ev_immunity | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9       | bb_ev          | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+
 
 
   @ageless_evergreen @all_docuseries
