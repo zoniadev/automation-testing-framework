@@ -575,8 +575,8 @@ Feature: Docuseries tests
       | 3       | annually  | no         | no                 | 1          | no                 |
       | 4       | lifetime  | no         | no                 | 3          | upgrade            |
       | 5       | quarterly | 1          | upgrade            | no         | no                 |
-      | 6       | annually  | 6          | best_value         | 6          | most_popular       |
-      | 7       | quarterly | 3          | most_popular       | 1          | best_value         |
+      | 6       | annually  | 6          | no                 | 6          | no                 |
+      | 7       | quarterly | 3          | upgrade            | 1          | upgrade            |
 
 
   @face_scan @all_supplements
