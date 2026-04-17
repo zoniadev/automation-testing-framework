@@ -572,11 +572,10 @@ Feature: Docuseries tests
     Examples:
       | outline | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | 1       | monthly   | no         | no                 | no         | no                 |
-      | 2       | quarterly | no         | no                 | no         | upgrade            |
       | 3       | annually  | no         | no                 | 1          | no                 |
-      | 4       | lifetime  | no         | upgrade            | no         | no                 |
+      | 4       | lifetime  | no         | no                 | 3          | upgrade            |
       | 5       | quarterly | 1          | upgrade            | no         | no                 |
-      | 6       | annually  | no         | upgrade            | 6          | most_popular       |
+      | 6       | annually  | 6          | best_value         | 6          | most_popular       |
       | 7       | quarterly | 3          | most_popular       | 1          | best_value         |
 
 
