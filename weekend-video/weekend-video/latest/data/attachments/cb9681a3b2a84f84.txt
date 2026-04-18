@@ -8,6 +8,3 @@ Executing step: user navigates to the "cancer360 - Comprehensive Protocol for Br
 ===> Navigated to https://staging.zonia.com/user/search_results
 ===> Opened series: cancer360 - Comprehensive Protocol for Breast Self-Exam
 Completed step: user navigates to the "cancer360 - Comprehensive Protocol for Breast Self-Exam" video page
-Executing step: user initiates the video play
-===> Commanded video player to play 'cancer360 - Comprehensive Protocol for Breast Self-Exam'
-Completed step: user initiates the video play

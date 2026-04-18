@@ -10,12 +10,3 @@ Completed step: user navigates to the "AAC - The Ultimate Diet for Aging Gracefu
 Executing step: user initiates the video play
 ===> Commanded video player to play 'AAC - The Ultimate Diet for Aging Gracefully' via JavaScript
 Completed step: user initiates the video play
-Executing step: the video player is loaded on the page
-===> Verified the video player for "AAC - The Ultimate Diet for Aging Gracefully" is loaded
-Completed step: the video player is loaded on the page
-Executing step: the video is actively playing
-===> Verified video is playing via Video.js (time advanced from 1.984s to 3.992s)
-Completed step: the video is actively playing
-Executing step: the media stream network requests are successful
-===> Verified HLS stream via Video.js DOM state (networkState=2, readyState=4, currentTime=3.996s)
-Completed step: the media stream network requests are successful
