@@ -254,3 +254,28 @@ Feature: Supplement tests
       | 3       | yes        | no             | no         | most_popular   | accept        | quarterly |
       | 3       | no         | most_popular   | no         | best_value     | decline       | no        |
       | 1       | no         | no             | yes        | no             | accept        | quarterly |
+
+
+  @restore_collagen @all_supplements
+  Scenario Outline: Restore Collagen Supplement funnel
+    Given user select to buy "<bottles>" bottles in "Restore Collagen" Supplements page
+    When user makes following decision in "first" supplement "6 More bottles of Restore Collagen" Upsell page
+      | upgrade      | last_chance      |
+      | <rc_upgrade> | <rc_last_chance> |
+    And user makes following decision in "second" supplement "Restore Sleep" Upsell page
+      | upgrade      | last_chance      |
+      | <sl_upgrade> | <sl_last_chance> |
+    And user makes following decision in "third" supplement "Restore Life" Upsell page
+      | upgrade      | last_chance      |
+      | <lf_upgrade> | <lf_last_chance> |
+    And user makes following decision in 7 day free membership
+      | decision        | plan        |
+      | <memb_decision> | <memb_plan> |
+    Then user complete registration
+
+    Examples:
+      | bottles | rc_upgrade | rc_last_chance | sl_upgrade | sl_last_chance | lf_upgrade | lf_last_chance | memb_decision | memb_plan |
+      | 1       | yes        | no             | yes        | no             | yes        | no             | accept        | annually  |
+      | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
+      | 3       | no         | best_value     | no         | most_popular   | no         | best_value     | accept        | quarterly |
+      | 6       | no         | most_popular   | no         | best_value     | no         | most_popular   | accept        | monthly   |

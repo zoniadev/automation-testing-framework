@@ -21,6 +21,14 @@ on:
           - android_landscape
           - ipad
           - ipad_landscape
+      browser:
+        description: 'Browser to use for the test run'
+        required: false
+        default: 'chromium'
+        type: choice
+        options:
+          - chromium
+          - chrome
       environment:
         description: 'Environment to run tests against'
         required: true
@@ -46,6 +54,7 @@ jobs:
     with:
       device: ${{ inputs.device }}
       tags: ${{ inputs.tags }}
+      browser: ${{ inputs.browser }}
       environment: ${{ inputs.environment }}
       report_scope: ${{ inputs.report_scope }}
       report_name: ${{ inputs.report_name }}
