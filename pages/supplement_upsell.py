@@ -83,13 +83,13 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for booster package...')
         if decision != 'no':
             selection = getattr(locators, f"{decision.upper()}_PACKAGE_BUTTON")
-            next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{decision.lower()}_masterclass_url")
+            next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{decision.lower()}_masterclass_url")
             self.context.page.locator(selection).click()
             if decision == 'platinum':
                 common_variables.docuseries_address_will_appear = True
                 print('Address popup should appear next page')
         else:
-            next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url')
+            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_masterclass_url')
             self.context.page.locator(NO_THANKS_BUTTON).click()
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for booster package')
@@ -99,9 +99,9 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
-        if common_variables.funnel_prefix in ['lg', 'is']:
+        if common_variables.docuseries_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
-        elif common_variables.funnel_prefix in ['km', 'twl', 'cr']:
+        elif common_variables.docuseries_prefix in ['km', 'twl', 'cr']:
             upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
@@ -110,16 +110,16 @@ class SupplementUpsellPage(BasePage):
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
             self.context.page.locator(BUY_MASTERCLASS_BUTTON).click()
-            next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_{upsell3}_bought_url')
+            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_{upsell3}_bought_url')
         else:
             self.context.page.locator(SKIP_MASTERCLASS_BUTTON).click()
-            next_page = getattr(common_variables, f'{common_variables.funnel_prefix}_{upsell3}_not_bought_url')
+            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_{upsell3}_not_bought_url')
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
     def _get_docuseries_next_page_navigation(self, upsell_page):
         """Determines the next page URL based on the upsell page and funnel."""
-        funnel_prefix = common_variables.funnel_prefix
+        funnel_prefix = common_variables.docuseries_prefix
         if upsell_page == 'Restore Detox':
             if funnel_prefix in ('lg', 'km', 'is', 'twl', 'pc'):
                 return common_variables.welcome_page_url
@@ -145,14 +145,14 @@ class SupplementUpsellPage(BasePage):
         """Handles the logic for purchasing (or not purchasing) bottles."""
         if amount == 'no':
             print('===> Not buying bottles...')
-            if common_variables.funnel_prefix != 'pc':
-                next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
+            if common_variables.docuseries_prefix != 'pc':
+                next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
             else:
                 next_page = next_page_navigation
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
-            next_page = getattr(common_variables, f"{common_variables.funnel_prefix}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
+            next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
@@ -163,7 +163,7 @@ class SupplementUpsellPage(BasePage):
 
     def _handle_docuseries_upsell_downsell(self, amount, upsell_downsell):
         """Handles the logic for the upsell/downsell decision."""
-        funnel_prefix = common_variables.funnel_prefix
+        funnel_prefix = common_variables.docuseries_prefix
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)

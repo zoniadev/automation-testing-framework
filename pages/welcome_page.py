@@ -21,7 +21,7 @@ class WelcomePage(BasePage):
     def skip_survey(self):
         time.sleep(1)
         self.handle_cookie_banner()
-        if common_variables.funnel_prefix != 'fs':
+        if common_variables.docuseries_prefix != 'fs':
             self.context.page.locator(SKIP_SURVEY_BUTTON).click()
             self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
             print('===> Skipped survery')

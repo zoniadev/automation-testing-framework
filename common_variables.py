@@ -1,5 +1,5 @@
 funnel = ''
-funnel_prefix = ''
+docuseries_prefix = ''
 base_url_new = 'https://zonia22stage.us-west-2.elasticbeanstalk.com/'
 base_url_staging = 'https://staging.zonia.com/'
 used_base_url = ''

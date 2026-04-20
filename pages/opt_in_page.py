@@ -87,7 +87,7 @@ class OptInPage(BasePage):
     def register_in_episode_page(self, episode):
         self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
         if episode in ['11', '12']:
-            next_page = f'{common_variables.funnel_prefix}-join-zonia-bonuses-ep{episode}'
+            next_page = f'{common_variables.docuseries_prefix}-join-zonia-bonuses-ep{episode}'
         else:
             next_page = getattr(common_variables, f'{common_variables.funnel}_join_zonia_2_url')
         self.wait_for_navigation(next_page, timeout=20000)

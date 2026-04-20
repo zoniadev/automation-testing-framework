@@ -106,7 +106,7 @@ def user_register_in_opt_in_page(context, series):
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.flow_type = 'docuseries'
     common_variables.funnel = series.lower()
-    common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
+    common_variables.docuseries_prefix = common_variables.funnel.split('_')[0]
     page = OptInPage(context)
     page.navigate_to_url(getattr(common_variables, f"{series.lower()}_opt_in_url"))
     page.register_in_opt_in_page()
@@ -119,7 +119,7 @@ def user_join_zonia(context):
         page.join_zonia_replay_weekend()
     elif common_variables.is_screening_flow:
         page.join_zonia_episode()
-    elif common_variables.funnel_prefix == 'fs':
+    elif common_variables.docuseries_prefix == 'fs':
         page = FaceScanPage(context)
         page.navigate_to_url(getattr(common_variables, f"fs_join_zonia_url"))
         page.fs_join_zonia()
@@ -170,7 +170,7 @@ def verify_banners_in_this_week_articles(context):
 def user_open_patient_care_page(context):
     common_variables.flow_type = 'docuseries'
     common_variables.funnel = 'pc'
-    common_variables.funnel_prefix = 'pc'
+    common_variables.docuseries_prefix = 'pc'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
@@ -187,11 +187,11 @@ def user_is_on_episode_page(context, series, episode):
     else:
         common_variables.is_screening_flow = True
     common_variables.funnel = series.lower()
-    common_variables.funnel_prefix = common_variables.funnel.split('_')[0]
+    common_variables.docuseries_prefix = common_variables.funnel.split('_')[0]
     if episode in ['11', '12']:
-        page_url = f'{common_variables.funnel_prefix}_bonus_episode_{episode}_url'
+        page_url = f'{common_variables.docuseries_prefix}_bonus_episode_{episode}_url'
     else:
-        page_url = f'{common_variables.funnel_prefix}_episode_{episode}_url'
+        page_url = f'{common_variables.docuseries_prefix}_episode_{episode}_url'
     common_variables.supplement_funnel_email = RD.automation_template_email()
     common_variables.supplement_funnel_name = RD.automation_first_name()
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
@@ -207,7 +207,7 @@ def user_fills_face_scan_form(context):
     print(f'Scenario will use "{common_variables.test_cc_type}" card "{common_variables.test_cc_number}"')
     common_variables.flow_type = 'docuseries'
     common_variables.funnel = 'face_scan'
-    common_variables.funnel_prefix = 'fs'
+    common_variables.docuseries_prefix = 'fs'
     page = FaceScanPage(context)
     page.navigate_to_url(getattr(common_variables, "fs_opt_in_url"))
     for row in context.table:

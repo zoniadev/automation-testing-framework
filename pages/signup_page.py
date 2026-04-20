@@ -22,11 +22,11 @@ class SignUpPage(BasePage):
         common_variables.supplement_funnel_password = RD.password(8)
         self.context.page.locator(SIGNUP_PASSWORD_FIELD).fill(common_variables.supplement_funnel_password)
         print(f'===> User email is: {common_variables.supplement_funnel_email}')
-        if common_variables.funnel_prefix == 'fs':
+        if common_variables.docuseries_prefix == 'fs':
             self.populate_cc_details(submit_button=FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
         else:
             self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
-        if common_variables.funnel_prefix not in ['km', 'twl', 'ad', 'cr']:
+        if common_variables.docuseries_prefix not in ['km', 'twl', 'ad', 'cr']:
             if cycle == 'lifetime':
                 cycle = 'monthly'
         if common_variables.is_replay_weekend:
@@ -34,20 +34,20 @@ class SignUpPage(BasePage):
                 common_variables.docuseries_address_will_appear = True
                 print('Address popup should appear next page')
             self.wait_for_navigation(
-                getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url'),
+                getattr(common_variables, f'{common_variables.docuseries_prefix}_masterclass_url'),
                 timeout=30000)
-        elif common_variables.funnel_prefix in ('pc', 'fs'):
+        elif common_variables.docuseries_prefix in ('pc', 'fs'):
             self.wait_for_navigation(
-                getattr(common_variables, f'{common_variables.funnel_prefix}_restore_sleep_url'),
+                getattr(common_variables, f'{common_variables.docuseries_prefix}_restore_sleep_url'),
                 timeout=30000)
         elif common_variables.bonus_episode:
             self.wait_for_navigation(
-                getattr(common_variables, f'{common_variables.funnel_prefix}_masterclass_url'),
+                getattr(common_variables, f'{common_variables.docuseries_prefix}_masterclass_url'),
                 timeout=30000)
-        elif common_variables.funnel_prefix == 'fs':
+        elif common_variables.docuseries_prefix == 'fs':
             self.wait_for_navigation(
-                getattr(common_variables, f'{common_variables.funnel_prefix}_restore_sleep_url'),
+                getattr(common_variables, f'{common_variables.docuseries_prefix}_restore_sleep_url'),
                 timeout=30000)
         else:
-            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
+            self.wait_for_navigation(getattr(common_variables, f'{common_variables.docuseries_prefix}_booster_{cycle}_upsale_url'), timeout=30000)
         print(f'>>> Successfully registered in Signup page')

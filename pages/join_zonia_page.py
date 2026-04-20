@@ -11,7 +11,7 @@ class JoinZoniaPage(BasePage):
 
     def join_zonia(self):
         print(f'>>> Joining Zonia...')
-        if common_variables.funnel_prefix == 'pc':
+        if common_variables.docuseries_prefix == 'pc':
             button_to_use = PATIENT_CARE_JOIN_BUTTON
             next_url = getattr(common_variables, f'{common_variables.funnel}_sign_up_url')
         else:
