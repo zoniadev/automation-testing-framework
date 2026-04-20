@@ -1,0 +1,12 @@
+Executing step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://staging.zonia.com/restore-detox-special
+===> Buying 1 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Santiago-1776680249@gmail.com
+Failed step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-detox-signup-1-bottle'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Detox_Supplement_funnel_--_@1.1__20260420-101806.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)

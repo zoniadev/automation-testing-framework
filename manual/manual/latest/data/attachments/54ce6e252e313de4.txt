@@ -1,0 +1,12 @@
+Executing step: user select to buy "6" bottles in "Restore Gut" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://staging.zonia.com/restore-gut-special
+===> Buying 6 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Hester-1776679688@gmail.com
+Failed step: user select to buy "6" bottles in "Restore Gut" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-gut-signup-6-bottles'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_Supplement_funnel_--_@1.3__20260420-100846.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)

@@ -1,0 +1,14 @@
+Executing step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/restore-vision-3-free-bottles
+===> Buying 1 bottle...
+Funnel: restore_vision_b2g3
+===> User email is: zoniat-v2Smith-1776680209@gmail.com
+Failed step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-vision-signup-1-bottle-2'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_-_Buy_2,_Get_3_Free_bottles_Supplement_funnel_--_@1.4__20260420-101727.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Permissions policy violation: compute-pressure is not allowed in this document. (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 410 () (Source: unknown source)
