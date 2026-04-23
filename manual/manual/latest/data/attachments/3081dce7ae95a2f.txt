@@ -1,0 +1,18 @@
+Executing step: user is on the "cr_live" episode "4" page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/cr-episode-4-live-be2mq9vllr
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia-2"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia-2"
+Completed step: user is on the "cr_live" episode "4" page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://staging.zonia.com/cr-signup"
+Failed step: user join Zonia
+Test failed on page: 'https://staging.zonia.com/cr-join-zonia-expired'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_screening_funnel_--_@1.4__20260423-111304.png
+Captured the following browser console errors:
+--- [Report Only] Refused to load the script 'https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.IdpIFrameHttp.en_US.1zDlapCRk9c.2018.O/am=AAA4/d=1/rs=AOaEmlHzZwH8uk2GyKI18Q7qhg76WRtEsQ/m=base' because it violates the following Content Security Policy directive: "script-src 'unsafe-inline' 'unsafe-eval' blob: data:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 400 () (Source: unknown source)
+--- MoEngage Web SDK initialised multiple times. Please integrate the Web SDK only once! (Source: unknown source)
+--- MoEngage Web SDK initialised multiple times. Please integrate the Web SDK only once! (Source: unknown source)

@@ -1,0 +1,15 @@
+Executing step: user fills face scan form with
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/face-scan
+===> URL successfully changed to "https://bioimaging.ariascreening.com/measurement"
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with
+Executing step: user join Zonia
+Failed step: user join Zonia
+Test failed on page: 'https://bioimaging.ariascreening.com/measurement'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Face_Scan_funnel_--_@1.7__20260423-115109.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- AUTH_COOKIES_NOT_FOUND Authentication cookies do not exist (Source: unknown source)
