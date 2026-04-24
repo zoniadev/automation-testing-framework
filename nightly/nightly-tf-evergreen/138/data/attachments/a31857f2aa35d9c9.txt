@@ -1,0 +1,110 @@
+Executing step: user register in "tf_ev_detoxification" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://staging.zonia.com/mb2/tf-18-herbs-detoxification
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_detoxification" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/mb2/tf-signup"
+===> URL successfully changed to "https://staging.zonia.com/mb2/tf-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Gonzalez-1777001787@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/tf-booster-packages-monthly"
+===> URL successfully changed to "https://staging.zonia.com/tf-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "no" for booster package...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/tf-mini-masterclass-series"
+>>> Successfully selected "no" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-detox-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-detox-special"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "3" bottles and "most_popular" in upsell/downsell for Restore Detox...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-rd-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/tf-rd-6-more-bottles?id=69eae57a0a9703663e9159cf"
+===> Successfully bought 3 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-restore-life-special"
+===> URL successfully changed to "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+>>> Successfully selected "3" bottles and "most_popular" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "1" bottles and "most_popular" in upsell/downsell for Restore Life...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://staging.zonia.com/tf-rl-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-1-1']", page was not changed to tf-rl-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/tf\\-rl\\-6\\-more\\-bottles.*')'
+Actual value: https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf 
+Call log:
+PageAssertions.to_have_url with timeout 15000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf"
+
+Failed step: user makes following decision in docuseries "Restore Life" Upsell page
+Test failed on page: 'https://staging.zonia.com/tf-restore-life-special?id=69eae57a0a9703663e9159cf'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_funnel_--_@1.3__20260424-033857.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
