@@ -42,10 +42,10 @@ class SupplementUpsellPage(BasePage):
         }
         next_order = next_order_map.get(order)
         if next_order:
-            return getattr(common_variables, f"{common_variables.funnel}_{next_order}_upsell_url")
+            return getattr(common_variables, f"{self.context.funnel}_{next_order}_upsell_url")
         else:
             raise Exception(f'Could not construct next supplement page url with given parameters:'
-                            f' "{common_variables.funnel}" and "{order}"!')
+                            f' "{self.context.funnel}" and "{order}"!')
 
     def verify_downsell_popup(self, max_retries=5):
         for attempt in range(max_retries):
@@ -61,11 +61,11 @@ class SupplementUpsellPage(BasePage):
             raise Exception(f'Clicking "No Thanks" button was not successful after {max_retries} retries!')
 
     def chose_seven_day_membership(self, decision, plan):
-        if common_variables.funnel == 'restore_detox':
+        if self.context.funnel == 'restore_detox':
             next_upsell = '_third_upsell_url'
         else:
             next_upsell = '_fourth_upsell_url'
-        self.wait_for_navigation(getattr(common_variables, f"{common_variables.funnel}{next_upsell}"), timeout=30000)
+        self.wait_for_navigation(getattr(common_variables, f"{self.context.funnel}{next_upsell}"), timeout=30000)
         if decision == 'accept':
             self.context.page.locator(MEMBERSHIP_YES_BUTTON).click()
             if plan == 'no':
@@ -83,13 +83,13 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for booster package...')
         if decision != 'no':
             selection = getattr(locators, f"{decision.upper()}_PACKAGE_BUTTON")
-            next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{decision.lower()}_masterclass_url")
+            next_page = getattr(common_variables, f"{self.context.docuseries_prefix}_{decision.lower()}_masterclass_url")
             self.context.page.locator(selection).click()
             if decision == 'platinum':
-                common_variables.docuseries_address_will_appear = True
+                self.context.docuseries_address_will_appear = True
                 print('Address popup should appear next page')
         else:
-            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_masterclass_url')
+            next_page = getattr(common_variables, f'{self.context.docuseries_prefix}_masterclass_url')
             self.context.page.locator(NO_THANKS_BUTTON).click()
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for booster package')
@@ -99,9 +99,9 @@ class SupplementUpsellPage(BasePage):
 
     def chose_docuseries_masterclass_upsell(self, decision):
         print(f'>>> Selecting "{decision}" for masterclass...')
-        if common_variables.docuseries_prefix in ['lg', 'is']:
+        if self.context.docuseries_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
-        elif common_variables.docuseries_prefix in ['km', 'twl', 'cr']:
+        elif self.context.docuseries_prefix in ['km', 'twl', 'cr']:
             upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
@@ -110,16 +110,16 @@ class SupplementUpsellPage(BasePage):
             print('===> Waiting a bit to avoid payment method error...')
             time.sleep(10)
             self.context.page.locator(BUY_MASTERCLASS_BUTTON).click()
-            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_{upsell3}_bought_url')
+            next_page = getattr(common_variables, f'{self.context.docuseries_prefix}_{upsell3}_bought_url')
         else:
             self.context.page.locator(SKIP_MASTERCLASS_BUTTON).click()
-            next_page = getattr(common_variables, f'{common_variables.docuseries_prefix}_{upsell3}_not_bought_url')
+            next_page = getattr(common_variables, f'{self.context.docuseries_prefix}_{upsell3}_not_bought_url')
         self.wait_for_navigation(next_page, timeout=30000)
         print(f'>>> Successfully selected "{decision}" for masterclass')
 
     def _get_docuseries_next_page_navigation(self, upsell_page):
         """Determines the next page URL based on the upsell page and funnel."""
-        funnel_prefix = common_variables.docuseries_prefix
+        funnel_prefix = self.context.docuseries_prefix
         if upsell_page == 'Restore Detox':
             if funnel_prefix in ('lg', 'km', 'is', 'twl', 'pc'):
                 return common_variables.welcome_page_url
@@ -145,31 +145,31 @@ class SupplementUpsellPage(BasePage):
         """Handles the logic for purchasing (or not purchasing) bottles."""
         if amount == 'no':
             print('===> Not buying bottles...')
-            if common_variables.docuseries_prefix != 'pc':
-                next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
+            if self.context.docuseries_prefix != 'pc':
+                next_page = getattr(common_variables, f"{self.context.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_downsell_url")
             else:
                 next_page = next_page_navigation
             self.retry_clicking_button(NO_THANKS_BUTTON, next_page)
         else:
             print(f'===> Buying {amount} bottle...')
-            next_page = getattr(common_variables, f"{common_variables.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
+            next_page = getattr(common_variables, f"{self.context.docuseries_prefix}_{upsell_page.lower().replace(' ', '_')}_upsell_url")
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
             self.retry_clicking_button(button_locator, next_page)
             print(f'===> Successfully bought {amount} bottle/s')
-            common_variables.docuseries_address_will_appear = True
+            self.context.docuseries_address_will_appear = True
             print('Address popup should appear next page')
 
     def _handle_docuseries_upsell_downsell(self, amount, upsell_downsell):
         """Handles the logic for the upsell/downsell decision."""
-        funnel_prefix = common_variables.docuseries_prefix
+        funnel_prefix = self.context.docuseries_prefix
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
             self.context.page.locator(YES_UPGRADE_BUTTON).click()
             print('===> Upgrading order...')
-            common_variables.docuseries_address_will_appear = True
+            self.context.docuseries_address_will_appear = True
             print('Address popup should appear next page')
         elif upsell_downsell == 'no':
             if funnel_prefix == 'pc':
@@ -191,7 +191,7 @@ class SupplementUpsellPage(BasePage):
 
     def _maybe_populate_shipping_address(self):
         """Populates shipping address if the flag is set."""
-        if common_variables.docuseries_address_will_appear:
+        if self.context.docuseries_address_will_appear:
             self.populate_shipping_address()
 
     def docuseries_buy_upsells(self, upsell_page, amount, upsell_downsell):
@@ -222,7 +222,7 @@ class SupplementUpsellPage(BasePage):
     def _get_shipping_locators(self):
         """Returns the correct set of locators based on the current URL and funnel."""
         url = self.context.page.url
-        funnel = common_variables.funnel
+        funnel = self.context.funnel
         if 'rl' in url or 'life' in url:
             if funnel in ['tf_ev', 'bb_live', 'bb_ev', 'lg_ev', 'lg_live', 'cr_live', 'cr_bonus', 'cr_ev', 'cr_1ep', 'ad_live', 'ad_ev']:
                 return SHIPPING_PHONE_FIELD_ALT, SHIPPING_ADDRESS_FIELD_ALT, SHIPPING_CITY_FIELD_ALT, SHIPPING_STATE_FIELD_ALT, SHIPPING_ZIP_FIELD_ALT, SHIPPING_COUNTRY_FIELD_ALT
@@ -236,7 +236,7 @@ class SupplementUpsellPage(BasePage):
     def _fill_shipping_form(self, locators):
         """Fills the shipping form using the provided locators."""
         phone_locator, address_locator, city_locator, state_locator, zip_locator, country_locator = locators
-        self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(common_variables.supplement_funnel_name)
+        self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(self.context.supplement_funnel_name)
         self.context.page.locator(phone_locator).fill(RD.phone_number())
         self.context.page.locator(address_locator).fill(RD.address_line())
         self.context.page.locator(city_locator).fill(RD.town())
@@ -247,13 +247,13 @@ class SupplementUpsellPage(BasePage):
 
     def populate_shipping_address(self):
         """Orchestrates the process of populating the shipping address."""
-        if not common_variables.docuseries_address_already_filled:
+        if not self.context.docuseries_address_already_filled:
             print('>>>Entering shipping details...')
             self._verify_shipping_popup()
             locators_to_use = self._get_shipping_locators()
             self._fill_shipping_form(locators_to_use)
             print('>>>Successfully entered shipping details')
-            common_variables.docuseries_address_already_filled = True
+            self.context.docuseries_address_already_filled = True
 
     def retry_clicking_button(self, button, next_page):
         self.context.page.locator(button).click()

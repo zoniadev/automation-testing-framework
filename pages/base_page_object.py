@@ -45,7 +45,7 @@ class BasePage(object):
                 # Ensure the field is cleared before typing
                 cc_number.fill("")
                 time.sleep(0.5)
-                cc_number.press_sequentially(common_variables.test_cc_number, delay=50)
+                cc_number.press_sequentially(self.context.test_cc_number, delay=50)
                 # Short buffer before clicking to let final validation/formatting finish
                 self.context.page.wait_for_timeout(500)
                 self.context.page.locator(submit_button).click()
@@ -67,15 +67,15 @@ class BasePage(object):
         self.disable_chat()
         cc_exp_date = self.context.page.frame_locator(CC_EXP_DATE_FRAME).get_by_placeholder(CC_EXP_DATE_FIELD)
         time.sleep(0.5)
-        cc_exp_date.press_sequentially(common_variables.test_cc_expiration_date, delay=50)
+        cc_exp_date.press_sequentially(self.context.test_cc_expiration_date, delay=50)
         cc_cvv = self.context.page.frame_locator(CC_CVV_FRAME).get_by_placeholder(CC_CVV_FIELD)
-        if common_variables.test_cc_type == 'American Express':
+        if self.context.test_cc_type == 'American Express':
             cc_cvv.fill('1111')
         else:
-            cc_cvv.fill(common_variables.test_cc_cvv)
+            cc_cvv.fill(self.context.test_cc_cvv)
         cc_zip = self.context.page.frame_locator(CC_ZIP_FRAME).get_by_placeholder(CC_ZIP_FIELD)
-        cc_zip.fill(common_variables.test_cc_zip)
-        if common_variables.docuseries_prefix == 'fs':
+        cc_zip.fill(self.context.test_cc_zip)
+        if self.context.docuseries_prefix == 'fs':
             self.context.page.locator(FS_AGREE_CHECKBOX).click()
         self.retry_cc_number_entry(submit_button=submit_button)
 
@@ -222,4 +222,3 @@ class BasePage(object):
         self.context.page.locator(LOGIN_PASSWORD_FIELD).fill(common_variables.video_user_pass)
         self.context.page.locator(LOGIN_SUBMIT_BUTTON).click()
         self.wait_for_navigation(common_variables.zonia_portal_url, timeout=20000)
-

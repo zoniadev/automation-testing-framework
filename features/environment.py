@@ -44,8 +44,33 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    common_variables.test_cc_type = context.config.userdata['card_type']
-    CC.pick_payment_card()
+    # Initialize mutable scenario state on context
+    context.is_screening_flow = False
+    context.is_replay_weekend = False
+    context.flow_type = ''
+    context.funnel = ''
+    context.docuseries_prefix = ''
+    context.bonus_episode = False
+    context.membership_added = False
+    context.docuseries_address_will_appear = False
+    context.docuseries_address_already_filled = False
+    context.mobile_run = False
+    context.supplement_funnel_name = ''
+    context.supplement_funnel_email = ''
+    context.supplement_funnel_password = ''
+    context.supplement_funnel_bottles = ''
+
+    # Payment details on context
+    context.test_cc_type = context.config.userdata['card_type']
+    context.test_cc_number = ''
+    context.test_cc_expiration_date = common_variables.test_cc_expiration_date
+    context.test_cc_cvv = common_variables.test_cc_cvv
+    context.test_cc_zip = common_variables.test_cc_zip
+    context.card_index = common_variables.card_index
+    context.test_cards = common_variables.test_cards
+
+    CC.pick_payment_card(context)
+
     context.console_messages = []
     if context.config.userdata['device'] == 'iphone':
         device = context.playwright.devices['iPhone 13']
@@ -70,7 +95,7 @@ def before_scenario(context, scenario):
     context_args = {}
     if device:
         context_args.update(device)
-        common_variables.mobile_run = True
+        context.mobile_run = True
     else:
         context_args.update({
             "viewport": {'width': 1280, 'height': 720},
@@ -189,8 +214,6 @@ def after_scenario(context, scenario):
         print(f"Failed scenario: '{context.scenario.name}'")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
-    common_variables.docuseries_address_will_appear = False
-    common_variables.docuseries_address_already_filled = False
 
 
 def after_feature(context, feature):

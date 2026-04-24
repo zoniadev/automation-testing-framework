@@ -1,22 +1,7 @@
-funnel = ''
-docuseries_prefix = ''
 base_url_new = 'https://zonia22stage.us-west-2.elasticbeanstalk.com/'
 base_url_staging = 'https://staging.zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
-mobile_run = False
-flow_type = ''
-bonus_episode = False
-
-supplement_funnel_name = ''
-supplement_funnel_email = ''
-supplement_funnel_password = ''
-supplement_funnel_bottles = ''
-docuseries_address_will_appear = False
-docuseries_address_already_filled = False
-membership_added = False
-is_replay_weekend = False
-is_screening_flow = False
 
 ad_live_opt_in_url = 'unbroken'
 ad_live_join_zonia_url = 'ad-join-zonia'
@@ -433,8 +418,6 @@ restore_collagen_fourth_upsell_url = 'rc-trial'
 blog_this_week_article = 'this-week-post'
 search_results_page = 'user/search_results'
 
-test_cc_number = ''
-test_cc_type = ''
 test_cc_expiration_date = '0527'
 test_cc_cvv = '123'
 test_cc_zip = '1000'
