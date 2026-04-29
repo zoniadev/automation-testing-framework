@@ -787,3 +787,35 @@ Feature: Docuseries tests
       | lifetime  | no         | no                 | 1          | most_popular       | 178    | 82     | No    | Yes            | Type 2   | 54  | male   |
       | monthly   | 1          | no                 | 6          | best_value         | 162    | 59     | Yes   | No             | No       | 26  | female |
       | annually  | no         | no                 | no         | upgrade            | 172    | 74     | No    | No             | Type 1   | 44  | male   |
+
+
+  @hh_live @all_docuseries
+  Scenario Outline: HH Live funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Collagen" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rc_bottles> | <rc_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | outline | opt_in_page          | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
+      | 1       | hh_live              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | hh_live_inflammation | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | hh_live_emotions     | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | hh_live_obesity      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | hh_live_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+      | 6       | hh_live_heart        | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | hh_live_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+      | 8       | hh_live_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9       | hh_live              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
