@@ -9,12 +9,12 @@ class UserPage(BasePage):
 
     def verify_registration(self):
         name_on_page = self.context.page.locator(USER_MENU_BUTTON).inner_text()
-        assert common_variables.supplement_funnel_name in name_on_page, (f'Expected name to be '
-                                                                         f'"{common_variables.supplement_funnel_name}",'
+        assert self.context.supplement_funnel_name in name_on_page, (f'Expected name to be '
+                                                                         f'"{self.context.supplement_funnel_name}",'
                                                                          f' but it is "{name_on_page}"!')
         print('===> Verified registration')
-        print(f'Email: {common_variables.supplement_funnel_email}')
-        print(f'Pass: {common_variables.supplement_funnel_password}')
+        print(f'Email: {self.context.supplement_funnel_email}')
+        print(f'Pass: {self.context.supplement_funnel_password}')
 
     def navigate_to_video(self, video_title):
         # This is a placeholder for the hardcoded navigation logic.
@@ -33,5 +33,3 @@ class UserPage(BasePage):
         series, episode = series_title.split(" - ", 1)
         self.context.page.locator(SHOW_THUMBNAIL.format(value=series)).click()
         print(f'===> Opened series: {series_title}')
-
-

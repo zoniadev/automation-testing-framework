@@ -12,50 +12,50 @@ class OptInPage(BasePage):
 
     def register_in_opt_in_page(self):
         self.handle_cookie_banner()
-        common_variables.supplement_funnel_email = RD.automation_template_email()
-        common_variables.supplement_funnel_name = RD.automation_first_name()
+        self.context.supplement_funnel_email = RD.automation_template_email()
+        self.context.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
-        if common_variables.funnel == 'lg_live':
-            self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(common_variables.supplement_funnel_name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
-        elif common_variables.mobile_run:
-            self.context.page.locator(MOBILE_OPTIN_NAME_FIELD).type(common_variables.supplement_funnel_name)
-            self.context.page.locator(MOBILE_OPTIN_EMAIL_FIELD).type(common_variables.supplement_funnel_email, delay=50)
+        if self.context.funnel == 'lg_live':
+            self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(self.context.supplement_funnel_name)
+            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(self.context.supplement_funnel_email)
+        elif self.context.mobile_run:
+            self.context.page.locator(MOBILE_OPTIN_NAME_FIELD).type(self.context.supplement_funnel_name)
+            self.context.page.locator(MOBILE_OPTIN_EMAIL_FIELD).type(self.context.supplement_funnel_email, delay=50)
         else:
-            self.context.page.locator(OPTIN_NAME_FIELD).fill(common_variables.supplement_funnel_name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(common_variables.supplement_funnel_email)
+            self.context.page.locator(OPTIN_NAME_FIELD).fill(self.context.supplement_funnel_name)
+            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(self.context.supplement_funnel_email)
         self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
-        if common_variables.funnel.startswith('bb_ev'):
-            common_variables.funnel = 'bb_ev'
-        elif common_variables.funnel.startswith('bb_live'):
-            common_variables.funnel = 'bb_live'
-        elif common_variables.funnel.startswith('ad_ev'):
-            common_variables.funnel = 'ad_ev'
-        elif common_variables.funnel.startswith('lg_ev'):
-            common_variables.funnel = 'lg_ev'
-        elif common_variables.funnel.startswith('lg_live'):
-            common_variables.funnel = 'lg_live'
-        elif common_variables.funnel.startswith('km_live'):
-            common_variables.funnel = 'km_live'
-        elif common_variables.funnel.startswith('is_ev'):
-            common_variables.funnel = 'is_ev'
-        elif common_variables.funnel.startswith('tf_ev'):
-            common_variables.funnel = 'tf_ev'
-        elif common_variables.funnel.startswith('km_ev'):
-            common_variables.funnel = 'km_ev'
-        elif common_variables.funnel.startswith('twl_evergreen'):
-            common_variables.funnel = 'twl_ev'
-        elif common_variables.funnel.startswith('cr_live'):
-            common_variables.funnel = 'cr_live'
-        elif common_variables.funnel.startswith('cr_ev'):
-            common_variables.funnel = 'cr_ev'
-        elif common_variables.funnel.startswith('cr_1ep'):
-            common_variables.funnel = 'cr_1ep'
-        if common_variables.funnel == 'twl_ev':
-            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_screening_url'),
+        if self.context.funnel.startswith('bb_ev'):
+            self.context.funnel = 'bb_ev'
+        elif self.context.funnel.startswith('bb_live'):
+            self.context.funnel = 'bb_live'
+        elif self.context.funnel.startswith('ad_ev'):
+            self.context.funnel = 'ad_ev'
+        elif self.context.funnel.startswith('lg_ev'):
+            self.context.funnel = 'lg_ev'
+        elif self.context.funnel.startswith('lg_live'):
+            self.context.funnel = 'lg_live'
+        elif self.context.funnel.startswith('km_live'):
+            self.context.funnel = 'km_live'
+        elif self.context.funnel.startswith('is_ev'):
+            self.context.funnel = 'is_ev'
+        elif self.context.funnel.startswith('tf_ev'):
+            self.context.funnel = 'tf_ev'
+        elif self.context.funnel.startswith('km_ev'):
+            self.context.funnel = 'km_ev'
+        elif self.context.funnel.startswith('twl_evergreen'):
+            self.context.funnel = 'twl_ev'
+        elif self.context.funnel.startswith('cr_live'):
+            self.context.funnel = 'cr_live'
+        elif self.context.funnel.startswith('cr_ev'):
+            self.context.funnel = 'cr_ev'
+        elif self.context.funnel.startswith('cr_1ep'):
+            self.context.funnel = 'cr_1ep'
+        if self.context.funnel == 'twl_ev':
+            self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_screening_url'),
                                      timeout=20000)
-        elif common_variables.funnel == 'cr_1ep':
-            self.wait_for_navigation(getattr(common_variables, f'{common_variables.funnel}_ep1_live_url'),
+        elif self.context.funnel == 'cr_1ep':
+            self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_ep1_live_url'),
                                      timeout=20000)
         else:
             attempted = []
@@ -70,14 +70,14 @@ class OptInPage(BasePage):
                 except Exception as e:
                     print(f'>>> Navigation via {attr_name} failed: {e}')
                     return False
-            rw_attr = f'{common_variables.funnel}_rw_main_url'
-            default_attr = f'{common_variables.funnel}_join_zonia_url'
+            rw_attr = f'{self.context.funnel}_rw_main_url'
+            default_attr = f'{self.context.funnel}_join_zonia_url'
 
             if try_nav(default_attr):
-                common_variables.is_replay_weekend = False
+                self.context.is_replay_weekend = False
                 print('>>> Continuing with noramal flow!')
             elif try_nav(rw_attr):
-                common_variables.is_replay_weekend = True
+                self.context.is_replay_weekend = True
                 print('>>> Continuing with Replay Weekend flow!')
             else:
                 raise AssertionError(
@@ -87,7 +87,7 @@ class OptInPage(BasePage):
     def register_in_episode_page(self, episode):
         self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
         if episode in ['11', '12']:
-            next_page = f'{common_variables.funnel_prefix}-join-zonia-bonuses-ep{episode}'
+            next_page = f'{self.context.docuseries_prefix}-join-zonia-bonuses-ep{episode}'
         else:
-            next_page = getattr(common_variables, f'{common_variables.funnel}_join_zonia_2_url')
+            next_page = getattr(common_variables, f'{self.context.funnel}_join_zonia_2_url')
         self.wait_for_navigation(next_page, timeout=20000)
