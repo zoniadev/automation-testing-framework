@@ -11,17 +11,17 @@ class WelcomePage(BasePage):
         BasePage.__init__(self, context)
 
     def create_password(self):
-        common_variables.supplement_funnel_password = RD.password()
+        self.context.supplement_funnel_password = RD.password()
         self.context.page.locator(PASSWORD_POPUP_FIELD).click(timeout=20000)
         time.sleep(0.5)
-        self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(common_variables.supplement_funnel_password)
+        self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(self.context.supplement_funnel_password)
         time.sleep(0.5)
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_survey(self):
         time.sleep(1)
         self.handle_cookie_banner()
-        if common_variables.funnel_prefix != 'fs':
+        if self.context.docuseries_prefix != 'fs':
             self.context.page.locator(SKIP_SURVEY_BUTTON).click()
             self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
             print('===> Skipped survery')
