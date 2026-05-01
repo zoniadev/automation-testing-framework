@@ -1,0 +1,8 @@
+Executing step: user register in "is_ev" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user register in "is_ev" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_--_@1.9__20260501-221119.png
+Captured the following browser console errors:
+--- Failed to load resource: the server responded with a status of 504 () (Source: unknown source)
