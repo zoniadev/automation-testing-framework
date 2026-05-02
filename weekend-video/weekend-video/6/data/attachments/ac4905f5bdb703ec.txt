@@ -14,8 +14,5 @@ Executing step: the video player is loaded on the page
 ===> Verified the video player for "AAC - Understanding Your Aging Trajectory" is loaded
 Completed step: the video player is loaded on the page
 Executing step: the video is actively playing
-===> Verified video is playing via Video.js (time advanced from 2.119s to 4.125s)
+===> Verified video is playing via Video.js (time advanced from 2.043s to 4.051s)
 Completed step: the video is actively playing
-Executing step: the media stream network requests are successful
-===> Verified HLS stream via Video.js DOM state (networkState=2, readyState=4, currentTime=4.128s)
-Completed step: the media stream network requests are successful

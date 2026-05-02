@@ -14,5 +14,5 @@ Executing step: the video player is loaded on the page
 ===> Verified the video player for "AAC - The Ultimate Diet for Aging Gracefully" is loaded
 Completed step: the video player is loaded on the page
 Executing step: the video is actively playing
-===> Verified video is playing via Video.js (time advanced from 1.979s to 3.984s)
+===> Verified video is playing via Video.js (time advanced from 1.976s to 3.983s)
 Completed step: the video is actively playing
