@@ -1,0 +1,26 @@
+Executing step: user register in "ad_ev_mindset" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://staging.zonia.com/admb5e/ad-mindset
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/admb5e/ad-join-zonia"
+===> URL successfully changed to "https://staging.zonia.com/admb5e/ad-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "ad_ev_mindset" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+Failed step: user join Zonia
+Test failed on page: 'https://staging.zonia.com/admb5e/ad-join-zonia'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 30000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+
+Captured the following browser console errors:
+--- ReferenceError: Moengage is not defined
+    at https://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:151:5
+    at new Promise (<anonymous>)
+    at HTMLButtonElement.<anonymous> (https://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:150:25)
+    at HTMLButtonElement.dispatch (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:12444)
+    at r.handle (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:9173) moengage err (Source: unknown source)
