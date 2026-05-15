@@ -129,14 +129,19 @@ class SupplementUpsellPage(BasePage):
                 page_url = f'{funnel_prefix}_restore_life_url'
                 return getattr(common_variables, page_url)
         elif upsell_page == 'Restore Life':
-            if funnel_prefix in ('lg', 'is'):
+            if funnel_prefix == 'lg':
                 page_url = f'{funnel_prefix}_restore_detox_url'
+                return getattr(common_variables, page_url)
+            elif funnel_prefix == 'is':
+                page_url = f'{funnel_prefix}_restore_sleep_url'
                 return getattr(common_variables, page_url)
             else:
                 return common_variables.welcome_page_url
         elif upsell_page == 'Restore Sleep':
-            if funnel_prefix in ('cr'):
+            if funnel_prefix == 'cr':
                 page_url = f'{funnel_prefix}_restore_life_url'
+            elif funnel_prefix == 'is':
+                page_url = 'welcome_page_url'
             else:
                 page_url = f'{funnel_prefix}_restore_detox_url'
             return getattr(common_variables, page_url)
