@@ -14,5 +14,5 @@ Executing step: the video player is loaded on the page
 ===> Verified the video player for "AAC - Understanding Your Aging Trajectory" is loaded
 Completed step: the video player is loaded on the page
 Executing step: the video is actively playing
-===> Verified video is playing via Video.js (time advanced from 2.095s to 4.113s)
+===> Verified video is playing via Video.js (time advanced from 1.864s to 3.873s)
 Completed step: the video is actively playing
