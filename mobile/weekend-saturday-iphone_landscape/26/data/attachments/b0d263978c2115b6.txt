@@ -1,0 +1,43 @@
+Executing step: user select to buy "1" bottles in "Restore Collagen" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/restore-collagen-special
+===> Buying 1 bottle...
+Funnel: restore_collagen
+===> User email is: zoniat-v2Davis-1778927591@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/restore-collagen-6-more-bottles"
+===> URL successfully changed to "https://staging.zonia.com/restore-collagen-6-more-bottles?orderId=6a0847f34de2680b6ab12674"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Collagen" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Collagen" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://staging.zonia.com/rc-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rc-restore-sleep-6-discounted-bottles?orderId=6a0847f34de2680b6ab12674"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Collagen
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Collagen" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://staging.zonia.com/rc-restore-life-6-discounted-bottles"
+===> URL successfully changed to "https://staging.zonia.com/rc-restore-life-6-discounted-bottles?orderId=6a0847f34de2680b6ab12674"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Sleep
+Completed step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Life" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://staging.zonia.com/rc-trial"
+===> URL successfully changed to "https://staging.zonia.com/rc-trial?orderId=6a0847f34de2680b6ab12674"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Life
+Completed step: user makes following decision in "third" supplement "Restore Life" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "https://staging.zonia.com/rc-trial"
+===> URL successfully changed to "https://staging.zonia.com/rc-trial?orderId=6a0847f34de2680b6ab12674"
+===> Waiting for URL starting with "https://staging.zonia.com/welcome"
+===> URL successfully changed to "https://staging.zonia.com/welcome?mode=standard"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+Completed step: user makes following decision in 7 day free membership
+Executing step: user complete registration
+===> Verified registration
+Email: zoniat-v2Davis-1778927591@gmail.com
+Pass: ^S57XiT$
+Completed step: user complete registration
