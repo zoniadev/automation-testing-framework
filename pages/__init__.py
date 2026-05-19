@@ -8,3 +8,4 @@ from .signup_page import *
 from .blog_page import *
 from .face_scan_page import *
 from .video_player_page import *
+from .verify_disclaimer_page import *
