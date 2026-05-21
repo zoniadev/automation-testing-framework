@@ -125,13 +125,6 @@ def before_scenario(context, scenario):
 
     context.page = context.context.new_page()
 
-    def handle_console_message(msg):
-        context.console_messages.append({
-            'type': msg.type,
-            'text': msg.text
-        })
-    context.page.on("console", handle_console_message)
-
 
 def before_step(context, step):
     context.step = step
@@ -165,22 +158,6 @@ def after_step(context, step):
                 )
         except Exception as e:
             print(f"Error taking or attaching screenshot: {e}")
-        # Filter the captured console messages for errors
-        if hasattr(context, 'console_messages'):
-            # Filter for errors using dictionary syntax
-            console_errors = [msg for msg in context.console_messages if msg.get('type') == 'error']
-
-            if console_errors:
-                print("Captured the following browser console errors:")
-                for msg in console_errors:
-                    # Safe access to text
-                    error_text = msg.get('text', 'No error text found')
-
-                    # Attempt to get location data if it exists in the dict
-                    location = msg.get('location', {})
-                    url = location.get('url', 'unknown source')
-
-                    print(f"--- {error_text} (Source: {url})")
     else:
         print(f"Completed step: {context.step.name}")
     try:
