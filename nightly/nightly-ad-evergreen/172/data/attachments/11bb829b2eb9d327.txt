@@ -1,0 +1,20 @@
+Executing step: user register in "ad_ev_detox" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/admb5e/ad-detox
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "ad_ev_detox" Opt In page
+Test failed on page: 'https://staging.zonia.com/admb5e/ad-detox'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 30000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+
+Captured the following browser console errors:
+--- ReferenceError: Moengage is not defined
+    at https://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:151:5
+    at new Promise (<anonymous>)
+    at HTMLButtonElement.<anonymous> (https://staging.zonia.com/dynamic-funnels/shared/js/opt-in-scripts.js:150:25)
+    at HTMLButtonElement.dispatch (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:12444)
+    at r.handle (https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js:3:9173) moengage err (Source: unknown source)
