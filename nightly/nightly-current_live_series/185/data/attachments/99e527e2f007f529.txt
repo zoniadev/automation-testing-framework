@@ -1,0 +1,96 @@
+Executing step: user register in "bb_live_sleep" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/bb-sleep
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/bb-join-zonia"
+>>> Navigation via bb_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://staging\\.zonia\\.com/bb\\-join\\-zonia.*')'
+Actual value: https://staging.zonia.com/bb-replay-weekend 
+Call log:
+PageAssertions.to_have_url with timeout 20000ms
+  - waiting for locator(":root")
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-sleep"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+  -   locator resolved to <html lang="en">…</html>
+  -   unexpected value "https://staging.zonia.com/bb-replay-weekend"
+
+===> Waiting for URL starting with "https://staging.zonia.com/bb-replay-weekend"
+===> URL successfully changed to "https://staging.zonia.com/bb-replay-weekend"
+>>> Continuing with Replay Weekend flow!
+Completed step: user register in "bb_live_sleep" Opt In page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://staging.zonia.com/bb-join-zonia-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/bb-join-zonia-bonuses"
+===> Waiting for URL starting with "https://staging.zonia.com/bb-signup-bonuses"
+===> URL successfully changed to "https://staging.zonia.com/bb-signup-bonuses"
+>>> Successfully joined Zonia from replay weekend pages
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Curtis-1779737440@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://staging.zonia.com/bb-mini-masterclass-series"
+===> URL successfully changed to "https://staging.zonia.com/bb-mini-masterclass-series?id=6a14a38354a68acb55f5f88d"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+===> Skipping Booster Packages upsell because this flow is for replay weekend
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+Failed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Test failed on page: 'https://staging.zonia.com/bb-mini-masterclass-series?id=6a14a38354a68acb55f5f88d'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Live_funnel_--_@1.6__20260525-193159.png
+Captured the following browser console errors:
+--- Failed to load resource: net::ERR_NAME_NOT_RESOLVED (Source: unknown source)
+--- [Report Only] Refused to load the script 'https://www.gstatic.com/_/mss/boq-identity/_/js/k=boq-identity.IdpIFrameHttp.en_US.83yKiB6OnG0.2018.O/am=BBDg/d=1/rs=AOaEmlFl4KlQGnFP4pDBUNisChfJ2XsMSQ/m=base' because it violates the following Content Security Policy directive: "script-src 'unsafe-inline' 'unsafe-eval' blob: data:". Note that 'script-src-elem' was not explicitly set, so 'script-src' is used as a fallback.
+ (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 400 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Failed to load resource: the server responded with a status of 404 () (Source: unknown source)
+--- Permissions policy violation: compute-pressure is not allowed in this document. (Source: unknown source)
+--- Permissions policy violation: compute-pressure is not allowed in this document. (Source: unknown source)
