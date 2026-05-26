@@ -314,13 +314,13 @@ Feature: Docuseries tests
     And user makes following decision in docuseries "Restore Life" Upsell page
       | bottles      | upsell_downsell      |
       | <rl_bottles> | <rl_upsell_downsell> |
-    And user makes following decision in docuseries "Restore Detox" Upsell page
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
       | bottles      | upsell_downsell      |
-      | <rd_bottles> | <rd_upsell_downsell> |
+      | <rs_bottles> | <rs_upsell_downsell> |
     Then user complete registration
 
     Examples:
-      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
       | 1       | is_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
       | 2       | is_ev_brain        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
       | 3       | is_ev_cancer       | annually  | no               | no                   | no         | no                 | 1          | no                 |
