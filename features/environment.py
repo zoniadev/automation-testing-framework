@@ -1,5 +1,3 @@
-import datetime
-import os
 import re
 import shutil
 import allure
@@ -19,19 +17,6 @@ def before_all(context):
     print(f"Starting run in {env.capitalize()} env")
 
     context.playwright = sync_playwright().start()
-    headless_str = context.config.userdata.get("headless")
-    headless = headless_str.lower() == "true"
-    browser_type = context.config.userdata.get("browser")
-
-    if browser_type == "chrome":
-        context.browser = context.playwright.chromium.launch(channel="chrome",
-                                                            headless=headless,
-                                                             slow_mo=200,
-                                                             args=["--autoplay-policy=no-user-gesture-required"])
-    else:
-        context.browser = context.playwright.chromium.launch(headless=headless,
-                                                             slow_mo=200,
-                                                             args=["--autoplay-policy=no-user-gesture-required"])
 
     allure_env_path = os.path.join("allure-results", "environment.properties")
     with open(allure_env_path, "w") as env_file:
@@ -71,7 +56,25 @@ def before_scenario(context, scenario):
 
     CC.pick_payment_card(context)
 
-    context.console_messages = []
+    # Launch a fresh browser process per scenario to prevent state bleed between outline rows
+    headless_str = context.config.userdata.get("headless")
+    headless = headless_str.lower() == "true"
+    browser_type = context.config.userdata.get("browser")
+
+    if browser_type == "chrome":
+        context.browser = context.playwright.chromium.launch(
+            channel="chrome",
+            headless=headless,
+            slow_mo=200,
+            args=["--autoplay-policy=no-user-gesture-required"]
+        )
+    else:
+        context.browser = context.playwright.chromium.launch(
+            headless=headless,
+            slow_mo=200,
+            args=["--autoplay-policy=no-user-gesture-required"]
+        )
+
     if context.config.userdata['device'] == 'iphone':
         device = context.playwright.devices['iPhone 13']
     elif context.config.userdata['device'] == 'iphone_landscape':
@@ -113,7 +116,7 @@ def before_scenario(context, scenario):
     third_party_routes = [
         re.compile(r".*liflolrb\.marketise\.me/.*"),
         re.compile(r".*browser\.sentry-cdn\.com/.*"),
-        re.compile(r".*js\.sentry-cdn\.com/.*"),  # add this
+        re.compile(r".*js\.sentry-cdn\.com/.*"),
         re.compile(r".*stapecdn\.com/.*"),
         re.compile(r".*googletagmanager\.com/.*"),
     ]
@@ -135,7 +138,7 @@ def after_step(context, step):
     if step.status == "failed":
         print(f"Failed step: {context.step.name}")
         print(f"Test failed on page: '{context.page.url}'")
-        print("Taking screenshots")
+        print("Taking screenshot")
         if not os.path.exists(SCREENSHOTS_DIR):
             os.makedirs(SCREENSHOTS_DIR)
         current_time = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -187,6 +190,9 @@ def after_scenario(context, scenario):
         else:
             allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
 
+    # Kill the browser process entirely — fresh process for the next outline row
+    context.browser.close()
+
     if scenario.status == "failed":
         print(f"Failed scenario: '{context.scenario.name}'")
     else:
@@ -202,7 +208,6 @@ def after_feature(context, feature):
 
 def after_all(context):
     print("Run completed")
-    context.browser.close()
     context.playwright.stop()
     print("Cleaning up the DB from old Automation users...")
     try:
