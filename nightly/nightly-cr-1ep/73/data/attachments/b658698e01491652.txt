@@ -1,0 +1,6 @@
+Executing step: user register in "cr_1ep_trauma" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+Failed step: user register in "cr_1ep_trauma" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb1e/cr-emotions'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.5__20260529-194241.png
