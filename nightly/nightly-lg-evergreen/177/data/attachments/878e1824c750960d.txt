@@ -1,0 +1,6 @@
+Executing step: user register in "lg_ev_metabolism" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user register in "lg_ev_metabolism" Opt In page
+Test failed on page: 'https://staging.zonia.com/lgmb5e/lg-metabolism'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Evergreen_funnel_--_@1.2__20260530-001531.png
