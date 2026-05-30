@@ -1,0 +1,10 @@
+Executing step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/restore-gut-3-free-bottles
+===> Buying 1 bottle...
+Funnel: restore_gut_b2g3
+===> User email is: zoniat-v2Nguyen-1780138281@gmail.com
+Failed step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-gut-signup-1-bottle-2'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Gut_-_Buy_2,_Get_3_Free_bottles_Supplement_nightly_--_@1.1__20260530-105156.png
