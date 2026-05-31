@@ -1,0 +1,10 @@
+Executing step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/restore-vision-3-free-bottles
+===> Buying 1 bottle...
+Funnel: restore_vision_b2g3
+===> User email is: zoniat-v2Lane-1780229893@gmail.com
+Failed step: user select to buy "1" bottles in "Restore Vision B2G3" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-vision-signup-1-bottle-2'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Vision_-_Buy_2,_Get_3_Free_bottles_Supplement_nightly_--_@1.1__20260531-121847.png
