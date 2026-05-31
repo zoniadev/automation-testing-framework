@@ -1,0 +1,26 @@
+Executing step: user register in "cr_1ep_aging" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://staging.zonia.com/crmb1e/cr-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+Completed step: user register in "cr_1ep_aging" Opt In page
+Executing step: user join Zonia in 1 episode page
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-join-zonia-2"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-join-zonia-2"
+Completed step: user join Zonia in 1 episode page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://staging.zonia.com/crmb1e/cr-signup"
+===> URL successfully changed to "https://staging.zonia.com/crmb1e/cr-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hill-1780250924@gmail.com
+Failed step: user sign up for "lifetime" plan
+Test failed on page: 'https://staging.zonia.com/crmb1e/cr-signup'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.6__20260531-180923.png
