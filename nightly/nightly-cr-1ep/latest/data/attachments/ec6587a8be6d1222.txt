@@ -1,0 +1,6 @@
+Executing step: user register in "cr_1ep_toxins" Opt In page
+Scenario will use "American Express" card "378282246310005"
+Failed step: user register in "cr_1ep_toxins" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb1e/cr-toxins'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.3__20260601-210304.png
