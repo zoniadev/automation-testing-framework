@@ -1,6 +1,4 @@
 # from behave import step
-import csv
-
 from common_functions.custom_step_decorator import step
 import common_variables
 import common_functions.random_data as RD
@@ -270,17 +268,15 @@ def user_navigates_to_video_page(context, video_title):
 
 @step('the target URLs are loaded from "{csv_file_path}"')
 def step_load_urls(context, csv_file_path):
+    # context.urls now holds a list of dictionaries: [{"url": ..., "disclaimer": ...}, ...]
     context.urls = CS.read_urls(csv_file_path)
 
-
-@step('the following disclaimer text should be verified on all loaded pages')
+@step('the corresponding disclaimers should be verified on all loaded pages')
 def step_verify_disclaimer(context):
-    # Extract the multi-line text block from the feature file
-    expected_text = context.text.strip()
-    print(f'Looking for disclaimer with text: "{expected_text}"')
     """
     Iterates sequentially through the loaded URLs using the same Playwright page context.
     Accumulates errors and asserts failure only at the end of execution.
     """
     page = DisclaimerPage(context)
-    page.verify_disclaimer(context.urls, expected_text)
+    # Pass the structure containing both URLs and disclaimers to the page object
+    page.verify_disclaimer(context.urls)
