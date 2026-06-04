@@ -12,6 +12,7 @@ class SupplementStartPage(BasePage):
 
     def supplement_funnel_buy_bottles(self, amount, funnel):
         self.disable_chat()
+        self.handle_cookie_banner()
         from playwright.sync_api import expect
         self.context.supplement_funnel_email = RD.automation_template_email()
         self.context.supplement_funnel_name = RD.automation_first_name()
