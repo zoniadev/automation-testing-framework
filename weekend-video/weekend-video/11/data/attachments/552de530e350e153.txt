@@ -8,7 +8,8 @@ Executing step: user navigates to the "AAC - The Ultimate Diet for Aging Gracefu
 ===> Navigated to https://staging.zonia.com/user/aac-3/4
 Completed step: user navigates to the "AAC - The Ultimate Diet for Aging Gracefully" video page
 Executing step: user initiates the video play
-Failed step: user initiates the video play
-Test failed on page: 'https://staging.zonia.com/user/aac-3/4'
-Taking screenshot
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_playback_of_key_videos_--_@1.2__20260530-054552.png
+===> Commanded video player to play 'AAC - The Ultimate Diet for Aging Gracefully' via JavaScript
+Completed step: user initiates the video play
+Executing step: the video player is loaded on the page
+===> Verified the video player for "AAC - The Ultimate Diet for Aging Gracefully" is loaded
+Completed step: the video player is loaded on the page

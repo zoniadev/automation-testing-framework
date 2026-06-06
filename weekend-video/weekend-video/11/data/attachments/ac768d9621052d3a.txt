@@ -8,7 +8,5 @@ Executing step: user navigates to the "AAC - Understanding Your Aging Trajectory
 ===> Navigated to https://staging.zonia.com/user/aac-3/1
 Completed step: user navigates to the "AAC - Understanding Your Aging Trajectory" video page
 Executing step: user initiates the video play
-Failed step: user initiates the video play
-Test failed on page: 'https://staging.zonia.com/user/aac-3/1'
-Taking screenshot
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_playback_of_key_videos_--_@1.1__20260530-054537.png
+===> Commanded video player to play 'AAC - Understanding Your Aging Trajectory' via JavaScript
+Completed step: user initiates the video play
