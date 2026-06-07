@@ -1,0 +1,6 @@
+Executing step: user register in "cr_1ep_immune" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user register in "cr_1ep_immune" Opt In page
+Test failed on page: 'https://staging.zonia.com/crmb1e/cr-immunity'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.2__20260607-180929.png
