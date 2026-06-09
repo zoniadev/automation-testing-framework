@@ -1,5 +1,5 @@
-# from behave import step
-from common_functions.custom_step_decorator import step
+from behave import step
+# from common_functions.custom_step_decorator import step
 import common_variables
 import common_functions.random_data as RD
 import common_functions.parse_csv as CS
@@ -265,11 +265,11 @@ def user_navigates_to_video_page(context, video_title):
     page.navigate_to_video(video_title)
 
 
-
 @step('the target URLs are loaded from "{csv_file_path}"')
 def step_load_urls(context, csv_file_path):
     # context.urls now holds a list of dictionaries: [{"url": ..., "disclaimer": ...}, ...]
     context.urls = CS.read_urls(csv_file_path)
+
 
 @step('the corresponding disclaimers should be verified on all loaded pages')
 def step_verify_disclaimer(context):
@@ -280,3 +280,13 @@ def step_verify_disclaimer(context):
     page = DisclaimerPage(context)
     # Pass the structure containing both URLs and disclaimers to the page object
     page.verify_disclaimer(context.urls)
+
+
+@step('the corresponding plan disclaimers should be verified on all loaded signup pages')
+def step_verify_signup_disclaimers(context):
+    """
+    Iterates through Signup URLs, cycles through available payment plans,
+    and validates the respective disclaimers.
+    """
+    page = DisclaimerPage(context)
+    page.verify_dynamic_disclaimers(context.urls)
