@@ -1,6 +1,0 @@
-Executing step: user register in "bb_live_immunity" Opt In page
-Scenario will use "Visa" card "4009348888881881"
-Failed step: user register in "bb_live_immunity" Opt In page
-Test failed on page: 'https://staging.zonia.com/bb-immunity'
-Taking screenshot
-Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Live_funnel_--_@1.8__20260611-202727.png
