@@ -1,0 +1,9 @@
+Executing step: user select to buy "1" bottles in "Restore Collagen" Supplements page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://staging.zonia.com/restore-collagen-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Collagen" Supplements page
+Test failed on page: 'https://staging.zonia.com/restore-collagen-signup-1-bottle'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Collagen_Supplement_nightly_--_@1.2__20260614-120333.png
