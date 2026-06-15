@@ -268,9 +268,9 @@ Feature: Docuseries tests
     And user makes following decision in docuseries "Restore Life" Upsell page
       | bottles      | upsell_downsell      |
       | <rl_bottles> | <rl_upsell_downsell> |
-    And user makes following decision in docuseries "Restore Detox" Upsell page
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
       | bottles      | upsell_downsell      |
-      | <rd_bottles> | <rd_upsell_downsell> |
+      | <rs_bottles> | <rs_upsell_downsell> |
     Then user complete registration
 
     Examples:
