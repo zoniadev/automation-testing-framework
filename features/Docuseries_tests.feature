@@ -254,50 +254,36 @@ Feature: Docuseries tests
       | 9       | km_ev         | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
-#  @is_live @all_docuseries
-#  Scenario Outline: IS Live funnel
-#    Given user register in "<opt_in_page>" Opt In page
-#    And user join Zonia
-#    When user sign up for "<plan>" plan
-#    And user makes following decision in docuseries "Booster Packages" Upsell page
-#      | decision           |
-#      | <booster_packages> |
-#    And user makes following decision in docuseries "Masterclass Packages" Upsell page
-#      | decision               |
-#      | <masterclass_packages> |
-#    And user makes following decision in docuseries "Restore Life" Upsell page
-#      | bottles      | upsell_downsell      |
-#      | <rl_bottles> | <rl_upsell_downsell> |
-#    And user makes following decision in docuseries "Restore Detox" Upsell page
-#      | bottles      | upsell_downsell      |
-#      | <rd_bottles> | <rd_upsell_downsell> |
-#    Then user complete registration
-#
-#    Examples:
-#      | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-#      | is_live              | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-#      | is_live_brain        | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
-#      | is_live_cancer       | monthly   | no               | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | is_live_autoimmunity | lifetime  | silver           | buy                  | no         | upgrade            | 6          | best_value         |
-#      | is_live_gut          | annually  | no               | no                   | 1          | best_value         | 6          | most_popular       |
-#      | is_live_heart        | lifetime  | silver           | no                   | 1          | most_popular       | 1          | no                 |
-#      | is_live_obesity      | monthly   | no               | buy                  | no         | no                 | 3          | upgrade            |
-#      | is_live_trauma       | quarterly | platinum         | buy                  | 3          | most_popular       | no         | no                 |
-#      | is_live              | quarterly | platinum         | no                   | 6          | best_value         | 1          | best_value         |
-#      | is_live_brain        | quarterly | no               | buy                  | 6          | most_popular       | 6          | upgrade            |
-#      | is_live_cancer       | annually  | no               | no                   | 3          | most_popular       | 3          | best_value         |
-#      | is_live_autoimmunity | monthly   | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
-#      | is_live_gut          | lifetime  | silver           | no                   | 3          | no                 | 6          | most_popular       |
-#      | is_live_heart        | lifetime  | silver           | buy                  | 3          | best_value         | 3          | upgrade            |
-#      | is_live_obesity      | annually  | platinum         | buy                  | no         | upgrade            | 1          | upgrade            |
-#      | is_live_trauma       | monthly   | silver           | buy                  | 1          | best_value         | 6          | no                 |
-#      | is_live              | lifetime  | no               | buy                  | 6          | best_value         | no         | no                 |
-#      | is_live_brain        | quarterly | platinum         | no                   | no         | no                 | no         | no                 |
-#      | is_live_cancer       | quarterly | silver           | no                   | 1          | upgrade            | 3          | most_popular       |
-#      | is_live_autoimmunity | monthly   | no               | buy                  | 3          | upgrade            | no         | no                 |
-#      | is_live_gut          | lifetime  | platinum         | no                   | no         | no                 | 1          | most_popular       |
-#      | is_live_heart        | monthly   | platinum         | buy                  | 1          | no                 | 6          | best_value         |
-#      | is_live_obesity      | annually  | silver           | no                   | no         | no                 | no         | upgrade            |
+  @is_live @all_docuseries @WIP
+  Scenario Outline: IS Live funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Detox" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rd_bottles> | <rd_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
+      | 1       | is_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+#      | 2       | is_ev_brain        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+#      | 3       | is_ev_cancer       | annually  | no               | no                   | no         | no                 | 1          | no                 |
+#      | 4       | is_ev_autoimmunity | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+#      | 5       | is_ev_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+#      | 6       | is_ev_heart        | annually  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+#      | 7       | is_ev_obesity      | monthly   | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+#      | 8       | is_ev_trauma       | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+#      | 9       | is_ev              | annually  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
   @is_evergreen @all_docuseries
