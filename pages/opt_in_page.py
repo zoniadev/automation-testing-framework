@@ -39,6 +39,8 @@ class OptInPage(BasePage):
             self.context.funnel = 'km_live'
         elif self.context.funnel.startswith('is_ev'):
             self.context.funnel = 'is_ev'
+        elif self.context.funnel.startswith('is_live'): # Added this condition
+            self.context.funnel = 'is_live'             # Added this condition
         elif self.context.funnel.startswith('tf_ev'):
             self.context.funnel = 'tf_ev'
         elif self.context.funnel.startswith('km_ev'):
