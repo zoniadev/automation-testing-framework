@@ -173,6 +173,7 @@ class BasePage(object):
 
     def handle_cookie_banner(self, timeout=5000):
         possible_locators = [
+            NEW_COOKIE_BUTTON,
             ACCEPT_COOKIES_BUTTON,
             CLOSE_COOKIE_BANNER_BUTTON
         ]
