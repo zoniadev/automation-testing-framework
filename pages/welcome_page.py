@@ -4,6 +4,7 @@ import common_functions.random_data as RD
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
+from playwright.sync_api import expect
 
 
 class WelcomePage(BasePage):
@@ -19,9 +20,11 @@ class WelcomePage(BasePage):
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 
     def skip_survey(self):
-        time.sleep(1)
+        time.sleep(1) # Keep a small sleep just in case, but rely more on explicit wait
         self.handle_cookie_banner()
         if self.context.docuseries_prefix != 'fs':
+            # Explicitly wait for the SKIP_SURVEY_BUTTON to be visible before clicking
+            expect(self.context.page.locator(SKIP_SURVEY_BUTTON)).to_be_visible(timeout=10000)
             self.context.page.locator(SKIP_SURVEY_BUTTON).click()
             self.wait_for_navigation(common_variables.survey_page_url, timeout=30000)
             print('===> Skipped survery')

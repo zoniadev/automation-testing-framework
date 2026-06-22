@@ -147,6 +147,8 @@ class SupplementUpsellPage(BasePage):
             else:
                 page_url = f'{funnel_prefix}_restore_detox_url'
             return getattr(common_variables, page_url)
+        elif upsell_page == 'Restore Collagen': # Added this condition
+            return common_variables.welcome_page_url # Added this condition
 
     def _handle_docuseries_bottle_purchase(self, upsell_page, amount, next_page_navigation):
         """Handles the logic for purchasing (or not purchasing) bottles."""

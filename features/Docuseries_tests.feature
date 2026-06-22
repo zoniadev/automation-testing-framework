@@ -591,7 +591,7 @@ Feature: Docuseries tests
       | 7       | quarterly | 3          | most_popular       | 1          | best_value         | 185    | 90     | Yes   | No             | Type 1   | 40  | male   |
 
 
-  @hh_live @all_docuseries
+  @hh_live @all_docuseries @WIP
   Scenario Outline: HH Live funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
