@@ -26,7 +26,7 @@ class SignUpPage(BasePage):
             self.populate_cc_details(submit_button=FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
         else:
             self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
-        if self.context.docuseries_prefix not in ['km', 'twl', 'ad', 'cr']:
+        if self.context.docuseries_prefix not in ['km', 'twl', 'ad', 'cr', 'hh']:
             if cycle == 'lifetime':
                 cycle = 'monthly'
         if self.context.is_replay_weekend:
