@@ -278,12 +278,12 @@ Feature: Docuseries tests
       | 1       | is_live              | monthly   | no               | no                   | no         | no                 | no         | no                 |
       | 2       | is_live_brain        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
       | 3       | is_live_cancer       | annually  | no               | no                   | no         | no                 | 1          | no                 |
-      | 4       | is_live_autoimmunity | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 4       | is_live_autoimmunity | lifetime  | no               | no                   | no         | upgrade            | no         | no                 |
       | 5       | is_live_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
       | 6       | is_live_heart        | annually  | no               | buy                  | no         | upgrade            | 6          | best_value         |
       | 7       | is_live_obesity      | monthly   | platinum         | no                   | 1          | best_value         | no         | upgrade            |
       | 8       | is_live_trauma       | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
-      | 9       | is_live              | annually  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | 9       | is_live              | lifetime  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
   @is_evergreen @all_docuseries
@@ -310,12 +310,12 @@ Feature: Docuseries tests
       | 1       | is_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
       | 2       | is_ev_brain        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
       | 3       | is_ev_cancer       | annually  | no               | no                   | no         | no                 | 1          | no                 |
-      | 4       | is_ev_autoimmunity | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 4       | is_ev_autoimmunity | lifetime  | no               | no                   | no         | upgrade            | no         | no                 |
       | 5       | is_ev_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
       | 6       | is_ev_heart        | annually  | no               | buy                  | no         | upgrade            | 6          | best_value         |
       | 7       | is_ev_obesity      | monthly   | platinum         | no                   | 1          | best_value         | no         | upgrade            |
       | 8       | is_ev_trauma       | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
-      | 9       | is_ev              | annually  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | 9       | is_ev              | lifetime  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
   @tf_evergreen @all_docuseries
