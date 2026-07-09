@@ -1,4 +1,4 @@
-base_url_new = 'https://zonia22stage.us-west-2.elasticbeanstalk.com/'
+base_url_new = 'https://zonia-stg.com/'
 base_url_staging = 'https://staging.zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
@@ -190,7 +190,6 @@ is_live_sign_up_url = 'is-signup'
 is_booster_monthly_upsale_url = 'is-booster-packages-monthly'
 is_booster_quarterly_upsale_url = 'is-booster-packages-quarterly'
 is_booster_annually_upsale_url = 'is-booster-packages-annually'
-is_booster_lifetime_upsale_url = 'is-booster-packages-lifetime'
 is_silver_masterclass_url = 'is-mini-masterclass-series-silver-package'
 is_platinum_masterclass_url = 'is-mini-masterclass-series-platinum-package'
 is_masterclass_url = 'is-mini-masterclass-series'
