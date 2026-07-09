@@ -195,9 +195,34 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | opt_in_page     | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | km_live         | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
-      | km_live_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | opt_in_page   | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
+      | km_ev         | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | km_ev_mystery | monthly   | no               | no                   | no         | no                 | no         | no                 |
+
+
+  @nightly @nightly_docuseries
+  Scenario Outline: IS Live nightly
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | opt_in_page   | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
+      | is_live       | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | is_live_brain | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly @nightly_docuseries
@@ -214,15 +239,15 @@ Feature: Nightly tests
     And user makes following decision in docuseries "Restore Life" Upsell page
       | bottles      | upsell_downsell      |
       | <rl_bottles> | <rl_upsell_downsell> |
-    And user makes following decision in docuseries "Restore Detox" Upsell page
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
       | bottles      | upsell_downsell      |
-      | <rd_bottles> | <rd_upsell_downsell> |
+      | <rs_bottles> | <rs_upsell_downsell> |
     Then user complete registration
 
     Examples:
-      | opt_in_page      | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | is_ev            | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
-      | lg_ev_metabolism | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | opt_in_page | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
+      | is_ev       | quarterly | platinum         | buy                  | 3          | upgrade            | 1          | upgrade            |
+      | is_ev_brain | monthly   | no               | no                   | no         | no                 | no         | no                 |
 
 
   @nightly @nightly_docuseries
@@ -327,6 +352,31 @@ Feature: Nightly tests
 
 
   @nightly @nightly_docuseries
+  Scenario Outline: CR Live screening nightly
+    Given user is on the "cr_live" episode "<episode>" page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Life" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rl_bottles> | <rl_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | episode | plan    | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | 1       | monthly | no               | no                   | no         | no                 | no         | no                 |
+      | 12      | monthly | platinum         | buy                  | 6          | upgrade            | 3          | most_popular       |
+
+
+  @nightly @nightly_docuseries
   Scenario Outline: CR Evergreen nightly
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
@@ -372,9 +422,9 @@ Feature: Nightly tests
     Then user complete registration
 
     Examples:
-      | opt_in_page    | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | cr_1ep         | annually  | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
-      | cr_1ep_immune  | annually  | silver           | buy                  | 6          | no                 | 3          | no                 |
+      | opt_in_page   | plan     | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rl_bottles | rl_upsell_downsell |
+      | cr_1ep        | annually | platinum         | no                   | 1          | upgrade            | no         | upgrade            |
+      | cr_1ep_immune | annually | silver           | buy                  | 6          | no                 | 3          | no                 |
 
 
   @nightly @nightly_docuseries
@@ -394,27 +444,6 @@ Feature: Nightly tests
       | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
       | quarterly | no         | no                 | no         | no                 |
       | monthly   | 1          | upgrade            | 3          | upgrade            |
-
-
-  @nightly @nightly_docuseries
-  Scenario Outline: Face Scan nightly
-    Given user fills face scan form with
-      | height   | weight   | smoke   | blood_pressure   | diabetic   | age   | gender   |
-      | <height> | <weight> | <smoke> | <blood_pressure> | <diabetic> | <age> | <gender> |
-    And user join Zonia
-    When user sign up for "<plan>" plan
-    And user makes following decision in docuseries "Restore Sleep" Upsell page
-      | bottles      | upsell_downsell      |
-      | <rs_bottles> | <rs_upsell_downsell> |
-    And user makes following decision in docuseries "Restore Detox" Upsell page
-      | bottles      | upsell_downsell      |
-      | <rd_bottles> | <rd_upsell_downsell> |
-    Then user complete registration
-
-    Examples:
-      | plan      | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell | height | weight | smoke | blood_pressure | diabetic | age | gender |
-      | quarterly | 3          | upgrade            | 1          | upgrade            | 175    | 72     | Yes   | Yes            | Type 2   | 37  | male   |
-      | monthly   | no         | no                 | no         | no                 | 165    | 60     | No    | No             | No       | 28  | female |
 
 
   @nightly @nightly_supplement
@@ -491,24 +520,24 @@ Feature: Nightly tests
     Given user select to buy "<bottles>" bottles in "Restore Gut B2G3" Supplements page
     When user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
       | upgrade      | last_chance      |
-      | <rg_upgrade> | <rg_last_chance> |
+      | <vs_upgrade> | <vs_last_chance> |
     And user makes following decision in "second" supplement "Restore Detox" Upsell page
       | upgrade      | last_chance      |
-      | <lf_upgrade> | <lf_last_chance> |
+      | <dt_upgrade> | <dt_last_chance> |
     And user makes following decision in "third" supplement "Restore Sleep" Upsell page
       | upgrade      | last_chance      |
-      | <dt_upgrade> | <dt_last_chance> |
+      | <sl_upgrade> | <sl_last_chance> |
     And user makes following decision in 7 day free membership
       | decision        | plan        |
       | <memb_decision> | <memb_plan> |
     Then user complete registration
 
     Examples:
-      | bottles | rg_upgrade | rg_last_chance | lf_upgrade | lf_last_chance | dt_upgrade | dt_last_chance | memb_decision | memb_plan |
+      | bottles | vs_upgrade | vs_last_chance | dt_upgrade | dt_last_chance | sl_upgrade | sl_last_chance | memb_decision | memb_plan |
       | 1       | no         | no             | no         | no             | no         | no             | decline       | no        |
       | 1       | no         | best_value     | no         | most_popular   | yes        | no             | accept        | monthly   |
 
-
+    
   @nightly @nightly_supplement
   Scenario Outline: Restore Vision Supplement nightly
     Given user select to buy "<bottles>" bottles in "Restore Vision" Supplements page
