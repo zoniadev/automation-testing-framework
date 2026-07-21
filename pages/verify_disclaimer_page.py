@@ -42,7 +42,7 @@ class DisclaimerPage(BasePage):
             url = entry["url"]
             expected_text = entry["disclaimer"]
             try:
-                self.context.page.goto(url, wait_until="load", timeout=15000)
+                self.context.page.goto(url, wait_until="domcontentloaded", timeout=15000)
                 if self.context.page.get_by_text(expected_text).count() == 0:
                     failed_pages.append({
                         "url": url,
@@ -65,7 +65,7 @@ class DisclaimerPage(BasePage):
         for i, entry in enumerate(url_entries):
             url = entry["url"]
             try:
-                self.context.page.goto(url, wait_until="load", timeout=15000)
+                self.context.page.goto(url, wait_until="domcontentloaded", timeout=15000)
                 # 1. Verify standard cycles
                 # OPTIMIZATION: Only handle cookie banner on the very first URL
                 if i == 0:
