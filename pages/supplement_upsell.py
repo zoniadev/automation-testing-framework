@@ -101,7 +101,7 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for masterclass...')
         if self.context.docuseries_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
-        elif self.context.docuseries_prefix in ['km', 'twl', 'cr']:
+        elif self.context.docuseries_prefix in ['km', 'twl', 'cr', 'hh']:
             upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
@@ -142,9 +142,13 @@ class SupplementUpsellPage(BasePage):
                 page_url = f'{funnel_prefix}_restore_life_url'
             elif funnel_prefix == 'is':
                 page_url = 'welcome_page_url'
+            elif funnel_prefix == 'hh':
+                page_url = f'{funnel_prefix}_restore_collagen_url'
             else:
                 page_url = f'{funnel_prefix}_restore_detox_url'
             return getattr(common_variables, page_url)
+        elif upsell_page == 'Restore Collagen': # Added this condition
+            return common_variables.welcome_page_url # Added this condition
 
     def _handle_docuseries_bottle_purchase(self, upsell_page, amount, next_page_navigation):
         """Handles the logic for purchasing (or not purchasing) bottles."""

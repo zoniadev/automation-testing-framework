@@ -51,7 +51,7 @@ def user_select_in_docuseries_upsell(context, upsell_page):
     elif upsell_page == 'Masterclass Packages':
         for row in context.table:
             page.chose_docuseries_masterclass_upsell(decision=row['decision'])
-    elif upsell_page in ['Restore Detox', 'Restore Life', 'Restore Sleep']:
+    elif upsell_page in ['Restore Detox', 'Restore Life', 'Restore Sleep', 'Restore Collagen']: # Added 'Restore Collagen'
         for row in context.table:
             page.docuseries_buy_upsells(upsell_page, amount=row['bottles'], upsell_downsell=row['upsell_downsell'])
 
