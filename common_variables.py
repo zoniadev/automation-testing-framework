@@ -1,5 +1,5 @@
 base_url_new = 'https://zonia-stg.com/'
-base_url_staging = 'https://staging.zonia.com/'
+base_url_staging = 'https://zonia-stg.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
 
