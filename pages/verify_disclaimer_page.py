@@ -1,33 +1,66 @@
+from datetime import date, timedelta
+
 from pages.base_page_object import BasePage
 import locators
 
-SIGNUP_DISCLAIMERS = {
-    "monthly": (
-        'By clicking the "Activate My Membership" button below, a recurring monthly charge '
-        'of $20 USD will automatically start today. You may cancel at any time. To cancel, '
-        'go online to your Account and click on "Cancel Membership." If you cancel within the '
-        'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
-        'you agree to the Terms of Use and Privacy Policy.'
-    ),
-    "quarterly": (
-        'By clicking the "Activate My Membership" button below, a recurring quarterly charge '
-        'of $45 USD will automatically start today. You may cancel at any time. To cancel, '
-        'go online to your Account and click on "Cancel Membership." If you cancel within the '
-        'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
-        'you agree to the Terms of Use and Privacy Policy.'
-    ),
-    "annually": (
-        'By clicking the "Activate My Membership" button below, a recurring annual charge '
-        'of $120 USD will automatically start today. You may cancel at any time. To cancel, '
-        'go online to your Account and click on "Cancel Membership." If you cancel within the '
-        'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
-        'you agree to the Terms of Use and Privacy Policy.'
-    ),
-    "lifetime": (
-        'By clicking "Activate My Membership," you agree to the Terms of Use and Privacy Policy. '
-        'If you cancel within the first 7 days you may request a full refund by emailing support@zonia.com.'
+
+def _trial_disclaimer(plan_label, amount):
+    """7-day-free-trial pages bill on a future date instead of "today"."""
+    charge_date = date.today() + timedelta(days=7)
+    return (
+        f'By clicking the "Activate My Membership" button below, after your free 7-day free '
+        f'membership, a recurring {plan_label} charge of ${amount} USD will automatically apply '
+        f'and start on {charge_date.month}/{charge_date.day}/{charge_date.year}. You may cancel at '
+        'any time. To cancel, go online to your Account and click on "Cancel Membership." If you '
+        'cancel within the first 7 days you may request a full refund by emailing support@zonia.com. '
+        'By proceeding, you agree to the Terms of Use and Privacy Policy.'
     )
+
+
+# Keyed by the Signup.csv "type" column. Each entry maps plan name -> expected
+# disclaimer text (static string) or a callable returning it (for text that
+# depends on the current date). "one_time" pages have no plan selector at all,
+# so they're handled separately via ONE_TIME_DISCLAIMER.
+SIGNUP_DISCLAIMERS = {
+    "standard": {
+        "monthly": (
+            'By clicking the "Activate My Membership" button below, a recurring monthly charge '
+            'of $20 USD will automatically start today. You may cancel at any time. To cancel, '
+            'go online to your Account and click on "Cancel Membership." If you cancel within the '
+            'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
+            'you agree to the Terms of Use and Privacy Policy.'
+        ),
+        "quarterly": (
+            'By clicking the "Activate My Membership" button below, a recurring quarterly charge '
+            'of $45 USD will automatically start today. You may cancel at any time. To cancel, '
+            'go online to your Account and click on "Cancel Membership." If you cancel within the '
+            'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
+            'you agree to the Terms of Use and Privacy Policy.'
+        ),
+        "annually": (
+            'By clicking the "Activate My Membership" button below, a recurring annual charge '
+            'of $120 USD will automatically start today. You may cancel at any time. To cancel, '
+            'go online to your Account and click on "Cancel Membership." If you cancel within the '
+            'first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, '
+            'you agree to the Terms of Use and Privacy Policy.'
+        ),
+        "lifetime": (
+            'By clicking "Activate My Membership," you agree to the Terms of Use and Privacy Policy. '
+            'If you cancel within the first 7 days you may request a full refund by emailing support@zonia.com.'
+        ),
+    },
+    "trial": {
+        "monthly": lambda: _trial_disclaimer("monthly", 20),
+        "quarterly": lambda: _trial_disclaimer("quarterly", 45),
+        "annually": lambda: _trial_disclaimer("annual", 120),
+    },
 }
+
+ONE_TIME_DISCLAIMER = (
+    'By clicking the "Place order securely" button below you agree to receive marketing emails '
+    'from Zonia about products, events, and promotions. You may unsubscribe at any time. By '
+    'proceeding with the registration, you agree to our Terms of Use and Privacy Policy.'
+)
 
 
 class DisclaimerPage(BasePage):
@@ -58,38 +91,47 @@ class DisclaimerPage(BasePage):
         print("All pages validated successfully.")
 
     def verify_dynamic_disclaimers(self, url_entries):
-        """Verifies dynamic disclaimers on Signup pages cycling through billing plans."""
+        """Verifies disclaimers on Signup pages, per-URL behavior selected by its "type" column."""
         failed_pages = []
         total_urls = len(url_entries)
         standard_cycles = ["monthly", "quarterly", "annually"]
         for i, entry in enumerate(url_entries):
             url = entry["url"]
+            page_type = entry.get("type", "standard")
             try:
                 self.context.page.goto(url, wait_until="domcontentloaded", timeout=15000)
-                # 1. Verify standard cycles
                 # OPTIMIZATION: Only handle cookie banner on the very first URL
                 if i == 0:
                     self.handle_cookie_banner()
-                for cycle in standard_cycles:
-                    self.select_plan(cycle)
-                    expected_text = SIGNUP_DISCLAIMERS[cycle]
-                    if self.context.page.get_by_text(expected_text).count() == 0:
+
+                if page_type == "one_time":
+                    if self.context.page.get_by_text(ONE_TIME_DISCLAIMER).count() == 0:
                         failed_pages.append({
                             "url": url,
-                            "reason": f"Plan '{cycle}': Expected text not found."
-                        })
-                # 2. Conditional check for Lifetime plan
-                lifetime_locator = getattr(locators, "LIFETIME_RADIO_BUTTON")
-                if self.context.page.locator(lifetime_locator).is_visible():
-                    self.select_plan("lifetime")
-                    expected_text = SIGNUP_DISCLAIMERS["lifetime"]
-                    if self.context.page.get_by_text(expected_text).count() == 0:
-                        failed_pages.append({
-                            "url": url,
-                            "reason": "Plan 'lifetime': Expected text not found."
+                            "reason": "Expected one-time-purchase disclaimer not found."
                         })
                 else:
-                    print(f'>>> Lifetime plan not present on "{url}" - skipping.')
+                    templates = SIGNUP_DISCLAIMERS[page_type]
+                    for cycle in standard_cycles:
+                        self.select_plan(cycle)
+                        expected_text = templates[cycle]() if callable(templates[cycle]) else templates[cycle]
+                        if self.context.page.get_by_text(expected_text).count() == 0:
+                            failed_pages.append({
+                                "url": url,
+                                "reason": f"Plan '{cycle}': Expected text not found."
+                            })
+                    # Conditional check for the Lifetime plan, where the template offers one
+                    lifetime_locator = getattr(locators, "LIFETIME_RADIO_BUTTON")
+                    if "lifetime" in templates and self.context.page.locator(lifetime_locator).is_visible():
+                        self.select_plan("lifetime")
+                        expected_text = templates["lifetime"]
+                        if self.context.page.get_by_text(expected_text).count() == 0:
+                            failed_pages.append({
+                                "url": url,
+                                "reason": "Plan 'lifetime': Expected text not found."
+                            })
+                    else:
+                        print(f'>>> Lifetime plan not present on "{url}" - skipping.')
                 print(f'Verified signup page <{i + 1} out of {total_urls}> "{url}"')
             except Exception as e:
                 failed_pages.append({"url": url, "reason": f"Execution error: {str(e)}"})
