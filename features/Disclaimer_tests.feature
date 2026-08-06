@@ -10,3 +10,9 @@ Feature: Disclaimer tests
   Scenario: Bulk verification of disclaimer text across Signup pages
     Given the target URLs are loaded from "data/Signup.csv"
     Then the corresponding plan disclaimers should be verified on all loaded signup pages
+
+
+  @disclaimer
+  Scenario: Bulk verification of disclaimer text across Upsell pages
+    Given the target URLs are loaded from "data/Upsell.csv"
+    Then the corresponding disclaimers should be verified on all loaded pages
