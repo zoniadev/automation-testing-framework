@@ -4,12 +4,12 @@ from pages.base_page_object import BasePage
 import locators
 
 
-def _trial_disclaimer(plan_label, amount):
+def _trial_disclaimer(plan_label, amount, trial_phrase="free 7-day free membership"):
     """7-day-free-trial pages bill on a future date instead of "today"."""
     charge_date = date.today() + timedelta(days=7)
     return (
-        f'By clicking the "Activate My Membership" button below, after your free 7-day free '
-        f'membership, a recurring {plan_label} charge of ${amount} USD will automatically apply '
+        f'By clicking the "Activate My Membership" button below, after your {trial_phrase}, '
+        f'a recurring {plan_label} charge of ${amount} USD will automatically apply '
         f'and start on {charge_date.month}/{charge_date.day}/{charge_date.year}. You may cancel at '
         'any time. To cancel, go online to your Account and click on "Cancel Membership." If you '
         'cancel within the first 7 days you may request a full refund by emailing support@zonia.com. '
@@ -54,13 +54,28 @@ SIGNUP_DISCLAIMERS = {
         "quarterly": lambda: _trial_disclaimer("quarterly", 45),
         "annually": lambda: _trial_disclaimer("annual", 120),
     },
+    # The flagship "/signup" page uses the same 7-day-trial structure but different wording
+    # ("free 7-day trial" instead of "free 7-day free membership").
+    "trial_main": {
+        "monthly": lambda: _trial_disclaimer("monthly", 20, "free 7-day trial"),
+        "quarterly": lambda: _trial_disclaimer("quarterly", 45, "free 7-day trial"),
+        "annually": lambda: _trial_disclaimer("annual", 120, "free 7-day trial"),
+    },
 }
 
-ONE_TIME_DISCLAIMER = (
-    'By clicking the "Place order securely" button below you agree to receive marketing emails '
-    'from Zonia about products, events, and promotions. You may unsubscribe at any time. By '
-    'proceeding with the registration, you agree to our Terms of Use and Privacy Policy.'
-)
+# Pages with no plan selector at all - one flat disclaimer, keyed by Signup.csv "type".
+ONE_TIME_DISCLAIMERS = {
+    "one_time": (
+        'By clicking the "Place order securely" button below you agree to receive marketing emails '
+        'from Zonia about products, events, and promotions. You may unsubscribe at any time. By '
+        'proceeding with the registration, you agree to our Terms of Use and Privacy Policy.'
+    ),
+    "one_time_lfs": (
+        'By clicking the "Place order securely" button below, you agree to the Terms of Use and '
+        'Privacy Policy. If you cancel within the first 7 days you may request a full refund by '
+        'emailing support@zonia.com.'
+    ),
+}
 
 
 class DisclaimerPage(BasePage):
@@ -104,8 +119,8 @@ class DisclaimerPage(BasePage):
                 if i == 0:
                     self.handle_cookie_banner()
 
-                if page_type == "one_time":
-                    if self.context.page.get_by_text(ONE_TIME_DISCLAIMER).count() == 0:
+                if page_type in ONE_TIME_DISCLAIMERS:
+                    if self.context.page.get_by_text(ONE_TIME_DISCLAIMERS[page_type]).count() == 0:
                         failed_pages.append({
                             "url": url,
                             "reason": "Expected one-time-purchase disclaimer not found."
@@ -141,7 +156,12 @@ class DisclaimerPage(BasePage):
         print("All signup pages validated successfully.")
 
     def select_plan(self, cycle):
-        """Selects the billing plan by clicking the corresponding radio button."""
+        """Selects the billing plan by clicking the corresponding radio button.
+
+        force=True: on some signup templates the radio input is visually covered by its
+        styled parent card, which fails Playwright's default actionability check even
+        though the input is a real, clickable target for the user.
+        """
         cycle_radiobutton = getattr(locators, f"{cycle.upper()}_RADIO_BUTTON")
-        self.context.page.locator(cycle_radiobutton).click()
+        self.context.page.locator(cycle_radiobutton).click(force=True)
         print(f'>>> Selected {cycle} plan')
