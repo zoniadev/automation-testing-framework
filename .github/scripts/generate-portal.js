@@ -7,6 +7,13 @@ function pad(num) {
 }
 
 const historyDir = 'allure-history';
+// Workflows that haven't produced a run in this long are treated as retired/dead
+// and dropped from the portal table (e.g. renamed or deleted workflows whose old
+// report folders otherwise linger on gh-pages forever, since nothing triggers
+// their per-run cleanup once the workflow itself is gone).
+const STALE_AFTER_DAYS = 45;
+const staleCutoff = Date.now() - STALE_AFTER_DAYS * 24 * 60 * 60 * 1000;
+
 const scopes = fs.readdirSync(historyDir).filter(scope => fs.statSync(path.join(historyDir, scope)).isDirectory());
 
 let reportsData = [];
@@ -58,8 +65,10 @@ for (const scope of scopes) {
 
 reportsData.sort((a, b) => b.lastRun - a.lastRun);
 
+const activeReports = reportsData.filter(data => data.lastRun.getTime() >= staleCutoff);
+
 let tableRows = '';
-for (const data of reportsData) {
+for (const data of activeReports) {
     tableRows += `
         <tr>
             <td>${data.name}</td>
