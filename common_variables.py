@@ -457,7 +457,7 @@ test_cards = [
     {"number": "3530111333300000", "type": "JCB"},
 ]
 
-video_user_email = 'nightlytests@gmail.com'
-video_user_pass = '12345678'
+video_user_email = 'ivan.zonia.testing+206@gmail.com'
+video_user_pass = 'pass123@@'
 zonia_login_url = 'login'
 zonia_portal_url = 'user'

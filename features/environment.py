@@ -1,5 +1,6 @@
 import re
 import shutil
+import threading
 import allure
 from playwright.sync_api import sync_playwright
 import common_variables
@@ -206,12 +207,29 @@ def after_feature(context, feature):
         print(f"Completed feature: '{context.feature.name}'")
 
 
-def after_all(context):
-    print("Run completed")
-    context.playwright.stop()
-    print("Cleaning up the DB from old Automation users...")
+def _cleanup_automation_users_worker(result):
     try:
         client = connect_to_mongodb()
         delete_automation_users(client)
     except Exception as e:
-        print(f"!!! Automation users cleanup failed: {e}")
+        result["error"] = e
+
+
+def after_all(context):
+    print("Run completed")
+    context.playwright.stop()
+    print("Cleaning up the DB from old Automation users...")
+    # The mongodb+srv:// DNS (SRV record) lookup isn't bounded by
+    # serverSelectionTimeoutMS and can hang far longer than that on a
+    # slow/blackholed network. Run it on a daemon thread with a hard
+    # deadline so a stuck DNS lookup can't hang the whole test run.
+    result = {}
+    cleanup_thread = threading.Thread(
+        target=_cleanup_automation_users_worker, args=(result,), daemon=True
+    )
+    cleanup_thread.start()
+    cleanup_thread.join(timeout=15)
+    if cleanup_thread.is_alive():
+        print("!!! Automation users cleanup timed out after 15s (likely stuck DNS/network) — abandoning cleanup.")
+    elif "error" in result:
+        print(f"!!! Automation users cleanup failed: {result['error']}")

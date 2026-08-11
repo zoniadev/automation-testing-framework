@@ -19,7 +19,17 @@ class VideoPlayerPage(BasePage):
         else:
             player_selector = "#my-player"
             self.context.page.wait_for_selector(player_selector, state="visible", timeout=10000)
-            self.context.page.evaluate(f"videojs('{player_selector}').play();")
+            # videojs().play() returns a Promise that can hang forever (e.g. a stalled
+            # stream never resolves or rejects it). page.evaluate() has no timeout of
+            # its own, so race it against a JS-side timeout to guarantee it returns.
+            self.context.page.evaluate(
+                f"""() => Promise.race([
+                    videojs('{player_selector}').play(),
+                    new Promise((_, reject) => setTimeout(
+                        () => reject(new Error('videojs play() timed out after 8000ms')), 8000
+                    ))
+                ])"""
+            )
             print(f"===> Commanded video player to play '{video_title}' via JavaScript")
 
     def verify_aac_video_is_loaded(self, video_title):
