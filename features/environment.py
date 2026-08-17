@@ -1,5 +1,7 @@
 import re
 import shutil
+import threading
+import datetime
 import allure
 from playwright.sync_api import sync_playwright
 import common_variables
@@ -7,6 +9,13 @@ from common_functions import cc_random_card as CC
 from common_functions.mongo_db import *
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
+
+
+def _utc_now():
+    # UTC, millisecond precision, matches the format used by the CI
+    # resource-monitor.log so failures can be correlated against runner
+    # CPU/RAM/disk samples by timestamp.
+    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
 
 
 def before_all(context):
@@ -29,6 +38,8 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    print(f"[{_utc_now()}] Starting scenario: '{scenario.name}'")
+
     # Initialize mutable scenario state on context
     context.is_screening_flow = False
     context.is_replay_weekend = False
@@ -136,7 +147,7 @@ def before_step(context, step):
 
 def after_step(context, step):
     if step.status == "failed":
-        print(f"Failed step: {context.step.name}")
+        print(f"[{_utc_now()}] Failed step: {context.step.name}")
         print(f"Test failed on page: '{context.page.url}'")
         print("Taking screenshot")
         if not os.path.exists(SCREENSHOTS_DIR):
@@ -194,9 +205,9 @@ def after_scenario(context, scenario):
     context.browser.close()
 
     if scenario.status == "failed":
-        print(f"Failed scenario: '{context.scenario.name}'")
+        print(f"[{_utc_now()}] Failed scenario: '{context.scenario.name}'")
     else:
-        print(f"Completed scenario: '{context.scenario.name}'")
+        print(f"[{_utc_now()}] Completed scenario: '{context.scenario.name}'")
 
 
 def after_feature(context, feature):
@@ -206,12 +217,29 @@ def after_feature(context, feature):
         print(f"Completed feature: '{context.feature.name}'")
 
 
-def after_all(context):
-    print("Run completed")
-    context.playwright.stop()
-    print("Cleaning up the DB from old Automation users...")
+def _cleanup_automation_users_worker(result):
     try:
         client = connect_to_mongodb()
         delete_automation_users(client)
     except Exception as e:
-        print(f"!!! Automation users cleanup failed: {e}")
+        result["error"] = e
+
+
+def after_all(context):
+    print("Run completed")
+    context.playwright.stop()
+    print("Cleaning up the DB from old Automation users...")
+    # The mongodb+srv:// DNS (SRV record) lookup isn't bounded by
+    # serverSelectionTimeoutMS and can hang far longer than that on a
+    # slow/blackholed network. Run it on a daemon thread with a hard
+    # deadline so a stuck DNS lookup can't hang the whole test run.
+    result = {}
+    cleanup_thread = threading.Thread(
+        target=_cleanup_automation_users_worker, args=(result,), daemon=True
+    )
+    cleanup_thread.start()
+    cleanup_thread.join(timeout=15)
+    if cleanup_thread.is_alive():
+        print("!!! Automation users cleanup timed out after 15s (likely stuck DNS/network) — abandoning cleanup.")
+    elif "error" in result:
+        print(f"!!! Automation users cleanup failed: {result['error']}")
