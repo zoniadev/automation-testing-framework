@@ -45,8 +45,24 @@ jobs:
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
+      # Auto-generated CPU/RAM/network/disk graphs in the job summary, plus
+      # detection of CPU steal time (a "noisy neighbor" on the shared
+      # GitHub-hosted runner throttling us, invisible from inside our own
+      # process). Must run before checkout to capture the whole job.
+      - name: Collect workflow telemetry
+        uses: catchpoint/workflow-telemetry-action@v2
+        with:
+          comment_on_pr: false
+
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Start resource monitor
+        run: |
+          chmod +x .github/scripts/resource-monitor.sh
+          nohup bash .github/scripts/resource-monitor.sh "$GITHUB_WORKSPACE/resource-monitor.log" 5 > monitor-launcher.log 2>&1 &
+          echo "MONITOR_PID=$!" >> "$GITHUB_ENV"
+        shell: bash
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -103,6 +119,25 @@ jobs:
           echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT with browser: $BROWSER"
           behave $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
+
+      - name: Stop resource monitor
+        if: always()
+        run: |
+          if [ -n "${MONITOR_PID:-}" ]; then
+            kill "$MONITOR_PID" 2>/dev/null || true
+          fi
+        shell: bash
+
+      - name: Upload resource monitor log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: resource-monitor-${{ env.REPORT_SCOPE }}-${{ env.REPORT_NAME }}-${{ github.run_attempt }}
+          path: |
+            resource-monitor.log
+            test-summary.txt
+          if-no-files-found: warn
+          retention-days: 14
 
       - name: Copy environment properties
         if: always()
