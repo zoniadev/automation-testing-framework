@@ -45,15 +45,6 @@ jobs:
       REPORT_NAME: ${{ inputs.report_name != '' && inputs.report_name || (inputs.report_scope != '' && inputs.report_scope || inputs.device) }}
       REPORT_BASE_URL: https://zoniadev.github.io/automation-testing-framework
     steps:
-      # Auto-generated CPU/RAM/network/disk graphs in the job summary, plus
-      # detection of CPU steal time (a "noisy neighbor" on the shared
-      # GitHub-hosted runner throttling us, invisible from inside our own
-      # process). Must run before checkout to capture the whole job.
-      - name: Collect workflow telemetry
-        uses: catchpoint/workflow-telemetry-action@v2
-        with:
-          comment_on_pr: false
-
       - name: Checkout code
         uses: actions/checkout@v4
 
