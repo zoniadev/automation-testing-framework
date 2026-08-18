@@ -214,7 +214,14 @@ class SupplementUpsellPage(BasePage):
         self._maybe_populate_shipping_address()
         self._handle_docuseries_upsell_downsell(amount, upsell_downsell)
         self._maybe_populate_shipping_address()
-        self.wait_for_navigation(next_page_navigation, timeout=30000)
+        # FLAKE-DIAG: this is the final "complete the whole order" transition
+        # of the funnel, right after the last purchase-confirming click - the
+        # heaviest backend operation in the scenario (payment capture,
+        # account/membership provisioning for everything bought). Log
+        # backend response times here to tell a slow finalization endpoint
+        # apart from CI/network flakiness if this ever times out. If removed,
+        # revert the line below to plain wait_for_navigation(...).
+        self.wait_for_navigation_with_network_log(next_page_navigation, timeout=30000)
         print(f'>>> Successfully selected "{amount}" bottles and "{upsell_downsell}" in upsell/downsell for {upsell_page}')
 
     def _verify_shipping_popup(self):

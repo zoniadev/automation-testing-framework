@@ -48,6 +48,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # FLAKE-DIAG: Start/Stop/Upload resource monitor (this step plus two
+      # more further down, both also tagged FLAKE-DIAG) are temporary
+      # instrumentation for the random-CI-failure investigation. Safe to
+      # delete along with .github/scripts/resource-monitor.sh and every
+      # other FLAKE-DIAG block if unresolved after a few nights
+      # (grep -rln FLAKE-DIAG for all of them).
       - name: Start resource monitor
         run: |
           chmod +x .github/scripts/resource-monitor.sh
@@ -114,6 +120,7 @@ jobs:
           behave $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
 
+      # FLAKE-DIAG
       - name: Stop resource monitor
         if: always()
         run: |
@@ -122,6 +129,7 @@ jobs:
           fi
         shell: bash
 
+      # FLAKE-DIAG: also uploads network-events.log (see features/environment.py)
       - name: Upload resource monitor log
         if: always()
         uses: actions/upload-artifact@v4
@@ -130,6 +138,7 @@ jobs:
           path: |
             resource-monitor.log
             test-summary.txt
+            network-events.log
           if-no-files-found: warn
           retention-days: 14
 
