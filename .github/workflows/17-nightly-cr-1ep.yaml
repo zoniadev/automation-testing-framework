@@ -2,7 +2,7 @@ name: Nightly CR 1 Ep
 
 on:
   schedule:
-    - cron: '0 17 * * *'
+    - cron: '17 17 * * *'
   workflow_dispatch:
 
 jobs:
