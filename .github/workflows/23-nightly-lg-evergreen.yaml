@@ -2,7 +2,7 @@ name: Nightly LG Evergreen
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '17 23 * * *'
   workflow_dispatch:
 
 jobs:

@@ -2,7 +2,7 @@ name: Nightly Current Live Series
 
 on:
   schedule:
-    - cron: '0 18 * * *'
+    - cron: '17 18 * * *'
   workflow_dispatch:
 
 jobs:
