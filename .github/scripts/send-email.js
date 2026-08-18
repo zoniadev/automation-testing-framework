@@ -113,6 +113,10 @@ function formatTestSummary(testSummary) {
     }
 
     // 3. Process normal lines
+    // environment.py prefixes some lines with a "[2026-01-01T00:00:00.000Z] "
+    // UTC timestamp (for correlating against the CI resource-monitor log),
+    // so match against the line with any such prefix stripped.
+    const unstamped = line.replace(/^\[[^\]]*\]\s*/, '');
     if (line.includes('Executing feature:')) {
       if (inFeature) {
         // Close the previous feature section
@@ -122,8 +126,8 @@ function formatTestSummary(testSummary) {
       currentFeature = line;
       htmlContent += `<h2>${currentFeature}</h2><ul>`;
       inFeature = true;
-    } else if (line.startsWith('Failed scenario:') || line.startsWith('Completed scenario:')) {
-      const status = line.startsWith('Failed') ? 'failed' : 'succeeded';
+    } else if (unstamped.startsWith('Failed scenario:') || unstamped.startsWith('Completed scenario:')) {
+      const status = unstamped.startsWith('Failed') ? 'failed' : 'succeeded';
       appendScenario(line, status);
     } else if (line.includes('Failed feature:') || line.includes('Run completed')) {
       // End the current feature section
