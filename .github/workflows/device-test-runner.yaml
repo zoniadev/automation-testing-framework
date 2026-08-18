@@ -51,6 +51,9 @@ jobs:
       - name: Start resource monitor
         run: |
           chmod +x .github/scripts/resource-monitor.sh
+          # Staging URL defaults to base_url_staging from common_variables.py
+          # (base_url_new currently points at the same host - update the
+          # script's default, or pass a 3rd arg here, if that ever diverges).
           nohup bash .github/scripts/resource-monitor.sh "$GITHUB_WORKSPACE/resource-monitor.log" 5 > monitor-launcher.log 2>&1 &
           echo "MONITOR_PID=$!" >> "$GITHUB_ENV"
         shell: bash

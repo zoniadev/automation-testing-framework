@@ -35,6 +35,12 @@ class WelcomePage(BasePage):
             random_selection = random.choice(random_heath_track_selection)
             element_to_select = f'//*[@id="{random_selection}"]'
             print(f'===> Selecting {random_selection} in Health Track')
+            # Health track labels are populated after the navigation completes
+            # (client-side fetch), so wait for the page to settle and the
+            # specific label to be visible before clicking, instead of relying
+            # on click()'s own default 30s actionability wait.
+            self.context.page.wait_for_load_state("networkidle", timeout=30000)
+            expect(self.context.page.locator(element_to_select)).to_be_visible(timeout=30000)
             self.context.page.locator(element_to_select).click()
             print('===> Skipped health track')
             self.wait_for_navigation(common_variables.client_welcome_page_url, timeout=30000)
