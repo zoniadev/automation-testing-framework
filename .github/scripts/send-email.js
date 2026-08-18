@@ -113,9 +113,12 @@ function formatTestSummary(testSummary) {
     }
 
     // 3. Process normal lines
-    // environment.py prefixes some lines with a "[2026-01-01T00:00:00.000Z] "
-    // UTC timestamp (for correlating against the CI resource-monitor log),
-    // so match against the line with any such prefix stripped.
+    // FLAKE-DIAG: environment.py prefixes some lines with a
+    // "[2026-01-01T00:00:00.000Z] " UTC timestamp (for correlating against
+    // the CI resource-monitor log), so match against the line with any such
+    // prefix stripped. If the FLAKE-DIAG timestamps in environment.py are
+    // removed, this stripping becomes a no-op and can be removed too (or
+    // just left - it's harmless either way).
     const unstamped = line.replace(/^\[[^\]]*\]\s*/, '');
     if (line.includes('Executing feature:')) {
       if (inFeature) {

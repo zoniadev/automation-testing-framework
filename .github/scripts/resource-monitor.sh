@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+# FLAKE-DIAG: temporary instrumentation for the random-CI-failure
+# investigation. If this hasn't found a root cause after a few nights of
+# data, this whole file is safe to delete - just also remove every block
+# tagged FLAKE-DIAG in: .github/workflows/device-test-runner.yaml,
+# features/environment.py, pages/base_page_object.py,
+# pages/supplement_upsell.py. (grep -rln FLAKE-DIAG finds all of them.)
+#
 # Samples runner CPU/RAM/disk/process stats, plus network health to the
 # staging app (DNS/connect/TTFB), on a fixed interval and appends them to a
 # log file, so we can correlate a test failure's timestamp with what the
@@ -62,6 +69,14 @@ while true; do
     # so no "|| echo 0" fallback needed - that would double-print the 0.
     echo "chromium-ish: $(pgrep -c -f 'chrome|chromium' 2>/dev/null)"
     echo "node:         $(pgrep -c -f node 2>/dev/null)"
+
+    echo "--- connection table (ss -s) ---"
+    # Outbound connection volume/TIME_WAIT buildup is invisible to CPU/RAM
+    # but is a proxy for SNAT/NAT port exhaustion on the runner's shared
+    # egress gateway - a class of issue that causes random, unrelated
+    # outbound connections to intermittently hang as a job makes more and
+    # more requests, without ever showing up as local CPU/memory pressure.
+    ss -s 2>/dev/null || echo "ss not available"
 
     echo "--- network to staging ($STAGING_URL) ---"
     # DNS/connect/TLS/TTFB timings for a plain GET against the actual app the

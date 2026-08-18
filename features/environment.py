@@ -10,12 +10,38 @@ from common_functions.mongo_db import *
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
+# FLAKE-DIAG: everything below down to before_all, plus the timestamp prints
+# in before_scenario/after_step/after_scenario and the response/requestfailed
+# listeners in before_scenario, is temporary instrumentation for the
+# random-CI-failure investigation (grep -rln FLAKE-DIAG for all related
+# files). If removed, also revert the matching parsing fix in
+# .github/scripts/send-email.js (it strips a "[timestamp] " prefix that only
+# exists because of this).
+NETWORK_LOG_PATH = os.path.join(os.getcwd(), "network-events.log")
+SLOW_RESPONSE_THRESHOLD_MS = 3000
+
 
 def _utc_now():
     # UTC, millisecond precision, matches the format used by the CI
     # resource-monitor.log so failures can be correlated against runner
     # CPU/RAM/disk samples by timestamp.
     return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
+
+
+def _log_network_event(scenario_name, kind, detail):
+    # Written unconditionally to a standalone file (not just print()),
+    # because behave only surfaces captured stdout for the step that was
+    # "current" when a print() fired - and a slow/failing request doesn't
+    # know or care which step is running. This way nothing is lost even if
+    # the event lands under a step that ends up passing (e.g. the request
+    # that stalls this scenario but only tips the *next* one over).
+    line = f"[{_utc_now()}] [{scenario_name}] {kind}: {detail}"
+    print(line)
+    try:
+        with open(NETWORK_LOG_PATH, "a") as f:
+            f.write(line + "\n")
+    except Exception:
+        pass
 
 
 def before_all(context):
@@ -38,7 +64,7 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    print(f"[{_utc_now()}] Starting scenario: '{scenario.name}'")
+    print(f"[{_utc_now()}] Starting scenario: '{scenario.name}'")  # FLAKE-DIAG
 
     # Initialize mutable scenario state on context
     context.is_screening_flow = False
@@ -139,6 +165,33 @@ def before_scenario(context, scenario):
 
     context.page = context.context.new_page()
 
+    # FLAKE-DIAG: catch whichever request happens to be slow/failing tonight, on
+    # whichever page/step it lands - instead of only having timing data for
+    # the one call site that failed last time. Applies to every scenario
+    # uniformly, so a "random different test/page fails each night" pattern
+    # gets real evidence attached automatically instead of requiring a guess
+    # about which step to instrument next.
+    def _on_response(response, _scenario_name=context.scenario.name):
+        try:
+            timing = response.request.timing
+            ttfb_ms = timing["responseStart"] - timing["requestStart"]
+        except Exception:
+            return
+        if ttfb_ms and ttfb_ms > SLOW_RESPONSE_THRESHOLD_MS:
+            _log_network_event(
+                _scenario_name, "SLOW_RESPONSE",
+                f"[{response.status}] ttfb={ttfb_ms:.0f}ms {response.url}"
+            )
+
+    def _on_request_failed(request, _scenario_name=context.scenario.name):
+        _log_network_event(
+            _scenario_name, "REQUEST_FAILED",
+            f"{request.method} {request.url} error={request.failure}"
+        )
+
+    context.page.on("response", _on_response)
+    context.page.on("requestfailed", _on_request_failed)
+
 
 def before_step(context, step):
     context.step = step
@@ -147,7 +200,7 @@ def before_step(context, step):
 
 def after_step(context, step):
     if step.status == "failed":
-        print(f"[{_utc_now()}] Failed step: {context.step.name}")
+        print(f"[{_utc_now()}] Failed step: {context.step.name}")  # FLAKE-DIAG
         print(f"Test failed on page: '{context.page.url}'")
         print("Taking screenshot")
         if not os.path.exists(SCREENSHOTS_DIR):
@@ -183,31 +236,48 @@ def after_step(context, step):
 
 
 def after_scenario(context, scenario):
-    context.page.close()
-    context.context.close()
+    # Each teardown step is independently fault-tolerant: if the browser
+    # already died mid-scenario (crash, OOM-kill, etc.), page.close() /
+    # context.close() / browser.close() can all raise. Previously any one of
+    # them raising would abort the rest of this hook, silently skipping the
+    # "Failed scenario" print below - the scenario's outcome would then be
+    # missing from test-summary.txt entirely instead of showing as failed.
+    try:
+        context.page.close()
+    except Exception as e:
+        print(f"Error closing page: {e}")
+
+    try:
+        context.context.close()
+    except Exception as e:
+        print(f"Error closing context: {e}")
 
     if context.record_video:
         video_dir = f"screenshots/videos/{context.scenario.name}"
-        if os.path.exists(video_dir):
-            if scenario.status == "failed":
-                video_path = os.path.join(video_dir, os.listdir(video_dir)[0])
-                if video_path.endswith(".webm"):
-                    with open(video_path, "rb") as video:
-                        allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
-            try:
+        try:
+            if os.path.exists(video_dir):
+                video_files = os.listdir(video_dir)
+                if scenario.status == "failed" and video_files:
+                    video_path = os.path.join(video_dir, video_files[0])
+                    if video_path.endswith(".webm"):
+                        with open(video_path, "rb") as video:
+                            allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
                 shutil.rmtree(video_dir)
-            except Exception as e:
-                print(f"Error deleting video directory: {e}")
-        else:
-            allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
+            else:
+                allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
+        except Exception as e:
+            print(f"Error handling video for scenario: {e}")
 
     # Kill the browser process entirely — fresh process for the next outline row
-    context.browser.close()
+    try:
+        context.browser.close()
+    except Exception as e:
+        print(f"Error closing browser: {e}")
 
     if scenario.status == "failed":
-        print(f"[{_utc_now()}] Failed scenario: '{context.scenario.name}'")
+        print(f"[{_utc_now()}] Failed scenario: '{context.scenario.name}'")  # FLAKE-DIAG
     else:
-        print(f"[{_utc_now()}] Completed scenario: '{context.scenario.name}'")
+        print(f"[{_utc_now()}] Completed scenario: '{context.scenario.name}'")  # FLAKE-DIAG
 
 
 def after_feature(context, feature):
