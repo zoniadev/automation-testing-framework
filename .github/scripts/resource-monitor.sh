@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
-# Samples runner CPU/RAM/disk/process stats on a fixed interval and appends
-# them to a log file, so we can correlate a test failure's timestamp with
-# what the GitHub Actions VM was doing at that moment.
+# Samples runner CPU/RAM/disk/process stats, plus network health to the
+# staging app (DNS/connect/TTFB), on a fixed interval and appends them to a
+# log file, so we can correlate a test failure's timestamp with what the
+# GitHub Actions VM and the network path to staging were doing at that
+# moment.
 #
-# Usage: resource-monitor.sh <log-file> [interval-seconds]
+# Usage: resource-monitor.sh <log-file> [interval-seconds] [staging-url]
 # Intended to be started in the background (nohup ... &) and killed once the
 # test step finishes; the log is then uploaded as a build artifact.
 
@@ -11,6 +13,7 @@ set -uo pipefail
 
 LOG_FILE="${1:?log file path required}"
 INTERVAL="${2:-5}"
+STAGING_URL="${3:-https://zonia-stg.com/}"
 
 {
   echo "===== Runner static info ====="
@@ -59,6 +62,16 @@ while true; do
     # so no "|| echo 0" fallback needed - that would double-print the 0.
     echo "chromium-ish: $(pgrep -c -f 'chrome|chromium' 2>/dev/null)"
     echo "node:         $(pgrep -c -f node 2>/dev/null)"
+
+    echo "--- network to staging ($STAGING_URL) ---"
+    # DNS/connect/TLS/TTFB timings for a plain GET against the actual app the
+    # tests navigate to. A spike here at a failure's timestamp, with clean
+    # CPU/RAM/disk above, points at the network path or the app's response
+    # time rather than the runner itself.
+    curl -o /dev/null -s \
+      --connect-timeout 10 --max-time 20 \
+      -w 'dns=%{time_namelookup}s connect=%{time_connect}s tls=%{time_appconnect}s ttfb=%{time_starttransfer}s total=%{time_total}s http_code=%{http_code}\n' \
+      "$STAGING_URL" || echo "curl failed (timeout or unreachable)"
 
   } >> "$LOG_FILE" 2>&1
 
