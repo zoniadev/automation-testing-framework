@@ -55,8 +55,10 @@ while true; do
     echo "--- chromium/node process count ---"
     # A leaked/zombie browser process count that climbs over the job is a
     # strong signal of the "next test fails on initial load" pattern.
-    echo "chromium-ish: $(pgrep -c -f 'chrome|chromium' 2>/dev/null || echo 0)"
-    echo "node:         $(pgrep -c -f node 2>/dev/null || echo 0)"
+    # pgrep -c already prints 0 on no match (it just exits non-zero too),
+    # so no "|| echo 0" fallback needed - that would double-print the 0.
+    echo "chromium-ish: $(pgrep -c -f 'chrome|chromium' 2>/dev/null)"
+    echo "node:         $(pgrep -c -f node 2>/dev/null)"
 
   } >> "$LOG_FILE" 2>&1
 
