@@ -10,39 +10,6 @@ from common_functions.mongo_db import *
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
-# FLAKE-DIAG: everything below down to before_all, plus the timestamp prints
-# in before_scenario/after_step/after_scenario and the response/requestfailed
-# listeners in before_scenario, is temporary instrumentation for the
-# random-CI-failure investigation (grep -rln FLAKE-DIAG for all related
-# files). If removed, also revert the matching parsing fix in
-# .github/scripts/send-email.js (it strips a "[timestamp] " prefix that only
-# exists because of this).
-NETWORK_LOG_PATH = os.path.join(os.getcwd(), "network-events.log")
-SLOW_RESPONSE_THRESHOLD_MS = 3000
-
-
-def _utc_now():
-    # UTC, millisecond precision, matches the format used by the CI
-    # resource-monitor.log so failures can be correlated against runner
-    # CPU/RAM/disk samples by timestamp.
-    return datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S.%f")[:-3] + "Z"
-
-
-def _log_network_event(scenario_name, kind, detail):
-    # Written unconditionally to a standalone file (not just print()),
-    # because behave only surfaces captured stdout for the step that was
-    # "current" when a print() fired - and a slow/failing request doesn't
-    # know or care which step is running. This way nothing is lost even if
-    # the event lands under a step that ends up passing (e.g. the request
-    # that stalls this scenario but only tips the *next* one over).
-    line = f"[{_utc_now()}] [{scenario_name}] {kind}: {detail}"
-    print(line)
-    try:
-        with open(NETWORK_LOG_PATH, "a") as f:
-            f.write(line + "\n")
-    except Exception:
-        pass
-
 
 def before_all(context):
     print(f"Starting run on {context.config.userdata['device'].capitalize()}")
@@ -64,8 +31,6 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
-    print(f"[{_utc_now()}] Starting scenario: '{scenario.name}'")  # FLAKE-DIAG
-
     # Initialize mutable scenario state on context
     context.is_screening_flow = False
     context.is_replay_weekend = False
@@ -165,33 +130,6 @@ def before_scenario(context, scenario):
 
     context.page = context.context.new_page()
 
-    # FLAKE-DIAG: catch whichever request happens to be slow/failing tonight, on
-    # whichever page/step it lands - instead of only having timing data for
-    # the one call site that failed last time. Applies to every scenario
-    # uniformly, so a "random different test/page fails each night" pattern
-    # gets real evidence attached automatically instead of requiring a guess
-    # about which step to instrument next.
-    def _on_response(response, _scenario_name=context.scenario.name):
-        try:
-            timing = response.request.timing
-            ttfb_ms = timing["responseStart"] - timing["requestStart"]
-        except Exception:
-            return
-        if ttfb_ms and ttfb_ms > SLOW_RESPONSE_THRESHOLD_MS:
-            _log_network_event(
-                _scenario_name, "SLOW_RESPONSE",
-                f"[{response.status}] ttfb={ttfb_ms:.0f}ms {response.url}"
-            )
-
-    def _on_request_failed(request, _scenario_name=context.scenario.name):
-        _log_network_event(
-            _scenario_name, "REQUEST_FAILED",
-            f"{request.method} {request.url} error={request.failure}"
-        )
-
-    context.page.on("response", _on_response)
-    context.page.on("requestfailed", _on_request_failed)
-
 
 def before_step(context, step):
     context.step = step
@@ -200,7 +138,7 @@ def before_step(context, step):
 
 def after_step(context, step):
     if step.status == "failed":
-        print(f"[{_utc_now()}] Failed step: {context.step.name}")  # FLAKE-DIAG
+        print(f"Failed step: {context.step.name}")
         print(f"Test failed on page: '{context.page.url}'")
         print("Taking screenshot")
         if not os.path.exists(SCREENSHOTS_DIR):
@@ -275,9 +213,9 @@ def after_scenario(context, scenario):
         print(f"Error closing browser: {e}")
 
     if scenario.status == "failed":
-        print(f"[{_utc_now()}] Failed scenario: '{context.scenario.name}'")  # FLAKE-DIAG
+        print(f"Failed scenario: '{context.scenario.name}'")
     else:
-        print(f"[{_utc_now()}] Completed scenario: '{context.scenario.name}'")  # FLAKE-DIAG
+        print(f"Completed scenario: '{context.scenario.name}'")
 
 
 def after_feature(context, feature):

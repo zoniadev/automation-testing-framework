@@ -31,40 +31,6 @@ class BasePage(object):
             expect(self.context.page).to_have_url(re.compile(r"(\?|&)mode="))
             print('===> "mode" parameter confirmed.')
 
-    def wait_for_navigation_with_network_log(self, url, timeout=30000, slow_threshold_ms=2000):
-        """FLAKE-DIAG: temporary, built for the random-CI-failure investigation.
-        Only caller is docuseries_buy_upsells in supplement_upsell.py - if
-        removing this, revert that call site back to plain wait_for_navigation.
-        Like wait_for_navigation, but also records backend response times
-        (time-to-first-byte) seen while waiting, whether the wait succeeds or
-        times out. Use this instead of wait_for_navigation for transitions
-        suspected of being gated on slow backend processing (e.g. order
-        finalization) rather than CI/network issues, so a failure shows which
-        request was slow instead of just "timed out".
-        """
-        responses = []
-
-        def _on_response(response):
-            try:
-                timing = response.request.timing
-                ttfb_ms = timing["responseStart"] - timing["requestStart"]
-            except Exception:
-                ttfb_ms = None
-            responses.append((response.url, response.status, ttfb_ms))
-
-        self.context.page.on("response", _on_response)
-        try:
-            self.wait_for_navigation(url, timeout=timeout)
-        finally:
-            self.context.page.remove_listener("response", _on_response)
-            slow = [r for r in responses if r[2] is not None and r[2] > slow_threshold_ms]
-            if slow:
-                print(f'===> Slow backend responses (TTFB > {slow_threshold_ms}ms) while waiting for "{url}":')
-                for resp_url, status, ttfb_ms in slow:
-                    print(f'     [{status}] TTFB={ttfb_ms:.0f}ms  {resp_url}')
-            elif not responses:
-                print(f'===> No network responses observed while waiting for "{url}" (nothing was in flight).')
-
     def verify_element_contain_text(self, locator, expected_text):
         expect(self.context.page.locator(locator)).to_have_text(expected_text)
 
