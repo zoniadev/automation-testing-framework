@@ -48,22 +48,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # FLAKE-DIAG: Start/Stop/Upload resource monitor (this step plus two
-      # more further down, both also tagged FLAKE-DIAG) are temporary
-      # instrumentation for the random-CI-failure investigation. Safe to
-      # delete along with .github/scripts/resource-monitor.sh and every
-      # other FLAKE-DIAG block if unresolved after a few nights
-      # (grep -rln FLAKE-DIAG for all of them).
-      - name: Start resource monitor
-        run: |
-          chmod +x .github/scripts/resource-monitor.sh
-          # Staging URL defaults to base_url_staging from common_variables.py
-          # (base_url_new currently points at the same host - update the
-          # script's default, or pass a 3rd arg here, if that ever diverges).
-          nohup bash .github/scripts/resource-monitor.sh "$GITHUB_WORKSPACE/resource-monitor.log" 5 > monitor-launcher.log 2>&1 &
-          echo "MONITOR_PID=$!" >> "$GITHUB_ENV"
-        shell: bash
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -119,28 +103,6 @@ jobs:
           echo "Running tests with tags: ${TAGS:-<none>}, device: $DEVICE on env: $ENVIRONMENT with browser: $BROWSER"
           behave $TAGS -D headless=True -D device=$DEVICE -D browser=$BROWSER -D env=$ENVIRONMENT -f allure_behave.formatter:AllureFormatter -o "allure-results/$REPORT_SCOPE" | tee test-summary.txt
         shell: bash
-
-      # FLAKE-DIAG
-      - name: Stop resource monitor
-        if: always()
-        run: |
-          if [ -n "${MONITOR_PID:-}" ]; then
-            kill "$MONITOR_PID" 2>/dev/null || true
-          fi
-        shell: bash
-
-      # FLAKE-DIAG: also uploads network-events.log (see features/environment.py)
-      - name: Upload resource monitor log
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: resource-monitor-${{ env.REPORT_SCOPE }}-${{ env.REPORT_NAME }}-${{ github.run_attempt }}
-          path: |
-            resource-monitor.log
-            test-summary.txt
-            network-events.log
-          if-no-files-found: warn
-          retention-days: 14
 
       - name: Copy environment properties
         if: always()
