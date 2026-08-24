@@ -36,10 +36,15 @@ class WelcomePage(BasePage):
             element_to_select = f'//*[@id="{random_selection}"]'
             print(f'===> Selecting {random_selection} in Health Track')
             # Health track labels are populated after the navigation completes
-            # (client-side fetch), so wait for the page to settle and the
-            # specific label to be visible before clicking, instead of relying
-            # on click()'s own default 30s actionability wait.
-            self.context.page.wait_for_load_state("networkidle", timeout=30000)
+            # (client-side fetch), so wait for the specific label to be
+            # visible before clicking, instead of relying on click()'s own
+            # default 30s actionability wait. Deliberately not using
+            # wait_for_load_state("networkidle") here: this app has
+            # continuous background network activity on this page (embedded
+            # video telemetry, chat-widget polling, ad beacons), so the page
+            # may never go network-idle even once fully rendered - that wait
+            # was itself causing false-failure timeouts unrelated to whether
+            # the label was actually ready.
             expect(self.context.page.locator(element_to_select)).to_be_visible(timeout=30000)
             self.context.page.locator(element_to_select).click()
             print('===> Skipped health track')
