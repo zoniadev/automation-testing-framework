@@ -137,6 +137,18 @@ def before_scenario(context, scenario):
 
     context.page = context.context.new_page()
 
+    # Track only the most recent top-level page navigation's HTTP status
+    # (not every sub-resource - that was tried before and was mostly noise).
+    # On failure this tells you at a glance whether the page itself was
+    # actually served (e.g. a 503) instead of having to open a screenshot.
+    context.last_page_status = None  # (status_code, url) of the last top-level navigation
+
+    def _track_page_status(response):
+        if response.request.is_navigation_request():
+            context.last_page_status = (response.status, response.url)
+
+    context.page.on("response", _track_page_status)
+
 
 def before_step(context, step):
     context.step = step
@@ -220,7 +232,18 @@ def after_scenario(context, scenario):
         print(f"Error closing browser: {e}")
 
     if scenario.status == "failed":
-        print(f"Failed scenario: '{context.scenario.name}'")
+        # Appended, never prepended - send-email.js colors this line by
+        # checking line.startsWith('Failed scenario:'), so anything added
+        # must come after the existing text, not before it. Only shown for
+        # an actual error status (4xx/5xx) - a normal 200 on the last page
+        # loaded doesn't tell you anything useful and would show up on
+        # almost every failure, since most scenarios navigate successfully
+        # right up until whatever unrelated thing actually failed.
+        status_suffix = ""
+        if context.last_page_status and context.last_page_status[0] >= 400:
+            status_code, status_url = context.last_page_status
+            status_suffix = f"  [last page load: {status_code} {status_url}]"
+        print(f"Failed scenario: '{context.scenario.name}'{status_suffix}")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
 
