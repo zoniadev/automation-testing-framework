@@ -102,9 +102,16 @@ def before_scenario(context, scenario):
         context_args.update(device)
         context.mobile_run = True
     else:
+        # Build the Chrome version token from the actual launched browser
+        # instead of a hardcoded one, so the UA never drifts out of sync
+        # with the real engine again (it was previously stuck claiming
+        # Chrome 91 from 2021 while running a much newer Chromium build -
+        # a mismatch that can make sites/CDNs serve legacy code paths to an
+        # engine that no longer has those quirks). "ZoniaTestingBrowser" is
+        # kept verbatim in case anything downstream matches on it.
         context_args.update({
             "viewport": {'width': 1280, 'height': 720},
-            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 ZoniaTestingBrowser"
+            "user_agent": f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{context.browser.version} Safari/537.36 ZoniaTestingBrowser"
         })
 
     if context.record_video:
