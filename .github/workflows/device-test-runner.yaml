@@ -51,7 +51,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
@@ -139,8 +139,13 @@ jobs:
         run: |
           set -euo pipefail
           HISTORY_ROOT="allure-history/$REPORT_SCOPE/$REPORT_NAME"
-          # Keep the last 10 reports
+          # Keep at least the last 10 reports, regardless of age
           KEEP_LAST=10
+          # Beyond that floor, also drop anything older than 30 days
+          MAX_AGE_DAYS=30
+          # ...but never prune below this many reports, even if they're stale
+          # (keeps sparsely-run scopes from losing their whole trend baseline)
+          MIN_KEEP=3
 
           if [ ! -d "$HISTORY_ROOT" ]; then
             echo "No history root found, skipping cleanup."
@@ -159,24 +164,49 @@ jobs:
           # Count how many directories we have
           COUNT=$(echo "$DIRS" | wc -l)
 
-          if [ "$COUNT" -le "$KEEP_LAST" ]; then
-            echo "Found $COUNT reports, which is less than or equal to the retention number of $KEEP_LAST. No cleanup needed."
-            exit 0
+          if [ "$COUNT" -gt "$KEEP_LAST" ]; then
+            # Determine how many directories to delete
+            DELETE_COUNT=$((COUNT - KEEP_LAST))
+
+            # Get the list of directories to delete (the oldest ones)
+            DELETE_DIRS=$(echo "$DIRS" | head -n "$DELETE_COUNT")
+
+            echo "Found $COUNT total reports. Deleting the oldest $DELETE_COUNT to keep the last $KEEP_LAST."
+            echo "The following report directories will be deleted:"
+            echo "$DELETE_DIRS" | while IFS= read -r dir; do echo "  - $dir"; done
+
+            echo "$DELETE_DIRS" | xargs rm -rf
+          else
+            echo "Found $COUNT reports, which is less than or equal to the retention number of $KEEP_LAST. Skipping count-based cleanup."
           fi
 
-          # Determine how many directories to delete
-          DELETE_COUNT=$((COUNT - KEEP_LAST))
+          # Age-based cleanup: among whatever remains, drop reports older than
+          # MAX_AGE_DAYS, but always keep at least MIN_KEEP of the newest ones.
+          REMAINING=$(find "$HISTORY_ROOT" -mindepth 1 -maxdepth 1 -type d -name '[0-9]*' | sort -V)
+          REMAINING_COUNT=$(echo "$REMAINING" | grep -c . || true)
 
-          # Get the list of directories to delete (the oldest ones)
-          DELETE_DIRS=$(echo "$DIRS" | head -n "$DELETE_COUNT")
+          if [ "$REMAINING_COUNT" -gt "$MIN_KEEP" ]; then
+            PROTECTED=$(echo "$REMAINING" | tail -n "$MIN_KEEP")
+            CANDIDATES=$(echo "$REMAINING" | head -n "$((REMAINING_COUNT - MIN_KEEP))")
 
-          echo "Found $COUNT total reports. Deleting the oldest $DELETE_COUNT to keep the last $KEEP_LAST."
-          echo "The following report directories will be deleted:"
-          # Use a loop to print for better formatting in GH logs
-          echo "$DELETE_DIRS" | while IFS= read -r dir; do echo "  - $dir"; done
+            STALE_DIRS=""
+            while IFS= read -r dir; do
+              [ -z "$dir" ] && continue
+              if [ -n "$(find "$dir" -maxdepth 0 -mtime +"$MAX_AGE_DAYS")" ]; then
+                STALE_DIRS="$STALE_DIRS$dir"$'\n'
+              fi
+            done <<< "$CANDIDATES"
 
-          # Delete the old directories
-          echo "$DELETE_DIRS" | xargs rm -rf
+            if [ -n "$STALE_DIRS" ]; then
+              echo "Deleting reports older than $MAX_AGE_DAYS days (keeping at least the newest $MIN_KEEP: $(echo "$PROTECTED" | tr '\n' ' ')):"
+              echo "$STALE_DIRS" | while IFS= read -r dir; do [ -n "$dir" ] && echo "  - $dir"; done
+              echo "$STALE_DIRS" | xargs -r rm -rf
+            else
+              echo "No reports older than $MAX_AGE_DAYS days found among prunable candidates."
+            fi
+          else
+            echo "Only $REMAINING_COUNT report(s) remain, at or below the minimum floor of $MIN_KEEP. Skipping age-based cleanup."
+          fi
 
           echo "Cleanup complete."
         shell: bash
@@ -268,6 +298,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+          force_orphan: true
 
       - name: Post the link to the report
         if: always()

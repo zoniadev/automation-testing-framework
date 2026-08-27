@@ -147,14 +147,14 @@ Feature: Docuseries tests
 
     Examples:
       | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | 1       | lg_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 | 
-      | 2       | lg_ev_metabolism   | quarterly | no               | no                   | no         | no                 | no         | upgrade            | 
-      | 3       | lg_ev_skin         | annually  | no               | no                   | no         | no                 | 1          | no                 | 
-      | 4       | lg_ev_exercise     | monthly   | no               | no                   | no         | upgrade            | no         | no                 | 
-      | 5       | lg_ev_brain        | quarterly | no               | no                   | 6          | no                 | no         | no                 | 
+      | 1       | lg_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | lg_ev_metabolism   | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | lg_ev_skin         | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | lg_ev_exercise     | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | lg_ev_brain        | quarterly | no               | no                   | 6          | no                 | no         | no                 |
       | 6       | lg_ev_hormones     | annually  | no               | buy                  | no         | upgrade            | 6          | best_value         |
       | 7       | lg_ev_energy       | monthly   | platinum         | no                   | 1          | best_value         | no         | upgrade            |
-      | 8       | lg_ev_inflammation | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            | 
+      | 8       | lg_ev_inflammation | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
       | 9       | lg_ev_bones        | annually  | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
@@ -589,3 +589,35 @@ Feature: Docuseries tests
       | 5       | quarterly | 1          | upgrade            | no         | no                 | 170    | 70     | No    | No             | Type 2   | 50  | male   |
       | 6       | annually  | no         | upgrade            | 6          | most_popular       | 155    | 50     | No    | Yes            | No       | 60  | female |
       | 7       | quarterly | 3          | most_popular       | 1          | best_value         | 185    | 90     | Yes   | No             | Type 1   | 40  | male   |
+
+
+  @hh_live @all_docuseries
+  Scenario Outline: HH Live funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Collagen" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rc_bottles> | <rc_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | outline | opt_in_page          | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
+      | 1       | hh_live              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+      | 2       | hh_live_inflammation | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | hh_live_emotions     | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | hh_live_obesity      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | hh_live_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+      | 6       | hh_live_heart        | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | hh_live_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+      | 8       | hh_live_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9       | hh_live              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |

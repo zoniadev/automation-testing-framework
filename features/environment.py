@@ -1,5 +1,7 @@
 import re
 import shutil
+import threading
+import datetime
 import allure
 from playwright.sync_api import sync_playwright
 import common_variables
@@ -100,9 +102,16 @@ def before_scenario(context, scenario):
         context_args.update(device)
         context.mobile_run = True
     else:
+        # Build the Chrome version token from the actual launched browser
+        # instead of a hardcoded one, so the UA never drifts out of sync
+        # with the real engine again (it was previously stuck claiming
+        # Chrome 91 from 2021 while running a much newer Chromium build -
+        # a mismatch that can make sites/CDNs serve legacy code paths to an
+        # engine that no longer has those quirks). "ZoniaTestingBrowser" is
+        # kept verbatim in case anything downstream matches on it.
         context_args.update({
             "viewport": {'width': 1280, 'height': 720},
-            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 ZoniaTestingBrowser"
+            "user_agent": f"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{context.browser.version} Safari/537.36 ZoniaTestingBrowser"
         })
 
     if context.record_video:
@@ -127,6 +136,18 @@ def before_scenario(context, scenario):
         context.context.route(blocked_route, _block_third_party)
 
     context.page = context.context.new_page()
+
+    # Track only the most recent top-level page navigation's HTTP status
+    # (not every sub-resource - that was tried before and was mostly noise).
+    # On failure this tells you at a glance whether the page itself was
+    # actually served (e.g. a 503) instead of having to open a screenshot.
+    context.last_page_status = None  # (status_code, url) of the last top-level navigation
+
+    def _track_page_status(response):
+        if response.request.is_navigation_request():
+            context.last_page_status = (response.status, response.url)
+
+    context.page.on("response", _track_page_status)
 
 
 def before_step(context, step):
@@ -172,29 +193,57 @@ def after_step(context, step):
 
 
 def after_scenario(context, scenario):
-    context.page.close()
-    context.context.close()
+    # Each teardown step is independently fault-tolerant: if the browser
+    # already died mid-scenario (crash, OOM-kill, etc.), page.close() /
+    # context.close() / browser.close() can all raise. Previously any one of
+    # them raising would abort the rest of this hook, silently skipping the
+    # "Failed scenario" print below - the scenario's outcome would then be
+    # missing from test-summary.txt entirely instead of showing as failed.
+    try:
+        context.page.close()
+    except Exception as e:
+        print(f"Error closing page: {e}")
+
+    try:
+        context.context.close()
+    except Exception as e:
+        print(f"Error closing context: {e}")
 
     if context.record_video:
         video_dir = f"screenshots/videos/{context.scenario.name}"
-        if os.path.exists(video_dir):
-            if scenario.status == "failed":
-                video_path = os.path.join(video_dir, os.listdir(video_dir)[0])
-                if video_path.endswith(".webm"):
-                    with open(video_path, "rb") as video:
-                        allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
-            try:
+        try:
+            if os.path.exists(video_dir):
+                video_files = os.listdir(video_dir)
+                if scenario.status == "failed" and video_files:
+                    video_path = os.path.join(video_dir, video_files[0])
+                    if video_path.endswith(".webm"):
+                        with open(video_path, "rb") as video:
+                            allure.attach(video.read(), name="Test Video", attachment_type=allure.attachment_type.WEBM)
                 shutil.rmtree(video_dir)
-            except Exception as e:
-                print(f"Error deleting video directory: {e}")
-        else:
-            allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
+            else:
+                allure.attach("Video recording was enabled, but no video file was found.", attachment_type=allure.attachment_type.TEXT)
+        except Exception as e:
+            print(f"Error handling video for scenario: {e}")
 
     # Kill the browser process entirely — fresh process for the next outline row
-    context.browser.close()
+    try:
+        context.browser.close()
+    except Exception as e:
+        print(f"Error closing browser: {e}")
 
     if scenario.status == "failed":
-        print(f"Failed scenario: '{context.scenario.name}'")
+        # Appended, never prepended - send-email.js colors this line by
+        # checking line.startsWith('Failed scenario:'), so anything added
+        # must come after the existing text, not before it. Only shown for
+        # an actual error status (4xx/5xx) - a normal 200 on the last page
+        # loaded doesn't tell you anything useful and would show up on
+        # almost every failure, since most scenarios navigate successfully
+        # right up until whatever unrelated thing actually failed.
+        status_suffix = ""
+        if context.last_page_status and context.last_page_status[0] >= 400:
+            status_code, status_url = context.last_page_status
+            status_suffix = f"  [last page load: {status_code} {status_url}]"
+        print(f"Failed scenario: '{context.scenario.name}'{status_suffix}")
     else:
         print(f"Completed scenario: '{context.scenario.name}'")
 
@@ -206,12 +255,29 @@ def after_feature(context, feature):
         print(f"Completed feature: '{context.feature.name}'")
 
 
-def after_all(context):
-    print("Run completed")
-    context.playwright.stop()
-    print("Cleaning up the DB from old Automation users...")
+def _cleanup_automation_users_worker(result):
     try:
         client = connect_to_mongodb()
         delete_automation_users(client)
     except Exception as e:
-        print(f"!!! Automation users cleanup failed: {e}")
+        result["error"] = e
+
+
+def after_all(context):
+    print("Run completed")
+    context.playwright.stop()
+    print("Cleaning up the DB from old Automation users...")
+    # The mongodb+srv:// DNS (SRV record) lookup isn't bounded by
+    # serverSelectionTimeoutMS and can hang far longer than that on a
+    # slow/blackholed network. Run it on a daemon thread with a hard
+    # deadline so a stuck DNS lookup can't hang the whole test run.
+    result = {}
+    cleanup_thread = threading.Thread(
+        target=_cleanup_automation_users_worker, args=(result,), daemon=True
+    )
+    cleanup_thread.start()
+    cleanup_thread.join(timeout=15)
+    if cleanup_thread.is_alive():
+        print("!!! Automation users cleanup timed out after 15s (likely stuck DNS/network) — abandoning cleanup.")
+    elif "error" in result:
+        print(f"!!! Automation users cleanup failed: {result['error']}")

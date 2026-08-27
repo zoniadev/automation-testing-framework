@@ -101,7 +101,7 @@ class SupplementUpsellPage(BasePage):
         print(f'>>> Selecting "{decision}" for masterclass...')
         if self.context.docuseries_prefix in ['lg', 'is']:
             upsell3 = 'restore_life'
-        elif self.context.docuseries_prefix in ['km', 'twl', 'cr']:
+        elif self.context.docuseries_prefix in ['km', 'twl', 'cr', 'hh']:
             upsell3 = 'restore_sleep'
         else:
             upsell3 = 'restore_detox'
@@ -142,9 +142,13 @@ class SupplementUpsellPage(BasePage):
                 page_url = f'{funnel_prefix}_restore_life_url'
             elif funnel_prefix == 'is':
                 page_url = 'welcome_page_url'
+            elif funnel_prefix == 'hh':
+                page_url = f'{funnel_prefix}_restore_collagen_url'
             else:
                 page_url = f'{funnel_prefix}_restore_detox_url'
             return getattr(common_variables, page_url)
+        elif upsell_page == 'Restore Collagen': # Added this condition
+            return common_variables.welcome_page_url # Added this condition
 
     def _handle_docuseries_bottle_purchase(self, upsell_page, amount, next_page_navigation):
         """Handles the logic for purchasing (or not purchasing) bottles."""
@@ -166,32 +170,43 @@ class SupplementUpsellPage(BasePage):
             self.context.docuseries_address_will_appear = True
             print('Address popup should appear next page')
 
+    def _click_when_ready(self, locator, timeout=15000):
+        # This page just navigated (from the preceding bottle-purchase click).
+        # A click fired immediately can land on a button that's visually
+        # rendered but not yet wired up by the page's JS (hydration race),
+        # producing a silent no-op click - no exception, but no effect
+        # either, which then surfaces much later as a confusing timeout on
+        # an unrelated final wait_for_navigation. Wait for the element to be
+        # visible first to close that race.
+        expect(self.context.page.locator(locator)).to_be_visible(timeout=timeout)
+        self.context.page.locator(locator).click()
+
     def _handle_docuseries_upsell_downsell(self, amount, upsell_downsell):
         """Handles the logic for the upsell/downsell decision."""
         funnel_prefix = self.context.docuseries_prefix
         if upsell_downsell == 'upgrade':
             print('===> Waiting to avoid payment method error...')
             time.sleep(30)
-            self.context.page.locator(YES_UPGRADE_BUTTON).click()
+            self._click_when_ready(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
             self.context.docuseries_address_will_appear = True
             print('Address popup should appear next page')
         elif upsell_downsell == 'no':
             if funnel_prefix == 'pc':
                 if amount != 'no':
-                    self.context.page.locator(NO_THANKS_BUTTON).click()
+                    self._click_when_ready(NO_THANKS_BUTTON)
             else:
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self._click_when_ready(NO_THANKS_BUTTON)
                 if amount != 'no':
-                    self.context.page.locator(DOWNSELL_NO_THANKS_BUTTON).click()
+                    self._click_when_ready(DOWNSELL_NO_THANKS_BUTTON)
                     print('===> Not upgrading...')
         elif upsell_downsell in ['best_value', 'most_popular']:
             if funnel_prefix != 'pc':
-                self.context.page.locator(NO_THANKS_BUTTON).click()
+                self._click_when_ready(NO_THANKS_BUTTON)
                 if upsell_downsell == 'best_value':
-                    self.context.page.locator(BUY_BEST_VALUE_BUTTON).click()
+                    self._click_when_ready(BUY_BEST_VALUE_BUTTON)
                 else:
-                    self.context.page.locator(BUY_MOST_POPULAR_BUTTON).click()
+                    self._click_when_ready(BUY_MOST_POPULAR_BUTTON)
                 print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
 
     def _maybe_populate_shipping_address(self):

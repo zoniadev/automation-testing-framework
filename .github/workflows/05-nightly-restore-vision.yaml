@@ -2,7 +2,7 @@ name: Nightly Restore Vision
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '17 5 * * *'
   workflow_dispatch:
 
 jobs:

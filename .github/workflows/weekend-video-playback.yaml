@@ -2,7 +2,7 @@ name: Weekend Video Playback Tests
 
 on:
   schedule:
-    - cron: '0 2 * * 6' # Runs at 2 AM UTC on Saturday
+    - cron: '17 2 * * 6' # Runs at 2:17 AM UTC on Saturday
   workflow_dispatch: # Allows manual runs
 
 jobs:

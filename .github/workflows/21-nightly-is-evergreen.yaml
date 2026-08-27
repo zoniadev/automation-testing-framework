@@ -2,7 +2,7 @@ name: Nightly IS Evergreen
 
 on:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '17 21 * * *'
   workflow_dispatch:
 
 jobs:
