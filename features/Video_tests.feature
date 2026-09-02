@@ -1,6 +1,6 @@
 Feature: Video playability tests
 
-  @video_playback @WIP
+  @video_playback
   Scenario Outline: Verify playback of key videos
     Given user log in Zonia portal
     And user navigates to the "<video_title>" video page
