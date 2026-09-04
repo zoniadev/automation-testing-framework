@@ -11,7 +11,7 @@ jobs:
     with:
       report_name: nightly-current_live_series
       device: desktop
-      tags: '@bb_live'
+      tags: '@hh_live'
       environment: staging
       report_scope: nightly
     secrets: inherit
