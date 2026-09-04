@@ -125,7 +125,6 @@ Feature: Docuseries tests
       | 9       | bb_ev          | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
-
   @ageless_evergreen @all_docuseries
   Scenario Outline: LG Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
@@ -274,7 +273,7 @@ Feature: Docuseries tests
     Then user complete registration
 
     Examples:
-      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
+      | outline | opt_in_page          | plan      | booster_packages | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
       | 1       | is_live              | monthly   | no               | no                   | no         | no                 | no         | no                 |
       | 2       | is_live_brain        | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
       | 3       | is_live_cancer       | annually  | no               | no                   | no         | no                 | 1          | no                 |
@@ -621,3 +620,35 @@ Feature: Docuseries tests
       | 7       | hh_live_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
       | 8       | hh_live_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
       | 9       | hh_live              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+
+
+  @hh_live @all_docuseries @WIP
+  Scenario Outline: HH Evergreen funnel
+    Given user register in "<opt_in_page>" Opt In page
+    And user join Zonia
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Booster Packages" Upsell page
+      | decision           |
+      | <booster_packages> |
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Collagen" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rc_bottles> | <rc_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
+      | 1       | hh_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
+#      | 2       | hh_ev_inflammation | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+#      | 3       | hh_ev_emotions     | annually  | no               | no                   | no         | no                 | 1          | no                 |
+#      | 4       | hh_ev_obesity      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+#      | 5       | hh_ev_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+#      | 6       | hh_ev_heart        | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+#      | 7       | hh_ev_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+#      | 8       | hh_ev_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+#      | 9       | hh_ev              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
