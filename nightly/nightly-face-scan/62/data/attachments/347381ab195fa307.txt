@@ -1,0 +1,6 @@
+Executing step: user fills face scan form with
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://staging.zonia.com/face-scan
+===> URL successfully changed to "https://bioimaging.ariascreening.com/measurement"
+>>> Successfully filled HearthAge screening form and navigated to Face Scan page
+Completed step: user fills face scan form with

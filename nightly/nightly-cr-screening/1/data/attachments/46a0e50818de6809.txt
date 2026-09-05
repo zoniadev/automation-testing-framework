@@ -1,0 +1,5 @@
+Executing step: user is on the "cr_live" episode "8" page
+Failed step: user is on the "cr_live" episode "8" page
+Test failed on page: 'http://staging.zonia.com/cr-episode-8-live-8nk7v2wofk'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Live_screening_funnel_--_@1.8__20260207-050036.png

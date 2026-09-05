@@ -1,0 +1,31 @@
+Executing step: user register in "bb_live_immunity" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/bb-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/bb-join-zonia"
+>>> Navigation via bb_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/bb\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/bb-immunity 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    - waiting for "https://zonia-stg.com/bb-immunity" navigation to finish...
+    - navigated to "https://zonia-stg.com/bb-immunity"
+    44 × locator resolved to <html>…</html>
+       - unexpected value "https://zonia-stg.com/bb-immunity"
+
+Aria snapshot:
+- heading "503 Service Temporarily Unavailable" [level=1]
+===> Waiting for URL starting with "https://zonia-stg.com/bb-replay-weekend"
+>>> Navigation via bb_live_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/bb\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/bb-immunity 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    44 × locator resolved to <html>…</html>
+       - unexpected value "https://zonia-stg.com/bb-immunity"
+
+Aria snapshot:
+- heading "503 Service Temporarily Unavailable" [level=1]
+Failed step: user register in "bb_live_immunity" Opt In page
+Test failed on page: 'https://zonia-stg.com/bb-immunity'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Live_funnel_--_@1.8__20260829-210830.png

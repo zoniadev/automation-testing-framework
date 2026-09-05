@@ -1,0 +1,13 @@
+Executing step: user select to buy "6" bottles in "Restore Detox" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/restore-detox-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 6 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Hicks-1787829245@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-detox-6-more-bottles?orderId=6a901c077c61722c4b64b433"
+===> Successfully bought 6 bottle
+Completed step: user select to buy "6" bottles in "Restore Detox" Supplements page

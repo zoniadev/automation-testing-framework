@@ -1,0 +1,20 @@
+Executing step: user is on the "cr_live" episode "1" page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/cr-episode-1-live-a7k9m2p4s8
+===> Waiting for URL starting with "https://zonia-stg.com/cr-join-zonia-2"
+===> URL successfully changed to "https://zonia-stg.com/cr-join-zonia-2"
+Completed step: user is on the "cr_live" episode "1" page
+Executing step: user join Zonia
+===> Waiting for URL starting with "https://zonia-stg.com/cr-signup"
+===> URL successfully changed to "https://zonia-stg.com/cr-signup"
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Baldwin-1787730715@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/cr-booster-packages-monthly"
+===> URL successfully changed to "https://zonia-stg.com/cr-booster-packages-monthly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan

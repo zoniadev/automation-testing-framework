@@ -1,0 +1,31 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://zonia-stg.com/restore-vision-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Miller-1787723867@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-vision-6-more-bottles?orderId=6a8e806649f1a7b9b41f93b3"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/rv-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/rv-restore-sleep-6-discounted-bottles?orderId=6a8e806649f1a7b9b41f93b3"
+>>> Successfully selected upgrade "no" and last chance "most_popular" for 6 More bottles of Restore Vision
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Vision" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+Failed clicking "No Thanks" button on the 1 try! Original error: "Locator expected to be visible
+Actual value: None 
+Call log:
+LocatorAssertions.to_be_visible with timeout 5000ms
+  - waiting for locator("//*[@data-id='add-order-3']")
+". Retrying...
+Failed step: user makes following decision in "second" supplement "Restore Sleep" Upsell page
+Test failed on page: 'https://zonia-stg.com/rv-restore-sleep-6-discounted-bottles?orderId=6a8e806649f1a7b9b41f93b3'
+Taking screenshot
+Error taking or attaching screenshot: Page.screenshot: Target page, context or browser has been closed

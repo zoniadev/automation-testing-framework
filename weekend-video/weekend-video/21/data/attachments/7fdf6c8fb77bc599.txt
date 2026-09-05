@@ -1,0 +1,8 @@
+Executing step: user log in Zonia portal
+===> Navigated to https://zonia-stg.com/login
+===> Cookie banner accepted using selector: //*[@data-tid='banner-accept']
+===> Waiting for URL starting with "https://zonia-stg.com/user"
+Failed step: user log in Zonia portal
+Test failed on page: 'https://zonia-stg.com/login'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_playback_of_key_videos_--_@1.1__20260815-024811.png

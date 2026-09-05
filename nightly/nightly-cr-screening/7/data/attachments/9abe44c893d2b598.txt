@@ -1,0 +1,19 @@
+Executing step: user is on the "cr_live" episode "11" page
+===> Navigated to http://staging.zonia.com/cr-episode-11-live-l4n22al2je
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia-bonuses-ep11"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia-bonuses-ep11"
+Completed step: user is on the "cr_live" episode "11" page
+Executing step: user join Zonia
+===> Waiting for URL starting with "http://staging.zonia.com/cr-signup"
+===> URL successfully changed to "http://staging.zonia.com/cr-signup-bonuses"
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Adams-1770960031@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/cr-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/cr-mini-masterclass-series?id=698eb4ae5cf889a2df8c6788"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan

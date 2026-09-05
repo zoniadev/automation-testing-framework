@@ -1,0 +1,1714 @@
+Executing step: user register in "cr_1ep_aging" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/crmb1e/cr-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+===> URL successfully changed to "https://zonia-stg.com/crmb1e/cr-episode-1-live-a9f3k72mqd"
+Completed step: user register in "cr_1ep_aging" Opt In page
+Executing step: user join Zonia in 1 episode page
+===> Waiting for URL starting with "https://zonia-stg.com/crmb1e/cr-join-zonia-2"
+===> URL successfully changed to "https://zonia-stg.com/crmb1e/cr-join-zonia-2"
+Completed step: user join Zonia in 1 episode page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://zonia-stg.com/crmb1e/cr-signup"
+===> URL successfully changed to "https://zonia-stg.com/crmb1e/cr-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Lara-1788379320@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/cr-booster-packages-lifetime"
+===> URL successfully changed to "https://zonia-stg.com/cr-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-mini-masterclass-series-silver-package"
+===> URL successfully changed to "https://zonia-stg.com/cr-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-restore-sleep-special"
+===> URL successfully changed to "https://zonia-stg.com/cr-restore-sleep-special"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "1" bottles and "most_popular" in upsell/downsell for Restore Sleep...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-rs-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/cr-rs-6-more-bottles?id=6a9880ef455c489e00dae61c"
+===> Successfully bought 1 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Not upgrading, but getting most_popular downsell...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-restore-life-special"
+===> URL successfully changed to "https://zonia-stg.com/cr-restore-life-special?id=6a9880ef455c489e00dae61c"
+>>> Successfully selected "1" bottles and "most_popular" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "1" bottles and "no" in upsell/downsell for Restore Life...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-rl-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-1-1']", page was not changed to cr-rl-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/cr\\-rl\\-6\\-more\\-bottles.*')'
+Actual value: https://zonia-stg.com/cr-restore-life-special?id=6a9880ef455c489e00dae61c 
+Call log:
+  - Expect "to_have_url" with timeout 15000ms
+    30 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/cr-restore-life-special?id=6a9880ef455c489e00dae61c"
+
+Aria snapshot:
+- text: Processing...
+- 'heading "Please Don''t Close The Page Or Hit `Back` To Avoid Being Double Billed By Mistake" [level=4]'
+- heading "Accelerate Your Longevity Results And Support Normal Cellular Health In Just 2 Seconds Every Day" [level=1]
+- iframe
+- img
+- text: Click for sound
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "registered facility"
+- img "quantity"
+- paragraph: regular $79
+- paragraph: today $59 per bottle
+- heading "1-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $59" [level=3]
+- paragraph: for 1 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: best value!
+- paragraph: regular $79
+- paragraph: today $33 per bottle
+- heading "6-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $198" [level=3]
+- paragraph: for 6 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: regular $79
+- paragraph: today $39 per bottle
+- heading "3-month supply" [level=2]
+- img "60capsules-bottles-3"
+- paragraph: save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $117" [level=3]
+- paragraph: for 3 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- text: No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to continue the rejuvenation effects I'll get from the content on Zonia. I agree to re-purchase Restore Life at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I want to pass on this chance forever.
+- 'heading " Warning: Remove this aging food from your fridge right now in order to…" [level=3]':
+  - text: " Warning:"
+  - strong: Remove this aging food from your fridge right now
+  - text: in order to…
+- heading "Instantly Press Your Body’s Hidden “Stop Button” for Aging, proven to Turn Back the Clock 10 Years1" [level=1]:
+  - text: Instantly Press Your Body’s Hidden “Stop Button” for Aging, proven to Turn Back the Clock 10 Years
+  - superscript: "1"
+- paragraph:
+  - text: Why these so-called ‘healthy’ foods make you
+  - strong: age on fast-forward
+  - text: "- and cause your body to deal with excessive"
+  - strong: body fat, erratic blood sugar, heart problems, brain fog, memory loss, and sagging, wrinkly skin
+  - superscript: "2"
+- paragraph:
+  - text: Did you know that you have a built-in
+  - strong: “stop button”
+  - text: for
+  - strong: premature aging and chronic disease…
+  - superscript: "3"
+- paragraph: That you can turn ON or OFF at will, almost like switching the lights of your living room?
+- paragraph: This secret discovery is the most important breakthrough in the past 50 years.
+- paragraph: It flies in the face of everything we used to know about aging and cellular health...
+- paragraph: And it’s backed up by more scientific evidence than MOST of the health advice we all follow as gospel.
+- paragraph: I know what you’re thinking…
+- paragraph:
+  - text: It’s hard to believe that you can significantly slow down premature aging or chronic disease from the comfort of your home, because we’ve been conditioned from a very young age that
+  - strong: aging and disease
+  - text: are a normal part of life.
+- paragraph:
+  - text: But in the last 10 years, scientists from
+  - strong: Harvard
+  - superscript: "4"
+  - text: ", John"
+  - strong: Hopkins Medical School
+  - superscript: "5"
+  - text: and
+  - strong: MIT
+  - superscript: "6"
+  - text: discovered that…
+- paragraph:
+  - text: ...the
+  - strong: wrinkly, sagging face
+  - text: that makes us look tired, sad and even angry…
+- paragraph:
+  - text: ...the
+  - strong: erratic blood sugar
+  - text: slowly turning into type 2 diabetes…
+- paragraph:
+  - text: ...the weight creeping on
+  - strong: our belly, arms, and thighs that won’t melt
+  - text: no matter how hard we diet and exercise…
+- paragraph:
+  - text: …the
+  - strong: lack of energy
+  - text: and
+  - strong: the tossing and turning at night,
+  - text: slowly taking away the joy for life, making us miss precious time with the family…
+- paragraph:
+  - text: … the horrible diseases of our
+  - strong: brain, heart, lungs and bones
+  - text: that shadow decades of our lives…
+- paragraph:
+  - text: …
+  - strong: the health deterioration, the body deterioration,
+  - text: the brain deterioration we thought are “normal” parts of aging…
+- paragraph:
+  - text: Are all related to one single “stop button” called by scientists the “central regulator of lifespan and aging”
+  - superscript: "7"
+  - text: .
+- paragraph:
+  - text: You see, the reason
+  - strong: why we all age differently
+  - text: is because some people accidentally activate the
+  - strong: “aging button”
+  - text: every time they’re indulging in one very specific food I’m about to reveal…
+- paragraph:
+  - text: Accidentally programming their cells, organs and skin to
+  - strong: premature decay.
+- paragraph: And while it’s true that we cannot stop aging permanently… at least not yet… This “aging button” can make the difference between uncontrollable mechanisms and promoting balance at the cellular level.
+- paragraph: "Today, I’m making a promise to you:"
+- paragraph:
+  - text: I will reveal exactly how your
+  - strong: aging button works.
+- paragraph:
+  - text: And when you understand HOW to flip your ‘aging button’ OFF, not only you can help your body age
+  - strong: gracefully
+  - text: while still looking and feeling
+  - strong: 5, 10 or 15 years younger and fresher
+  - text: than anyone you’ve ever met…
+  - superscript: "8"
+- paragraph:
+  - text: But you can also manage your risk of developing chronic disease
+  - superscript: "9"
+  - text: ","
+  - strong: like diabetes, obesity, heart disease, brain disease and more.
+- heading "This breakthrough is so vital for our lifespan that I made it my mission to share exactly how to press your “aging button” OFF before your morning coffee tomorrow" [level=1]:
+  - strong: This breakthrough is so vital for our lifespan
+  - text: that I made it my mission to share exactly how to
+  - strong: press your “aging button” OFF
+  - text: before your morning coffee tomorrow
+- paragraph:
+  - text: So if you’re struggling with premature aging on your face and body, if you’re suffering from chronic disease, or if you have elderly family members that need help with their age-related conditions, I promise you that this is the most important information about aging
+  - strong: you’ll ever come across.
+- paragraph:
+  - text: I am going to reveal why MOST health advice out there is
+  - strong: plain wrong for you…
+- paragraph:
+  - text: What is scientifically proven to work when it comes to natural and powerful
+  - strong: rejuvenation of skin, organs and cells…
+- paragraph:
+  - text: And what
+  - strong: longevity experts and metabolic research scientists have
+  - text: "discovered almost three decades ago (that we now understand for the first time it’s linked to accelerated aging):"
+- paragraph: The aging discovery of the century
+- list:
+  - listitem:
+    - text: How to stop
+    - strong: premature aging
+    - text: from destroying your cells
+    - superscript: "10"
+    - text: ;
+  - listitem:
+    - text: How to delay the onset of
+    - strong: wrinkles, gut inflammation, diabetes, brain, heart, and bone diseases
+    - text: and more
+    - superscript: "11"
+    - text: ;
+  - listitem:
+    - text: And how to keep your body in a
+    - strong: youthful state of cell repair
+    - text: for as long as possible
+    - superscript: "12"
+    - text: ...
+- paragraph: Simply and easily, just like pressing a button on your body.
+- paragraph:
+  - text: This
+  - strong: shocking discovery
+  - text: was revealed to me in an almost miraculous way while I was researching longevity as part of my mission to save my family from devastating illnesses…
+- paragraph: And my findings left me furious on mainstream media and eager to share the truth with you.
+- img
+- img
+- paragraph:
+  - text: My name is
+  - strong: Stefan Apostolov.
+- paragraph:
+  - text: I'm the founder of Zonia, a health and wellness platform that helps
+  - strong: tens of thousands of people
+  - text: improve their nutrition, sleep better and implement healthy changes for a healthier, happier life.
+- paragraph: But many people also know me as the director and producer of the Oscar contender, 'Life in Four Seasons' short film…
+- paragraph:
+  - text: I was born in an Eastern European country, called
+  - strong: Bulgaria.
+- paragraph:
+  - text: When I was growing up, hearing adults complaining about
+  - strong: diabetes, joint pain, heart disease or chronic pain
+  - text: was a normal conversation starter in my family circle.
+- paragraph: Every adult from my childhood complained about their health…
+- paragraph:
+  - text: And being
+  - strong: dependent on 10 different prescription pills
+  - text: in your 40s, 50s and beyond was considered a normality.
+- paragraph: As a child, I remember realizing that one day my parents were going to die, and I would be left without them.
+- paragraph: Seems silly now, but that thought stayed with me, and made me passionate about health for as long as I can remember.
+- heading "But my wake-up call came when my grandfather was diagnosed with Parkinson’s disease" [level=1]:
+  - text: But my
+  - strong: wake-up call
+  - text: came when
+  - strong: my grandfather was diagnosed with Parkinson’s disease
+- img
+- paragraph: My grandpa used to be one of the healthiest people I’ve ever met.
+- paragraph: I remember thinking of him as a superhero when I was a kid…
+- paragraph: He was the kind of man who would always be on the move, even when he was older.
+- paragraph: His mind was extremely sharp, and he’d always tell stories of his youth with incredible details…
+- paragraph:
+  - text: He even used to do
+  - strong: 5 sets of 100 pushups every single day
+  - text: to keep his body strong…
+- paragraph: To most people around him, my grandfather was the role model of strength and positivity…
+- paragraph: "This is why my entire family was shocked by what happened next:"
+- paragraph:
+  - text: One day,
+  - strong: his body broke.
+- paragraph:
+  - text: We first noticed his
+  - strong: hands started having a slight tremor,
+  - text: and we all thought of course it was normal for his age…
+- paragraph:
+  - text: But soon enough, his whole body started to
+  - strong: shake uncontrollably.
+- paragraph:
+  - text: He looked sad and lost to us, he
+  - strong: became more forgetful
+  - text: and started to
+  - strong: have difficulties keeping his balance.
+- paragraph: "And picture this:"
+- paragraph: In just a couple of months, the man who’d do 500 pushups on a daily basis became the man who could barely walk up the stairs to go to the bedroom.
+- paragraph: My grandpa was scared, and so was the rest of the family, so we went to the doctor…
+- paragraph: "And got the diagnosis: Parkinson's."
+- paragraph: He died just two years after his diagnosis…
+- paragraph: And those two years were excruciating for me.
+- paragraph: I watched him become an empty shell of the strong, funny, sharp-minded grandpa we all knew and loved, as his disease took him away long before he actually passed away.
+- paragraph: How could the healthiest and strongest person I’ve ever known just wither and die in just two years?!
+- paragraph: I didn’t know it at the time…
+- paragraph: But it turns out he was eating some very dangerous foods for his brain and body, without even realizing it.
+- paragraph: Foods that YOU might be eating every day.
+- paragraph: In facts these foods are some of the most common foods in America.
+- paragraph: These foods silently kept the ‘aging button’ turned on recklessly, and no amount of pushups and healthy living could counter its effects.
+- img
+- img
+- heading "After my grandfather passed away, every single sick person I’ve loved came flashing through my mind…" [level=1]:
+  - text: After
+  - strong: my grandfather passed away,
+  - strong: every single sick person I’ve loved came flashing through my mind…
+- paragraph: My cousins who passed away at a young age because of devastating cancer…
+- paragraph: My relatives and friends have been diagnosed with diabetes, arthritis, heart disease…
+- paragraph: As young as 45 or even younger!
+- paragraph: If I tell this story to another Bulgarian, they would not be shocked at all…
+- paragraph: In my country, most people over 45 are sick.
+- paragraph: People even make jokes about it.
+- paragraph:
+  - text: We think that if you’re healthy past a certain age, you’re either
+  - strong: lucky, rich or a celebrity…
+- paragraph: But “regular” people like us?
+- paragraph:
+  - text: We just had to deal with
+  - strong: aging and debilitating diseases
+  - text: for the best part of our lives.
+- heading "After I moved to the U.S. and founded Zonia, I was shocked to see the same mindset here too:" [level=1]:
+  - text: After I moved to the U.S. and founded Zonia,
+  - strong: "I was shocked to see the same mindset here too:"
+- paragraph: Aging is normal. Disease is normal.
+- paragraph: Nobody lives forever.
+- paragraph: If you are healthy when you’re older, you’re just lucky…
+- paragraph:
+  - text: Or
+  - strong: rich enough
+  - text: to spend thousands on cosmetic procedures and the best treatments in the world.
+- paragraph: I was tired of thinking this is normal.
+- paragraph: I was still that child who wanted his parents to live a long and healthy life…
+- paragraph:
+  - text: Obsessed with
+  - strong: aging gracefully,
+  - text: and
+  - strong: preventing chronic disease
+  - text: for as long as possible.
+- paragraph:
+  - text: Because of my health background, I went deep into researching
+  - strong: longevity as a personal project.
+- heading "I wanted to see HOW we can stop premature aging, and why exactly we are living through an epidemic of chronic disease, low energy, depression, and broken cellular health." [level=1]:
+  - text: I wanted to see
+  - strong: HOW we can stop premature aging,
+  - text: and
+  - strong: why exactly we are living through an epidemic of chronic disease, low energy, depression,
+  - text: and
+  - strong: broken cellular health.
+- paragraph:
+  - text: Being the
+  - strong: CEO of a wellness company,
+  - text: I had access to some of the
+  - strong: best longevity studies and experts in the world.
+- paragraph:
+  - text: So I took full advantage of it, and
+  - strong: went deep into my research session
+  - text: that spanned over multiple months.
+- heading "Eventually, I met the man that would help me understand how our “aging button” works…" [level=1]:
+  - text: Eventually,
+  - strong: I met the man that would help me
+  - text: understand
+  - strong: how our “aging button” works…
+- paragraph: And he blew my mind
+- paragraph:
+  - text: I reached out to Dr. Ron Rosendale, the world’s leading longevity expert, and interviewed him
+  - strong: on a new masterclass I was filming on healthy longevity,
+  - text: called the “The CEO of Aging”” Masterclass.
+- img
+- paragraph: The reason why I reached out to him is because Dr. Ron is an incredible doctor.
+- paragraph:
+  - text: He has
+  - strong: hundreds of miraculous recovery patient stories
+  - text: under his belt, and has studied
+  - strong: anti-aging, nutrition, diabetes, and metabolic disease
+  - text: for the past 30+ years.
+- paragraph:
+  - text: So when it comes to
+  - strong: healthy aging
+  - text: and
+  - strong: disease prevention,
+  - text: Dr. Ron is one of the best people in the world to talk to.
+- paragraph:
+  - text: He told me everything about
+  - strong: his groundbreaking research,
+  - text: and how he is able to help people suffering from the world’s most deadly diseases.
+- img
+- paragraph:
+  - text: Dr. Ron was the first person to tell me about something called the
+  - strong: mTor pathway,
+  - text: which he called “The CEO of Aging” or “the aging button”.
+- paragraph: Thirty years ago, scientists didn’t have a clue that this aging button even existed.
+- paragraph: But now we know that mTor, the “aging button” or however you want to call it …
+- paragraph:
+  - text: ‘is an amazing medical breakthrough that dictates
+  - strong:
+    - text: how fast we age.’
+    - superscript: "13"
+- paragraph: So let me repeat this, because it’s absolutely vital to understand that…
+- paragraph:
+  - strong: This is an enzyme in the body that dictates how fast we age.
+- paragraph:
+  - text: Even more fascinating, this enzyme goes hand in hand with
+  - strong: chronic and metabolic diseases,
+  - text: which is why it is VITAL to control it.
+- paragraph:
+  - text: This mTor protein enzyme regulates lifespan, aging, and cellular aging
+  - superscript: "14"
+  - text: ...
+- paragraph:
+  - strong: By giving your body instructions to go from “cell replication mode” to “cell repair mode” and vice versa.
+- img
+- heading "If you want to live a long, healthy life, that’s free of painful diseases, you need to keep your body in “cell repair mode” for as long as possible." [level=1]:
+  - text: If you want to
+  - strong: live a long, healthy life,
+  - text: that’s free of painful diseases, you need to
+  - strong: keep your body in “cell repair mode”
+  - text: for as long as possible.
+- paragraph: "And that’s where mTor plays a vital role:"
+- paragraph: 
+- paragraph:
+  - text: When your
+  - strong: mTor is high,
+  - text: you activate the
+  - strong: cell replication mode.
+- paragraph: 
+- paragraph:
+  - text: When
+  - strong: mTor is low,
+  - text: you activate your
+  - strong: cell repair mode.
+- paragraph: 
+- paragraph:
+  - strong: The cell repair mode helps the cells in your body repair, rejuvenate and balance the body,
+  - text: making sure everything is in top condition “under the hood”.
+- paragraph: However, if you keep your body away from “cell repair mode”, more than it needs to…
+- paragraph: It goes into “cell replication mode”, where the risk of aging and chronic diseases skyrockets.
+- paragraph: What happens next is that cells eventually multiply recklessly, causing havoc to the body…
+- paragraph: "As Dr.Ron puts it:"
+- img
+- paragraph: If our cells start over replicating, this can lead to age-related chronic diseases like obesity and other metabolic conditions.
+- paragraph:
+  - text: When the cells over-replicate
+  - strong: (and you will find out very soon which very common food in America triggers this)
+  - text: ", it’s not only unhealthy for the body, but also impossible for your cells to get back to their rejuvenating “repair mode”."
+- paragraph:
+  - text: "But picture this: If we could help our cells to repair"
+  - strong: more efficiently,
+  - text: we could experience longer-lasting youthfulness and energy.
+- paragraph:
+  - text: Our skin probably
+  - strong: wouldn’t sag as much
+  - text: and create those aging creases around our eyes and mouth.
+- paragraph:
+  - text: Our eyesight
+  - strong: wouldn’t weaken all of the sudden,
+  - text: allowing us to enjoy crystal-clear vision without glasses or surgery.
+- paragraph:
+  - text: Our metabolism
+  - strong: wouldn’t slow down dramatically,
+  - text: causing us to store every bit of food on our abdomen and hips…
+- paragraph:
+  - text: And we
+  - strong: wouldn’t develop life-threatening
+  - text: conditions that need medication for the rest of our lives.
+- paragraph: Slowing down your aging process not only means living more, but also living without life-threatening disease because your cells don’t deteriorate as much and can ever repair themselves more efficiently.
+- paragraph:
+  - strong: So how can we keep our body in cell repair mode for as long as possible?
+- heading "So imagine you have the cell replication mode and cell repair mode sitting on a scale." [level=1]:
+  - text: So imagine you have the
+  - strong: cell replication mode
+  - text: and
+  - strong: cell repair mode
+  - text: sitting on a scale.
+- paragraph:
+  - text: The scale tips and turns on one of these modes based on
+  - strong: different triggers in our body.
+- paragraph:
+  - text: Every day, you can tip the scales in a way
+  - strong: that’s disastrous for your health…
+- paragraph: Or healthy for the body.
+- paragraph: Unfortunately, when you’re eating dangerous foods, you tip the scale into cell replication mode.
+- paragraph: And these foods get stacked up against each other on the scale, adding more and more weight to it…
+- paragraph:
+  - text: Making it virtually
+  - strong: impossible for the cell repair mode to begin!
+- paragraph: "So let me repeat this, because it’s vital for understanding how your aging button works:"
+- paragraph: Every time you eat excessive amounts of these “aging foods”, your body remains in “cell replication mode”…
+- paragraph: So your cells never get the chance to repair themselves efficiently.
+- paragraph: And just like foods that increase the “aging button” mTOR and turn on the cell replication mode…
+- paragraph: "There are nutrients that can achieve the opposite:"
+- heading "They can turn off the aging button and help your body go into natural, effortless repair mode!" [level=1]:
+  - text: They can
+  - strong: turn off the aging button
+  - text: and
+  - strong: help your body
+  - text: go into
+  - strong: natural, effortless repair mode!
+- paragraph: Which means that by limiting certain foods or getting some specific nutrients, we can actually program our cells to repair instead of replicate AT WILL…
+- heading "Virtually pressing your aging button OFF!" [level=1]
+- paragraph:
+  - text: Unfortunately, I’m about to talk about
+  - strong: an amino acid, called Leucine, found in America’s favorite food.
+- paragraph:
+  - text: If you’re like most people in this country, you probably love treating yourself to a
+  - strong: nice burger or a juicy steak
+  - text: at least a few times a week…
+- paragraph:
+  - text: Or don’t think twice about
+  - strong: adding some bacon to your eggs
+  - text: every morning…
+- paragraph:
+  - text: After all, red meat is really nutritious and
+  - strong: high in protein…
+- paragraph: And your body needs that protein for everything, from repairing our cells and muscles, to regulating bowel movements.
+- paragraph: "But here’s something nutritionists often fail to mention:"
+- paragraph: High amounts of protein, and especially animal protein, is also the reason why your mTor level skyrockets…
+- paragraph: Kickstarting the endless cell replication mode.
+- paragraph: In fact, too much protein on every meal, for years?
+- paragraph: It can be deadly.
+- paragraph:
+  - text: One study analyzed the health and food choices of
+  - strong: 6381 participants
+  - text: "for over 50 years, and found a shocking pattern:"
+- paragraph:
+  - strong: People between 50 and 65 years old
+  - text: who eat excessive amounts of protein
+  - strong: are 74% more likely to die prematurely…
+- paragraph:
+  - text: And have a 4-fold increased risk to die from some metabolic conditions than people who eat less protein
+  - superscript: "15"
+- paragraph: The reason why?
+- paragraph:
+  - text: When your body gets certain nutrients,
+  - strong: such as leucine from meat,
+  - text: it activates the mTor that sends your cells straight into “replication mode”...
+- paragraph: And turns off the rejuvenating “repair mode”, that helps the body survive for longer, and stay healthier.
+- paragraph: To give you a better understanding of how much these nutrients accelerate your aging…
+- paragraph: I want to quickly tell you a bit about my friend Ivan.
+- img
+- paragraph: He just turned 99 years old, but you wouldn't know it from the way he lives.
+- paragraph: In the summer, he swims around 3 miles every single day back in Bulgaria…
+- paragraph: In the winter, he goes skiing for a few months.
+- paragraph:
+  - text: I’ve joined him more than a few times for both activities, and I can tell you I have only a fraction of
+  - strong: the energy and mental sharpness of this 99 year old man.
+- paragraph: "Once I asked him about the secret to his longevity and he said:"
+- paragraph:
+  - text: “I eat a lot of plant-based foods, and
+  - strong: less meat.”
+- paragraph: Without realizing, Ivan has been keeping his “aging stop button” working in his favor all his life…
+- paragraph:
+  - text: And he is enjoying
+  - strong: healthy longevity even at 99 years.
+- paragraph: Does all of this mean that protein is bad for you and you should give it up for good?
+- paragraph: Well, no.
+- paragraph: Remember, these two modes sit on a scale, so the goal here is balance…
+- paragraph: Plus, protein helps your body stay strong.
+- paragraph:
+  - text: But when you get too much of it, and especially a particular type of protein, called
+  - strong: leucine, an amino acid found mostly in animal protein…
+- heading "You are actually forcing your cells to age on fast forward, and turn the “repair mode” OFF." [level=1]
+- paragraph: Going back to my grandfather’s story, it all made sense to me.
+- paragraph: Even though my grandfather was keeping his body strong…
+- paragraph: His traditional Bulgarian diet, filled with heavy amounts of meat, was keeping his body away from cell repair mode…
+- paragraph: Until it all finally caught up with him.
+- img
+- paragraph: Mind you, I was learning about this for the very first time…
+- paragraph: But it turns out this information comes from research available since 1993.
+- paragraph: Because of our food choices, Dr. Ron revealed ‘We’re starting to age earlier than humans did 50 or 100 years ago, so in essence we live shorter than our ancestors.’
+- paragraph: But nobody warned me about this danger…
+- paragraph: Just like nobody warned YOU.
+- paragraph:
+  - text: We don’t find out about
+  - strong: how to keep our body in cell repair mode in school,
+  - text: in the doctor’s office, or in the media…
+- paragraph: And instead we’re constantly bombarded with news about chronic diseases, and death rates…
+- heading "So we go on with our life without ever knowing WE have this powerful aging button that can be turned off at will through specific natural nutrients." [level=1]:
+  - text: So we go on with our life without ever knowing WE have this powerful
+  - strong: aging button that can be turned off at will
+  - text: through specific natural nutrients.
+- paragraph: Personally, I’ve decided to do my part, and share this truth with as many people as possible…
+- paragraph:
+  - text: Because I’m tired of
+  - strong: accepting aging and disease
+  - text: as a natural part of human experience.
+- paragraph: Now that I know the truth…
+- paragraph: I discovered what works and what doesn’t when it comes to our cellular pathways.
+- paragraph: I came across science that helped me understand what nutrients protect your body and your mind from rapid aging…
+- paragraph: And after months of research…
+- heading "I will reveal to you some master natural inhibitors for your aging button that are not only proven to help block mTORs destructive effects on the body…" [level=1]:
+  - text: I will reveal to you some
+  - strong: master natural inhibitors
+  - text: for your
+  - strong: aging button
+  - text: that are not only
+  - strong: proven to help block mTORs destructive effects
+  - text: on the body…
+- paragraph:
+  - text: But also have some exceptional benefits for your
+  - strong: skin, blood sugar, bones, heart, joints and cellular health.
+- paragraph: Because just like leucine from excessive consumption of meat can press your aging button ON…
+- paragraph: Other nutrients are proven to turn it OFF.
+- paragraph: I like to call these natural ingredients “multi-potent”, because not only they can decrease the mTor tremendously, and help your cells go into “repair mode”...
+- paragraph: But they can also support the prevention of chronic disease and age-related disease, help restore the health of your cells and get that healthy glow that comes from your health and energy improving.
+- paragraph:
+  - strong: In total, there are
+  - text: 7 amazing ingredients that come with loads of research behind them, and 100% natural mTor inhibiting powers, that will hopefully get you as excited as we were when we first discovered them.
+- heading "Becausе Controlling Your mTor Is One Of The Most Important Actions You Can Take For Improved Health And Longevity" [level=1]:
+  - text: Becausе
+  - strong: Controlling Your mTor
+  - text: Is One Of The Most Important Actions You Can Take
+  - strong: For Improved Health And Longevity
+- paragraph: "So here they are:"
+- 'heading "Multi-potent agent #1: Berberine" [level=1]'
+- img "berberine"
+- paragraph: Chinese doctors used berberine for thousands of years.
+- paragraph:
+  - text: Berberine is, first and foremost, a
+  - strong:
+    - text: powerful mTOR inhibitor
+    - superscript: "16"
+    - text: .
+- paragraph:
+  - text: Recently, it has also been tested in
+  - strong: hundreds of different studies
+  - text: and shown to have some very impressive properties
+  - superscript: "17"
+  - text: ":"
+- paragraph: 
+- paragraph:
+  - strong:
+    - text: Slows down cell aging by a whopping 72%
+    - superscript: "18"
+  - text: ", making them"
+  - strong: look more like young cells
+  - text: for a lot longer
+- paragraph:
+  - text:  Reduces
+  - strong:
+    - text: blood sugar levels
+    - superscript: 19,20
+- paragraph:
+  - text:  Can
+  - strong: regulate blood pressure
+- paragraph:
+  - text:  Can
+  - strong: lower triglycerides
+- paragraph:
+  - text:  Can
+  - strong: improve heart health
+- paragraph: 
+- paragraph:
+  - strong: Is mood regulating and can even help fight depression
+  - text: ">"
+- paragraph: "An amazing feat of taking berberine involves weight loss:"
+- paragraph: Taking berberine for 4 months helped participants of a study lose up to 5 pounds of stubborn fat without changing their diet or exercising more.
+- paragraph: "Apparently the weight loss happened because berberine had improved the main fat-regulating hormones: insulin, leptin and adiponectin."
+- 'heading "Multi-potent agent #2: Trans-Resveratrol" [level=1]'
+- heading "AKA the most potent part of resveratrol!" [level=2]
+- img "RESVERATROL"
+- paragraph:
+  - text: This polyphenol helps the body to
+  - strong:
+    - text: turn off genes that promote aging
+    - superscript: "21"
+  - text: ", but trans-resveratrol can be even more effective."
+- paragraph:
+  - text: It’s
+  - strong: a powerful mTOR inhibitor
+  - text: and a
+  - strong: longevity agent
+  - text: ", which in some studies improved the lifespan of mice by around"
+  - strong:
+    - text: a mind-blowing 31%
+    - superscript: "22"
+    - text: .
+- paragraph: "It’s also scientifically-proven to:"
+- paragraph:
+  - text:  Support
+  - strong:
+    - text: healthy blood pressure
+    - superscript: "23"
+- paragraph: 
+- paragraph:
+  - text: Reduce
+  - strong:
+    - text: memory loss and cognitive decline
+    - superscript: "24"
+- paragraph: 
+- paragraph:
+  - strong: Protect brain cells from damage
+- 'heading "Multi-potent agent #3: Fisetin" [level=1]'
+- img "RESVERATROL"
+- paragraph:
+  - text: A 2018 study actually showed that fisetin might be
+  - strong: the most effective polyphenol
+  - text: we have available for our cellular health
+  - superscript: "25"
+  - text: .
+- paragraph:
+  - text: Researchers became increasingly interested in fisetin for the past few years and performed many many studies on rodents, which share up to
+  - strong: 99% of human DNA
+  - text: ", and found some incredible things about fisetin."
+- paragraph:
+  - text: First,
+  - strong:
+    - text: fisetin blocks overactive mTor
+    - superscript: "26"
+  - text: which makes it a powerful natural ingredient to
+  - strong:
+    - text: support healthy longevity, youthfulness and health
+    - superscript: "27"
+    - text: .
+- paragraph:
+  - text: In rodents, fisetin alone improved
+  - strong: their lifespan by over 10%.
+- paragraph: "But its benefits don’t stop here. This amazing polyphenol:"
+- paragraph: 
+- paragraph:
+  - text: Can
+  - strong:
+    - text: reduce wrinkles by boosting skin collagen
+    - superscript: "28"
+- paragraph: 
+- paragraph
+- paragraph:
+  - text: Can
+  - strong:
+    - text: protect the skin from DNA damage and inflammation
+    - superscript: "29"
+- paragraph: 
+- paragraph:
+  - text: Can
+  - strong:
+    - text: increase the feel-good hormones in the brain
+    - superscript: "30"
+- paragraph: 
+- paragraph:
+  - text: Can
+  - strong: support brain health on multiple levels
+  - text: ", from reducing brain inflammation to protecting brain cells, and even decreasing brain plaques that causes dementia"
+  - superscript: "31"
+- paragraph: 
+- paragraph:
+  - strong: Supports healthy blood circulation and healthy blood pressure
+- paragraph:
+  - text:  Can
+  - strong: improve heart health
+- paragraph:
+  - text:  Can
+  - strong: protect bone density
+- 'heading "Multi-potent agent #4:" [level=1]'
+- heading "Organic Matcha Green Tea" [level=1]
+- img "organic-matcha-green-tea"
+- paragraph:
+  - text: As you might know,
+  - strong: green tea has been used for centuries
+  - text: "> in some parts of the world to treat a variety of conditions, and people in Ancient China believed that drinking it would"
+  - strong: bring them good health and longevity.
+  - text: ">"
+- paragraph:
+  - text: Turns out, the Ancient Chinese were right! Research has proven that EGCG, a powerful polyphenol found in green tea, is able to significantly suppress elevated mTOR
+  - superscript: "32"
+  - text: levels and protect cells from damage.
+- paragraph:
+  - text: EGCG has been found to actually
+  - strong:
+    - text: promote longevity in the body
+    - superscript: "33"
+  - text: by protecting the cells against environmental threats and by promoting normal mitochondrial function.
+- paragraph: "In addition, EGCG:"
+- paragraph: 
+- paragraph:
+  - text: Helps rejuvenate the skin by decreasing sunburned cells by an incredible 66%
+  - superscript: "35"
+  - text: ", regardless of your age (when you apply it to your skin)"
+- paragraph: 
+- paragraph:
+  - text: May help regulate blood sugar levels
+  - superscript: "36"
+- paragraph: 
+- paragraph:
+  - strong:
+    - text: Supports your weight loss efforts
+    - superscript: "37"
+- paragraph: 
+- paragraph:
+  - text: Has even been shown to
+  - strong:
+    - text: boost your metabolism
+    - superscript: "38"
+- 'heading "Multi-potent agent #5: Turmeric" [level=1]'
+- heading "With its rejuvenating powers, it can create vitality in the body39, according to Indian religious texts… and science!" [level=2]:
+  - text: With its rejuvenating powers, it can create vitality in the body
+  - superscript: "39"
+  - text: ", according to Indian religious texts… and science!"
+- img "RESVERATROL"
+- paragraph:
+  - text: Multiple studies show that curcuma, the active component of turmeric, is one of nature’s most powerful allies against aging
+  - superscript: "40"
+  - text: .
+- paragraph:
+  - text: That’s because curcumin is actually a super strong mTor inhibitor, antioxidant, and anti-inflammatory ingredient
+  - superscript: "41"
+  - text: .
+- paragraph: "Studies have proven it can:"
+- paragraph: 
+- paragraph:
+  - text: Stimulate your body’s antioxidant defense and stop dangerous free radicals from rapidly aging your body
+  - superscript: "42"
+- paragraph: 
+- paragraph:
+  - strong:
+    - text: Boost your mood by increasing the feel-good hormones in your brain
+    - superscript: "43"
+- paragraph:
+  - text:  Prevent or reduce brain aging
+  - superscript: "44"
+- paragraph: 
+- paragraph:
+  - text: Have impressive
+  - strong:
+    - text: metabolism regulating properties
+    - superscript: "45"
+- 'heading "Multi-potent agent #6:" [level=1]'
+- heading "Vitamin D3" [level=1]
+- img "RESVERATROL"
+- paragraph: As we age, our vitamin D levels automatically drop by 50% or more, which makes 8 in 10 people deficient in vitamin D.
+- paragraph: This is a problem, especially when it comes to your immune system, that can become compromised if your vitamin D levels aren’t optimal.
+- paragraph: Vitamin D3...
+- paragraph:  Supports strong immunity
+- paragraph: 
+- paragraph:
+  - text: Promotes youthfulness
+  - strong:
+    - text: by keeping elevated mTor levels low
+    - superscript: "46"
+- paragraph: 
+- paragraph:
+  - strong: Significantly contributes to healthy and younger-looking skin.
+- paragraph: 
+- paragraph: Can reduce your biological age of your cells in just 16 weeks
+- paragraph: 
+- paragraph:
+  - text: Can prevent cellular deterioration that ages your skin by
+  - strong:
+    - text: 55 - 70%
+    - superscript: "47"
+- 'heading "Multi-potent agent #7:" [level=1]'
+- heading "Vitamin K2" [level=1]
+- img "RESVERATROL"
+- paragraph:
+  - text: The second really vital vitamin for youthfulness is the
+  - strong: K2 vitamin.
+- paragraph:
+  - text: First, because
+  - strong: vitamin D3 cannot be absorbed properly without vitamin K2.
+- paragraph:
+  - text: And second, because just like vitamin D3,
+  - strong:
+    - text: it inhibits high levels of mTOR
+    - superscript: "48"
+  - text: ", promotes"
+  - strong: strong bones and teeth.
+- paragraph: "Vitamin K2 can also:"
+- paragraph: 
+- paragraph:
+  - text: Help
+  - strong: boost your memory function
+- paragraph:
+  - text: 
+  - strong: Lower inflammation
+- paragraph: 
+- paragraph:
+  - text: Help decrease the symptoms of
+  - strong: autoimmune conditions
+- paragraph: 
+- paragraph:
+  - text: Can even keep your heart healthy
+  - superscript: "49"
+- paragraph:
+  - text: Vitamin K2 is so vital for the body, that people with
+  - strong: lower vitamin K
+  - text: levels are
+  - strong:
+    - text: 20% more likely to die
+    - superscript: "50"
+  - text: because of diseases, but not many people really pay attention to this.
+- paragraph:
+  - text: In a famous study, called
+  - strong: “The Rotterdam Study”
+  - text: ", scientists found out that from 4.800 participants, people who had more vitamin K2 in the body were"
+  - strong: 52% less likely to develop calcification of their arteries...
+- paragraph:
+  - text: And
+  - strong: 57% lower chance of dying from heart disease
+  - text: over a 10 year period
+  - superscript: "51"
+  - text: .
+- paragraph:
+  - text: So what should stop you right now from
+  - strong: buying loads of Vitamin K2?
+- paragraph:
+  - text: Well, one MAJOR problem with Vitamin K2 is
+  - strong: its low bioavailability.
+- paragraph: English, please?
+- paragraph:
+  - text: Basically,
+  - strong: most of the Vitamin K2
+  - text: you find at pharmacies and shops
+  - strong: won’t be absorbed by your body
+  - text: fast enough.
+- paragraph:
+  - text: Once you take the Vitamin K2, your
+  - strong: stomach will start breaking it down
+  - text: and
+  - strong: sending it on its way out of your body
+  - text: BEFORE you get to soak up all the benefits…
+- paragraph:
+  - text: Not to worry though -
+  - strong: we have developed a solution.
+- paragraph: And you’re seconds away from accessing it.
+- paragraph: After finding these impressive ingredients, we spent months researching a wellness company that has a product with all these natural master mTOR “inhibitors” and we couldn’t find one.
+- paragraph: That’s because all these multi-potent agents need to be in the precise dosage to be really effective, and unfortunately not many companies are offering that.
+- heading "This is the reason why we decided to create our own custom formulation specifically designed to help address cellular function and reverse incorrect aging, called Restore Life." [level=1]:
+  - text: This is the reason why we decided to create our own custom formulation specifically designed to help address cellular function and reverse incorrect aging, called
+  - strong: Restore Life.
+- paragraph: So I have used everything I know about the body’s natural ‘aging button’...
+- paragraph: And tapped into my resources as a CEO of a health company…
+- heading "To create a Powerful Formula that Helps Inhibit your mTOR and Support Full Body Rejuvenation in Just 2 Seconds Every Day" [level=1]:
+  - text: To create a
+  - strong: Powerful Formula
+  - text: that Helps
+  - strong: Inhibit your mTOR
+  - text: and
+  - strong: Support Full Body Rejuvenation
+  - text: in Just
+  - strong: 2 Seconds Every Day
+- paragraph:
+  - text: I’m happy to say that the solution I am about to share with you right now is
+  - strong: already helping many people
+  - text: get control over their cellular pathways, metabolism, and aging…
+- paragraph:
+  - strong: Including my own mother!
+- paragraph: "And I’m about to share this fountain of youth with you, right now:"
+- heading "Restore Life, The Formula That Includes All The Proven Natural mTor-inhibiting Ingredients" [level=1]:
+  - strong: Restore Life
+  - text: ", The Formula That Includes All The"
+  - strong: Proven Natural mTor-inhibiting Ingredients
+- img "60capsules-bottle"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "registered facility"
+- img "quantity"
+- paragraph: Restore Life gives your body the nourishment it needs to maintain cellular pathways open and energy flowing every single day.
+- paragraph:
+  - text: It is the only product in the world that is specifically
+  - strong: designed to ‘switch off' your “aging button”.
+- img "restore-life-facts"
+- paragraph:
+  - text: So yes, the
+  - strong: Restore Life Formula
+  - text: includes
+  - strong: "all the multi-potent mTOR-suppressing ingredients:"
+- img "berberine-multi"
+- paragraph:
+  - strong: Berberine
+  - text: ", which can"
+  - strong: stop your cells from aging so fast
+  - text: ", and makes your cell act like a younger cell"
+- img "fisetin-multi"
+- paragraph:
+  - strong: Fisetin
+  - text: ", which is one of the most powerful antioxidants, selectively helping clear out senescent cells while sparing healthy ones"
+- img "organic-multi"
+- paragraph:
+  - strong: Organic matcha green tea
+  - text: ", the ancient secret to superior health, which protects your cells from damage, and promotes normal mitochondrial function"
+- img "tumeric-multi"
+- paragraph:
+  - strong: Turmeric
+  - text: ", now seen by a lot of scientists as nature’s most powerful defense against aging and metabolic stress, thanks to its mTOR inhibitor role, strong antioxidant defense, and rejuvenating properties"
+- img "trans-resveratrol-multi"
+- paragraph:
+  - strong: Trans-resveratrol
+  - text: ", the ingredient which"
+  - strong: puts aging on pause
+  - text: at your genetic level, proven to
+  - strong: increase rodent’s lifespan by an incredible 31%
+- img "vitamin3d-multi"
+- paragraph:
+  - strong: Vitamin D3
+  - text: ", which helps"
+  - strong: reduce the biological age of your cells
+  - text: and
+  - strong: prevents cellular deterioration of your skin
+- img "vitamink2-multi"
+- paragraph:
+  - text: And Vitamin
+  - strong: K2 as MK-7 from Trans isomers
+  - text: ", which is the most bioavailable form of Vitamin K2 on the market. MK-7 isn’t instantly flushed out by your body as regular Vitamin K2 from MK-4, which means you WILL get all of its benefits like"
+  - strong: inhibiting high levels of mTOR, protecting your arteries
+  - text: ", and supporting your cardiovascular health"
+- paragraph:
+  - text: We’ve added
+  - strong: all these incredible mTor inhibiting ingredients
+  - text: into
+  - strong: ONE single powerful
+  - text: formula.
+- heading "To Create The Formula, We’ve Partnered Up With One Of The Best USA-based And FDA-approved Facilities In The World…" [level=1]:
+  - text: To Create The Formula, We’ve Partnered Up With
+  - strong: One Of The Best USA-based And FDA-approved Facilities
+  - text: In The World…
+- paragraph:
+  - text: Which is also
+  - strong: GMP(Good Manufacturing Practices) certified!
+- paragraph:
+  - text: We made sure the
+  - strong: dosages are effective
+  - text: and the
+  - strong: ingredients used are from the best possible sources.
+- paragraph:
+  - text: Also, we made sure
+  - strong: every single dose
+  - text: "is 100% free from:"
+- paragraph:  GMO ingredients
+- paragraph:  Gluten
+- paragraph:  Dairy
+- paragraph:  Sugars
+- paragraph:  Nuts
+- paragraph:  Artificial Binders
+- paragraph:  Toxins
+- paragraph: 
+- paragraph:
+  - text: And any
+  - strong: useless ingredients
+  - text: added just to raise the price tag
+- paragraph:
+  - text: If you were also wondering if
+  - strong: Restore Life Formula is vegan friendly
+  - text: ", the answer is YES."
+- paragraph:
+  - text: While
+  - strong: the Restore Life formula
+  - text: will
+  - strong: inhibit your mTor
+  - text: and
+  - strong: improve your longevity and wellbeing…
+- paragraph: It will also help you on many other health levels.
+- heading "Restore Life Is Sold Exclusively Online And This Is The Only Official Page On Which You Can Choose Press Pause On Aging And Get All 7 Ingredients in the exact dosages and purity that you need to feel and look younger again" [level=1]:
+  - strong: Restore Life
+  - text: Is
+  - strong: Sold Exclusively
+  - text: Online And This Is The Only Official Page On Which You Can Choose Press Pause On Aging And
+  - strong: Get All 7 Ingredients in the exact dosages and purity that you need to feel and look younger again
+- paragraph:
+  - text: The ingredients found in
+  - strong: The Restore Life formula
+  - text: "are proven to support:"
+- paragraph: 
+- paragraph:
+  - text: A
+  - strong:
+    - text: reduction in hard to control blood sugar
+    - superscript: 52 53
+- paragraph: 
+- paragraph:
+  - text: A
+  - strong: healthy and balanced immune system
+- paragraph: 
+- paragraph:
+  - text: Defense
+  - strong: against cellular damage
+- paragraph: 
+- paragraph:
+  - text: A
+  - strong: healthy weight
+  - text: and
+  - strong: weight loss efforts
+- img "mert-guller"
+- paragraph: 
+- paragraph:
+  - text: A
+  - strong: youthful and glowing skin
+- paragraph: 
+- paragraph:
+  - strong:
+    - text: Better memory
+    - superscript: "54"
+  - text: and
+  - strong: learning ability
+- paragraph: 
+- paragraph:
+  - text: An
+  - strong: enhanced defense against inflammation
+  - text: and
+  - strong: free radicals
+  - text: that damage your physical appearance and health
+  - superscript: "55"
+- paragraph: 
+- paragraph:
+  - text: And even an
+  - strong: improvement on your mood
+  - text: and
+  - strong:
+    - text: emotional health
+    - superscript: "56"
+- paragraph:
+  - text: So while all the ingredients in
+  - strong: the Restore Life formula
+  - text: work on a cellular level to inhibit
+  - strong: mTor, stop cell aging
+  - text: ", and"
+  - strong: support your longevity
+  - text: journey…
+- img "belonogova-left"
+- img "tumeric-right"
+- paragraph: 
+- paragraph:
+  - text: You could
+  - strong: lose a few extra pounds naturally
+  - text: ", thanks to Berberine…"
+- paragraph: 
+- paragraph:
+  - text: You could help
+  - strong: protect your memory and your brain
+  - text: ", thanks to Fisetin."
+- text: 
+- paragraph:
+  - text: The Organic Matcha Green Tea can
+  - strong: boost your metabolism
+  - text: even more,
+  - strong: protect your skin against aging
+  - text: ", and"
+  - strong: stabilze your blood sugar…
+- text: 
+- paragraph:
+  - text: Turmeric can be your
+  - strong: best defense against inflammation and free radicals, restore the health of your body
+  - text: ", and help you"
+  - strong: feel happier and calmer;
+- text: 
+- paragraph:
+  - text: Vitamin D3 can
+  - strong: protect your skin against aging, reduce sun spots
+  - text: ", and help you"
+  - strong: look younger;
+- text: 
+- paragraph:
+  - text: While MK-7 from Trans Isomers, the most superior form of Vitamin K2,
+  - strong: can help protect your heart health.
+- heading "This is a unique, proprietary formula and you won’t find these same ingredients in the right concentration combined in 1 product anywhere else on the market." [level=4]:
+  - text: This is a unique, proprietary formula and
+  - strong: you won’t find these same ingredients
+  - text: in the
+  - strong: right concentration
+  - text: combined in 1 product
+  - strong: anywhere else on the market.
+- heading "Not in pharmacies or supplement stores, not even on Amazon." [level=4]
+- heading "Separately,these multi-potent agents will cost over $200" [level=4]
+- img "bottles-group"
+- heading "And even then, you might not get the same quality ingredients as the ones in the Restore Life Formula." [level=4]:
+  - text: And even then, you might
+  - strong: not get the same quality ingredients
+  - text: as the ones in the Restore Life Formula.
+- heading "Restore Life is sold exclusively online and this is the only official page on which you can choose Restore Life and get all 7 ingredients." [level=4]:
+  - text: Restore Life is
+  - strong: sold exclusively online
+  - text: and this is the
+  - strong: only official page
+  - text: on which you can choose Restore Life and get all 7 ingredients.
+- heading "As You See Below, You Have Three Packages With Restore Life Formula With Different Discounts To Choose From:" [level=1]:
+  - text: As You See Below, You Have
+  - strong: Three Packages With Restore Life Formula
+  - text: "With Different Discounts To Choose From:"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "restore-life-icons"
+- img "registered facility"
+- img "quantity"
+- paragraph: regular $79
+- paragraph: today $59 per bottle
+- heading "1-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $59" [level=3]
+- paragraph: for 1 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: best value!
+- paragraph: regular $79
+- paragraph: today $33 per bottle
+- heading "6-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $198" [level=3]
+- paragraph: for 6 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: regular $79
+- paragraph: today $39 per bottle
+- heading "3-month supply" [level=2]
+- img "60capsules-bottles-3"
+- paragraph: save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $117" [level=3]
+- paragraph: for 3 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- text: No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to continue the rejuvenation effects I'll get from the content on Zonia. I agree to re-purchase Restore Life at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I want to pass on this chance forever.
+- heading "So How Can You Choose The Best Option And Make Sure You’re Getting ALL The Benefits Of The Restore Life Formula?" [level=1]:
+  - text: So How Can
+  - strong: You Choose The Best Option
+  - text: And Make Sure You’re Getting ALL The Benefits Of The
+  - strong: Restore Life Formula?
+- paragraph:
+  - text: Well, a lot of the ingredients found in our
+  - strong: Restore Life
+  - text: supplement were proven to work in
+  - strong: studies performed on a 12-week period
+  - text: or more.
+- paragraph:
+  - text: The body needs some time to
+  - strong: assimilate the ingredients
+  - text: and
+  - strong: begin the restoration process.
+- paragraph:
+  - text: Which is why starting out with either the
+  - strong: 3-month or the 6-month
+  - text: option might be the
+  - strong: most effective way
+  - text: to experience the
+  - strong: full effects
+  - text: of these natural healers.
+- paragraph: "Here’s why you should opt for the 3-month or 6-month packages:"
+- paragraph: 
+- paragraph:
+  - text: Get even
+  - strong: HIGHER discounts for MORE bottles
+- paragraph: 
+- paragraph:
+  - text: Give your body
+  - strong: TIME to experience
+  - text: the
+  - strong: FULL EFFECTS
+  - text: of this formula
+- paragraph: 
+- paragraph:
+  - text: Make sure
+  - strong: you have enough product
+  - text: and avoid
+  - strong: waiting weeks or months
+  - text: until our boutique company can restock - and considering how popular this offer is, our stock is FLYING off our shelves
+- paragraph: 
+- paragraph:
+  - text: You
+  - strong: get an exclusive offer
+  - text: to a product most people can only DREAM of
+- paragraph: 
+- paragraph:
+  - text: Your purchase is protected by a
+  - strong: 180-day money back guarantee
+- paragraph: regular $79
+- paragraph: today $59 per bottle
+- heading "1-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $59" [level=3]
+- paragraph: for 1 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: best value!
+- paragraph: regular $79
+- paragraph: today $33 per bottle
+- heading "6-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $198" [level=3]
+- paragraph: for 6 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: regular $79
+- paragraph: today $39 per bottle
+- heading "3-month supply" [level=2]
+- img "60capsules-bottles-3"
+- paragraph: save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $117" [level=3]
+- paragraph: for 3 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- text: No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to continue the rejuvenation effects I'll get from the content on Zonia. I agree to re-purchase Restore Life at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I want to pass on this chance forever.
+- paragraph:
+  - text: With the 3-bottle or 6-bottle packages, you have
+  - strong: the most chances to experience the energy
+  - text: ", the"
+  - strong: metabolism-boosting
+  - text: and the
+  - strong: rejuvenating effects
+  - text: without having to
+  - strong: stop your progress
+  - text: just because you ran out.
+- paragraph:
+  - text: So instead of dealing with
+  - strong: all the body changes
+  - text: and the
+  - strong: premature aging
+  - text: that
+  - strong: come with chronically elevated mTOR levels…
+- paragraph:
+  - text: You can get this wonderful
+  - strong: formula and help your body go back into the rejuvenating repair mode.
+- paragraph:
+  - text: "All you have to say is:"
+  - strong: MAYBE this scientifically-backed formula might work for me, too.
+- paragraph:
+  - text: And if you
+  - strong: don’t experience jaw-dropping results
+  - text: in your energy levels, metabolism, skin, mood and overall health
+  - strong: in the next 180 days…
+- paragraph:
+  - text: Just send us an email at
+  - link "support@zonia.com":
+    - /url: mailto:support@zonia.com
+  - text: and
+  - strong: we’ll give you a full refund
+  - text: ", no questions asked, no matter what package you chose."
+- paragraph: The choice is yours to take.
+- img "180-badge-lg"
+- paragraph: You can skip this mTor-suppressing body tonic…
+- paragraph: And go back to your usual rejuvenating methods…
+- paragraph:
+  - text: Or you can
+  - strong: get the only body tonic that has 7 completely natural mTor inhibitors.
+- paragraph:
+  - text: All you need to do is
+  - strong: choose your favorite package
+  - text: down below and add it to your order.
+- paragraph:
+  - text: And if
+  - strong: you change your mind
+  - text: at any point
+  - strong: in the next 6 months
+  - text: ", you can"
+  - strong: send us the bottles back
+  - text: even if they are all empty, and you’ll get your refund no matter what the reason is.
+- paragraph: I know what you’ve just learned about aging and longevity is a lot to take in…
+- paragraph: I can also understand how you might feel frustrated, or even angry that none of this was shared with you before…
+- paragraph: Believe me.
+- paragraph: I’ve been where you are.
+- paragraph: But you do know the truth now.
+- paragraph: You know there is a way for you to help control the aging process…
+- paragraph: Help protect your body from chronic disease…
+- paragraph: And support your body in achieving healthy longevity.
+- paragraph: And knowing brings you power.
+- paragraph: It brings you the power to do something about it…
+- paragraph: And change your life.
+- paragraph: You look in the mirror one morning and just think ‘who is this person?’
+- paragraph: ‘Where did the person I knew go?’
+- paragraph: It can feel like you’re losing yourself…
+- paragraph: And that’s a kind of pain that can be devastating.
+- paragraph: But if you start controlling your mTor…
+- paragraph: And help tip the scales in the cell repair mode’s favor…
+- paragraph: Well, there’s no limit to what amazing things you can experience!
+- paragraph: You can wake up one morning and feel fresh and energized for the entire day…
+- paragraph: You can skip that third cup of coffee at noon because your body doesn’t need it anymore…
+- paragraph: You can start enjoying your life more because your body doesn’t hurt every time you make the wrong move…
+- paragraph: You can see the shocked look on your doctor’s face the next time you go in for your early tests…
+- paragraph: Because he can’t remember the last time your results looked this good…
+- paragraph: You can see your skin plump and shiny, and laugh when everyone assumes you're much younger than you actually are…
+- paragraph: You can shed stubborn fat easily, and spend money on new clothes instead of new gym subscriptions…
+- paragraph: You can feel better…
+- paragraph: Look better…
+- paragraph: And finally feel like you got your body back.
+- paragraph: With Restore Life, you have a convenient way to get 7 mTor suppression ingredients…
+- paragraph: Which will tip the scales for your longevity…
+- paragraph: In just 2 seconds a day.
+- paragraph: The choice is yours.
+- paragraph:
+  - strong: Thank you for reading
+  - text: and I hope my letter has shed some light on your health and longevity.
+- paragraph: Sincerely, Stefan Apostolov Founder of Zonia
+- separator
+- paragraph: regular $79
+- paragraph: today $59 per bottle
+- heading "1-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $59" [level=3]
+- paragraph: for 1 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: best value!
+- paragraph: regular $79
+- paragraph: today $33 per bottle
+- heading "6-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $198" [level=3]
+- paragraph: for 6 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: regular $79
+- paragraph: today $39 per bottle
+- heading "3-month supply" [level=2]
+- img "60capsules-bottles-3"
+- paragraph: save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $117" [level=3]
+- paragraph: for 3 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- text: No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to continue the rejuvenation effects I'll get from the content on Zonia. I agree to re-purchase Restore Life at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I want to pass on this chance forever.
+- heading "F.A.Q." [level=1]
+- heading "Is the Restore Life Formula right for me?" [level=3]:
+  - strong: Is the Restore Life Formula right for me?
+- paragraph: Restore Life Formula is a 100% natural GMO-free body tonic that supports the whole body, from cell to skin. It acts by inhibiting elevated mTOR protein which causes premature aging and disease and providing extra support to your overall health.
+- paragraph: "The ingredients from The Restore Life formula are proven to support:"
+- list:
+  - listitem:
+    - text: Reduction in erratic blood sugar
+    - superscript: 57 58
+  - listitem: A healthy and balanced immune system
+  - listitem: Protection against cellular damage
+  - listitem: A healthy weight and balanced weight-loss hormones
+  - listitem: A youthful and glowing skin
+  - listitem:
+    - text: Better memory and learning ability
+    - superscript: "59"
+  - listitem:
+    - text: An enhanced defence against inflammation and free radicals that damage your physical appearance and health
+    - superscript: "60"
+  - listitem:
+    - text: And even an improvement on your mood and emotional health
+    - superscript: "61"
+- paragraph: If you want to keep aging gracefully, stop premature aging, keep your youthful appearance for years and years, then the Restore Life Formula along with the course is a great option for you.
+- paragraph: We designed the Restore Life formula while keeping in mind our shared goal of achieving healthy longevity.
+- heading "Ok, Stefan, but what are the potential side-effects?" [level=3]:
+  - strong: Ok, Stefan, but what are the potential side-effects?
+- paragraph:
+  - text: To this date, none of the ingredients in
+  - strong: the Restore Life Formula had any reported side effects.
+- paragraph: But like with every other active ingredient like vitamins and minerals you get in a supplement form, it’s always good to check with your doctor or healthcare provider, especially if you have existing conditions.
+- heading "When does the product expire?" [level=3]:
+  - strong: When does the product expire?
+- paragraph:
+  - text: The Restore Life formula can last for
+  - strong: 24 months
+  - text: as long as you remember to keep the bottle in a cool, clean, dry place, especially after opening the bottle.
+- heading "How do I take the Restore Life formula?" [level=3]:
+  - strong: How do I take the Restore Life formula?
+- paragraph: The best way to take the Restore Life formula is 2 capsules every day with a glass of water, milk or tea after your breakfast or lunch. Because of its organic matcha green tea content, it’s preferable to take the capsule in the morning and not in the evening.
+- heading "But what if I’m not happy with the results after all?" [level=3]:
+  - strong: But what if I’m not happy with the results after all?
+- paragraph: I’m really positive you will LOVE the results you get from Restore Life Formula.
+- paragraph:
+  - text: In the unlikely case you’re not happy with how you feel after taking it, you are covered by
+  - strong: a 180-day money-back guarantee
+  - text: that secures your investment.
+- paragraph:
+  - text: So you can try the Restore Life formula completely free for 6 months. And if you’re not happy with the changes you’ll experience on your body, mood, skin and overall health, you can send an email to
+  - link "support@zonia.com":
+    - /url: mailto:support@zonia.com
+  - text: and get a full refund no matter if you’ve ordered the 1-month, 3-months, or 6-months supply.
+- paragraph: regular $79
+- paragraph: today $59 per bottle
+- heading "1-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $59" [level=3]
+- paragraph: for 1 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: best value!
+- paragraph: regular $79
+- paragraph: today $33 per bottle
+- heading "6-month supply" [level=2]
+- img "capsules-bottle"
+- paragraph: save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $198" [level=3]
+- paragraph: for 6 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- paragraph: regular $79
+- paragraph: today $39 per bottle
+- heading "3-month supply" [level=2]
+- img "60capsules-bottles-3"
+- paragraph: save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "180days-badge"
+- text: ADD TO ORDER
+- img "credit-card-icons"
+- heading "your total $117" [level=3]
+- paragraph: for 3 bottle
+- img "shipping-bus"
+- paragraph: free shipping
+- text: No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to continue the rejuvenation effects I'll get from the content on Zonia. I agree to re-purchase Restore Life at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I want to pass on this chance forever.
+- separator
+- heading "citations" [level=2]
+- button ""
+- separator
+- heading "© 2026 ZONIA" [level=5]
+- link "| Terms of use":
+  - /url: /terms_use
+- link "| Privacy Policy":
+  - /url: /privacy_cookie
+- link "| Disclaimer":
+  - /url: /disclaimer
+- link "Do not sell or share my personal information":
+  - /url: /opt-out
+Failed step: user makes following decision in docuseries "Restore Life" Upsell page
+Test failed on page: 'https://zonia-stg.com/cr-restore-life-special?id=6a9880ef455c489e00dae61c'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.6__20260902-200419.png

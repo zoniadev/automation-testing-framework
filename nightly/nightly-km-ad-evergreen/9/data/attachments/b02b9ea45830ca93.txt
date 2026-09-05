@@ -1,0 +1,8 @@
+Executing step: user register in "ad_ev_detox" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+Failed step: user register in "ad_ev_detox" Opt In page
+Test failed on page: 'http://staging.zonia.com/admb5e/ad-detox'
+Taking screenshots
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Unbroken_evergreen_funnel_--_@1.2__20251126-200507.png
+Captured the following browser console errors:
+--- The Cross-Origin-Opener-Policy header has been ignored, because the URL's origin was untrustworthy. It was defined either in the final response or a redirect. Please deliver the response using the HTTPS protocol. You can also use the 'localhost' origin instead. See https://www.w3.org/TR/powerful-features/#potentially-trustworthy-origin and https://html.spec.whatwg.org/#the-cross-origin-opener-policy-header. (Source: unknown source)
