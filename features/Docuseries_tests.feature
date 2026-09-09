@@ -644,11 +644,11 @@ Feature: Docuseries tests
     Examples:
       | outline | opt_in_page        | plan      | booster_packages | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
       | 1       | hh_ev              | monthly   | no               | no                   | no         | no                 | no         | no                 |
-#      | 2       | hh_ev_inflammation | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
-#      | 3       | hh_ev_emotions     | annually  | no               | no                   | no         | no                 | 1          | no                 |
-#      | 4       | hh_ev_obesity      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
-#      | 5       | hh_ev_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
-#      | 6       | hh_ev_heart        | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
-#      | 7       | hh_ev_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
-#      | 8       | hh_ev_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
-#      | 9       | hh_ev              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | 2       | hh_ev_inflammation | quarterly | no               | no                   | no         | no                 | no         | upgrade            |
+      | 3       | hh_ev_emotional    | annually  | no               | no                   | no         | no                 | 1          | no                 |
+      | 4       | hh_ev_obesity      | monthly   | no               | no                   | no         | upgrade            | no         | no                 |
+      | 5       | hh_ev_gut          | quarterly | no               | no                   | 6          | no                 | no         | no                 |
+      | 6       | hh_ev_hormones     | lifetime  | no               | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7       | hh_ev_stress       | annually  | platinum         | no                   | 1          | best_value         | no         | upgrade            |
+      | 8       | hh_ev_detox        | quarterly | platinum         | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9       | hh_ev              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
