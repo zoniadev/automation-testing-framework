@@ -1,0 +1,12 @@
+Executing step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to http://staging.zonia.com/restore-detox-special
+===> Buying 1 bottle...
+Funnel: restore_detox
+===> User email is: zoniat-v2Sullivan-1764822289@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/restore-detox-6-more-bottles"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Detox" Supplements page

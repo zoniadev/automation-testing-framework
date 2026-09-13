@@ -1,0 +1,13 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/restore-vision-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Crawford-1785668434@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-vision-6-more-bottles?orderId=6a6f235d147250c10ec9d472"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page

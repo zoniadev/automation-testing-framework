@@ -1,0 +1,13 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://zonia-stg.com/restore-gut-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Valencia-1788591913@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-gut-6-more-bottles-2?orderId=6a9bbf34f85f3a7c01d81d66"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut" Supplements page

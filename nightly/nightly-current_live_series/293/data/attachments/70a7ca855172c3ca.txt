@@ -1,0 +1,9 @@
+Executing step: user register in "hh_live_stress" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://zonia-stg.com/hh-stress
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "hh_live_stress" Opt In page
+Test failed on page: 'https://zonia-stg.com/hh-stress'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/HH_Live_funnel_--_@1.7__20260910-210102.png

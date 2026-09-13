@@ -1,0 +1,25 @@
+Executing step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/restore-gut-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Funnel: restore_gut
+===> User email is: zoniat-v2Garcia-1788332986@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-gut-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-gut-6-more-bottles-2?orderId=6a97cbc5a9963d12f5bc5b88"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://zonia-stg.com/rg-restore-detox-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/rg-restore-detox-6-discounted-bottles-2?orderId=6a97cbc5a9963d12f5bc5b88"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://zonia-stg.com/rg-restore-sleep-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/rg-restore-sleep-6-discounted-bottles-2?orderId=6a97cbc5a9963d12f5bc5b88&id=6a97cbc5a9963d12f5bc5b88"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page

@@ -1,0 +1,1163 @@
+Executing step: user register in "lg_ev_hormones" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/lgmb5e/lg-hormones
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/lgmb5e/lg-join-zonia"
+>>> Navigation via lg_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/lgmb5e/lg\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/lgmb5e/lg-hormones 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    41 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/lgmb5e/lg-hormones"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to AGELESS" [level=3]
+- heading "Balance Your Hormones, Revive Your Libido and Restore Deep Intimacy with Your Partner" [level=2]
+- heading "Nobel-Winning Research on Longevity Shows We Can Easily Turn Back the Clock on Our Sex Hormones to Get Rid of Hot Flashes, Low Energy and Chronic Hormonal Imbalances" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: September 3rd
+  - text: when you get your Free Gift!
+- paragraph: (Valued at $27)
+- list:
+  - listitem:
+    - text: — Discover the 3 hormones that control
+    - strong: 70% of your libido
+    - text: (for both men and women)
+  - listitem:
+    - text: — How to use the
+    - strong: “sex scents”
+    - text: to increase men’s arousal by a whooping
+    - strong: 40%
+  - listitem:
+    - text: — Find out the “passion-boosting” supplements that decrease fatigue, increase libido, and lower stress – and
+    - strong: “the king of all herbs”
+    - text: that can improve your sex life fast
+- heading "Plus get your free ticket to AGELESS" [level=5]:
+  - strong: Plus get your free ticket to AGELESS
+- textbox "First Name*":
+  - /placeholder: " "
+  - text: AutomationBrenda
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2daniels-1788398383@gmail.com
+- text: E-mail*
+- checkbox "Highly Recommended - Please sign me up for VIP alerts and text messages!"
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "GET YOUR FREE GIFT +Register for ageless now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Premiere Starts in 0 Days 22 hours 37 minutes 2 seconds Our 50 World-Renowned Longevity Doctors and Health Experts Have Been Featured On
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: Have We Been WRONG about Aging All Along?
+- paragraph: Almost everyone in our society today thinks aging equals troubles with hormonal levels, which in turn leads to problems with fertility, hot flashes, joint issues, sluggish metabolism, foggy brain… …
+- paragraph: Followed by a “dead bedroom.”
+- paragraph: We also believe that our desire and ability for passionate intimacy tends to fade with age…
+- paragraph: And that there’s nothing we can do to regain the passion of our youth.
+- paragraph: It’s not our fault.
+- paragraph: Society conditioned us to believe that advancing in age means our hormones change for the worse.
+- paragraph: We see our peers aging prematurely, and complaining about their relationships.
+- paragraph: We watch our elderly feeling fragile and sick, resigned to losing their health, their independence and their confidence.
+- text: 95% have at least one chronic, debilitating disease. 80% have two or more!
+- paragraph: Instead of enjoying their senior years, they suffer through pain, depression, low mobility and countless hospital visits, and often end up in a nursing home.
+- text: "Instead of enjoying their life, we see countless people suffering from chronic diseases: Infertility and Erectile Dysfunction Mood swings, hot flashes, hair loss Obesity Arthritis and Degenerative Bone Diseases Depression and Anxiety Heart Disease Dementia & Alzheimer’s Disease"
+- paragraph: Together, these painful diseases affect hundreds of millions of Americans.
+- paragraph: Living with these conditions is like wasting decades out of your life, while your loved ones are devastated.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow Unfortunately, some of these issues start as early as in our 30s or 40s!
+- paragraph:
+  - strong: Troubles with libido and out-of-whack hormones
+  - text: "- in our modern era, we experience these issues earlier than in the past."
+- paragraph: And because we see our bodies prematurely age, and so many people struggle with each advancing year...
+- paragraph: We have started to think longevity just means being sick for more years!
+- paragraph:
+  - strong: This is a heartbreaking thought.
+- paragraph: "We don't want to live the last 10, 20, 30 or even 40 years of our lives feeling like a shadow of our former selves:"
+- paragraph: Feeling like our best years have passed us by, feeling frustrated by the lack of physical connection in our marriage, not being able to fully embrace the deep intimacy that comes with a long relationship…
+- paragraph: Feeling that as years go by, our intimacy suffers because of the lack of libido of one or both partners…
+- paragraph: Avoiding talking and even thinking about these issues because we don’t feel comfortable admitting we have mood swings, lack of desire, and troubles in our relationship…
+- paragraph: Worried that we’re missing out on the wonderful potential of our relationship and our body…
+- paragraph: But that’s not all.
+- paragraph:
+  - strong: We also feel less energetic and passionate
+  - text: about life.
+- paragraph:
+  - strong: Insecure
+  - text: about our sagging skin, thinning hair and stubborn weight gain.
+- paragraph:
+  - strong: Exhausted
+  - text: from sleepless nights and daily pain.
+- text: Too scared to pursue new goals and adventures.
+- paragraph:
+  - strong: Feeling that a fulfilling, active life
+  - text: is just passing us by.
+- paragraph:
+  - strong: Anxious
+  - text: about the seemingly inevitable deterioration of our precious health...
+- paragraph: And being told premature aging is “normal”.
+- paragraph:
+  - strong: Well, it is not normal.
+- paragraph: And it is not something we should accept.
+- paragraph:
+  - text: And, in fact,
+  - strong: there is SO much we can do
+  - text: to stop premature aging before it steals decades of our lives, no matter your current age or health status.
+- paragraph: Thanks to ancient healing practices and Nobel-winning discoveries...
+- text: Loss of Libido and Hormonal Issues don't have to be in YOUR story… Or the story of your loved one... Anymore.
+- paragraph: Why?
+- paragraph: "Here's what the latest science shows us:"
+- paragraph: Until very recently, no one knew how we could reverse aging and disease.
+- paragraph: And we didn’t know we could keep our hormones and our energy and passion intact as we age.
+- paragraph:
+  - text: Yet, we know that some people in some parts of the world manage to
+  - strong: stay healthy well into their 80s, 90s, 100s and beyond...
+- paragraph: They retain their vibrant health and energy...
+- paragraph: And somehow live long lives without needing medical treatments and procedures...
+- paragraph: Thanks to advancements in longevity research, we know how they do it.
+- paragraph:
+  - text: New breakthroughs in medicine show
+  - strong: we have the power to change the way we age...
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow So much so...
+- paragraph:
+  - text: That scientists and medical experts from Harvard and other leading universities now understand
+  - strong: how to reverse the aging process...
+- paragraph:
+  - strong: Rejuvenate failing eyesight, muscles, the brain and skin...
+- paragraph:
+  - text: And even
+  - strong: drive the age of mice “forward and backward”
+  - text: ... just like kickstarting a pendulum with the flick of a finger.
+- paragraph:
+  - text: In fact, some of these aging discoveries are so transformative for humanity that they earned
+  - strong: the Nobel Prize in medicine!
+- paragraph: This is not science fiction anymore.
+- paragraph: This can be your new reality.
+- paragraph: And you deserve to enjoy it.
+- paragraph: "Experts, researchers and doctors studying longevity and aging came to a striking conclusion:"
+- text: Premature aging is a disease.
+- paragraph: And like any disease...
+- paragraph:
+  - text: It can be
+  - strong: prevented
+  - text: . It can be
+  - strong: treated
+  - text: . It can be
+  - strong: put on hold or even reversed
+  - text: .
+- paragraph: These discoveries are now changing the world.
+- paragraph: And it will change your life, too, if that's what you decide.
+- paragraph: However, no matter if you're in your 30s, 40s, 50s, 60s and beyond...
+- paragraph: Whether you're suffering from chronic disease and premature aging... or just want to prevent these in the future...
+- paragraph:
+  - strong: It's important to act now.
+- paragraph:
+  - text: In our new 10-episode
+  - strong: AGELESS
+  - text: docuseries, 50 world-class medical doctors and renowned health experts share their secrets and offer affordable, science-backed tools to banish premature aging and reclaim your youthful glow and energy for the years to come.
+- img
+- text: Shivan Sarna
+- paragraph: ‘Ageless’ is an eye-opening docuseries that unravels the root causes of premature aging. It offers specific, cutting-edge longevity-enhancing techniques so you can take charge of your health. Each episode reveals the remarkable resilience of the human body and mind. The docuseries gives us invaluable science we can use today, for our best possible futures. I highly recommend it! There is so much to look forward to and the best is yet to come..
+- text: Healthy Hormones Start With One Prominent Nobel-Winning Discovery
+- paragraph: Let us explain...
+- paragraph:
+  - text: One of the vital steps to regaining our hormonal health is
+  - strong: keeping your cellular “housekeeping” intact.
+- paragraph: What do we mean by that?
+- paragraph:
+  - text: Imagine your cells as
+  - strong: tiny, efficient houses.
+- paragraph:
+  - text: The various cell organs within them are
+  - strong: the furniture and appliances.
+- paragraph:
+  - text: Over time, like in any home, some of these items become
+  - strong: old or broken.
+- paragraph: Not only do they become unusable....
+- paragraph: They accumulate and take up valuable space...
+- paragraph: And they become sources of inflammation for the rest of the 'house'.
+- paragraph: That is how premature aging happens on a cellular level.
+- paragraph: Fortunately, the body acts like a diligent housekeeper for your 'house'.
+- paragraph: It goes into each room, removes these unwanted items, and cleans the space they rested on...
+- paragraph: And repairs and recycles these broken, old cell organs before they become dangerous.
+- paragraph:
+  - text: This is how we keep
+  - strong: our cells functioning optimally...
+- paragraph:
+  - text: Which keeps our
+  - strong: muscles, bones, skin, liver, brain and body
+  - text: working properly as well.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today To Become Ageless Tomorrow But here's what tends to happen as we advance in years and get bombarded with stress and the toxic environment of our modern lives:"
+- paragraph: The 'housekeeper' gets tired, overwhelmed and confused.
+- paragraph: It can't keep up with all the trash that enters our body with everything we eat, breathe in, put on our skin.
+- paragraph: So, instead of repairing, replacing and recycling...
+- paragraph: These old, broken items are no longer removed, fixed or recycled anymore.
+- paragraph:
+  - text: This leads to a
+  - strong: buildup of toxic
+  - text: substances and a
+  - strong: decrease in cellular energy
+  - text: .
+- paragraph: This manifests as a premature aging of your hormones and chronic disease in different parts of the body.
+- paragraph:
+  - text: ...It also creates
+  - strong: neurodegenerative disorders like Alzheimer's and dementia, metabolic disorders like diabetes, cancer, liver disease,
+  - text: and many more.
+- paragraph: "However, in 2016, Nobel-winning scientists discovered a way to stop this process:"
+- paragraph: We can help our internal 'housekeeper' work as diligently as it did in our 20s and 30s.
+- text: In turn, we can prevent and even reverse diseases and premature aging and age gracefully as the decades go by.
+- paragraph: Does this mean we'll be immortal?
+- paragraph: Well... not quite.
+- paragraph: Scientists still haven't figured out how to stop or pause time.
+- paragraph: So time is passing by with every second for ALL of US! What we can do, however, is...
+- text: Unlock Simple “Age-Reversal Techniques” That Keep Your Hormones in Optimal Balance
+- paragraph
+- paragraph: Imagine, what could this mean for you?
+- paragraph
+- paragraph
+- paragraph: A complete rejuvenation of the body and your ability to enjoy intimacy again.
+- paragraph
+- paragraph
+- paragraph: Being able to reignite the passionate relationship with your partner, and enjoy amazing mood and memory as your hormones naturally balance themselves.
+- paragraph
+- paragraph
+- paragraph: Slowing down the aging process for as long as possible, and even reversing the symptoms of incorrect aging.
+- paragraph
+- paragraph
+- paragraph: But that’s just scratching the surface..
+- paragraph
+- paragraph
+- paragraph: Because as you embark in a total body rejuvenation, you could have…
+- paragraph
+- paragraph
+- paragraph: More energy… Better memory… Less aches and pains…
+- paragraph
+- paragraph
+- paragraph: And, of course, you would be looking and feeling younger than your actual age.
+- paragraph
+- paragraph
+- paragraph
+- paragraph
+- paragraph: "Now, if you're like most people, you might be thinking:"
+- paragraph
+- paragraph
+- paragraph: Only rich people and celebrities can afford to age gracefully and look much younger than their age.
+- paragraph
+- paragraph
+- paragraph: But, in fact, you'll see that these age-reversal techniques are available and affordable for everyone.
+- paragraph
+- paragraph
+- paragraph: You don't need any of those fancy therapies, expensive skin-care, or non-stop workouts.
+- paragraph
+- paragraph
+- paragraph: Best of all, you can get started right away, from the convenience of your home.
+- paragraph
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- paragraph:
+  - text: You will find exactly what you need to do in our breakthrough docuseries
+  - strong: AGELESS
+  - text: .
+- paragraph:
+  - text: In this brand-new series, we gathered a team of
+  - strong: 50 medical doctors and health experts
+  - text: specializing in chronic disease, naturopathic healing and longevity.
+- paragraph: They not only reveal how to keep “your housekeeper” cleaning your cells as efficiently as in your twenties...
+- paragraph: But also how to start reversing the hormonal imbalances that happen because of premature aging.
+- paragraph: Because of this groundbreaking information, we believe that...
+- text: The AGELESS Docuseries is the most important docuseries you will ever watch.
+- paragraph: Why?
+- paragraph: One, because most of the insights shared by our world-class experts have never been aired before.
+- paragraph: But, most importantly, because they can make the difference between spending the next 10, 20, 30, 40, or 50 years taking care of your sick body...
+- paragraph: Missing precious moments because you're too exhausted or in pain... Losing your independence and wellbeing...
+- paragraph: Feeling like you're falling behind people your own age...
+- paragraph: Versus...
+- paragraph: Living the best years of your life
+- paragraph: Traveling
+- paragraph: Spending time with your kids, grandkids and great-grandkids
+- paragraph: Relaxing after decades of non-stop work and commitments
+- paragraph: Sharing your valuable wisdom
+- paragraph: Living with purpose
+- paragraph: And aging with confidence and grace
+- text: If you want to bring back your hormonal health and look 10 to 20 years younger than your age, you can’t miss this.
+- paragraph: Reserve your spot now to get free access to the docuseries.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today To Become Ageless Tomorrow When you watch this 10-episode docuseries, you will discover:"
+- list:
+  - listitem: How to to recover from hormone issues, PCOS, menopause and infertility with no drugs
+  - listitem: How imbalanced hormones may prematurely age you
+  - listitem: Why getting older could be the secret to the most passionate sex of your life
+  - listitem: "Expert warning: #1 reason why hormone levels in men and women dramatically plummeted in the last 20 years, plus household items that can crush men hormones"
+  - listitem: How one natural injection can restore optimal sexual function in men and women at any age
+  - listitem: Tens of thousands of men use this inexpensive fix to reverse their erectile dysfunction - Plus one easy treatment that restores vaginal sensitivity in women
+  - listitem:
+    - text: Why men have 3 surprising advantages in the bedroom and
+    - strong: "#1 secret for men"
+    - text: who want to feel desired
+- list:
+  - listitem: Lost your mojo? 5 root causes why women lose their libido with time, and how to become a sex goddess
+  - listitem: The holistic approach that treats the root cause of erectile dysfunction (ED), and makes “the blue pill” irrelevant
+  - listitem:
+    - strong: 20 different ways to reach orgasm
+    - text: – And how to use this fun
+    - strong: “sex bucket list”
+    - text: to enhance your pleasure
+  - listitem:
+    - text: "Age-proof your libido: How to"
+    - strong: reignite desire and enjoy intimacy
+    - text: more than ever
+  - listitem:
+    - text: No partner? Key secrets to know about gifting pleasure to yourself and finding
+    - strong: the love of your life
+    - text: at any age
+  - listitem: The myths and truths about hormone replacement therapy. Should you get on hormone replacement?
+  - listitem:
+    - text: "“My marriage is on the rocks”: How a 44-year old woman went from irritable and depressed to her best self in just a few weeks by balancing"
+    - strong: this key hormone
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- img
+- text: Sarah Otto
+- paragraph: Stefan has produced astonishing health docuseries like ‘AGELESS’ that have changed the lives of millions of people for the better. His unwavering passion and relentless drive to empower others through powerful educational content are evident in all of his work. With a deep commitment to sharing valuable insights on health, wellness, and longevity, Stefan Apostolov has become a true beacon of inspiration. Through ‘AGELESS’ and his other endeavors, Stefan continues to be a trusted source of knowledge and motivation for those on a journey to a healthier and more fulfilling life.
+- text: While it's impossible to stop chronological aging...
+- paragraph:
+  - text: There is so much you can do to reverse
+  - strong: premature aging
+  - text: .
+- paragraph:
+  - text: In
+  - strong: AGELESS
+  - text: ", you will discover how to get your body to"
+  - strong: act
+  - text: and
+  - strong: look younger...
+- paragraph:
+  - text: So you can enjoy
+  - strong: decades
+  - text: being the best version of yourself...
+- paragraph: Physically, emotionally and spiritually.
+- text: "What You Will Find In Each Episode Of This Unique 10-Part Docu-Series AGELESS 1 episode Premature Aging Unraveled: Are You Aging Faster Than You Should?"
+- list:
+  - listitem: Are we sicker than our grandparents? Why we are less healthy than older generations, in spite of all the medical advancements
+  - listitem: "The #1 disease that ages Americans prematurely – and the root causes of autoimmune, chronic and heart disease uncovered"
+  - listitem: The biggest threats to our longevity and why most people have no clue what healthy aging looks like with Dr. Daved Rosensweet
+  - listitem: The transformational story of patients reversing dementia symptoms with Dr. Kat Toups
+  - listitem: The secret that makes other women curious about our expert Laura Frontiero looking so youthful and glowing at almost 50 years olds
+  - listitem: Holistic cancer expert explains how to slash the risk for age-related cancer, diabetes and neurodegenerative disease with up to 95%
+  - listitem: "“I've got my life back”: The true story of an exhausted 60-year old woman who finally managed to lose her extra weight and regain her youthful energy."
+  - listitem: "Premature aging is a choice: Surprising medical advancements that keep our bodies working like in our 20s and 30s"
+  - listitem: How people in the “Blue Zones” get to live 100 healthy years by sticking to these “basic” health concepts
+- paragraph: “High blood pressure, high cholesterol, stroke, and then metabolic disease, prediabetes... These are occurring at much earlier ages than they were. [...] So I do think that overall we are less healthy now, even with all the technology than we were 50, 60, 70 years ago.”
+- heading "Wendie Trubow, MD, MBA" [level=4]
+- text: "Functional Medicine Gynecologist 2 episode The Origin of All Disease: How to Measure the Wear & Tear on the Body and Stop the #1 Aging Accelerator"
+- list:
+  - listitem: Why some of us will age dramatically in just a couple of years, and how we can reverse accelerated aging now
+  - listitem: "Experts warn: This toxic chemical is sold as “food” after WW2. It is NOT meant for human consumption"
+  - listitem: "Former Big Pharma employee reveals #1 nutrient deficiency that causes pain, inflammation and disease"
+  - listitem: Discover the scary link between everyday cleaning products and DNA damage, cancer and neurodegenerative disease
+  - listitem: "When doctors don't know why you feel sick: Recover your energy, mood and lean physique by applying these “universal principles of healing”"
+  - listitem: How you can get the most important health information of your life for under $500
+  - listitem: Key blood tests to determine whether you're aging prematurely
+  - listitem: Feeling exhausted? Here's why these invasive viruses could be eating up all your energy
+  - listitem: "Ironman secret: Vital blood tests for men who want to stay disease-free"
+  - listitem: "“It's like putting acid inside your body”: Stop doing this to prevent cell damage, disease formation and premature aging"
+- paragraph: “Aging, by my definition, is death by a thousand cuts. [...] So you can see aging on people's faces. You can look at 65 year old [people] and they look like they're 85, right? You can look at 50 year olds and they look like they're 85 so what's happening with their aging? It's damage, it's inflammation, it's wear and tear.”
+- heading "William Pawluk, MD, MSc" [level=4]
+- text: "PEMF Therapy Expert 3 episode The Science of Youthful Energy: Optimize Your Hormones, Metabolism, and Cellular Health"
+- list:
+  - listitem: Tired and wired at the same time? Why this could be a sign of a hormonal havoc in your body - and what you can do
+  - listitem: "The dark side of modern life: #1 cause of insulin resistance and endocrine imbalance revealed"
+  - listitem: "Expert warning: Why hormone levels in men and women dramatically plummeted in the last 20 years, plus household items that crush men hormones"
+  - listitem: Bad genetics? Not a problem. Here's how to rewrite your health story and not get diseases that run in your family
+  - listitem: One simple way to regain the vibrant energy, healthy muscle mass and motivation you had in your 20s
+  - listitem: This Nobel-prize discovery reveals how to naturally detox your cells and prevent all chronic disease
+  - listitem: "#1 cause for fatigue, weight gain, poor sleep, blood sugar issues, heart and brain diseases - completely missed by doctors"
+  - listitem: "Why metabolism changes in your 40s, and the #1 thing to do to reverse the rapid aging from metabolism disruption"
+  - listitem: The reason why you might feel exhausted at noon and wake up in the middle of the night
+  - listitem: Why 2 out of 3 adults aged 65+ suffer from chronic fatigue and 4 ways to gain your energy back
+  - listitem: The 4 reasons our energy declines as we age and how to reverse the process
+- paragraph: “And so the aging process is really dictated by our hormones. As our hormones start to decline, we start aging and we see our skin start to wrinkle. We see our hair start to fall out. We see our blood vessels start to get more rigid and less flexible. Our bones start to deteriorate. We start to atrophy our muscles. So our brain starts to atrophy as well. So we have brain fog, trouble thinking, memory issues and eventually cognitive decline.”
+- heading "Michelle Sands, ND" [level=4]
+- text: "Naturopathic Physician Co-founder of Glow Natural Wellness 4 episode A Body Tour: What Ages Our Skin, Brain & Gut the Most and How to Reverse the Signs"
+- list:
+  - listitem: "Natural Botox: This “hydrating” hormone keeps your skin plump and smooth at any age"
+  - listitem: Want to prevent skin aging? The 5 pillars of healing premature skin aging
+  - listitem: Is your moisturizer toxic? Why women unknowingly absorb 150 dangerous chemicals everyday through their skin
+  - listitem: Discover the 2 natural oils that increase collagen production and the “magic wand” that brings back youthful elastin
+  - listitem: Why most conventional doctors dismiss your worries about your brain - yet, the mild memory loss signs you shouldn't ignore
+  - listitem: "The brain that heals itself: 3 proven methods to supercharge your memory and grow healthy neurons at any age"
+  - listitem: A mother's miraculous journey to heal her son's injured brain reveals powerful secrets of brain healing
+  - listitem: Discover the incredible story of a 65-year-old doctor with a family history of dementia, who regained her memory by doing one surprising thing
+  - listitem: Weekly headaches? See why your OTC pain-killer might make your headaches worse. And how to forget what migraines feel like
+  - listitem: Commonly prescribed drugs that destroy your gut - and the foods and supplements that activate your healthy bile
+  - listitem: "Can your gut supplements heal your headaches ? Plus: How to release toxins from your gut right now for rock hard digestion"
+- paragraph: “So our skin is the billboard to the world. And really, it tells a story of what's happening inside our bodies. A lot of people think about creams and potions and procedures for their skin, but if they would go inside and they would start with clean air, clean water, clean food, and putting good inputs into their body and making sure they have the proper nutrients, their skin would glow from the inside out.”
+- heading "Jill Carnahan, MD, ABIHM" [level=4]
+- text: "Medical Director, Flatiron Functional Medicine 5 episode Protecting your Foundation: Erasing Premature Aging from your Heart, Muscles and Bones"
+- list:
+  - listitem: Reverse the aging of your arteries and vessels, and key tests to prevent heart disease
+  - listitem: Why 50% of people on the planet accidentally age their heart, and simple steps to reverse the damage now
+  - listitem: The most important medical test on the planet is just $75. Ask this from your cardiologist on your next appointment
+  - listitem: These key blood tests predict your longevity and give you years to undo arterial damage before it turns into a disease
+  - listitem: One in four people have “mutated cholesterol genes” that tremendously ages their heart. Less than 1% of doctors know this. A $30 blood tests reveals if you have it
+  - listitem: Born before 1990? Then you might have a significant toxin load that caused half of million deaths in the US. How to test it for free
+  - listitem: Is bone loss a normal part of aging? Absolutely not. Avoid common medications that melt away bones (traditional doctors don't tell you this)
+  - listitem: Want to lose weight? Stop doing cardio, and eat more of this instead
+  - listitem: This lethal disease has no symptoms. How to prevent it according to American Heart Association
+  - listitem: "#1 thing to do to preserve your muscle strength as you age"
+- paragraph: “There are so many factors beyond the traditional factors that determine whether you might be walking around right now, no symptoms, no signs outwardly, but absolutely rotten inside. And you need to get a handle on that if you want to seriously enjoy longevity.”
+- heading "Joel Kahn, MD, FACC" [level=4]
+- text: "Clinical Professor of Medicine Founder, Kahn Center for Cardiac Longevity 6 episode Unlocking the Secret to Emotional Healing: Powerful Mental and Spiritual Practices to Reclaim Your Joy and Inner Peace"
+- list:
+  - listitem: "The link between self-worth and premature aging: Why thinking you're 'not good enough' can make you feel a decade older"
+  - listitem: Can you “learn” to be happy? Yes! Here's a simple technique to start feeling more joy right now
+  - listitem: Two simple emotional practices that have changed the lives of countless people around the world
+  - listitem: "The inspiring story of one woman's journey to emotional healing: Discover how a 60-year old woman overcame trauma and found purpose, reigniting her marriage and reclaiming the best years of her life"
+  - listitem: How to vibrate at our highest frequency? This practice that changes your life and lifts the energy in every room you walk into
+  - listitem: How to build your “mental muscles” to banish depression, stress and anxiety
+  - listitem: "The #1 reason why you're not manifesting the reality that you want"
+  - listitem: Famous study reveals how childhood trauma can shorten our lifespan by 20 years; Plus how to heal from trauma to prolong longevity
+  - listitem: The root cause of unhappiness in the West and the Buddhist concept that automatically gives you joy, fulfillment and gratitude
+  - listitem: The life-changing brain training technique that heals your chronic fatigue and teaches your body how to heal itself
+- paragraph: “There's a common myth about aging - that it's inevitable, and there will be cognitive decline as we run down in terms of our ability to function. This is a stereotype of old people, that they're typically old, depressed, and scared of everything. It doesn't have to be that way.”
+- heading "Irene Cop, MD, DC" [level=4]
+- text: "Elite Performance Trainer Founder of the Success S.H.I.F.T. Institute 7 episode Debunking Myths about Intimacy and Desire: A Roadmap to Lifelong Sexual Pleasure"
+- list:
+  - listitem: Why getting older could be the secret to the most passionate sex of your life
+  - listitem: "3 surprising advantages men have in the bedroom and #1 secret for men who want to feel desired"
+  - listitem: Lost your mojo? 5 root causes why women lose their libido with time, and how to become a sex goddess
+  - listitem: This holistic approach treats the root cause of erectile dysfunction (ED), and makes “the blue pill” irrelevant
+  - listitem: "A cruel trick from Mother Nature: What happens to our intimate areas as we age, and a surprising anatomy secret that brings the pleasure back"
+  - listitem: These two words ignite passionate lovemaking like nothing else - plus a 3-question game to supercharge intimacy in any marriage
+  - listitem: The 20 ways to reach orgasm - And how to use this fun “sex bucket list” to enhance your pleasure
+  - listitem: Craving for more intimate time with your partner? Here's what to focus on to enjoy a “sexual renaissance”
+  - listitem: "Age-proof your libido: How to reignite desire and enjoy intimacy more than ever"
+  - listitem: No partner? Key secrets to know about gifting pleasure to yourself and finding the love of your life at any age
+- paragraph: “So you are a better lover in your sixties. Frankly, at 61, I'm having the best sex of my life. Fantastic. Because I do regenerative therapies and I learn new skills and I've had more time to practice them. So that really creates a perfect storm of the last part of your life, especially with a good health span, with good longevity, you can be having the most incredible sex of your life.”
+- heading "Susan Bratton" [level=4]
+- text: "Author & Intimacy Expert 8 episode Contaminated: How to Break the Vicious Cycle of Environmental & Social Toxins"
+- list:
+  - listitem: Everyone thinks these foods are healthy. They're not! See why they ravaged the heart of a 32-year old athlete, and how he finally healed his heart disease
+  - listitem: "Contaminated water: Why you should stop buying this type of water immediately... Plus how to obliterate all microplastics and radioactive elements from your tap water now"
+  - listitem: The single most important secret to reduce the toxic load in your body
+  - listitem: Do you live in the US? Then you're unknowingly consuming petroleum every single day! How to avoid petroleum, plus thousands of other aging chemicals already banned in the European Union
+  - listitem: "Two dirt-cheap and completely natural sanitizers for your bathroom. Plus: The easiest way to eliminate airborne toxins from your home"
+  - listitem: "The “bedroom sanctuary”: A 3-step method to support maximum rejuvenation during your sleep"
+  - listitem: Why the lack of social connections may be just as toxic as toxins themselves
+  - listitem: The “silent epidemic” in the United States that's worse for you than smoking a pack of cigarettes per day
+  - listitem: Is your doctor invalidating your concerns? What medical gaslighting really does for your health
+  - listitem: Why doctors don't like to talk about this 'social medicine' that can heal diseases and ward off anxiety
+- paragraph: "\"The result of premature aging in the body is chronic disease. When your cells age at a faster pace, this sets you up for heart disease, cancer, autoimmune conditions, and for the first time in decades, we expect that our children are probably not going to live as long as us or our parents. The cause of all this aging is toxins in the environment.”"
+- heading "Laura Frontiero, NP-BC" [level=4]
+- text: "Functional Medicine Practitioner 9 episode The Longevity Fuel: The Secrets to Fasting Plus The Most Rejuvenating Foods and Supplements on Earth"
+- list:
+  - listitem: "Skip this meal to avoid premature aging (it's not dinner). Plus: The “Olive Oil” diet of the longest-living people on Earth"
+  - listitem: One easy habit shrinks cancer tumors up to 75% according to studies.... Plus the right foods that can make cholesterol, diabetes and blood pressure obsolete... And why most doctors don't share these secrets with their patients
+  - listitem: Are you suffering from “toxic hunger”? What to do to banish cravings forever
+  - listitem: Sacred, ancient plants for longevity - now recognised by scientists
+  - listitem: The 4-week diet that resets your metabolism
+  - listitem: "These inexpensive herbs are the most nutrient-dense foods on the planet. Plus: The most effective anti-aging, anti-stress herbal remedies"
+  - listitem: "One natural “anti-diabetes” supplement prevents Alzheimer's and helps weight loss. Plus: Overlooked regenerative foods that heal the gut and the brain"
+  - listitem: This eating habit can prevent cancer and chronic disease while promoting healthy longevity according to hundred of studies
+  - listitem: Revolutionary Harvard research reveals how to prolong longevity - and a few crucial vitamins for healthy aging
+  - listitem: Why people who develop cancer are missing these key nutrients - And how to make sure you're getting enough of them to prevent cancer
+  - listitem: Can you live healthily until 107? Science says yes, but only if you change this in your diet now
+- paragraph: “The natural age for a healthy human should be between 97 and 107 years old... And modern nutritional science has made sufficient and radical advances, so people have an unprecedented opportunity in human history to hit that 97-107 age range. But they have to take advantage of these findings in nutritional science.”
+- heading "Joel Fuhrman, MD" [level=4]
+- text: "7-time NY Times Bestselling Author President of Nutritional Research Foundation 10 episode Regenerative Medicine: Therapies, Technologies and Treatments That Can Reverse Biological Aging by 20 years or more"
+- list:
+  - listitem: "The Rejuvenation Elixir: Just six doses of this natural nutrient decreased mortality, cancer and cardiovascular disease up to 4 times"
+  - listitem: Joint pain? This natural therapy regenerates tissues and cartilages using just your own blood
+  - listitem: "Lifesaving technology: The story of one diabetic man who got off medication in 5 days using this little-known device"
+  - listitem: The easiest way to improve your sleep, heart and metabolic health using affordable technology - And get the health information you need without any doctor visits or blood work
+  - listitem: Ever wanted to feel sharper, more alert and more energized? Now you can feel your best in just 30-minutes, thanks to this all-natural detox therapy
+  - listitem: "Peptide therapies: How to regenerate the gut, destroy brain fog and rejuvenate the body with brand-new medical breakthroughs"
+  - listitem: The myths and truths about hormone replacement therapy. Can hormones help you age gracefully?
+  - listitem: How one 36-year old woman ditched antidepressants and naturally treated the root cause of her depression
+  - listitem: "“My marriage is on the rocks”: How a 44-year old woman went from irritable and depressed to her best self in just a few weeks by balancing this hormone"
+  - listitem: One natural injection that restores optimal sexual function in men and women at any age
+  - listitem: Why 80% of cancer doctors in Europe use this natural treatment with amazing results
+- paragraph: “Regenerative medicine allows us to step in and very strategically, very precisely, very elegantly actually reinitiate those healing cycles and those processes so that you can get better over time.”
+- heading "Sabrina Solt, NMD" [level=4]
+- text: Naturopathic Physician
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- img
+- text: Edward Levitan
+- paragraph: ‘Ageless' docuseries has completely changed the way I view aging. Age is not just a number; it's an opportunity to embrace a whole new world of possibilities. 'Ageless' has opened my eyes to the incredible stories of individuals who have defied the conventional wisdom about getting older. It's inspiring to see people in their 50s, 60s, and even 90's living full, vibrant, amazing, and fulfilling lives.
+- text: "Now, we must warn you:"
+- paragraph: What you will find in this docuseries might sound controversial.
+- paragraph: That's because our experts have pushed the boundaries of medicine...
+- paragraph: Instead of simply prescribing drugs sponsored by Big Pharma to mask various symptoms and call it a day...
+- paragraph: They went deeper into their study.
+- paragraph: They studied the root cause of diseases and premature aging. They understand how each bodily function interacts with others.
+- paragraph: And they reveal surprising, even counterintuitive tools to ignite your physical, emotional and spiritual health.
+- paragraph: Now, most doctors never share this information with their patients!
+- paragraph: And this is why so many people miss out on good health and longevity.
+- paragraph: This is why we urge you to...
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow Meet Our 50 World-Renowned Longevity and Chronic Disease Doctors and Health Experts Featured in AGELESS Brian Vaszily Natural Health Researcher and Advocate for 20+ years Aimie Apigian, MD, MS, MPH Board-Certified Preventive and Addiction Medicine Physician JJ Virgin, CNS, CHFS NY Times Bestselling Author, Nutrition & Fitness Expert Joel Fuhrman, MD 7-time NY Times Bestselling Author, President of Nutritional Research Foundation Anna Cabeca, DO, FACOG Triple Board-Certified OB/GYN aka The Girlfriend Doctor Robert Goldman MD, PhD Co-Founder & Chairman of the Board, American Academy of Anti-Aging Medicine Keesha Ewers, ARNP, PhD Emotional Trauma Specialist Cynthia Thurlow, NP Nurse Practitioner, Metabolic Health and Fasting Expert Benjamin Stills, NMD Naturopathic Physician Bridghid McMonagle, ND Naturopathic Physician Jill Carnahan, MD, ABIHM Medical Director, Flatiron Functional Medicine Daved Rosensweet, MD Leading Expert in Bio-Identical Hormone Treatment Deb Matthew, MD America's Happy Hormones Doctor Tracy Gapin, MD World-Renowned Men’s Health & Performance Expert Irene Cop, MD, DC Elite Performance Trainer, Founder of the Success S.H.I.F.T. Institute Cheng Ruan, MD Board-Certified Internal Medicine Physician Amie Hornaman, DCN, CFMP Functional Medicine Practitioner/Thyroid Expert Tom Moorcroft, DO Board-Certified in Family Medicine and Osteopathic Manipulative Treatment Tricia Pingel, NMD Licensed Naturopathic Physician Kent Holtorf, MD Functional Immunologist, Peptide Therapy Expert Matt Cook, MD Integrative Medicine Specialist Lyn Patrick, ND Naturopathic Physician, Environmental Medicine & Metal Toxicology Expert Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine Michelle Sands, ND Naturopathic Physician, Co-founder of Glow Natural Wellness Ari Whitten, MS Energy Enhancement Expert & Bestselling Author Trina Felber, RN, BSN, MSN Natural Oral & Skincare Wellness Expert Joel Kahn, MD, FACC Clinical Professor of Medicine & Founder, Kahn Center for Cardiac Longevity Sharon Stills, NMD Naturopathic Medical Doctor Wendie Trubow, MD, MBA Functional Medicine Gynecologist William Pawluk, MD, MSc PEMF Therapy Expert Nathan Crane Natural Health Researcher Jenny Tufenkian, ND Naturopathic Physician Amelia Scott Barrett, MD Neurologist and Founder of Migraine Relief Code Laura Frontiero, NP-BC Functional Medicine Practitioner Kevin Ellis, INHC Bone Health Expert & Founder of BoneCoach M. Yvonne Karney, MD Board-Certified Regenerative Medicine & Gynecology Steve Ottersberg, MS, ND Analytical Chemistry & Clinical DNA Testing Interpretation Specialist Lorraine Maita, MD, FAARM Board-Certified in Integrative, Internal and Functional Medicine Rajka Galbraith, MD, IFMCP Board-Certified Functional & Integrative Medicine Doctor Reed Davis, HHP Board-Certified Holistic Health Practitioner & Founder, Functional Diagnostic Nutrition (FDN) Robby Besner, BS, PSc.D Full Spectrum InfraRed Energy Medicine Specialist Sabrina Solt, NMD Naturopathic Physician Sachin Patel Founder, Living Proof Institute & Best-Selling Author Farah Sultan MD, ABFM Board-Certified Family Physician Susan Bratton Author & Intimacy Expert James LaValle, RPh, MT Academic Co-Chair, American Academy of Antiaging Medicine, Chair Steering Committee International Peptide Society Lisa Saff Koche, MD Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Nasha Winters, ND, FABNO Integrative Ecology Expert, Executive Director of the Metabolic Terrain Institute of Health Kat Toups, MD, DFAPA, IFMCP Distinguished Fellow, American Psychiatric Association, Institute for Functional Medicine Certified Practitioner Aaron Hartman, MD, MAR Assistant Clinical Professor of Family Medicine, VCU School of Medicine, Medical Director and Principal Investigator, Virginia Research Center
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to become Ageless Tomorrow Meet Your Host:"
+- paragraph:
+  - strong: Stefan Apostolov
+  - text: is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- text: Secure Your Access Now, Before This 10-part Groundbreaking Documentary Is Taken Down
+- paragraph: Imagine you'll take a biological age test today.
+- paragraph: If you're like most people, your test results will probably show you're 5 to 10 years older than your actual age.
+- paragraph: That's an unfortunate reality for most people in the United States.
+- paragraph: But what if, after implementing the age-reversal techniques presented by our experts...
+- paragraph: Your biological test results show you've not only overcome your premature aging...
+- paragraph:
+  - text: But
+  - strong: you're actually 10 years
+  - text: younger than your chronological age?
+- paragraph:
+  - text: That would mean you've actually
+  - strong: reversed the clock by 20 years!
+- paragraph: Thanks to these new advancements in longevity science, this can be your reality.
+- paragraph: No more feeling that you need to “take it slow” with new adventures and travel plans.
+- paragraph: No more wondering how to cope with the lack of energy and low libido, and get the strong body and the strong relationship you deserve…
+- paragraph: No more feeling that your health is out of your control, and that your body has betrayed you.
+- paragraph: No more feeling older than you feel inside.
+- paragraph: No more countless doctor visits, drug cocktails, and painful symptoms of disease that seem to increase every year.
+- paragraph: No more anxiety about the future.
+- paragraph: Instead, imagine how great it would feel to have a healthy body, free of pain, brimming with joyful energy.
+- paragraph: Imagine how great it would be to enjoy life now, knowing you'll experience life in the next decades to the fullest.
+- paragraph:
+  - strong: But this isn't just about you it's also about your family.
+- paragraph: You can share this wisdom with your family and friends to better the health of your children, parents or spouse.
+- paragraph: Help change the lives of those you love.
+- paragraph: With each episode, you'll feel more inspired to make small but vital changes that will transform your health and the health of those around you.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+===> Waiting for URL starting with "https://zonia-stg.com/lgmb5e/lg-replay-weekend"
+>>> Navigation via lg_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/lgmb5e/lg\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/lgmb5e/lg-hormones 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    41 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/lgmb5e/lg-hormones"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to AGELESS" [level=3]
+- heading "Balance Your Hormones, Revive Your Libido and Restore Deep Intimacy with Your Partner" [level=2]
+- heading "Nobel-Winning Research on Longevity Shows We Can Easily Turn Back the Clock on Our Sex Hormones to Get Rid of Hot Flashes, Low Energy and Chronic Hormonal Imbalances" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: September 3rd
+  - text: when you get your Free Gift!
+- paragraph: (Valued at $27)
+- list:
+  - listitem:
+    - text: — Discover the 3 hormones that control
+    - strong: 70% of your libido
+    - text: (for both men and women)
+  - listitem:
+    - text: — How to use the
+    - strong: “sex scents”
+    - text: to increase men’s arousal by a whooping
+    - strong: 40%
+  - listitem:
+    - text: — Find out the “passion-boosting” supplements that decrease fatigue, increase libido, and lower stress – and
+    - strong: “the king of all herbs”
+    - text: that can improve your sex life fast
+- heading "Plus get your free ticket to AGELESS" [level=5]:
+  - strong: Plus get your free ticket to AGELESS
+- textbox "First Name*":
+  - /placeholder: " "
+  - text: AutomationBrenda
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2daniels-1788398383@gmail.com
+- text: E-mail*
+- checkbox "Highly Recommended - Please sign me up for VIP alerts and text messages!"
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "GET YOUR FREE GIFT +Register for ageless now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Premiere Starts in 0 Days 22 hours 36 minutes 42 seconds Our 50 World-Renowned Longevity Doctors and Health Experts Have Been Featured On
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: Have We Been WRONG about Aging All Along?
+- paragraph: Almost everyone in our society today thinks aging equals troubles with hormonal levels, which in turn leads to problems with fertility, hot flashes, joint issues, sluggish metabolism, foggy brain… …
+- paragraph: Followed by a “dead bedroom.”
+- paragraph: We also believe that our desire and ability for passionate intimacy tends to fade with age…
+- paragraph: And that there’s nothing we can do to regain the passion of our youth.
+- paragraph: It’s not our fault.
+- paragraph: Society conditioned us to believe that advancing in age means our hormones change for the worse.
+- paragraph: We see our peers aging prematurely, and complaining about their relationships.
+- paragraph: We watch our elderly feeling fragile and sick, resigned to losing their health, their independence and their confidence.
+- text: 95% have at least one chronic, debilitating disease. 80% have two or more!
+- paragraph: Instead of enjoying their senior years, they suffer through pain, depression, low mobility and countless hospital visits, and often end up in a nursing home.
+- text: "Instead of enjoying their life, we see countless people suffering from chronic diseases: Infertility and Erectile Dysfunction Mood swings, hot flashes, hair loss Obesity Arthritis and Degenerative Bone Diseases Depression and Anxiety Heart Disease Dementia & Alzheimer’s Disease"
+- paragraph: Together, these painful diseases affect hundreds of millions of Americans.
+- paragraph: Living with these conditions is like wasting decades out of your life, while your loved ones are devastated.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow Unfortunately, some of these issues start as early as in our 30s or 40s!
+- paragraph:
+  - strong: Troubles with libido and out-of-whack hormones
+  - text: "- in our modern era, we experience these issues earlier than in the past."
+- paragraph: And because we see our bodies prematurely age, and so many people struggle with each advancing year...
+- paragraph: We have started to think longevity just means being sick for more years!
+- paragraph:
+  - strong: This is a heartbreaking thought.
+- paragraph: "We don't want to live the last 10, 20, 30 or even 40 years of our lives feeling like a shadow of our former selves:"
+- paragraph: Feeling like our best years have passed us by, feeling frustrated by the lack of physical connection in our marriage, not being able to fully embrace the deep intimacy that comes with a long relationship…
+- paragraph: Feeling that as years go by, our intimacy suffers because of the lack of libido of one or both partners…
+- paragraph: Avoiding talking and even thinking about these issues because we don’t feel comfortable admitting we have mood swings, lack of desire, and troubles in our relationship…
+- paragraph: Worried that we’re missing out on the wonderful potential of our relationship and our body…
+- paragraph: But that’s not all.
+- paragraph:
+  - strong: We also feel less energetic and passionate
+  - text: about life.
+- paragraph:
+  - strong: Insecure
+  - text: about our sagging skin, thinning hair and stubborn weight gain.
+- paragraph:
+  - strong: Exhausted
+  - text: from sleepless nights and daily pain.
+- text: Too scared to pursue new goals and adventures.
+- paragraph:
+  - strong: Feeling that a fulfilling, active life
+  - text: is just passing us by.
+- paragraph:
+  - strong: Anxious
+  - text: about the seemingly inevitable deterioration of our precious health...
+- paragraph: And being told premature aging is “normal”.
+- paragraph:
+  - strong: Well, it is not normal.
+- paragraph: And it is not something we should accept.
+- paragraph:
+  - text: And, in fact,
+  - strong: there is SO much we can do
+  - text: to stop premature aging before it steals decades of our lives, no matter your current age or health status.
+- paragraph: Thanks to ancient healing practices and Nobel-winning discoveries...
+- text: Loss of Libido and Hormonal Issues don't have to be in YOUR story… Or the story of your loved one... Anymore.
+- paragraph: Why?
+- paragraph: "Here's what the latest science shows us:"
+- paragraph: Until very recently, no one knew how we could reverse aging and disease.
+- paragraph: And we didn’t know we could keep our hormones and our energy and passion intact as we age.
+- paragraph:
+  - text: Yet, we know that some people in some parts of the world manage to
+  - strong: stay healthy well into their 80s, 90s, 100s and beyond...
+- paragraph: They retain their vibrant health and energy...
+- paragraph: And somehow live long lives without needing medical treatments and procedures...
+- paragraph: Thanks to advancements in longevity research, we know how they do it.
+- paragraph:
+  - text: New breakthroughs in medicine show
+  - strong: we have the power to change the way we age...
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow So much so...
+- paragraph:
+  - text: That scientists and medical experts from Harvard and other leading universities now understand
+  - strong: how to reverse the aging process...
+- paragraph:
+  - strong: Rejuvenate failing eyesight, muscles, the brain and skin...
+- paragraph:
+  - text: And even
+  - strong: drive the age of mice “forward and backward”
+  - text: ... just like kickstarting a pendulum with the flick of a finger.
+- paragraph:
+  - text: In fact, some of these aging discoveries are so transformative for humanity that they earned
+  - strong: the Nobel Prize in medicine!
+- paragraph: This is not science fiction anymore.
+- paragraph: This can be your new reality.
+- paragraph: And you deserve to enjoy it.
+- paragraph: "Experts, researchers and doctors studying longevity and aging came to a striking conclusion:"
+- text: Premature aging is a disease.
+- paragraph: And like any disease...
+- paragraph:
+  - text: It can be
+  - strong: prevented
+  - text: . It can be
+  - strong: treated
+  - text: . It can be
+  - strong: put on hold or even reversed
+  - text: .
+- paragraph: These discoveries are now changing the world.
+- paragraph: And it will change your life, too, if that's what you decide.
+- paragraph: However, no matter if you're in your 30s, 40s, 50s, 60s and beyond...
+- paragraph: Whether you're suffering from chronic disease and premature aging... or just want to prevent these in the future...
+- paragraph:
+  - strong: It's important to act now.
+- paragraph:
+  - text: In our new 10-episode
+  - strong: AGELESS
+  - text: docuseries, 50 world-class medical doctors and renowned health experts share their secrets and offer affordable, science-backed tools to banish premature aging and reclaim your youthful glow and energy for the years to come.
+- img
+- text: Shivan Sarna
+- paragraph: ‘Ageless’ is an eye-opening docuseries that unravels the root causes of premature aging. It offers specific, cutting-edge longevity-enhancing techniques so you can take charge of your health. Each episode reveals the remarkable resilience of the human body and mind. The docuseries gives us invaluable science we can use today, for our best possible futures. I highly recommend it! There is so much to look forward to and the best is yet to come..
+- text: Healthy Hormones Start With One Prominent Nobel-Winning Discovery
+- paragraph: Let us explain...
+- paragraph:
+  - text: One of the vital steps to regaining our hormonal health is
+  - strong: keeping your cellular “housekeeping” intact.
+- paragraph: What do we mean by that?
+- paragraph:
+  - text: Imagine your cells as
+  - strong: tiny, efficient houses.
+- paragraph:
+  - text: The various cell organs within them are
+  - strong: the furniture and appliances.
+- paragraph:
+  - text: Over time, like in any home, some of these items become
+  - strong: old or broken.
+- paragraph: Not only do they become unusable....
+- paragraph: They accumulate and take up valuable space...
+- paragraph: And they become sources of inflammation for the rest of the 'house'.
+- paragraph: That is how premature aging happens on a cellular level.
+- paragraph: Fortunately, the body acts like a diligent housekeeper for your 'house'.
+- paragraph: It goes into each room, removes these unwanted items, and cleans the space they rested on...
+- paragraph: And repairs and recycles these broken, old cell organs before they become dangerous.
+- paragraph:
+  - text: This is how we keep
+  - strong: our cells functioning optimally...
+- paragraph:
+  - text: Which keeps our
+  - strong: muscles, bones, skin, liver, brain and body
+  - text: working properly as well.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today To Become Ageless Tomorrow But here's what tends to happen as we advance in years and get bombarded with stress and the toxic environment of our modern lives:"
+- paragraph: The 'housekeeper' gets tired, overwhelmed and confused.
+- paragraph: It can't keep up with all the trash that enters our body with everything we eat, breathe in, put on our skin.
+- paragraph: So, instead of repairing, replacing and recycling...
+- paragraph: These old, broken items are no longer removed, fixed or recycled anymore.
+- paragraph:
+  - text: This leads to a
+  - strong: buildup of toxic
+  - text: substances and a
+  - strong: decrease in cellular energy
+  - text: .
+- paragraph: This manifests as a premature aging of your hormones and chronic disease in different parts of the body.
+- paragraph:
+  - text: ...It also creates
+  - strong: neurodegenerative disorders like Alzheimer's and dementia, metabolic disorders like diabetes, cancer, liver disease,
+  - text: and many more.
+- paragraph: "However, in 2016, Nobel-winning scientists discovered a way to stop this process:"
+- paragraph: We can help our internal 'housekeeper' work as diligently as it did in our 20s and 30s.
+- text: In turn, we can prevent and even reverse diseases and premature aging and age gracefully as the decades go by.
+- paragraph: Does this mean we'll be immortal?
+- paragraph: Well... not quite.
+- paragraph: Scientists still haven't figured out how to stop or pause time.
+- paragraph: So time is passing by with every second for ALL of US! What we can do, however, is...
+- text: Unlock Simple “Age-Reversal Techniques” That Keep Your Hormones in Optimal Balance
+- paragraph
+- paragraph: Imagine, what could this mean for you?
+- paragraph
+- paragraph
+- paragraph: A complete rejuvenation of the body and your ability to enjoy intimacy again.
+- paragraph
+- paragraph
+- paragraph: Being able to reignite the passionate relationship with your partner, and enjoy amazing mood and memory as your hormones naturally balance themselves.
+- paragraph
+- paragraph
+- paragraph: Slowing down the aging process for as long as possible, and even reversing the symptoms of incorrect aging.
+- paragraph
+- paragraph
+- paragraph: But that’s just scratching the surface..
+- paragraph
+- paragraph
+- paragraph: Because as you embark in a total body rejuvenation, you could have…
+- paragraph
+- paragraph
+- paragraph: More energy… Better memory… Less aches and pains…
+- paragraph
+- paragraph
+- paragraph: And, of course, you would be looking and feeling younger than your actual age.
+- paragraph
+- paragraph
+- paragraph
+- paragraph
+- paragraph: "Now, if you're like most people, you might be thinking:"
+- paragraph
+- paragraph
+- paragraph: Only rich people and celebrities can afford to age gracefully and look much younger than their age.
+- paragraph
+- paragraph
+- paragraph: But, in fact, you'll see that these age-reversal techniques are available and affordable for everyone.
+- paragraph
+- paragraph
+- paragraph: You don't need any of those fancy therapies, expensive skin-care, or non-stop workouts.
+- paragraph
+- paragraph
+- paragraph: Best of all, you can get started right away, from the convenience of your home.
+- paragraph
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- paragraph:
+  - text: You will find exactly what you need to do in our breakthrough docuseries
+  - strong: AGELESS
+  - text: .
+- paragraph:
+  - text: In this brand-new series, we gathered a team of
+  - strong: 50 medical doctors and health experts
+  - text: specializing in chronic disease, naturopathic healing and longevity.
+- paragraph: They not only reveal how to keep “your housekeeper” cleaning your cells as efficiently as in your twenties...
+- paragraph: But also how to start reversing the hormonal imbalances that happen because of premature aging.
+- paragraph: Because of this groundbreaking information, we believe that...
+- text: The AGELESS Docuseries is the most important docuseries you will ever watch.
+- paragraph: Why?
+- paragraph: One, because most of the insights shared by our world-class experts have never been aired before.
+- paragraph: But, most importantly, because they can make the difference between spending the next 10, 20, 30, 40, or 50 years taking care of your sick body...
+- paragraph: Missing precious moments because you're too exhausted or in pain... Losing your independence and wellbeing...
+- paragraph: Feeling like you're falling behind people your own age...
+- paragraph: Versus...
+- paragraph: Living the best years of your life
+- paragraph: Traveling
+- paragraph: Spending time with your kids, grandkids and great-grandkids
+- paragraph: Relaxing after decades of non-stop work and commitments
+- paragraph: Sharing your valuable wisdom
+- paragraph: Living with purpose
+- paragraph: And aging with confidence and grace
+- text: If you want to bring back your hormonal health and look 10 to 20 years younger than your age, you can’t miss this.
+- paragraph: Reserve your spot now to get free access to the docuseries.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today To Become Ageless Tomorrow When you watch this 10-episode docuseries, you will discover:"
+- list:
+  - listitem: How to to recover from hormone issues, PCOS, menopause and infertility with no drugs
+  - listitem: How imbalanced hormones may prematurely age you
+  - listitem: Why getting older could be the secret to the most passionate sex of your life
+  - listitem: "Expert warning: #1 reason why hormone levels in men and women dramatically plummeted in the last 20 years, plus household items that can crush men hormones"
+  - listitem: How one natural injection can restore optimal sexual function in men and women at any age
+  - listitem: Tens of thousands of men use this inexpensive fix to reverse their erectile dysfunction - Plus one easy treatment that restores vaginal sensitivity in women
+  - listitem:
+    - text: Why men have 3 surprising advantages in the bedroom and
+    - strong: "#1 secret for men"
+    - text: who want to feel desired
+- list:
+  - listitem: Lost your mojo? 5 root causes why women lose their libido with time, and how to become a sex goddess
+  - listitem: The holistic approach that treats the root cause of erectile dysfunction (ED), and makes “the blue pill” irrelevant
+  - listitem:
+    - strong: 20 different ways to reach orgasm
+    - text: – And how to use this fun
+    - strong: “sex bucket list”
+    - text: to enhance your pleasure
+  - listitem:
+    - text: "Age-proof your libido: How to"
+    - strong: reignite desire and enjoy intimacy
+    - text: more than ever
+  - listitem:
+    - text: No partner? Key secrets to know about gifting pleasure to yourself and finding
+    - strong: the love of your life
+    - text: at any age
+  - listitem: The myths and truths about hormone replacement therapy. Should you get on hormone replacement?
+  - listitem:
+    - text: "“My marriage is on the rocks”: How a 44-year old woman went from irritable and depressed to her best self in just a few weeks by balancing"
+    - strong: this key hormone
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- img
+- text: Sarah Otto
+- paragraph: Stefan has produced astonishing health docuseries like ‘AGELESS’ that have changed the lives of millions of people for the better. His unwavering passion and relentless drive to empower others through powerful educational content are evident in all of his work. With a deep commitment to sharing valuable insights on health, wellness, and longevity, Stefan Apostolov has become a true beacon of inspiration. Through ‘AGELESS’ and his other endeavors, Stefan continues to be a trusted source of knowledge and motivation for those on a journey to a healthier and more fulfilling life.
+- text: While it's impossible to stop chronological aging...
+- paragraph:
+  - text: There is so much you can do to reverse
+  - strong: premature aging
+  - text: .
+- paragraph:
+  - text: In
+  - strong: AGELESS
+  - text: ", you will discover how to get your body to"
+  - strong: act
+  - text: and
+  - strong: look younger...
+- paragraph:
+  - text: So you can enjoy
+  - strong: decades
+  - text: being the best version of yourself...
+- paragraph: Physically, emotionally and spiritually.
+- text: "What You Will Find In Each Episode Of This Unique 10-Part Docu-Series AGELESS 1 episode Premature Aging Unraveled: Are You Aging Faster Than You Should?"
+- list:
+  - listitem: Are we sicker than our grandparents? Why we are less healthy than older generations, in spite of all the medical advancements
+  - listitem: "The #1 disease that ages Americans prematurely – and the root causes of autoimmune, chronic and heart disease uncovered"
+  - listitem: The biggest threats to our longevity and why most people have no clue what healthy aging looks like with Dr. Daved Rosensweet
+  - listitem: The transformational story of patients reversing dementia symptoms with Dr. Kat Toups
+  - listitem: The secret that makes other women curious about our expert Laura Frontiero looking so youthful and glowing at almost 50 years olds
+  - listitem: Holistic cancer expert explains how to slash the risk for age-related cancer, diabetes and neurodegenerative disease with up to 95%
+  - listitem: "“I've got my life back”: The true story of an exhausted 60-year old woman who finally managed to lose her extra weight and regain her youthful energy."
+  - listitem: "Premature aging is a choice: Surprising medical advancements that keep our bodies working like in our 20s and 30s"
+  - listitem: How people in the “Blue Zones” get to live 100 healthy years by sticking to these “basic” health concepts
+- paragraph: “High blood pressure, high cholesterol, stroke, and then metabolic disease, prediabetes... These are occurring at much earlier ages than they were. [...] So I do think that overall we are less healthy now, even with all the technology than we were 50, 60, 70 years ago.”
+- heading "Wendie Trubow, MD, MBA" [level=4]
+- text: "Functional Medicine Gynecologist 2 episode The Origin of All Disease: How to Measure the Wear & Tear on the Body and Stop the #1 Aging Accelerator"
+- list:
+  - listitem: Why some of us will age dramatically in just a couple of years, and how we can reverse accelerated aging now
+  - listitem: "Experts warn: This toxic chemical is sold as “food” after WW2. It is NOT meant for human consumption"
+  - listitem: "Former Big Pharma employee reveals #1 nutrient deficiency that causes pain, inflammation and disease"
+  - listitem: Discover the scary link between everyday cleaning products and DNA damage, cancer and neurodegenerative disease
+  - listitem: "When doctors don't know why you feel sick: Recover your energy, mood and lean physique by applying these “universal principles of healing”"
+  - listitem: How you can get the most important health information of your life for under $500
+  - listitem: Key blood tests to determine whether you're aging prematurely
+  - listitem: Feeling exhausted? Here's why these invasive viruses could be eating up all your energy
+  - listitem: "Ironman secret: Vital blood tests for men who want to stay disease-free"
+  - listitem: "“It's like putting acid inside your body”: Stop doing this to prevent cell damage, disease formation and premature aging"
+- paragraph: “Aging, by my definition, is death by a thousand cuts. [...] So you can see aging on people's faces. You can look at 65 year old [people] and they look like they're 85, right? You can look at 50 year olds and they look like they're 85 so what's happening with their aging? It's damage, it's inflammation, it's wear and tear.”
+- heading "William Pawluk, MD, MSc" [level=4]
+- text: "PEMF Therapy Expert 3 episode The Science of Youthful Energy: Optimize Your Hormones, Metabolism, and Cellular Health"
+- list:
+  - listitem: Tired and wired at the same time? Why this could be a sign of a hormonal havoc in your body - and what you can do
+  - listitem: "The dark side of modern life: #1 cause of insulin resistance and endocrine imbalance revealed"
+  - listitem: "Expert warning: Why hormone levels in men and women dramatically plummeted in the last 20 years, plus household items that crush men hormones"
+  - listitem: Bad genetics? Not a problem. Here's how to rewrite your health story and not get diseases that run in your family
+  - listitem: One simple way to regain the vibrant energy, healthy muscle mass and motivation you had in your 20s
+  - listitem: This Nobel-prize discovery reveals how to naturally detox your cells and prevent all chronic disease
+  - listitem: "#1 cause for fatigue, weight gain, poor sleep, blood sugar issues, heart and brain diseases - completely missed by doctors"
+  - listitem: "Why metabolism changes in your 40s, and the #1 thing to do to reverse the rapid aging from metabolism disruption"
+  - listitem: The reason why you might feel exhausted at noon and wake up in the middle of the night
+  - listitem: Why 2 out of 3 adults aged 65+ suffer from chronic fatigue and 4 ways to gain your energy back
+  - listitem: The 4 reasons our energy declines as we age and how to reverse the process
+- paragraph: “And so the aging process is really dictated by our hormones. As our hormones start to decline, we start aging and we see our skin start to wrinkle. We see our hair start to fall out. We see our blood vessels start to get more rigid and less flexible. Our bones start to deteriorate. We start to atrophy our muscles. So our brain starts to atrophy as well. So we have brain fog, trouble thinking, memory issues and eventually cognitive decline.”
+- heading "Michelle Sands, ND" [level=4]
+- text: "Naturopathic Physician Co-founder of Glow Natural Wellness 4 episode A Body Tour: What Ages Our Skin, Brain & Gut the Most and How to Reverse the Signs"
+- list:
+  - listitem: "Natural Botox: This “hydrating” hormone keeps your skin plump and smooth at any age"
+  - listitem: Want to prevent skin aging? The 5 pillars of healing premature skin aging
+  - listitem: Is your moisturizer toxic? Why women unknowingly absorb 150 dangerous chemicals everyday through their skin
+  - listitem: Discover the 2 natural oils that increase collagen production and the “magic wand” that brings back youthful elastin
+  - listitem: Why most conventional doctors dismiss your worries about your brain - yet, the mild memory loss signs you shouldn't ignore
+  - listitem: "The brain that heals itself: 3 proven methods to supercharge your memory and grow healthy neurons at any age"
+  - listitem: A mother's miraculous journey to heal her son's injured brain reveals powerful secrets of brain healing
+  - listitem: Discover the incredible story of a 65-year-old doctor with a family history of dementia, who regained her memory by doing one surprising thing
+  - listitem: Weekly headaches? See why your OTC pain-killer might make your headaches worse. And how to forget what migraines feel like
+  - listitem: Commonly prescribed drugs that destroy your gut - and the foods and supplements that activate your healthy bile
+  - listitem: "Can your gut supplements heal your headaches ? Plus: How to release toxins from your gut right now for rock hard digestion"
+- paragraph: “So our skin is the billboard to the world. And really, it tells a story of what's happening inside our bodies. A lot of people think about creams and potions and procedures for their skin, but if they would go inside and they would start with clean air, clean water, clean food, and putting good inputs into their body and making sure they have the proper nutrients, their skin would glow from the inside out.”
+- heading "Jill Carnahan, MD, ABIHM" [level=4]
+- text: "Medical Director, Flatiron Functional Medicine 5 episode Protecting your Foundation: Erasing Premature Aging from your Heart, Muscles and Bones"
+- list:
+  - listitem: Reverse the aging of your arteries and vessels, and key tests to prevent heart disease
+  - listitem: Why 50% of people on the planet accidentally age their heart, and simple steps to reverse the damage now
+  - listitem: The most important medical test on the planet is just $75. Ask this from your cardiologist on your next appointment
+  - listitem: These key blood tests predict your longevity and give you years to undo arterial damage before it turns into a disease
+  - listitem: One in four people have “mutated cholesterol genes” that tremendously ages their heart. Less than 1% of doctors know this. A $30 blood tests reveals if you have it
+  - listitem: Born before 1990? Then you might have a significant toxin load that caused half of million deaths in the US. How to test it for free
+  - listitem: Is bone loss a normal part of aging? Absolutely not. Avoid common medications that melt away bones (traditional doctors don't tell you this)
+  - listitem: Want to lose weight? Stop doing cardio, and eat more of this instead
+  - listitem: This lethal disease has no symptoms. How to prevent it according to American Heart Association
+  - listitem: "#1 thing to do to preserve your muscle strength as you age"
+- paragraph: “There are so many factors beyond the traditional factors that determine whether you might be walking around right now, no symptoms, no signs outwardly, but absolutely rotten inside. And you need to get a handle on that if you want to seriously enjoy longevity.”
+- heading "Joel Kahn, MD, FACC" [level=4]
+- text: "Clinical Professor of Medicine Founder, Kahn Center for Cardiac Longevity 6 episode Unlocking the Secret to Emotional Healing: Powerful Mental and Spiritual Practices to Reclaim Your Joy and Inner Peace"
+- list:
+  - listitem: "The link between self-worth and premature aging: Why thinking you're 'not good enough' can make you feel a decade older"
+  - listitem: Can you “learn” to be happy? Yes! Here's a simple technique to start feeling more joy right now
+  - listitem: Two simple emotional practices that have changed the lives of countless people around the world
+  - listitem: "The inspiring story of one woman's journey to emotional healing: Discover how a 60-year old woman overcame trauma and found purpose, reigniting her marriage and reclaiming the best years of her life"
+  - listitem: How to vibrate at our highest frequency? This practice that changes your life and lifts the energy in every room you walk into
+  - listitem: How to build your “mental muscles” to banish depression, stress and anxiety
+  - listitem: "The #1 reason why you're not manifesting the reality that you want"
+  - listitem: Famous study reveals how childhood trauma can shorten our lifespan by 20 years; Plus how to heal from trauma to prolong longevity
+  - listitem: The root cause of unhappiness in the West and the Buddhist concept that automatically gives you joy, fulfillment and gratitude
+  - listitem: The life-changing brain training technique that heals your chronic fatigue and teaches your body how to heal itself
+- paragraph: “There's a common myth about aging - that it's inevitable, and there will be cognitive decline as we run down in terms of our ability to function. This is a stereotype of old people, that they're typically old, depressed, and scared of everything. It doesn't have to be that way.”
+- heading "Irene Cop, MD, DC" [level=4]
+- text: "Elite Performance Trainer Founder of the Success S.H.I.F.T. Institute 7 episode Debunking Myths about Intimacy and Desire: A Roadmap to Lifelong Sexual Pleasure"
+- list:
+  - listitem: Why getting older could be the secret to the most passionate sex of your life
+  - listitem: "3 surprising advantages men have in the bedroom and #1 secret for men who want to feel desired"
+  - listitem: Lost your mojo? 5 root causes why women lose their libido with time, and how to become a sex goddess
+  - listitem: This holistic approach treats the root cause of erectile dysfunction (ED), and makes “the blue pill” irrelevant
+  - listitem: "A cruel trick from Mother Nature: What happens to our intimate areas as we age, and a surprising anatomy secret that brings the pleasure back"
+  - listitem: These two words ignite passionate lovemaking like nothing else - plus a 3-question game to supercharge intimacy in any marriage
+  - listitem: The 20 ways to reach orgasm - And how to use this fun “sex bucket list” to enhance your pleasure
+  - listitem: Craving for more intimate time with your partner? Here's what to focus on to enjoy a “sexual renaissance”
+  - listitem: "Age-proof your libido: How to reignite desire and enjoy intimacy more than ever"
+  - listitem: No partner? Key secrets to know about gifting pleasure to yourself and finding the love of your life at any age
+- paragraph: “So you are a better lover in your sixties. Frankly, at 61, I'm having the best sex of my life. Fantastic. Because I do regenerative therapies and I learn new skills and I've had more time to practice them. So that really creates a perfect storm of the last part of your life, especially with a good health span, with good longevity, you can be having the most incredible sex of your life.”
+- heading "Susan Bratton" [level=4]
+- text: "Author & Intimacy Expert 8 episode Contaminated: How to Break the Vicious Cycle of Environmental & Social Toxins"
+- list:
+  - listitem: Everyone thinks these foods are healthy. They're not! See why they ravaged the heart of a 32-year old athlete, and how he finally healed his heart disease
+  - listitem: "Contaminated water: Why you should stop buying this type of water immediately... Plus how to obliterate all microplastics and radioactive elements from your tap water now"
+  - listitem: The single most important secret to reduce the toxic load in your body
+  - listitem: Do you live in the US? Then you're unknowingly consuming petroleum every single day! How to avoid petroleum, plus thousands of other aging chemicals already banned in the European Union
+  - listitem: "Two dirt-cheap and completely natural sanitizers for your bathroom. Plus: The easiest way to eliminate airborne toxins from your home"
+  - listitem: "The “bedroom sanctuary”: A 3-step method to support maximum rejuvenation during your sleep"
+  - listitem: Why the lack of social connections may be just as toxic as toxins themselves
+  - listitem: The “silent epidemic” in the United States that's worse for you than smoking a pack of cigarettes per day
+  - listitem: Is your doctor invalidating your concerns? What medical gaslighting really does for your health
+  - listitem: Why doctors don't like to talk about this 'social medicine' that can heal diseases and ward off anxiety
+- paragraph: "\"The result of premature aging in the body is chronic disease. When your cells age at a faster pace, this sets you up for heart disease, cancer, autoimmune conditions, and for the first time in decades, we expect that our children are probably not going to live as long as us or our parents. The cause of all this aging is toxins in the environment.”"
+- heading "Laura Frontiero, NP-BC" [level=4]
+- text: "Functional Medicine Practitioner 9 episode The Longevity Fuel: The Secrets to Fasting Plus The Most Rejuvenating Foods and Supplements on Earth"
+- list:
+  - listitem: "Skip this meal to avoid premature aging (it's not dinner). Plus: The “Olive Oil” diet of the longest-living people on Earth"
+  - listitem: One easy habit shrinks cancer tumors up to 75% according to studies.... Plus the right foods that can make cholesterol, diabetes and blood pressure obsolete... And why most doctors don't share these secrets with their patients
+  - listitem: Are you suffering from “toxic hunger”? What to do to banish cravings forever
+  - listitem: Sacred, ancient plants for longevity - now recognised by scientists
+  - listitem: The 4-week diet that resets your metabolism
+  - listitem: "These inexpensive herbs are the most nutrient-dense foods on the planet. Plus: The most effective anti-aging, anti-stress herbal remedies"
+  - listitem: "One natural “anti-diabetes” supplement prevents Alzheimer's and helps weight loss. Plus: Overlooked regenerative foods that heal the gut and the brain"
+  - listitem: This eating habit can prevent cancer and chronic disease while promoting healthy longevity according to hundred of studies
+  - listitem: Revolutionary Harvard research reveals how to prolong longevity - and a few crucial vitamins for healthy aging
+  - listitem: Why people who develop cancer are missing these key nutrients - And how to make sure you're getting enough of them to prevent cancer
+  - listitem: Can you live healthily until 107? Science says yes, but only if you change this in your diet now
+- paragraph: “The natural age for a healthy human should be between 97 and 107 years old... And modern nutritional science has made sufficient and radical advances, so people have an unprecedented opportunity in human history to hit that 97-107 age range. But they have to take advantage of these findings in nutritional science.”
+- heading "Joel Fuhrman, MD" [level=4]
+- text: "7-time NY Times Bestselling Author President of Nutritional Research Foundation 10 episode Regenerative Medicine: Therapies, Technologies and Treatments That Can Reverse Biological Aging by 20 years or more"
+- list:
+  - listitem: "The Rejuvenation Elixir: Just six doses of this natural nutrient decreased mortality, cancer and cardiovascular disease up to 4 times"
+  - listitem: Joint pain? This natural therapy regenerates tissues and cartilages using just your own blood
+  - listitem: "Lifesaving technology: The story of one diabetic man who got off medication in 5 days using this little-known device"
+  - listitem: The easiest way to improve your sleep, heart and metabolic health using affordable technology - And get the health information you need without any doctor visits or blood work
+  - listitem: Ever wanted to feel sharper, more alert and more energized? Now you can feel your best in just 30-minutes, thanks to this all-natural detox therapy
+  - listitem: "Peptide therapies: How to regenerate the gut, destroy brain fog and rejuvenate the body with brand-new medical breakthroughs"
+  - listitem: The myths and truths about hormone replacement therapy. Can hormones help you age gracefully?
+  - listitem: How one 36-year old woman ditched antidepressants and naturally treated the root cause of her depression
+  - listitem: "“My marriage is on the rocks”: How a 44-year old woman went from irritable and depressed to her best self in just a few weeks by balancing this hormone"
+  - listitem: One natural injection that restores optimal sexual function in men and women at any age
+  - listitem: Why 80% of cancer doctors in Europe use this natural treatment with amazing results
+- paragraph: “Regenerative medicine allows us to step in and very strategically, very precisely, very elegantly actually reinitiate those healing cycles and those processes so that you can get better over time.”
+- heading "Sabrina Solt, NMD" [level=4]
+- text: Naturopathic Physician
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- img
+- text: Edward Levitan
+- paragraph: ‘Ageless' docuseries has completely changed the way I view aging. Age is not just a number; it's an opportunity to embrace a whole new world of possibilities. 'Ageless' has opened my eyes to the incredible stories of individuals who have defied the conventional wisdom about getting older. It's inspiring to see people in their 50s, 60s, and even 90's living full, vibrant, amazing, and fulfilling lives.
+- text: "Now, we must warn you:"
+- paragraph: What you will find in this docuseries might sound controversial.
+- paragraph: That's because our experts have pushed the boundaries of medicine...
+- paragraph: Instead of simply prescribing drugs sponsored by Big Pharma to mask various symptoms and call it a day...
+- paragraph: They went deeper into their study.
+- paragraph: They studied the root cause of diseases and premature aging. They understand how each bodily function interacts with others.
+- paragraph: And they reveal surprising, even counterintuitive tools to ignite your physical, emotional and spiritual health.
+- paragraph: Now, most doctors never share this information with their patients!
+- paragraph: And this is why so many people miss out on good health and longevity.
+- paragraph: This is why we urge you to...
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow Meet Our 50 World-Renowned Longevity and Chronic Disease Doctors and Health Experts Featured in AGELESS Brian Vaszily Natural Health Researcher and Advocate for 20+ years Aimie Apigian, MD, MS, MPH Board-Certified Preventive and Addiction Medicine Physician JJ Virgin, CNS, CHFS NY Times Bestselling Author, Nutrition & Fitness Expert Joel Fuhrman, MD 7-time NY Times Bestselling Author, President of Nutritional Research Foundation Anna Cabeca, DO, FACOG Triple Board-Certified OB/GYN aka The Girlfriend Doctor Robert Goldman MD, PhD Co-Founder & Chairman of the Board, American Academy of Anti-Aging Medicine Keesha Ewers, ARNP, PhD Emotional Trauma Specialist Cynthia Thurlow, NP Nurse Practitioner, Metabolic Health and Fasting Expert Benjamin Stills, NMD Naturopathic Physician Bridghid McMonagle, ND Naturopathic Physician Jill Carnahan, MD, ABIHM Medical Director, Flatiron Functional Medicine Daved Rosensweet, MD Leading Expert in Bio-Identical Hormone Treatment Deb Matthew, MD America's Happy Hormones Doctor Tracy Gapin, MD World-Renowned Men’s Health & Performance Expert Irene Cop, MD, DC Elite Performance Trainer, Founder of the Success S.H.I.F.T. Institute Cheng Ruan, MD Board-Certified Internal Medicine Physician Amie Hornaman, DCN, CFMP Functional Medicine Practitioner/Thyroid Expert Tom Moorcroft, DO Board-Certified in Family Medicine and Osteopathic Manipulative Treatment Tricia Pingel, NMD Licensed Naturopathic Physician Kent Holtorf, MD Functional Immunologist, Peptide Therapy Expert Matt Cook, MD Integrative Medicine Specialist Lyn Patrick, ND Naturopathic Physician, Environmental Medicine & Metal Toxicology Expert Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine Michelle Sands, ND Naturopathic Physician, Co-founder of Glow Natural Wellness Ari Whitten, MS Energy Enhancement Expert & Bestselling Author Trina Felber, RN, BSN, MSN Natural Oral & Skincare Wellness Expert Joel Kahn, MD, FACC Clinical Professor of Medicine & Founder, Kahn Center for Cardiac Longevity Sharon Stills, NMD Naturopathic Medical Doctor Wendie Trubow, MD, MBA Functional Medicine Gynecologist William Pawluk, MD, MSc PEMF Therapy Expert Nathan Crane Natural Health Researcher Jenny Tufenkian, ND Naturopathic Physician Amelia Scott Barrett, MD Neurologist and Founder of Migraine Relief Code Laura Frontiero, NP-BC Functional Medicine Practitioner Kevin Ellis, INHC Bone Health Expert & Founder of BoneCoach M. Yvonne Karney, MD Board-Certified Regenerative Medicine & Gynecology Steve Ottersberg, MS, ND Analytical Chemistry & Clinical DNA Testing Interpretation Specialist Lorraine Maita, MD, FAARM Board-Certified in Integrative, Internal and Functional Medicine Rajka Galbraith, MD, IFMCP Board-Certified Functional & Integrative Medicine Doctor Reed Davis, HHP Board-Certified Holistic Health Practitioner & Founder, Functional Diagnostic Nutrition (FDN) Robby Besner, BS, PSc.D Full Spectrum InfraRed Energy Medicine Specialist Sabrina Solt, NMD Naturopathic Physician Sachin Patel Founder, Living Proof Institute & Best-Selling Author Farah Sultan MD, ABFM Board-Certified Family Physician Susan Bratton Author & Intimacy Expert James LaValle, RPh, MT Academic Co-Chair, American Academy of Antiaging Medicine, Chair Steering Committee International Peptide Society Lisa Saff Koche, MD Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Nasha Winters, ND, FABNO Integrative Ecology Expert, Executive Director of the Metabolic Terrain Institute of Health Kat Toups, MD, DFAPA, IFMCP Distinguished Fellow, American Psychiatric Association, Institute for Functional Medicine Certified Practitioner Aaron Hartman, MD, MAR Assistant Clinical Professor of Family Medicine, VCU School of Medicine, Medical Director and Principal Investigator, Virginia Research Center
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to become Ageless Tomorrow Meet Your Host:"
+- paragraph:
+  - strong: Stefan Apostolov
+  - text: is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- text: Secure Your Access Now, Before This 10-part Groundbreaking Documentary Is Taken Down
+- paragraph: Imagine you'll take a biological age test today.
+- paragraph: If you're like most people, your test results will probably show you're 5 to 10 years older than your actual age.
+- paragraph: That's an unfortunate reality for most people in the United States.
+- paragraph: But what if, after implementing the age-reversal techniques presented by our experts...
+- paragraph: Your biological test results show you've not only overcome your premature aging...
+- paragraph:
+  - text: But
+  - strong: you're actually 10 years
+  - text: younger than your chronological age?
+- paragraph:
+  - text: That would mean you've actually
+  - strong: reversed the clock by 20 years!
+- paragraph: Thanks to these new advancements in longevity science, this can be your reality.
+- paragraph: No more feeling that you need to “take it slow” with new adventures and travel plans.
+- paragraph: No more wondering how to cope with the lack of energy and low libido, and get the strong body and the strong relationship you deserve…
+- paragraph: No more feeling that your health is out of your control, and that your body has betrayed you.
+- paragraph: No more feeling older than you feel inside.
+- paragraph: No more countless doctor visits, drug cocktails, and painful symptoms of disease that seem to increase every year.
+- paragraph: No more anxiety about the future.
+- paragraph: Instead, imagine how great it would feel to have a healthy body, free of pain, brimming with joyful energy.
+- paragraph: Imagine how great it would be to enjoy life now, knowing you'll experience life in the next decades to the fullest.
+- paragraph:
+  - strong: But this isn't just about you it's also about your family.
+- paragraph: You can share this wisdom with your family and friends to better the health of your children, parents or spouse.
+- paragraph: Help change the lives of those you love.
+- paragraph: With each episode, you'll feel more inspired to make small but vital changes that will transform your health and the health of those around you.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today To Become Ageless Tomorrow
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+Failed step: user register in "lg_ev_hormones" Opt In page
+Test failed on page: 'https://zonia-stg.com/lgmb5e/lg-hormones'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Evergreen_funnel_--_@1.6__20260903-012044.png

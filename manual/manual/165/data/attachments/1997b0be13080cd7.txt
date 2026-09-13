@@ -1,0 +1,9 @@
+Executing step: Verify banners redirects in this week articles
+===> Navigated to https://zonia-stg.com/blog
+🔍 Clicking banner: RS-3-425x425px
+🔍 Clicking banner: RS-4-425x300px
+🔍 Clicking banner: CR-Blog Banner-Dr Geovanni Espinosa-Main-1-425x700px
+Failed step: Verify banners redirects in this week articles
+Test failed on page: 'https://zonia-stg.com/essential-oils-for-chronic-inflammation-a-surprising-new-study'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_banners_in_This_Week_articles_20260826-073915.png
