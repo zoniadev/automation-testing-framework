@@ -622,7 +622,7 @@ Feature: Docuseries tests
       | 9       | hh_live              | quarterly | silver           | buy                  | 3          | most_popular       | 1          | most_popular       |
 
 
-  @hh_live @all_docuseries @WIP
+  @hh_evergreen @all_docuseries
   Scenario Outline: HH Evergreen funnel
     Given user register in "<opt_in_page>" Opt In page
     And user join Zonia
