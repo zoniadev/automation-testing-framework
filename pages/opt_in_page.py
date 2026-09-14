@@ -55,6 +55,8 @@ class OptInPage(BasePage):
             self.context.funnel = 'cr_1ep'
         elif self.context.funnel.startswith('hh_live'):
             self.context.funnel = 'hh_live'
+        elif self.context.funnel.startswith('hh_ev'):
+            self.context.funnel = 'hh_ev'
         if self.context.funnel == 'twl_ev':
             self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_screening_url'),
                                      timeout=20000)

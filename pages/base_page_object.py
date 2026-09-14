@@ -16,6 +16,12 @@ class BasePage(object):
         return BasePage.__TIMEOUT
 
     def wait_for_navigation(self, url, timeout=__TIMEOUT):
+        if not url:
+            raise ValueError(
+                'wait_for_navigation() was called with an empty url. This usually means a '
+                '"*_url" constant in common_variables.py was never populated - check the '
+                'caller and fill in the missing value.'
+            )
         if url.startswith("http"):
             full_url_pattern = url
         else:
