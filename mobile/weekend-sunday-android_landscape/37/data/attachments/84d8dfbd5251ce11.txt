@@ -1,0 +1,503 @@
+Executing step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://zonia-stg.com/restore-gut-3-free-bottles
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Funnel: restore_gut_b2g3
+===> User email is: zoniat-v2Serrano-1788095274@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-gut-6-more-bottles-2"
+===> URL successfully changed to "https://zonia-stg.com/restore-gut-6-more-bottles-2?orderId=6a942b358d7f36bd5e61fe6c"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Gut B2G3" Supplements page
+Executing step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://zonia-stg.com/rg-restore-detox-6-discounted-bottles-2"
+===> URL successfully changed to "https://zonia-stg.com/rg-restore-detox-6-discounted-bottles-2?orderId=6a942b358d7f36bd5e61fe6c"
+>>> Successfully selected upgrade "no" and last chance "no" for 6 More bottles of Restore Gut
+Completed step: user makes following decision in "first" supplement "6 More bottles of Restore Gut" Upsell page
+Executing step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://zonia-stg.com/rg-restore-sleep-6-discounted-bottles-2"
+===> URL successfully changed to "https://zonia-stg.com/rg-restore-sleep-6-discounted-bottles-2?orderId=6a942b358d7f36bd5e61fe6c&id=6a942b358d7f36bd5e61fe6c"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Detox
+Completed step: user makes following decision in "second" supplement "Restore Detox" Upsell page
+Executing step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+>>> Verified appearence of downsell popup
+===> Waiting for URL starting with "https://zonia-stg.com/rg-trial"
+===> URL successfully changed to "https://zonia-stg.com/rg-trial-2?orderId=6a942b358d7f36bd5e61fe6c"
+>>> Successfully selected upgrade "no" and last chance "no" for Restore Sleep
+Completed step: user makes following decision in "third" supplement "Restore Sleep" Upsell page
+Executing step: user makes following decision in 7 day free membership
+===> Waiting for URL starting with "https://zonia-stg.com/rg-trial"
+===> URL successfully changed to "https://zonia-stg.com/rg-trial-2?orderId=6a942b358d7f36bd5e61fe6c"
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> Issue with clicking button "//*[@id='skip-registration-top']", page was not changed to welcome, retrying...
+Error: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/welcome.*')'
+Actual value: https://zonia-stg.com/rg-trial-2?orderId=6a942b358d7f36bd5e61fe6c 
+Call log:
+  - Expect "to_have_url" with timeout 15000ms
+    32 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked fontawesome-i2svg-active fontawesome-i2svg-complete">…</html>
+       - unexpected value "https://zonia-stg.com/rg-trial-2?orderId=6a942b358d7f36bd5e61fe6c"
+
+Aria snapshot:
+- link "zonia":
+  - /url: ""
+  - img "zonia"
+- heading "Thank you for purchasing your Restore Supplement Package!" [level=2]
+- heading "Please Watch This Life-Changing Video From Stefan To Get the Full Benefit of Your Supplement" [level=1]
+- iframe
+- img
+- text: Click for sound
+- button "START MY 7-DAY FREE MEMBERSHIP"
+- heading "After the 7th day - as low as $10 a month. Cancel Anytime Online with 1 click." [level=5]
+- button "I just want my package, I'm not interested in trying Zonia for free."
+- text: It's like Netflix for Health & Wellness
+- heading "Functional Medicine" [level=5]:
+  - button "Functional Medicine"
+- heading "Latest Functional Medicine Shows" [level=2]
+- img "heart of the matter"
+- img "obesity and diabetes"
+- img "optimal gut health"
+- img "taming inflammation"
+- img "the art of balancing hormones"
+- img "your brain"
+- heading "Family Health" [level=5]:
+  - button "Family Health"
+- heading "yoga, exercise & dance" [level=5]:
+  - button "yoga, exercise & dance"
+- heading "cooking shows" [level=5]:
+  - button "cooking shows"
+- heading "mеditation, hypnotherapy & storytelling" [level=5]:
+  - button "mеditation, hypnotherapy & storytelling"
+- heading "motivation & stress management" [level=5]:
+  - button "motivation & stress management"
+- heading "How To Boost Your Immune System To Achieve Superior Health and Protect Yourself Against Viruses, Bacteria, and even Toxins!" [level=4]
+- paragraph:
+  - strong: "Are you:"
+- list:
+  - listitem:
+    - text: Always just
+    - strong: coming out of a cold?
+  - listitem:
+    - text: Dealing with
+    - strong: frequent digestive issues?
+  - listitem:
+    - strong: Prone to infections?
+  - listitem:
+    - strong: Feverish
+    - text: a lot of times?
+- paragraph:
+  - strong: You may be dealing with a weakened immune system.
+- paragraph:
+  - text: Our immune system is
+  - strong: essential to our survival
+  - text: . Without it, we would succumb to any attack from the outside, such as
+  - strong: viruses, parasites, bacteria
+  - text: ", and more."
+- paragraph:
+  - text: When it works properly, your immune system is always on the lookout for any threats. Once it's spotted, it sends out
+  - strong: a special task force off cells
+  - text: to remove the treat, keeping us happy and healthy.
+- paragraph: But when it doesn't, you can fall prey to the many pathogens that exist everywhere aroud you...
+- paragraph: Every single day, we are all exposed to billions of germs, viruses, parasites, and bacteria without even realize it. Some of them can even hide in seamless'good, clean'things like your laundry detergent.
+- paragraph:
+  - text: And your
+  - strong: immune system works constantly to protect you from them.
+- paragraph: So why does your immune system stop working as it should?
+- paragraph:
+  - text: Well,
+  - strong: your lifestyle and unhealthy habits can weaken
+  - text: it so much that it just cannot face even non-threatening viruses, or worse, it can start attacking healthy tissue because it cannot recognise what's a threat or not anymore...
+- paragraph:
+  - strong: "So the question begs:"
+- heading "How can I keep myself safe?" [level=4]
+- paragraph:
+  - text: The good news is your immune system can be fixed, and
+  - strong: you don't need expensive medical treatment to do it either.
+- paragraph: Through Zonia, you can unlock a large inventory of science-backed action-based videos by our health experts that can help you strengthen your immune system, starting now!
+- heading "Here are some tried and tested ways to boost the immune system:" [level=4]
+- list:
+  - listitem:
+    - strong: Eating healthy
+    - text: ", learning which are the best foods for better and stronger health;"
+  - listitem:
+    - strong: Decreasing stress
+    - text: levels, and knowing the best practices to calm yourself and push negative emotions away;
+  - listitem:
+    - strong: Sleeping better
+    - text: ", like you did when you were a child;"
+  - listitem:
+    - strong: Being more active
+    - text: and adopt healthier habits to heal your body from the inside out!
+- heading "Here’s How Zonia Can Help Fortify Your Immune System:" [level=4]
+- img "recipes"
+- list:
+  - listitem:
+    - text: Discover
+    - strong: cooking shows that prove healthy food can be just as delicious as fast foods
+    - text: . We know how hard it is to say no to a pizza or a burger, but these cooking shows help you discover yummy, healthy recipes that add extra health to each plate. Our shows will help you
+    - strong: learn what your body needs in terms of nutrition
+    - text: not just to feed your body, but to
+    - strong: boost your immune system
+    - text: .
+- iframe
+- img "check out tasty healthy dishes"
+- img "recipes collage"
+- list:
+  - listitem:
+    - text: Assist you on how to
+    - strong: sleep better and allow your body enough time to repair itself
+    - text: through meditation, hypnotherapy and storytelling audios sessions so that it can be
+    - strong: strong enough to ward off viruses and infections
+    - text: . Sleeping is essential to a healthy life, but the ‘speed’ of the modern world often makes us prioritize our jobs instead of sleep. And our immune system can suffer as a result;
+- iframe
+- list:
+  - listitem:
+    - text: Finally
+    - strong: break those bad habits that are making you not just sick
+    - text: "- but they also make you miserable. By simply following the action-based tips developed by Zonia’s experts, you can protect your immunity by adopting new healthy habits and positive health decisions that will come easy to you;"
+- list:
+  - listitem:
+    - strong: Start exercising TODAY, right at home
+    - text: . Your body needs to be active, and when your body is healthy and active, your
+    - strong: immune system is almost unstoppable!
+    - text: Even if you’ve never worked out a day in your life, Zonia can take you through an amazing path to allow you to
+    - strong: discover some of the most beneficial workouts
+    - text: ", from Yoga to Pilates, strength training and HIIT, dance and other energy boosting workouts!"
+- iframe
+- list:
+  - listitem:
+    - text: Learn essential
+    - strong: disease prevention and longevity techniques
+    - text: that our doctors exclusively shared for Zonia to help you protect your immune system and long-term health;
+- list:
+  - listitem:
+    - strong: Protect your immune system from stress by learning crucial stress
+    - text: management techniques like meditation, mindfulness, breathing exercises and positive affirmations developed by our coaches
+- paragraph:
+  - strong: And more!
+- paragraph:
+  - strong: You can do all of these things
+  - text: and change yourself for the better. It doesn’t matter where you are right now, how well you’re eating, how much you’re exercising…
+- paragraph:
+  - strong: By saying ‘yes’, you’ve won half the battle towards boosting your immune system!
+- heading "Your Long-Term Health and Happiness Is Achievable, and You’re Seconds Away From it!" [level=4]
+- img "recipes"
+- paragraph:
+  - text: Our extensive video library contains
+  - strong: over 500 episodes on healthy living and improving your habits
+  - text: and, with the help of our original shows presented by top world health experts and doctors, you can completely change your health.
+- paragraph:
+  - text: Plus, you will also get access to an
+  - strong: ebook library with countless manuals on healthy living
+  - text: you can download and read anytime you want.
+- paragraph:
+  - text: Your long-term health is 100% linked to the strength of your immune system, and if you know your lifestyle hasn’t been too kind to it,
+  - strong: it’s time to act now.
+- paragraph:
+  - text: A
+  - strong: stronger immune system is the secret weapon to achieve superior health
+  - text: nobody talks about.
+- paragraph:
+  - strong: "Yoll'be:"
+- list:
+  - listitem:
+    - strong: Healthier
+    - text: because your immune system will finally have all the tools it needs to protect you
+  - listitem:
+    - strong: Happier
+    - text: because you’ll learn all the techniques to cure your mind of bad thoughts
+  - listitem:
+    - strong: Calmer
+    - text: ", and less affected by the mundane stresses of the modern life, thanks to exclusive stress management libraries"
+  - listitem:
+    - text: And even
+    - strong: SAFER
+    - text: in the face of diseases, viruses, and more!
+- heading "Join Zonia's community now!" [level=2]
+- button "START MY 7-DAY FREE MEMBERSHIP"
+- heading "After 7 days - as low as $10 a month. Cancel Anytime Online with 1 click." [level=5]
+- heading "WELCOME TO ZONIA" [level=4]
+- heading "where people come to transform their lives and thrive every day" [level=3]
+- paragraph: Zonia is a video streaming platform that provides engaging, educational and action-based content, which helps people build new healthy habits.
+- heading "Whether you want to..." [level=2]
+- list:
+  - listitem: Relieve stress or anxiety
+  - listitem: Finally start exercising
+  - listitem: Lose weight permanently
+  - listitem: Becoming more focused and productive
+- list:
+  - listitem: Use natural medicine to heal your body
+  - listitem: Learn how to cook healthy
+  - listitem: Increase your happiness and success
+- paragraph: By watching Zonia's shows or creating your personalized program, you will get inspiration and education, while consuming content that is both easy to follow and entertaining.
+- heading "How Zonia works" [level=4]
+- heading "Knowledge without a clear plan of action never goes anywhere" [level=2]
+- paragraph: Think of Zonia as your Netflix, plus your personal coach... dedicated to your health and wellbeing.
+- paragraph:
+  - text: First, you have access to over
+  - strong: 25+ original shows, 500+ episodes and 75+ health reports (eBooks)
+  - text: about functional medicine, nutrition, cooking, Yoga, Pilates, healthy aging, weight loss, anxiety, sleep and more.
+- paragraph: Second, you can generate your own personalized program to build new habits, easily.
+- heading "Step 1" [level=2]
+- heading "Answer a few questions about your biggest health goal and your greatest challenge to get there." [level=5]
+- heading "Step 2" [level=2]
+- heading "We generate your 8-week personalized video program with a daily action." [level=5]
+- heading "Step 3" [level=2]
+- heading "You watch and perform your daily action to reach your health goal and build new healthy habits while getting EDUCATED, INSPIRED and ENTERTAINED by our videos." [level=5]
+- heading "What to Expect" [level=3]
+- link "heal yourself naturally":
+  - /url: ""
+- link "move your body":
+  - /url: ""
+- link "Reduce Stress & Sleep Well":
+  - /url: ""
+- link "lose weight permanently":
+  - /url: ""
+- link "slow down aging":
+  - /url: ""
+- link "stay motivated":
+  - /url: ""
+- link "boost your energy":
+  - /url: ""
+- link "raise HEALTHY and happy children":
+  - /url: ""
+- heading "Check Out Below Zonia Members' Success Stories" [level=1]
+- iframe
+- img
+- text: Click for sound
+- heading "Choose a plan that's right for you." [level=1]
+- heading "Downgrade or upgrade at any time" [level=4]
+- text: "As an annual member you will also unlock the following specials:"
+- img "book collection"
+- text: Bonus eBook Library Value $997 - Yours FREE
+- paragraph: "Access a premium library of science-backed reports that you can download and read offline such as: '10 Superfoods You have Never Heard of','8 Dangers of Untested Supplements','How to fast On and Off to Burn Fat and Combat Obesity' and 70+ more free reports."
+- table:
+  - rowgroup:
+    - row "Monthly Quarterly Annual Most Popular":
+      - columnheader "Monthly":
+        - button "Monthly"
+      - columnheader "Quarterly":
+        - button "Quarterly"
+      - columnheader "Annual Most Popular":
+        - button "Annual Most Popular"
+  - rowgroup:
+    - row "Price after 7-day free membership ends on 9/6/2026":
+      - cell "Price after 7-day free membership ends on 9/6/2026"
+    - row "$ 20 (billed monthly) $ 45 ($15/monthly billed quarterly) $ 120 ($10/monthly billed annually)":
+      - cell "$ 20 (billed monthly)":
+        - paragraph: $ 20
+        - paragraph: (billed monthly)
+      - cell "$ 45 ($15/monthly billed quarterly)":
+        - paragraph: $ 45
+        - paragraph
+        - paragraph: ($15/monthly
+        - paragraph: billed quarterly)
+      - cell "$ 120 ($10/monthly billed annually)":
+        - paragraph: $ 120
+        - paragraph: ($10/monthly
+        - paragraph: billed annually)
+    - row "Bonus eBook Library":
+      - cell "Bonus eBook Library"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "HD Available":
+      - cell "HD Available"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "Access to our Private Facebook Community Group":
+      - cell "Access to our Private Facebook Community Group"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "Watch on your laptop, TV, phone and tablet":
+      - cell "Watch on your laptop, TV, phone and tablet"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "Unlimited shows":
+      - cell "Unlimited shows"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "Cancel Anytime Online with 1 Click":
+      - cell "Cancel Anytime Online with 1 Click"
+    - row:
+      - cell
+      - cell
+      - cell
+    - row "FREE for first 7 days":
+      - cell "FREE for first 7 days"
+    - row:
+      - cell
+      - cell
+      - cell
+- paragraph: HD availability subject to your Internet service and device capabilities.
+- 'heading "Total billed after 7 days: $120 USD" [level=5]'
+- paragraph:
+  - text: By clicking the "Activate My Membership" button below, after your free 7-day free membership,
+  - strong: a recurring annual charge of $120 USD will automatically apply and start on 9/6/2026.
+  - text: You may cancel at any time. To cancel, go online to your Account and click on "Cancel Membership." If you cancel within the first 7 days you may request a full refund by emailing support@zonia.com. By proceeding, you agree to the
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- button "activate my membership"
+- button "I just want my package, I'm not interested in trying Zonia for free."
+- heading "watch anywhere." [level=5]
+- heading "on any device. anytime!" [level=5]
+- img "laptop"
+- img "trim and slim abs and tights"
+- button "7 day free membership"
+- img "smart tv"
+- text: smart tv
+- img "desktop"
+- text: desktop
+- img "laptop"
+- text: laptop
+- img "mobile"
+- text: mobile
+- heading "No Commitment!" [level=2]
+- heading "You can cancel anytime online!" [level=3]
+- img "devices"
+- heading "If you decided that Zonia is not for you - no problem. No Commitment. Cancel online anytime with one click." [level=5]
+- heading "Access to Our Manuals" [level=2]
+- heading "- Zonia eBooks" [level=3]
+- img "teas and tonics"
+- heading "Premium library of science-backed reports and ‘go healthy’ manuals that you can download and read offline." [level=5]
+- heading "what our members are saying" [level=3]
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- img "testimonial"
+- heading "WE BELIEVE THAT" [level=4]
+- paragraph: we can empower 100 million people by 2020 to improve their health (body and mind).
+- paragraph: if you can get beyond the challenge of leaving your comfort zone and get a taste of what transformation looks like…your life will change forever.
+- paragraph: the obesity epidemic is reversible, and we see evidence of this around the world as people become more educated and informed about the food choices they make each day.
+- paragraph: the Food and Drug industries are not 100% truthful, and not out for your best and highest good and we believe that the sooner we all speak this truth, the better our future becomes.
+- paragraph: mutual encouragement and team motivation within a positive community greatly surpasses the results of trying to do it alone.
+- button "Show More"
+- heading "We Believe in You!" [level=2]
+- heading "Take ZONIA with You" [level=4]
+- paragraph: Wherever you are, enjoy a few minutes of wisdom, inspiration or simply entertainment with ZONIA on mobile
+- button "START MY 7-DAY FREE MEMBERSHIP then, as low as $10 a month"
+- img "phones"
+- heading "Who is Behind Zonia?" [level=4]
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content. He is also the director and producer of the Academy Awards qualifying short film "Life in Four Seasons."
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime. Through Zonia, he wants to inspire more people to change their life, and help them reach their highest potential, both physically and mentally.
+- heading "FREQUENTLY ASKED QUESTION" [level=4]
+- tablist:
+  - tab "Who is Zonia dedicated to?":
+    - heading "Who is Zonia dedicated to?" [level=4]:
+      - button "Who is Zonia dedicated to?" [expanded]
+  - tabpanel "Who is Zonia dedicated to?":
+    - paragraph: Zonia is dedicated to anyone who wants to live a healthier lifestyle, get rid of bad habits, and learn new, better ones. Our content aims to inspire and educate those who feel that they want to work on building the habits that will help them achieve their true potential for happiness, health, and productivity.
+    - paragraph: "Zonia is dedicated for people who want to:"
+    - list:
+      - listitem: Exercise from the comfort of their own home
+      - listitem: Learn how to manage pain with functional medicine
+      - listitem: Discover how to heal their body with natural treatments
+      - listitem: Learn how to cope with stress or anxiety
+      - listitem: Stay motivated and productive
+      - listitem: Lose weight and keeping it off
+      - listitem: Discard bad habits
+      - listitem: Form new healthy habits
+    - paragraph: And more.
+  - tab "What kind of topics does Zonia cover?":
+    - heading "What kind of topics does Zonia cover?" [level=4]:
+      - button "What kind of topics does Zonia cover?" [expanded]
+  - tab "How can I learn new habits just from videos?":
+    - heading "How can I learn new habits just from videos?" [level=4]:
+      - button "How can I learn new habits just from videos?" [expanded]
+  - tab "What other resources do you offer?":
+    - heading "What other resources do you offer?" [level=4]:
+      - button "What other resources do you offer?" [expanded]
+  - tab "What devices can I use for Zonia?":
+    - heading "What devices can I use for Zonia?" [level=4]:
+      - button "What devices can I use for Zonia?" [expanded]
+  - tab "Can I cancel my membership anytime on my own?":
+    - heading "Can I cancel my membership anytime on my own?" [level=4]:
+      - button "Can I cancel my membership anytime on my own?" [expanded]
+  - tab "I don't always have a lot of time on my hands. do you have any short video to watch?":
+    - heading "I don't always have a lot of time on my hands. do you have any short video to watch?" [level=4]:
+      - button "I don't always have a lot of time on my hands. do you have any short video to watch?" [expanded]
+  - tab "Do you provide any support for members?":
+    - heading "Do you provide any support for members?" [level=4]:
+      - button "Do you provide any support for members?" [expanded]
+  - tab "How can I find relevant content on Zonia for my personal health or lifestyle struggles?":
+    - heading "How can I find relevant content on Zonia for my personal health or lifestyle struggles?" [level=4]:
+      - button "How can I find relevant content on Zonia for my personal health or lifestyle struggles?" [expanded]
+  - tab "Can people under 18 years old use Zonia?":
+    - heading "Can people under 18 years old use Zonia?" [level=4]:
+      - button "Can people under 18 years old use Zonia?" [expanded]
+  - tab "Can you access Zonia outside the US?":
+    - heading "Can you access Zonia outside the US?" [level=4]:
+      - button "Can you access Zonia outside the US?" [expanded]
+  - tab "How can I make sure Zonia is for me?":
+    - heading "How can I make sure Zonia is for me?" [level=4]:
+      - button "How can I make sure Zonia is for me?" [expanded]
+- button "START MY 7-DAY FREE MEMBERSHIP"
+- heading "After 7 days - as low as $10 a month. Cancel Anytime Online with 1 click." [level=5]
+- heading "info" [level=2]
+- link "About Us":
+  - /url: /about-us
+- link "Our Team":
+  - /url: /our-team
+- link "Our Experts":
+  - /url: /experts/
+- link "Editorial Process":
+  - /url: /our-editorial-process
+- link "Contact us":
+  - /url: /help
+- link "FAQ":
+  - /url: /faq
+- link "Do not sell or share my personal information":
+  - /url: /opt-out
+- heading "account" [level=2]
+- link "Log in":
+  - /url: /login
+- link "Sign up":
+  - /url: /plans
+- heading "follow" [level=2]
+- link "Facebook":
+  - /url: https://www.facebook.com/zoniahealth
+- link "Instagram":
+  - /url: https://www.instagram.com/zoniahealth
+- link " TikTok":
+  - /url: https://www.tiktok.com/@zoniahealth
+- link " Threads":
+  - /url: "https://www.threads.net/@zoniahealth "
+- link "Youtube":
+  - /url: https://www.youtube.com/@zoniahealth
+- paragraph: © 2026 ZONIA
+- link "Terms of use":
+  - /url: /terms_use
+- link "| Privacy Policy":
+  - /url: /privacy_cookie
+- link "| Disclaimer":
+  - /url: /disclaimer
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> URL successfully changed to "https://zonia-stg.com/welcome?mode=standard"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+===> Second try was successful
+Completed step: user makes following decision in 7 day free membership

@@ -1,0 +1,17 @@
+Executing step: user register in "is_ev" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://zonia-stg.com/mb/immune-for-life
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/mb/is-join-zonia"
+===> URL successfully changed to "https://zonia-stg.com/mb/is-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "is_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://zonia-stg.com/mb/is-signup"
+===> URL successfully changed to "https://zonia-stg.com/mb/is-signup"
+Failed step: user join Zonia
+Test failed on page: 'https://zonia-stg.com/mb/is-signup'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_--_@1.9__20260910-233004.png

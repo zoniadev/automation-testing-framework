@@ -1,0 +1,9 @@
+Executing step: user register in "cr_1ep_toxins" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/crmb1e/cr-toxins
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "cr_1ep_toxins" Opt In page
+Test failed on page: 'https://zonia-stg.com/crmb1e/cr-toxins'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.3__20260915-201904.png

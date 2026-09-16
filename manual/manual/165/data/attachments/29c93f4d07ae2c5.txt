@@ -1,0 +1,9 @@
+Executing step: Verify banners redirects in "health" and "'Organs & Systems'"
+===> Navigated to https://zonia-stg.com/blog
+🔍 Clicking banner: RG-3-425x425px
+🔍 Clicking banner: Blog Banner-RD-4-425x300px
+🔍 Clicking banner: CR-Dr. Mark Hyman-Obesity, Diabetes and cancer-1-425x700px
+Failed step: Verify banners redirects in "health" and "'Organs & Systems'"
+Test failed on page: 'https://zonia-stg.com/blog/health/organs-systems'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Verify_banners_redirects_--_@1.1__20260826-073904.png
