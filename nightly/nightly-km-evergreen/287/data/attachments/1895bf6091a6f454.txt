@@ -1,0 +1,784 @@
+Executing step: user register in "km_ev" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://zonia-stg.com/kmmb5e/young-and-thriving
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "https://zonia-stg.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://zonia-stg.com/kmmb5e/km-signup"
+===> URL successfully changed to "https://zonia-stg.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Romero-1789691858@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/km-booster-packages-quarterly"
+===> URL successfully changed to "https://zonia-stg.com/km-booster-packages-quarterly"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "silver" for booster package...
+===> Waiting for URL starting with "https://zonia-stg.com/km-mini-masterclass-series-silver-package"
+===> URL successfully changed to "https://zonia-stg.com/km-mini-masterclass-series-silver-package"
+>>> Successfully selected "silver" for booster package
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/km-restore-sleep-special-resilience-code"
+===> URL successfully changed to "https://zonia-stg.com/km-restore-sleep-special-resilience-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "3" bottles and "most_popular" in upsell/downsell for Restore Sleep...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/km-rs-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-3-1']", page was not changed to km-rs-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/km\\-rs\\-6\\-more\\-bottles.*')'
+Actual value: https://zonia-stg.com/km-restore-sleep-special-resilience-code 
+Call log:
+  - Expect "to_have_url" with timeout 15000ms
+    30 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/km-restore-sleep-special-resilience-code"
+
+Aria snapshot:
+- text: Processing... Please wait while we process your order... Please don't close the page or hit 'back' to avoid being double billed by mistake
+- heading "Improve Deep Sleep, Induce Relaxation Response and Go from Stress to Rest in Just 2 Seconds Every Day" [level=2]
+- iframe
+- img
+- text: Click for sound
+- img "A white bowl filled with coarse white bath salts sits on a light wooden surface, with scattered salts and blurred white leaves in the background."
+- heading "The Ultimate Magnesium Complex with the 7 Most Potent forms of Chelated Magnesium...." [level=2]
+- heading "... promoting Relaxation and Deep Restorative Sleep" [level=2]
+- img "Two horizontal, dark gray-purple bars, rounded on the left. Each bar contains three circular sections with faint, light-colored text. The bottom bar clearly shows 'ACT NOW FREE,' 'SUBSCRIBE HERE,' and 'LEARN MORE.' The text in the top bar is largely unreadable due to blur."
+- 'img "Text reads: MANUFACTURED IN A FDA REGISTERED FACILITY, with the letters \"FDA\" displayed prominently in the center."'
+- img "A circular green and white logo for GMP (Good Manufacturing Practice) certification. The outer ring reads 'GOOD MANUFACTURING PRACTICE', and the inner green circle features 'GMP' in large white letters above 'CERTIFIED'."
+- text: Regular $79 Today $59 per bottle 1-month SUPPLY
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $59 for 1 bottle"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Best Value! Regular $79 Today $33 per bottle 6-month SUPPLY
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $198 for 6 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Regular $79 Today $39 per bottle 3-month SUPPLY
+- img "Three amber Zonia Restore Sleep dietary supplement bottles with dark blue labels. The front bottle prominently displays \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules\"."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $117 for 3 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping No thanks. I understand this is the only time I'm seeing this offer and I'm okay with missing out on the discounts. I don't really want to optimize my magnesium levels for achieving deep sleep. I agree to purchase Restore Sleep at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I'll pass on this chance forever.
+- img "A minimalist pixelated clock face showing 9:15."
+- heading "If you hate the sound of your alarm clock, your body is trying to tell you something..." [level=2]
+- paragraph: Do you dread the alarm going off in the morning, wishing for just a little more sleep?
+- paragraph: And when the weekend comes, do you still try to catch up on sleep but you still feel grog, dizzy, and easily irritated?
+- paragraph: You see, the way you feel isn't determined only by the amount of sleep you get, but also by its quality...
+- paragraph: This might sound odd, considering that everyone focuses on the 'sweet spot' of 8 hours per night...
+- paragraph: I came to this realization after having sleep issues myself and experiencing how quickly my mood and energy changed.
+- paragraph: For years, I thought that awful mornings combined with brain fog are just a part of adulthood...
+- img "A woman with short brown hair, looking stressed or in pain, rubs her temples while holding a pink mug."
+- heading "Lack of sleep was slowly turning the people around me into zombies" [level=2]
+- text: And nobody even noticed!
+- paragraph: "No matter who I talked to in the morning, I always noticed two things:"
+- list:
+  - listitem: They had no idea why they woke up several times a night and struggled to fall back asleep, only to feel low on mood and unmotivated in the morning
+  - listitem: They became dependent on at least two coffees before noon to wake up, and their tolerance would only grow
+- paragraph: I did the same, but it was only a temporary fix to a persistent problem...
+- paragraph: I could never understand how everybody considered it “normal.”
+- paragraph: But I didn't know any better back then.
+- img "Pixel art outline of an elderly couple walking away, holding hands."
+- heading "Sleeping pills and medications followed by coffee seemed like the only solution..." [level=2]
+- paragraph:
+  - text: My name is
+  - strong: Stefan Apostolov.
+- paragraph: I am the founder of Zonia, a health and wellness platform that helps tens of thousands of families find science-backed, natural ways to support their health, sleep better, and build their mental health resilience.
+- paragraph: But many people also know me as the director and producer of the Oscar contender, “Life in Four Seasons” short film.
+- paragraph: I was born in Bulgaria...
+- paragraph: Ever since I can remember, my parents had various sleep issues, and they'd both rely on pharmaceuticals just to get a few hours of rest every night.
+- paragraph: My mother kept on taking sleeping pills, but they aren't meant for regular use...
+- paragraph: She just couldn't accept the fact that these pills were getting her into a vicious addiction cycle that was difficult to get out of...
+- paragraph: My dad was also on medications, and they worked almost too well, but there was one problem...
+- paragraph: The potential side effects were almost endless, and these drugs would backfire during the day...
+- img "A colorful assortment of medical pills, capsules, and tablets scattered on a white background."
+- img "A woman in a blue polka-dot shirt, seen in profile, looks stressed with her hand on her forehead."
+- heading "It was either deal with the side effects of the pills, or not get any sleep at all" [level=2]
+- paragraph: “Trouble with falling asleep happens more and more often in today’s stress-induced modern world regardless of age. e.”
+- paragraph: I'd hear that a lot from my friends, whose parents were in a similar situation.
+- paragraph: But even my sister kept saying how sleep problems wouldn't allow her to be fully present for her family and children.
+- paragraph: There's nothing worse than going through your day feeling anxious and exhausted, and by the time you're finally awake, it's almost evening again...
+- paragraph: Thousands of people are stuck in this vicious cycle, and their jobs and family responsibilities don’t allow them to take a day off…
+- paragraph: Seeing all my close ones struggle made me realize one thing...
+- paragraph: Sleep issues are not inevitable in our modern world... But brain health decline is inevitable when you have sleep issues.
+- heading "But aging is inevitable when you have sleep issues." [level=2]
+- list:
+  - listitem: ...bags under the eyes
+  - listitem: ...anxiety ramping up
+  - listitem: ...no drive and motivation
+  - listitem: ...constant brain fog & fatigue
+  - listitem: ...mood swings & deteriorated attention and focus
+- paragraph: All these things add up, and lead to even bigger problems.
+- paragraph: Lack of adequate sleep affects not only our physical body, but the mind as well.
+- img "A woman in a brightly lit room lies in bed, reaching to turn off a black alarm clock showing 7:00 AM."
+- heading "Years of sleep deprivation result in brain damage, because our organs don't have enough time to regenerate." [level=2]
+- paragraph: All the vital rejuvenation happens during deep sleep, which repairs muscles, strengthens the immune system, and leaves us refreshed in the morning.
+- paragraph: If you feel stressed out, angry, or robbed of your energy even in the early morning, this means one thing — your organs are trying to send you a big wake-up call.
+- paragraph: Ignoring and suppressing these signs with drugs and coffee can only work for so long, until you notice the first signs of mental health decline…
+- paragraph: PLUS, everybody considers them ‘normal’...
+- paragraph: Mood issues, hyper sensitivity, depression and lack of willpower are just the beginning of brain health problems .
+- paragraph: Ignoring it and suppressing the symptoms with drugs and coffee can only work for so long, until you notice the first signs of cognitive decline...
+- paragraph: PLUS, everybody considers them 'normal'...
+- img "A senior man with gray hair and a beard sits, eyes squeezed shut, pressing his hand to his temple in pain from a headache."
+- heading "Memory issues, hyper sensitivity, depression and lack of willpower are just the beginning of neurodegeneration." [level=2]
+- paragraph: I started digging deeper into the possible causes of sleep deprivation, which led me to a profound discovery...
+- paragraph: We were all deficient in one vital mineral, which we never thought could be problematic...
+- paragraph: Even more surprising is the fact that the majority of the population may have the same issue...
+- heading "According to a recent study published by the The Journal of the American Osteopathic Association, 1 in 2 Americans are deficient in this crucial mineral, which is robbing them of their sleep, mood and energy1." [level=2]:
+  - text: According to a recent study published by the The Journal of the American Osteopathic Association, 1 in 2 Americans are deficient in this crucial mineral, which is robbing them of their sleep, mood and energy
+  - superscript: "1"
+  - text: .
+- heading "Magnesium deficiency is a world-wide problem!" [level=2]
+- paragraph:
+  - text: Until then, I didn't know that magnesium is a cofactor in more than 300 enzyme systems that regulate diverse reactions in the body, including protein synthesis, muscle and nerve function, blood glucose control, and blood pressure regulation
+  - superscript: "2"
+  - text: .
+- paragraph:
+  - text: Optimal magnesium levels are essential for improving sleep efficiency and duration, while helping encourage better sleep patterns
+  - superscript: "3"
+  - text: . It's essential for our brain to regulate sleep cycles.
+- paragraph:
+  - text: It's also necessary for the production of energy, plays a role in calcium transportation for building healthy bones, and is critical for the production of the antioxidant glutathione
+  - superscript: 4,5,6
+  - text: .
+- heading "Basically, without magnesium, your body is unable to regenerate at night and create optimal sleep cycles." [level=2]
+- heading "But magnesium-rich foods aren't enough anymore..." [level=2]
+- paragraph:
+  - text: How is it possible that nearly 2 billion people world-wide are suffering from this deficiency?
+  - superscript: "7"
+- paragraph: The answer is simple, but truly disturbing.
+- paragraph: Due to mass production and the commercial scale of the food industry, our soils are getting stripped of essential nutrients...
+- img "A top-down view of various foods on a round wooden board, including two ripe bananas, dark chocolate chunks, almonds, walnuts, chickpeas, cocoa beans, a bunch of fresh parsley, a halved avocado, and a cut green cabbage."
+- img "A pair of hands holds a handful of brown soil containing a small green sprout, with some soil falling."
+- paragraph:
+  - text: The food we eat these days grows on depleted soils that contain 50-80% less nutrients than just a hundred years ago
+  - superscript: "8"
+  - text: ...
+- paragraph: Meaning that even the best dietary choices aren't enough to achieve optimal levels of magnesium required for improved sleep quality and rejuvenation...
+- paragraph: People have to supplement this mineral, but it's not as simple as the commercials make it look like.
+- paragraph: Even if you go for a widely advertised supplement, you may still be at risk of staying deficient...
+- heading "Which magnesium you choose matters:" [level=2]
+- paragraph: During various medical conferences, I had the pleasure of interviewing some exceptional doctors...
+- paragraph: Their advice was a game-changer in helping my family deal with mood and anxiety problems, sleep recovery and mineral deficiency. But it was just the beginning…
+- paragraph: They helped me understand what makes a magnesium supplement truly worth it.
+- img "A person with light hair sleeps on their side in a dark bed, covered by white bedding."
+- img "A pale orange full moon shines through dark, wispy clouds in a deep indigo night sky."
+- heading "These highly accomplished doctors educated me on the 3 key factors to look for when picking a magnesium supplement" [level=2]
+- text: "1"
+- heading "Not all magnesium is equal" [level=2]
+- img "An empty, balanced brass-colored balance scale on a white background."
+- paragraph:
+  - text: Certain forms of magnesium, such as Magnesium Oxide, are less effective in dealing with deficiencies
+  - superscript: "9"
+  - text: ... almost to the point of being useless.
+- paragraph: If your magnesium supplement cannot cross the blood-brain barrier, it won't be absorbed effectively.
+- paragraph: This is why millions of Americans take magnesium but show no improvement in their blood tests....
+- paragraph: On top of that, most magnesium supplements are synthetic, making them harder for the body to recognize...
+- paragraph: "That's why you need to understand what benefits each ingredient in your formula offers:"
+- paragraph: From stress reduction and induced relaxation response to supporting healthy deep sleep cycles.
+- text: "2"
+- heading "Chelated form for better absorption" [level=2]
+- paragraph: This criterion is essential for the supplement to work as intended.
+- paragraph:
+  - text: Chelated magnesium is more stable and bioavailable than other forms of magnesium
+  - superscript: "10"
+  - text: . It is more easily digested, and the body can use it more efficiently
+  - superscript: "11"
+  - text: .
+- paragraph:
+  - text: It's also properly transported across intestinal walls, without causing a reaction, and dispersed via the bloodstream
+  - superscript: "12"
+  - text: .
+- paragraph: However, it's extremely rare to come across a chelated magnesium supplement that's also affordable and rich in the right forms of the mineral...
+- paragraph: That was my biggest struggle after already knowing these key factors...
+- img "A glowing blue holographic human digestive system, including the stomach and intestines, with a hand touching a highlighted point."
+- text: "3"
+- heading "Full-spectrum magnesium" [level=2]
+- img "A close-up view of pencils laid diagonally, showing a smooth color gradient from blue and green to yellow and orange."
+- paragraph: Did you know that there are multiple forms of magnesium with their own unique properties?
+- paragraph: Most products contain only one or two forms of magnesium, making them incomplete...
+- paragraph: Some forms are absorbed more efficiently and are harder to come across than others.
+- paragraph: This is why millions of people are supplementing magnesium daily, but are still deficient in it and do not feel any change from the supplement...
+- paragraph: All because their solution addressed only one type of deficiency...
+- paragraph: Despite their best efforts, the product they're taking may not work at all in many cases...
+- paragraph: ...Because only a complete magnesium complex that includes the right diverse forms of this mineral is able to tackle multiple magnesium deficiencies at the root.
+- img "An overexposed image showing a modern laboratory with various scientific equipment on workbenches."
+- img "A blurred image of a store aisle with multiple shelves packed with bottles of various sizes, likely containing vitamins or supplements."
+- heading "I couldn't find the right supplement meeting these 3 criteria" [level=2]
+- paragraph: Most supplements either didn't contain the right form of magnesium, or their formula does not contain full spectrum magnesium....
+- paragraph: Or the minerals didn't come in chelated form, meaning they would be absorbed poorly.
+- paragraph: And whenever I'd come across a product that looked pretty reliable?
+- paragraph: It was way too expensive to buy for the whole family.
+- paragraph: It took me years to try out all the different forms of magnesium, and I tested virtually every product on the market...
+- paragraph: But my search for the perfect blend continued...
+- heading "That's why I consulted the best FDA-registered laboratory in the USA..." [level=2]
+- text: "To create the ultimate magnesium supplement to help promote healthy sleep patterns, lower feelings of stress and reduce everyday fatigue:"
+- img "A white bowl filled with coarse white bath salts sits on a light wooden surface, with scattered salts and blurred white leaves in the background."
+- heading "With the 7 Most Potent Forms of Magnesium for Deep Restorative Sleep All-in-One Formula:" [level=2]
+- img "Two horizontal, dark gray-purple bars, rounded on the left. Each bar contains three circular sections with faint, light-colored text. The bottom bar clearly shows 'ACT NOW FREE,' 'SUBSCRIBE HERE,' and 'LEARN MORE.' The text in the top bar is largely unreadable due to blur."
+- 'img "Text reads: MANUFACTURED IN A FDA REGISTERED FACILITY, with the letters \"FDA\" displayed prominently in the center."'
+- img "A circular green and white logo for GMP (Good Manufacturing Practice) certification. The outer ring reads 'GOOD MANUFACTURING PRACTICE', and the inner green circle features 'GMP' in large white letters above 'CERTIFIED'."
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- paragraph: We've created a unique blend, containing carefully selected forms of chelated magnesium to harvest their special properties all at once.
+- paragraph: This formula contains the most potent versions of magnesium in optimal ratios, so that you can finally overcome your deficiency and improve your sleep quality to feel optimistic everyday.
+- paragraph: Their high bioavailability and chelated form ensure that the magnesium gets properly distributed to where you need it the most.
+- paragraph: Going one step further, we combined these optimal forms of magnesium with two crucial nutrients to make this blend a truly unique solution for achieving deep sleep.
+- img "A Zonia Restore Sleep dietary supplement label featuring \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules,\" with supplement facts showing 500mg elemental magnesium and 50mg L-Theanine per serving."
+- img "A simple line drawing of a microscope."
+- img "A line drawing of a person seated cross-legged in a meditation or yoga pose, with arms raised and hands pressed together above their head."
+- img "A stylized brain outline formed by a single continuous gray line with internal loops."
+- img "An open capsule pouring out numerous small circular particles, many of which are labeled with letters like A, B, C, D, E, and K."
+- img "An outline drawing of a person drinking from a bottle, shown in profile."
+- heading "The Ultimate Magnesium Complex with L-Theanine and Vitamin B6 for Improved Results" [level=2]
+- paragraph: Restore Sleep contains a carefully curated selection of the most important types of magnesium which come in chelated form for optimal absorption and effect.
+- paragraph: It is a powerful supplement designed to promote the body’s normal and healthy sleep cycles, minimizing the feeling of tiredness and depression.
+- paragraph: Each ingredient of Restore Sleep has been researched in numerous clinical studies, and has been found to promote healthier sleep patterns.
+- paragraph: Our formula has gone through intensive testing and has passed strict manufacturing guidelines, ensuring that each mineral comes in the right dosage from a safe source.
+- text: "1"
+- heading "Magnesium glycinate" [level=2]
+- img "Black and white photo of someone sleeping peacefully on their side under white covers, with long hair visible."
+- paragraph:
+  - text: Magnesium glycinate is a form of magnesium bound to an amino acid called glycine. It's recognized for its high absorbability and calming properties, which may promote relaxation and healthy sleep
+  - superscript: "13"
+  - text: . This ingredient may also help calm your racing thoughts, which often interfere with deep and sufficient sleep
+  - superscript: "14"
+  - text: .
+- text: "2"
+- heading "Magnesium L-threonate" [level=2]
+- img "A smiling senior man with a white beard and glasses plays chess outdoors, moving a white pawn."
+- paragraph:
+  - text: Magnesium L-threonate is a form of magnesium patented by MEGTEIN, making it a rare find in most supplements. It's easily absorbed into the brain and can help to concentrate the amounts of magnesium in brain cells, making it potent for fighting age-related cognitive deficits
+  - superscript: "15"
+  - text: . Designed by MIT scientists, this form may improve cognitive function and contribute to a calmer sleep
+  - superscript: "16"
+  - text: .
+- text: "3"
+- heading "Magnesium taurate" [level=2]
+- img "Two cupped hands holding a shiny red heart with a white electrocardiogram (ECG) line."
+- paragraph:
+  - text: Magnesium taurate is said to help maintain healthy blood pressure levels
+  - superscript: "17"
+  - text: . Taurine is naturally used for magnesium ion transportation to cells, making this form highly absorbable. It's also considered to be easy on the digestive system, not to mention its potential heart health benefits
+  - superscript: "18"
+  - text: .
+- text: "4"
+- heading "Magnesium orotate" [level=2]
+- img "Close-up of a person's midsection, with hands forming a heart shape over their navel. They wear a black sports top and grey bottoms, with bracelets on their wrists."
+- paragraph:
+  - text: Magnesium orotate comes from orotic acid, which is a natural building block of human DNA. Recent studies have shown that it’s an important nutrient in the modulation of the microbiome-gut-brain axis
+  - superscript: "19"
+  - text: ", meaning that this form of magnesium is beneficial for digestive and mood problems"
+  - superscript: "20"
+  - text: .
+- text: "5"
+- heading "Magnesium malate" [level=2]
+- img "A woman with curly hair and a lab coat looks stressed, holding her hand to her temple."
+- paragraph:
+  - text: Magnesium malate has mood-relaxing properties. Its long-lasting effects make it an effective supplement for boosting physiological functions and supporting the nervous system
+  - superscript: "21"
+  - text: . This form is considered to be the most effective for alleviating occasional head discomfort and minimizing the feeling of tiredness, low mood and feeling down
+  - superscript: "22"
+  - text: .
+- text: "6"
+- heading "Magnesium citrate" [level=2]
+- img "A person's hands rest on their abdomen, which is overlaid with a glowing illustration of the intestines, featuring blue highlights."
+- paragraph:
+  - text: Magnesium citrate is one of the most popular forms of magnesium, and it's combined with citric acid. This form may increase water in the colon
+  - superscript: "23"
+  - text: ", making it a potent digestive aid. It's also one of the most highly absorbable forms of magnesium by the body"
+  - superscript: "24"
+  - text: .
+- text: "7"
+- heading "Magnesium Aspartate" [level=2]
+- img "A shirtless man holds his upper arm, which is depicted with transparent skin revealing the red muscular anatomy, suggesting muscle pain or injury."
+- paragraph:
+  - text: Magnesium Aspartate is bonded to aspartic acid, and has been proven to be more bioavailable than many other magnesium forms
+  - superscript: "25"
+  - text: (nearly as bioavailable as the magnesium found naturally in food.) Bodybuilders frequently utilize aspartic acid to speed up recovery and enhance muscle strength
+  - superscript: "26"
+  - text: . It's also commonly used to deal with muscle cramps and boost athletic performance
+  - superscript: "27"
+  - text: .
+- paragraph: Supplementing all of these unique magnesium forms in the right dose will do wonders for your sleep quality and many other vital bodily processes.
+- paragraph: Each package of Restore Sleep contains the perfect blend of highly absorbable magnesium, so you never have to worry about being deficient, experiencing mood problems or feeling sleep deprived ever again.
+- heading "But That's Not All..." [level=2]
+- img "A minimalist line art drawing of a person sleeping, curled up on their side with their head on a pillow."
+- heading "There are two additional nutrients elevating the magic of magnesium" [level=2]
+- paragraph: We wanted to set a new standard in magnesium supplementation.
+- paragraph: The 2 key nutrients added to Restore Sleep are the secret key for maximum mineral absorption and an additional relaxing effect.
+- paragraph: They may help absorb magnesium more efficiently, while helping you relax at night for improved regeneration.
+- text: 1 nutrient
+- img "A bowl of bright green matcha powder, with some scattered on a wooden surface next to two fresh green leaves."
+- heading "L-Theanine" [level=2]
+- paragraph:
+  - text: L-Theanine is a potent remedy to reduce stress and improve sleep. This amino acid is responsible for the production of GABA
+  - superscript: "28"
+  - text: ", a neurotransmitter and chemical messenger that plays a significant role in sleep"
+  - superscript: "29"
+  - text: . An increase in GABA caused by L-theanine can not only make it easier to fall asleep, but also increase sleep duration and mental clarity during the day
+  - superscript: "30"
+  - text: .
+- text: 2 nutrient
+- img "A wooden bowl filled with bright yellow nutritional yeast flakes, sitting on a rustic wooden surface with some flakes scattered around."
+- heading "Active (Methylated) Vitamin B6" [level=2]
+- paragraph:
+  - text: Active (methylated) Vitamin B6 is incredibly important for the absorption of magnesium. According to research, Vitamin B6 may facilitate cellular uptake of magnesium
+  - superscript: "31"
+  - text: ", which both limits excretion and increases its effectiveness. Not only can it ensure that your body absorbs more magnesium, but it makes it more effective in the body and prevents it from being excreted"
+  - superscript: "32"
+  - text: . Our formula uses active (methylated) Vitamin B6 (Pyridoxal-5-Phosphate), which is better than inactive B6 (pyridoxine) because it is more efficiently absorbed, more bioavailable, and immediately usable by the body, leading to enhanced health benefits and improved overall effectiveness.
+- img "A dark amber Zonia Restore Sleep dietary supplement bottle with a silver cap, featuring '7 FORMS OF MAGNESIUM' and 'with L-Theanine' on its label, with several blurred bottles in the background."
+- heading "This is what separates Restore Sleep from other magnesium supplements" [level=2]
+- paragraph: As you already know, most magnesium supplements are incomplete, hence why people who take them for months still struggle with deficiency, feelings of anxiety and sleep problems.
+- paragraph: You can grab your current magnesium product and read the label now...
+- paragraph: Most likely it lacks one or more critical forms of magnesium...
+- paragraph: Or the minerals don't come in chelated form, so your body can't absorb the magnesium fully...
+- paragraph: Or the supplement ratios are simply off...
+- paragraph: For these reasons we've decided to partner up with one of the best FDA-registered laboratories in the USA to create a formula that excels in every respect.
+- paragraph:
+  - text: Each capsule of
+  - strong: Restore Sleep
+  - text: contains the full complex of 7 potent forms of magnesium, which all come in a chelated form for maximum absorption.
+- paragraph:
+  - text: On top of that, the additional relaxing boost from
+  - strong: L-Theanine
+  - text: as well as
+  - strong: Vitamin B6's
+  - text: synergy with magnesium ensure that you get the best sleep bundle possible.
+- heading "Restore Sleep is a long-term solution to a sleep-depriving magnesium deficiency" [level=2]
+- paragraph: Unlike other supplements, Restore Sleep has been specifically designed to tackle sleep issues and, as a result, help lower feelings of stress and fatigue.
+- paragraph: Restore Sleep's carefully selected ingredients have been proven to improve sleep in various clinical studies, thereby rejuvenating the body and mind.
+- paragraph: "And, most importantly, Restore Sleep matches all 3 criteria of a reliable magnesium supplement, which top medical doctors and health experts agree on:"
+- img "A yellow icon of a person lying in bed with a crescent moon and three stars overhead."
+- text: Made with the most effective forms of magnesium targeting sleep problems
+- img "Icon depicting the chemical symbol Mg (Magnesium) within a molecular structure, above two open supplement capsules."
+- text: Full-spectrum magnesium covering 7 diverse forms of magnesium to help with multiple deficiencies
+- img "An outline illustration of the human intestines in yellow."
+- text: In a chelated form for maximum absorption
+- img "A heavily faded image shows a family picnic on green grass. A woman and a young girl on the right excitedly raise their arms, while a man and another child are faintly visible on the left. Food and drinks are spread on a plaid blanket."
+- heading "What results can you expect from Restore Sleep?" [level=2]
+- paragraph: No matter what your diet looks like...
+- paragraph: Or what your current health issues are...
+- paragraph: You will certainly benefit from optimizing your magnesium levels and improving the quality of your sleep...
+- paragraph: Sleepless and anxious nights will become a thing of the past, as your body will slowly revert to proper, rejuvenating deep sleep.
+- paragraph: You finally won't feel drained of energy anymore...Instead, you will be able to face your day with vigor and optimism.
+- paragraph: You will feel and look younger, without baggy and puffy eyes, because you were finally able to get into deep rejuvenating sleep. You will turn from a chronically exhausted and anxious person to the best-looking vibrant neighbor that everyone wants to hang out with.
+- paragraph: Plus, this will greatly impact your whole outlook on life!
+- heading "Success stories from people like you" [level=1]
+- paragraph: Achieving Deep, Uninterrupted Sleep
+- iframe
+- paragraph: Waking Up With a Zest for Life
+- iframe
+- paragraph: Alleviating Occasional Head Discomfort
+- iframe
+- paragraph: Falling Asleep Easier Than Ever
+- iframe
+- paragraph: Experiencing Peace & Relaxation
+- iframe
+- paragraph: Transforming Sleep in 30 Days
+- iframe
+- img "A joyful older couple smiles brightly outdoors, with the woman embracing the man from behind in warm light."
+- heading "How can your life change after correcting your magnesium deficiency?" [level=2]
+- list:
+  - listitem:
+    - text: Once your magnesium levels reach
+    - strong: optimal ranges,
+    - text: you will experience much more than healthy sleep and rest
+  - listitem:
+    - text: You may notice having
+    - strong: more drive and motivation
+    - text: than ever before
+  - listitem:
+    - text: People might start calling you a
+    - strong: beacon of positive energy
+    - text: (which is contagious!)
+  - listitem:
+    - text: You may become
+    - strong: more productive and creative
+  - listitem: Your relaxed spirit will allow you to easily take on new challenges
+  - listitem:
+    - text: Your natural
+    - strong: joy and happiness will increase
+    - text: exponentially
+- text: This is a unique, proprietary formula and you won't find these same ingredients in the right concentration combined in 1 product anywhere else on the market... Not in pharmacies or supplement stores, not even on Amazon.
+- heading "SEPARATELY, THESE MULTI-POTENT MINERALS WILL COST OVER $200" [level=2]
+- img "A blurry white bottle with a blue label, featuring the word \"pure\" and \"Magnesium.\""
+- text: Magnesium Glycinate $26.00
+- img "A white bottle with a green label for Smart Magnesium Malate dietary supplement, containing 120 tablets and 1000 mg."
+- text: Magnesium Malate $20.00
+- img "A blue bottle of Life Extension Neuro-Mag Magnesium L-Threonate, a 90-capsule supplement for memory and cognitive function."
+- text: Magnesium L-threonate $30.75
+- img "A blurry white bottle of Solgar Magnesium Citrate supplements with a yellow label. The label features a rainbow logo and text indicating \"Magnesium Citrate 400 mg,\" \"Bone Health,\" \"Muscle Support,\" and \"90 vegetarian capsules.\""
+- text: Magnesium Citrate $14.09
+- img "A white supplement bottle with a cream-colored label, featuring green text that reads \"MAGNESIUM TAURATE\" and green horizontal bands."
+- text: Magnesium Taurate $19.95
+- img "A blurry dark brown bottle of Bluebonnet Nutrition Magnesium Aspartate dietary supplement, with a purple cap and a white and purple label."
+- text: Magnesium Aspartate $19.75
+- img "A white bottle of Bio-Design Magnesium Oxide dietary supplement with a green leaf logo on the label."
+- text: Magnesium Orotate $34.90
+- img "A white supplement bottle for Klaré Labs L-Theanine, featuring light and dark blue label accents. The text indicates it's a dietary supplement with 60 vegetarian capsules."
+- text: L-Theanine $29.99
+- img "A bright green and yellow gradient bottle with a green cap. The label's text is mostly blurred, but 'Vitamin B-6 100 MG' is clearly visible in black."
+- text: Vitamin B6 $16.05
+- paragraph: And even then, you might not get the same quality ingredients as the ones in the Restore Sleep Formula.
+- img "A lone hiker with a yellow backpack and red hat walks on a path into a misty mountain landscape."
+- text: Restore Sleep is sold exclusively online, and this is the only official page where you can get Restore Sleep and all 7 magnesium forms plus the 2 additional relaxation-boosting nutrients.
+- heading "As you see below, you have three packages with the Restore Sleep formula with different discounts to choose from:" [level=2]
+- text: Regular $79 Today $59 per bottle 1-month SUPPLY
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $59 for 1 bottle"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Best Value! Regular $79 Today $33 per bottle 6-month SUPPLY
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $198 for 6 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Regular $79 Today $39 per bottle 3-month SUPPLY
+- img "Three amber Zonia Restore Sleep dietary supplement bottles with dark blue labels. The front bottle prominently displays \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules\"."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $117 for 3 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping No thanks. I understand this is the only time I'm seeing this offer and I'm okay with missing out on the discounts. I don't really want to optimize my magnesium levels for achieving deep sleep. I agree to purchase Restore Sleep at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I'll pass on this chance forever.
+- heading "So How Can You Choose the Best Option and Make Sure You're Getting ALL the Benefits of the Restore Sleep Formula?" [level=2]
+- paragraph: Well, a lot of the ingredients found in our Restore Sleep supplement were proven to work in studies performed during a 12-week period or longer.
+- paragraph: The body needs some time to assimilate the ingredients and begin the restoration process.
+- paragraph: Which is why starting out with either the 3-month or the 6-month option might be the most effective way to experience the full effects of these minerals.
+- heading "Here's why you should opt for the 3-month or 6-month packages:" [level=2]
+- list:
+  - listitem: Get even HIGHER discounts for MORE bottles
+  - listitem: Give your body TIME to experience the FULL EFFECTS of this formula
+  - listitem: Make sure you have enough product and avoid waiting weeks or months until our boutique company can restock — and considering how popular this offer is, our stock is FLYING off our shelves
+  - listitem: You get an exclusive offer to a product most people can only DREAM of
+  - listitem: Your purchase is protected by a 180-day money back guarantee
+- text: Regular $79 Today $59 per bottle 1-month SUPPLY
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $59 for 1 bottle"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Best Value! Regular $79 Today $33 per bottle 6-month SUPPLY
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $198 for 6 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Regular $79 Today $39 per bottle 3-month SUPPLY
+- img "Three amber Zonia Restore Sleep dietary supplement bottles with dark blue labels. The front bottle prominently displays \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules\"."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $117 for 3 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping No thanks. I understand this is the only time I'm seeing this offer and I'm okay with missing out on the discounts. I don't really want to optimize my magnesium levels for achieving deep sleep. I agree to purchase Restore Sleep at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I'll pass on this chance forever.
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- paragraph:
+  - text: With the 3-bottle or 6-bottle packages,
+  - strong: you have the best chance of experiencing deep sleep,
+  - text: the stress-reducing and rejuvenating effects without having to stop your progress just because you ran out.
+- paragraph:
+  - text: So instead of dealing with
+  - strong: sleepless nights
+  - text: and
+  - strong: chronic fatigue
+  - text: during the day ... You can get this
+  - strong: wonderful complex and help your body go into a rejuvenating repair mode at night.
+- paragraph:
+  - strong: "All you have to say is:"
+- text: MAYBE this scientifically-backed formula might work for me, too.
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- paragraph:
+  - text: And if you
+  - strong: don't experience jaw-dropping results
+  - text: in your sleep during the night, energy levels during the day, a new motivation for life, and overall mood
+  - strong: in the next 180 days
+  - text: ...
+- paragraph:
+  - text: Just send us an email at support@zonia.com and
+  - strong: we'll give you a full refund
+  - text: ", no questions asked, no matter what package you chose."
+- paragraph: The choice is yours to make.
+- img "A person sleeping peacefully in a light-colored bed."
+- heading "You can skip this complex magnesium formula..." [level=2]
+- paragraph: And go back to your old supplements and hope that one day your sleep goes back to normal...
+- paragraph: Or you can get this unique solution that has 7 highly absorbable forms of chelated magnesium plus 2 additional nutrients to super power your sleep.
+- paragraph: All you need to do is choose your favorite package down below and add it to your order.
+- paragraph: And if you change your mind at any point in the next 6 months, you can send us the bottles back even if they are all empty, and you'll get your full refund no matter what the reason is.
+- paragraph: I know what you've just learned about sleep and magnesium deficiency is a lot to take in...
+- paragraph: I can also understand how you might feel frustrated that none of this has been shared with you before...
+- img "A smiling woman in athletic wear sits on a wooden surface, tying her running shoes outdoors."
+- paragraph: Believe me.
+- paragraph: I've been where you are.
+- paragraph: But now you know the truth.
+- paragraph: You know there is a way for you to help control how well you sleep and regenerate...
+- paragraph: Help protect your body from feelings of stress and feelings of anxiety...
+- paragraph: And support your body by reverting back to a rejuvenating deep sleep.
+- paragraph: And knowledge brings you the power to do something about it...
+- paragraph: And change your life.
+- paragraph:
+  - text: With
+  - strong: Restore Sleep,
+  - text: you have a convenient way to get the 7 most vital and potent forms of magnesium...
+- paragraph: Which can finally change how you feel every day...
+- paragraph: In just 2 seconds a day.
+- paragraph: The choice is yours.
+- paragraph:
+  - strong: Thank you for reading
+  - text: and I hope my letter has shed some light on your health and longevity.
+- strong: Sincerely,
+- strong: Stefan Apostolov
+- strong: Founder of Zonia
+- text: Regular $79 Today $59 per bottle 1-month SUPPLY
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $59 for 1 bottle"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Best Value! Regular $79 Today $33 per bottle 6-month SUPPLY
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $198 for 6 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Regular $79 Today $39 per bottle 3-month SUPPLY
+- img "Three amber Zonia Restore Sleep dietary supplement bottles with dark blue labels. The front bottle prominently displays \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules\"."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $117 for 3 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping No thanks. I understand this is the only time I'm seeing this offer and I'm okay with missing out on the discounts. I don't really want to optimize my magnesium levels for achieving deep sleep. I agree to purchase Restore Sleep at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I'll pass on this chance forever. F.A.Q
+- heading "Is the Restore Sleep Formula right for me?" [level=2]:
+  - button "Is the Restore Sleep Formula right for me?"
+- heading "Okay, Stefan, but what are the potential side effects?" [level=2]:
+  - button "Okay, Stefan, but what are the potential side effects?"
+- heading "When does the product expire?" [level=2]:
+  - button "When does the product expire?"
+- heading "How do I take the Restore Sleep formula?" [level=2]:
+  - button "How do I take the Restore Sleep formula?"
+- heading "But what if I'm not happy with the results?" [level=2]:
+  - button "But what if I'm not happy with the results?"
+- text: Regular $79 Today $59 per bottle 1-month SUPPLY
+- img "A Zonia Restore Sleep dietary supplement bottle. Its dark blue label highlights \"7 FORMS OF MAGNESIUM\" and \"with L-Theanine\", and indicates \"60 CAPSULES\"."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $59 for 1 bottle"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Best Value! Regular $79 Today $33 per bottle 6-month SUPPLY
+- img "A row of amber Zonia \"Restore Sleep\" dietary supplement bottles with dark blue labels highlighting \"7 Forms of Magnesium with L-Theanine.\""
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $198 for 6 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping Regular $79 Today $39 per bottle 3-month SUPPLY
+- img "Three amber Zonia Restore Sleep dietary supplement bottles with dark blue labels. The front bottle prominently displays \"7 Forms of Magnesium with L-Theanine\" and \"60 Capsules\"."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A circular badge guaranteeing 100% money back for 180 days."
+- text: Add to Order 180 Days Money Back Guarantee
+- 'img "Logos of accepted payment methods: Visa, MasterCard, American Express, Discover, and PayPal."'
+- text: "Your Total: $117 for 3 bottles"
+- img "A black corner in the top right and a dashed black line in the bottom left."
+- text: free shipping No thanks. I understand this is the only time I'm seeing this offer and I'm okay with missing out on the discounts. I don't really want to optimize my magnesium levels for achieving deep sleep. I agree to purchase Restore Sleep at
+- strong: $79/bottle
+- text: in the future instead of getting it at a discounted rate today. I'll pass on this chance forever.
+- heading "CITATIONS" [level=2]:
+  - button "CITATIONS"
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+Failed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Test failed on page: 'https://zonia-stg.com/km-restore-sleep-special-resilience-code'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Evergreen_funnel_--_@1.9__20260918-003925.png

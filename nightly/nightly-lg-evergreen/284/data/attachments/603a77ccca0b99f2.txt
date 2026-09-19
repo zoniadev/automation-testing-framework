@@ -1,0 +1,17 @@
+Executing step: user register in "lg_ev_exercise" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://zonia-stg.com/lgmb5e/lg-exercise
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/lgmb5e/lg-join-zonia"
+===> URL successfully changed to "https://zonia-stg.com/lgmb5e/lg-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "lg_ev_exercise" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://zonia-stg.com/lgmb5e/lg-signup"
+===> URL successfully changed to "https://zonia-stg.com/lgmb5e/lg-signup"
+Failed step: user join Zonia
+Test failed on page: 'https://zonia-stg.com/lgmb5e/lg-signup'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Evergreen_funnel_--_@1.4__20260914-011814.png
