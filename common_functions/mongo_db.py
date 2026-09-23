@@ -1,68 +1,23 @@
-from pymongo import MongoClient
-from pymongo.errors import PyMongoError
-import datetime
-import os
-from urllib.parse import quote_plus
+from datetime import datetime
+import requests
 
-
-def connect_to_mongodb():
-    username = "automationtests"
-    password = quote_plus("030vRUeShdZaSZfx")  # Make sure to encode special characters
-
-    cluster_url = os.getenv("MONGO_CLUSTER_URL", "mongodb8stage.uh1qx.mongodb.net")
-    db_name = os.getenv("MONGO_DB_NAME", "GoHealthyUsers")  # Replace with your actual DB name
-
-    connection_string = (
-        f"mongodb+srv://{username}:{password}@{cluster_url}/{db_name}"
-        "?retryWrites=true&w=majority&appName=MongoDB8Stage"
-    )
-
-    try:
-        client = MongoClient(connection_string, serverSelectionTimeoutMS=5000)
-        client.admin.command("ping")  # Test the connection
-        print("===> Connected to MongoDB Atlas successfully.")
-    except Exception as e:
-        raise Exception(f"Error connecting to MongoDB Atlas: {e}")
-    return client
-
-
-def count_automation_users_older_than_one_month(client):
-    db_name = os.getenv("MONGO_DB_NAME", "GoHealthyUsers")
-    collection_name = "users"
-
-    db = client[db_name]
-    collection = db[collection_name]
-
-    cutoff_date = datetime.datetime.utcnow() - datetime.timedelta(days=30)
-
-    query = {
-        "fullname": {"$regex": "^Automation", "$options": "i"},
-        "createdAt": {"$lt": cutoff_date}
-    }
-
-    automation_users_count = collection.count_documents(query)
-    print(f"===> Number of Automation users older than one month: {automation_users_count}")
-
-
-def delete_automation_users(client, days_old=3):
-    db_name = os.getenv("MONGO_DB_NAME", "GoHealthyUsers")
-    collection_name = "users"
-
-    try:
-        db = client[db_name]
-        collection = db[collection_name]
-
-        cutoff_date = datetime.datetime.utcnow() - datetime.timedelta(days=days_old)
-
-        query = {
-            "fullname": {"$regex": "^Automation", "$options": "i"},
-            "createdAt": {"$lt": cutoff_date}
+def clean_automation_users_with_api():
+    url = "https://zonia-stg.com/api/automation/test-users/cleanup"
+    payload = ""
+    headers = {
+        'Content-Type': 'application/json',
+        'X-Automation-Cleanup-Key': 'x6qgUsY4sDhtFNSiS0KeOP8MHY0sGFYBVWJzcs2Ycic',
         }
 
-        result = collection.delete_many(query)
+    response = requests.request("POST", url, headers=headers, data=payload)
 
-        print(f"===> Deleted {result.deleted_count} user(s).")
-    except PyMongoError as e:
-        raise Exception(f"Error deleting automation users: {e}")
-    except Exception as e:
-        raise Exception(f"An unexpected error occurred during user deletion: {e}")
+    if response.status_code == 200:
+        deleted_users = response.json().get("deletedCount")
+        cutoff_date = response.json().get("cutoff")
+        dt = datetime.fromisoformat(cutoff_date.replace("Z", "+00:00"))
+        formatted_date = dt.strftime("%d-%m-%Y")
+        print(f"Successfully deleted {deleted_users} user(s) created before {formatted_date}.")
+    else:
+        print(f"Error deleting user(s)!. API returned {response.status_code} and {response.text}.")
+
+
