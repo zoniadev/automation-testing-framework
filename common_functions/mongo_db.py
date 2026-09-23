@@ -6,7 +6,7 @@ def clean_automation_users_with_api():
     payload = ""
     headers = {
         'Content-Type': 'application/json',
-        'X-Automation-Cleanup-Key': 'x6qgUsY4sDhtFNSiS0KeOP8MHY0sGFYBVWJzcs2Ycic1',
+        'X-Automation-Cleanup-Key': 'x6qgUsY4sDhtFNSiS0KeOP8MHY0sGFYBVWJzcs2Ycic',
         }
 
     response = requests.request("POST", url, headers=headers, data=payload)
