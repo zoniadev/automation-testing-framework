@@ -12,7 +12,7 @@ const smtpPass = process.env.SMTP_PASS;
 const smtpHost = process.env.SMTP_HOST;
 const smtpPort = process.env.SMTP_PORT;
 const runURL = process.env.RUN_URL;
-const recipient = 'nkalendzhiev@yahoo.com';
+const recipients = ['nkalendzhiev@yahoo.com', 'tsvetan.zonia@gmail.com', 'gergana.zonia@gmail.com'];
 
 // The two ways a cleanup failure shows up in test-summary.txt:
 //  - clean_automation_users_with_api() printing its own error on a non-200 response
@@ -58,7 +58,7 @@ async function sendEmail() {
 
   const info = await transporter.sendMail({
     from: `"Zonia Test Cleanup Notifier" <${smtpUser}>`,
-    to: recipient,
+    to: recipients,
     subject: 'Automation user cleanup failed',
     text: `The old-user DB cleanup step failed:\n\n${details}${runLine}`,
   });
