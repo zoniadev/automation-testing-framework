@@ -1,0 +1,26 @@
+Executing step: user starts "ad_live" funnel from "base" bonus entry page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://zonia-stg.com/ad-join-zonia-bonuses
+>>> Starting funnel from bonus entry page (variant: base)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/ad-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/ad-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: base)
+Completed step: user starts "ad_live" funnel from "base" bonus entry page
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Reid-1789980255@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/ad-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/ad-mini-masterclass-series"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/ad-restore-detox-special-immunity-code"
+===> URL successfully changed to "https://zonia-stg.com/ad-restore-detox-special-immunity-code"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page

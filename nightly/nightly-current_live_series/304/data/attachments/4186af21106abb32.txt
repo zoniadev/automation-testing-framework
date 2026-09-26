@@ -1,0 +1,9 @@
+Executing step: user register in "hh_live_inflammation" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://zonia-stg.com/hh-inflammation
+===> Cookie banner accepted using selector: //*[@data-tid='banner-accept']
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/hh-join-zonia"
+===> URL successfully changed to "https://zonia-stg.com/hh-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "hh_live_inflammation" Opt In page

@@ -1,0 +1,857 @@
+Executing step: user register in "bb_ev_energy" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-energy
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-join-zonia"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "bb_ev_energy" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-signup"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Rodriguez-1789686187@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/bb-booster-packages-annually"
+===> URL successfully changed to "https://zonia-stg.com/bb-booster-packages-annually"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+>>> Selecting "platinum" for booster package...
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/bb-mini-masterclass-series-platinum-package"
+===> URL successfully changed to "https://zonia-stg.com/bb-mini-masterclass-series-platinum-package?id=6aac71bef601018f5456c715"
+>>> Successfully selected "platinum" for booster package
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+===> Waiting for URL starting with "https://zonia-stg.com/bb-restore-detox-special"
+===> URL successfully changed to "https://zonia-stg.com/bb-restore-detox-special?id=6aac71bef601018f5456c715"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "1" bottles and "best_value" in upsell/downsell for Restore Detox...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/bb-rd-6-more-bottles"
+===> Issue with clicking button "//*[@unique-id='add-order-1-1']", page was not changed to bb-rd-6-more-bottles, retrying...
+Error: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/bb\\-rd\\-6\\-more\\-bottles.*')'
+Actual value: https://zonia-stg.com/bb-restore-detox-special?id=6aac71bef601018f5456c715 
+Call log:
+  - Expect "to_have_url" with timeout 15000ms
+    32 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/bb-restore-detox-special?id=6aac71bef601018f5456c715"
+
+Aria snapshot:
+- text: Please wait while we process your order... Please don’t close the page or hit ‘back’ to avoid being double billed by mistake What if you could stop your daily “toxin-IV drip” from causing damage to your brain and body in the next 24 hours?
+- iframe
+- img
+- text: Click for sound
+- 'img "Eight circular badges displaying dietary and ingredient claims: GMO Free, Vegan, Gluten Free, Soy Free, Dairy Free, Nuts Free, Made with Natural Ingredients, and Sugar Free."'
+- 'img "Logo: Manufactured in an FDA Registered Facility."'
+- img "Green circular logo for GMP (Good Manufacturing Practices) Quality Certification."
+- text: Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 59 per bottle 1-month SUPPLY
+- img "A dark brown glass bottle with a teal and silver label for Zonia Restore Detox Advanced Liver Support dietary supplement, containing 90 capsules with NAC."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $59 for 1 bottle
+- img "Delivery truck icon."
+- text: free shipping Best Value! Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 33 per bottle 6-month SUPPLY
+- img "Multiple bottles of Zonia Restore Detox Advanced Liver Support dietary supplement with NAC, 90 capsules per bottle."
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $198 for 6 bottles
+- img "Delivery truck icon."
+- text: free shipping Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 39 per bottle 3-month SUPPLY
+- img "Three brown bottles of Zonia Restore Detox Advanced Liver Support dietary supplements with NAC."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $117 for 3 bottles
+- img "Delivery truck icon."
+- text: free shipping No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to flush the toxins out of my body. I agree to purchase Restore Detox at $79/bottle in the future instead of getting it at a discounted rate today. I want to pass up this chance forever.
+- paragraph:
+  - text: This
+  - strong: Herbal Detox Formula
+  - text: flushes out toxins that leak into your bloodstream, brain, liver, bladder and other organs…
+- paragraph:
+  - text: … promoting a
+  - strong: Long-Lasting, Full-Body Makeover
+  - text: that starts in just 24 hours
+- paragraph:
+  - text: If you’re like most Americans, you start your day with a
+  - strong: hot cup of coffee
+  - text: “enhanced” with mycotoxins and heavy metals, like lead and cadmium1, from polluted coffee crops.
+- paragraph:
+  - text: …You’ll probably also have some
+  - strong: eggs and bacon
+  - text: ", completely unaware that, with your breakfast, you’re also ingesting an alarming level of highly-toxic chemicals like dioxin2."
+- paragraph:
+  - text: …You’ll hydrate with
+  - strong: tap water
+  - text: containing a dangerous level of PFAs that bind to your bloodstream and stay in your body forever.
+- img "A hand holds a green glass mug as a stream of water fills it, creating bubbles and overflowing into a sink."
+- paragraph:
+  - text: You open your
+  - strong: window
+  - text: and inhale carbon monoxide, nitrogen oxides, mold and lead…
+- paragraph:
+  - text: And when you jump into your
+  - strong: car
+  - text: to go to work or run errands, you continue to inhale dangerous car emissions simply by opening your AC or car heater.
+- paragraph:
+  - text: These toxins are
+  - strong: deadly weapons of mass destruction
+  - text: of the modern era, directly linked to premature aging and death.
+- paragraph:
+  - text: Up to
+  - strong: 24% of estimated global deaths
+  - text: are caused by environmental toxins
+  - superscript: "3"
+  - text: according to the World Health Organization.
+- img "A solid black image."
+- img "A solid black image."
+- img "A solid black image."
+- paragraph:
+  - strong: The scariest part?
+- paragraph: These dangerous toxins are literally everywhere.
+- paragraph: They poison our air, our soil, our food, and our water.
+- paragraph: They can be found in our cookware, furniture, artificial leather, cleaning products, electronics, cars, make-up products, antibiotics and medications…
+- img "A modern grey bedroom with a bed featuring a white quilted mattress with a blue trim."
+- img "Scattered and crushed makeup products, including lipsticks and powder in shades of pink and brown, on a white surface."
+- img "Two hands in pink rubber gloves, one holding a blue spray bottle and the other a beige cleaning cloth, against a white surface."
+- img "Multiple blister packs of pink, white, and orange pills on a yellow background."
+- paragraph: "And they don’t only make us sick – they reduce our quality of life and cause accelerated brain decline:"
+- paragraph:
+  - text: Toxin overload gives us persistent
+  - strong: brain fog, memory problems, negative moods and extreme, debilitating fatigue
+  - text: .
+- paragraph:
+  - text: They can cause
+  - strong: bloating, painful heartburn, and persistent weight gain
+  - text: that can further damage our health and self-esteem.
+- paragraph:
+  - text: They’re responsible for mysterious cases of
+  - strong: hair loss, excruciating headaches, inexplicable body aches, and debilitating insomnia…
+- paragraph:
+  - text: …And can cause
+  - strong:
+    - text: embarrassing bad breath, foul body odor and skin rashes
+    - superscript: "4"
+  - text: .
+- paragraph: "As these toxins gradually accumulate in our system, we go from feeling healthy, happy and energetic to a person we hardly recognize anymore:"
+- paragraph: An exhausted, brain-fogged, bloated and depressed version of our younger selves.
+- paragraph: "We take these symptoms for granted: We think that’s how getting older must feel."
+- paragraph: Most people are completely unaware that, in fact, their toxin overload is what causes their accelerated brain decline and is making them feel older, sicker, and less energetic than they used to be.
+- paragraph: Unfortunately, over 24% of us will prematurely die from these environmental toxins…
+- paragraph: Without ever finding out there’s a way out.
+- img "Abstract dark teal background with flowing, translucent forms."
+- img "An abstract background in deep teal with flowing, marbled patterns featuring subtle lighter lines and hints of gold."
+- text: "However, if you're on this page, you are lucky to be one of the few who get access to vital information while there’s still time to heal. This is the reason why my team and I gathered a list of the best natural detox agents that have been proven in clinical studies. And I’d like to present them to you:"
+- img "White line art of a coffee plant branch with leaves and small flowers, positioned on an irregular dark teal green shape that has rough, brush-stroke edges against a white background."
+- img "Stylized white drawing of a citrus fruit slice on a dark teal background with torn edges."
+- img "A white outline illustration of a lemon slice on a dark teal background with rough, textured edges."
+- img "White line drawing of two lemons on a branch with leaves and small blossoms, against an irregular dark teal background."
+- img "A deep teal green background featuring a white line illustration of a flowering branch on the right, and a ragged white area on the left."
+- img "White line art of a citrus slice on a dark teal background with torn white borders."
+- img "A white line drawing of a lemon branch with leaves, small flowers, and two lemons on a dark teal background."
+- img "A dark teal background with irregular, torn-paper-like white edges, featuring a white line drawing of strawberry leaves and a partially visible strawberry on the left."
+- text: Super Detox Agent 1 N-acetyl-L-cysteine (NAC) the master detoxifier
+- img "A close-up of a glassy, translucent blue molecular structure with interconnected spheres, against a softly blurred teal and blue background."
+- paragraph: Think of NAC as the “mastermind” behind your immunity.
+- paragraph:
+  - text: That’s because our bodies use N-acetyl cysteine (NAC) to produce immunity-boosting antioxidants – fast.
+  - superscript: "5"
+  - text: Specifically, NAC
+  - strong: helps replenish glutathione, which is your body’s ‘master detoxifier
+  - text: .’
+- paragraph:
+  - text: Studies show that NAC can increase
+  - strong: your natural antioxidant level in as little as 8 days
+  - text: – and can
+  - strong:
+    - text: reduce oxidative damage by more than 30%
+    - superscript: 6,7
+    - text: "!"
+- paragraph:
+  - text: Due to its strong protective and detox properties, NAC is used in IC units. Doctors give patients NAC to
+  - strong:
+    - text: prevent and treat liver damage caused by toxins
+    - superscript: 8,9
+  - text: and to
+  - strong: protect patients’ organs
+  - text: during a major surgery.
+- paragraph: "In numerous human studies, NAC acted as a safe and effective detox remedy against:"
+- list:
+  - listitem:
+    - text: Heavy metals from our environment
+    - superscript: 10,11
+  - listitem:
+    - text: Pesticides from our foods and drinks
+    - superscript: 12,13,14,15,17
+  - listitem:
+    - text: Antibiotics and other drugs
+    - superscript: 15,16,17
+  - listitem:
+    - text: Diesel fuel exposure from our cars
+    - superscript: 18,19,20
+- img "A hand in a blue surgical glove presents a glowing, red wireframe 3D model of human kidneys, with blue digital interface elements on and around the hand."
+- paragraph:
+  - text: In these studies, NAC was shown to help
+  - strong: protect blood vessels
+  - text: ", increase protective"
+  - strong: antioxidant levels, and prevent kidney and ear damage…
+- paragraph:
+  - text: And even reduced the need for treatment in various cases of
+  - strong: toxin poisoning
+  - text: .
+  - superscript: "21"
+- paragraph: "But there’s more:"
+- paragraph:
+  - text: It looks like NAC
+  - strong:
+    - text: helps normalize erratic glucose and insulin function
+    - superscript: "22"
+  - text: .
+- paragraph: "But that’s not all:"
+- paragraph:
+  - text: There’s an important
+  - strong: bonus benefit
+  - text: "to using NAC in your detox process:"
+- paragraph:
+  - text: Thanks to its insulin-regulating properties, it gives your body the extra push to burn brown fat
+  - superscript: "23"
+  - text: without diet or exercise.
+- text: Super Detox Agent 2 Citrus Pectin the heavy-metals banisher
+- img "A close-up of vibrant, overlapping slices of red, pink, and yellow grapefruit."
+- paragraph: Citrus Pectin is a safe fruit-derived heavy-metal detox agent. It’s proven to support a side-effect-free, mild detox process, starting as early as in 24 hours.
+- paragraph: It helps “bind” and flush toxic heavy metals from your system, naturally.
+- paragraph: "Studies show that citrus pectin helps:"
+- list:
+  - listitem: Increase lead extraction by 560%
+  - listitem: Increase cadmium secretion by 150%
+  - listitem:
+    - text: Increase arsenic excretion by 130%
+    - superscript: "24"
+- paragraph:
+  - text: Interestingly, there are studies showing citrus pectin can actually “kill” tumor cells, delaying the spread of cancerous cells in the body
+  - superscript: "25"
+  - text: .
+- text: Super Detox Agent 3 Selenium the full-body repair mineral
+- img "A tablet displays \"MICROELEMENT SELENIUM (Se)\" in red text, surrounded by ginger roots and two different pills."
+- paragraph: Toxins damage the body’s system, which is why it is important to add a natural repair ingredient in your detox process.
+- paragraph:
+  - text: And Selenium is our best bet because it has been shown to help rejuvenate our bodies and even help repair human DNA
+  - superscript: "26"
+  - text: .
+- img "A young woman sits up in bed and stretches her arms above her head, looking refreshed by a bright window."
+- paragraph:
+  - text: An optimal dose of Selenium can help promote the natural repair of your
+  - strong:
+    - text: cells, organs and tissues
+    - superscript: "27"
+  - text: .
+- paragraph: And because Selenium is a strong antioxidant with protective properties, the optimal dose can help maintain our health and keep inflammation down.
+- text: Super Detox Agent 4 Milk Thistle (Silymarin) the liver elixir
+- img "Close-up of vibrant purple thistle flowers covered in spiky green bracts and fine spiderwebs, against a soft green background."
+- paragraph:
+  - text: An ancient detox powerhouse, Silymarin, has been used since 40 AD to cure snake bite poisoning.
+  - superscript: "28"
+- paragraph:
+  - text: Scientific studies have indicated that components in milk thistle may help
+  - strong: detox the liver, prevent liver inflammation,
+  - text: and
+  - strong: support healthy liver and insulin function
+  - text: .
+  - superscript: "29"
+- paragraph:
+  - text: This, in turn, helps your body
+  - strong: better flush out toxins that come
+  - text: from what you drink and eat.
+- text: Super Detox Agent 5 Dandelion the kidney & liver protector
+- img "A glass bowl filled with whole and chopped dandelion roots, surrounded by fresh yellow dandelion flowers and green leaves."
+- paragraph: Dandelion Root is a powerful antioxidant and a natural tonic.
+- paragraph:
+  - text: It helps the liver
+  - strong: flush out harmful chemicals from foods
+  - superscript: "30"
+  - text: and supports the body in multiple vital processes.
+- paragraph:
+  - text: Because of its natural antioxidant properties, it helps protect the liver from oxidative stress and assists the liver in its detox process.
+  - superscript: "31"
+- img "A cross-sectioned anatomical model of a human kidney, revealing its internal structures with red and blue vessels, held in a person's hand."
+- paragraph:
+  - text: Dandelion root helps the
+  - strong: kidneys filter out toxins
+  - text: more effectively, can reduce stress on the liver, and improve bile production.
+- paragraph:
+  - text: Even more, dandelion has been shown to assist the body in dealing with cancerous cells from
+  - strong: the liver, blood, pancreas, esophagus and prostate
+  - text: .
+  - superscript: 32,33,34,35
+- text: Super Detox Agent 6 Artichoke Extract the weight-loss veggie
+- img "Numerous fresh purple and green artichokes with long green stems are piled together in a crate."
+- paragraph:
+  - text: In various studies, artichoke leaf extract was shown
+  - strong: to protect liver function
+  - text: and increase the production of bile, which
+  - strong: helps remove harmful toxins from your liver
+  - text: .
+  - superscript: "36"
+- paragraph: Artichoke supplementation resulted in less liver damage and better liver function. Another important benefit is that artichokes help maintain healthy cholesterol levels.
+- img "A smiling Black woman in a teal sports bra and matching leggings with \"SUNDAY II SUNDAY\" on the top performs a side stretch in a bright studio with large windows."
+- paragraph:
+  - text: One study in 143 adults with high cholesterol showed that artichoke leaf extract taken daily for six weeks resulted in an 18.5% and
+  - strong: 22.9%
+  - text: decrease in
+  - strong: total and “bad” LDL
+  - text: cholesterol, respectively
+  - superscript: "37"
+  - text: .
+- paragraph:
+  - text: Another 2018 study published in the journal Nutrients reported that artichoke leaf extract supports
+  - strong: healthy weight loss, abdominal fat loss, and healthy blood sugar
+  - text: .
+  - superscript: "38"
+- paragraph: At Zonia, we want to offer you a trustworthy way out from the devastating consequences of toxin build-up.
+- paragraph:
+  - text: This is the reason why we’ve partnered up with a team of
+  - strong: environmental toxin specialists
+  - text: and
+  - strong: supplement formulators
+  - text: to help create a powerful detox formula.
+- paragraph: "With their guidance, we created a unique solution that speeds up our natural detox process and helps the body heal from decades of toxic onslaught:"
+- paragraph:
+  - text: This
+  - strong: natural & herbal detox solution is called Restore Detox
+  - text: .
+- paragraph:
+  - strong: Restore Detox
+  - text: contains all these science-backed ingredients that help your body get rid of toxins so you can
+  - strong: live a longer life, free from low energy, memory problems, mood swings, insomnia and body aches
+- img "An amber glass bottle of Zonia Restore Detox dietary supplement. The teal and silver label states \"Advanced Liver Support with NAC\" and indicates 90 capsules."
+- 'img "Eight circular badges displaying dietary and ingredient claims: GMO Free, Vegan, Gluten Free, Soy Free, Dairy Free, Nuts Free, Made with Natural Ingredients, and Sugar Free."'
+- 'img "Logo: Manufactured in an FDA Registered Facility."'
+- img "Green circular logo for GMP (Good Manufacturing Practices) Quality Certification."
+- paragraph:
+  - text: The ingredients found in
+  - strong: Restore Detox
+  - text: promote a systemic body detox, significant toxin release, and deep support for your liver and kidneys, further aiding your
+  - strong: natural detox process
+  - text: .
+- img "Label for Zonia Restore Detox, an advanced liver support dietary supplement with NAC, containing 90 capsules. It displays supplement facts, suggested use, and certifications like vegan, GMO-free, and made in the USA."
+- paragraph:
+  - strong: Restore Detox contains all-natural, science-backed detox agents that help your body flush out dangerous toxins…
+- paragraph:
+  - strong: While supporting your liver and kidneys in their natural detox process
+  - text: .
+- img "A close-up of a glassy, translucent blue molecular structure with interconnected spheres, against a softly blurred teal and blue background."
+- paragraph:
+  - strong: N-acetyl-L-cysteine (NAC)
+  - text: ", the effective detox agent that helps flush out heavy metals, pesticides, antibiotics and other environmental toxins from your body."
+- img "A close-up of vibrant, overlapping slices of red, pink, and yellow grapefruit."
+- paragraph:
+  - strong: Citrus Pectin
+  - text: helps “bind” heavy metals and flush them from your system naturally in just 24 hours.
+- img "A tablet displays \"MICROELEMENT SELENIUM (Se)\" in red text, surrounded by ginger roots and two different pills."
+- paragraph:
+  - strong: Selenium
+  - text: promotes the natural repair of your cells, organs and tissues, damaged by toxin overload.
+- img "A glass bowl filled with whole and chopped dandelion roots, surrounded by fresh yellow dandelion flowers and green leaves."
+- paragraph:
+  - strong: Dandelion root
+  - text: ", which helps your liver and kidneys filter out toxins more effectively and helps the body fight against cancer cells."
+- img "Close-up of vibrant purple thistle flowers covered in spiky green bracts and fine spiderwebs, against a soft green background."
+- paragraph:
+  - strong: Milk Thistle (Silymarin)
+  - text: ", which assists the body in gently flushing out toxins coming from your foods and drinks."
+- img "Numerous fresh purple and green artichokes with long green stems are piled together in a crate."
+- paragraph:
+  - strong: Artichoke leaf extract
+  - text: ", which helps"
+  - strong: protect liver
+  - text: function and increase the production of bile, which
+  - strong: helps remove harmful toxins from your liver
+  - text: .
+- paragraph:
+  - strong: Restore Detox
+  - text: is a
+  - strong: safe, non-addictive
+  - text: ","
+  - strong: natural herbal remedy
+  - text: formulated by experts to help you detox from your toxic daily “IV drip” that damages your brain and body
+- paragraph: We created Restore Detox in close partnership with one of the best USA-based, FDA-approved facilities in the world...
+- paragraph:
+  - text: Which is also
+  - strong: GMP(Good Manufacturing Practices) certified!
+- paragraph:
+  - text: We made sure the
+  - strong: dosages are effective
+  - text: and the
+  - strong: ingredients used are from the best possible sources
+  - text: .
+- paragraph:
+  - text: Also, we made sure
+  - strong: every single dose
+  - text: "is 100% free from:"
+- list:
+  - listitem: GMO ingredients
+  - listitem: Gluten
+  - listitem: Dairy
+  - listitem: Sugars
+  - listitem: Nuts
+  - listitem: Artificial Binders
+  - listitem: Toxins
+  - listitem:
+    - text: And any
+    - strong: useless ingredients
+    - text: added just to raise the price tag
+- paragraph:
+  - text: If you were also wondering if
+  - strong: Restore Detox Formula is vegan friendly
+  - text: ", the answer is YES."
+- paragraph:
+  - text: While the
+  - strong: Restore Detox Formula
+  - text: will
+  - strong: help you flush toxins
+  - text: out of your body…
+- paragraph:
+  - text: We believe it will
+  - strong: also improve your health for years to come
+  - text: .
+- img "A large, muted green block with pixelated edges on the bottom right and a slight vertical indent at the top right."
+- text: "Warning: We only produce a small batch of"
+- strong: Detox Restore
+- text: at a time and
+- strong: this is the only official page where you can order
+- text: your package before we run out of bottles.
+- img "A solid pale yellow-green color."
+- img "A pale yellowish-green background with faint white decorative swirls and a broken vertical line on the left side."
+- paragraph: "The ingredients in Restore Detox are proven to:"
+- list:
+  - listitem:
+    - strong: Help detox
+    - text: the body from heavy metals, pesticides, antibiotics, diesel fuel, and medicine toxins
+  - listitem:
+    - strong: Assist the detox of your liver and kidneys and protect their function
+    - text: ", further accelerating your natural detox process and body’s rejuvenation"
+  - listitem:
+    - strong: Filter out toxic chemicals
+    - text: found in your bloodstream from your environment and diet.
+- paragraph: And more.
+- paragraph:
+  - text: So while all the ingredients found in
+  - strong: Restore Detox
+  - text: support the body to naturally detox from the daily toxin IV-drip that is causing brain decline and premature aging…
+- img "A young woman with a joyful expression tilts her head back in a dense green forest, wearing a dark dress with white lace trim."
+- paragraph: "There are other important properties you’ll want to check out as well:"
+- paragraph:
+  - strong: "The Restore Detox ingredients are proven to:"
+- list:
+  - listitem: Help your body maintain healthy insulin, glucose & cholesterol functions
+  - listitem: Help you lose a few pounds naturally, without struggling to diet and exercise
+  - listitem: Help you sleep better at night, knowing your cells, tissues and organs are automatically rejuvenated and rebuilt straight from your DNA
+- paragraph: "…All while addressing all the painful, frustrating and “mysterious” symptoms of letting your “Toxin IV-drip” go untreated:"
+- paragraph:
+  - strong: Mysterious aches and pains. Low moods, irritability and difficulty thinking. Low energy levels. Weight gain that’s getting harder and harder to manage. Body odor and bad breath. And much more.
+- img "A person with blonde hair lies on a bed, their face partly covered by hair, with one eye looking out. They wear a striped shirt."
+- paragraph:
+  - text: This is a unique, proprietary formula and
+  - strong: you won’t find these same ingredients
+  - text: in the
+  - strong: right concentration
+  - text: combined in 1 product
+  - strong: anywhere else on the market
+  - text: .
+- paragraph: Not in pharmacies or supplement stores, not even on Amazon.
+- text: Separately, these multi-potent agents will cost over $200
+- img "A white bottle of NAC N-Acetyl Cysteine supplements."
+- text: NAC $17.
+- superscript: "95"
+- img "A white NOW brand bottle with an orange label for Modified Citrus Pectin Pure Powder, which supports cellular health and healthy immune function."
+- text: Citrus Pectin $42.
+- superscript: "00"
+- img "Solgar Selenium 200mcg dietary supplement in a brown glass bottle, 50 tablets."
+- text: Selenium $56.
+- superscript: "48"
+- img "A dark brown glass bottle of Nature's Way Dandelion Digestive Support supplement, with a light brown cap."
+- text: Dandelion Extract $36.
+- superscript: "59"
+- img "Nature's Bounty Milk Thistle 250mg 100 capsules supplement bottle."
+- text: Milk Thistle $35.
+- superscript: "99"
+- img "An amber glass dropper bottle with a green and yellow label, displaying \"ARTICHOKE\" in white text and an organic seal."
+- text: Artochoke Extract $57.
+- superscript: "72"
+- paragraph: However, getting these ingredients separately might not be the best idea. First, because you don’t know much about the quality of each supplement. Second, because you don’t know whether these supplements contain the precise dosage needed for an effective detox effect.
+- heading "As You See Below, You Have Three Packages With Restore Detox Formula With Different Discounts To Choose From:" [level=1]:
+  - text: As You See Below, You Have
+  - strong: Three Packages With Restore Detox Formula
+  - text: "With Different Discounts To Choose From:"
+- 'img "Eight circular badges displaying dietary and ingredient claims: GMO Free, Vegan, Gluten Free, Soy Free, Dairy Free, Nuts Free, Made with Natural Ingredients, and Sugar Free."'
+- 'img "Logo: Manufactured in an FDA Registered Facility."'
+- img "Green circular logo for GMP (Good Manufacturing Practices) Quality Certification."
+- text: Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 59 per bottle 1-month SUPPLY
+- img "A dark brown glass bottle with a teal and silver label for Zonia Restore Detox Advanced Liver Support dietary supplement, containing 90 capsules with NAC."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $59 for 1 bottle
+- img "Delivery truck icon."
+- text: free shipping Best Value! Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 33 per bottle 6-month SUPPLY
+- img "Multiple bottles of Zonia Restore Detox Advanced Liver Support dietary supplement with NAC, 90 capsules per bottle."
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $198 for 6 bottles
+- img "Delivery truck icon."
+- text: free shipping Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 39 per bottle 3-month SUPPLY
+- img "Three brown bottles of Zonia Restore Detox Advanced Liver Support dietary supplements with NAC."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $117 for 3 bottles
+- img "Delivery truck icon."
+- text: free shipping No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to flush the toxins out of my body. I agree to purchase Restore Detox at $79/bottle in the future instead of getting it at a discounted rate today. I want to pass up this chance forever.
+- img "A light-colored outline drawing of a bouquet with two spherical, fluffy flowers and leafy sprigs on a black background."
+- img "Cream-colored line art of a delicate flowering branch with multiple small blossoms and leaves on a black background."
+- paragraph: What package should you choose?
+- paragraph: We now know it takes years, even decades, for toxins to build up in the body and start causing havoc.
+- img "A joyful woman with her head tilted back laughs as yellow petals fall around her in a field of tall sunflowers."
+- paragraph: Just like the buildup of toxins is a slow process, the detox process won’t happen overnight.
+- paragraph: For the best results, your body needs time to assimilate the ingredients, and work along with the ingredients for at least a few months.
+- paragraph:
+  - text: This is why our experts strongly recommend starting out with the
+  - strong: 3-month
+  - text: or, better yet, with the
+  - strong: 6 month options
+  - text: in order to get the most benefit.
+- paragraph: "Choosing the 3-month or 6-month supplement package helps you:"
+- list:
+  - listitem:
+    - strong: Get a better deal for MORE bottles
+    - text: ", while you allow your body to go through a long-lasting detox process;"
+  - listitem:
+    - strong: Give your body enough time to safely detox and rejuvenate
+  - listitem:
+    - strong: Make sure you have enough product for a complete detox
+    - text: ", without having to wait weeks for us to restock our product."
+- paragraph:
+  - strong: "Remember:"
+  - text: It can take decades for the toxin build-up to start affecting our bodies. But when it does, it affects every single function of the body.
+- paragraph: This is why our detox experts recommend giving your body at least several months to properly flush out toxins.
+- 'img "Eight circular badges displaying dietary and ingredient claims: GMO Free, Vegan, Gluten Free, Soy Free, Dairy Free, Nuts Free, Made with Natural Ingredients, and Sugar Free."'
+- 'img "Logo: Manufactured in an FDA Registered Facility."'
+- img "Green circular logo for GMP (Good Manufacturing Practices) Quality Certification."
+- text: Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 59 per bottle 1-month SUPPLY
+- img "A dark brown glass bottle with a teal and silver label for Zonia Restore Detox Advanced Liver Support dietary supplement, containing 90 capsules with NAC."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $59 for 1 bottle
+- img "Delivery truck icon."
+- text: free shipping Best Value! Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 33 per bottle 6-month SUPPLY
+- img "Multiple bottles of Zonia Restore Detox Advanced Liver Support dietary supplement with NAC, 90 capsules per bottle."
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $198 for 6 bottles
+- img "Delivery truck icon."
+- text: free shipping Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 39 per bottle 3-month SUPPLY
+- img "Three brown bottles of Zonia Restore Detox Advanced Liver Support dietary supplements with NAC."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $117 for 3 bottles
+- img "Delivery truck icon."
+- text: free shipping No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to flush the toxins out of my body. I agree to purchase Restore Detox at $79/bottle in the future instead of getting it at a discounted rate today. I want to pass up this chance forever.
+- paragraph:
+  - text: The 3-bottle and 6-bottle options allow for a
+  - strong: longer-lasting
+  - text: detox process.
+- paragraph:
+  - text: You get more time to experience
+  - strong: the positive effects
+  - text: ", without having to stop your progress mid-way just because you ran out of your detox ingredients."
+- paragraph: So, instead of letting the toxin build-up in your body wreak havoc on your mood, energy levels and metabolism...
+- paragraph: "All you have to say is:"
+- paragraph: MAYBE this natural formula might work for me too.
+- paragraph: MAYBE I can get back the energy and health I had 15 or 20 years ago...
+- paragraph: MAYBE I can give my body a fair chance to fight against the toxin IV drip that is causing brain decline and premature aging.
+- img "A 180-day 100% money-back guarantee badge."
+- paragraph:
+  - text: And if you
+  - strong: don’t experience jaw-dropping results
+  - text: in your energy levels, metabolism, skin, mood and overall health
+  - strong: in the next 180 days...
+- paragraph:
+  - text: Simply email us at support@zonia.com and
+  - strong: we’ll give you a full refund
+  - text: ", no questions asked, no matter what package you chose."
+- paragraph: The choice is yours to make.
+- paragraph: You can either...
+- paragraph: Do nothing, and hope the toxin build-up in your body will “heal itself,” which is not something we recommend, especially if you’ve started to show symptoms of brain decline and premature aging...
+- paragraph: Or...
+- paragraph:
+  - strong: Try to fight against the toxin build-up in order to feel healthier, both mentally and physically
+  - text: ", using a natural herbal supplement you can try risk-free for 6 months."
+- paragraph:
+  - strong: Thank you for reading. I hope you’re as excited as we are to begin your journey to health.
+- paragraph: Sincerely, Stefan Apostolov Founder of Zonia & Host of “Beyond the Brain”
+- text: Frequently Asked Questions
+- heading "Is Restore Detox Right for me?" [level=2]:
+  - button "Is Restore Detox Right for me?" [expanded]
+- paragraph: If you’re dealing with fatigue and trouble sleeping, low mood or mood swings, weight gain, skin issues, or bodily aches and pains – you might have a toxin build-up in the body and not know what’s causing your symptoms.
+- paragraph: Restore Detox is an expert-formulated detox that fights against common toxins that harm our energy, memory and metabolism.
+- paragraph:
+  - strong: "The ingredients of Restore Detox are shown to:"
+- list:
+  - listitem:
+    - text: Help detox the body from
+    - strong: heavy metals, pesticides, antibiotics, diesel fuel, and numerous other toxins
+  - listitem: Assist the detox and protection of your liver and kidneys, further accelerating our natural detox process and body rejuvenation
+  - listitem:
+    - text: Filter out
+    - strong: toxic chemicals
+    - text: found in your bloodstream from your environment and diet.
+  - listitem:
+    - text: Help your body stabilize
+    - strong: insulin and glucose levels
+  - listitem:
+    - text: Support the body in
+    - strong: safely shedding extra pounds
+  - listitem:
+    - text: Help
+    - strong: rejuvenate cells, tissues and organs
+- paragraph: And much more.
+- paragraph: "When we created Restore Detox, we had one goal in mind:"
+- paragraph:
+  - text: To help you benefit from an effective,
+  - strong: side-effect-free
+  - text: detox, while also supporting your liver and kidneys.
+- heading "Ok, Stefan, but what are the potential side effects?" [level=2]:
+  - button "Ok, Stefan, but what are the potential side effects?"
+- heading "When Does the product expire?" [level=2]:
+  - button "When Does the product expire?"
+- heading "How do I take Restore Detox?" [level=2]:
+  - button "How do I take Restore Detox?"
+- heading "But what if I’m not happy with the results after all?" [level=2]:
+  - button "But what if I’m not happy with the results after all?"
+- 'img "Eight circular badges displaying dietary and ingredient claims: GMO Free, Vegan, Gluten Free, Soy Free, Dairy Free, Nuts Free, Made with Natural Ingredients, and Sugar Free."'
+- 'img "Logo: Manufactured in an FDA Registered Facility."'
+- img "Green circular logo for GMP (Good Manufacturing Practices) Quality Certification."
+- text: Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 59 per bottle 1-month SUPPLY
+- img "A dark brown glass bottle with a teal and silver label for Zonia Restore Detox Advanced Liver Support dietary supplement, containing 90 capsules with NAC."
+- text: Save $20
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $59 for 1 bottle
+- img "Delivery truck icon."
+- text: free shipping Best Value! Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 33 per bottle 6-month SUPPLY
+- img "Multiple bottles of Zonia Restore Detox Advanced Liver Support dietary supplement with NAC, 90 capsules per bottle."
+- text: Save $276
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $198 for 6 bottles
+- img "Delivery truck icon."
+- text: free shipping Regular
+- subscript: $
+- text: 79 Today
+- subscript: $
+- text: 39 per bottle 3-month SUPPLY
+- img "Three brown bottles of Zonia Restore Detox Advanced Liver Support dietary supplements with NAC."
+- text: Save $120
+- paragraph:
+  - text: By clicking "Add to Order", you authorize a one-time charge. This is a separate charge from your original purchase. By proceeding, you agree to our
+  - link "Terms of Use":
+    - /url: /terms_use
+  - text: and
+  - link "Privacy Policy":
+    - /url: /privacy_cookie
+  - text: .
+- img "A 100% Money Back Guarantee badge for 180 Days."
+- text: Add to Order
+- 'img "Payment options: Visa, Mastercard, American Express, Discover, and PayPal."'
+- text: YOUR total $117 for 3 bottles
+- img "Delivery truck icon."
+- text: free shipping No thanks. I understand this is the only time I’m seeing this offer and I’m okay with missing out on the discounts. I don’t really want to flush the toxins out of my body. I agree to purchase Restore Detox at $79/bottle in the future instead of getting it at a discounted rate today. I want to pass up this chance forever.
+- heading "Citations" [level=2]:
+  - button "Citations"
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+Failed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Test failed on page: 'https://zonia-stg.com/bb-restore-detox-special?id=6aac71bef601018f5456c715'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.7__20260917-230446.png

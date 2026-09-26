@@ -1,0 +1,13 @@
+Executing step: user select to buy "1" bottles in "Restore Vision" Supplements page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/restore-vision-special
+===> Cookie banner accepted using selector: //*[@data-tid='banner-accept']
+===> Buying 1 bottle...
+Funnel: restore_vision
+===> User email is: zoniat-v2Blair-1790071070@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/restore-vision-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/restore-vision-6-more-bottles?orderId=6ab251296d77250eaab80f95"
+===> Successfully bought 1 bottle
+Completed step: user select to buy "1" bottles in "Restore Vision" Supplements page
