@@ -6,7 +6,7 @@ import allure
 from playwright.sync_api import sync_playwright
 import common_variables
 from common_functions import cc_random_card as CC
-from common_functions.mongo_db import *
+from common_functions.mongo_db import clean_automation_users_with_api
 
 SCREENSHOTS_DIR = os.path.join(os.getcwd(), "screenshots")
 
