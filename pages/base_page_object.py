@@ -237,26 +237,26 @@ class BasePage(object):
         """
         field = self.context.page.locator(locator)
 
-        # Password fields are excluded from the 50-character limit validation (confirmed with dev).
+        # Password fields are excluded from the 100-character limit validation (confirmed with dev).
         if field.get_attribute("type") == "password":
-            print(f'===> Skipping 50-character limit check on password field "{locator}"')
+            print(f'===> Skipping 100-character limit check on password field "{locator}"')
         else:
-            # Parsley's maxlength only blocks real keystrokes, so a 51-character
+            # Parsley's maxlength only blocks real keystrokes, so a 101-character
             # value has to be pasted in (fill()) rather than typed to trigger the
             # overflow message, regardless of which `method` the real value uses below.
-            overflow_value = "A" * 51
+            overflow_value = "A" * 101
             field.fill(overflow_value)
             message_id = field.get_attribute("data-length-limit-message-id")
             assert message_id, (
                 f'Field "{locator}" has no "data-length-limit-message-id" attribute - '
-                f'cannot verify its 50-character limit.'
+                f'cannot verify its 100-character limit.'
             )
             limit_message = self.context.page.locator(f"#{message_id}")
             assert limit_message.is_visible(), (
-                f'Field "{locator}" did not display the 50-character limit message '
-                f'after entering a 51-character value - validation may be missing.'
+                f'Field "{locator}" did not display the 100-character limit message '
+                f'after entering a 101-character value - validation may be missing.'
             )
-            print(f'===> 50-character limit verified on field "{locator}"')
+            print(f'===> 100-character limit verified on field "{locator}"')
             field.fill("")
 
         if method == "fill":
