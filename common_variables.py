@@ -288,9 +288,9 @@ twl_live_rw_main_url = 'twl-replay-weekend'
 twl_live_rw_sales_url = 'twl-join-zonia-bonuses'
 twl_live_rw_signup_url = 'twl-signup-bonuses'
 
-twl_ev_rw_main_url = 'mb2/twl-replay-weekend'
-twl_ev_rw_sales_url = 'mb2/twl-join-zonia-bonuses'
-twl_ev_rw_signup_url = 'mb2/twl-signup-bonuses'
+twl_ev_rw_main_url = 'twl-replay-weekend'
+twl_ev_rw_sales_url = 'twl-join-zonia-bonuses'
+twl_ev_rw_signup_url = 'twl-signup-bonuses'
 
 cr_live_opt_in_url = 'cancer-unraveled'
 cr_live_immune_opt_in_url = 'cr-immunity'
