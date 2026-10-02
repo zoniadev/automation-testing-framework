@@ -86,8 +86,11 @@ class SupplementUpsellPage(BasePage):
             next_page = getattr(common_variables, f"{self.context.docuseries_prefix}_{decision.lower()}_masterclass_url")
             self.context.page.locator(selection).click()
             if decision == 'platinum':
-                self.context.docuseries_address_will_appear = True
-                print('Address popup should appear next page')
+                if not self.context.docuseries_address_already_filled:
+                    self.context.docuseries_address_will_appear = True
+                    print('Address popup should appear next page')
+                else:
+                    print('Address popup already appeared earlier and was filled')
         else:
             next_page = getattr(common_variables, f'{self.context.docuseries_prefix}_masterclass_url')
             self.context.page.locator(NO_THANKS_BUTTON).click()
@@ -167,8 +170,11 @@ class SupplementUpsellPage(BasePage):
             time.sleep(30)
             self.retry_clicking_button(button_locator, next_page)
             print(f'===> Successfully bought {amount} bottle/s')
-            self.context.docuseries_address_will_appear = True
-            print('Address popup should appear next page')
+            if not self.context.docuseries_address_already_filled:
+                self.context.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
+            else:
+                print('Address popup already appeared earlier and was filled')
 
     def _click_when_ready(self, locator, timeout=15000):
         # This page just navigated (from the preceding bottle-purchase click).
@@ -189,8 +195,11 @@ class SupplementUpsellPage(BasePage):
             time.sleep(30)
             self._click_when_ready(YES_UPGRADE_BUTTON)
             print('===> Upgrading order...')
-            self.context.docuseries_address_will_appear = True
-            print('Address popup should appear next page')
+            if not self.context.docuseries_address_already_filled:
+                self.context.docuseries_address_will_appear = True
+                print('Address popup should appear next page')
+            else:
+                print('Address popup already appeared earlier and was filled')
         elif upsell_downsell == 'no':
             if funnel_prefix == 'pc':
                 if amount != 'no':
