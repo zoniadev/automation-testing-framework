@@ -31,8 +31,11 @@ class SignUpPage(BasePage):
                 cycle = 'monthly'
         if self.context.is_replay_weekend:
             if cycle in ['lifetime', 'annually']:
-                self.context.docuseries_address_will_appear = True
-                print('Address popup should appear next page')
+                if not self.context.docuseries_address_already_filled:
+                    self.context.docuseries_address_will_appear = True
+                    print('Address popup should appear next page')
+                else:
+                    print('Address popup already appeared earlier and was filled')
             self.wait_for_navigation(
                 getattr(common_variables, f'{self.context.docuseries_prefix}_masterclass_url'),
                 timeout=30000)
