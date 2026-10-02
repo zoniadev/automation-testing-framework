@@ -16,14 +16,14 @@ class OptInPage(BasePage):
         self.context.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
         if self.context.funnel == 'lg_live':
-            self.context.page.locator(OPTIN_NAME_FIELD_AD_LIVE).fill(self.context.supplement_funnel_name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(self.context.supplement_funnel_email)
+            self.enter_text(OPTIN_NAME_FIELD_AD_LIVE, self.context.supplement_funnel_name)
+            self.enter_text(OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email)
         elif self.context.mobile_run:
-            self.context.page.locator(MOBILE_OPTIN_NAME_FIELD).type(self.context.supplement_funnel_name)
-            self.context.page.locator(MOBILE_OPTIN_EMAIL_FIELD).type(self.context.supplement_funnel_email, delay=50)
+            self.enter_text(MOBILE_OPTIN_NAME_FIELD, self.context.supplement_funnel_name, method="type")
+            self.enter_text(MOBILE_OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email, method="type", delay=50)
         else:
-            self.context.page.locator(OPTIN_NAME_FIELD).fill(self.context.supplement_funnel_name)
-            self.context.page.locator(OPTIN_EMAIL_FIELD).fill(self.context.supplement_funnel_email)
+            self.enter_text(OPTIN_NAME_FIELD, self.context.supplement_funnel_name)
+            self.enter_text(OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email)
         self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
         if self.context.funnel.startswith('bb_ev'):
             self.context.funnel = 'bb_ev'

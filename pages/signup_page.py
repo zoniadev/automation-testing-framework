@@ -17,10 +17,10 @@ class SignUpPage(BasePage):
 
     def register_in_signup_page(self, cycle):
         print(f'>>> Registering in Signup page...')
-        self.context.page.locator(SIGNUP_NAME_FIELD).fill(self.context.supplement_funnel_name)
-        self.context.page.locator(SIGNUP_EMAIL_FIELD).fill(self.context.supplement_funnel_email)
+        self.enter_text(SIGNUP_NAME_FIELD, self.context.supplement_funnel_name)
+        self.enter_text(SIGNUP_EMAIL_FIELD, self.context.supplement_funnel_email)
         self.context.supplement_funnel_password = RD.password(8)
-        self.context.page.locator(SIGNUP_PASSWORD_FIELD).fill(self.context.supplement_funnel_password)
+        self.enter_text(SIGNUP_PASSWORD_FIELD, self.context.supplement_funnel_password)
         print(f'===> User email is: {self.context.supplement_funnel_email}')
         if self.context.docuseries_prefix == 'fs':
             self.populate_cc_details(submit_button=FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)

@@ -26,19 +26,19 @@ class SupplementStartPage(BasePage):
         else:
             button_locator = getattr(locators, f"BUY_{amount}_BOTTLES_BUTTON")
             self.context.page.locator(button_locator).click()
-        self.safe_fill(FIRST_NAME_FIELD, self.context.supplement_funnel_name)
-        self.context.page.locator(LAST_NAME_FIELD).fill(RD.last_name())
-        self.context.page.locator(EMAIL_FIELD).fill(self.context.supplement_funnel_email)
-        self.context.page.locator(PHONE_FIELD).fill(RD.phone_number())
-        self.context.page.locator(ADDRESS_FIELD).fill(RD.address_line())
-        self.context.page.locator(CITY_FIELD).fill(RD.town())
+        self.enter_text(FIRST_NAME_FIELD, self.context.supplement_funnel_name, method="safe_fill")
+        self.enter_text(LAST_NAME_FIELD, RD.last_name())
+        self.enter_text(EMAIL_FIELD, self.context.supplement_funnel_email)
+        self.enter_text(PHONE_FIELD, RD.phone_number())
+        self.enter_text(ADDRESS_FIELD, RD.address_line())
+        self.enter_text(CITY_FIELD, RD.town())
         print(f'Funnel: {self.context.funnel}')
         if self.context.funnel in ['restore_vision', 'restore_vision_b2g3']:
             self.context.page.locator(COUNTRY_FIELD).select_option('USA')
         else:
-            self.context.page.locator(COUNTRY_FIELD).fill('USA')
-        self.context.page.locator(STATE_FIELD).fill('CA')
-        self.context.page.locator(ZIP_FIELD).fill(RD.postcode())
+            self.enter_text(COUNTRY_FIELD, 'USA')
+        self.enter_text(STATE_FIELD, 'CA')
+        self.enter_text(ZIP_FIELD, RD.postcode())
         print(f'===> User email is: {self.context.supplement_funnel_email}')
         self.populate_cc_details()
         self.wait_for_navigation(

@@ -32,7 +32,7 @@ class FaceScanPage(BasePage):
                 raise Exception('Invalid Face Scan form.')
             locator, action = field_map[key]
             if action == 'fill':
-                self.context.page.locator(locator).fill(str(value))
+                self.enter_text(locator, str(value))
             elif action == 'select':
                 self.context.page.locator(locator).click()
                 self.context.page.locator(locator).select_option(value=value)

@@ -15,7 +15,7 @@ class WelcomePage(BasePage):
         self.context.supplement_funnel_password = RD.password()
         self.context.page.locator(PASSWORD_POPUP_FIELD).click(timeout=20000)
         time.sleep(0.5)
-        self.context.page.locator(PASSWORD_POPUP_FIELD).press_sequentially(self.context.supplement_funnel_password)
+        self.enter_text(PASSWORD_POPUP_FIELD, self.context.supplement_funnel_password, method="press_sequentially")
         time.sleep(0.5)
         self.context.page.locator(SAVE_PASSWORD_BUTTON).click()
 

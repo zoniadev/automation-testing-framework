@@ -225,7 +225,49 @@ class BasePage(object):
 
     def log_in_zonia_portal(self):
         self.handle_cookie_banner()
-        self.context.page.locator(LOGIN_EMAIL_FIELD).fill(common_variables.video_user_email)
-        self.context.page.locator(LOGIN_PASSWORD_FIELD).fill(common_variables.video_user_pass)
+        self.enter_text(LOGIN_EMAIL_FIELD, common_variables.video_user_email)
+        self.enter_text(LOGIN_PASSWORD_FIELD, common_variables.video_user_pass)
         self.context.page.locator(LOGIN_SUBMIT_BUTTON).click()
         self.wait_for_navigation(common_variables.zonia_portal_url, timeout=20000)
+
+    def enter_text(self, locator, value, method="fill", delay=0):
+        """
+        Not for credit card fields inside payment iframes - use
+        retry_cc_number_entry()/populate_cc_details() for those instead.
+        """
+        field = self.context.page.locator(locator)
+
+        # Password fields are excluded from the 50-character limit validation (confirmed with dev).
+        if field.get_attribute("type") == "password":
+            print(f'===> Skipping 50-character limit check on password field "{locator}"')
+        else:
+            # Parsley's maxlength only blocks real keystrokes, so a 51-character
+            # value has to be pasted in (fill()) rather than typed to trigger the
+            # overflow message, regardless of which `method` the real value uses below.
+            overflow_value = "A" * 51
+            field.fill(overflow_value)
+            message_id = field.get_attribute("data-length-limit-message-id")
+            assert message_id, (
+                f'Field "{locator}" has no "data-length-limit-message-id" attribute - '
+                f'cannot verify its 50-character limit.'
+            )
+            limit_message = self.context.page.locator(f"#{message_id}")
+            assert limit_message.is_visible(), (
+                f'Field "{locator}" did not display the 50-character limit message '
+                f'after entering a 51-character value - validation may be missing.'
+            )
+            print(f'===> 50-character limit verified on field "{locator}"')
+            field.fill("")
+
+        if method == "fill":
+            field.fill(value)
+        elif method == "type":
+            field.type(value, delay=delay)
+        elif method == "press_sequentially":
+            field.press_sequentially(value, delay=delay)
+        elif method == "safe_fill":
+            self.safe_fill(locator, value)
+        else:
+            raise ValueError(
+                f'Unknown method "{method}" - expected "fill", "type", "press_sequentially", or "safe_fill".'
+            )

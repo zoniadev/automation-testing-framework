@@ -256,13 +256,13 @@ class SupplementUpsellPage(BasePage):
     def _fill_shipping_form(self, locators):
         """Fills the shipping form using the provided locators."""
         phone_locator, address_locator, city_locator, state_locator, zip_locator, country_locator = locators
-        self.context.page.locator(SHIPPING_FULL_NAME_FIELD).fill(self.context.supplement_funnel_name)
-        self.context.page.locator(phone_locator).fill(RD.phone_number())
-        self.context.page.locator(address_locator).fill(RD.address_line())
-        self.context.page.locator(city_locator).fill(RD.town())
-        self.context.page.locator(state_locator).fill(RD.state())
-        self.context.page.locator(zip_locator).fill(RD.postcode())
-        self.context.page.locator(country_locator).fill('USA')
+        self.enter_text(SHIPPING_FULL_NAME_FIELD, self.context.supplement_funnel_name)
+        self.enter_text(phone_locator, RD.phone_number())
+        self.enter_text(address_locator, RD.address_line())
+        self.enter_text(city_locator, RD.town())
+        self.enter_text(state_locator, RD.state())
+        self.enter_text(zip_locator, RD.postcode())
+        self.enter_text(country_locator, 'USA')
         self.context.page.locator(SHIPPING_SUBMIT_BUTTON).click()
 
     def populate_shipping_address(self):
