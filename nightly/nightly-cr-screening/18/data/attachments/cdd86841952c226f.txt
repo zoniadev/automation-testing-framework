@@ -1,0 +1,10 @@
+Executing step: user is on the "cr_live" episode "5" page
+Failed step: user is on the "cr_live" episode "5" page
+Test failed on page: 'https://staging.zonia.com/cr-episode-5-live-15t7f75fib'
+Taking screenshots
+Error taking or attaching screenshot: Page.screenshot: Timeout 5000ms exceeded.
+Call log:
+taking page screenshot
+  -   disabled all CSS animations
+  - waiting for fonts to load...
+

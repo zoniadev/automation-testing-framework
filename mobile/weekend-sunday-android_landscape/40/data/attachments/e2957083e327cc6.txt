@@ -1,0 +1,9 @@
+Executing step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://zonia-stg.com/restore-detox-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 1 bottle...
+Failed step: user select to buy "1" bottles in "Restore Detox" Supplements page
+Test failed on page: 'https://zonia-stg.com/restore-detox-special'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Detox_Supplement_nightly_--_@1.2__20260920-124505.png

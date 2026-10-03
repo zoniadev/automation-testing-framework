@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","11700","Verify banners redirects -- @1.1 ","","2026-08-26","failed","2026-08-26","","","",""
+"","11399","Verify banners in This Week articles","","2026-08-26","failed","2026-08-26","","","",""
