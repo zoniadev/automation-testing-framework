@@ -2,7 +2,7 @@ name: Nightly Restore Sleep
 
 on:
   schedule:
-    - cron: '17 4 * * *'
+    - cron: '17 19 * * *'
   workflow_dispatch:
 
 jobs:
