@@ -398,7 +398,7 @@ Feature: Bonus entry tests
       | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
 
 
-  @bonus_entry @tf_ev_bonus_entry @WIP
+  @bonus_entry @tf_ev_bonus_entry
   Scenario Outline: TF Evergreen funnel via bonus entry (full)
     Given user starts "tf_ev" funnel from "<variant>" bonus entry page
     When user sign up for "<plan>" plan
@@ -415,18 +415,18 @@ Feature: Bonus entry tests
 
     Examples:
       | outline        | variant | plan      | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
-#      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
+      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
+      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
       | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
-#      | 4-ep8          | ep8     | monthly   | no                   | no         | upgrade            | no         | no                 |
-#      | 5-ep8          | ep8     | quarterly | no                   | 6          | no                 | no         | no                 |
-#      | 6-ep8          | ep8     | annually  | buy                  | no         | upgrade            | 6          | best_value         |
-#      | 7-ep9          | ep9     | monthly   | no                   | 1          | best_value         | no         | upgrade            |
-#      | 8-ep9          | ep9     | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
-#      | 9-ep9          | ep9     | annually  | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
-#      | bug-check-ep8  | ep8     | annually  | no                   | no         | no                 | no         | no                 |
-#      | bug-check-ep9  | ep9     | annually  | no                   | no         | no                 | no         | no                 |
+      | 4-ep8          | ep8     | monthly   | no                   | no         | upgrade            | no         | no                 |
+      | 5-ep8          | ep8     | quarterly | no                   | 6          | no                 | no         | no                 |
+      | 6-ep8          | ep8     | annually  | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7-ep9          | ep9     | monthly   | no                   | 1          | best_value         | no         | upgrade            |
+      | 8-ep9          | ep9     | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9-ep9          | ep9     | annually  | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
+      | bug-check-ep8  | ep8     | annually  | no                   | no         | no                 | no         | no                 |
+      | bug-check-ep9  | ep9     | annually  | no                   | no         | no                 | no         | no                 |
 
 
   @quick_bonus_entry @tf_ev_quick_bonus_entry @tf_evergreen
@@ -625,3 +625,34 @@ Feature: Bonus entry tests
     Examples:
       | outline | variant | plan     | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
       | 1-base  | base    | lifetime | no                   | no         | most_popular       | no         | no                 |
+
+
+  @live_bonus_entry @hh_live_bonus_entry @hh_live
+  Scenario Outline: HH Live funnel via bonus entry (full)
+    Given user starts "hh_live" funnel from "<variant>" bonus entry page
+    When user sign up for "<plan>" plan
+    And user makes following decision in docuseries "Masterclass Packages" Upsell page
+      | decision               |
+      | <masterclass_packages> |
+    And user makes following decision in docuseries "Restore Sleep" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rs_bottles> | <rs_upsell_downsell> |
+    And user makes following decision in docuseries "Restore Collagen" Upsell page
+      | bottles      | upsell_downsell      |
+      | <rc_bottles> | <rc_upsell_downsell> |
+    Then user complete registration
+
+    Examples:
+      | outline        | variant | plan      | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
+      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
+      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
+      | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
+      | 4-ep11         | ep11    | monthly   | no                   | no         | upgrade            | no         | no                 |
+      | 5-ep11         | ep11    | quarterly | no                   | 6          | no                 | no         | no                 |
+      | 6-ep11         | ep11    | lifetime  | buy                  | no         | upgrade            | 6          | best_value         |
+      | 7-ep12         | ep12    | annually  | no                   | 1          | best_value         | no         | upgrade            |
+      | 8-ep12         | ep12    | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9-ep12         | ep12    | quarterly | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
+      | bug-check-ep11 | ep11    | annually  | no                   | no         | no                 | no         | no                 |
+      | bug-check-ep12 | ep12    | annually  | no                   | no         | no                 | no         | no                 |
