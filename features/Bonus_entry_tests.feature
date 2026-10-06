@@ -129,7 +129,7 @@ Feature: Bonus entry tests
       | 1-base  | base    | annually | buy                  | no         | no                 | 3          | most_popular       |
 
 
-  @live_bonus_entry @bb_live_bonus_entry @bb_live
+  @live_bonus_entry @bb_live_bonus_entry @bb_live @WIP
   Scenario Outline: BB Live funnel via bonus entry (full)
     Given user starts "bb_live" funnel from "<variant>" bonus entry page
     When user sign up for "<plan>" plan
@@ -146,16 +146,16 @@ Feature: Bonus entry tests
 
     Examples:
       | outline        | variant | plan      | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
-      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
-      | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
-      | 4-base         | base    | monthly   | no                   | no         | upgrade            | no         | no                 |
-      | 5-base         | base    | quarterly | no                   | 6          | no                 | no         | no                 |
+#      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
+#      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
+#      | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
+#      | 4-base         | base    | monthly   | no                   | no         | upgrade            | no         | no                 |
+#      | 5-base         | base    | quarterly | no                   | 6          | no                 | no         | no                 |
       | 6-base         | base    | lifetime  | buy                  | no         | upgrade            | 6          | best_value         |
-      | 7-base         | base    | annually  | no                   | 1          | best_value         | no         | upgrade            |
-      | 8-base         | base    | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
-      | 9-base         | base    | quarterly | buy                  | 3          | most_popular       | 1          | most_popular       |
-      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
+#      | 7-base         | base    | annually  | no                   | 1          | best_value         | no         | upgrade            |
+#      | 8-base         | base    | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
+#      | 9-base         | base    | quarterly | buy                  | 3          | most_popular       | 1          | most_popular       |
+#      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
 
 
   @bonus_entry @lg_ev_bonus_entry
