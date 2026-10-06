@@ -48,7 +48,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | 1-base  | base    | lifetime | no                   | no         | upgrade            | no         | no                 |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @live_bonus_entry @ad_live_bonus_entry @unbroken_live
@@ -126,10 +126,10 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | 1-base  | base    | annually | buy                  | no         | no                 | 3          | most_popular       |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
-  @live_bonus_entry @bb_live_bonus_entry @bb_live @WIP
+  @live_bonus_entry @bb_live_bonus_entry @bb_live
   Scenario Outline: BB Live funnel via bonus entry (full)
     Given user starts "bb_live" funnel from "<variant>" bonus entry page
     When user sign up for "<plan>" plan
@@ -146,16 +146,16 @@ Feature: Bonus entry tests
 
     Examples:
       | outline        | variant | plan      | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
-#      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
-#      | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
-#      | 4-base         | base    | monthly   | no                   | no         | upgrade            | no         | no                 |
-#      | 5-base         | base    | quarterly | no                   | 6          | no                 | no         | no                 |
+      | 1-base         | base    | monthly   | no                   | no         | no                 | no         | no                 |
+      | 2-base         | base    | quarterly | no                   | no         | no                 | no         | upgrade            |
+      | 3-base         | base    | annually  | no                   | no         | no                 | 1          | no                 |
+      | 4-base         | base    | monthly   | no                   | no         | upgrade            | no         | no                 |
+      | 5-base         | base    | quarterly | no                   | 6          | no                 | no         | no                 |
       | 6-base         | base    | lifetime  | buy                  | no         | upgrade            | 6          | best_value         |
-#      | 7-base         | base    | annually  | no                   | 1          | best_value         | no         | upgrade            |
-#      | 8-base         | base    | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
-#      | 9-base         | base    | quarterly | buy                  | 3          | most_popular       | 1          | most_popular       |
-#      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
+      | 7-base         | base    | annually  | no                   | 1          | best_value         | no         | upgrade            |
+      | 8-base         | base    | quarterly | no                   | 3          | upgrade            | 3          | upgrade            |
+      | 9-base         | base    | quarterly | buy                  | 3          | most_popular       | 1          | most_popular       |
+      | bug-check-base | base    | annually  | no                   | no         | no                 | no         | no                 |
 
 
   @bonus_entry @lg_ev_bonus_entry
@@ -206,7 +206,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rl_bottles | rl_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | 1-base  | base    | annually | no                   | 6          | best_value         | no         | no                 |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @live_bonus_entry @lg_live_bonus_entry @ageless_live
@@ -366,7 +366,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rl_bottles | rl_upsell_downsell | rs_bottles | rs_upsell_downsell |
-      | 1-base  | base    | annually | buy                  | no         | no                 | no         | upgrade            |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @live_bonus_entry @is_live_bonus_entry @is_live
@@ -446,7 +446,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-      | 1-base  | base    | annually | no                   | 3          | upgrade            | no         | no                 |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @bonus_entry @twl_ev_bonus_entry
@@ -493,7 +493,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rs_bottles | rs_upsell_downsell | rd_bottles | rd_upsell_downsell |
-      | 1-base  | base    | lifetime | buy                  | no         | no                 | 1          | best_value         |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @bonus_entry @cr_ev_bonus_entry
@@ -624,7 +624,7 @@ Feature: Bonus entry tests
 
     Examples:
       | outline | variant | plan     | masterclass_packages | rs_bottles | rs_upsell_downsell | rc_bottles | rc_upsell_downsell |
-      | 1-base  | base    | lifetime | no                   | no         | most_popular       | no         | no                 |
+      | 1-base  | base    | annually | no                   | no         | no                 | 1          | no                 |
 
 
   @live_bonus_entry @hh_live_bonus_entry @hh_live
