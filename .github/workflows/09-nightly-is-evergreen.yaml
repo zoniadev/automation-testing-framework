@@ -1,17 +1,17 @@
-name: Nightly AD Evergreen
+name: Nightly IS Evergreen
 
 on:
   schedule:
-    - cron: '17 19 * * *'
+    - cron: '17 1 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-ad-evergreen
+      report_name: nightly-is-evergreen
       device: desktop
-      tags: '@unbroken_evergreen'
+      tags: '@is_evergreen'
       environment: staging
       report_scope: nightly
     secrets: inherit

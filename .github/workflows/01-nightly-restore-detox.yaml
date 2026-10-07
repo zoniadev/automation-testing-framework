@@ -2,7 +2,7 @@ name: Nightly Restore Detox
 
 on:
   schedule:
-    - cron: '17 1 * * *'
+    - cron: '17 17 * * *'
   workflow_dispatch:
 
 jobs:

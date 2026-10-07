@@ -26,11 +26,12 @@ class SignUpPage(BasePage):
             self.populate_cc_details(submit_button=FS_SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
         else:
             self.populate_cc_details(submit_button=SIGNUP_ACTIVATE_MEMBERSHIP_BUTTON)
+        original_cycle = cycle
         if self.context.docuseries_prefix not in ['km', 'twl', 'ad', 'cr', 'hh']:
             if cycle == 'lifetime':
                 cycle = 'monthly'
         if self.context.is_replay_weekend:
-            if cycle in ['lifetime', 'annually']:
+            if original_cycle in ['lifetime', 'annually']:
                 if not self.context.docuseries_address_already_filled:
                     self.context.docuseries_address_will_appear = True
                     print('Address popup should appear next page')

@@ -41,6 +41,14 @@ class JoinZoniaPage(BasePage):
         self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_rw_signup_url'), timeout=20000)
         print(f'>>> Successfully joined Zonia from replay weekend pages')
 
+    def start_from_bonus_entry(self, variant):
+        print(f'>>> Starting funnel from bonus entry page (variant: {variant})...')
+        self.handle_cookie_banner()
+        self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
+        self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_rw_signup_url'), timeout=20000)
+        self.context.is_replay_weekend = True
+        print(f'>>> Successfully started funnel from bonus entry page (variant: {variant})')
+
     def join_zonia_episode(self):
         self.context.page.locator(JOIN_ZONIA_ID_BUTTON).click()
         if self.context.funnel == 'cr_bonus':

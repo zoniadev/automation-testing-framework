@@ -1,17 +1,17 @@
-name: Nightly TF Evergreen
+name: Nightly Restore Sleep
 
 on:
   schedule:
-    - cron: '17 0 * * *'
+    - cron: '17 19 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-tf-evergreen
+      report_name: nightly-restore-sleep
       device: desktop
-      tags: '@tf_evergreen'
+      tags: '@restore_sleep'
       environment: staging
       report_scope: nightly
     secrets: inherit

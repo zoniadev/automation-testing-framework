@@ -1,17 +1,17 @@
-name: Nightly Restore Sleep
+name: Nightly Restore Vision
 
 on:
   schedule:
-    - cron: '17 4 * * *'
+    - cron: '17 20 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-restore-sleep
+      report_name: nightly-restore-vision
       device: desktop
-      tags: '@restore_sleep'
+      tags: '@restore_vision'
       environment: staging
       report_scope: nightly
     secrets: inherit
