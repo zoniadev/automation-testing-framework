@@ -212,11 +212,18 @@ class SupplementUpsellPage(BasePage):
         elif upsell_downsell in ['best_value', 'most_popular']:
             if funnel_prefix != 'pc':
                 self._click_when_ready(NO_THANKS_BUTTON)
+                print('===> Waiting to avoid payment method error...')
+                time.sleep(30)
                 if upsell_downsell == 'best_value':
                     self._click_when_ready(BUY_BEST_VALUE_BUTTON)
                 else:
                     self._click_when_ready(BUY_MOST_POPULAR_BUTTON)
                 print(f'===> Not upgrading, but getting {upsell_downsell} downsell...')
+                if not self.context.docuseries_address_already_filled:
+                    self.context.docuseries_address_will_appear = True
+                    print('Address popup should appear next page')
+                else:
+                    print('Address popup already appeared earlier and was filled')
 
     def _maybe_populate_shipping_address(self):
         """Populates shipping address if the flag is set."""

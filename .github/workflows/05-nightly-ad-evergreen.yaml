@@ -1,17 +1,17 @@
-name: Nightly Restore Vision
+name: Nightly AD Evergreen
 
 on:
   schedule:
-    - cron: '17 5 * * *'
+    - cron: '17 21 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-restore-vision
+      report_name: nightly-ad-evergreen
       device: desktop
-      tags: '@restore_vision'
+      tags: '@unbroken_evergreen'
       environment: staging
       report_scope: nightly
     secrets: inherit

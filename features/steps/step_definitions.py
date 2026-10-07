@@ -112,6 +112,23 @@ def user_register_in_opt_in_page(context, series):
     page.register_in_opt_in_page()
 
 
+@step(u'user starts "{series}" funnel from "{variant}" bonus entry page')
+def user_starts_bonus_entry(context, series, variant):
+    print(f'Scenario will use "{context.test_cc_type}" card "{context.test_cc_number}"')
+    context.flow_type = 'docuseries'
+    context.funnel = series.lower()
+    context.docuseries_prefix = context.funnel.split('_')[0]
+    context.supplement_funnel_email = RD.automation_template_email()
+    context.supplement_funnel_name = RD.automation_first_name()
+    page = JoinZoniaPage(context)
+    if variant == 'base':
+        entry_url = getattr(common_variables, f'{context.funnel}_rw_sales_url')
+    else:
+        entry_url = getattr(common_variables, f'{context.funnel}_rw_sales_{variant}_url')
+    page.navigate_to_url(entry_url)
+    page.start_from_bonus_entry(variant)
+
+
 @step(u'user join Zonia')
 def user_join_zonia(context):
     page = JoinZoniaPage(context)
