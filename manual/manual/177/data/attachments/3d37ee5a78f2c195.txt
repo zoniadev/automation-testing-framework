@@ -1,0 +1,61 @@
+Executing step: user starts "is_ev" funnel from "ep12" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/mb5e/is-join-zonia-bonuses-ep12
+>>> Starting funnel from bonus entry page (variant: ep12)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/mb5e/is-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/mb5e/is-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep12)
+Completed step: user starts "is_ev" funnel from "ep12" bonus entry page
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Lopez-1791288040@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/is-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/is-mini-masterclass-series-platinum-package?id=6ac4e3049c9137b5312eb4ae"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/is-restore-life-special"
+===> URL successfully changed to "https://zonia-stg.com/is-restore-life-special?id=6ac4e3049c9137b5312eb4ae"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "3" bottles and "most_popular" in upsell/downsell for Restore Life...
+===> Buying 3 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/is-rl-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/is-rl-6-more-bottles?id=6ac4e3049c9137b5312eb4ae"
+===> Successfully bought 3 bottle/s
+Address popup already appeared earlier and was filled
+===> Waiting to avoid payment method error...
+===> Not upgrading, but getting most_popular downsell...
+Address popup already appeared earlier and was filled
+===> Waiting for URL starting with "https://zonia-stg.com/is-restore-sleep-special"
+===> URL successfully changed to "https://zonia-stg.com/is-restore-sleep-special?id=6ac4e3049c9137b5312eb4ae"
+>>> Successfully selected "3" bottles and "most_popular" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "1" bottles and "most_popular" in upsell/downsell for Restore Sleep...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/is-rs-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/is-rs-6-more-bottles?id=6ac4e3049c9137b5312eb4ae"
+===> Successfully bought 1 bottle/s
+Address popup already appeared earlier and was filled
+===> Waiting to avoid payment method error...
+===> Not upgrading, but getting most_popular downsell...
+Address popup already appeared earlier and was filled
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> URL successfully changed to "https://zonia-stg.com/welcome?mode=standard&id=6ac4e3049c9137b5312eb4ae"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "1" bottles and "most_popular" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page

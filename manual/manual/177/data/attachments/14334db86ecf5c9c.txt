@@ -1,0 +1,73 @@
+Executing step: user starts "is_ev" funnel from "ep11" bonus entry page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://zonia-stg.com/mb5e/is-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/mb5e/is-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/mb5e/is-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "is_ev" funnel from "ep11" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hill-1791287490@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/is-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/is-mini-masterclass-series-platinum-package?id=6ac4e0dd9c9137b5312eb260"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/is-restore-life-special"
+===> URL successfully changed to "https://zonia-stg.com/is-restore-life-special?id=6ac4e0dd9c9137b5312eb260"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "no" bottles and "upgrade" in upsell/downsell for Restore Life...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://zonia-stg.com/is-rl-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/is-rl-6-discounted-bottles?id=6ac4e0dd9c9137b5312eb260"
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup already appeared earlier and was filled
+===> Waiting for URL starting with "https://zonia-stg.com/is-restore-sleep-special"
+===> URL successfully changed to "https://zonia-stg.com/is-restore-sleep-special?id=6ac4e0dd9c9137b5312eb260"
+>>> Successfully selected "no" bottles and "upgrade" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "6" bottles and "best_value" in upsell/downsell for Restore Sleep...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/is-rs-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/is-rs-6-more-bottles?id=6ac4e0dd9c9137b5312eb260"
+===> Successfully bought 6 bottle/s
+Address popup already appeared earlier and was filled
+===> Waiting to avoid payment method error...
+===> Not upgrading, but getting best_value downsell...
+Address popup already appeared earlier and was filled
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> URL successfully changed to "https://zonia-stg.com/welcome?mode=standard&id=6ac4e0dd9c9137b5312eb260"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "6" bottles and "best_value" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user complete registration
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/b2c/survey/survey"
+===> URL successfully changed to "https://zonia-stg.com/b2c/survey/survey"
+===> Skipped survery
+===> Selecting cancer-support-lbl in Health Track
+===> Skipped health track
+===> Waiting for URL starting with "https://zonia-stg.com/client-welcome"
+===> URL successfully changed to "https://zonia-stg.com/client-welcome?healthtrack=selected"
+===> No cookie banner found or none matched known selectors.
+===> Navigated to user home page
+===> Verified registration
+Email: zoniat-v2Hill-1791287490@gmail.com
+Pass: +2Ek%1R_
+Completed step: user complete registration

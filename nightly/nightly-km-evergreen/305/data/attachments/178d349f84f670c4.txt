@@ -1,0 +1,9 @@
+Executing step: user register in "km_ev" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/kmmb5e/young-and-thriving
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "km_ev" Opt In page
+Test failed on page: 'https://zonia-stg.com/kmmb5e/young-and-thriving'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/KM_Evergreen_funnel_--_@1.1__20261006-021919.png

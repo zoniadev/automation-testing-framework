@@ -1,0 +1,779 @@
+Executing step: user register in "is_ev_brain" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://zonia-stg.com/mb/is-brain-health
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/mb/is-join-zonia"
+>>> Navigation via is_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb/is\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/mb/is-brain-health 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/mb/is-brain-health"
+
+Aria snapshot:
+- text: Processing...
+- heading "Download Your Free Gift + Get Your Free Ticket to IMMUNE FOR LIFE" [level=3]
+- heading "Discover Why 90 % Of Alzheimer’s Is Preventable, Why Nobody Talks About this…" [level=2]
+- heading "And how to protect your brain from the damage that Alzheimer’s brings so you can restore your memory and never lose your identity" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: October 7th
+  - text: when you get your Free Gift
+- paragraph:
+  - strong: (Valued at $27)
+- list:
+  - listitem: "— Discover the seemingly innocent actions you do every day that DAMAGE your brain (one is incorrect headphone use – habit #7)"
+  - listitem: — Find out which “happy hormone” can cause early Alzheimer’s and dementia
+  - listitem: — Discover tasty solutions to protect your brain, like this antioxidant-loaded fruit that slows down brain aging – page 8
+- heading "Plus get your free ticket to IMMUNE FOR LIFE" [level=5]:
+  - strong: Plus get your free ticket to IMMUNE FOR LIFE
+- textbox "First Name*":
+  - /placeholder: ""
+  - text: AutomationMichael
+- text: First Name*
+- textbox "E-mail*":
+  - /placeholder: ""
+  - text: zoniat-v2Schwartz-1791334004@gmail.com
+- text: E-mail*
+- checkbox
+- paragraph: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- paragraph:
+  - strong: GET YOUR FREE GIFT
+- text: + REGISTER FOR IMMUNE FOR LIFE NOW By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Screening Starts in 0 Days 21 hours 47 minutes 22 seconds
+- heading "Our 35 World-Renowned Doctors & Health Experts" [level=1]
+- paragraph: "have been featured on:"
+- img
+- heading "Did You Know Dementia Starts At A Ripe Age of 40?!" [level=1]:
+  - strong: Did You Know Dementia Starts At A Ripe Age of 40?!
+- img
+- paragraph: But noticeable symptoms like short attention span, hallucination, unexplained anger, inability to form sentences, restlessness and more only show up after 65..
+- paragraph: And at that point it’s much more difficult to stop the damage from this illness.
+- paragraph: "However, it’s the subtle symptoms like:"
+- paragraph: — Forgetfulness
+- paragraph: — Restlessness
+- paragraph: — Mood swings
+- paragraph: — Repeating questions
+- paragraph: — Forgetting the keys or the wallet
+- paragraph: — Not knowing why you came to a particular room
+- paragraph: All these can be a sign of a degrading brain.
+- paragraph: Sadly, every 1 out of 7 Americans over 70 live their lives without even knowing who they are anymore…
+- paragraph: They can’t recognize their kids…
+- paragraph: They don’t remember the names of their spouses…
+- paragraph: They live every day like a brand new…
+- paragraph: The worst part?
+- paragraph: Our medical system tells us that Alzheimer’s and Dementia are inevitable parts of aging.
+- paragraph: But that couldn’t be further from the truth
+- paragraph: And that’s exactly what our 35 medical experts share in this brand new 10-part groundbreaking series.
+- img
+- paragraph: This series sheds light on the real cause of Alzheimer’s
+- paragraph: And why even if you have family members affected by this disease…it doesn’t mean you will end up just like them.
+- paragraph: Because the truth is Alzheimer’s , Dementia and other neurological diseases have nothing to do with bad genes.
+- paragraph: But everything to do with the way we approach our health.
+- paragraph: What’s worse, if we don’t address this broken model that our medical system is…
+- paragraph: This misunderstanding can hit most people with a life altering disease.
+- paragraph: Diseases such as Cancer, Diabetes and Heart disease.
+- paragraph: But the truth is there is something else that makes millions of Westerners sick and it has nothing to do with bad genetics or aging.
+- paragraph: What’s worse, Big Pharma doesn’t want you to know about this truth.
+- paragraph: And it’s the reason why, not only in America but in other Western World countries, doctors are only taught how to treat symptoms of modern-day diseases.
+- paragraph: And why even well-meaning doctors often will tell you to come back to see them when your symptoms get worse… or the current medication stops working.
+- paragraph: But the truth is, there are safe, side-effect free, natural treatments available to every person.
+- paragraph: That’s why we gathered together 35 of the world’s leading integrative natural medicine doctors, researchers and family physicians to reveal this hidden truth.
+- button "register for free now + Get Your Free Gift"
+- heading "When you watch this 10-part groundbreaking health documentary series, you’ll discover:" [level=1]
+- paragraph: — One of the most powerful tool for assessing the risk for Alzheimer’s
+- paragraph: — What is a neurometabolic problem and the link between metabolic health and brain health
+- paragraph: — How low levels of this nutrient in the brain damage and age the brain so it develops dementia
+- paragraph: — What is a leaky brain and how you can detect if you have one. Plus simple ways to heal your brain
+- paragraph: — How the culture of performance can affect your neurological health
+- paragraph: — A patient's story who recovered from Parkinson's disease by discovering and removing this specific environmental toxin
+- paragraph: — Why bus drivers have higher rates of Alzheimer’s than taxi drivers (and how the underlying reason may relate to you)
+- paragraph: — Hear more of emotional and healing stories of patients' and doctor's about recovering from severe neurological conditions
+- paragraph: — How your dental health affects your brain health and what are the most common infections that cause brain inflammation
+- paragraph: — The number one cleaning mechanisms of the brain that keeps your brain healthy…And how damaging these mechanisms becomes toxic for the brain (and what is your antidote)
+- paragraph: — Is there a gene that may increase your risk of developing Alzheimer’s and Dementia? These experts say yes. What’s more it increases your risk of developing brain disease by 12 fold
+- paragraph: — How to boost your healthy brain function by 11 years by adding one ingredient to your diet
+- paragraph: — Can you achieve a 90% reduction in your risk of Alzheimer’s regardless of your genetics? Watch this episode to find out
+- paragraph: — What is neuroplasticity and how to boost the health of your brain with every decision you make
+- paragraph: "— The #1 diet for preventing or improving neurological diseases (which may also help you lose the extra pounds)"
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: ‘Immune for Life' is an eye-opening, groundbreaking and fascinating docu-series that will arm people with the knowledge and inspiration to take control of their health and life. We wholeheartedly recommend it to anyone suffering from a chronic, autoimmune or neurodegenerative disease as the series is packed with new innovative treatments, prevention protocols and practical advice. It's a must-watch!
+- paragraph:
+  - strong: Dr. Z & Mama Z
+- heading "What You Will Find In Each Episode Of This Unique 10-part Docu-Series “Immune For Life”" [level=1]
+- text: 1 episode
+- img
+- heading "The Truth About Your Immunity and Our Broken Medical System" [level=1]
+- paragraph: "— INSIDE: A strong immune system is good, right? Maybe not…Contrary to popular belief, a strong immune system can actually cause more chronic illnesses. Instead you want to have a different kind of immunity"
+- paragraph: — The number one goal big medication companies are aiming for…sadly it has nothing to do with helping you get better
+- paragraph: — A simple lab test to ask your doctor about, which checks the state of your immune system. The best part? Insurance covers this!
+- paragraph: — Why Rheumatoid Arthritis, Lupus, Crohn’s, Alzheimers are actually signs of dysfunctional immune system and how to treat them in a natural way without antibiotics
+- paragraph: — How a simple daily 10-minute activity slashes your chances of developing depression, diabetes, and boosts your energy within seconds
+- paragraph: — Did you know that allergies are a sign of an unstable immune system? Plus discover 5 more unusual symptoms your body could be experiencing right now
+- text: 2 episode
+- img
+- heading "The Root Causes of Everyday Diseases - Discover the Triggers for Cancer, Dementia, Autoimmune Disease, Diabetes and More" [level=1]
+- paragraph: "— In this episode, you’ll discover why this M.D. issued an urgent health warning: if you take any of these common pills you need to stop right now"
+- paragraph: — The ONE thing that makes smokers healthier than people with diabetes, cancer, and obesity combined
+- paragraph: — Learn about the 4 types of stress and how it can inhibit (and even STOP completely) your immune function
+- paragraph: "— Learn about the 2 threatening GIANTS that people are facing as they age (Hint: One of them has to do with your emotions!)"
+- paragraph: — How to know if your epigenetic expression is working in your favor or is killing you - what controls if your bad genes are on or off; what tests to do
+- paragraph: — 4 Sneaky ways toxins can get inside of our bodies and trigger development of cancer, dementia, diabetes and more (and what test you can do to discover unexplainable problems with your health)
+- text: 3 episode
+- img
+- 'heading "The Gut-Immunity Connection: How to Flip the “Bad Genes” Switch & Restore Health" [level=1]'
+- paragraph: — All inflammation is bad, right? Wrong! Discover the difference between “good” and “bad” inflammation. And sleep soundly at night knowing that you have the answers, the tools, and proven methods to identify the earliest signs of any illness in you or your children…so you can reverse even the most chronic of diseases
+- paragraph: — Discover if your immunity may be compromised since birth (and why answering this question is critical for your health)
+- paragraph: — How stopping your leaky gut may not be enough to truly heal your body - what else you need to stop in order to fully restore your health
+- paragraph: — What signs to look for to detect food malabsorption and why this is critical for understanding and addressing weight gain
+- paragraph: — Discover what is a drug-induced nutrient depletion and what 25% of the US drugs do to your microbiome. (that may be linked to symptoms like rashes)
+- text: 4 episode
+- img
+- 'heading "Inflammation, Heart Disease & Chronic Fatigue: Recognize the Signs of Compromised Health to Reverse the Damage" [level=1]'
+- paragraph: — The 5 major inflammation triggers we do every day without even knowing it
+- paragraph: — Discover the difference between the "good" inflammation and "bad" inflammation...And how our everyday activity triggers bad inflammation and what to do about it
+- paragraph: — Why 2/3 of Americans suffer from high chronic inflammation and how it activates most chronic diseases
+- paragraph: — What is an environmental burden and how it can trigger osteoporosis & inflammation inside your brain?
+- paragraph: — Can you bulletproof your body against a heart attack? Discover why more than 90% of heart diseases are preventable and how anyone can tap into this little known secret
+- paragraph: — Discover the link between obesity and inflammation and what does this mean for your overall health and immunity
+- paragraph: — Learn what Dr. Eric Gordon's clinical study on chronic fatigue revealed about its causes
+- paragraph: — What is "cell danger response" and how "too much" antioxidants can actually provoke energy-zapping chronic fatigue
+- text: 5 episode
+- img
+- heading "Save Your Brain from Alzheimer’s, Dementia, Depression and Keep it Sharp No Matter Your Age" [level=1]
+- paragraph: — Discover the “Old” New Antidepressants with zero side effects. Ancient Eastern Medicine have been using them for thousands of years, yet they are banned in most Western countries
+- paragraph: — The real reason for Alzheimer’s and Parkinson’s has nothing to do with genetics but rather with a special type of acid that’s found in some fruits
+- paragraph: — Learn about a patient's story who recovered from Parkinson's disease by discovering and removing a specific environmental toxin
+- paragraph: — How your dental health can affect your brain health and what are the most common infections that can cause brain inflammation
+- paragraph: — How you can increase your healthy brain function by 11 years by adding one ingredient to your diet
+- paragraph: — How you can achieve a 90% reduction in your risk of Alzheimer regardless of your genetics
+- text: 6 episode
+- img
+- heading "Solutions for Autoimmune Disease to Overcome Hashimoto’s, Lyme, MS, Crohn’s and more" [level=1]
+- paragraph: — Discover the fastest growing infectious disease the medical community doesn’t talk about…yet it affects over 500,000 people all over the Western world every year and is linked to autoimmunity
+- paragraph: — What blood tests can help you understand how to cure your autoimmune diseases (including Hashimoto and others)
+- paragraph: — Learn what is the most effective immunotherapy to help you stop an autoimmune disease and become symptom-free
+- paragraph: — Learn about doctor's emotional story about recovering from MS and standing up from a wheelchair (using ground breaking physical therapy)
+- paragraph: — The 3 common types of foods patients with autoimmune disease should stop eating immediately if they want to reverse the disease
+- paragraph: — Why 20% of Lyme patients cannot be treated with antibiotics (due to resistance) and what you can do about that
+- paragraph: — How the medications you are taking for one sickness can be linked to inflammation that can trigger an autoimmune disease
+- text: 7 episode
+- img
+- 'heading "Obesity and Type 2 Diabetes: The 100% Reversible Truth" [level=1]'
+- paragraph: — How this skeptical medical student went from taking 5 meds at 20 years old, being 21 pounds overweight and struggling with a yeast infection to slim, healthy and unmedicated in less than a month
+- paragraph: — Struggle with cravings? Discover the real reason why your body demands you reach out for sweets and chocolate…And how it has nothing to do with your willpower or even your genetics.
+- paragraph: — Cellulite is a harmless skin condition, right? Wrong! This doctor reveals the real cause of cellulite and a simplest thing you can do to get rid of it
+- paragraph: — How high levels of this fat storing hormones make your immune system weak and increase your chances of dying from cancer, diabetes and heart issues by 75%
+- paragraph: — When everything stops working (diet, exercise, lifestyle changes), how technology and lypmh nodes analysis can unblock new pathways for weight loss
+- paragraph: — Learn about why Type 2 diabetes in children is the new epidemic in America (even in kids with normal weight)
+- text: 8 episode
+- img
+- 'heading "Escaping Cancer: Digging Deeper into the Lost Connection" [level=1]'
+- paragraph: — What is the Warburg effect and how it led to one of the biggest misunderstandings about cancer.
+- paragraph: — How one of our featured doctors went from being diagnosed with stage 4 colon cancer to being symptoms free in 4 months
+- paragraph: — How our immunity, specifically T reg cells, cleans up cancer stem cells (most dangerous cancer cells) and what vitamins you need to take to become cancer-immune
+- paragraph: — Bad genetics are to blame for cancer, right? Maybe not… Only 7% of cancer diagnosis comes from genetics. The rest 93% are caused by little-known three major triggers.
+- paragraph: — Find out how quantum physics can help with natural cancer treatment - and why a technology based on this has healed thousands of people
+- paragraph: — How a patient with double breast cancer extended her 3-month verdict to 13 years of life.
+- text: 9 episode
+- img
+- 'heading "Trauma and Emotional Healing at the Center of Your Health Journey: Powerful Stories and the Cold Science" [level=1]'
+- paragraph: — Discover the emotional toxins that are causing depression, cancer, brain fog and chronic fatigue
+- paragraph: — Why “getting older” is not a death sentence. Our medical experts share their favorite ways to live a long, healthy, happy and fulfilling life way into your 60s, 70s, and even 90s
+- paragraph: — What’s the easiest way to become immune for life? Just doing 5 minutes of this seemingly trivial daily activity bulletproofs your immune system for the next 24 hrs
+- paragraph: — How stuck emotions can flip the disease switch and cause cancer, depression, hashimoto's in you and your children
+- paragraph: — Learn how an 87-year old woman has a life altering event that heals all her ailments
+- paragraph: — What is psychoneuroimmunology and how it is related to chronic and neurodegenerative diseases
+- text: 10 episode
+- img
+- 'heading "Long-Forgotten Natural Therapies & Innovative Treatments: Holistic and Proven Approach for Reversing Diseases" [level=1]'
+- paragraph: — Did you know the aging process was reversible? Australian researchers made a giant leap in reversing aging. Turns out these mini proteins in our body naturally reverse aging and repair DNA!
+- paragraph: — Learn about an effective new treatment (that you can do in the comfort of your house) that helps with wound healing, improved circulation, reduced swelling and all aspects of cell injury, including slowing down aging and cancer growth
+- paragraph: — Learn about an innovative therapy for nerves, herniated disks and pain treatments that reduces inflammation in joints
+- paragraph: — How to use this groundbreaking therapy for immune-related conditions, like Lyme, autoimmune, chronic fatigue syndrome, brain health and anti-aging
+- paragraph: — Learn from the inventor of a new groundbreaking immunological therapy on how it works and why it is so effective for immunological problems, including autoimmune conditions and allergies
+- paragraph: — Find out about a miraculous patient's story who avoided back surgery with a combination of innovative therapies, and reduced nerve pain by 70%
+- paragraph: — Build immune boosting muscles without exercising? Discover a unique technique athletes have been using to grow muscles without testosterone or gruesome exercises for years.
+- paragraph: — Little-known breakthrough therapies to help you detox from heavy metals, pesticides, enhance your body’s healing, and bulletproof your immune system
+- paragraph: — Learn about a plasma-based therapy and how it can become your most powerful anti-aging arsenal (in addition to treating immunological disorders)
+- paragraph: — Learn about an 11 year old girl's story whose cut-off finger completely heals back using a breakthrough therapy
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: "'Immune for life' is a dynamic docu-series revealing issues with our modern-day medical, pharma and food industries. I think many of us are aware about the problems. What is so valuable about this docu-series are the solutions it offers on what people can do to prevent or reverse chronic disease & conditions they may be facing. This docu-series covers topics like how to find the root cause, gut health, prevention protocols, innovative natural treatment options and much more! This is fascinating information that can empower anyone to take back control of their health and well-being. I highly recommend it!"
+- paragraph:
+  - strong: Shivan Sarna
+- heading "Secure Your Access Now, Before This 10-part Groundbreaking Documentary Is Taken Down" [level=1]
+- img
+- paragraph: Imagine finally being in control of your health and destiny…
+- paragraph: Just think about how good it would feel knowing that your genetics don’t dictate how well and how long you live…
+- paragraph: Picture remembering your family’s most important anniversaries and birthdays…
+- paragraph: How wonderful would it feel to be in control of your mood, your memory and your life.
+- paragraph: Just think about how amazing would it feel when no matter your age, your brain is sharp, focused and works as good as it did in your 20s…
+- paragraph: Think about how awesome would it be when you meet don’t have to worry about losing your ability to speak or to express yourself freely…
+- paragraph: Just imagine the piece of mind you’ll have when you finally can stop worrying about your health when you’re in your 50 and 60…
+- paragraph: Or how about saving hundreds if not thousands on medical bills because your body is healthy and you don’t need to take all these pills like your parents did.
+- img
+- paragraph: With each episode of this groundbreaking documentary series you’ll feel that it’s possible to be in complete control of your health, your brain, your memory and how fast you age…
+- paragraph: "You’ll see real life examples that prove a simple fact of early brain damage:"
+- paragraph: Your genetics don’t dictate how much you weigh, long you live, how fast you age, and whether or not you’ll lose your identity, your freedom, your memory and your life.
+- paragraph: Because there is a real culprit that’s causing the unexplainable forgetfulness, the joint pain, the fatigue…
+- paragraph: But the best news?
+- paragraph: Once you uncover the real truth, you’ll know the exact ways to reverse anything from Dementia & Alzheimer’s, Depression, Cancer, Autoimmune Disease to Obesity & Diabetes, Gut and Heart Disease …
+- paragraph: And finally experience the joy of living, have endless amounts of energy, break free from dependence on medications, and forget about aches, pains and fatigue forever.
+- paragraph: Plus you can once and for all sleep soundly at night knowing that you did everything in your control and power to protect yourself and your loved ones from any new life wrecking infections like the recent pandemic.
+- button "register for free now + Get Your Free Gift"
+- heading "Meet Our 35 Medical Doctors and World Renowned Health Experts Featured in ‘Immune for Life’ Docu-Series" [level=1]
+- img
+- paragraph: Brian Vaszily
+- paragraph: Natural Health
+- paragraph: Researcher and Advocate
+- paragraph: for 20+ years
+- img
+- paragraph: Joel Fuhrman, MD
+- paragraph: 7-time NY Times
+- paragraph: Bestselling Author
+- paragraph: President of Nutritional
+- paragraph: Research Foundation
+- img
+- paragraph: Austin Perlmutter, MD, ABIM
+- paragraph: Board-Certified Internal
+- paragraph: Medicine, New York Times
+- paragraph: Bestselling Author
+- img
+- paragraph: David Perlmutter, MD
+- paragraph: 5-time NY Times
+- paragraph: Bestselling Author
+- paragraph: World-renowned
+- paragraph: Neurologist
+- img
+- paragraph: Afrouz Demeri, ND, IFMCP
+- paragraph: Former Director of
+- paragraph: Functional Medicine,
+- paragraph: University of California Irvine
+- img
+- paragraph: Christy Wise, Psy.D
+- paragraph: Personal Development &
+- paragraph: Human Behavior Expert
+- img
+- paragraph: Ocean Robbins
+- paragraph: Co-founder,
+- paragraph: Food Revolution Network
+- img
+- paragraph: Paul Anderson, NMD
+- paragraph: Alternative Cancer
+- paragraph: Treatment Specialist
+- img
+- paragraph: Matt Cook, MD
+- paragraph: Integrative Medicine
+- paragraph: Specialist
+- img
+- paragraph: Michael Murray, ND
+- paragraph: Naturopathic Physician
+- paragraph: and Author
+- img
+- paragraph: Nathan Crane
+- paragraph: Natural Health Researcher
+- img
+- paragraph: Harry Mcllroy, MD
+- paragraph: Expert in Medical Cannabis
+- img
+- paragraph: Heather Sandison, ND
+- paragraph: Naturopathic Doctor
+- img
+- paragraph: Ron Rosedale, MD
+- paragraph: Founder of Rosedale Center
+- img
+- paragraph: Kent Holtorf, MD
+- paragraph: Functional Immunologist
+- img
+- paragraph: Elena Villanueva, DC
+- paragraph: Doctor of Holistic Medicine
+- img
+- paragraph: Gerald Natzke, DO, FAAEM,
+- paragraph: Doctor of Osteopathy
+- img
+- paragraph: Keesha Ewers, ARNP
+- paragraph: Emotional Trauma Specialist
+- img
+- paragraph: Gordon Crozier, DO, PhD
+- paragraph: Functional Medicine Doctor
+- img
+- paragraph: William Pawluk, MD, MSc
+- paragraph: PEMF Therapy Expert
+- img
+- paragraph: Barry Smeltzer, MPAS, PA-C
+- paragraph: Adjunct Professor, University
+- paragraph: of Texas Health Sciences
+- img
+- paragraph: Kevin Conners, D.PSc, FICT
+- paragraph: Conners Clinic,
+- paragraph: Alternative Cancer Treatment
+- img
+- paragraph: Kien Vuu, MD, FAAAMM
+- paragraph: Performance and
+- paragraph: Longevity Doctor
+- img
+- paragraph: Sam Sunshine, MD, FAAFP
+- paragraph: Board Certified Family
+- paragraph: Medicine & Sports Medicine
+- img
+- paragraph: Terry Wahls, MD, IFMCP
+- paragraph: Autoimmune and
+- paragraph: Multiple Sclerosis Expert
+- img
+- paragraph: Melissa Gallagher, ND
+- paragraph: Naturopathic Physician &
+- paragraph: Lymphatic Therapist
+- img
+- paragraph: James LaValle, RPH, MT
+- paragraph: Clinical Pharmacist,
+- paragraph: Board Certified Clinical Nutritionist
+- paragraph: Academic Co-Chair American
+- paragraph: Academy of Antiaging medicine
+- img
+- paragraph: Kelly McCann, MD, IFMCP
+- paragraph: Board Certified Internal
+- paragraph: Medicine, Pediatrics
+- paragraph: "& Integrative Medicine"
+- img
+- paragraph: Darin Ingels, ND, FAAEM
+- paragraph: Naturopathic Physician
+- paragraph: Fellow, American Academy
+- paragraph: of Environmental Medicine
+- img
+- paragraph: Jorge L. Moreno, DO
+- paragraph: Traditional Osteopathy
+- paragraph: and Integrative Medicine
+- img
+- paragraph: Ty Vincent, MD
+- paragraph: Low Dose Immunotherapy
+- paragraph: Pioneer
+- img
+- paragraph: Eric Gordon, MD
+- paragraph: Expert Chronical Illness
+- img
+- paragraph: Erin Lommen, ND
+- paragraph: Naturopathic Physician
+- img
+- paragraph: Kellee Rutley, DC
+- paragraph: Doctor of Chiropractic
+- img
+- paragraph: Kashif Khan
+- paragraph: CEO, The DNA Company
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: A power-packed collection of immune-boosting strategies from functional medicine experts. If you're ready to take control of your immune function, watch this!
+- paragraph:
+  - strong: Ari Whitten
+- img "Stefan Apostolov"
+- paragraph: "Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- paragraph: Register Today For A Limited-time Free Screening Of This Groundbreaking 10-part Documentary Series
+- button "register for free now + Get Your Free Gift"
+- paragraph: © 2026 ZONIA
+- link "| Terms of use":
+  - /url: /terms_use
+- link "| Privacy Policy":
+  - /url: /privacy_cookie
+- link "| Disclaimer":
+  - /url: /disclaimer
+- link "Do not sell or share my personal information":
+  - /url: /opt-out
+===> Waiting for URL starting with "https://zonia-stg.com/mb5e/is-replay-weekend"
+>>> Navigation via is_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb5e/is\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/mb/is-brain-health 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/mb/is-brain-health"
+
+Aria snapshot:
+- text: Processing...
+- heading "Download Your Free Gift + Get Your Free Ticket to IMMUNE FOR LIFE" [level=3]
+- heading "Discover Why 90 % Of Alzheimer’s Is Preventable, Why Nobody Talks About this…" [level=2]
+- heading "And how to protect your brain from the damage that Alzheimer’s brings so you can restore your memory and never lose your identity" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: October 7th
+  - text: when you get your Free Gift
+- paragraph:
+  - strong: (Valued at $27)
+- list:
+  - listitem: "— Discover the seemingly innocent actions you do every day that DAMAGE your brain (one is incorrect headphone use – habit #7)"
+  - listitem: — Find out which “happy hormone” can cause early Alzheimer’s and dementia
+  - listitem: — Discover tasty solutions to protect your brain, like this antioxidant-loaded fruit that slows down brain aging – page 8
+- heading "Plus get your free ticket to IMMUNE FOR LIFE" [level=5]:
+  - strong: Plus get your free ticket to IMMUNE FOR LIFE
+- textbox "First Name*":
+  - /placeholder: ""
+  - text: AutomationMichael
+- text: First Name*
+- textbox "E-mail*":
+  - /placeholder: ""
+  - text: zoniat-v2Schwartz-1791334004@gmail.com
+- text: E-mail*
+- checkbox
+- paragraph: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- paragraph:
+  - strong: GET YOUR FREE GIFT
+- text: + REGISTER FOR IMMUNE FOR LIFE NOW By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Screening Starts in 0 Days 21 hours 47 minutes 2 seconds
+- heading "Our 35 World-Renowned Doctors & Health Experts" [level=1]
+- paragraph: "have been featured on:"
+- img
+- heading "Did You Know Dementia Starts At A Ripe Age of 40?!" [level=1]:
+  - strong: Did You Know Dementia Starts At A Ripe Age of 40?!
+- img
+- paragraph: But noticeable symptoms like short attention span, hallucination, unexplained anger, inability to form sentences, restlessness and more only show up after 65..
+- paragraph: And at that point it’s much more difficult to stop the damage from this illness.
+- paragraph: "However, it’s the subtle symptoms like:"
+- paragraph: — Forgetfulness
+- paragraph: — Restlessness
+- paragraph: — Mood swings
+- paragraph: — Repeating questions
+- paragraph: — Forgetting the keys or the wallet
+- paragraph: — Not knowing why you came to a particular room
+- paragraph: All these can be a sign of a degrading brain.
+- paragraph: Sadly, every 1 out of 7 Americans over 70 live their lives without even knowing who they are anymore…
+- paragraph: They can’t recognize their kids…
+- paragraph: They don’t remember the names of their spouses…
+- paragraph: They live every day like a brand new…
+- paragraph: The worst part?
+- paragraph: Our medical system tells us that Alzheimer’s and Dementia are inevitable parts of aging.
+- paragraph: But that couldn’t be further from the truth
+- paragraph: And that’s exactly what our 35 medical experts share in this brand new 10-part groundbreaking series.
+- img
+- paragraph: This series sheds light on the real cause of Alzheimer’s
+- paragraph: And why even if you have family members affected by this disease…it doesn’t mean you will end up just like them.
+- paragraph: Because the truth is Alzheimer’s , Dementia and other neurological diseases have nothing to do with bad genes.
+- paragraph: But everything to do with the way we approach our health.
+- paragraph: What’s worse, if we don’t address this broken model that our medical system is…
+- paragraph: This misunderstanding can hit most people with a life altering disease.
+- paragraph: Diseases such as Cancer, Diabetes and Heart disease.
+- paragraph: But the truth is there is something else that makes millions of Westerners sick and it has nothing to do with bad genetics or aging.
+- paragraph: What’s worse, Big Pharma doesn’t want you to know about this truth.
+- paragraph: And it’s the reason why, not only in America but in other Western World countries, doctors are only taught how to treat symptoms of modern-day diseases.
+- paragraph: And why even well-meaning doctors often will tell you to come back to see them when your symptoms get worse… or the current medication stops working.
+- paragraph: But the truth is, there are safe, side-effect free, natural treatments available to every person.
+- paragraph: That’s why we gathered together 35 of the world’s leading integrative natural medicine doctors, researchers and family physicians to reveal this hidden truth.
+- button "register for free now + Get Your Free Gift"
+- heading "When you watch this 10-part groundbreaking health documentary series, you’ll discover:" [level=1]
+- paragraph: — One of the most powerful tool for assessing the risk for Alzheimer’s
+- paragraph: — What is a neurometabolic problem and the link between metabolic health and brain health
+- paragraph: — How low levels of this nutrient in the brain damage and age the brain so it develops dementia
+- paragraph: — What is a leaky brain and how you can detect if you have one. Plus simple ways to heal your brain
+- paragraph: — How the culture of performance can affect your neurological health
+- paragraph: — A patient's story who recovered from Parkinson's disease by discovering and removing this specific environmental toxin
+- paragraph: — Why bus drivers have higher rates of Alzheimer’s than taxi drivers (and how the underlying reason may relate to you)
+- paragraph: — Hear more of emotional and healing stories of patients' and doctor's about recovering from severe neurological conditions
+- paragraph: — How your dental health affects your brain health and what are the most common infections that cause brain inflammation
+- paragraph: — The number one cleaning mechanisms of the brain that keeps your brain healthy…And how damaging these mechanisms becomes toxic for the brain (and what is your antidote)
+- paragraph: — Is there a gene that may increase your risk of developing Alzheimer’s and Dementia? These experts say yes. What’s more it increases your risk of developing brain disease by 12 fold
+- paragraph: — How to boost your healthy brain function by 11 years by adding one ingredient to your diet
+- paragraph: — Can you achieve a 90% reduction in your risk of Alzheimer’s regardless of your genetics? Watch this episode to find out
+- paragraph: — What is neuroplasticity and how to boost the health of your brain with every decision you make
+- paragraph: "— The #1 diet for preventing or improving neurological diseases (which may also help you lose the extra pounds)"
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: ‘Immune for Life' is an eye-opening, groundbreaking and fascinating docu-series that will arm people with the knowledge and inspiration to take control of their health and life. We wholeheartedly recommend it to anyone suffering from a chronic, autoimmune or neurodegenerative disease as the series is packed with new innovative treatments, prevention protocols and practical advice. It's a must-watch!
+- paragraph:
+  - strong: Dr. Z & Mama Z
+- heading "What You Will Find In Each Episode Of This Unique 10-part Docu-Series “Immune For Life”" [level=1]
+- text: 1 episode
+- img
+- heading "The Truth About Your Immunity and Our Broken Medical System" [level=1]
+- paragraph: "— INSIDE: A strong immune system is good, right? Maybe not…Contrary to popular belief, a strong immune system can actually cause more chronic illnesses. Instead you want to have a different kind of immunity"
+- paragraph: — The number one goal big medication companies are aiming for…sadly it has nothing to do with helping you get better
+- paragraph: — A simple lab test to ask your doctor about, which checks the state of your immune system. The best part? Insurance covers this!
+- paragraph: — Why Rheumatoid Arthritis, Lupus, Crohn’s, Alzheimers are actually signs of dysfunctional immune system and how to treat them in a natural way without antibiotics
+- paragraph: — How a simple daily 10-minute activity slashes your chances of developing depression, diabetes, and boosts your energy within seconds
+- paragraph: — Did you know that allergies are a sign of an unstable immune system? Plus discover 5 more unusual symptoms your body could be experiencing right now
+- text: 2 episode
+- img
+- heading "The Root Causes of Everyday Diseases - Discover the Triggers for Cancer, Dementia, Autoimmune Disease, Diabetes and More" [level=1]
+- paragraph: "— In this episode, you’ll discover why this M.D. issued an urgent health warning: if you take any of these common pills you need to stop right now"
+- paragraph: — The ONE thing that makes smokers healthier than people with diabetes, cancer, and obesity combined
+- paragraph: — Learn about the 4 types of stress and how it can inhibit (and even STOP completely) your immune function
+- paragraph: "— Learn about the 2 threatening GIANTS that people are facing as they age (Hint: One of them has to do with your emotions!)"
+- paragraph: — How to know if your epigenetic expression is working in your favor or is killing you - what controls if your bad genes are on or off; what tests to do
+- paragraph: — 4 Sneaky ways toxins can get inside of our bodies and trigger development of cancer, dementia, diabetes and more (and what test you can do to discover unexplainable problems with your health)
+- text: 3 episode
+- img
+- 'heading "The Gut-Immunity Connection: How to Flip the “Bad Genes” Switch & Restore Health" [level=1]'
+- paragraph: — All inflammation is bad, right? Wrong! Discover the difference between “good” and “bad” inflammation. And sleep soundly at night knowing that you have the answers, the tools, and proven methods to identify the earliest signs of any illness in you or your children…so you can reverse even the most chronic of diseases
+- paragraph: — Discover if your immunity may be compromised since birth (and why answering this question is critical for your health)
+- paragraph: — How stopping your leaky gut may not be enough to truly heal your body - what else you need to stop in order to fully restore your health
+- paragraph: — What signs to look for to detect food malabsorption and why this is critical for understanding and addressing weight gain
+- paragraph: — Discover what is a drug-induced nutrient depletion and what 25% of the US drugs do to your microbiome. (that may be linked to symptoms like rashes)
+- text: 4 episode
+- img
+- 'heading "Inflammation, Heart Disease & Chronic Fatigue: Recognize the Signs of Compromised Health to Reverse the Damage" [level=1]'
+- paragraph: — The 5 major inflammation triggers we do every day without even knowing it
+- paragraph: — Discover the difference between the "good" inflammation and "bad" inflammation...And how our everyday activity triggers bad inflammation and what to do about it
+- paragraph: — Why 2/3 of Americans suffer from high chronic inflammation and how it activates most chronic diseases
+- paragraph: — What is an environmental burden and how it can trigger osteoporosis & inflammation inside your brain?
+- paragraph: — Can you bulletproof your body against a heart attack? Discover why more than 90% of heart diseases are preventable and how anyone can tap into this little known secret
+- paragraph: — Discover the link between obesity and inflammation and what does this mean for your overall health and immunity
+- paragraph: — Learn what Dr. Eric Gordon's clinical study on chronic fatigue revealed about its causes
+- paragraph: — What is "cell danger response" and how "too much" antioxidants can actually provoke energy-zapping chronic fatigue
+- text: 5 episode
+- img
+- heading "Save Your Brain from Alzheimer’s, Dementia, Depression and Keep it Sharp No Matter Your Age" [level=1]
+- paragraph: — Discover the “Old” New Antidepressants with zero side effects. Ancient Eastern Medicine have been using them for thousands of years, yet they are banned in most Western countries
+- paragraph: — The real reason for Alzheimer’s and Parkinson’s has nothing to do with genetics but rather with a special type of acid that’s found in some fruits
+- paragraph: — Learn about a patient's story who recovered from Parkinson's disease by discovering and removing a specific environmental toxin
+- paragraph: — How your dental health can affect your brain health and what are the most common infections that can cause brain inflammation
+- paragraph: — How you can increase your healthy brain function by 11 years by adding one ingredient to your diet
+- paragraph: — How you can achieve a 90% reduction in your risk of Alzheimer regardless of your genetics
+- text: 6 episode
+- img
+- heading "Solutions for Autoimmune Disease to Overcome Hashimoto’s, Lyme, MS, Crohn’s and more" [level=1]
+- paragraph: — Discover the fastest growing infectious disease the medical community doesn’t talk about…yet it affects over 500,000 people all over the Western world every year and is linked to autoimmunity
+- paragraph: — What blood tests can help you understand how to cure your autoimmune diseases (including Hashimoto and others)
+- paragraph: — Learn what is the most effective immunotherapy to help you stop an autoimmune disease and become symptom-free
+- paragraph: — Learn about doctor's emotional story about recovering from MS and standing up from a wheelchair (using ground breaking physical therapy)
+- paragraph: — The 3 common types of foods patients with autoimmune disease should stop eating immediately if they want to reverse the disease
+- paragraph: — Why 20% of Lyme patients cannot be treated with antibiotics (due to resistance) and what you can do about that
+- paragraph: — How the medications you are taking for one sickness can be linked to inflammation that can trigger an autoimmune disease
+- text: 7 episode
+- img
+- 'heading "Obesity and Type 2 Diabetes: The 100% Reversible Truth" [level=1]'
+- paragraph: — How this skeptical medical student went from taking 5 meds at 20 years old, being 21 pounds overweight and struggling with a yeast infection to slim, healthy and unmedicated in less than a month
+- paragraph: — Struggle with cravings? Discover the real reason why your body demands you reach out for sweets and chocolate…And how it has nothing to do with your willpower or even your genetics.
+- paragraph: — Cellulite is a harmless skin condition, right? Wrong! This doctor reveals the real cause of cellulite and a simplest thing you can do to get rid of it
+- paragraph: — How high levels of this fat storing hormones make your immune system weak and increase your chances of dying from cancer, diabetes and heart issues by 75%
+- paragraph: — When everything stops working (diet, exercise, lifestyle changes), how technology and lypmh nodes analysis can unblock new pathways for weight loss
+- paragraph: — Learn about why Type 2 diabetes in children is the new epidemic in America (even in kids with normal weight)
+- text: 8 episode
+- img
+- 'heading "Escaping Cancer: Digging Deeper into the Lost Connection" [level=1]'
+- paragraph: — What is the Warburg effect and how it led to one of the biggest misunderstandings about cancer.
+- paragraph: — How one of our featured doctors went from being diagnosed with stage 4 colon cancer to being symptoms free in 4 months
+- paragraph: — How our immunity, specifically T reg cells, cleans up cancer stem cells (most dangerous cancer cells) and what vitamins you need to take to become cancer-immune
+- paragraph: — Bad genetics are to blame for cancer, right? Maybe not… Only 7% of cancer diagnosis comes from genetics. The rest 93% are caused by little-known three major triggers.
+- paragraph: — Find out how quantum physics can help with natural cancer treatment - and why a technology based on this has healed thousands of people
+- paragraph: — How a patient with double breast cancer extended her 3-month verdict to 13 years of life.
+- text: 9 episode
+- img
+- 'heading "Trauma and Emotional Healing at the Center of Your Health Journey: Powerful Stories and the Cold Science" [level=1]'
+- paragraph: — Discover the emotional toxins that are causing depression, cancer, brain fog and chronic fatigue
+- paragraph: — Why “getting older” is not a death sentence. Our medical experts share their favorite ways to live a long, healthy, happy and fulfilling life way into your 60s, 70s, and even 90s
+- paragraph: — What’s the easiest way to become immune for life? Just doing 5 minutes of this seemingly trivial daily activity bulletproofs your immune system for the next 24 hrs
+- paragraph: — How stuck emotions can flip the disease switch and cause cancer, depression, hashimoto's in you and your children
+- paragraph: — Learn how an 87-year old woman has a life altering event that heals all her ailments
+- paragraph: — What is psychoneuroimmunology and how it is related to chronic and neurodegenerative diseases
+- text: 10 episode
+- img
+- 'heading "Long-Forgotten Natural Therapies & Innovative Treatments: Holistic and Proven Approach for Reversing Diseases" [level=1]'
+- paragraph: — Did you know the aging process was reversible? Australian researchers made a giant leap in reversing aging. Turns out these mini proteins in our body naturally reverse aging and repair DNA!
+- paragraph: — Learn about an effective new treatment (that you can do in the comfort of your house) that helps with wound healing, improved circulation, reduced swelling and all aspects of cell injury, including slowing down aging and cancer growth
+- paragraph: — Learn about an innovative therapy for nerves, herniated disks and pain treatments that reduces inflammation in joints
+- paragraph: — How to use this groundbreaking therapy for immune-related conditions, like Lyme, autoimmune, chronic fatigue syndrome, brain health and anti-aging
+- paragraph: — Learn from the inventor of a new groundbreaking immunological therapy on how it works and why it is so effective for immunological problems, including autoimmune conditions and allergies
+- paragraph: — Find out about a miraculous patient's story who avoided back surgery with a combination of innovative therapies, and reduced nerve pain by 70%
+- paragraph: — Build immune boosting muscles without exercising? Discover a unique technique athletes have been using to grow muscles without testosterone or gruesome exercises for years.
+- paragraph: — Little-known breakthrough therapies to help you detox from heavy metals, pesticides, enhance your body’s healing, and bulletproof your immune system
+- paragraph: — Learn about a plasma-based therapy and how it can become your most powerful anti-aging arsenal (in addition to treating immunological disorders)
+- paragraph: — Learn about an 11 year old girl's story whose cut-off finger completely heals back using a breakthrough therapy
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: "'Immune for life' is a dynamic docu-series revealing issues with our modern-day medical, pharma and food industries. I think many of us are aware about the problems. What is so valuable about this docu-series are the solutions it offers on what people can do to prevent or reverse chronic disease & conditions they may be facing. This docu-series covers topics like how to find the root cause, gut health, prevention protocols, innovative natural treatment options and much more! This is fascinating information that can empower anyone to take back control of their health and well-being. I highly recommend it!"
+- paragraph:
+  - strong: Shivan Sarna
+- heading "Secure Your Access Now, Before This 10-part Groundbreaking Documentary Is Taken Down" [level=1]
+- img
+- paragraph: Imagine finally being in control of your health and destiny…
+- paragraph: Just think about how good it would feel knowing that your genetics don’t dictate how well and how long you live…
+- paragraph: Picture remembering your family’s most important anniversaries and birthdays…
+- paragraph: How wonderful would it feel to be in control of your mood, your memory and your life.
+- paragraph: Just think about how amazing would it feel when no matter your age, your brain is sharp, focused and works as good as it did in your 20s…
+- paragraph: Think about how awesome would it be when you meet don’t have to worry about losing your ability to speak or to express yourself freely…
+- paragraph: Just imagine the piece of mind you’ll have when you finally can stop worrying about your health when you’re in your 50 and 60…
+- paragraph: Or how about saving hundreds if not thousands on medical bills because your body is healthy and you don’t need to take all these pills like your parents did.
+- img
+- paragraph: With each episode of this groundbreaking documentary series you’ll feel that it’s possible to be in complete control of your health, your brain, your memory and how fast you age…
+- paragraph: "You’ll see real life examples that prove a simple fact of early brain damage:"
+- paragraph: Your genetics don’t dictate how much you weigh, long you live, how fast you age, and whether or not you’ll lose your identity, your freedom, your memory and your life.
+- paragraph: Because there is a real culprit that’s causing the unexplainable forgetfulness, the joint pain, the fatigue…
+- paragraph: But the best news?
+- paragraph: Once you uncover the real truth, you’ll know the exact ways to reverse anything from Dementia & Alzheimer’s, Depression, Cancer, Autoimmune Disease to Obesity & Diabetes, Gut and Heart Disease …
+- paragraph: And finally experience the joy of living, have endless amounts of energy, break free from dependence on medications, and forget about aches, pains and fatigue forever.
+- paragraph: Plus you can once and for all sleep soundly at night knowing that you did everything in your control and power to protect yourself and your loved ones from any new life wrecking infections like the recent pandemic.
+- button "register for free now + Get Your Free Gift"
+- heading "Meet Our 35 Medical Doctors and World Renowned Health Experts Featured in ‘Immune for Life’ Docu-Series" [level=1]
+- img
+- paragraph: Brian Vaszily
+- paragraph: Natural Health
+- paragraph: Researcher and Advocate
+- paragraph: for 20+ years
+- img
+- paragraph: Joel Fuhrman, MD
+- paragraph: 7-time NY Times
+- paragraph: Bestselling Author
+- paragraph: President of Nutritional
+- paragraph: Research Foundation
+- img
+- paragraph: Austin Perlmutter, MD, ABIM
+- paragraph: Board-Certified Internal
+- paragraph: Medicine, New York Times
+- paragraph: Bestselling Author
+- img
+- paragraph: David Perlmutter, MD
+- paragraph: 5-time NY Times
+- paragraph: Bestselling Author
+- paragraph: World-renowned
+- paragraph: Neurologist
+- img
+- paragraph: Afrouz Demeri, ND, IFMCP
+- paragraph: Former Director of
+- paragraph: Functional Medicine,
+- paragraph: University of California Irvine
+- img
+- paragraph: Christy Wise, Psy.D
+- paragraph: Personal Development &
+- paragraph: Human Behavior Expert
+- img
+- paragraph: Ocean Robbins
+- paragraph: Co-founder,
+- paragraph: Food Revolution Network
+- img
+- paragraph: Paul Anderson, NMD
+- paragraph: Alternative Cancer
+- paragraph: Treatment Specialist
+- img
+- paragraph: Matt Cook, MD
+- paragraph: Integrative Medicine
+- paragraph: Specialist
+- img
+- paragraph: Michael Murray, ND
+- paragraph: Naturopathic Physician
+- paragraph: and Author
+- img
+- paragraph: Nathan Crane
+- paragraph: Natural Health Researcher
+- img
+- paragraph: Harry Mcllroy, MD
+- paragraph: Expert in Medical Cannabis
+- img
+- paragraph: Heather Sandison, ND
+- paragraph: Naturopathic Doctor
+- img
+- paragraph: Ron Rosedale, MD
+- paragraph: Founder of Rosedale Center
+- img
+- paragraph: Kent Holtorf, MD
+- paragraph: Functional Immunologist
+- img
+- paragraph: Elena Villanueva, DC
+- paragraph: Doctor of Holistic Medicine
+- img
+- paragraph: Gerald Natzke, DO, FAAEM,
+- paragraph: Doctor of Osteopathy
+- img
+- paragraph: Keesha Ewers, ARNP
+- paragraph: Emotional Trauma Specialist
+- img
+- paragraph: Gordon Crozier, DO, PhD
+- paragraph: Functional Medicine Doctor
+- img
+- paragraph: William Pawluk, MD, MSc
+- paragraph: PEMF Therapy Expert
+- img
+- paragraph: Barry Smeltzer, MPAS, PA-C
+- paragraph: Adjunct Professor, University
+- paragraph: of Texas Health Sciences
+- img
+- paragraph: Kevin Conners, D.PSc, FICT
+- paragraph: Conners Clinic,
+- paragraph: Alternative Cancer Treatment
+- img
+- paragraph: Kien Vuu, MD, FAAAMM
+- paragraph: Performance and
+- paragraph: Longevity Doctor
+- img
+- paragraph: Sam Sunshine, MD, FAAFP
+- paragraph: Board Certified Family
+- paragraph: Medicine & Sports Medicine
+- img
+- paragraph: Terry Wahls, MD, IFMCP
+- paragraph: Autoimmune and
+- paragraph: Multiple Sclerosis Expert
+- img
+- paragraph: Melissa Gallagher, ND
+- paragraph: Naturopathic Physician &
+- paragraph: Lymphatic Therapist
+- img
+- paragraph: James LaValle, RPH, MT
+- paragraph: Clinical Pharmacist,
+- paragraph: Board Certified Clinical Nutritionist
+- paragraph: Academic Co-Chair American
+- paragraph: Academy of Antiaging medicine
+- img
+- paragraph: Kelly McCann, MD, IFMCP
+- paragraph: Board Certified Internal
+- paragraph: Medicine, Pediatrics
+- paragraph: "& Integrative Medicine"
+- img
+- paragraph: Darin Ingels, ND, FAAEM
+- paragraph: Naturopathic Physician
+- paragraph: Fellow, American Academy
+- paragraph: of Environmental Medicine
+- img
+- paragraph: Jorge L. Moreno, DO
+- paragraph: Traditional Osteopathy
+- paragraph: and Integrative Medicine
+- img
+- paragraph: Ty Vincent, MD
+- paragraph: Low Dose Immunotherapy
+- paragraph: Pioneer
+- img
+- paragraph: Eric Gordon, MD
+- paragraph: Expert Chronical Illness
+- img
+- paragraph: Erin Lommen, ND
+- paragraph: Naturopathic Physician
+- img
+- paragraph: Kellee Rutley, DC
+- paragraph: Doctor of Chiropractic
+- img
+- paragraph: Kashif Khan
+- paragraph: CEO, The DNA Company
+- button "register for free now + Get Your Free Gift"
+- img
+- paragraph: A power-packed collection of immune-boosting strategies from functional medicine experts. If you're ready to take control of your immune function, watch this!
+- paragraph:
+  - strong: Ari Whitten
+- img "Stefan Apostolov"
+- paragraph: "Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- paragraph: Register Today For A Limited-time Free Screening Of This Groundbreaking 10-part Documentary Series
+- button "register for free now + Get Your Free Gift"
+- paragraph: © 2026 ZONIA
+- link "| Terms of use":
+  - /url: /terms_use
+- link "| Privacy Policy":
+  - /url: /privacy_cookie
+- link "| Disclaimer":
+  - /url: /disclaimer
+- link "Do not sell or share my personal information":
+  - /url: /opt-out
+Failed step: user register in "is_ev_brain" Opt In page
+Test failed on page: 'https://zonia-stg.com/mb/is-brain-health'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_--_@1.2__20261007-004725.png
