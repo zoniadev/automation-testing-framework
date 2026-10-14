@@ -83,9 +83,13 @@ SKIP_LINKING_BUTTON = "//*[@unique-id='home-btn-1']"
 
 #OptInPageLocators:
 OPTIN_NAME_FIELD = "//input[@id='first-name']"
+ОPTIN_NAME_SIDE_FORM_FIELD = "//input[@unique-identifier='name-2-1']"
+ОPTIN_NAME_POPUP_FORM_FIELD = "//input[@unique-identifier='name-1']"
 MOBILE_OPTIN_NAME_FIELD = "//input[@id='first-name-2']"
 OPTIN_NAME_FIELD_AD_LIVE = "//input[@data-id='first-name']"
 OPTIN_EMAIL_FIELD = "//input[@id='email']"
+ОPTIN_EMAIL_SIDE_FORM_FIELD = "//input[@unique-identifier='email-2-1']"
+ОPTIN_EMAIL_POPUP_FORM_FIELD = "//input[@unique-identifier='email-3-1']"
 MOBILE_OPTIN_EMAIL_FIELD = "//input[@unique-identifier='email-2-1']"
 PHONE_CHECKBOX = "//input[@name='hasPhone']"
 OPTIN_PHONE_FIELD = "//input[@id='phone']"
