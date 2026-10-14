@@ -4,17 +4,28 @@ import common_functions.random_data as RD
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
+import locators
 
 
 class OptInPage(BasePage):
     def __init__(self, context):
         super().__init__(context)
 
-    def register_in_opt_in_page(self):
+    def register_in_opt_in_page(self, form_to_use=None):
+        if form_to_use:
+            name_field = getattr(locators, f'{form_to_use}_ОPTIN_NAME_FIELD')
+            email_field = getattr(locators, f'{form_to_use}_ОPTIN_EMAIL_FIELD')
+            register_button = getattr(locators, f'{form_to_use}_REGISTER_BUTTON')
+        else:
+            name_field = OPTIN_NAME_FIELD
+            email_field = OPTIN_EMAIL_FIELD
+            register_button = REGISTER_BUTTON
         self.handle_cookie_banner()
         self.context.supplement_funnel_email = RD.automation_template_email()
         self.context.supplement_funnel_name = RD.automation_first_name()
         print(f'>>> Registering in Main Opt in page...')
+        if form_to_use == 'POPUP':
+            self.move_cursor_outside_viewport()
         if self.context.funnel == 'lg_live':
             self.enter_text(OPTIN_NAME_FIELD_AD_LIVE, self.context.supplement_funnel_name)
             self.enter_text(OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email)
@@ -22,9 +33,9 @@ class OptInPage(BasePage):
             self.enter_text(MOBILE_OPTIN_NAME_FIELD, self.context.supplement_funnel_name, method="type")
             self.enter_text(MOBILE_OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email, method="type", delay=50)
         else:
-            self.enter_text(OPTIN_NAME_FIELD, self.context.supplement_funnel_name)
-            self.enter_text(OPTIN_EMAIL_FIELD, self.context.supplement_funnel_email)
-        self.context.page.locator(REGISTER_BUTTON).click(timeout=30000)
+            self.enter_text(name_field, self.context.supplement_funnel_name)
+            self.enter_text(email_field, self.context.supplement_funnel_email)
+        self.context.page.locator(register_button).click(timeout=30000)
         if self.context.funnel.startswith('bb_ev'):
             self.context.funnel = 'bb_ev'
         elif self.context.funnel.startswith('bb_live'):

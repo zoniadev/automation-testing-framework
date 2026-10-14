@@ -271,3 +271,8 @@ class BasePage(object):
             raise ValueError(
                 f'Unknown method "{method}" - expected "fill", "type", "press_sequentially", or "safe_fill".'
             )
+
+    def move_cursor_outside_viewport(self):
+        self.context.page.mouse.move(400, 300)
+        self.context.page.mouse.move(500, -5, steps=3)
+        time.sleep(0.5)

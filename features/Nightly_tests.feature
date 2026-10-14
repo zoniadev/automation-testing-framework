@@ -1,6 +1,6 @@
 Feature: Nightly tests
 
-  @nightly @nightly_docuseries @WIP
+  @nightly @nightly_docuseries
   Scenario Outline: Unbroken live nightly
     Given user register in "ad_live" Opt In page
     And user join Zonia
@@ -21,7 +21,7 @@ Feature: Nightly tests
 
     Examples:
       | plan      | booster_packages | masterclass_packages | rd_bottles | rd_upsell_downsell | rl_bottles | rl_upsell_downsell |
-#      | quarterly | no               | no                   | no         | no                 | no         | no                 |
+      | quarterly | no               | no                   | no         | no                 | no         | no                 |
       | monthly   | platinum         | buy                  | 3          | upgrade            | 6          | most_popular       |
 
 
