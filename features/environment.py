@@ -78,17 +78,17 @@ def before_scenario(context, scenario):
         )
 
     if context.config.userdata['device'] == 'iphone':
-        device = context.playwright.devices['iPhone 13']
+        device = context.playwright.devices['iPhone 17']
     elif context.config.userdata['device'] == 'iphone_landscape':
-        device = context.playwright.devices['iPhone 13 landscape']
+        device = context.playwright.devices['iPhone 17 landscape']
     elif context.config.userdata['device'] == 'android':
-        device = context.playwright.devices['Pixel 7']
+        device = context.playwright.devices['Pixel 10']
     elif context.config.userdata['device'] == 'android_landscape':
-        device = context.playwright.devices['Pixel 7 landscape']
+        device = context.playwright.devices['Pixel 10 landscape']
     elif context.config.userdata['device'] == 'ipad':
-        device = context.playwright.devices['iPad Pro 11']
+        device = context.playwright.devices['iPad (gen 11)']
     elif context.config.userdata['device'] == 'ipad_landscape':
-        device = context.playwright.devices['iPad Pro 11 landscape']
+        device = context.playwright.devices['iPad (gen 11) landscape']
     elif context.config.userdata['device'] == 'desktop':
         device = None
     else:
