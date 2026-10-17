@@ -1,0 +1,9 @@
+Executing step: user register in "cr_1ep_immune" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/crmb1e/cr-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "cr_1ep_immune" Opt In page
+Test failed on page: 'https://zonia-stg.com/crmb1e/cr-immunity'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_nightly_--_@1.2__20261014-091812.png

@@ -1,0 +1,29 @@
+Executing step: user starts "hh_live" funnel from "ep11" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/hh-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/hh-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/hh-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "hh_live" funnel from "ep11" bonus entry page
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Tate-1791368083@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/hh-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/hh-mini-masterclass-series?id=6ac61bb14d3f45f9c3c2ed2a"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/hh-restore-sleep-special-the-heartbeat-of-vitality"
+===> URL successfully changed to "https://zonia-stg.com/hh-restore-sleep-special-the-heartbeat-of-vitality?id=6ac61bb14d3f45f9c3c2ed2a"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page

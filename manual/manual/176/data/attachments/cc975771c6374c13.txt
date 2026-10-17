@@ -1,0 +1,26 @@
+Executing step: user starts "bb_ev" funnel from "ep10" bonus entry page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-join-zonia-bonuses-ep10
+>>> Starting funnel from bonus entry page (variant: ep10)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep10)
+Completed step: user starts "bb_ev" funnel from "ep10" bonus entry page
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Smith-1791200928@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/bb-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/bb-mini-masterclass-series?id=6ac38ebde85dd9d2fb64155e"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+Failed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Test failed on page: 'https://zonia-stg.com/bb-mini-masterclass-series?id=6ac38ebde85dd9d2fb64155e'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_via_bonus_entry_(full)_--_@1.6__20261005-114958.png

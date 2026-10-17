@@ -1,0 +1,52 @@
+Executing step: user starts "bb_ev" funnel from "base" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-join-zonia-bonuses
+>>> Starting funnel from bonus entry page (variant: base)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: base)
+Completed step: user starts "bb_ev" funnel from "base" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Mills-1791424743@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/bb-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/bb-mini-masterclass-series?id=6ac6f904bcac371b14ffc8ff"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting for URL starting with "https://zonia-stg.com/bb-restore-detox-special"
+===> URL successfully changed to "https://zonia-stg.com/bb-restore-detox-special?id=6ac6f904bcac371b14ffc8ff"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Detox" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Detox...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://zonia-stg.com/bb-rd-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/bb-rd-6-discounted-bottles?id=6ac6f904bcac371b14ffc8ff"
+===> Waiting for URL starting with "https://zonia-stg.com/bb-restore-life-special"
+===> URL successfully changed to "https://zonia-stg.com/bb-restore-life-special?id=6ac6f904bcac371b14ffc8ff"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Detox
+Completed step: user makes following decision in docuseries "Restore Detox" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "1" bottles and "no" in upsell/downsell for Restore Life...
+===> Buying 1 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "https://zonia-stg.com/bb-rl-6-more-bottles"
+===> URL successfully changed to "https://zonia-stg.com/bb-rl-6-more-bottles?id=6ac6f904bcac371b14ffc8ff"
+===> Successfully bought 1 bottle/s
+Address popup already appeared earlier and was filled
+===> Not upgrading...
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> URL successfully changed to "https://zonia-stg.com/welcome?mode=standard&id=6ac6f904bcac371b14ffc8ff"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "1" bottles and "no" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page

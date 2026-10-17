@@ -1,0 +1,19 @@
+Executing step: user is on the "cr_live" episode "6" page
+===> Navigated to http://staging.zonia.com/cr-episode-6-live-cqmuz3ggac
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia-2"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia-2"
+Completed step: user is on the "cr_live" episode "6" page
+Executing step: user join Zonia
+===> Waiting for URL starting with "http://staging.zonia.com/cr-signup"
+===> URL successfully changed to "http://staging.zonia.com/cr-signup"
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hall-1770614399@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/cr-booster-packages-lifetime"
+===> URL successfully changed to "http://staging.zonia.com/cr-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan

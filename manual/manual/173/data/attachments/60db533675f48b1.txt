@@ -1,0 +1,9 @@
+Executing step: user starts "is_ev" funnel from "ep11" bonus entry page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://zonia-stg.com/mb5e/is-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/mb5e/is-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/mb5e/is-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "is_ev" funnel from "ep11" bonus entry page

@@ -1,0 +1,20 @@
+Executing step: user starts "bb_ev" funnel from "base" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-join-zonia-bonuses
+>>> Starting funnel from bonus entry page (variant: base)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: base)
+Completed step: user starts "bb_ev" funnel from "base" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Mills-1791424743@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/bb-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/bb-mini-masterclass-series?id=6ac6f904bcac371b14ffc8ff"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan

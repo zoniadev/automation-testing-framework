@@ -1,0 +1,9 @@
+Executing step: user register in "is_ev_brain" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/mb/is-brain-health
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+Failed step: user register in "is_ev_brain" Opt In page
+Test failed on page: 'https://zonia-stg.com/mb/is-brain-health'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_nightly_--_@1.2__20261014-090400.png

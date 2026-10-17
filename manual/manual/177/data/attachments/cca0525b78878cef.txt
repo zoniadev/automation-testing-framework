@@ -1,0 +1,21 @@
+Executing step: user starts "tf_ev" funnel from "ep8" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/mb2/tf-join-zonia-bonuses-ep8
+>>> Starting funnel from bonus entry page (variant: ep8)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/mb2/tf-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/mb2/tf-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep8)
+Completed step: user starts "tf_ev" funnel from "ep8" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Morales-1791289107@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/tf-mini-masterclass-series"
+Failed step: user sign up for "annually" plan
+Test failed on page: 'https://zonia-stg.com/tf-lab-test-kits-platinum-package'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_funnel_via_bonus_entry_(full)_--_@1.11__20261006-121927.png
