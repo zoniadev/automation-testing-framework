@@ -1,0 +1,23 @@
+Executing step: user register in "tf_ev_cancer" Opt In page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://zonia-stg.com/mb2/tf-cancer
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/mb2/tf-join-zonia"
+>>> Navigation via tf_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb2/tf\\-join\\-zonia.*')'
+Actual value: None 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    - waiting for "https://zonia-stg.com/mb2/tf-cancer" navigation to finish...
+
+===> Waiting for URL starting with "https://zonia-stg.com/mb2/tf-replay-weekend"
+>>> Navigation via tf_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb2/tf\\-replay\\-weekend.*')'
+Actual value: None 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    - waiting for "https://zonia-stg.com/mb2/tf-cancer" navigation to finish...
+
+Failed step: user register in "tf_ev_cancer" Opt In page
+Test failed on page: 'https://zonia-stg.com/mb2/tf-cancer'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_funnel_--_@1.5__20261020-093348.png

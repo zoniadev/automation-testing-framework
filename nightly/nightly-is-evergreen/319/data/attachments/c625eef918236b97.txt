@@ -1,0 +1,6 @@
+Executing step: user starts "is_ev" funnel from "base" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+Failed step: user starts "is_ev" funnel from "base" bonus entry page
+Test failed on page: 'https://zonia-stg.com/mb5e/is-join-zonia-bonuses'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_via_bonus_entry_(quick)_--_@1.1__20261020-060710.png
