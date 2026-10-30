@@ -7,7 +7,9 @@ def step(arg):
             try:
                 func(*args, **kwargs)
             except Exception as e:
-                raise AssertionError(e)
+                # Drop Playwright's full-page Aria snapshot so Allure reports stay readable
+                msg = str(e).split("\nAria snapshot:")[0]
+                raise AssertionError(msg) from None
 
         return inner
 
