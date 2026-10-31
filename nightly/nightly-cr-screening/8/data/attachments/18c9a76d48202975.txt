@@ -1,0 +1,5 @@
+Executing step: user is on the "cr_live" episode "4" page
+===> Navigated to https://staging.zonia.com/cr-episode-4-live-be2mq9vllr
+===> Waiting for URL starting with "https://staging.zonia.com/cr-join-zonia-2"
+===> URL successfully changed to "https://staging.zonia.com/cr-join-zonia-2"
+Completed step: user is on the "cr_live" episode "4" page

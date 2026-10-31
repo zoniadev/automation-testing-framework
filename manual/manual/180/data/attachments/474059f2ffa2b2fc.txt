@@ -1,0 +1,20 @@
+Executing step: user starts "is_live" funnel from "base" bonus entry page
+Scenario will use "Discover" card "6011000991300009"
+===> Navigated to https://zonia-stg.com/is-join-zonia-bonuses
+>>> Starting funnel from bonus entry page (variant: base)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/is-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/is-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: base)
+Completed step: user starts "is_live" funnel from "base" bonus entry page
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Gomez-1791365893@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/is-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/is-mini-masterclass-series-platinum-package?id=6ac613214d3f45f9c3c2e0d8"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan

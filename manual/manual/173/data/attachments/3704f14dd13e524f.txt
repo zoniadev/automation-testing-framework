@@ -1,0 +1,27 @@
+Executing step: user starts "is_ev" funnel from "ep11" bonus entry page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/mb5e/is-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/mb5e/is-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/mb5e/is-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "is_ev" funnel from "ep11" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Martinez-1790336408@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/is-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/is-mini-masterclass-series-platinum-package"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+>>>Entering shipping details...
+Failed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Test failed on page: 'https://zonia-stg.com/is-mini-masterclass-series-platinum-package'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/IS_Evergreen_funnel_via_bonus_entry_(full)_--_@1.6__20260925-114048.png

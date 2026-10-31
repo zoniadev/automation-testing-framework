@@ -1,0 +1,6 @@
+Executing step: user starts "lg_live" funnel from "base" bonus entry page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user starts "lg_live" funnel from "base" bonus entry page
+Test failed on page: 'https://zonia-stg.com/lg-join-zonia-bonuses'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/LG_Live_funnel_via_bonus_entry_(full)_--_@1.2__20261007-083817.png

@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","47457","Face Scan funnel -- @1.1 ","","2026-05-20","passed","2026-05-20","","","",""
+"","46905","Face Scan funnel -- @1.6 ","","2026-05-20","failed","2026-05-20","","","",""
+"","47093","Face Scan funnel -- @1.4 ","","2026-05-20","failed","2026-05-20","","","",""
+"","76346","Face Scan funnel -- @1.2 ","","2026-05-20","passed","2026-05-20","","","",""
+"","46936","Face Scan funnel -- @1.3 ","","2026-05-20","failed","2026-05-20","","","",""
+"","114857","Face Scan funnel -- @1.7 ","","2026-05-20","passed","2026-05-20","","","",""
+"","110953","Face Scan funnel -- @1.5 ","","2026-05-20","passed","2026-05-20","","","",""
