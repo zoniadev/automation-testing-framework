@@ -1,4 +1,5 @@
 import time
+from urllib.parse import quote
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -11,6 +12,8 @@ class VideoPlayerPage(BasePage):
         # This is the most reliable method, bypassing any overlays or complex event listeners.
         if 'AAC -' not in video_title:
             series, episode = video_title.split(" - ", 1)
+            # Thumbnail src attributes are URL-encoded ("Breast%20Self-Exam"), apostrophes are left as-is
+            episode = quote(episode, safe="'")
             self.context.page.locator(EPISODE_CONTAINER_BY_TITLE.format(value=episode)).hover()
             self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).wait_for(state="visible")
             self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).click()
