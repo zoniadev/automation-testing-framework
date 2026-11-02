@@ -1,5 +1,6 @@
 base_url_new = 'https://zonia-stg.com/'
 base_url_staging = 'https://zonia-stg.com/'
+base_url_prod = 'https://zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
 
@@ -490,7 +491,7 @@ test_cards = [
     {"number": "3530111333300000", "type": "JCB"},
 ]
 
-video_user_email = 'ivan.zonia.testing+206@gmail.com'
+video_user_email = 'geri.zonia.testing+hh-ev-stress@gmail.com'
 video_user_pass = 'pass123@@'
 zonia_login_url = 'login'
 zonia_portal_url = 'user'
