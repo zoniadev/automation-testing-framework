@@ -1,3 +1,4 @@
+from urllib.parse import quote
 import common_variables
 from pages.base_page_object import BasePage
 from locators import *
@@ -28,8 +29,10 @@ class UserPage(BasePage):
             self.search_for_series_and_episode(video_title)
 
     def search_for_series_and_episode(self, series_title):
-        self.navigate_to_url(common_variables.search_results_page)
-        self.context.page.locator(SEARCH_SHOWS_BUTTON).click()
         series, episode = series_title.split(" - ", 1)
-        self.context.page.locator(SHOW_THUMBNAIL.format(value=series)).click()
+        # Search results page lists no shows without a query, so search by the series name.
+        # Show cover images are named without spaces, e.g. "Cancer 360" -> "cancer360-portrait.jpg"
+        self.navigate_to_url(f'{common_variables.search_results_page}?search_by_name={quote(series)}')
+        self.context.page.locator(SEARCH_SHOWS_BUTTON).click()
+        self.context.page.locator(SHOW_THUMBNAIL.format(value=series.lower().replace(" ", ""))).click()
         print(f'===> Opened series: {series_title}')
