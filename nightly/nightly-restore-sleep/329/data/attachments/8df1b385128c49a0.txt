@@ -1,0 +1,9 @@
+Executing step: user select to buy "6" bottles in "Restore Sleep" Supplements page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/restore-sleep-special
+===> No cookie banner found or none matched known selectors.
+===> Buying 6 bottle...
+Failed step: user select to buy "6" bottles in "Restore Sleep" Supplements page
+Test failed on page: 'https://zonia-stg.com/restore-sleep-signup-6-bottles'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Restore_Sleep_Supplement_funnel_--_@1.3__20261101-225300.png

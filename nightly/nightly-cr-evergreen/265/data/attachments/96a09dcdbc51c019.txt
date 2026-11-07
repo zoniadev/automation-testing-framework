@@ -1,0 +1,6 @@
+Executing step: user register in "cr_ev_trauma" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "cr_ev_trauma" Opt In page
+Test failed on page: 'about:blank'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Evergreen_funnel_--_@1.5__20261028-022503.png
