@@ -1,0 +1,6 @@
+Executing step: user register in "cr_1ep_aging" Opt In page
+Scenario will use "UnionPay" card "6221261111117766"
+Failed step: user register in "cr_1ep_aging" Opt In page
+Test failed on page: 'https://zonia-stg.com/crmb1e/cr-inflammation'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_1_episode_funnel_--_@1.6__20261014-050604.png

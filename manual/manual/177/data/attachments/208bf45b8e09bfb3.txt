@@ -1,0 +1,28 @@
+Executing step: user starts "bb_ev" funnel from "ep11" bonus entry page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/bbmb5e/bb-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "bb_ev" funnel from "ep11" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Jones-1791283883@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/bb-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/bb-mini-masterclass-series?id=6ac4d2c99c9137b5312e9b1e"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting for URL starting with "https://zonia-stg.com/bb-restore-detox-special"
+===> URL successfully changed to "https://zonia-stg.com/bb-restore-detox-special?id=6ac4d2c99c9137b5312e9b1e"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page

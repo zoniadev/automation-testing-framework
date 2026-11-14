@@ -1,0 +1,9 @@
+Executing step: user starts "ad_live" funnel from "base" bonus entry page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to https://zonia-stg.com/ad-join-zonia-bonuses
+>>> Starting funnel from bonus entry page (variant: base)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/ad-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/ad-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: base)
+Completed step: user starts "ad_live" funnel from "base" bonus entry page

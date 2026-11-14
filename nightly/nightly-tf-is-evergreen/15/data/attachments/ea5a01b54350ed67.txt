@@ -1,0 +1,9 @@
+Executing step: user register in "tf_ev_hormones" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to http://staging.zonia.com/mb2/tf-hormones
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/mb2/tf-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/mb2/tf-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "tf_ev_hormones" Opt In page

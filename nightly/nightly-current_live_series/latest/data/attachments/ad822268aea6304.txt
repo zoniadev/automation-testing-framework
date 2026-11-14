@@ -1,0 +1,119 @@
+Executing step: user register in "hh_live_gut" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/hh-gut-health
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/hh-join-zonia"
+>>> Navigation via hh_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/hh\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/hh-replay-weekend 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    - waiting for "https://zonia-stg.com/hh-gut-health" navigation to finish...
+    - navigated to "https://zonia-stg.com/hh-replay-weekend"
+    3 × locator resolved to <html lang="en" class="zonia-termly-hide-banner">…</html>
+      - unexpected value "https://zonia-stg.com/hh-replay-weekend"
+    33 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/hh-replay-weekend"
+
+Aria snapshot:
+- text: "Brought To You By:"
+- heading "Thank you! Your eBook will be sent to your email shortly. In the meantime... Watch an Important Replay Weekend Message from the Host of “HEARTproof”" [level=2]:
+  - paragraph: Thank you! Your eBook will be sent to your email shortly. In the meantime...
+  - paragraph: Watch an Important Replay Weekend Message from the Host of “HEARTproof”
+- iframe
+- img
+- text: Click for sound Please Share So We Can Help More People Together 1.1k Shares
+- img "facebook sharing button"
+- text: "317"
+- img "twitter sharing button"
+- text: "193"
+- img "email sharing button"
+- text: "469"
+- img "whatsapp sharing button"
+- text: "4"
+- img "sharethis sharing button"
+- paragraph:
+  - text: Love the Series?
+  - link "Click here":
+    - /url: "#comments-section"
+  - text: to leave a comment.
+- heading "Over $2,763 Worth of Free Bonuses Added During This Replay Weekend Only" [level=2]
+- heading "Get Instant On-Demand Access To ALL 10 Episodes of the “HEARTproof” Docuseries for less than 50 cents a Day PLUS" [level=2]
+- paragraph: — Unaired, Uncensored Bonus Episodes 11 and 12
+- paragraph: — Downloadable PDF Transcripts and MP3 Audios of all 12 episodes
+- paragraph: — 36 Unaired Full Length Expert Interviews (on-demand video access plus PDF transcripts and mp3 audios)
+- paragraph: — PLUS 2,000+ other Health Bite size short videos
+- paragraph: — The Immune for Life, Cancer Unraveled, Ageless, Toxin Free, Beyond the Brain, Unbroken, and Young & Thriving Docuseries
+- paragraph: — AND Over $2,763 Worth of Free Essential Bonuses
+- paragraph: "— Plus Two Free Gifts: Our Sleep and Detox Supplement Bundle, Worth $158 (Included with the annual Zonia plan)"
+- text: Your browser does not support the video tag.
+- link "JOIN ZONIA NOW":
+  - /url: /hh-join-zonia-bonuses
+- text: As low as $10/month. Cancel Anytime Online with 1 click. Your purchase today is protected by our 7-day ironclad money-back guarantee.
+- heading "Watch Any Episode for Free Until 12:59am PST on November 17th by Clicking on Its Image Below" [level=2]
+- text: 1 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Facing the #1 Killer: Understand the Biggest Myths, Root Causes, and Revolutionary Approaches to Heart Disease" [level=2]'
+- text: 2 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "When Arteries Are Under Attack: Discovering the Science of Cardiovascular Disease Formation, Early Signs and Symptoms" [level=2]'
+- text: 3 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Your Metabolism Reclaimed: Tackling Diabetes, Reversing Insulin Resistance, and Exploring Heart-Saving Dietary Shifts Proven by Success Stories" [level=2]'
+- text: 4 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Defending the Heart: The Invisible Impact of Toxins, Poor Sleep, and Infections on Cardiovascular Decline" [level=2]'
+- text: 5 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "The Gold Standard in Testing: Leveraging Advanced Diagnostics and Precision Tools to Build a Bulletproof Action Plan" [level=2]'
+- text: 6 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Beyond the Heart: Effective Modalities to Promote Restoration through the Gut Microbiome, Oral Health, and Digestion" [level=2]'
+- text: 7 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Reverse the Wear & Tear: How to Support Your Immune System and Balance Hormones for Cardiovascular Longevity" [level=2]'
+- text: 8 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "When the Mind Breaks the Heart: The Biological Impact of Stress and Your Complete Emotional Recovery Toolkit" [level=2]'
+- text: 9 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Integrative Cardiology In Your Life: Dietary Protocols, Cutting-Edge Supplementation and Powerful Exercise Secrets for Heart Vitality" [level=2]'
+- text: 10 episode
+- heading "AVAILABLE" [level=4]
+- 'heading "Upgrading Your Heart: How to Use the Latest Innovations and Next-Level Therapeutics for Cardiac Excellence" [level=2]'
+- text: Please Share This Groundbreaking DocuSeries With Your Family & Friends So We Can Help More People Together 1.1k Shares
+- img "facebook sharing button"
+- text: "317"
+- img "twitter sharing button"
+- text: "193"
+- img "email sharing button"
+- text: "469"
+- img "whatsapp sharing button"
+- text: "4"
+- img "sharethis sharing button"
+- text: We'd Love to Hear From You
+- paragraph: Tell us about what you learn from this series and what actions you will be implementing in your life.
+- iframe
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- iframe
+Failed step: user register in "hh_live_gut" Opt In page
+Test failed on page: 'https://zonia-stg.com/hh-replay-weekend'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/HH_Live_funnel_--_@1.5__20261114-124056.png

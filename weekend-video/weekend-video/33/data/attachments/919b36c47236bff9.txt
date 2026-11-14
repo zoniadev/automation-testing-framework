@@ -1,0 +1,23 @@
+Executing step: user log in Zonia portal
+===> Navigated to https://zonia.com/login
+===> Cookie banner accepted using selector: //*[@data-tid='banner-accept']
+===> Waiting for URL starting with "https://zonia.com/user"
+===> URL successfully changed to "https://zonia.com/user/aac"
+Completed step: user log in Zonia portal
+Executing step: user navigates to the "Cancer 360 - Comprehensive Protocol for Breast Self-Exam" video page
+===> Navigated to https://zonia.com/user/search_results?search_by_name=Cancer%20360
+===> Opened series: Cancer 360 - Comprehensive Protocol for Breast Self-Exam
+Completed step: user navigates to the "Cancer 360 - Comprehensive Protocol for Breast Self-Exam" video page
+Executing step: user initiates the video play
+===> Big play button not shown, video autoplayed
+===> Commanded video player to play 'Cancer 360 - Comprehensive Protocol for Breast Self-Exam'
+Completed step: user initiates the video play
+Executing step: the video player is loaded on the page
+===> Video is playing (video index 12)
+Completed step: the video player is loaded on the page
+Executing step: the video is actively playing
+===> Skipping step as player is the other type
+Completed step: the video is actively playing
+Executing step: the media stream network requests are successful
+===> Skipping step as player is the other type
+Completed step: the media stream network requests are successful

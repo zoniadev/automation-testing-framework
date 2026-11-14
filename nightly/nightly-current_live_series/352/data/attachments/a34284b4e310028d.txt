@@ -1,0 +1,531 @@
+Executing step: user register in "hh_live_obesity" Opt In page
+Scenario will use "MasterCard" card "5555555555554444"
+===> Navigated to https://zonia-stg.com/hh-obesity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/hh-join-zonia"
+>>> Navigation via hh_live_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/hh\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/hh-obesity 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/hh-obesity"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to HEARTproof" [level=3]
+- 'heading "From Metabolic Crisis to HEARTproof: The Science of Optimizing Weight, Lowering Blood Pressure, and Securing Your Cardiovascular Health" [level=2]'
+- heading "Discover cutting-edge prevention tools and cardiovascular healing strategies from 36 world-renowned heart health experts who are rewriting the rules of heart disease" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph: Get access to the LIVE Worldwide Premiere on November 2nd when you get your Free Gift
+- heading "(Valued at $27)" [level=5]
+- list:
+  - listitem: —Do you struggle with relentless cravings? Discover how balancing these 2 specific “hunger hormones” with a simple superfood can effortlessly support weight loss
+  - listitem: "—Stop dangerous plaque from building up in your arteries: Drink this daily antioxidant powerhouse to support your blood vessels naturally"
+  - listitem: —Want to naturally lower your blood pressure? Discover the potent marine compound that acts as a natural vasodilator and drastically reduces cardiovascular strain
+- heading "Plus get your free ticket to HEARTproof" [level=5]
+- textbox "First Name* First Name*":
+  - /placeholder: " "
+  - text: AutomationBradley
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2rivera-1794234288@gmail.com
+- text: E-mail*
+- checkbox
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "GET YOUR FREE GIFT +Register for HEARTproof now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: .
+- heading "Meet 36+ World-Leading Cardiologists, Functional Medicine Doctors & Heart Health Experts Changing How We Prevent Heart Disease — As Seen On:" [level=2]
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- heading "The One Thing Every Cardiovascular Patient Is Never Told, and It Is Costing Them Everything" [level=2]
+- paragraph: You take the pills every morning.
+- paragraph: You show up to every appointment, you get the bloodwork done, you watch the numbers come back controlled, and you exhale.
+- paragraph: You do everything right.
+- paragraph: Everything they told you to do.
+- paragraph: And you still feel like something is wrong ...
+- paragraph: The muscles that ache without reason.
+- paragraph: The fog that greets you before you even get out of bed.
+- paragraph: The energy that used to be yours and now belongs to nobody.
+- paragraph: The body you once lived inside freely … now feels like something you have to manage, watch, and second-guess every single day.
+- heading "And you are scared …" [level=2]
+- paragraph: Scared of every flutter, every twinge, every breathless moment, you spend the next hour quietly evaluating on your own.
+- paragraph: You used to live inside your body. Now you monitor it.
+- paragraph: And your doctor looks at the chart and says you are doing great.
+- paragraph: So, why does nobody explain why you are exhausted when the medication is working?
+- paragraph: Why does nobody connect what is happening to your strength, your sharpness, your blood sugar to the bigger picture of what is quietly unfolding inside you?
+- heading "Nobody asked why this happened to you specifically" [level=2]
+- heading "Nobody looked deeper." [level=2]
+- paragraph: They matched your numbers to a protocol, sent you home, and called it care.
+- paragraph: But it's always the same story…
+- paragraph: The same patients returning with the same old problems after every procedure …
+- paragraph: Even worse … many of these patients still suffer a cardiac event … even after every "care" visit, every follow-up, every procedure they were promised would help.
+- paragraph: Sadly, this is something the standard model was never built to address.
+- paragraph: The numbers were never the full story.
+- paragraph: What you are about to read will be the most honest conversation about your heart you have ever had.
+- paragraph: Keep reading because the gap between the life you are living right now and the one you believed you would have is not permanent.
+- paragraph: It is an information gap.
+- paragraph:
+  - strong: And that gap ends here.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "We kept believing. We kept trusting. We kept exhaling." [level=2]
+- text: "And while we weren't looking … the numbers kept climbing: 88% to over 93% people"
+- paragraph: in the U.S. are metabolically unhealthy — leaving them prone to high blood sugar, abnormal blood pressure, triglycerides.
+- text: 2,500 Americans
+- paragraph:
+  - text: die from cardiovascular disease
+  - strong: every single day
+  - text: — and the hidden engine driving this crisis is an epidemic of unaddressed metabolic dysfunction.
+- text: 2 out of 3 heart attacks
+- paragraph:
+  - text: are caused by
+  - strong: metabolic dysfunction and insulin resistance
+  - text: — not just high cholesterol — yet most doctors never look beyond a standard lipid panel.
+- text: More than 1 billion
+- paragraph: people are living with obesity — and roughly 2.5 billion are considered overweight — representing approximately 43% of the global adult population.
+- text: 50% of people with heart disease
+- paragraph: die of a heart attack without knowing they had heart disease. Because they were told their blood sugar and weight issues were completely separate from their heart.
+- text: 80%-90% of heart disease
+- paragraph:
+  - text: is
+  - strong: completely preventable
+  - text: — when root causes like insulin resistance and poor metabolic health are identified early and actually addressed.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "It is now clear that cardiovascular disease is not just a cholesterol problem — it is a direct consequence of a metabolism under profound distress." [level=2]
+- paragraph: The shortness of breath you brush off as being out of shape.
+- paragraph: The chest that tightens at odd moments you quietly file away and never mention to anyone.
+- paragraph: The unexplained fatigue and lightheadedness.
+- paragraph: These are signals from a system that has been under pressure for a very long time.
+- paragraph: And together, they point to something far more serious — the single deadliest force on the planet.
+- paragraph: Not cancer. Not war. Not accidents.
+- heading "Heart disease!" [level=2]
+- paragraph: It kills more people globally than cancer, respiratory disease, and diabetes combined.
+- paragraph: In the United States alone, someone dies from cardiovascular disease every 36 seconds.
+- heading "That's 2,500 people. Every. Single. Day." [level=2]
+- paragraph: One moment they're here. The next, they're gone.
+- paragraph: No second chance, do-over or "if only we'd caught it sooner."
+- paragraph: And it doesn't just happen to the elderly.
+- paragraph: Metabolic dysfunction and insulin resistance begin damaging your arteries silently in your teens and 20s, often long before you ever struggle with your weight or feel a single thing wrong.
+- paragraph: And before you tell yourself this is just your genetics, that a “slow metabolism” or a family history of obesity sealed your fate before you had a say, understand this …
+- paragraph: Your metabolic destiny is not written in stone.
+- paragraph: It is not inevitable.
+- paragraph:
+  - strong: The research inside this series will show you, clearly and without question, that the metabolic healing protocols available to you right now may be far more powerful than the genes you were handed at birth.
+- paragraph: This is no longer an old person's disease.
+- paragraph: This is everyone's disease.
+- paragraph: And it is invisible.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- paragraph: "And here is the part that should frighten every person reading this page:"
+- paragraph: The tests your doctor runs every single year, the ones that make you feel safe, the ones your family trusts with their lives ...
+- paragraph:
+  - strong: May be telling you almost nothing about whether underlying insulin resistance is actively endangering your heart.
+- heading "She Went To Every Appointment For Three Years. They Kept Missing The Hidden Metabolic Damage That Was Destroying Her Arteries." [level=2]
+- paragraph: Fifty-two years old. Three years of her life, gone.
+- paragraph: Headaches every day. Joints that screamed for no reason.
+- paragraph: A fatigue that sleep couldn't touch.
+- paragraph: A body she no longer recognized and a mind doctors had decided was the problem.
+- paragraph: Every physician said the same thing.
+- paragraph: Depressed. Anxious. And handed her another prescription to prove it.
+- paragraph: Antidepressants. Anti-anxiety pills. Sleeping medication.
+- paragraph: She took them all.
+- paragraph: She got worse …
+- paragraph: Nobody thought to look at what was actually in her body until one doctor ran a test nobody had bothered to run before.
+- paragraph: What came back stopped the room.
+- paragraph: Her toxin levels were unlike anything that her doctor had ever seen.
+- paragraph: A radioactive compound in her bloodstream at ten thousand times the normal level.
+- paragraph: And what our experts make absolutely clear is that toxic burden at this level does not stay contained to one system.
+- paragraph: It spreads.
+- paragraph: It drives the chronic inflammation that damages arterial walls.
+- paragraph: It places relentless pressure on the heart and the entire cardiovascular system.
+- paragraph: It creates the exact silent conditions that conventional medicine is looking for in the wrong places with the wrong tests.
+- paragraph: She was not just exhausted and in pain.
+- paragraph: Her body was caught in the same inflammatory storm that sits at the root of cardiovascular disease.
+- paragraph: And not one person in three years of appointments had thought to look for it.
+- paragraph: Once they found it, they addressed it. Properly. Completely.
+- paragraph: Treated the actual cause instead of numbing the symptoms it was producing.
+- paragraph: She went back to work.
+- paragraph: No antidepressants, sleeping pills, or anxiety medication.
+- paragraph: She never needed a single one of them.
+- paragraph: What she needed was one person willing to look past the obvious and ask a question nobody else had thought to ask.
+- paragraph: That is what happens when someone finally looks at the whole person.
+- paragraph: And it is not just her.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow Sharon Stills, NMD
+- paragraph: In my 20 years as a Naturopathic Physician, I've seen countless patients paralyzed by the thought of a cardiovascular diagnosis — but “HEARTproof” is the ultimate antidote to that fear. It debunks all the outdated myths, including the false belief that lifelong symptom management is our only option. It also empowers people to look beyond standard panels with advanced testing tools, while showcasing real patient stories to prove the body’s capacity to repair arteries when given the right functional tools. The team at Zonia delivered the exact education that moves people out of chronic anxiety and into a confident future of proactive, holistic healing.
+- heading "One conversation could change the entire direction of one's life" [level=2]
+- heading "Including Greg's." [level=2]
+- paragraph: He was the kind of man who showed up for everyone.
+- paragraph: High-stress financial career. Long hours. The kind of guy who never missed a meeting, never missed a deadline, and never, ever missed a medication.
+- paragraph: His cholesterol was dialed in perfectly. Blood pressure is immaculate. He did everything his doctors told him to do.
+- paragraph: And for three consecutive years, on December 22nd — right as the Christmas holidays were about to begin — Greg was rushed to the hospital with a heart attack.
+- paragraph: Three years in a row.
+- paragraph: Three Christmases when his wife sat in a waiting room, not knowing whether her husband would come home.
+- paragraph: Three years where his children held their breath through the holidays.
+- paragraph: Three years of gifts unopened and dinners grown cold while a family prayed in a hospital hallway.
+- paragraph: His numbers were textbook.
+- paragraph: His compliance was flawless.
+- paragraph: By every conventional measure, Greg was doing everything right.
+- paragraph: But in those three years, not a single doctor asked about his diet.
+- paragraph: Nobody asked about his stress. The weight he carried that never showed up on a scale.
+- paragraph: Nobody asked about his sleep. His lifestyle. The convenience meals he was living on because he was always running.
+- paragraph: The cortisol flooding his system from a career he never felt he could step away from.
+- paragraph: They treated the numbers.
+- paragraph: They never treated Greg.
+- paragraph: "Until one practitioner sat with him and said something no doctor had said in three years:"
+- paragraph: "\"Something isn't adding up. Let's look deeper.\""
+- paragraph: Not deeper into his bloodwork. Deeper into his life.
+- paragraph: They overhauled his nutrition — real food, not convenience meals grabbed between calls.
+- paragraph: They introduced breathwork because Greg had never once in his adult life been taught how to calm his own nervous system.
+- paragraph: They addressed his sleep.
+- paragraph: They targeted the root causes that no cholesterol panel, no stress test, and no annual checkup had ever thought to measure.
+- paragraph: And something shifted! Steadily. Quietly. The way real healing works.
+- paragraph:
+  - strong: Greg has now been without a single cardiovascular event for four years.
+- paragraph: Not at Christmas. Not at any point in the calendar year.
+- paragraph: His wife doesn't hold her breath in December anymore.
+- paragraph: His kids don't flinch when the phone rings during the holidays.
+- paragraph: Because someone finally saw Greg — not as a chart, but as a whole human being.
+- paragraph: A father.
+- paragraph: A husband.
+- paragraph: A man who deserved better than a system that only knew how to react after the damage was done.
+- paragraph: His family deserved it. His children deserved it.
+- paragraph: Greg is living proof that it doesn't have to end that way.
+- paragraph: That is when someone finally looks past the numbers and treats the whole person — the diet, the stress, the sleep, the root causes hiding underneath — the body can heal in ways most people are never told are possible.
+- paragraph: And that's exactly why this docuseries was created.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "Harvard Researchers Spent 30 Years Looking for What Actually Causes Heart Attacks. The Answer Was Never Just “Cholesterol” — It Was Rooted in Our Metabolic Health." [level=2]
+- paragraph: Your tests are within the limits.
+- paragraph: The doctor said so.
+- paragraph: But you do not feel your best.
+- paragraph: And you know it.
+- paragraph: That low energy you keep explaining away.
+- paragraph: That heaviness you wake up with.
+- paragraph: Those small signs you keep dismissing as stress, age or just life catching up with you.
+- paragraph: They are not something to ignore.
+- paragraph: And the worst thing you can do right now is keep ignoring them because a piece of paper told you everything is fine.
+- paragraph: If you are relying on medication alone, there is a very real chance that the underlying inflammation quietly driving your cardiovascular risk is still there … Still building.
+- paragraph: Still completely unaddressed while you go about your day, believing you are protected.
+- paragraph: So, do it for yourself and find out what is actually going on inside your body.
+- paragraph: And if that is hard, do it for the people who would be lost without you.
+- paragraph: Because half of all heart attacks occur in people with completely normal cholesterol.
+- paragraph: That means the standard blood test, the one your doctor ordered last month, the one your family has been trusting with their lives, cannot tell you whether a heart attack is silently building inside your arteries right now.
+- paragraph: "As one cardiologist in this series states plainly: \"Medication is not enough. It is symptom management. Period.\""
+- paragraph: You can have perfect numbers on paper and still be quietly building the conditions for a cardiac event that is years, even decades, in the making.
+- paragraph: Unless you know what actually to look for.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "What 36 World-Renowned Cardiologists, Functional Medicine Doctors and Heart Experts Exposed When the Cameras Turned On" [level=2]
+- paragraph: Decades of combined clinical experience.
+- paragraph: Thousands of patients. One shared conclusion.
+- paragraph: Chronic inflammation is a driving force behind most cardiovascular disease today.
+- paragraph: These experts also documented something extraordinary.
+- paragraph: Behind chronic inflammation lies a set of specific, identifiable root causes that most people walking into a cardiology appointment today will never be tested for.
+- paragraph: What those root causes are, how they operate silently for years, and how these doctors are uncovering and addressing them in their own patients is what this entire series was built to show you.
+- paragraph: What happens when someone finally does address them properly is something the standard model never prepared anyone to expect …
+- paragraph: The patients who went through it describe it as getting their lives back in ways they had stopped believing were possible.
+- paragraph: And that matters more than almost anything else on this page!
+- heading "80%–90% of metabolically driven heart disease is completely preventable." [level=2]
+- paragraph: The science is already here.
+- paragraph: The proof is already documented.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "And it's all inside HEARTproof" [level=2]
+- paragraph: "Our newest groundbreaking docuseries that dives deep into everything you need to know to prevent, detect, and reverse the #1 killer on Earth — before it takes someone you love without ever giving you a warning sign."
+- paragraph: An urgent, eye-opening, and ultimately hopeful journey into the real reasons heart disease is still destroying families — and the powerful, science-backed precision-based strategies that are already saving lives … strategies that are 20-30 years ahead of the standard of care.
+- paragraph: "This brand-new 10-episode series brings together over 36 of the world's leading cardiologists, functional medicine doctors, and heart health researchers who came together to share one powerful message:"
+- heading "Metabolic dysfunction, obesity, and cardiovascular disease do NOT have to be your story." [level=2]
+- paragraph: Inside HEARTproof, you will discover the root causes your annual checkup was never designed to find, the advanced genetic and precision testing that can detect danger years before symptoms appear, the innovative modalities that are ahead of our time, but accessible to all, and the real patient stories of people who reversed active cardiovascular disease without relying on medication alone, but by finally addressing the full body and mind as a whole.
+- heading "When you watch this 10-episode HEARTproof documentary series, you will discover:" [level=2]
+- list:
+  - listitem:
+    - strong: "The “Bermuda Triangle” of heart disease:"
+    - text: The three interconnected cellular drivers that trap your body in a fatal cardiovascular spiral
+  - listitem:
+    - strong: "The superfood myth:"
+    - text: Why some “heart-healthy” foods may not be helping at all — and the key trait that separates the truly effective ingredients from the rest
+  - listitem:
+    - strong: "Reversing insulin dependency:"
+    - text: See how regular patients are eliminating decades of diabetic drugs in a matter of weeks
+  - listitem:
+    - strong: "The shocking ER heart attack statistic:"
+    - text: We now know why two-thirds of emergency cardiac patients share this exact underlying metabolic condition
+  - listitem:
+    - strong: "Natural appetite suppressants:"
+    - text: Try these 5 herbal supplements in order to “calm the food noise” and stay fuller for longer!
+  - listitem:
+    - strong: Does cholesterol have a blindspot?
+    - text: Why 50% of people who suffer a devastating heart attack have completely normal lab scores
+  - listitem:
+    - strong: "From lifetime medication to perfect health:"
+    - text: How targeting a hidden B-vitamin metabolism marker wiped out chronic hypertension in 6 weeks
+- list:
+  - listitem:
+    - strong: "Where leaky gut begins:"
+    - text: Hear about the “extreme form” of insulin resistance that causes gut microbiome dysbiosis
+  - listitem:
+    - strong: "A bite of cardiac excellence:"
+    - text: Discover how a simple kitchen tool compresses ten cups of vascular defense nutrients into a half-cup serving
+  - listitem:
+    - strong: "The $1 billion exercise:"
+    - text: How doing just 10 minutes of these 2 exercises immediately after a meal forces your muscles to act like a sponge, rapidly sucking deadly glucose spikes out of the bloodstream
+  - listitem:
+    - strong: "CGM as the pre-diabetes defense:"
+    - text: Why you can’t feel the dangerous insulin spikes happening inside your body after a meal
+  - listitem:
+    - strong: "The short-term diet trap:"
+    - text: Why a popular weight-loss diet that works in two months can cause you to die significantly earlier
+  - listitem:
+    - strong: "3 days is all it takes:"
+    - text: The exact timeframe required to activate a Nobel Prize-winning cellular cleanup mechanism
+  - listitem:
+    - strong: "The 5-day lifespan shield:"
+    - text: How a monthly periodic protocol completely neutralizes a lifetime of eating a toxic Western diet
+- text: Yoni Whitten, DC
+- paragraph: Excellent series! Stefan and the cast of doctors here do a fantastic job of tackling common myths about heart disease, explaining emerging science and most importantly, empowering viewers with the information they need to improve their lives. The episodes are well organized and highly engaging. Bravo!
+- 'heading "What You Will Find in Each Episode of This Groundbreaking 12-Part Docuseries HEARTproof: Unlocking Cardiovascular Resilience" [level=2]'
+- text: "1 episode Facing the #1 Killer: Understand the Biggest Myths, Root Causes, and Revolutionary Approaches to Heart Disease"
+- list:
+  - listitem: Deadlier than cancer? The terrifying new strains of emerging heart disease carrying unprecedented mortality rates
+  - listitem: "The pneumonia cover-up: How medical charts hide the real number of heart deaths under an entirely different diagnosis"
+  - listitem: "The testosterone crash: Scientists just found a hidden hormonal decline in men that triggers an absolute avalanche of cardiovascular risks"
+  - listitem: Artery damage at 20? See why the silent precursor to catastrophic heart attacks begins developing as early as late childhood
+  - listitem: "The 10-year trap: Why relying on standard short-term heart scores leaves you completely unprotected over your lifetime"
+  - listitem: "The most common medication myth: You need to hear why controlling blood pressure with a pill does not actually lower your statistical risk of a stroke"
+  - listitem: "The ultimate first symptom: It's time to uncover the terrifying reality for 25% of people whose very first sign of heart disease is sudden death"
+  - listitem: "The mouth-to-heart link: Explore how hidden bacteria in your teeth migrate directly into your arteries to form deadly plaque"
+  - listitem: "The sleep-satiety glitch: Can losing just one night of sleep slash your natural heart-protective GLP-1 hormone by half?"
+  - listitem: "\"Dense and sticky\" cholesterol: Why standard lab tests give you a false sense of security, and what your LDL particle number actually reveals about your true heart attack risk"
+- paragraph: “Heart disease is by far still the leading cause of death in America and around the world as well. And the reason that's the case, in spite of modern medicine, is because modern medicine doesn't address the primary cause of heart disease.”
+- text: "Joel Fuhrman, MD 7-time NY Times Bestselling Author President of Nutritional Research Foundation 2 episode When Arteries Are Under Attack: Discovering the Science of Cardiovascular Disease Formation, Early Signs and Symptoms"
+- list:
+  - listitem: Electrical, plumbing, or structural? Discover the 3 unique ways your cardiovascular system can fail and why treating the wrong one is a waste of time
+  - listitem: "\"Big and bouncy\" vs \"Small and stickies\": The untold truth about LDL cholesterol particles that your standard lab tests are completely missing"
+  - listitem: Unexplained anxiety or a fluttering chest? See how your nervous system acts as the ultimate early warning alarm for hidden heart disruption
+  - listitem: "The AFib epidemic: Why this common heart rhythm issue increases your stroke risk by 500%—and the natural lifestyle tweaks that reverse it"
+  - listitem: "The silent heart attack: How ignoring 2 seemingly mild symptoms can create a hidden \"leaky vessel syndrome\" that leads to a devastating stroke weeks later"
+  - listitem: "Stop doing this: Why high insulin levels act like \"stiffening agents\" in your arteries, causing high blood pressure and ischemic attacks"
+  - listitem: "Gut-Heart connection: Discover how your gut microbiome is secretly driving cardiovascular inflammation—and how to rebalance it"
+  - listitem: "The dangerous \"stiffening\" effect: How everyday stressors and toxic foods transform your flexible, elastic blood vessels into rigid, clogged pipes"
+  - listitem: "Lipid metabolism explained: See how specialized carriers called lipoproteins dictate whether fat supports your brain or clogs your arteries"
+  - listitem: "The \"good vs. bad\" cholesterol: Why relying solely on your standard LDL and HDL numbers gives you a dangerously incomplete picture of your heart health"
+- paragraph: “We would die if we didn't have cholesterol. We need cholesterol. So it's really all a matter of balance, right? Too much isn't so good. Too little isn't so good. We really need to balance it.”
+- text: "Helen Messier, PhD, MD, IFMCP Physician-Scientist and Leader in Precision and Longevity Medicine 3 episode Your Metabolism Reclaimed: Tackling Diabetes, Reversing Insulin Resistance, and Exploring Heart-Saving Dietary Shifts Proven by Success Stories"
+- list:
+  - listitem: "The dangerous reality of loud snoring: This disruptive nighttime symptom is a major hidden culprit behind chronic cardiac inflammation"
+  - listitem: "How \"cellular rust\" destroys your energy: The microscopic process that damages your mitochondria and forces cells into accelerated aging"
+  - listitem: "The \"sticky\" blood vessel illusion: How unutilized glucose creates an inflammatory glue inside your arteries, feeding deadly blockages"
+  - listitem: "The deadly fat hiding around your organs: Unfortunately, a standard scale misses this highly inflammatory tissue, but there's an exact scan to track it"
+  - listitem: "The hormonal threat to female hearts: A deficiency in this single hormone spikes cardiac risk, and the balancing symphony required for safety"
+  - listitem: "The 94-year-old muscle miracle: A case study proving it is never too late to reverse body fat accumulation and rebuild a youthful heart"
+  - listitem: Can we reverse 15 years of severe insulin dependence? The simple functional medicine approach that brought a "hopeless" person back to balance
+  - listitem: "CGM as the pre-diabetes defense: How strapping on a Continuous Glucose Monitor acts as a metabolic alarm system to stop the #1 cause of heart disease, stroke, and dementia"
+  - listitem: "Time-restricted eating: Which window of fasting should you aim for to supercharge your digestion and fill your body with energy it needs for repair?"
+- paragraph: “This concept that there is a cardiometabolic relationship to heart disease is a whole new “aha” for the whole field of cardiology, because it now helps us to understand that just restricting fat is not the solution to the problem.”
+- text: "Jeffrey Bland, PhD, FACN, CNS Founder of Personalized Lifestyle Medicine Institute 4 episode Defending the Heart: The Invisible Impact of Toxins, Poor Sleep, and Infections on Cardiovascular Decline"
+- list:
+  - listitem: "The silent toxin epidemic: Why 39% of Americans harbor a specific blood-poisoning level that directly accelerates cardiac risk"
+  - listitem: "The hidden gene variant: Did you know about this dangerous cholesterol mutation that 20% of people carry undetected, tripling their risk of disease?"
+  - listitem: "Midnight oxygen theft: How a common, undiagnosed nighttime condition rips your body's mitochondria apart and triggers arrhythmias"
+  - listitem: "Silent inflammation triggers you must know: Discover these common environmental toxins interacting with human DNA and causing sudden blood clots and strokes"
+  - listitem: Is moderate drinking allowed? We know the precise amount of alcohol spiking your relative risk of heart disease by a shocking 18%
+  - listitem: Is this the biggest dietary trap? Why common health foods like oats and hummus are secretly saturated with a hazardous, patented antibiotic
+  - listitem: "The alarming truth about GMOs: This is what researchers discovered about massive tumors when a 90-day GMO food study was extended to two years"
+  - listitem: "Beware of infections: A common \"stealth illness\" secreting aggressive toxins that may damage your veins and cause heart failure"
+  - listitem: "Clot formation at the root: The shocking reality behind many strokes… and their silent connection to toxin exposure that almost nobody checks"
+  - listitem: "Glyphosate exposed: See what happens to the human body when we keep consuming pesticides hidden in everyday food"
+- paragraph: “We didn't change our genes in 100 years. What happened? We changed our environment. We changed our diet. We changed our level of toxic load.”
+- text: "Mark Hyman, MD #1 New York Times Bestselling Author, Internationally Recognized Speaker & Health Advocate 5 episode The Gold Standard in Testing: Leveraging Advanced Diagnostics and Precision Tools to Build a Bulletproof Action Plan"
+- list:
+  - listitem: "Not all diets are equal: You won't believe how a popular trendy diet caused a patient's cholesterol to instantly skyrocket to 500+"
+  - listitem: "Arterial zombie cells: This hidden cellular phenomenon recruits healthy tissue to destroy your vascular capacity"
+  - listitem: What actually drives premature aging? Uncovering 3 critical, hidden inflammatory cytokines that doom people's cardiovascular and brain health
+  - listitem: "The arterial rescue: The vital quality of good cholesterol required to aggressively clear plaque buildup from your vessels"
+  - listitem: "Cardiology's dirty secret: Hear why conventional stress tests completely fail to see danger until an artery is 70% blocked"
+  - listitem: "The genetic wild card: A tiny, lethal particle carried by up to 30% of people that embeds in walls and triggers sudden death"
+  - listitem: "Try this 40-30-20-10 rule: A vascular expert reveals the strict statistical limits of what cholesterol drugs can truly achieve"
+  - listitem: "Exposing soft plaque: This cutting-edge, AI-assisted CT scan goes far beyond a standard test to spot the highly dangerous, invisible \"soft\" plaques that most tests completely miss"
+  - listitem: "Life-saving CIMT: How a quick, 10-minute ultrasound of your neck arteries can calculate your true \"vascular age\""
+  - listitem: "How to measure bad cholesterol: Explore why Canada and Europe recommend every patient take the Lp(a) test at least once in their life"
+- paragraph: “I think of myself now as kind of a cardiology engineer, because you're putting all these pieces together and as you start to put the pieces together, it's absolutely amazing how you can show people why they are where they are.”
+- text: "Christopher Davis, MD, FACC Triple Board-Certified Integrative Interventional Cardiologist 6 episode Beyond the Heart: Effective Modalities to Promote Restoration through the Gut Microbiome, Oral Health, and Digestion"
+- list:
+  - listitem: "Explore the puzzle of oral health: The specific inflammatory compound from your mouth that actively degrades your blood vessel lining"
+  - listitem: "An urgent warning: Why 14 of the top 15 global causes of lethal inflammation can be traced back to a single gut imbalance"
+  - listitem: "Microbial exhaust: How toxic gas and waste from an overgrown microbiome physically constrict the blood vessels of your heart"
+  - listitem: "Superfoods that act as a shield: Learn the science behind specific prebiotic greens — and how to actively neutralize heart-damaging bacteria in your gut"
+  - listitem: Where do food cravings come from? This type of microbiome disrupts 2 vital satiety hormones… forcing addictive eating habits
+  - listitem: Is gluten causing your imbalances? Why your gut's immune "sentries" misinterpret wheat as a dangerous bug, leading to arterial plaque
+  - listitem: "This ingredient doesn't belong in food: Shocking visual proof of how a common agricultural chemical forces intestinal tight junctions apart"
+  - listitem: "How to spot parasites: The comprehensive advanced stool analysis required to unveil hidden parasites and gut inflammation"
+  - listitem: "The Stanford trial: See how this diet rich in a few neglected foods successfully crashed 19 distinct cellular markers of inflammation"
+  - listitem: "L-Glutamine deficiency: How lacking this key nutrient causes the gut to become more leaky and prone to damage in the large intestine"
+- paragraph: “The exhaust of the bad gut bacteria affects the blood vessels of the heart. That's the easiest way to understand. Just a tiny little connection. There are many connections, but the easiest one is the exhaust of too much bad bacteria.”
+- text: "Tom O'Bryan, DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine 7 episode Reverse the Wear & Tear: How to Support Your Immune System and Balance Hormones for Cardiovascular Longevity"
+- list:
+  - listitem: "Age-reversal on a plate: Explore the specific dietary protocol shown to reduce biological age by 2.5 years in clinical trials"
+  - listitem: "\"Zombie cell\" clean-up: Your immune system is your primary defense against age-old senescent cell accumulation — how to activate it now"
+  - listitem: "The high achiever syndrome: This emotional state forces your vessel walls to dangerously tighten (but we know how to manage it effectively)"
+  - listitem: "Menopause explained: Why previously healthy women suddenly experience soaring cholesterol and insulin resistance for the first time"
+  - listitem: "What all men need to hear: Every man experiencing erectile issues may require an immediate, comprehensive heart workup"
+  - listitem: "How intimacy and wellness go together: The surprising data showing how this intimate act cuts heart attack and prostate risks by 50%"
+  - listitem: "The 10-year aging spike: How the sudden loss of estrogen during menopause causes Glycan age (a hidden measure of your inflammation) to skyrocket by a full decade"
+  - listitem: "The blood clot trap: Why traditional synthetic estrogen pills drastically increase the risk of a sudden heart attack — and the natural bioidentical patches that protect your heart without the risk"
+  - listitem: "The male blood sugar protection: The surprising reason men's arteries stiffen and fail as they age, plus how optimizing testosterone is the ultimate secret to reversing deadly insulin resistance"
+- paragraph: “When we aren’t in stress, food nourishes, builds, and constructs. And when we’re stressed, the food knows how to release its medicine.”
+- text: "Zach Bush, MD Triple-Board Certified Physician, Research Scientist, Internationally Recognized Educator 8 episode When the Mind Breaks the Heart: The Biological Impact of Stress and Your Complete Emotional Recovery Toolkit"
+- list:
+  - listitem: "The 5-minute shaking dance: How a simple body movement instantly clears the inflammatory cortisol pooling in your tissues"
+  - listitem: "Nourish your heart as soon as you wake up: Try this basic bathroom habit to activate a critical cranial nerve that shields your vessels from stress"
+  - listitem: "The hidden impact of stress: Why your liver manufactures more cholesterol the exact moment your mental anxiety spikes"
+  - listitem: What's causing your deficiency? Here's the silent thief depleting 3 vital vitamins and minerals, forcing dangerous shifts in heart rhythm
+  - listitem: "The hidden cost of anxiety: What your racing thoughts may be doing to your arteries, circulation, and cardiovascular future"
+  - listitem: "The 1% cardiology secret: The toxic elimination tool that triggers genetic DNA repair — but is ignored by 99% of doctors"
+  - listitem: "A warning just in time: How a simple device available to most people predicted a severe viral infection days before a single symptom hit"
+  - listitem: "The ultimate longevity predictor: Why tracking one effortless respiratory metric serves as the perfect surrogate for VO2 max"
+  - listitem: "Biohack your heart: This strange facial stimulation technique can help calm your nervous system in minutes"
+  - listitem: "The recipe for disaster: Could combining these 2 common lifestyle habits lock your nervous system into permanent panic?"
+  - listitem: "Inside the vagus nerve: How this massive nerve highway acts as the ultimate master switch for your heart's \"rest and digest\" system (plus 3 ways to activate it every morning)"
+- paragraph: “If you don't have a good outlook when you wake up in the morning and you don't make a choice to want to be healthier within that day, all of those things won't work — because we have to be present in our body, for our body to work for us.”
+- text: "Tricia Pingel, NMD Licensed Naturopathic Physician 9 episode Integrative Cardiology In Your Life: Dietary Protocols, Cutting-Edge Supplementation and Powerful Exercise Secrets for Heart Vitality"
+- list:
+  - listitem: "The 1970s clinic shocker: Hear how end-stage heart failure patient was given 3 months to live… but regained their health and thrived for decades"
+  - listitem: Are you eating enough of this? One expert found a specific dietary benchmark that helps shield your arteries far better than a single superfood ever could
+  - listitem: "The 5% lipid drop: Incorporating this one unrefined, non-GMO food type every week could force down your bad cholesterol aggressively"
+  - listitem: "The EGCg shield: How a powerful, specific antioxidant compound in a common morning beverage directly halts heart disease"
+  - listitem: "These fats are a must-have: Adding these 2 specific fats to a Mediterranean pattern was proven to slash major cardiac events by 30%"
+  - listitem: "The 12% risk spike: Consuming these infamous \"dead foods\" from grocery shelves drives sudden heart failure"
+  - listitem: "Green for the win: How a rare molecule found in a strange superfood regenerates your inner arterial coating in hours"
+  - listitem: "The K2 MK7 traffic controller: The precise postbiotic nutrient that pulls calcified plaque out of your heart arteries"
+  - listitem: "The \"mother of all antioxidants\": Why \"Vitamin G\" — also known as glutathione — is the ultimate secret weapon for neutralizing the exact free radicals that cause blood vessels to stiffen"
+  - listitem: "The Longevity Diet: Why focusing on short-term weight loss fads is destined to fail, and the 4 non-negotiable pillars of nutrition to add decades to your life"
+- paragraph: “We owe it to patients to tell them there's a very strong link between what they put on their plate and what they do. Are they digging their grave with a fork? Are they building wellness with a fork or spoon? And that it really matters for every meal.”
+- text: "Joel Kahn, MD, FACC Holistic Cardiologist Integrative Medicine Practitioner 10 episode Upgrading Your Heart: How to Use the Latest Innovations and Next-Level Therapeutics for Cardiac Excellence"
+- list:
+  - listitem: "Next-level longevity: How to achieve a functional 30-year-old body at any age (and still maintain a razor-sharp mind)"
+  - listitem: "The true cost of statins: Beware, because this common cholesterol drug may block vital pathways and poison your mitochondria"
+  - listitem: "The Vitamin C paradox: How altering the dosage transforms a powerful antioxidant into a dangerous compound"
+  - listitem: "\"Widowmaker\" hiding in plain sight: Find out how a man running 7-minute miles hid a silent 90% artery blockage"
+  - listitem: "The cellular time machine: Discover a breakthrough oral molecule that targets your telomeres — the protective biological caps on your DNA — to literally reverse arterial aging"
+  - listitem: "A deep dive into IV Therapies: See how high doses of this potent antioxidant are now being used to physically rebuild and remodel damaged heart muscle"
+  - listitem: "Unleash the power of stem cells: The science behind clearing dead tissue, restoring blood flow, and taking a heart failure patient from being unable to move freely to playing golf"
+  - listitem: "Therapeutic Plasma Exchange: An emerging longevity treatment now being used to physically wash your bloodstream of microplastics, heavy metals, and other stubborn toxins"
+  - listitem: "IV Therapies as the ultimate supplement: 5 key vitamins and antioxidants that can be administered intravenously for patients with severe deficiencies"
+  - listitem: "Peptides in cardiology: Is this new class of molecules safe to use while dealing with cardiovascular challenges? Hear the truth about the latest data and FDA-approved options"
+- paragraph: “The future of medicine, whether it's cholesterol, cardiovascular disease, cancer, diabetes — it's transformation, it's reprogramming, it's actually taking cells that are dysfunctional and regenerating and resetting them to normal.”
+- text: Nathan Goodyear, MD, MD(H) Integrative Medicine and Oncology Pioneer Published Author, Podcaster, & Blogger
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow Nick Polizzi
+- paragraph: Heart disease remains the world's number one killer, yet most of us have been fed a watered-down, outdated version of what's actually happening inside our arteries — and what we can do about it. This series goes straight to the root, cutting through decades of myths to reveal the real drivers of cardiovascular disease, the early warning signs most people miss entirely, and the natural approaches that are finally getting the attention they deserve. Zonia has put together something genuinely valuable here — clear, science-backed, and immediately actionable. If you have a heart (and you do), this is essential viewing.
+- heading "HEARTproof isn't just about your heart — it's about every person whose life is wrapped around yours" [level=2]
+- paragraph: When someone has a cardiac event, they're not the only one who suffers.
+- paragraph: The spouse who rides in the ambulance.
+- paragraph: The adult children who rearrange their lives overnight.
+- paragraph: The grandchildren who learn what "ICU" means before they learn to ride a bike.
+- paragraph: The friends who sit in waiting rooms whispering prayers into their hands.
+- paragraph: We created this docuseries not only to protect the person at risk but to arm the people who love them with the knowledge to see what's coming before it arrives.
+- paragraph: Because when one person becomes HEARTproof, the entire family breathes easier.
+- paragraph: Through this series, you'll discover how to protect not just yourself but the people you'd do anything for. Each episode reveals what's actually driving cardiovascular disease and what can be done about it at every age, every stage, every starting point.
+- paragraph: The silent threat building inside the people you love is real — with 2,500 families shattered every single day by a disease most of them never saw coming.
+- paragraph: But with the right information, that threat becomes something you can finally get ahead of before it reaches your door.
+- paragraph: HEARTproof shows you how to make sure your family isn't the next one caught off guard.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "Why HEARTproof Is Different — and Why It May Be the Most Important Docuseries You'll Ever Watch" [level=2]
+- heading "We should NOT be losing 2,500 people a day to a metabolically driven disease that is 80%–90% preventable." [level=2]
+- paragraph: Because it is NOT normal for someone who "does everything right" to drop dead of a heart attack with no warning.
+- paragraph: It is NOT normal for half of all heart disease patients to discover their condition at the moment it kills them.
+- paragraph: And it is NOT normal for an entire medical system to keep running the same tests that miss the markers that actually matter.
+- paragraph: Why in the world are we STILL losing our loved ones to cardiac events in an era where advanced diagnostics can detect arterial disease years before a single symptom appears?
+- paragraph: Where cutting-edge therapies exist that go far beyond managing numbers …
+- paragraph: And where the tools to identify and address the real root causes are already available to anyone willing to look for them.
+- paragraph: These are signs that something in the system is broken and that the people inside it deserve better.
+- paragraph: Fortunately, better already exists. The right information at the right time can make all the difference between a family that gets blindsided and one that gets ahead of it.
+- paragraph: In HEARTproof, 36+ world-renowned cardiologists, functional medicine doctors, and heart health researchers reveal what they've seen work in their own practices, sharing real patient reversals and prevention strategies that will fundamentally change the way you think about protecting your heart and vascular health.
+- paragraph: You'll also hear from patients themselves … people who were told there was nothing more to do and proved that wrong.
+- paragraph: You will walk away with the tests to ask for …
+- paragraph: The root causes to address …
+- paragraph: And the innovative diagnostics and cutting-edge therapeutic approaches that are already transforming outcomes for patients the standard model had given up on, and the confidence to take an active role in your cardiovascular future — at any age.
+- paragraph: The real stories of people who reversed what was supposed to be irreversible will show you what's possible when we stop managing symptoms and start treating the whole person.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "Meet 36+ World-Renowned Experts in Preventive Cardiology, Functional Medicine, and Heart Health — All Featured in HEARTproof:" [level=2]
+- text: "Mark Hyman, MD #1 New York Times Bestselling Author, Internationally Recognized Speaker & Health Advocate Zach Bush, MD Triple-Board Certified Physician, Research Scientist, Internationally Recognized Educator Tom O'Bryan, DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine Helen Messier, PhD, MD, IFMCP Physician-Scientist and Leader in Precision and Longevity Medicine Joel Fuhrman, MD 7-time NY Times Bestselling Author President of Nutritional Research Foundation Jeffrey Bland, PhD, FACN, CNS Founder of Personalized Lifestyle Medicine Institute Kara Fitzgerald, ND, IFMCP Functional Medicine Physician Researcher in Biological Aging and Epigenetics Valter Longo, PhD Professor of Gerontology and Biological Sciences Inventor of Fasting Mimicking Diet Chris Di Giorgio, MD, FACC, FASE, CBNC, RPVI Quintuple Board Certified Integrative Cardiologist Tricia Pingel, NMD Licensed Naturopathic Physician Joel Kahn, MD, FACC Holistic Cardiologist Integrative Medicine Practitioner Wendie Trubow, MD, MBA Functional Medicine Gynecologist Joshua Berka, ND, Dipl.Ac, IFMCP Scientific & Medical Consultant Deb Matthew, MD America's Happy Hormones Doctor Kent Holtorf, MD Functional Immunologist Peptide Therapy Expert Sanjay Bhojraj, MD, FACC, IFMCP Integrative/Functional Cardiologist David Barzilai, MD, PhD, MBA, MS, DipABLM Lecturer, Harvard Medical School Faculty & Trustee, Geneva College of Longevity Science Ritamarie Loscalzo, MS, DC, CCN, DACBN Doctor of Chiropractic & Functional Nutrition Coach Nathan Goodyear, MD, MD(H) Integrative Medicine and Oncology Pioneer Published Author, Podcaster, & Blogger Jeffrey Gladden, MD, FACC Board Certified Interventional Cardiologist Monisha Bhanote, MD, ABOIM, FCAP, ACCM Quintuple Board-Certified Gut Health & Longevity Physician Nathan S. Bryan, PhD Former Professor of Molecular Medicine Nitric Oxide Biochemist and Physiologist Leila Doolittle, DC, IFMCP, DACBN, LAC Doctor of Chiropractic Functional Medicine and Functional Neurology John Neustadt, ND Naturopathic Doctor Rafael Gonzalez, PhD Cell Biologist Regina S. Druz, MD, MBA, FACC Board Certified Cardiologist Robert Todd Hurst, MD, FACC, FASE Board Certified Preventive Cardiologist Gina L. Nick, NMD, PhD Naturopathic Physician President Emeritus, California Naturopathic Doctors Association Joseph M. Raffaele, MD Longevity Medicine Specialist Carrie E. Levine, MSN, CNM, FMCP-M Certified Nurse Midwife Functional Medicine Practitioner Vincent Pedre, MD A Board-Certified Internist and Functional Medicine Expert Lara Zakaria, PharmD, MS, CNS, CDN, IFMCP Integrative Pharmacist & Board Certified Nutritionist Christopher Davis, MD, FACC Triple Board-Certified Integrative Interventional Cardiologist Jeffrey M. Smith Founder and Executive Director of the Institute for Responsible Technology Joseph Pizzorno, ND Editor-in-Chief, Integrative Medicine, A Clinician's Journal Author, Founding President, Bastyr University Melody Hartzler, PharmD, BCACP, BC-ADM, ABAAHP Clinical Pharmacist & Educator"
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- heading "Meet Your Host" [level=2]
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits, adopting a good nutrition and exercise regimen.
+- paragraph: He is the CEO of Zonia, a video streaming platform that helps people change their lives and reach their highest potential, both physically and mentally.
+- heading "Secure Your Access Now, Before This 10-Part Groundbreaking Series Is Taken Down" [level=2]
+- paragraph: Maybe it was for yourself.
+- paragraph: Maybe it was for your spouse, your parent, or your child. Maybe it was because someone you love already had a scare — and you swore you'd never feel that helpless again.
+- paragraph: Whatever brought you here … you now know something most people won't learn until it's too late.
+- paragraph: "But here's what matters more than what you know:"
+- heading "What you do next." [level=2]
+- paragraph: HEARTproof was built for this exact moment — the moment you decide that hope isn't a strategy, that waiting isn't protection, and that the people who depend on you deserve more than a system that was never designed to catch what's really going wrong.
+- paragraph: With every episode, you'll feel the fear begin to lift.
+- paragraph: Not because the truth gets easier but because you'll finally have the clarity, the tools, and the roadmap to do something about it.
+- paragraph: You'll hear from 36+ world-leading experts who have dedicated their careers to the belief that no family should lose someone to a disease that didn't have to take them.
+- paragraph: You'll watch real people — people who were once exactly where you are right now — take back control of their health in ways they were never told were possible.
+- paragraph: And by the time you finish, you won't just understand heart disease differently.
+- paragraph: You'll understand your own body differently. Your family's future differently.
+- paragraph: "And the quiet fear that's been sitting in the background of your life? It will be replaced by something it never had before:"
+- heading "A clear path forward." [level=2]
+- paragraph: This free premiere window will not stay open forever.
+- paragraph: Register now — for yourself, for your family, for the people who need you here for a long, long time.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Become HEARTproof Tomorrow
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+Failed step: user register in "hh_live_obesity" Opt In page
+Test failed on page: 'https://zonia-stg.com/hh-obesity'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/HH_Live_funnel_--_@1.4__20261109-142509.png

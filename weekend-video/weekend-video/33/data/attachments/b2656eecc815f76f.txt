@@ -1,0 +1,6 @@
+Executing step: user log in Zonia portal
+===> Navigated to https://zonia.com/login
+===> Cookie banner accepted using selector: //*[@data-tid='banner-accept']
+===> Waiting for URL starting with "https://zonia.com/user"
+===> URL successfully changed to "https://zonia.com/user/aac"
+Completed step: user log in Zonia portal
