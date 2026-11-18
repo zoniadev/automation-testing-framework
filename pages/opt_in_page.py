@@ -68,7 +68,7 @@ class OptInPage(BasePage):
             def try_nav(attr_name: str) -> bool:
                 url_suffix = getattr(common_variables, attr_name, None)
                 if not url_suffix:
-                    return False
+                    raise AssertionError(f'{attr_name} is not defined in common_variables')
                 attempted.append(f'{attr_name}="{url_suffix}"')
                 try:
                     self.wait_for_navigation(url_suffix, timeout=20000)
