@@ -1,17 +1,17 @@
-name: Nightly LG Evergreen
+name: Nightly Current Live Series
 
 on:
   schedule:
-    - cron: '17 23 * * *'
+    - cron: '17 5 * * *'
   workflow_dispatch:
 
 jobs:
   test:
     uses: ./.github/workflows/device-test-runner.yaml
     with:
-      report_name: nightly-lg-evergreen
+      report_name: nightly-current_live_series
       device: desktop
-      tags: '@ageless_evergreen'
+      tags: '@hh_live'
       environment: staging
       report_scope: nightly
     secrets: inherit

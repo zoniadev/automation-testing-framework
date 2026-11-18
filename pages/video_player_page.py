@@ -1,4 +1,5 @@
 import time
+from urllib.parse import quote
 from pages.base_page_object import BasePage
 from locators import *
 
@@ -11,10 +12,16 @@ class VideoPlayerPage(BasePage):
         # This is the most reliable method, bypassing any overlays or complex event listeners.
         if 'AAC -' not in video_title:
             series, episode = video_title.split(" - ", 1)
+            # Thumbnail src attributes are URL-encoded ("Breast%20Self-Exam"), apostrophes are left as-is
+            episode = quote(episode, safe="'")
             self.context.page.locator(EPISODE_CONTAINER_BY_TITLE.format(value=episode)).hover()
             self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).wait_for(state="visible")
             self.context.page.locator(PLAY_BUTTON_IN_CONTAINER.format(value=episode)).click()
-            self.context.page.locator(FINAL_PLAY_BUTTON).click()
+            # The episode usually autoplays, which hides the big play button - click it only if it shows up
+            try:
+                self.context.page.locator(FINAL_PLAY_BUTTON).click(timeout=5000)
+            except Exception:
+                print("===> Big play button not shown, video autoplayed")
             print(f"===> Commanded video player to play '{video_title}'")
         else:
             player_selector = "#my-player"

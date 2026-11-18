@@ -13,5 +13,4 @@ Feature: Video playability tests
       | video_title                  |
       | AAC - Understanding Your Aging Trajectory  |
       | AAC - The Ultimate Diet for Aging Gracefully |
-      | cancer360 - Comprehensive Protocol for Breast Self-Exam  |
-#      | immune-for-life-test-cover-10e - The Truth About Your Immunity and Our Broken Medical System  |
+      | Cancer 360 - Comprehensive Protocol for Breast Self-Exam  |

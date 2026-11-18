@@ -326,3 +326,15 @@ jobs:
           SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
           SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
           TARGET_URL: ${{ env.REPORT_BASE_URL }}/${{ env.REPORT_SCOPE }}/${{ env.REPORT_NAME }}/${{ env.REPORT_SEQUENCE }}
+
+      - name: Send cleanup failure email
+        if: always()
+        run: |
+          echo "Starting cleanup failure email script..."
+          node .github/scripts/send-cleanup-failure-email.js
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER_NASKO }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS_NASKO }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST_NASKO }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT_NASKO }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

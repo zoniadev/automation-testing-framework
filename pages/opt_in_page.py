@@ -55,6 +55,8 @@ class OptInPage(BasePage):
             self.context.funnel = 'cr_1ep'
         elif self.context.funnel.startswith('hh_live'):
             self.context.funnel = 'hh_live'
+        elif self.context.funnel.startswith('hh_ev'):
+            self.context.funnel = 'hh_ev'
         if self.context.funnel == 'twl_ev':
             self.wait_for_navigation(getattr(common_variables, f'{self.context.funnel}_screening_url'),
                                      timeout=20000)
@@ -66,7 +68,7 @@ class OptInPage(BasePage):
             def try_nav(attr_name: str) -> bool:
                 url_suffix = getattr(common_variables, attr_name, None)
                 if not url_suffix:
-                    return False
+                    raise AssertionError(f'{attr_name} is not defined in common_variables')
                 attempted.append(f'{attr_name}="{url_suffix}"')
                 try:
                     self.wait_for_navigation(url_suffix, timeout=20000)

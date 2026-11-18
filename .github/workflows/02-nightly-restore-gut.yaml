@@ -2,7 +2,7 @@ name: Nightly Restore Gut
 
 on:
   schedule:
-    - cron: '17 2 * * *'
+    - cron: '17 18 * * *'
   workflow_dispatch:
 
 jobs:
