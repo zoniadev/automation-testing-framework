@@ -15,7 +15,8 @@ def before_all(context):
     print(f"Starting run on {context.config.userdata['device'].capitalize()}")
     env = context.config.userdata.get("env")
     env_key = f"base_url_{env}"
-    common_variables.used_base_url = getattr(common_variables, env_key)
+    context.env_base_url = getattr(common_variables, env_key)
+    common_variables.used_base_url = context.env_base_url
     print(f"Starting run in {env.capitalize()} env")
 
     context.playwright = sync_playwright().start()
@@ -31,6 +32,12 @@ def before_feature(context, feature):
 
 
 def before_scenario(context, scenario):
+    # Video tests always run on prod - staging can't serve the video files
+    if "video_playback" in scenario.effective_tags:
+        common_variables.used_base_url = common_variables.base_url_prod
+    else:
+        common_variables.used_base_url = context.env_base_url
+
     # Initialize mutable scenario state on context
     context.is_screening_flow = False
     context.is_replay_weekend = False

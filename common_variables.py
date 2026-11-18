@@ -1,5 +1,6 @@
 base_url_new = 'https://zonia-stg.com/'
 base_url_staging = 'https://zonia-stg.com/'
+base_url_prod = 'https://zonia.com/'
 used_base_url = ''
 zonia_blog_url = "blog"
 
@@ -392,6 +393,7 @@ hh_live_detox_opt_in_url = 'hh-detox'
 hh_live_join_zonia_url = 'hh-join-zonia'
 hh_live_join_zonia_2_url = 'hh-join-zonia-2'
 hh_live_sign_up_url = 'hh-signup'
+hh_live_rw_main_url = 'hh-replay-weekend'
 hh_live_rw_sales_url = 'hh-join-zonia-bonuses'
 hh_live_rw_signup_url = 'hh-signup-bonuses'
 hh_live_rw_sales_ep11_url = hh_live_rw_sales_url + '-ep11'
@@ -421,6 +423,7 @@ hh_ev_stress_opt_in_url = 'hhmb5e/hh-stress'
 hh_ev_detox_opt_in_url = 'hhmb5e/hh-detox'
 hh_ev_join_zonia_url = 'hhmb5e/hh-join-zonia'
 hh_ev_sign_up_url = 'hhmb5e/hh-signup'
+hh_ev_rw_main_url = 'hhmb5e/hh-replay-weekend'
 hh_ev_rw_sales_url = 'hhmb5e/hh-join-zonia-bonuses'
 hh_ev_rw_signup_url = 'hhmb5e/hh-signup-bonuses'
 hh_ev_rw_sales_ep11_url = hh_ev_rw_sales_url + '-ep11'
@@ -490,7 +493,7 @@ test_cards = [
     {"number": "3530111333300000", "type": "JCB"},
 ]
 
-video_user_email = 'ivan.zonia.testing+206@gmail.com'
+video_user_email = 'geri.zonia.testing+hh-ev-stress@gmail.com'
 video_user_pass = 'pass123@@'
 zonia_login_url = 'login'
 zonia_portal_url = 'user'
