@@ -1,0 +1,37 @@
+Executing step: user starts "hh_live" funnel from "ep11" bonus entry page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/hh-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/hh-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/hh-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "hh_live" funnel from "ep11" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Reyes-1791368941@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/hh-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/hh-mini-masterclass-series?id=6ac61f0b4d3f45f9c3c2f16f"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting for URL starting with "https://zonia-stg.com/hh-restore-sleep-special"
+===> URL successfully changed to "https://zonia-stg.com/hh-restore-sleep-special?id=6ac61f0b4d3f45f9c3c2f16f"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://zonia-stg.com/hh-rs-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/hh-rs-6-discounted-bottles?id=6ac61f0b4d3f45f9c3c2f16f"
+===> Waiting for URL starting with "https://zonia-stg.com/hh-restore-collagen-special"
+===> URL successfully changed to "https://zonia-stg.com/hh-restore-collagen-special?id=6ac61f0b4d3f45f9c3c2f16f"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page

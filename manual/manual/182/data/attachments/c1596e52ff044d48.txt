@@ -1,0 +1,11 @@
+Executing step: user is on the Patient Care sales page
+Scenario will use "Visa" card "4009348888881881"
+===> No cookie banner found or none matched known selectors.
+===> Navigated to https://zonia-stg.com/patientcare
+Completed step: user is on the Patient Care sales page
+Executing step: user join Zonia
+>>> Joining Zonia...
+Failed step: user join Zonia
+Test failed on page: 'https://zonia-stg.com/patientcare'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/Patient_Care_nightly_--_@1.2__20261014-091952.png

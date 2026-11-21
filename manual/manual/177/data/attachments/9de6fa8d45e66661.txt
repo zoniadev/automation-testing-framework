@@ -1,0 +1,48 @@
+Executing step: user starts "cr_ev" funnel from "ep12" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/crmb5e/cr-join-zonia-bonuses-ep12
+>>> Starting funnel from bonus entry page (variant: ep12)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/crmb5e/cr-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/crmb5e/cr-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep12)
+Completed step: user starts "cr_ev" funnel from "ep12" bonus entry page
+Executing step: user sign up for "annually" plan
+>>> Selected ANNUALLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Patton-1791291688@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+Address popup should appear next page
+===> Waiting for URL starting with "https://zonia-stg.com/cr-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/cr-mini-masterclass-series?id=6ac4f1468b7b7aa8309b5849"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "annually" plan
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "no" for masterclass...
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting for URL starting with "https://zonia-stg.com/cr-restore-sleep-special"
+===> URL successfully changed to "https://zonia-stg.com/cr-restore-sleep-special?id=6ac4f1468b7b7aa8309b5849"
+>>> Successfully selected "no" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Sleep...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-rs-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/cr-rs-6-discounted-bottles?id=6ac4f1468b7b7aa8309b5849"
+===> Waiting for URL starting with "https://zonia-stg.com/cr-restore-life-special"
+===> URL successfully changed to "https://zonia-stg.com/cr-restore-life-special?id=6ac4f1468b7b7aa8309b5849"
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page
+Executing step: user makes following decision in docuseries "Restore Life" Upsell page
+>>> Selecting "no" bottles and "no" in upsell/downsell for Restore Life...
+===> Not buying bottles...
+===> Waiting for URL starting with "https://zonia-stg.com/cr-rl-6-discounted-bottles"
+===> URL successfully changed to "https://zonia-stg.com/cr-rl-6-discounted-bottles?id=6ac4f1468b7b7aa8309b5849"
+===> Waiting for URL starting with "https://zonia-stg.com/welcome"
+===> URL successfully changed to "https://zonia-stg.com/welcome?mode=standard&id=6ac4f1468b7b7aa8309b5849"
+===> Performing additional check for "mode" parameter on welcome page.
+===> "mode" parameter confirmed.
+>>> Successfully selected "no" bottles and "no" in upsell/downsell for Restore Life
+Completed step: user makes following decision in docuseries "Restore Life" Upsell page

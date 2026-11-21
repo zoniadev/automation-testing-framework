@@ -1,0 +1,1505 @@
+Executing step: user register in "cr_ev_immune" Opt In page
+Scenario will use "Diners Club" card "36259600000004"
+===> Navigated to https://zonia-stg.com/crmb5e/cr-immunity
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/crmb5e/cr-join-zonia"
+>>> Navigation via cr_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/crmb5e/cr\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/crmb5e/cr-immunity 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/crmb5e/cr-immunity"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to CANCER UNRAVELED" [level=3]
+- heading "Does Cancer Strike Because Your Immune System Forgets How to Protect You? Learn about the Latest Discoveries in Immunotherapy" [level=2]
+- heading "Unlock Cancer-Fighting Strategies and Healing Tools From 43 Leading Cancer Experts" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph: Get access to the LIVE Worldwide Premiere on October 8th when you get your Free Gift
+- heading "(Valued at $27)" [level=5]
+- list:
+  - listitem: — Do mushrooms really lack nutritional value? See which protective compounds you're missing out on if you're not eating them regularly
+  - listitem: "— The 2 types of tumors you need to know about: This knowledge can help you make more informed decisions about your health"
+  - listitem: — Is this the forgotten ally of our immune system? Discover the ingredient used in Asian culture for thousands of years
+- heading "Plus get your free ticket to CANCER UNRAVELED" [level=5]
+- textbox "First Name* First Name*":
+  - /placeholder: " "
+  - text: AutomationKelly
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2odonnell-1791383900@gmail.com
+- text: E-mail*
+- checkbox
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "GET YOUR FREE GIFT +Register for CANCER UNRAVELED now"
+- text: By clicking "Get Your Free Gift" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: ". World Premiere Starts in 0 Days 23 hours 47 minutes 22 seconds Meet 43 World-Leading Integrative Oncologists, MDs, PhDs & Cancer Experts Changing the Way We Treat Cancer - As Seen On:"
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- heading "If You've Ever Watched Someone You Love Fade From Cancer — or Felt Yourself Disappear One Dose at a Time ..." [level=2]
+- paragraph: You know something's off.
+- paragraph: Something no one's talking about.
+- paragraph: But it's not in your head.
+- paragraph: It's in your body, in the delicate balance meant to protect you.
+- paragraph: The truth is that you haven't been told the whole story.
+- paragraph: Maybe you did everything right … the scans, the surgery, the chemo.
+- paragraph: Maybe the tumor's gone.
+- paragraph: But the fear? Still here.
+- paragraph: The exhaustion? Still here.
+- paragraph: The tormenting question of "Will it come back?" Still here.
+- paragraph: Or maybe you're just starting, still reeling from the diagnosis, paralyzed by decisions, trying to be strong for everyone else.
+- paragraph: And feeling like you're drowning in a system that only knows how to burn, poison, or cut.
+- paragraph: But what if there's a better way to heal, instead of just fighting to survive?
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Why Beating the Tumor Isn't the Same as Beating Cancer" [level=2]
+- paragraph: You can ring the bell.
+- paragraph: You can finish the chemo.
+- paragraph: You can even hear the words "all clear" …
+- paragraph: And still feel like something's waiting in the shadows.
+- paragraph: "Because what no one tells you is:"
+- paragraph: You can kill the tumor and still be left with a broken terrain that quietly invites cancer back in.
+- paragraph: Conventional treatments fight the visible enemy.
+- paragraph: They burn, slash, and poison the tumor …
+- paragraph: "But they ignore the invisible soil it grew in:"
+- paragraph: The chemistry. The stress. The mitochondria.
+- paragraph: The trauma. The sugar. The internal environment...
+- paragraph: This is the terrain.
+- paragraph: And if it's not healed …
+- paragraph: The war isn't over. It's just silent.
+- paragraph: Up to 80% of cancers come back.
+- paragraph: That's why so many survivors live in fear of every ache, every scan, every symptom.
+- paragraph: Deep down … they know.
+- paragraph: Something's still not right.
+- heading "Because cancer doesn't just appear out of nowhere." [level=2]
+- paragraph: It develops in a body where the immune system is confused, overworked, or suppressed — attacking healthy cells while ignoring dangerous ones.
+- paragraph: Think of your body like a city.
+- paragraph: And your immune system? That's your police force.
+- paragraph: Every day, your T-cells — your natural killer cells — patrol the streets.
+- paragraph: "They search for troublemakers: mutated cells, damaged DNA, early signs of cancer."
+- paragraph: And when things are working right, they catch them early and get rid of them. Quietly. Without drama.
+- paragraph: But what happens when your city starts to break down?
+- paragraph: Stress floods the streets … toxins move in … nutrients dry up.
+- paragraph: The alarms stop working.
+- paragraph: And the police force — your immune system — starts losing power.
+- paragraph: Now, the bad actors are free to roam.
+- paragraph: And what used to be a well-organized city becomes a breeding ground for chaos.
+- heading "That's how cancer takes root." [level=2]
+- paragraph: Not as "bad luck" … but as the result of a breakdown in terrain.
+- paragraph: A body that's lost its balance. A system that stopped defending itself.
+- paragraph: And if you only treat the tumor without rebuilding that internal order?
+- paragraph: The criminals scatter … but they don't disappear.
+- paragraph: If the terrain isn't rebuilt — if the city isn't made safe again — they'll find their way back.
+- paragraph:
+  - strong: You can clear the streets … but that doesn't mean the threat isn't there.
+- heading "The cancer is gone ... but the conditions that allowed it?" [level=2]
+- heading "Still there." [level=2]
+- paragraph: Most people never hear what truly resets the terrain.
+- paragraph: Because it's not a drug. Not a device.
+- paragraph: It’s a system of care that treats the person, not just the tumor.
+- paragraph: These preventative therapies, immunotherapy breakthroughs, and cancer treatment strategies aren’t experimental.
+- paragraph: They're practiced daily in top clinics around the world — the same ones patients fly across oceans to reach when nothing else is working.
+- paragraph: They support immune repair …
+- paragraph: Metabolic recalibration …
+- paragraph: And restore balance to the systems cancer disrupts most.
+- paragraph: We're talking about science-backed protocols — some dating back 100 years — now validated by cutting-edge research …
+- paragraph: Used quietly by top integrative oncologists in Germany, Switzerland, and the U.S.
+- paragraph: Not to replace chemo or radiation …
+- paragraph: … but to make your body strong enough to endure it — and heal beyond it.
+- heading "These therapies support everything the system forgets:" [level=2]
+- text: How your immune system gets back online. How you eat. How you sleep. How your cells make energy. How you feel — not just survive.
+- paragraph: They reduce treatment side effects.
+- paragraph: They rebuild the terrain where cancer grew.
+- paragraph: And for many, they've become the reason they're not just still alive … but finally living.
+- paragraph: "All of this came from doctors who asked: What else is possible?"
+- paragraph: And now … you're about to find out.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- paragraph: You've been told that cancer is just "bad luck" or "in your genes."
+- paragraph: But that misconception is costing people everything … their bodies, their money, their families.
+- paragraph: "It's time someone finally says it out loud:"
+- heading "Cancer isn't random." [level=2]
+- paragraph: According to the National Cancer Institute, only 5%–10% of cancers are caused by inherited genetic mutations.
+- paragraph: The other 90%–95%? They're driven by immune function and environmental factors — making the strength of your immune system one of the most decisive factors in whether cancer develops or even strikes back.
+- paragraph: Cancer is a signal …
+- paragraph: "A call from the body saying: Something deeper is off."
+- paragraph: The terrain is out of balance.
+- paragraph: Your energy. Your immune system. Your chemistry.
+- paragraph: "Something's been disrupted for long enough that the body finally said: I can't keep up."
+- paragraph: You can kill the tumor and still be left with the same internal conditions that let it grow in the first place.
+- paragraph: You can finish treatment and still feel exhausted, inflamed, anxious, disconnected, and afraid of every scan.
+- paragraph: That's not your fault.
+- paragraph: And it's not because you didn't "fight hard enough."
+- paragraph: It's because the deeper root wasn't addressed.
+- paragraph: Healing requires more than killing the tumor.
+- paragraph: It's about restoring your terrain.
+- paragraph: It's about giving your body the inputs it's been starving for …
+- paragraph: "So, it can do what it was designed to do: Heal."
+- paragraph: That's what CANCER UNRAVELED is here to change.
+- paragraph: To shift the focus from short-term treatment to long-term restoration.
+- paragraph: From survival … to strength.
+- paragraph: From fear … to real, grounded healing.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter Sarah Otto
+- paragraph: I've had the pleasure of working with Stefan over the years, and what strikes me most is his genuine commitment to health education. He brings together the brightest minds in functional medicine and asks the hard questions that lead to real, actionable answers.
+- paragraph: In a space full of noise and misinformation, Stefan's integrity stands out. If he's putting his name on 'CANCER UNRAVELED', I know it's going to empower people with the knowledge and hope they desperately need.
+- text: If Cancer Is a Wake-Up Call From Within… This Docuseries Is the Most Powerful Answer You'll Ever Hear.
+- paragraph: The real cost of cancer is in the toll it takes on your body, your mind, and your life…
+- paragraph: And that heavy price is why — right now — 1 in 2 men and 1 in 3 women will develop cancer in their lifetime.
+- text: "In the United States, it's even worse because of what we're ignoring: In 2025, over 2 million Americans"
+- paragraph: were diagnosed with cancer — that's one person every 30 seconds.
+- text: Autoimmune diseases
+- paragraph: are rising by 12% annually, signaling that our natural defenses are under siege
+- text: Antibodies in blood tests
+- paragraph: have doubled between 1988 to 2012 and continue to rise every year
+- text: According to the Cancer Research Institute, 50% of cancer cases
+- paragraph: diagnosed annually could be prevented through lifestyle changes
+- text: Among 45 to 64-year-olds,
+- paragraph: cancer is the leading cause of death
+- text: What's even harder to accept?
+- paragraph: That, in most cases … cancer isn't just missed.
+- paragraph: It's misunderstood.
+- paragraph: We've spent decades focused on shrinking tumors but rarely asked why they appeared in the first place.
+- paragraph: Because when we look deeper, we find the real drivers of cancer aren't being addressed.
+- text: Metabolic imbalance Chronic inflammation Nutritional stress Emotional trauma Environmental toxins Mitochondrial dysfunction
+- paragraph: These root causes shape the internal environment where cancer can grow.
+- paragraph: And yet … these are almost never the focus.
+- heading "That’s what CANCER UNRAVELED is here to change." [level=2]
+- paragraph: "For the first time, 43 of the world’s leading doctors and academic researchers reveal the metabolic, immune, and lifestyle-based therapies helping patients:"
+- list:
+  - listitem: Prevent cancer in the first place or
+  - listitem: Reduce recurrence risk
+  - listitem: Restore metabolic function
+  - listitem: Reclaim lost energy
+  - listitem: Rebuild internal balance
+  - listitem: And, finally, feel like themselves again
+- paragraph: Not just surviving ... but healing
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Real People. Real Recoveries. The Therapies Making the Impossible … Possible" [level=2]
+- paragraph: What if the turning point in your journey wasn't another drug or scan …
+- paragraph: … but a story?
+- paragraph: Not just a miracle story — but a roadmap someone else already walked.
+- paragraph: In CANCER UNRAVELED, you'll meet people who've faced stage 3, stage 4, and "incurable" diagnoses …
+- paragraph: And, today, they're not just surviving.
+- paragraph: They're hiking. Dancing. Starting families. Living full, cancer-free lives.
+- paragraph: You'll also meet the doctors who guided them there — cancer experts using science-backed therapies that don't just kill cancer …
+- paragraph: They transform the body into a place where cancer can't grow or return.
+- paragraph: From immune reactivation to metabolic therapies …
+- paragraph: From plant-based medicine to emotional trauma release …
+- paragraph: From terrain-focused healing to ancient practices revived by modern research …
+- paragraph: This isn’t hype. It’s not a theory.
+- paragraph: It’s what’s working right now — quietly — around the world.
+- paragraph: This 10-part docuseries lays out the entire path — step by step — so you’re never left in the dark again.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "The CANCER UNRAVELED series is about what you've never been told" [level=2]
+- text: What If This Could Be Your Story Too?
+- paragraph: What if a year from now …
+- paragraph: You're stronger than you've ever been.
+- paragraph: You wake up with energy. You think clearly. Your body feels like it's on your side again, not working against you.
+- paragraph: You're not afraid of your next scan.
+- paragraph: You're not bracing for bad news or holding your breath between appointments.
+- paragraph: You're living. Laughing. Thriving.
+- paragraph: You feel like you again — not a diagnosis, not a patient, not a number.
+- paragraph: You've reset your terrain.
+- paragraph: You've taken back control.
+- paragraph: And now, your body finally has what it needs — not just to heal, but to stay healed … and thrive.
+- paragraph: To live with energy, clarity, and confidence — free from the shadow of cancer.
+- paragraph: Sounds impossible?
+- paragraph: It's not.
+- paragraph: It's already happening for thousands of others.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "What If This Were You? Or Someone You Love?" [level=2]
+- paragraph: Imagine being 19 years old, full of dreams, only to be told that you have months to live.
+- paragraph: Imagine doctors looking you in the eyes and saying, "There's nothing more we can do. Go home, spend your final days with your loved ones."
+- paragraph: This is the story of Dr. Nasha Winters.
+- paragraph: Just like so many of you, she was thrust into a world of uncertainty, fear, and loss.
+- paragraph: From a very young age, she was diagnosed with stage-4 cancer, her organs were failing, and the medical establishment — her supposed ally — had no answers for her.
+- paragraph: But instead of giving up, Dr. Nasha made a choice that not only saved her life but also set her on a path to helping thousands of others.
+- paragraph: She found a way to heal not just the cancer, but the body as a whole.
+- paragraph: She began exploring alternative therapies, therapies that have been quietly healing cancer across the world for over 100 years, therapies that the U.S. refuses to acknowledge.
+- paragraph: And now, 33 years later, Dr. Nasha Winters is not only alive but has reclaimed her health and purpose, living with vigor and strength she never imagined possible.
+- paragraph: She is a naturopathic oncologist, an educator, and a living proof that cancer does not have to be a death sentence.
+- paragraph: Her story is not a fairy tale but a real-life testament to what's possible when we stop treating the disease and start treating the body - its terrain, its environment, its very foundation.
+- paragraph: And now, for the first time, she's opening up the very tools and insights that have healed her — and so many others — in this groundbreaking docuseries, CANCER UNRAVELED.
+- paragraph: If Dr. Nasha can do it, so can you.
+- paragraph: She's here to share what she learned, so you can take control, heal smarter, and not just survive but thrive.
+- paragraph: "Her message is clear: You are not powerless."
+- paragraph: You are not alone.
+- paragraph: This series is the missing piece you've been searching for, showing you the way forward, a way that thousands of others have walked before you.
+- paragraph: This is your chance to transform your life, just like Nasha did.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "You Deserve the Truth. And Now — You Finally Have It." [level=2]
+- paragraph: You've been told to fight the tumor.
+- paragraph: But no one showed you how to heal the terrain and rebuild immune defenses.
+- paragraph: You've been handed prescriptions …
+- paragraph: But never the tools to truly restore your health from the inside out.
+- paragraph: That ends now.
+- paragraph: In CANCER UNRAVELED, you'll be guided by the doctors, researchers, and real patients who've walked this road — and won.
+- paragraph: They'll show you the natural therapies used in leading clinics around the world …
+- paragraph: The protocols trusted by 60% of German patients …
+- paragraph: The strategies that helped Dr. Nasha Winters turn a death sentence into a life of purpose.
+- paragraph: No guesswork. No false hope.
+- paragraph: Just real answers backed by decades of research and thousands of success stories.
+- paragraph: And this isn't just about survival.
+- paragraph: This is about freedom — from fear, from relapse, from the system that told you "this was your only way."
+- paragraph: Because healing doesn't start with treatment.
+- paragraph: It starts with the truth.
+- paragraph: And it's finally here.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "This Is for the One Who's Done Being Left in the Dark" [level=2]
+- paragraph: You've read the articles.
+- paragraph: You've followed the doctor's orders.
+- paragraph: You've played by the rules.
+- paragraph: But something inside you still whispers…
+- paragraph: "\"There has to be more than this.\""
+- paragraph: More than burning.
+- paragraph: More than waiting.
+- paragraph: More than watching yourself or someone you love fade while pretending everything's "fine."
+- paragraph: And you're right.
+- paragraph: Because this isn't just about treatment plans.
+- paragraph: This is about reclaiming the power that was yours all along - the power to heal, the power to decide, the power to take back your life.
+- paragraph: CANCER UNRAVELED was made for the ones who were left with more questions than answers.
+- paragraph: It was made for the ones who fell through it.
+- paragraph: It was made for the ones still searching — not for a miracle, but for meaningful answers.
+- paragraph: For the ones who've been told "this is your only option" …
+- paragraph: … and still chose to keep looking.
+- paragraph: This is for you.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "CANCER UNRAVELED is about your whole life." [level=2]
+- paragraph: When cancer touches someone's life, it touches the lives of everyone around them.
+- paragraph: Family members, caregivers, loved ones — everyone is impacted.
+- paragraph: That's why we created this docuseries, not just to help those battling cancer, but to bring healing, understanding, and support to everyone who loves them.
+- paragraph: Because when the patient heals, the family heals.
+- paragraph: CANCER UNRAVELED is about rebuilding your defense mechanisms, creating a new environment for healing, and helping your body fight smarter.
+- paragraph: In this series, you'll discover how to clear out the toxins, reset your terrain, and support your loved one's healing through natural therapies and integrative solutions, all while addressing what's missing in conventional care.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "When you watch this 10-episode cancer documentary series, you will discover:" [level=2]
+- list:
+  - listitem: The 10 questions every cancer patient should ask their doctor before starting treatment
+  - listitem: How precise testing for specific environmental invaders can help you lower the hidden load your immune system carries every day
+  - listitem: The immune system's "3 R's" that protect you every second of every day, and how to help them do their job
+  - listitem: Why your microbiome is a command center for immunity, mood, hormones and even how you respond to meds
+  - listitem: The critical role of mindset in cancer recovery, and how mental resilience can boost your immune system
+  - listitem: Practical, natural detox protocols that cleanse your body, reduce inflammation, and help reset your immune system to fight smarter
+  - listitem: The test that reveals what your immune system is doing right now – and if you're inflamed at the cellular level
+- list:
+  - listitem: Can the way you breathe and sleep change your immune surveillance? The answer is yes, and there is a simple way to begin
+  - listitem: "The #1 natural therapy used by over 60% of European cancer patients, and why it's so effective in reducing side effects and supporting recovery"
+  - listitem: How to build an inhospitable terrain for stray cancer cells with calm hormones and steady blood sugar
+  - listitem: "Recurrence without panic: how changing the tumor's neighborhood can change the story"
+  - listitem: Can food choices and lifestyle changes flip gene expression toward protection instead of promotion? The new science is eye-opening
+  - listitem: How to create a post treatment plan that restores energy, supports detox, and guards against relapse
+  - listitem: "From breath to bloodwork: how energetic practices produce real, measurable changes in the body"
+- text: Tom O'Bryan, DC
+- paragraph: "Most people think cancer just “shows up.” But it doesn’t. It develops over time - as the result of chronic inflammation, metabolic imbalances, and a toxic internal environment. The tumor is the weakest link… the place where the chain broke. As I always say: you pull on the chain, and it breaks at the weakest link - your heart, your brain, your liver… or in this case, cancer. Cancer Unraveled helps you zoom out. It shows why we can’t focus only on the tumor - we have to address the whole terrain that allowed it to form in the first place."
+- paragraph: That’s how we move from fear… to clarity. And that’s how real healing begins.
+- text: "What You Will Find in Each Episode of This Unique 10-part Docuseries CANCER UNRAVELED 1 episode The Missing Piece in Cancer Care: What Dictates Cancer Risk and First Steps Toward Prevention & Healing"
+- list:
+  - listitem:
+    - strong: The 19-year-old "death sentence" survivor reveals her secret
+    - text: 33 years later - she was sent home to die from stage 4 ovarian cancer, but completely changed her cancer trajectory thanks to one decision
+  - listitem:
+    - text: Cancer rates have skyrocketed from
+    - strong: 1 in 300 people in the 1990s to 1 in 2 TODAY
+    - text: "- find out what's really driving this explosion"
+  - listitem:
+    - strong: "The #1 root cause of cancer"
+    - text: that conventional doctors don't talk about publicly - discover how chronic inflammation, stress, and one overlooked factor create the perfect breeding ground for cancer cells
+  - listitem: Find out the most detrimental dietary shift responsible for fueling cancer?
+  - listitem:
+    - text: "Functional medicine doctors are seeing something conventional oncology is missing: the body's ability to"
+    - strong: COMPLETELY REVERSE
+    - text: early-stage cancers through metabolic reset (and the evidence will shock you)
+  - listitem:
+    - text: "Cancer isn't invading you from outside - it's a message from your body... but the real question is:"
+    - strong: what is YOUR body trying to tell you?
+  - listitem: Are your "normal" symptoms actually a hidden body's cancer warning? Find out the ignored red flags that preceded a fatal diagnosis and what they really mean
+  - listitem:
+    - strong: The "3 R's" your immune system needs
+    - text: to fight cancer cells daily - when these fail, cancer takes hold (discover what these are and how to support them)
+  - listitem:
+    - text: The genetic myth that keeps you trapped in fear - medical schools teach cancer is purely genetic with
+    - strong: "\"nothing we can do,\" yet the truth reveals 85-95% is preventable"
+    - text: "- learn what the conventional system is missing"
+  - listitem:
+    - text: Can stress trigger brain cancer?
+    - strong: See the most critical nerve where neuroinflammation and DNA damage commonly occur...
+    - text: and finally understand the mind-body-cancer link
+- paragraph: “1 in 2 people on the planet today will experience this diagnosis in their lifetime. Mind-boggling.”
+- text: "Nasha Winters, ND, FABNO Integrative Oncology Expert 2 episode The Science of Cancer Formation: How Cells Decide Whether to Multiply, Die, or Repair"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"master switch\""
+    - text: controlling cancer development - learn how cortisol, inflammation, and stress all converge on one deadly pathway that accelerates cell mutation
+  - listitem:
+    - text: The shocking truth about
+    - strong: cancer cell "immortality"
+    - text: and how tumors hijack your body's aging process - discover the enzyme that allows cancer to renew itself endlessly (plus the natural compounds that can turn this mechanism off)
+  - listitem: What your gut microbiome reveals about your cancer risk that no oncologist is discussing - including the specific bacteria producing toxic metabolites that create the perfect environment for tumors
+  - listitem:
+    - strong: Why majority of cancers are NOT genetic
+    - text: and what environmental factors are really pulling the trigger - understand how you can safeguard your body before 1 billion tumor cells form
+  - listitem: "The methylation mystery: uncover the cellular process controlling whether your genes express cancer or health - and the dietary changes that give your body a chance to overcome genetic variations that put you at risk"
+  - listitem:
+    - text: What happens inside your cells when they switch from oxygen-burning to sugar-feeding metabolism - learn why this
+    - strong: "\"Warburg effect\""
+    - text: makes cancer cells vulnerable to specific interventions conventional medicine ignores
+  - listitem:
+    - text: The immune system's
+    - strong: 3 critical "surveillance functions"
+    - text: and why chemotherapy destroys 2 of them - discover what causes a "distracted" immune system that lets cancer cells slip through undetected
+  - listitem:
+    - text: How and when does cancer spread? Experts reveal
+    - strong: 2 extremely common nutrient deficiencies
+    - text: that act like "gasoline on the fire" for tumor spread
+  - listitem:
+    - text: Why
+    - strong: cancer recurrence happens in 30-70% of patients
+    - text: and the
+    - strong: 3 terrain factors
+    - text: every survivor must address to feel safe about their future
+- paragraph: “The metabolic breakdown that leads to cancer is at least a 20 year process of decline, which is good news because we can see the first symptoms of declining metabolism 20 years before a cancer occurs."
+- text: "Zach Bush , MD Tripple-Board Certified Physician, Research Scientist Internationally Recognized Educator 3 episode Rewrite Your Cancer Story: Power Your Mitochondria and Re-Build Your Metabolic Health Against Tumors"
+- list:
+  - listitem:
+    - text: The revolutionary discovery that won a
+    - strong: Nobel Prize
+    - text: (then disappeared for 70 years) - and how one scientist proved what cancer cells feed on
+  - listitem: From mustard gas to your veins - why the first chemotherapy drugs came straight from WWI biological weapons designed to kill soldiers
+  - listitem:
+    - text: Your cells face
+    - strong: 60,000 daily attacks
+    - text: ... but most doctors never measure this - see the relentless mitochondrial assault happening right now that fuels cancer and fatigue
+  - listitem:
+    - text: The pediatrician dismissed the lump, and stage 4 cancer followed - meet the brave couple that said
+    - strong: "\"no\" to the standard approach"
+    - text: and are now watching their son thrive 10 years later
+  - listitem:
+    - text: "Cancer cells and their biggest vulnerability: If you can exploit it,"
+    - strong: you will be able to "starve" abnormal cells
+    - text: ", so your body can finally focus on recovery"
+  - listitem:
+    - text: The
+    - strong: "\"candy cart\" paradox"
+    - text: that exposes everything wrong with oncology - avoid this toxic substance especially during conventional treatments
+  - listitem:
+    - text: Is this our most powerful weapon in eliminating abnormal cells? Harness the power of this unique eating habit that creates
+    - strong: an "inhospitable" environment where cancer cannot survive
+  - listitem:
+    - strong: The 2 most effective antioxidants
+    - text: that help the body alleviate stress and focus on energy production again (you can get your hands on both as soon as today)
+  - listitem:
+    - text: This
+    - strong: one simple rule to cut colorectal cancer recurrence by 63%
+    - text: ; Hear why it also works for other tumors, and see how to seamlessly fit it into a busy routine
+- paragraph: “Instead of the energy going to our body to heal, cancer is taking that energy away from us. When you watch someone heals from cancer and you see the steps that they take to do that, a lot of it has to do with improving their metabolic health.”
+- text: "Tricia Pingel, NMD Licensed Naturopathic Physician, Stress & Cortisol Expert 4 episode Aging, Hormones & Cancer: How to Rebalance Your Body and Turn the Clock Back on Disease"
+- list:
+  - listitem:
+    - strong: "The #1 women's health myth"
+    - text: ": Why the"
+    - strong: "\"estrogen causes breast cancer\""
+    - text: myth has been thoroughly debunked for 20 years - yet doctors are STILL terrified to prescribe it
+  - listitem:
+    - text: Is cancer becoming a
+    - strong: "\"young person's disease?\""
+    - text: See why your biological age might be decades older than your chronological age - and how to reverse this trend
+  - listitem:
+    - text: Need coffee in the morning and sleeping pills at night?
+    - strong: These 2 can be major red flags
+    - text: of your stress response (and may reveal a lot about breast cancer risk)
+  - listitem:
+    - text: The
+    - strong: "\"detox pathway\""
+    - text: "test that shows whether your body is processing estrogen into breast-protective compounds or DNA-damaging ones - and the #1 nutrient that can shift you to the safer route"
+  - listitem:
+    - text: Discover why
+    - strong: women in their 30s
+    - text: are developing breast cancers that used to only appear in
+    - strong: women over 60
+    - text: "- plus the environmental \"bears\" that are aging your immune system faster than ever"
+  - listitem: "What happens when men lose testosterone: A cancer risk nobody's talking about"
+  - listitem: The shocking truth about insulin resistance and how it feeds cancer cells like fuel
+  - listitem:
+    - text: The
+    - strong: dirty secret of most gynecologists
+    - text: ": They will never tell it perimenopausal women - yet will freely hand them birth control pills while refusing bioidentical hormones"
+  - listitem: Is your gut secretly sabotaging your hormonal health? See how this digestive enzyme wreaks havoc by recycling toxic estrogen back into your bloodstream
+  - listitem:
+    - text: "Rebalancing hormones naturally: The"
+    - strong: top 3 nutrients
+    - text: your body is starving for
+- paragraph: “What we're seeing now in the modern era is those age-related cancers occurring at younger and younger ages. So time is not the only factor in this - the other factor is how healthy your immune system is.”
+- text: "Ty Vincent, MD Low Dose Immunotherapy Pioneer 5 episode Cracking the Cancer Code: Unraveling the Environmental, Physical and Mental Drivers of Tumor Growth"
+- list:
+  - listitem: Are mid-day energy crashes and HPV-related cancers connected? Hear the surprising link, plus the warning signs that many people are unknowingly neglecting
+  - listitem:
+    - text: What your
+    - strong: "\"ACE score\""
+    - text: reveals about your cancer risk - and why people with childhood trauma are biologically "shutting down" their body's healing mode
+  - listitem: Where arsenic hides in daily life and two smart swaps that drop your exposure fast
+  - listitem:
+    - text: How to make your kitchen a
+    - strong: low-toxin zone
+    - text: in one weekend and feel the difference by next week
+  - listitem: Witness the common pattern happening the year before many cancer diagnoses... and the two toxic emotions that literally suppress immune defense
+  - listitem:
+    - text: Learn why
+    - strong: NFL players who "eat to get big"
+    - text: have the shortest lifespan of any occupation in North America
+  - listitem:
+    - text: Discover what
+    - strong: 80,000 toxins in our environment
+    - text: are doing to cancer rates in young people
+  - listitem:
+    - text: The hidden toxin that almost
+    - strong: NOBODY
+    - text: "is addressing: this"
+    - strong: "\"known carcinogen\""
+    - text: depletes every detox process in your body
+  - listitem:
+    - text: Belly fat is not just
+    - strong: "\"weight\""
+    - text: but a message center that stirs up inflammation and fuels growth signals
+  - listitem:
+    - text: The quiet link between
+    - strong: diabetes, insulin resistance and many cancers
+    - text: and how to break that loop
+- paragraph: “You can't escape from these biological laws of cause and effect. If you're eating the standard American diet, you have to expect to get cancer.”
+- text: "Joel Fuhrman, MD Board-Certified Family Physician, Nutritionist 6 episode From Shock to Strategy: How Cutting-Edge Screening and Targeted Labs Unlock Your Personalized Healing Roadmap"
+- list:
+  - listitem:
+    - text: The surprising blood test that caught pancreatic cancer earlier than imaging would have - and why this one inflammatory marker suddenly jumping to the hundreds revealed what
+    - strong: "\"just burping\""
+    - text: really meant
+  - listitem:
+    - text: Learn how oral infections and root canal remnants can quietly drain your defenses, a
+    - strong: 3D dental scan
+    - text: can reveal the truth.
+  - listitem:
+    - text: "Stage 4 doesn't have to be a death sentence: meet the brave woman who got diagnosed twice - her"
+    - strong: 3 tips can make all the difference
+    - text: in recovery
+  - listitem: How to stay ahead of cancer? This revolutionary tool shows cancer development years before tissue becomes malignant - and it's now becoming more and more popular
+  - listitem:
+    - text: Find out why this
+    - strong: cheap liver enzyme
+    - text: test (that used to check for alcoholism) actually measures how hard your body is fighting excess toxins
+  - listitem:
+    - strong: Know your mitochondria
+    - text: ": this easily accessible test shows whether your mitochondria are creating the perfect terrain for cancer to thrive - plus it reveals whether the body is"
+    - strong: "\"fermenting\" from the inside"
+  - listitem:
+    - text: Are your cellular guards strong enough to resist cancer migration? This is the way to know if your tissue looks like a
+    - strong: "\"solid tree cross-section\""
+    - text: or is full of
+    - strong: "\"termite holes\""
+  - listitem:
+    - text: The
+    - strong: nutrient paradox
+    - text: "in cancer: find out why giving cancer patients calcium, iodine, or copper can actually feed tumor growth through inflammation and blood vessel formation"
+- paragraph: “I began to realize that not only was that metabolic signature telling you whether you had cancer or not - it was actually telling you whether you'd die of it. It was pretty profound. And that was just from a simple tube of blood.”
+- text: "Robert Nagourney, MD Inventor of Functional Tumor Cell Profiling (FTCP) 7 episode The 3 Faces of Cancer: Navigating Breast, Cervical & Prostate Cancer with Early Detection, Lifestyle Shifts & Precision Therapies"
+- list:
+  - listitem:
+    - text: Why the
+    - strong: "\"golf ball lump\""
+    - text: wasn't the only signal of stage 3 breast cancer - see the 5 other telling signs that almost never get checked early on (unless you know what to look for)
+  - listitem:
+    - text: Meet the woman who tested everything - including things she didn't know you could test - and learn how she managed to
+    - strong: completely eliminate the tumor
+    - text: within one year
+  - listitem: What's the safe way to administer hormones? What women of all ages need to know to feel more vibrant, youthful, and physically well
+  - listitem:
+    - text: Why is
+    - strong: breast cancer rising in prevalence
+    - text: "? The former breast cancer surgeon who survived the diagnosis herself reveals the reason why women today feel more scared than ever"
+  - listitem:
+    - text: Is
+    - strong: prostate cancer an inevitable fate
+    - text: for all men? Hear a surprising explanation of why many prostate tumors are treated the wrong way (and how they rob men of their sexual function)
+  - listitem:
+    - text: Can you use
+    - strong: hormonal therapy
+    - text: as a cancer survivor? This expert analyzed over 20 studies and found a clear answer that every person needs to hear... if they want to prevent recurrence
+  - listitem:
+    - text: From being told
+    - strong: "\"she'd never be cancer-free\""
+    - text: to showing no evidence of disease only 5 years later - hear the
+    - strong: 3 unusual ways
+    - text: in which this young woman changed her outcomes
+  - listitem:
+    - text: See why
+    - strong: 80% of us are exposed to high-risk HPV by age 50
+    - text: "- and how women can clear the virus to negative through simple dietary changes, and vaginal microbiome restoration"
+  - listitem:
+    - text: Explore why the
+    - strong: "\"testosterone fuels prostate cancer\""
+    - text: myth has been thoroughly debunked - and how the
+    - strong: 5,000-man trial
+    - text: reveals that we were wrong about male hormones
+  - listitem: High-risk HPV is not the end of the story! See the power of this 4-step protocol that allowed one woman to suppress abnormal cells and test negative for HPV (still negative a year later)
+- paragraph: “80% of breast cancers are avoidable, and the vast majority of breast cancer is entirely curable. The vast majority of women who get breast cancer do not die of breast cancer, and I, for the most part, see breast cancer differently than other people see it.”
+- text: "Jenn Simmons, MD, FACS Integrative Oncologist, Breast Surgeon 8 episode When the Mind Heals, the Body Follows: Trauma Recovery, Vagus Nerve Reset & Mindfulness to Transform Cancer Outcomes"
+- list:
+  - listitem:
+    - text: Why the moment you get a cancer diagnosis, your body enters a
+    - strong: "\"trauma response\""
+    - text: that makes you shut down - and the
+    - strong: "#1 practice"
+    - text: that shifts you from shock to safety
+  - listitem: Try this childhood activity to massively improve health outcomes - and watch how your entire body shifts to healing
+  - listitem:
+    - text: "She got kicked out from the clinic: hear the insane story of a stage 4 patient who refused to"
+    - strong: "\"just trust the process\""
+    - text: and discovered the real root causes behind her tumor (plus where she found the right medical team)
+  - listitem: Talking to the cancer? Discover the highly unconventional technique and hear what happens to the tumor when people followed that guidance
+  - listitem:
+    - text: This key nerve might be the most powerful anti-cancer tool you have - and we now know how to support it in order to
+    - strong: bring down stress and inflammation
+    - text: inside the body
+  - listitem:
+    - text: "Calm down your nervous system in less than 1 minute:"
+    - strong: These 2 DIY methods
+    - text: will save you from spiraling into trauma, anxiety, and hopelessness
+  - listitem:
+    - text: Is your brain wired for danger? Hear about the little-known dysfunction that prevents people from recovering... and
+    - strong: the simple "stop" technique
+    - text: that retrains it like redirecting a three-year-old
+  - listitem:
+    - text: Learn the exact
+    - strong: "\"4 breaths per minute\""
+    - text: pattern that sends the strongest coherence signal to your nervous system (and helps immune cells penetrate the cancer)
+  - listitem:
+    - strong: HRV is your dashboard
+    - text: ... what a higher heart rate variability really means... and how to nudge it upward without an app...
+  - listitem:
+    - text: Detach from
+    - strong: all fear and emotional trauma
+    - text: "- discover why terminal cancer patients who did one therapeutic session of this recreational substance were able to suddenly eliminate their tumors"
+- paragraph: “Not all storms are meant to disrupt your life, some come to clear your path - that's really been a motto for me since that diagnosis, and to the journey where I am right now.”
+- text: "Dan Rubin, ND, FABNO Board-Certified Naturopathic Oncologist 9 episode Starving Cancer in Its Tracks: Therapeutic Nutrition & Fasting Protocols that Shield from Within"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"happy accident\""
+    - text: "that saved her life: How a complete bowel obstruction accidentally triggered the most powerful anti-cancer protocol - stopping the tumor in its tracks"
+  - listitem:
+    - strong: From stage 4 to suddenly thriving
+    - text: ": When this cancer survivor filled her fridge with these few superfoods, chemo side effects virtually disappeared"
+  - listitem:
+    - text: Is your bedroom sabotaging your cancer defense? Discover the
+    - strong: top 3 ways
+    - text: to activate your body's most potent anti-cancer hormone while you sleep like a baby
+  - listitem:
+    - text: Why the
+    - strong: "\"sins of your childhood diet\""
+    - text: created an insulin issue that feeds cancer cells decades later - even if you've eaten healthy for years (and how to go finally back to balance)
+  - listitem:
+    - text: "The shocking tumor equation: After years of watching patients return with recurrences, this physician discovered the"
+    - strong: "#1 change that stops the body from \"making tumor\""
+  - listitem:
+    - text: The miraculous eating habits that
+    - strong: cut cancer recurrence by 70%
+    - text: ": Thousands of women changed nothing about what they eat - but when they eat - and the results stunned the researchers"
+  - listitem:
+    - text: Hear about the game-changing pre-treatment protocol that
+    - strong: makes tumors 70% more responsive
+    - text: while protecting normal cells - yet almost no oncologist recommends it
+  - listitem:
+    - strong: 1/8 cup of this forgotten ingredient slashed cancer risk by 45%
+    - text: ": 20,000 people ate it daily with unmatched prevention results - and it's probably in your grocery store right now"
+  - listitem:
+    - text: Your body cannot identify these
+    - strong: "\"angry cells?\""
+    - text: See what causes create cellular rage that transforms into the angriest cells of all - plus the nutrient deficiency test to reveal the truth
+  - listitem: "Chewing your salad wrong is costing you cancer protection: The mouth-chemistry reaction that only happens when you eat in a very specific manner - learn it now to silence cancer-promoting genes"
+- paragraph: “The number one advice I would have for someone who has a cancer diagnosis is to focus on optimizing their health in every way, so the cancer doesn't have a host environment that supports its growth.”
+- text: "Mark Hyman, MD #1 New York Times Bestselling Author 10 episode The Functional Revolution: Modern Breakthroughs & Innovative Treatments Every Patient Should Know About"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"Watch and Wait\" Death Sentence"
+    - text: ": Why the four words her oncologist said kept her alive for 12 years - until ONE decision changed everything and she was gone in months"
+  - listitem: This bloodwork improvement was so dramatic that her oncologist refused to believe fruits, vegetables and targeted supplements could do this - until he saw the charts himself (exact protocol revealed)
+  - listitem:
+    - strong: Nutrition during chemo 101
+    - text: ": Why accepting the"
+    - strong: "\"standard infusion suite refreshments\""
+    - text: makes zero physiological sense - and what this magic thermos does instead
+  - listitem: "She couldn't hold the cup after brain surgery: One day of treatment later, this glioblastoma patient walked the foothills with her husband - here's what happened in those few weeks that conventional oncology said was \"impossible\""
+  - listitem:
+    - text: Understand the
+    - strong: "\"4 boxes\" of immunity"
+    - text: ": What creates allergies, autoimmunity, and cancer - plus the \"military budget\" that reveals where your body is wasting critical defense resources"
+  - listitem:
+    - text: Discover the
+    - strong: theory that's been buried for 70 years
+    - text: ": what wakes up the angry mother stem cell that wreaks absolute havoc inside the body"
+  - listitem:
+    - text: What's more impactful -
+    - strong: chemotherapy or our lifestyle
+    - text: "? See the brutal truth this 1980s researcher discovered about the environment surrounding cancer cells"
+  - listitem:
+    - text: "Chemotherapy vs supplementation: The precise"
+    - strong: "\"blackout window\""
+    - text: around chemotherapy that lets you support your body for two full weeks per cycle - without interfering with infusions
+  - listitem:
+    - text: The PET scan showed
+    - strong: "\"congratulations, your cancer is gone\""
+    - text: while she stumbled, couldn't pull up words, and was about to discover it had spread to her brain - watch the full story
+- paragraph: “Cancer's actually a systemic disease. It's something that develops over time. So it's not that all of a sudden you have a tumor, now you have to rip that tumor out, and then once the tumor is gone, you're then medically considered with no evidence of disease"
+- text: Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter Laura Frontiero, NP-BC
+- paragraph: People with a diagnosis or a family history of cancer often live in fear and uncertainty. Unfortunately, they rarely hear about any tools that go beyond the standard approach – and it’s exactly what makes this docuseries so powerful. It offers a new perspective that explores the deeper factors behind cancer and shows that the body has an incredible capacity to respond well with the right support. Tuning in allows you to find a path forward – rooted in the latest science, personal stories, and empowering research.
+- text: "Meet 43 World-Renowned Functional Medicine Doctors and Mental Health Experts Featured in CANCER UNRAVELED: Mark Hyman, MD #1 New York Times Bestselling Author Co-Founder & Chief Medical Officer Joel Fuhrman, MD 7-time NY Times Bestselling Author President of Nutritional Research Foundation Zach Bush, MD Tripple-Board Certified Physician, Research Scientist Internationally Recognized Educator Nasha Winters, ND Integrative Oncology Expert Executive Director of the Metabolic Terrain Institute of Health Valter Longo, PhD Professor of Gerontology and Biological Sciences Jenn Simmons, MD Breast Surgeon, Integrative Oncologist Ty Vincent, MD Low Dose Immunotherapy Inventor Deb Matthew, MD America's Happy Hormones Doctor Jake Psenka, ND Naturopathic Physician Tricia Pingel, NMD Licensed Naturopathic Physician Geo Espinosa, ND Integrative Urologist and Podcast Host Clinical Assistant Professor Gina L. Nick, NMD Naturopathic Physician President Emeritus, California Naturopathic Doctors Association Dan Rubin, ND Naturopathic Oncologist 2024 AANP Physician of the Year Inna Lozinskaya, MD Bioidentical Hormone Replacement Therapy Functional Medicine Physician Brenden Cochran, ND Regenerative Medicine and Integrative Oncology Specialist Wendie Trubow, MD Faculty, Institute for Functional Medicine Barry Smeltzer, MPAS Adjunct Professor Jenny Tufenkian, ND Naturopathic Physician Jason Shumard, DC Functional Medicine Practitioner Leah Linder, ND Board Certified Naturopathic Physician Michael Karlfeldt, ND Doctor of Integrative Medicine Leila Doolittle, DC Doctor of Chiropractic Functional Medicine and Functional Neurology Patrick Hanaway, MD Founding Medical Director, Cleveland Clinic Center for Functional Medicine Monisha Bhanote, MD Quintuple Board-Certified Gut Health & Longevity Physician Kiran Krishnan Board Certified Nutritionist Specializing in Root Causes of Cancer Madiha Saeed, MD Board Certified Family Physician Author Joshua Berka, ND Scientific & Medical Consultant Carol Lourie, ND Naturopath, Acupuncturist, Homeopath Robert Nagourney, MD Inventor of Functional Tumor Cell Profiling (FTCP) Aimie Apigian, MD Board-Certified Preventive Medicine and Addiction Medicine, Specializing in the Biology of Trauma Jim Ohneck Fellow, ASLMS Regina S. Druz, MD Board Certified Cardiologist Peter Staats, MD Interventional Pain Medicine Physician Sharon Stills, NMD Naturopathic Medical Doctor Master Mingtong Gu Qigong Healer & Teacher Doni Wilson, ND Naturopathic Doctor, Midwife & Women’s Health Expert Joseph Pizzorno, ND Editor-in-Chief, Integrative Medicine, A Clinician's Journal Author Aliya Hafeez, MD Board Certified Psychiatrist MSKCC Fellow, AIHM Fellow Ryan & Teddy Sternagel Integrative Cancer Researchers & Advocates Wendy Warner, MD Functional Medicine Gynecologist, Author and Educator Jennifer O'Brien Payeur Plant Stem Cell Expert Joyce Braverman, MD Functional Medicine Physician Psychedelic-Assisted Therapy Specialist Katrina Foe, BCHN Board Certified Nutritionist Specializing in Root Causes of Cancer"
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Meet Your Host" [level=2]
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits, adopting a good nutrition and exercise regimen.
+- paragraph: He is the CEO of Zonia, a video streaming platform that helps people change their lives and reach their highest potential, both physically and mentally.
+- paragraph: Secure Your Access Now, Before This 10-Part Groundbreaking Series Is Taken Down.
+- heading "The Most Important Decision You'll Never Regret" [level=2]
+- paragraph: Before You Leave … Read This.
+- paragraph: Cancer may have brought you here, but it doesn't get the final word.
+- paragraph: You do.
+- paragraph: You're standing at the edge of a choice …
+- paragraph: A choice between continuing down a path that's left you questioning, fearing, and waiting …
+- paragraph: Or stepping into a new way — one rooted in truth, science, and a deeper understanding of your body's power to heal.
+- paragraph: CANCER UNRAVELED isn't just a series.
+- paragraph: It's a mirror.
+- paragraph: Reflecting back the strength, wisdom, and hope that's already within you — but that the system never taught you how to trust.
+- paragraph: You've seen the cracks in the current approach.
+- paragraph: You've felt the missing pieces.
+- paragraph: Now you know there's more.
+- paragraph: And that “more” isn't just possible — it's personal.
+- paragraph: It's the right insight at the right time.
+- paragraph: The clarity you didn't know you were missing.
+- paragraph: The lifeline your soul has been quietly asking for.
+- paragraph: This is about reclaiming your body's wisdom …
+- paragraph: Rewriting your story …
+- paragraph: And remembering that healing doesn't happen to you … it happens through you.
+- paragraph: You'll hear from 43 of the world's most brilliant minds — doctors, survivors, scientists, and visionaries — all coming together to give you what you were never supposed to find on your own.
+- paragraph: Not another promise.
+- paragraph: Not another "miracle."
+- paragraph: But real answers.
+- paragraph: And a way forward.
+- paragraph: If you've made it this far … you've already started your healing.
+- paragraph: "So, the only question now is:"
+- paragraph: Are you ready to finish what cancer started?
+- paragraph: If so …
+- paragraph: Hit the button.
+- paragraph: Watch the series.
+- paragraph: And walk into the light you've always deserved.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+===> Waiting for URL starting with "https://zonia-stg.com/crmb5e/cr-replay-weekend"
+>>> Navigation via cr_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/crmb5e/cr\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/crmb5e/cr-immunity 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/crmb5e/cr-immunity"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to CANCER UNRAVELED" [level=3]
+- heading "Does Cancer Strike Because Your Immune System Forgets How to Protect You? Learn about the Latest Discoveries in Immunotherapy" [level=2]
+- heading "Unlock Cancer-Fighting Strategies and Healing Tools From 43 Leading Cancer Experts" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph: Get access to the LIVE Worldwide Premiere on October 8th when you get your Free Gift
+- heading "(Valued at $27)" [level=5]
+- list:
+  - listitem: — Do mushrooms really lack nutritional value? See which protective compounds you're missing out on if you're not eating them regularly
+  - listitem: "— The 2 types of tumors you need to know about: This knowledge can help you make more informed decisions about your health"
+  - listitem: — Is this the forgotten ally of our immune system? Discover the ingredient used in Asian culture for thousands of years
+- heading "Plus get your free ticket to CANCER UNRAVELED" [level=5]
+- textbox "First Name* First Name*":
+  - /placeholder: " "
+  - text: AutomationKelly
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2odonnell-1791383900@gmail.com
+- text: E-mail*
+- checkbox
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "GET YOUR FREE GIFT +Register for CANCER UNRAVELED now"
+- text: By clicking "Get Your Free Gift" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: ". World Premiere Starts in 0 Days 23 hours 47 minutes 2 seconds Meet 43 World-Leading Integrative Oncologists, MDs, PhDs & Cancer Experts Changing the Way We Treat Cancer - As Seen On:"
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- heading "If You've Ever Watched Someone You Love Fade From Cancer — or Felt Yourself Disappear One Dose at a Time ..." [level=2]
+- paragraph: You know something's off.
+- paragraph: Something no one's talking about.
+- paragraph: But it's not in your head.
+- paragraph: It's in your body, in the delicate balance meant to protect you.
+- paragraph: The truth is that you haven't been told the whole story.
+- paragraph: Maybe you did everything right … the scans, the surgery, the chemo.
+- paragraph: Maybe the tumor's gone.
+- paragraph: But the fear? Still here.
+- paragraph: The exhaustion? Still here.
+- paragraph: The tormenting question of "Will it come back?" Still here.
+- paragraph: Or maybe you're just starting, still reeling from the diagnosis, paralyzed by decisions, trying to be strong for everyone else.
+- paragraph: And feeling like you're drowning in a system that only knows how to burn, poison, or cut.
+- paragraph: But what if there's a better way to heal, instead of just fighting to survive?
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Why Beating the Tumor Isn't the Same as Beating Cancer" [level=2]
+- paragraph: You can ring the bell.
+- paragraph: You can finish the chemo.
+- paragraph: You can even hear the words "all clear" …
+- paragraph: And still feel like something's waiting in the shadows.
+- paragraph: "Because what no one tells you is:"
+- paragraph: You can kill the tumor and still be left with a broken terrain that quietly invites cancer back in.
+- paragraph: Conventional treatments fight the visible enemy.
+- paragraph: They burn, slash, and poison the tumor …
+- paragraph: "But they ignore the invisible soil it grew in:"
+- paragraph: The chemistry. The stress. The mitochondria.
+- paragraph: The trauma. The sugar. The internal environment...
+- paragraph: This is the terrain.
+- paragraph: And if it's not healed …
+- paragraph: The war isn't over. It's just silent.
+- paragraph: Up to 80% of cancers come back.
+- paragraph: That's why so many survivors live in fear of every ache, every scan, every symptom.
+- paragraph: Deep down … they know.
+- paragraph: Something's still not right.
+- heading "Because cancer doesn't just appear out of nowhere." [level=2]
+- paragraph: It develops in a body where the immune system is confused, overworked, or suppressed — attacking healthy cells while ignoring dangerous ones.
+- paragraph: Think of your body like a city.
+- paragraph: And your immune system? That's your police force.
+- paragraph: Every day, your T-cells — your natural killer cells — patrol the streets.
+- paragraph: "They search for troublemakers: mutated cells, damaged DNA, early signs of cancer."
+- paragraph: And when things are working right, they catch them early and get rid of them. Quietly. Without drama.
+- paragraph: But what happens when your city starts to break down?
+- paragraph: Stress floods the streets … toxins move in … nutrients dry up.
+- paragraph: The alarms stop working.
+- paragraph: And the police force — your immune system — starts losing power.
+- paragraph: Now, the bad actors are free to roam.
+- paragraph: And what used to be a well-organized city becomes a breeding ground for chaos.
+- heading "That's how cancer takes root." [level=2]
+- paragraph: Not as "bad luck" … but as the result of a breakdown in terrain.
+- paragraph: A body that's lost its balance. A system that stopped defending itself.
+- paragraph: And if you only treat the tumor without rebuilding that internal order?
+- paragraph: The criminals scatter … but they don't disappear.
+- paragraph: If the terrain isn't rebuilt — if the city isn't made safe again — they'll find their way back.
+- paragraph:
+  - strong: You can clear the streets … but that doesn't mean the threat isn't there.
+- heading "The cancer is gone ... but the conditions that allowed it?" [level=2]
+- heading "Still there." [level=2]
+- paragraph: Most people never hear what truly resets the terrain.
+- paragraph: Because it's not a drug. Not a device.
+- paragraph: It’s a system of care that treats the person, not just the tumor.
+- paragraph: These preventative therapies, immunotherapy breakthroughs, and cancer treatment strategies aren’t experimental.
+- paragraph: They're practiced daily in top clinics around the world — the same ones patients fly across oceans to reach when nothing else is working.
+- paragraph: They support immune repair …
+- paragraph: Metabolic recalibration …
+- paragraph: And restore balance to the systems cancer disrupts most.
+- paragraph: We're talking about science-backed protocols — some dating back 100 years — now validated by cutting-edge research …
+- paragraph: Used quietly by top integrative oncologists in Germany, Switzerland, and the U.S.
+- paragraph: Not to replace chemo or radiation …
+- paragraph: … but to make your body strong enough to endure it — and heal beyond it.
+- heading "These therapies support everything the system forgets:" [level=2]
+- text: How your immune system gets back online. How you eat. How you sleep. How your cells make energy. How you feel — not just survive.
+- paragraph: They reduce treatment side effects.
+- paragraph: They rebuild the terrain where cancer grew.
+- paragraph: And for many, they've become the reason they're not just still alive … but finally living.
+- paragraph: "All of this came from doctors who asked: What else is possible?"
+- paragraph: And now … you're about to find out.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- paragraph: You've been told that cancer is just "bad luck" or "in your genes."
+- paragraph: But that misconception is costing people everything … their bodies, their money, their families.
+- paragraph: "It's time someone finally says it out loud:"
+- heading "Cancer isn't random." [level=2]
+- paragraph: According to the National Cancer Institute, only 5%–10% of cancers are caused by inherited genetic mutations.
+- paragraph: The other 90%–95%? They're driven by immune function and environmental factors — making the strength of your immune system one of the most decisive factors in whether cancer develops or even strikes back.
+- paragraph: Cancer is a signal …
+- paragraph: "A call from the body saying: Something deeper is off."
+- paragraph: The terrain is out of balance.
+- paragraph: Your energy. Your immune system. Your chemistry.
+- paragraph: "Something's been disrupted for long enough that the body finally said: I can't keep up."
+- paragraph: You can kill the tumor and still be left with the same internal conditions that let it grow in the first place.
+- paragraph: You can finish treatment and still feel exhausted, inflamed, anxious, disconnected, and afraid of every scan.
+- paragraph: That's not your fault.
+- paragraph: And it's not because you didn't "fight hard enough."
+- paragraph: It's because the deeper root wasn't addressed.
+- paragraph: Healing requires more than killing the tumor.
+- paragraph: It's about restoring your terrain.
+- paragraph: It's about giving your body the inputs it's been starving for …
+- paragraph: "So, it can do what it was designed to do: Heal."
+- paragraph: That's what CANCER UNRAVELED is here to change.
+- paragraph: To shift the focus from short-term treatment to long-term restoration.
+- paragraph: From survival … to strength.
+- paragraph: From fear … to real, grounded healing.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter Sarah Otto
+- paragraph: I've had the pleasure of working with Stefan over the years, and what strikes me most is his genuine commitment to health education. He brings together the brightest minds in functional medicine and asks the hard questions that lead to real, actionable answers.
+- paragraph: In a space full of noise and misinformation, Stefan's integrity stands out. If he's putting his name on 'CANCER UNRAVELED', I know it's going to empower people with the knowledge and hope they desperately need.
+- text: If Cancer Is a Wake-Up Call From Within… This Docuseries Is the Most Powerful Answer You'll Ever Hear.
+- paragraph: The real cost of cancer is in the toll it takes on your body, your mind, and your life…
+- paragraph: And that heavy price is why — right now — 1 in 2 men and 1 in 3 women will develop cancer in their lifetime.
+- text: "In the United States, it's even worse because of what we're ignoring: In 2025, over 2 million Americans"
+- paragraph: were diagnosed with cancer — that's one person every 30 seconds.
+- text: Autoimmune diseases
+- paragraph: are rising by 12% annually, signaling that our natural defenses are under siege
+- text: Antibodies in blood tests
+- paragraph: have doubled between 1988 to 2012 and continue to rise every year
+- text: According to the Cancer Research Institute, 50% of cancer cases
+- paragraph: diagnosed annually could be prevented through lifestyle changes
+- text: Among 45 to 64-year-olds,
+- paragraph: cancer is the leading cause of death
+- text: What's even harder to accept?
+- paragraph: That, in most cases … cancer isn't just missed.
+- paragraph: It's misunderstood.
+- paragraph: We've spent decades focused on shrinking tumors but rarely asked why they appeared in the first place.
+- paragraph: Because when we look deeper, we find the real drivers of cancer aren't being addressed.
+- text: Metabolic imbalance Chronic inflammation Nutritional stress Emotional trauma Environmental toxins Mitochondrial dysfunction
+- paragraph: These root causes shape the internal environment where cancer can grow.
+- paragraph: And yet … these are almost never the focus.
+- heading "That’s what CANCER UNRAVELED is here to change." [level=2]
+- paragraph: "For the first time, 43 of the world’s leading doctors and academic researchers reveal the metabolic, immune, and lifestyle-based therapies helping patients:"
+- list:
+  - listitem: Prevent cancer in the first place or
+  - listitem: Reduce recurrence risk
+  - listitem: Restore metabolic function
+  - listitem: Reclaim lost energy
+  - listitem: Rebuild internal balance
+  - listitem: And, finally, feel like themselves again
+- paragraph: Not just surviving ... but healing
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Real People. Real Recoveries. The Therapies Making the Impossible … Possible" [level=2]
+- paragraph: What if the turning point in your journey wasn't another drug or scan …
+- paragraph: … but a story?
+- paragraph: Not just a miracle story — but a roadmap someone else already walked.
+- paragraph: In CANCER UNRAVELED, you'll meet people who've faced stage 3, stage 4, and "incurable" diagnoses …
+- paragraph: And, today, they're not just surviving.
+- paragraph: They're hiking. Dancing. Starting families. Living full, cancer-free lives.
+- paragraph: You'll also meet the doctors who guided them there — cancer experts using science-backed therapies that don't just kill cancer …
+- paragraph: They transform the body into a place where cancer can't grow or return.
+- paragraph: From immune reactivation to metabolic therapies …
+- paragraph: From plant-based medicine to emotional trauma release …
+- paragraph: From terrain-focused healing to ancient practices revived by modern research …
+- paragraph: This isn’t hype. It’s not a theory.
+- paragraph: It’s what’s working right now — quietly — around the world.
+- paragraph: This 10-part docuseries lays out the entire path — step by step — so you’re never left in the dark again.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "The CANCER UNRAVELED series is about what you've never been told" [level=2]
+- text: What If This Could Be Your Story Too?
+- paragraph: What if a year from now …
+- paragraph: You're stronger than you've ever been.
+- paragraph: You wake up with energy. You think clearly. Your body feels like it's on your side again, not working against you.
+- paragraph: You're not afraid of your next scan.
+- paragraph: You're not bracing for bad news or holding your breath between appointments.
+- paragraph: You're living. Laughing. Thriving.
+- paragraph: You feel like you again — not a diagnosis, not a patient, not a number.
+- paragraph: You've reset your terrain.
+- paragraph: You've taken back control.
+- paragraph: And now, your body finally has what it needs — not just to heal, but to stay healed … and thrive.
+- paragraph: To live with energy, clarity, and confidence — free from the shadow of cancer.
+- paragraph: Sounds impossible?
+- paragraph: It's not.
+- paragraph: It's already happening for thousands of others.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "What If This Were You? Or Someone You Love?" [level=2]
+- paragraph: Imagine being 19 years old, full of dreams, only to be told that you have months to live.
+- paragraph: Imagine doctors looking you in the eyes and saying, "There's nothing more we can do. Go home, spend your final days with your loved ones."
+- paragraph: This is the story of Dr. Nasha Winters.
+- paragraph: Just like so many of you, she was thrust into a world of uncertainty, fear, and loss.
+- paragraph: From a very young age, she was diagnosed with stage-4 cancer, her organs were failing, and the medical establishment — her supposed ally — had no answers for her.
+- paragraph: But instead of giving up, Dr. Nasha made a choice that not only saved her life but also set her on a path to helping thousands of others.
+- paragraph: She found a way to heal not just the cancer, but the body as a whole.
+- paragraph: She began exploring alternative therapies, therapies that have been quietly healing cancer across the world for over 100 years, therapies that the U.S. refuses to acknowledge.
+- paragraph: And now, 33 years later, Dr. Nasha Winters is not only alive but has reclaimed her health and purpose, living with vigor and strength she never imagined possible.
+- paragraph: She is a naturopathic oncologist, an educator, and a living proof that cancer does not have to be a death sentence.
+- paragraph: Her story is not a fairy tale but a real-life testament to what's possible when we stop treating the disease and start treating the body - its terrain, its environment, its very foundation.
+- paragraph: And now, for the first time, she's opening up the very tools and insights that have healed her — and so many others — in this groundbreaking docuseries, CANCER UNRAVELED.
+- paragraph: If Dr. Nasha can do it, so can you.
+- paragraph: She's here to share what she learned, so you can take control, heal smarter, and not just survive but thrive.
+- paragraph: "Her message is clear: You are not powerless."
+- paragraph: You are not alone.
+- paragraph: This series is the missing piece you've been searching for, showing you the way forward, a way that thousands of others have walked before you.
+- paragraph: This is your chance to transform your life, just like Nasha did.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "You Deserve the Truth. And Now — You Finally Have It." [level=2]
+- paragraph: You've been told to fight the tumor.
+- paragraph: But no one showed you how to heal the terrain and rebuild immune defenses.
+- paragraph: You've been handed prescriptions …
+- paragraph: But never the tools to truly restore your health from the inside out.
+- paragraph: That ends now.
+- paragraph: In CANCER UNRAVELED, you'll be guided by the doctors, researchers, and real patients who've walked this road — and won.
+- paragraph: They'll show you the natural therapies used in leading clinics around the world …
+- paragraph: The protocols trusted by 60% of German patients …
+- paragraph: The strategies that helped Dr. Nasha Winters turn a death sentence into a life of purpose.
+- paragraph: No guesswork. No false hope.
+- paragraph: Just real answers backed by decades of research and thousands of success stories.
+- paragraph: And this isn't just about survival.
+- paragraph: This is about freedom — from fear, from relapse, from the system that told you "this was your only way."
+- paragraph: Because healing doesn't start with treatment.
+- paragraph: It starts with the truth.
+- paragraph: And it's finally here.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "This Is for the One Who's Done Being Left in the Dark" [level=2]
+- paragraph: You've read the articles.
+- paragraph: You've followed the doctor's orders.
+- paragraph: You've played by the rules.
+- paragraph: But something inside you still whispers…
+- paragraph: "\"There has to be more than this.\""
+- paragraph: More than burning.
+- paragraph: More than waiting.
+- paragraph: More than watching yourself or someone you love fade while pretending everything's "fine."
+- paragraph: And you're right.
+- paragraph: Because this isn't just about treatment plans.
+- paragraph: This is about reclaiming the power that was yours all along - the power to heal, the power to decide, the power to take back your life.
+- paragraph: CANCER UNRAVELED was made for the ones who were left with more questions than answers.
+- paragraph: It was made for the ones who fell through it.
+- paragraph: It was made for the ones still searching — not for a miracle, but for meaningful answers.
+- paragraph: For the ones who've been told "this is your only option" …
+- paragraph: … and still chose to keep looking.
+- paragraph: This is for you.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "CANCER UNRAVELED is about your whole life." [level=2]
+- paragraph: When cancer touches someone's life, it touches the lives of everyone around them.
+- paragraph: Family members, caregivers, loved ones — everyone is impacted.
+- paragraph: That's why we created this docuseries, not just to help those battling cancer, but to bring healing, understanding, and support to everyone who loves them.
+- paragraph: Because when the patient heals, the family heals.
+- paragraph: CANCER UNRAVELED is about rebuilding your defense mechanisms, creating a new environment for healing, and helping your body fight smarter.
+- paragraph: In this series, you'll discover how to clear out the toxins, reset your terrain, and support your loved one's healing through natural therapies and integrative solutions, all while addressing what's missing in conventional care.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "When you watch this 10-episode cancer documentary series, you will discover:" [level=2]
+- list:
+  - listitem: The 10 questions every cancer patient should ask their doctor before starting treatment
+  - listitem: How precise testing for specific environmental invaders can help you lower the hidden load your immune system carries every day
+  - listitem: The immune system's "3 R's" that protect you every second of every day, and how to help them do their job
+  - listitem: Why your microbiome is a command center for immunity, mood, hormones and even how you respond to meds
+  - listitem: The critical role of mindset in cancer recovery, and how mental resilience can boost your immune system
+  - listitem: Practical, natural detox protocols that cleanse your body, reduce inflammation, and help reset your immune system to fight smarter
+  - listitem: The test that reveals what your immune system is doing right now – and if you're inflamed at the cellular level
+- list:
+  - listitem: Can the way you breathe and sleep change your immune surveillance? The answer is yes, and there is a simple way to begin
+  - listitem: "The #1 natural therapy used by over 60% of European cancer patients, and why it's so effective in reducing side effects and supporting recovery"
+  - listitem: How to build an inhospitable terrain for stray cancer cells with calm hormones and steady blood sugar
+  - listitem: "Recurrence without panic: how changing the tumor's neighborhood can change the story"
+  - listitem: Can food choices and lifestyle changes flip gene expression toward protection instead of promotion? The new science is eye-opening
+  - listitem: How to create a post treatment plan that restores energy, supports detox, and guards against relapse
+  - listitem: "From breath to bloodwork: how energetic practices produce real, measurable changes in the body"
+- text: Tom O'Bryan, DC
+- paragraph: "Most people think cancer just “shows up.” But it doesn’t. It develops over time - as the result of chronic inflammation, metabolic imbalances, and a toxic internal environment. The tumor is the weakest link… the place where the chain broke. As I always say: you pull on the chain, and it breaks at the weakest link - your heart, your brain, your liver… or in this case, cancer. Cancer Unraveled helps you zoom out. It shows why we can’t focus only on the tumor - we have to address the whole terrain that allowed it to form in the first place."
+- paragraph: That’s how we move from fear… to clarity. And that’s how real healing begins.
+- text: "What You Will Find in Each Episode of This Unique 10-part Docuseries CANCER UNRAVELED 1 episode The Missing Piece in Cancer Care: What Dictates Cancer Risk and First Steps Toward Prevention & Healing"
+- list:
+  - listitem:
+    - strong: The 19-year-old "death sentence" survivor reveals her secret
+    - text: 33 years later - she was sent home to die from stage 4 ovarian cancer, but completely changed her cancer trajectory thanks to one decision
+  - listitem:
+    - text: Cancer rates have skyrocketed from
+    - strong: 1 in 300 people in the 1990s to 1 in 2 TODAY
+    - text: "- find out what's really driving this explosion"
+  - listitem:
+    - strong: "The #1 root cause of cancer"
+    - text: that conventional doctors don't talk about publicly - discover how chronic inflammation, stress, and one overlooked factor create the perfect breeding ground for cancer cells
+  - listitem: Find out the most detrimental dietary shift responsible for fueling cancer?
+  - listitem:
+    - text: "Functional medicine doctors are seeing something conventional oncology is missing: the body's ability to"
+    - strong: COMPLETELY REVERSE
+    - text: early-stage cancers through metabolic reset (and the evidence will shock you)
+  - listitem:
+    - text: "Cancer isn't invading you from outside - it's a message from your body... but the real question is:"
+    - strong: what is YOUR body trying to tell you?
+  - listitem: Are your "normal" symptoms actually a hidden body's cancer warning? Find out the ignored red flags that preceded a fatal diagnosis and what they really mean
+  - listitem:
+    - strong: The "3 R's" your immune system needs
+    - text: to fight cancer cells daily - when these fail, cancer takes hold (discover what these are and how to support them)
+  - listitem:
+    - text: The genetic myth that keeps you trapped in fear - medical schools teach cancer is purely genetic with
+    - strong: "\"nothing we can do,\" yet the truth reveals 85-95% is preventable"
+    - text: "- learn what the conventional system is missing"
+  - listitem:
+    - text: Can stress trigger brain cancer?
+    - strong: See the most critical nerve where neuroinflammation and DNA damage commonly occur...
+    - text: and finally understand the mind-body-cancer link
+- paragraph: “1 in 2 people on the planet today will experience this diagnosis in their lifetime. Mind-boggling.”
+- text: "Nasha Winters, ND, FABNO Integrative Oncology Expert 2 episode The Science of Cancer Formation: How Cells Decide Whether to Multiply, Die, or Repair"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"master switch\""
+    - text: controlling cancer development - learn how cortisol, inflammation, and stress all converge on one deadly pathway that accelerates cell mutation
+  - listitem:
+    - text: The shocking truth about
+    - strong: cancer cell "immortality"
+    - text: and how tumors hijack your body's aging process - discover the enzyme that allows cancer to renew itself endlessly (plus the natural compounds that can turn this mechanism off)
+  - listitem: What your gut microbiome reveals about your cancer risk that no oncologist is discussing - including the specific bacteria producing toxic metabolites that create the perfect environment for tumors
+  - listitem:
+    - strong: Why majority of cancers are NOT genetic
+    - text: and what environmental factors are really pulling the trigger - understand how you can safeguard your body before 1 billion tumor cells form
+  - listitem: "The methylation mystery: uncover the cellular process controlling whether your genes express cancer or health - and the dietary changes that give your body a chance to overcome genetic variations that put you at risk"
+  - listitem:
+    - text: What happens inside your cells when they switch from oxygen-burning to sugar-feeding metabolism - learn why this
+    - strong: "\"Warburg effect\""
+    - text: makes cancer cells vulnerable to specific interventions conventional medicine ignores
+  - listitem:
+    - text: The immune system's
+    - strong: 3 critical "surveillance functions"
+    - text: and why chemotherapy destroys 2 of them - discover what causes a "distracted" immune system that lets cancer cells slip through undetected
+  - listitem:
+    - text: How and when does cancer spread? Experts reveal
+    - strong: 2 extremely common nutrient deficiencies
+    - text: that act like "gasoline on the fire" for tumor spread
+  - listitem:
+    - text: Why
+    - strong: cancer recurrence happens in 30-70% of patients
+    - text: and the
+    - strong: 3 terrain factors
+    - text: every survivor must address to feel safe about their future
+- paragraph: “The metabolic breakdown that leads to cancer is at least a 20 year process of decline, which is good news because we can see the first symptoms of declining metabolism 20 years before a cancer occurs."
+- text: "Zach Bush , MD Tripple-Board Certified Physician, Research Scientist Internationally Recognized Educator 3 episode Rewrite Your Cancer Story: Power Your Mitochondria and Re-Build Your Metabolic Health Against Tumors"
+- list:
+  - listitem:
+    - text: The revolutionary discovery that won a
+    - strong: Nobel Prize
+    - text: (then disappeared for 70 years) - and how one scientist proved what cancer cells feed on
+  - listitem: From mustard gas to your veins - why the first chemotherapy drugs came straight from WWI biological weapons designed to kill soldiers
+  - listitem:
+    - text: Your cells face
+    - strong: 60,000 daily attacks
+    - text: ... but most doctors never measure this - see the relentless mitochondrial assault happening right now that fuels cancer and fatigue
+  - listitem:
+    - text: The pediatrician dismissed the lump, and stage 4 cancer followed - meet the brave couple that said
+    - strong: "\"no\" to the standard approach"
+    - text: and are now watching their son thrive 10 years later
+  - listitem:
+    - text: "Cancer cells and their biggest vulnerability: If you can exploit it,"
+    - strong: you will be able to "starve" abnormal cells
+    - text: ", so your body can finally focus on recovery"
+  - listitem:
+    - text: The
+    - strong: "\"candy cart\" paradox"
+    - text: that exposes everything wrong with oncology - avoid this toxic substance especially during conventional treatments
+  - listitem:
+    - text: Is this our most powerful weapon in eliminating abnormal cells? Harness the power of this unique eating habit that creates
+    - strong: an "inhospitable" environment where cancer cannot survive
+  - listitem:
+    - strong: The 2 most effective antioxidants
+    - text: that help the body alleviate stress and focus on energy production again (you can get your hands on both as soon as today)
+  - listitem:
+    - text: This
+    - strong: one simple rule to cut colorectal cancer recurrence by 63%
+    - text: ; Hear why it also works for other tumors, and see how to seamlessly fit it into a busy routine
+- paragraph: “Instead of the energy going to our body to heal, cancer is taking that energy away from us. When you watch someone heals from cancer and you see the steps that they take to do that, a lot of it has to do with improving their metabolic health.”
+- text: "Tricia Pingel, NMD Licensed Naturopathic Physician, Stress & Cortisol Expert 4 episode Aging, Hormones & Cancer: How to Rebalance Your Body and Turn the Clock Back on Disease"
+- list:
+  - listitem:
+    - strong: "The #1 women's health myth"
+    - text: ": Why the"
+    - strong: "\"estrogen causes breast cancer\""
+    - text: myth has been thoroughly debunked for 20 years - yet doctors are STILL terrified to prescribe it
+  - listitem:
+    - text: Is cancer becoming a
+    - strong: "\"young person's disease?\""
+    - text: See why your biological age might be decades older than your chronological age - and how to reverse this trend
+  - listitem:
+    - text: Need coffee in the morning and sleeping pills at night?
+    - strong: These 2 can be major red flags
+    - text: of your stress response (and may reveal a lot about breast cancer risk)
+  - listitem:
+    - text: The
+    - strong: "\"detox pathway\""
+    - text: "test that shows whether your body is processing estrogen into breast-protective compounds or DNA-damaging ones - and the #1 nutrient that can shift you to the safer route"
+  - listitem:
+    - text: Discover why
+    - strong: women in their 30s
+    - text: are developing breast cancers that used to only appear in
+    - strong: women over 60
+    - text: "- plus the environmental \"bears\" that are aging your immune system faster than ever"
+  - listitem: "What happens when men lose testosterone: A cancer risk nobody's talking about"
+  - listitem: The shocking truth about insulin resistance and how it feeds cancer cells like fuel
+  - listitem:
+    - text: The
+    - strong: dirty secret of most gynecologists
+    - text: ": They will never tell it perimenopausal women - yet will freely hand them birth control pills while refusing bioidentical hormones"
+  - listitem: Is your gut secretly sabotaging your hormonal health? See how this digestive enzyme wreaks havoc by recycling toxic estrogen back into your bloodstream
+  - listitem:
+    - text: "Rebalancing hormones naturally: The"
+    - strong: top 3 nutrients
+    - text: your body is starving for
+- paragraph: “What we're seeing now in the modern era is those age-related cancers occurring at younger and younger ages. So time is not the only factor in this - the other factor is how healthy your immune system is.”
+- text: "Ty Vincent, MD Low Dose Immunotherapy Pioneer 5 episode Cracking the Cancer Code: Unraveling the Environmental, Physical and Mental Drivers of Tumor Growth"
+- list:
+  - listitem: Are mid-day energy crashes and HPV-related cancers connected? Hear the surprising link, plus the warning signs that many people are unknowingly neglecting
+  - listitem:
+    - text: What your
+    - strong: "\"ACE score\""
+    - text: reveals about your cancer risk - and why people with childhood trauma are biologically "shutting down" their body's healing mode
+  - listitem: Where arsenic hides in daily life and two smart swaps that drop your exposure fast
+  - listitem:
+    - text: How to make your kitchen a
+    - strong: low-toxin zone
+    - text: in one weekend and feel the difference by next week
+  - listitem: Witness the common pattern happening the year before many cancer diagnoses... and the two toxic emotions that literally suppress immune defense
+  - listitem:
+    - text: Learn why
+    - strong: NFL players who "eat to get big"
+    - text: have the shortest lifespan of any occupation in North America
+  - listitem:
+    - text: Discover what
+    - strong: 80,000 toxins in our environment
+    - text: are doing to cancer rates in young people
+  - listitem:
+    - text: The hidden toxin that almost
+    - strong: NOBODY
+    - text: "is addressing: this"
+    - strong: "\"known carcinogen\""
+    - text: depletes every detox process in your body
+  - listitem:
+    - text: Belly fat is not just
+    - strong: "\"weight\""
+    - text: but a message center that stirs up inflammation and fuels growth signals
+  - listitem:
+    - text: The quiet link between
+    - strong: diabetes, insulin resistance and many cancers
+    - text: and how to break that loop
+- paragraph: “You can't escape from these biological laws of cause and effect. If you're eating the standard American diet, you have to expect to get cancer.”
+- text: "Joel Fuhrman, MD Board-Certified Family Physician, Nutritionist 6 episode From Shock to Strategy: How Cutting-Edge Screening and Targeted Labs Unlock Your Personalized Healing Roadmap"
+- list:
+  - listitem:
+    - text: The surprising blood test that caught pancreatic cancer earlier than imaging would have - and why this one inflammatory marker suddenly jumping to the hundreds revealed what
+    - strong: "\"just burping\""
+    - text: really meant
+  - listitem:
+    - text: Learn how oral infections and root canal remnants can quietly drain your defenses, a
+    - strong: 3D dental scan
+    - text: can reveal the truth.
+  - listitem:
+    - text: "Stage 4 doesn't have to be a death sentence: meet the brave woman who got diagnosed twice - her"
+    - strong: 3 tips can make all the difference
+    - text: in recovery
+  - listitem: How to stay ahead of cancer? This revolutionary tool shows cancer development years before tissue becomes malignant - and it's now becoming more and more popular
+  - listitem:
+    - text: Find out why this
+    - strong: cheap liver enzyme
+    - text: test (that used to check for alcoholism) actually measures how hard your body is fighting excess toxins
+  - listitem:
+    - strong: Know your mitochondria
+    - text: ": this easily accessible test shows whether your mitochondria are creating the perfect terrain for cancer to thrive - plus it reveals whether the body is"
+    - strong: "\"fermenting\" from the inside"
+  - listitem:
+    - text: Are your cellular guards strong enough to resist cancer migration? This is the way to know if your tissue looks like a
+    - strong: "\"solid tree cross-section\""
+    - text: or is full of
+    - strong: "\"termite holes\""
+  - listitem:
+    - text: The
+    - strong: nutrient paradox
+    - text: "in cancer: find out why giving cancer patients calcium, iodine, or copper can actually feed tumor growth through inflammation and blood vessel formation"
+- paragraph: “I began to realize that not only was that metabolic signature telling you whether you had cancer or not - it was actually telling you whether you'd die of it. It was pretty profound. And that was just from a simple tube of blood.”
+- text: "Robert Nagourney, MD Inventor of Functional Tumor Cell Profiling (FTCP) 7 episode The 3 Faces of Cancer: Navigating Breast, Cervical & Prostate Cancer with Early Detection, Lifestyle Shifts & Precision Therapies"
+- list:
+  - listitem:
+    - text: Why the
+    - strong: "\"golf ball lump\""
+    - text: wasn't the only signal of stage 3 breast cancer - see the 5 other telling signs that almost never get checked early on (unless you know what to look for)
+  - listitem:
+    - text: Meet the woman who tested everything - including things she didn't know you could test - and learn how she managed to
+    - strong: completely eliminate the tumor
+    - text: within one year
+  - listitem: What's the safe way to administer hormones? What women of all ages need to know to feel more vibrant, youthful, and physically well
+  - listitem:
+    - text: Why is
+    - strong: breast cancer rising in prevalence
+    - text: "? The former breast cancer surgeon who survived the diagnosis herself reveals the reason why women today feel more scared than ever"
+  - listitem:
+    - text: Is
+    - strong: prostate cancer an inevitable fate
+    - text: for all men? Hear a surprising explanation of why many prostate tumors are treated the wrong way (and how they rob men of their sexual function)
+  - listitem:
+    - text: Can you use
+    - strong: hormonal therapy
+    - text: as a cancer survivor? This expert analyzed over 20 studies and found a clear answer that every person needs to hear... if they want to prevent recurrence
+  - listitem:
+    - text: From being told
+    - strong: "\"she'd never be cancer-free\""
+    - text: to showing no evidence of disease only 5 years later - hear the
+    - strong: 3 unusual ways
+    - text: in which this young woman changed her outcomes
+  - listitem:
+    - text: See why
+    - strong: 80% of us are exposed to high-risk HPV by age 50
+    - text: "- and how women can clear the virus to negative through simple dietary changes, and vaginal microbiome restoration"
+  - listitem:
+    - text: Explore why the
+    - strong: "\"testosterone fuels prostate cancer\""
+    - text: myth has been thoroughly debunked - and how the
+    - strong: 5,000-man trial
+    - text: reveals that we were wrong about male hormones
+  - listitem: High-risk HPV is not the end of the story! See the power of this 4-step protocol that allowed one woman to suppress abnormal cells and test negative for HPV (still negative a year later)
+- paragraph: “80% of breast cancers are avoidable, and the vast majority of breast cancer is entirely curable. The vast majority of women who get breast cancer do not die of breast cancer, and I, for the most part, see breast cancer differently than other people see it.”
+- text: "Jenn Simmons, MD, FACS Integrative Oncologist, Breast Surgeon 8 episode When the Mind Heals, the Body Follows: Trauma Recovery, Vagus Nerve Reset & Mindfulness to Transform Cancer Outcomes"
+- list:
+  - listitem:
+    - text: Why the moment you get a cancer diagnosis, your body enters a
+    - strong: "\"trauma response\""
+    - text: that makes you shut down - and the
+    - strong: "#1 practice"
+    - text: that shifts you from shock to safety
+  - listitem: Try this childhood activity to massively improve health outcomes - and watch how your entire body shifts to healing
+  - listitem:
+    - text: "She got kicked out from the clinic: hear the insane story of a stage 4 patient who refused to"
+    - strong: "\"just trust the process\""
+    - text: and discovered the real root causes behind her tumor (plus where she found the right medical team)
+  - listitem: Talking to the cancer? Discover the highly unconventional technique and hear what happens to the tumor when people followed that guidance
+  - listitem:
+    - text: This key nerve might be the most powerful anti-cancer tool you have - and we now know how to support it in order to
+    - strong: bring down stress and inflammation
+    - text: inside the body
+  - listitem:
+    - text: "Calm down your nervous system in less than 1 minute:"
+    - strong: These 2 DIY methods
+    - text: will save you from spiraling into trauma, anxiety, and hopelessness
+  - listitem:
+    - text: Is your brain wired for danger? Hear about the little-known dysfunction that prevents people from recovering... and
+    - strong: the simple "stop" technique
+    - text: that retrains it like redirecting a three-year-old
+  - listitem:
+    - text: Learn the exact
+    - strong: "\"4 breaths per minute\""
+    - text: pattern that sends the strongest coherence signal to your nervous system (and helps immune cells penetrate the cancer)
+  - listitem:
+    - strong: HRV is your dashboard
+    - text: ... what a higher heart rate variability really means... and how to nudge it upward without an app...
+  - listitem:
+    - text: Detach from
+    - strong: all fear and emotional trauma
+    - text: "- discover why terminal cancer patients who did one therapeutic session of this recreational substance were able to suddenly eliminate their tumors"
+- paragraph: “Not all storms are meant to disrupt your life, some come to clear your path - that's really been a motto for me since that diagnosis, and to the journey where I am right now.”
+- text: "Dan Rubin, ND, FABNO Board-Certified Naturopathic Oncologist 9 episode Starving Cancer in Its Tracks: Therapeutic Nutrition & Fasting Protocols that Shield from Within"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"happy accident\""
+    - text: "that saved her life: How a complete bowel obstruction accidentally triggered the most powerful anti-cancer protocol - stopping the tumor in its tracks"
+  - listitem:
+    - strong: From stage 4 to suddenly thriving
+    - text: ": When this cancer survivor filled her fridge with these few superfoods, chemo side effects virtually disappeared"
+  - listitem:
+    - text: Is your bedroom sabotaging your cancer defense? Discover the
+    - strong: top 3 ways
+    - text: to activate your body's most potent anti-cancer hormone while you sleep like a baby
+  - listitem:
+    - text: Why the
+    - strong: "\"sins of your childhood diet\""
+    - text: created an insulin issue that feeds cancer cells decades later - even if you've eaten healthy for years (and how to go finally back to balance)
+  - listitem:
+    - text: "The shocking tumor equation: After years of watching patients return with recurrences, this physician discovered the"
+    - strong: "#1 change that stops the body from \"making tumor\""
+  - listitem:
+    - text: The miraculous eating habits that
+    - strong: cut cancer recurrence by 70%
+    - text: ": Thousands of women changed nothing about what they eat - but when they eat - and the results stunned the researchers"
+  - listitem:
+    - text: Hear about the game-changing pre-treatment protocol that
+    - strong: makes tumors 70% more responsive
+    - text: while protecting normal cells - yet almost no oncologist recommends it
+  - listitem:
+    - strong: 1/8 cup of this forgotten ingredient slashed cancer risk by 45%
+    - text: ": 20,000 people ate it daily with unmatched prevention results - and it's probably in your grocery store right now"
+  - listitem:
+    - text: Your body cannot identify these
+    - strong: "\"angry cells?\""
+    - text: See what causes create cellular rage that transforms into the angriest cells of all - plus the nutrient deficiency test to reveal the truth
+  - listitem: "Chewing your salad wrong is costing you cancer protection: The mouth-chemistry reaction that only happens when you eat in a very specific manner - learn it now to silence cancer-promoting genes"
+- paragraph: “The number one advice I would have for someone who has a cancer diagnosis is to focus on optimizing their health in every way, so the cancer doesn't have a host environment that supports its growth.”
+- text: "Mark Hyman, MD #1 New York Times Bestselling Author 10 episode The Functional Revolution: Modern Breakthroughs & Innovative Treatments Every Patient Should Know About"
+- list:
+  - listitem:
+    - text: The
+    - strong: "\"Watch and Wait\" Death Sentence"
+    - text: ": Why the four words her oncologist said kept her alive for 12 years - until ONE decision changed everything and she was gone in months"
+  - listitem: This bloodwork improvement was so dramatic that her oncologist refused to believe fruits, vegetables and targeted supplements could do this - until he saw the charts himself (exact protocol revealed)
+  - listitem:
+    - strong: Nutrition during chemo 101
+    - text: ": Why accepting the"
+    - strong: "\"standard infusion suite refreshments\""
+    - text: makes zero physiological sense - and what this magic thermos does instead
+  - listitem: "She couldn't hold the cup after brain surgery: One day of treatment later, this glioblastoma patient walked the foothills with her husband - here's what happened in those few weeks that conventional oncology said was \"impossible\""
+  - listitem:
+    - text: Understand the
+    - strong: "\"4 boxes\" of immunity"
+    - text: ": What creates allergies, autoimmunity, and cancer - plus the \"military budget\" that reveals where your body is wasting critical defense resources"
+  - listitem:
+    - text: Discover the
+    - strong: theory that's been buried for 70 years
+    - text: ": what wakes up the angry mother stem cell that wreaks absolute havoc inside the body"
+  - listitem:
+    - text: What's more impactful -
+    - strong: chemotherapy or our lifestyle
+    - text: "? See the brutal truth this 1980s researcher discovered about the environment surrounding cancer cells"
+  - listitem:
+    - text: "Chemotherapy vs supplementation: The precise"
+    - strong: "\"blackout window\""
+    - text: around chemotherapy that lets you support your body for two full weeks per cycle - without interfering with infusions
+  - listitem:
+    - text: The PET scan showed
+    - strong: "\"congratulations, your cancer is gone\""
+    - text: while she stumbled, couldn't pull up words, and was about to discover it had spread to her brain - watch the full story
+- paragraph: “Cancer's actually a systemic disease. It's something that develops over time. So it's not that all of a sudden you have a tumor, now you have to rip that tumor out, and then once the tumor is gone, you're then medically considered with no evidence of disease"
+- text: Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter Laura Frontiero, NP-BC
+- paragraph: People with a diagnosis or a family history of cancer often live in fear and uncertainty. Unfortunately, they rarely hear about any tools that go beyond the standard approach – and it’s exactly what makes this docuseries so powerful. It offers a new perspective that explores the deeper factors behind cancer and shows that the body has an incredible capacity to respond well with the right support. Tuning in allows you to find a path forward – rooted in the latest science, personal stories, and empowering research.
+- text: "Meet 43 World-Renowned Functional Medicine Doctors and Mental Health Experts Featured in CANCER UNRAVELED: Mark Hyman, MD #1 New York Times Bestselling Author Co-Founder & Chief Medical Officer Joel Fuhrman, MD 7-time NY Times Bestselling Author President of Nutritional Research Foundation Zach Bush, MD Tripple-Board Certified Physician, Research Scientist Internationally Recognized Educator Nasha Winters, ND Integrative Oncology Expert Executive Director of the Metabolic Terrain Institute of Health Valter Longo, PhD Professor of Gerontology and Biological Sciences Jenn Simmons, MD Breast Surgeon, Integrative Oncologist Ty Vincent, MD Low Dose Immunotherapy Inventor Deb Matthew, MD America's Happy Hormones Doctor Jake Psenka, ND Naturopathic Physician Tricia Pingel, NMD Licensed Naturopathic Physician Geo Espinosa, ND Integrative Urologist and Podcast Host Clinical Assistant Professor Gina L. Nick, NMD Naturopathic Physician President Emeritus, California Naturopathic Doctors Association Dan Rubin, ND Naturopathic Oncologist 2024 AANP Physician of the Year Inna Lozinskaya, MD Bioidentical Hormone Replacement Therapy Functional Medicine Physician Brenden Cochran, ND Regenerative Medicine and Integrative Oncology Specialist Wendie Trubow, MD Faculty, Institute for Functional Medicine Barry Smeltzer, MPAS Adjunct Professor Jenny Tufenkian, ND Naturopathic Physician Jason Shumard, DC Functional Medicine Practitioner Leah Linder, ND Board Certified Naturopathic Physician Michael Karlfeldt, ND Doctor of Integrative Medicine Leila Doolittle, DC Doctor of Chiropractic Functional Medicine and Functional Neurology Patrick Hanaway, MD Founding Medical Director, Cleveland Clinic Center for Functional Medicine Monisha Bhanote, MD Quintuple Board-Certified Gut Health & Longevity Physician Kiran Krishnan Board Certified Nutritionist Specializing in Root Causes of Cancer Madiha Saeed, MD Board Certified Family Physician Author Joshua Berka, ND Scientific & Medical Consultant Carol Lourie, ND Naturopath, Acupuncturist, Homeopath Robert Nagourney, MD Inventor of Functional Tumor Cell Profiling (FTCP) Aimie Apigian, MD Board-Certified Preventive Medicine and Addiction Medicine, Specializing in the Biology of Trauma Jim Ohneck Fellow, ASLMS Regina S. Druz, MD Board Certified Cardiologist Peter Staats, MD Interventional Pain Medicine Physician Sharon Stills, NMD Naturopathic Medical Doctor Master Mingtong Gu Qigong Healer & Teacher Doni Wilson, ND Naturopathic Doctor, Midwife & Women’s Health Expert Joseph Pizzorno, ND Editor-in-Chief, Integrative Medicine, A Clinician's Journal Author Aliya Hafeez, MD Board Certified Psychiatrist MSKCC Fellow, AIHM Fellow Ryan & Teddy Sternagel Integrative Cancer Researchers & Advocates Wendy Warner, MD Functional Medicine Gynecologist, Author and Educator Jennifer O'Brien Payeur Plant Stem Cell Expert Joyce Braverman, MD Functional Medicine Physician Psychedelic-Assisted Therapy Specialist Katrina Foe, BCHN Board Certified Nutritionist Specializing in Root Causes of Cancer"
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- heading "Meet Your Host" [level=2]
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits, adopting a good nutrition and exercise regimen.
+- paragraph: He is the CEO of Zonia, a video streaming platform that helps people change their lives and reach their highest potential, both physically and mentally.
+- paragraph: Secure Your Access Now, Before This 10-Part Groundbreaking Series Is Taken Down.
+- heading "The Most Important Decision You'll Never Regret" [level=2]
+- paragraph: Before You Leave … Read This.
+- paragraph: Cancer may have brought you here, but it doesn't get the final word.
+- paragraph: You do.
+- paragraph: You're standing at the edge of a choice …
+- paragraph: A choice between continuing down a path that's left you questioning, fearing, and waiting …
+- paragraph: Or stepping into a new way — one rooted in truth, science, and a deeper understanding of your body's power to heal.
+- paragraph: CANCER UNRAVELED isn't just a series.
+- paragraph: It's a mirror.
+- paragraph: Reflecting back the strength, wisdom, and hope that's already within you — but that the system never taught you how to trust.
+- paragraph: You've seen the cracks in the current approach.
+- paragraph: You've felt the missing pieces.
+- paragraph: Now you know there's more.
+- paragraph: And that “more” isn't just possible — it's personal.
+- paragraph: It's the right insight at the right time.
+- paragraph: The clarity you didn't know you were missing.
+- paragraph: The lifeline your soul has been quietly asking for.
+- paragraph: This is about reclaiming your body's wisdom …
+- paragraph: Rewriting your story …
+- paragraph: And remembering that healing doesn't happen to you … it happens through you.
+- paragraph: You'll hear from 43 of the world's most brilliant minds — doctors, survivors, scientists, and visionaries — all coming together to give you what you were never supposed to find on your own.
+- paragraph: Not another promise.
+- paragraph: Not another "miracle."
+- paragraph: But real answers.
+- paragraph: And a way forward.
+- paragraph: If you've made it this far … you've already started your healing.
+- paragraph: "So, the only question now is:"
+- paragraph: Are you ready to finish what cancer started?
+- paragraph: If so …
+- paragraph: Hit the button.
+- paragraph: Watch the series.
+- paragraph: And walk into the light you've always deserved.
+- link "Register For Free Now":
+  - /url: "#form-target"
+- text: Register for Free Today to Reclaim Control, Strengthen Your Body, and Fight Cancer Smarter
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+Failed step: user register in "cr_ev_immune" Opt In page
+Test failed on page: 'https://zonia-stg.com/crmb5e/cr-immunity'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/CR_Evergreen_nightly_--_@1.2__20261007-143901.png

@@ -1,0 +1,745 @@
+Executing step: user register in "tf_ev_meals" Opt In page
+Scenario will use "Visa" card "4009348888881881"
+===> Navigated to https://zonia-stg.com/mb2/tf-12-detox-meals
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/mb2/tf-join-zonia"
+>>> Navigation via tf_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb2/tf\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/mb2/tf-12-detox-meals 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    43 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/mb2/tf-12-detox-meals"
+
+Aria snapshot:
+- text: The Groundbreaking New Docuseries Reveals Discover How to Stop Unwanted Weight Gain, Hair Loss and Chronic Illnesses and Get Back the Energy and Vitality of Youth
+- paragraph: Simple Steps to Detox Your Body from the Daily IV Drip of Toxins That is Aging Your Body Prematurely
+- iframe
+- img
+- text: Click for sound
+- link:
+  - /url: "#"
+- paragraph:
+  - text: Don't Miss the Live World Premiere on
+  - strong: February 22nd
+  - text: PLUS Get Your Free Gift! Enter your first name and email address below.
+- textbox:
+  - /placeholder: " "
+- text: First Name* This field is required.
+- textbox "E-mail*":
+  - /placeholder: " "
+- text: E-mail* This field is required.
+- checkbox
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "Register for free now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Screening Starts in 0 Days 21 hours 28 minutes 20 seconds
+- paragraph:
+  - strong: "FREE BONUS:"
+  - text: "When you register today for free, you'll also get our new exclusive guide:"
+  - strong: 12 Detox Meals Under 20 mins
+  - text: (Valued at $27)
+- list:
+  - listitem: —Upgrade your health and combat aging with these superfood-rich soups, tacos and wraps that your whole family will enjoy
+  - listitem: —Tap Into the Detox Power of Dandelions. Try This Super Delicious Salad to Help Your Body Eliminate Toxins Faster
+  - listitem: —Supercharge Your Liver With This 3-Min Smoothie Bowl
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Our 33 Environmental Medicine Doctors & World Renowned Health Experts have been Featured on
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: Would You Eat a Plastic Credit Card For Breakfast And Wash It Down With a Drink Mix Of Mercury and Lead ? If you’re like most people, chances are you won’t. However, that’s what you might be doing without realizing it every week. one plastic credit card a week
+- paragraph: See, according to a study published by the University of Newcastle, the average person eats nearly 5,000 microplastics every week.
+- paragraph:
+  - text: This is the equivalent of one
+  - strong: plastic credit card
+  - text: a week.
+- text: LEAD AND MERCURY IN OUR WATER
+- paragraph: What’s worse...
+- paragraph: Multiple studies suggest heavy metals such as lead and mercury float in our drinking water in abundance.
+- paragraph: This means that tap water, even in most advanced health cities like Boston is dangerous to drink.
+- paragraph: Now, this might seem like not a big deal at all...
+- text: In the end, your body is designed to flush out these toxins, right? Well, not quite. toxin bucket
+- paragraph: See...
+- paragraph: While your body can get rid of some of the toxins...
+- paragraph:
+  - text: The IV Drip of toxins we’re exposed to daily fills out the
+  - strong: TOXIN BUCKET
+  - text: inside our body.
+- paragraph: So much so that your body can’t fight these toxins on its own.
+- paragraph: The fuller this bucket gets, the more pain, suffering, and mystery illnesses you experience—and the faster you age.
+- paragraph:
+  - text: These toxins spray their
+  - strong: poisonous spiderwebs
+  - text: around your heart, liver and kidneys.
+- paragraph: They cover your brain and the brain of your children with a paper-thin plastic wrap…
+- paragraph: Just like you’d wrap a piece of fruit or a sandwich.
+- paragraph: To only make your organs suffocate and struggle to survive, speeding up your natural aging process exponentially.
+- paragraph: This is alarming on so many levels.
+- text: Even the World Health Organization is worried
+- paragraph: According to their recent report, 24% of global deaths, which were over 13.7 million deaths in 2019, were due to environmental toxins.
+- paragraph: To put things into perspective, that’s the number of people you’d fit in Gillette stadium… 200 times over.
+- paragraph: Now here’s where things get even more worrisome…
+- paragraph: More evidence shows it’s this non-stop daily IV drip of toxins we are all exposed to…
+- paragraph:
+  - text: That triggers accelerated aging and
+  - strong: turns your own body against you
+- text: 5% OF MODERN-DAY ILLNESSES ARE CAUSED BY A MALFUNCTION IN DNA.
+- paragraph: In fact, a study published in the Journal of American Medical Association suggests only 5% of autoimmune diseases and modern-day illnesses...
+- paragraph: llnesses like Crohn’s, Hashimoto’s, Weight Gain, Cancer, Alzheimer’s, and more...
+- paragraph: Are caused by a malfunction in DNA.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow The rest? Turns out, it has to do with the daily IV drip of environmental toxins we all get.
+- paragraph: "That is why if you’ve been affected by an invisible disability like an autoimmune disease… or mystery illnesses of aging like:"
+- list:
+  - listitem: Unexplainable joint pain
+  - listitem: Worrying memory issues
+  - listitem: Blurry vision
+  - listitem: Trouble sleeping
+  - listitem: Unexpected weight gain
+  - listitem: Hair loss
+  - listitem: Irregular heartbeat
+  - listitem: Dizziness and tension headaches
+  - listitem: Brain Fog
+  - listitem: Energy zapping chronic fatigue…
+- paragraph: Or maybe you know someone in your family or among your friends who is suffering quietly...seeking answers from various doctors...
+- text: Changing the Keto diet to a Vegan diet to Paleo...
+- paragraph: Trying yoga and functional exercise...
+- paragraph: And eating a soup of toxic medications...
+- paragraph: Without much improvement....
+- text: It’s easy to think your body is broken.
+- paragraph: Like you were the unlucky one who didn’t win the good genes lottery.
+- paragraph: If that’s you, I want you to know you’re not alone.
+- paragraph:
+  - text: In fact,
+  - strong: 1 in 5
+  - text: Americans goes through this experience daily.
+- paragraph: Luckily not all hope is lost.
+- paragraph: Thanks to the 33 experts in environmental medicine, there IS a way to detox your body of these toxins...
+- paragraph: To reclaim your health and independence...
+- paragraph: Keep yourself and your family safe from these toxins and the wreck they cause in your body..
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow Now... If you’re like most people, chances are when you hear about toxins and detox...
+- paragraph: You immediately think of “juice cleanse” or “detox teas.”
+- paragraph: While these approaches could work...
+- paragraph: They only work on a surface level.
+- paragraph: And don’t solve the real reason why you might be sick.
+- paragraph: Think of it as if you wanted to paint your entire living room light green..
+- paragraph: Yet only had one ounce of paint.
+- paragraph: You’d be able to paint a small part of just one wall.
+- paragraph: The same with common detox trends.
+- paragraph: However, there ARE simple ways to help your body naturally detox...
+- paragraph: Without spending hundreds of dollars on teas and cleanses that barely work.
+- paragraph: And our team of 33 environmental medicine doctors wants to share all of them with you, nothing is held back.
+- text: Unlike most doctors, our experts went through what you might be going through right now.
+- paragraph: Some of them had to fight extremely hard to release their body from the chains of poison toxins...in order to heal.
+- paragraph: For others, it’s their family members, like children and spouses.
+- paragraph: And they made it their personal mission to not only find the solution that works...
+- paragraph: But also share it with as many people as they possibly can.
+- paragraph: That’s why our experts decided to gather together and share their secrets that helped thousands of people reclaim their health and lives and heal from the toxic overload.
+- paragraph: And you can find them all in this Groundbreaking Docuseries.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow When You Watch This 7-Episode Docuseries, You Will Discover
+- list:
+  - listitem: — Why hidden toxins inside your house can cause allergies, autoimmune diseases, and even cancer, accelerating your biological aging significantly. Here’s how to keep your family safe
+  - listitem:
+    - text: — Is your bathroom the
+    - strong: most toxic
+    - text: "place in the entire house? Why skin care products are the #1 health poison, and what should you do instead"
+  - listitem: — Sneaky little toxins that cause the most damage to your health and speed up your aging. They are found in “wet” houses
+  - listitem: — Feeling anxious? Here’s why this could be a sign of high blood sugar. Yes, even if you don’t have any other symptoms
+  - listitem:
+    - text: — What is the
+    - strong: strongest vitamin
+    - text: against Cancer and aging? WHO admits they might have underestimated the importance of this vitamin
+  - listitem: — A little-known German style of acupuncture that drains the toxins out of your body effortlessly to slow down biological aging
+- list:
+  - listitem: — Why scientists predict we’ll have more plastic than fish in the ocean in 20 years. And how this will affect our global food supply and the rate at which we age
+  - listitem:
+    - text: — Top 5 nutrients you must get through food if you want to protect your body against
+    - strong: toxic burden
+    - text: and
+    - strong: slow biological aging
+  - listitem: — ONE simple test you can do right now to see why you might be running low on energy all the time
+  - listitem:
+    - text: — Three little-known ancient herbs that fight aging toxins and help your body
+    - strong: flush them out
+    - text: of your system
+  - listitem: — The superpower of melatonin. Why this hormone is good for more than just helping you fall asleep
+  - listitem: — Three small and effortless things you can do right now to protect your body from EMFs and prevent premature aging
+  - listitem: "— Swedish study reveals: people who do this specific detox method once a week live up to 20 years longer than those who don’t"
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- paragraph: While it’s almost impossible to stay away from environmental toxins completely...
+- paragraph: There are steps you can take right now to lower your exposure...
+- paragraph: Relieve your body off the biggest burden...
+- paragraph: In order to turn off the harmful genes once and for all...
+- paragraph: And to turn on your body’s natural ability to detoxify yourself and heal itself.
+- img
+- text: Shivan Sarna
+- paragraph: ‘Toxin-Free’ is an eye-opening docuseries that highlights serious health issues caused by the accumulation of pollutants all around us. There is very little mass awareness about the profound impact they have on our health or how we can protect ourselves from them. The experts cover real causes of sensitivities, allergies, hormonal issues, and even cancer. Thankfully, they suggest powerful detox protocols with specific, easy steps to follow. This is invaluable information for everybody. I highly recommend it!
+- text: "What You Will Find In Each Episode Of This Unique 7-Part Docu-Series TOXIN FREE 1 episode The Truth About Environmental Toxins: The Invisible IV Drip That Poisons Our Health"
+- list:
+  - listitem: • Going BPA-free? Here’s how to know EXACTLY if your products are plastic free. Don’t buy another “BPA-free” product before you watch this episode
+  - listitem: • Feeling exhausted, in pain, and anxious? Here’s why these are the signs of a drunk immune system and what’s behind it
+  - listitem: • This most dangerous toxic substance is hiding in your house right now. Here’s a simple way to determine if this chemical predator is eating up your health
+  - listitem: • Watch this before you try another detox juice! The key reason why most detoxes don’t work and can actually make you even sicker
+  - listitem: "• BREAKING NEWS: National Institute of Health confirms. Your DNA plays less than 10% role in developing Autoimmune Disease or Chronic Illness. Find out the key reason that leads to these mystery illnesses"
+  - listitem: • The real reasons over 50% of children suffer from mystery disorders such as ADD, ADHD, and Autism and why it’s not your fault. The real culprit might be hiding in your house right now
+  - listitem: • Getting close to menopause age? How to never suffer from so-called "normal" menopause symptoms and actually thrive during this time
+  - listitem: • Wrinkles, crepey and loose skin are inevitable signs of aging, right? Not quite. Here’s how this 51-year-old doctor who doesn’t look a day older than 38 reversed the common side effects of aging without making drastic changes to her lifestyle
+- text: "2 episode A Wake-Up Call: Avoid These 80,000+ Environmental Toxins"
+- list:
+  - listitem: • The worst chemical found in almost MOST skin care products. Watch this episode to discover what it is and a simple way to stay away from it
+  - listitem: • The DEEP system - the fuel to widespread inflammation is all over your body
+  - listitem: • The “invisible” health-damaging power waves and why they make our body age faster than it should. Here’s how to know if your house is affected by these
+  - listitem: • The Heavy Metal Poison test - ask your doctor to perform this test to find answers to your mystery illnesses right away
+  - listitem: • Are your teeth destroying your gut? Most people are clueless about this horrible heavy metal that’s hiding in their teeth
+  - listitem: • Did you know that the life expectancy of farm workers is 49 years? Here’s why this is bad news for you and your family
+  - listitem: "• Is your bathroom cabinet the most toxic place in the entire house? Why skin care products are the #1 health poison, and what should you do instead"
+  - listitem: • The WWII “weedkillers” - why this weapon of mass destruction is being used on our food - and eventually ourselves - today
+- text: "3 episode The Biggest Myths About Allergies and Autoimmune Diseases: What is Really Happening to Your Body"
+- list:
+  - listitem: • Got allergies? Here’s why common anti-allergy medication can make your allergies even worse
+  - listitem: "• The #1 toxin that causes allergic reactions. It could be hiding in your house right now"
+  - listitem: • Do this one little trick each day to help your body fight pollen allergies faster
+  - listitem: • Rheumatoid arthritis is a joint disease, right? Wrong! Why RA starts in your intestines. Plus, little known effective RA treatments
+  - listitem: • Allergies vs Autoimmune Diseases - two sides of the same coin? Why unchecked inflammation can become life-debilitating autoimmune disease
+  - listitem: "• The biggest myth about autoimmune diseases and how we develop them. Hint: why it has nothing to do with your genetics"
+  - listitem: • Unexplainable headaches? Here’s how this could be a symptom of allergies
+  - listitem: • Can nausea, constipation, and diarrhea be symptoms of unchecked allergies? Here’s how to find out
+  - listitem: "• To eat or not to eat: can you treat peanut allergies? This doctor says yes! And it’s much easier than most people think"
+- text: "4 episode Endocrine System: Conquer The Hormonal Imbalance"
+- list:
+  - listitem: • Top 4 most dangerous chemicals that disrupt your endocrine system and disorient your hormones. How two of these are still found in newborns even though they were banned back in 1970s
+  - listitem: • The little-known chemical you drink that causes weight gain. It’s not sugar
+  - listitem: "• The #1 cause of breast cancer and why the medical community doesn’t talk about it publicly"
+  - listitem: • Better treatment for infertility? Patients who started doing this got pregnant within a year
+  - listitem: • The KEY hormone for a healthy pregnancy. Most women are deficient in it. Here’s a simple and easy way to boost it
+  - listitem: • The things that turn your genes into the health terrorists and why you should know about them
+  - listitem: • Why 50% of miscarriages are not women’s fault. Here’s how to stop blaming yourself
+  - listitem: • Do you have a sluggish thyroid? Here’s what you should ask your doctor at the next appointment to find out the truth about your thyroid health
+- text: "5 episode Cancer & Toxicity: Unroot the Hidden Causes Behind Cancer"
+- list:
+  - listitem: "• Breaking NEWS: The Journal of American Medical Association Reveals: the levels of lead in our children are up to 50% higher than they should be. Here’s how you can keep your children safe"
+  - listitem: • Can a sudden drop in cholesterol levels be an alarm your body sends about cancer?
+  - listitem: • The common vitamin that could bulletproof your body against cancer
+  - listitem: • Do THIS to avoid being in the 25% of less fortunate cancer patients who don’t make it
+  - listitem: • Top three natural tools to add to your cancer treatment to ban cancer from coming back
+  - listitem: • Why most beauty products might be the real reasons for cancer development
+  - listitem: • Is it possible to avoid cancer remission at all? This doctor says YES! Here’s a step-by-step approach on how you can do that
+  - listitem: "• The “orphan” system in your body that’s the #1 cancer messenger. It tells you exactly where cancer is brewing"
+  - listitem: • Discover patient’s story of kicking out cancer through IV therapy (and which specific therapies are most effective)
+- text: "6 episode Little-Known Natural Therapies & Treatments: The “Silver Bullet” Against Cancer, Autoimmune Disease, Hormonal Imbalances, and more"
+- list:
+  - listitem: • Top 5 effective treatments in Europe that are banned in the United States
+  - listitem: • The worst medication we take every single day without realizing it. Here’s how to stop this “medication” from eating us on the inside
+  - listitem: • This simple detox method has been used for centuries in Korea, China, and Finland. Millions have used it. And now you can, too
+  - listitem: • Special Light Therapy? Sports medicine doctors have been using this therapy for years to help athletes recover and heal from injuries as fast as possible
+  - listitem: • Do you have difficulty swallowing? You might be deficient in one common mineral
+  - listitem: • Why diet and exercise aren't enough to protect your body from environmental toxins. Here’s what you can do to safeguard your health
+  - listitem: • The fastest way to stop the cruel hands of aging and maybe even reverse the common signs like weight gain, wrinkly skin, and getting sick
+  - listitem: "• Swedish study reveals: people who do THIS detox method once a week live up to 20 years longer than those who don’t"
+- text: 7 episode The Roadmap to Heal Yourself While Healing The Planet
+- list:
+  - listitem: • How to connect to the sacred rhythms of life and reach the highest state of wellbeing and vitality on planet earth
+  - listitem: • How to become part of the solution for your body and for your planet by changing one habit today (learn what it is)
+  - listitem: • Could this be the best way to save money on food? Studies suggest people who do this live healthy and long live
+  - listitem: • How by making one simple choice today you can save 2000 gallons of water (and it is not related to showering)
+  - listitem: • What is one of the greatest tragedy of our modern world and how one dietary change can make the difference between destruction and proliferation
+  - listitem: • How to escape the negative loop of pollution and depletion, and how to make sure your family always has food on the table
+  - listitem: • Why healing the planet is essential to healing our bodies, and how to create a thriving future for the next generations
+  - listitem: • Learn the true (and surprising) causes of climate change, and what actions you can take today to reverse the trend
+  - listitem: • Discover in which direction humanity is heading, and what you can do to preserve your health and that of the planet
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- img
+- text: Аri Whitten
+- paragraph: One of the primary (and least visible) causes of the epidemic of chronic diseases like cancer, heart disease, neurological disease, obesity, and diabetes are the 75,000+ man-made chemicals we're all regularly exposed to in our water, air, and food. If you want to be healthy, you need to fully understand this and what to do about it. This docuseries is a must-watch.
+- paragraph: Now, I must warn you.
+- paragraph: What you will find in this docuseries might sound controversial.
+- paragraph: It is because our experts come from all over the world.
+- paragraph: They use ancient long-forgotten, and brand-new European treatments alike...
+- paragraph: Treatments that big pharma, big petroleum companies, and the multi-billion dollar food and beauty industries don’t want you to know about.
+- paragraph: "That is why I urge you to:"
+- text: Secure Your Access Now, Before This 7-Part Groundbreaking Documentary Is Taken Down
+- paragraph
+- paragraph: Imagine how it would feel to finally have the energy, vigor, and love for life!
+- paragraph
+- paragraph
+- paragraph: How would it feel to finally let go of fear and feel safe…
+- paragraph
+- paragraph
+- paragraph: To know no matter what’s going on in the world…
+- paragraph
+- paragraph
+- paragraph: You and your family are protected from harmful aging toxins that turn our bodies against us.
+- paragraph
+- text: "And most importantly:"
+- paragraph
+- paragraph: How wonderful would it feel to wake up feeling fresh and light for decades to come…
+- paragraph
+- paragraph
+- paragraph: Free of the toxic burden that’s been weighing you down, without you even realizing it.
+- paragraph
+- paragraph
+- paragraph: How fantastic would it be to finally feel like your young self again even in your 60s, 70s, and 80s…
+- paragraph
+- paragraph
+- paragraph: To have a clear and sharp mind, bouts of long-lasting energy, and be free of pain.
+- paragraph
+- paragraph
+- paragraph: What would you give up to feel again in control of your health so you never have to face losing your identity, freedom, independence, and life?
+- paragraph
+- paragraph
+- paragraph: Just think about how different your life would be if you knew exactly how to protect your body from the toxins that cause aging…
+- paragraph
+- paragraph
+- paragraph: And never suffer from unexplainable mystery illnesses again.
+- paragraph
+- paragraph
+- paragraph: With each episode of this groundbreaking documentary series, you’ll feel that it’s possible to be in complete control of your health…
+- paragraph
+- text: That it IS possible to break free from the chains of environmental toxins that are taking over your health and quality of your life and causing premature aging!
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow Meet Our 33 Environmental Medicine Doctors And World Renowned Health Experts Featured In TOXIN FREE Ty Vincent, MD Low Dose Immunotherapy Pioneer Brian Vaszily Natural Health Researcher and Advocate for 20+ years Laura Frontiero, NP-BC Functional Medicine Practitioner Christopher Shade, PhD Personal Development & Human Behavior Expert Erin Lommen, ND Naturopathic Physician Ocean Robbins Co-founder, Food Revolution Network Joel Fuhrman, MD
+- paragraph: 7-time NY Times Bestselling Author, President of Nutritional Research Foundation
+- text: Aristo Vojdani, PhD, MSc, CLS Clinical Professor, Dep of Preventive Medicine, Loma Linda University Jeffrey A. Morrison, MD, CNS Board Certified Integrative Medicine Aumatma Simmons, ND Holistic Fertility Expert Tom Moorcroft, DO Board Certified in Family Medicine and Osteopathic Manipulative Treatment Kelly McCann, MD, IFMCP Board Certified Internal Medicine, Pediatrics & Integrative Medicine Afrouz Demeri, ND, IFMCP Former Director of Functional Medicine, University of California Irvine Lisa Saff Koche, MD, ABAARM Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Welman Shrader Jr, MD Board Certified in Environmental Medicine Secretary of Board of Governors for Environmental Medicine William A. Ingram, MD, FAAOA Board Certified Otolaryngology Head & Neck Surgery Diego Saporta, MD, FAAOA Past President of the Pan American Allergy Society Michael Bauerschmidt, MD Founder of Deeper Healing Medical Wellness Center Michelle Sands, ND Naturopathic Physician Co-founder of Glow Natural Wellness Angie Ates, BC-CAHP, MH Traditional Naturopath Founder Institute of Holistic Integrative Studies Jessica Tran , ND FAAEM Board Certified Environmental Medicine Robby Besner, BS, PSc.D Full Spectrum InfraRed Energy Medicine Specialist Paul Barattiero, ND, CHS Expert in Molecular Hydrogen and EMF Exposure Deb Matthew, MD America's Happy Hormones Doctor Wendie Trubow, MD, MBA Functional Medicine Gynecologist Nafysa Parpia, ND Chronic Illness Expert Sharon Stills, NMD Naturopathic Medical Doctor Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine Robert Silverman, DC, MS Doctor of Chiropractic Alan McDaniel, MD Board Certified Otolaryngologist Anne Marie Fine, NMD, FAAEM Medical Director, Environmental Medicine Education International Brenden Cochran, ND Regenerative Medicine and Integrative Oncology Specialist Kathleen Prlich, Esq., RN Environmental Lawyer and Registered Nurse
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- img
+- text: Teodora Chrystie
+- paragraph: As a mother who cares about the health of my children as well as the state of the planet we leave behind for them, I’ve been deeply concerned about environmental toxins and how they affect our health in the short and long-term. I am so grateful I had the opportunity to hear the insights and experience of leading environmental doctors and health experts, delivered in an engaging and informative docuseries. I recommend this docuseries to anyone who cares about their health!
+- text: "Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning film filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- contentinfo:
+  - paragraph: © 2026 ZONIA
+  - list:
+    - listitem:
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+===> Waiting for URL starting with "https://zonia-stg.com/mb2/tf-replay-weekend"
+>>> Navigation via tf_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/mb2/tf\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/mb2/tf-12-detox-meals 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    43 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/mb2/tf-12-detox-meals"
+
+Aria snapshot:
+- text: The Groundbreaking New Docuseries Reveals Discover How to Stop Unwanted Weight Gain, Hair Loss and Chronic Illnesses and Get Back the Energy and Vitality of Youth
+- paragraph: Simple Steps to Detox Your Body from the Daily IV Drip of Toxins That is Aging Your Body Prematurely
+- iframe
+- img
+- text: Click for sound
+- link:
+  - /url: "#"
+- paragraph:
+  - text: Don't Miss the Live World Premiere on
+  - strong: February 22nd
+  - text: PLUS Get Your Free Gift! Enter your first name and email address below.
+- textbox:
+  - /placeholder: " "
+- text: First Name* This field is required.
+- textbox "E-mail*":
+  - /placeholder: " "
+- text: E-mail* This field is required.
+- checkbox
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- button "Register for free now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: . World Screening Starts in 0 Days 21 hours 28 minutes 0 seconds
+- paragraph:
+  - strong: "FREE BONUS:"
+  - text: "When you register today for free, you'll also get our new exclusive guide:"
+  - strong: 12 Detox Meals Under 20 mins
+  - text: (Valued at $27)
+- list:
+  - listitem: —Upgrade your health and combat aging with these superfood-rich soups, tacos and wraps that your whole family will enjoy
+  - listitem: —Tap Into the Detox Power of Dandelions. Try This Super Delicious Salad to Help Your Body Eliminate Toxins Faster
+  - listitem: —Supercharge Your Liver With This 3-Min Smoothie Bowl
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Our 33 Environmental Medicine Doctors & World Renowned Health Experts have been Featured on
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: Would You Eat a Plastic Credit Card For Breakfast And Wash It Down With a Drink Mix Of Mercury and Lead ? If you’re like most people, chances are you won’t. However, that’s what you might be doing without realizing it every week. one plastic credit card a week
+- paragraph: See, according to a study published by the University of Newcastle, the average person eats nearly 5,000 microplastics every week.
+- paragraph:
+  - text: This is the equivalent of one
+  - strong: plastic credit card
+  - text: a week.
+- text: LEAD AND MERCURY IN OUR WATER
+- paragraph: What’s worse...
+- paragraph: Multiple studies suggest heavy metals such as lead and mercury float in our drinking water in abundance.
+- paragraph: This means that tap water, even in most advanced health cities like Boston is dangerous to drink.
+- paragraph: Now, this might seem like not a big deal at all...
+- text: In the end, your body is designed to flush out these toxins, right? Well, not quite. toxin bucket
+- paragraph: See...
+- paragraph: While your body can get rid of some of the toxins...
+- paragraph:
+  - text: The IV Drip of toxins we’re exposed to daily fills out the
+  - strong: TOXIN BUCKET
+  - text: inside our body.
+- paragraph: So much so that your body can’t fight these toxins on its own.
+- paragraph: The fuller this bucket gets, the more pain, suffering, and mystery illnesses you experience—and the faster you age.
+- paragraph:
+  - text: These toxins spray their
+  - strong: poisonous spiderwebs
+  - text: around your heart, liver and kidneys.
+- paragraph: They cover your brain and the brain of your children with a paper-thin plastic wrap…
+- paragraph: Just like you’d wrap a piece of fruit or a sandwich.
+- paragraph: To only make your organs suffocate and struggle to survive, speeding up your natural aging process exponentially.
+- paragraph: This is alarming on so many levels.
+- text: Even the World Health Organization is worried
+- paragraph: According to their recent report, 24% of global deaths, which were over 13.7 million deaths in 2019, were due to environmental toxins.
+- paragraph: To put things into perspective, that’s the number of people you’d fit in Gillette stadium… 200 times over.
+- paragraph: Now here’s where things get even more worrisome…
+- paragraph: More evidence shows it’s this non-stop daily IV drip of toxins we are all exposed to…
+- paragraph:
+  - text: That triggers accelerated aging and
+  - strong: turns your own body against you
+- text: 5% OF MODERN-DAY ILLNESSES ARE CAUSED BY A MALFUNCTION IN DNA.
+- paragraph: In fact, a study published in the Journal of American Medical Association suggests only 5% of autoimmune diseases and modern-day illnesses...
+- paragraph: llnesses like Crohn’s, Hashimoto’s, Weight Gain, Cancer, Alzheimer’s, and more...
+- paragraph: Are caused by a malfunction in DNA.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow The rest? Turns out, it has to do with the daily IV drip of environmental toxins we all get.
+- paragraph: "That is why if you’ve been affected by an invisible disability like an autoimmune disease… or mystery illnesses of aging like:"
+- list:
+  - listitem: Unexplainable joint pain
+  - listitem: Worrying memory issues
+  - listitem: Blurry vision
+  - listitem: Trouble sleeping
+  - listitem: Unexpected weight gain
+  - listitem: Hair loss
+  - listitem: Irregular heartbeat
+  - listitem: Dizziness and tension headaches
+  - listitem: Brain Fog
+  - listitem: Energy zapping chronic fatigue…
+- paragraph: Or maybe you know someone in your family or among your friends who is suffering quietly...seeking answers from various doctors...
+- text: Changing the Keto diet to a Vegan diet to Paleo...
+- paragraph: Trying yoga and functional exercise...
+- paragraph: And eating a soup of toxic medications...
+- paragraph: Without much improvement....
+- text: It’s easy to think your body is broken.
+- paragraph: Like you were the unlucky one who didn’t win the good genes lottery.
+- paragraph: If that’s you, I want you to know you’re not alone.
+- paragraph:
+  - text: In fact,
+  - strong: 1 in 5
+  - text: Americans goes through this experience daily.
+- paragraph: Luckily not all hope is lost.
+- paragraph: Thanks to the 33 experts in environmental medicine, there IS a way to detox your body of these toxins...
+- paragraph: To reclaim your health and independence...
+- paragraph: Keep yourself and your family safe from these toxins and the wreck they cause in your body..
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow Now... If you’re like most people, chances are when you hear about toxins and detox...
+- paragraph: You immediately think of “juice cleanse” or “detox teas.”
+- paragraph: While these approaches could work...
+- paragraph: They only work on a surface level.
+- paragraph: And don’t solve the real reason why you might be sick.
+- paragraph: Think of it as if you wanted to paint your entire living room light green..
+- paragraph: Yet only had one ounce of paint.
+- paragraph: You’d be able to paint a small part of just one wall.
+- paragraph: The same with common detox trends.
+- paragraph: However, there ARE simple ways to help your body naturally detox...
+- paragraph: Without spending hundreds of dollars on teas and cleanses that barely work.
+- paragraph: And our team of 33 environmental medicine doctors wants to share all of them with you, nothing is held back.
+- text: Unlike most doctors, our experts went through what you might be going through right now.
+- paragraph: Some of them had to fight extremely hard to release their body from the chains of poison toxins...in order to heal.
+- paragraph: For others, it’s their family members, like children and spouses.
+- paragraph: And they made it their personal mission to not only find the solution that works...
+- paragraph: But also share it with as many people as they possibly can.
+- paragraph: That’s why our experts decided to gather together and share their secrets that helped thousands of people reclaim their health and lives and heal from the toxic overload.
+- paragraph: And you can find them all in this Groundbreaking Docuseries.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow When You Watch This 7-Episode Docuseries, You Will Discover
+- list:
+  - listitem: — Why hidden toxins inside your house can cause allergies, autoimmune diseases, and even cancer, accelerating your biological aging significantly. Here’s how to keep your family safe
+  - listitem:
+    - text: — Is your bathroom the
+    - strong: most toxic
+    - text: "place in the entire house? Why skin care products are the #1 health poison, and what should you do instead"
+  - listitem: — Sneaky little toxins that cause the most damage to your health and speed up your aging. They are found in “wet” houses
+  - listitem: — Feeling anxious? Here’s why this could be a sign of high blood sugar. Yes, even if you don’t have any other symptoms
+  - listitem:
+    - text: — What is the
+    - strong: strongest vitamin
+    - text: against Cancer and aging? WHO admits they might have underestimated the importance of this vitamin
+  - listitem: — A little-known German style of acupuncture that drains the toxins out of your body effortlessly to slow down biological aging
+- list:
+  - listitem: — Why scientists predict we’ll have more plastic than fish in the ocean in 20 years. And how this will affect our global food supply and the rate at which we age
+  - listitem:
+    - text: — Top 5 nutrients you must get through food if you want to protect your body against
+    - strong: toxic burden
+    - text: and
+    - strong: slow biological aging
+  - listitem: — ONE simple test you can do right now to see why you might be running low on energy all the time
+  - listitem:
+    - text: — Three little-known ancient herbs that fight aging toxins and help your body
+    - strong: flush them out
+    - text: of your system
+  - listitem: — The superpower of melatonin. Why this hormone is good for more than just helping you fall asleep
+  - listitem: — Three small and effortless things you can do right now to protect your body from EMFs and prevent premature aging
+  - listitem: "— Swedish study reveals: people who do this specific detox method once a week live up to 20 years longer than those who don’t"
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- paragraph: While it’s almost impossible to stay away from environmental toxins completely...
+- paragraph: There are steps you can take right now to lower your exposure...
+- paragraph: Relieve your body off the biggest burden...
+- paragraph: In order to turn off the harmful genes once and for all...
+- paragraph: And to turn on your body’s natural ability to detoxify yourself and heal itself.
+- img
+- text: Shivan Sarna
+- paragraph: ‘Toxin-Free’ is an eye-opening docuseries that highlights serious health issues caused by the accumulation of pollutants all around us. There is very little mass awareness about the profound impact they have on our health or how we can protect ourselves from them. The experts cover real causes of sensitivities, allergies, hormonal issues, and even cancer. Thankfully, they suggest powerful detox protocols with specific, easy steps to follow. This is invaluable information for everybody. I highly recommend it!
+- text: "What You Will Find In Each Episode Of This Unique 7-Part Docu-Series TOXIN FREE 1 episode The Truth About Environmental Toxins: The Invisible IV Drip That Poisons Our Health"
+- list:
+  - listitem: • Going BPA-free? Here’s how to know EXACTLY if your products are plastic free. Don’t buy another “BPA-free” product before you watch this episode
+  - listitem: • Feeling exhausted, in pain, and anxious? Here’s why these are the signs of a drunk immune system and what’s behind it
+  - listitem: • This most dangerous toxic substance is hiding in your house right now. Here’s a simple way to determine if this chemical predator is eating up your health
+  - listitem: • Watch this before you try another detox juice! The key reason why most detoxes don’t work and can actually make you even sicker
+  - listitem: "• BREAKING NEWS: National Institute of Health confirms. Your DNA plays less than 10% role in developing Autoimmune Disease or Chronic Illness. Find out the key reason that leads to these mystery illnesses"
+  - listitem: • The real reasons over 50% of children suffer from mystery disorders such as ADD, ADHD, and Autism and why it’s not your fault. The real culprit might be hiding in your house right now
+  - listitem: • Getting close to menopause age? How to never suffer from so-called "normal" menopause symptoms and actually thrive during this time
+  - listitem: • Wrinkles, crepey and loose skin are inevitable signs of aging, right? Not quite. Here’s how this 51-year-old doctor who doesn’t look a day older than 38 reversed the common side effects of aging without making drastic changes to her lifestyle
+- text: "2 episode A Wake-Up Call: Avoid These 80,000+ Environmental Toxins"
+- list:
+  - listitem: • The worst chemical found in almost MOST skin care products. Watch this episode to discover what it is and a simple way to stay away from it
+  - listitem: • The DEEP system - the fuel to widespread inflammation is all over your body
+  - listitem: • The “invisible” health-damaging power waves and why they make our body age faster than it should. Here’s how to know if your house is affected by these
+  - listitem: • The Heavy Metal Poison test - ask your doctor to perform this test to find answers to your mystery illnesses right away
+  - listitem: • Are your teeth destroying your gut? Most people are clueless about this horrible heavy metal that’s hiding in their teeth
+  - listitem: • Did you know that the life expectancy of farm workers is 49 years? Here’s why this is bad news for you and your family
+  - listitem: "• Is your bathroom cabinet the most toxic place in the entire house? Why skin care products are the #1 health poison, and what should you do instead"
+  - listitem: • The WWII “weedkillers” - why this weapon of mass destruction is being used on our food - and eventually ourselves - today
+- text: "3 episode The Biggest Myths About Allergies and Autoimmune Diseases: What is Really Happening to Your Body"
+- list:
+  - listitem: • Got allergies? Here’s why common anti-allergy medication can make your allergies even worse
+  - listitem: "• The #1 toxin that causes allergic reactions. It could be hiding in your house right now"
+  - listitem: • Do this one little trick each day to help your body fight pollen allergies faster
+  - listitem: • Rheumatoid arthritis is a joint disease, right? Wrong! Why RA starts in your intestines. Plus, little known effective RA treatments
+  - listitem: • Allergies vs Autoimmune Diseases - two sides of the same coin? Why unchecked inflammation can become life-debilitating autoimmune disease
+  - listitem: "• The biggest myth about autoimmune diseases and how we develop them. Hint: why it has nothing to do with your genetics"
+  - listitem: • Unexplainable headaches? Here’s how this could be a symptom of allergies
+  - listitem: • Can nausea, constipation, and diarrhea be symptoms of unchecked allergies? Here’s how to find out
+  - listitem: "• To eat or not to eat: can you treat peanut allergies? This doctor says yes! And it’s much easier than most people think"
+- text: "4 episode Endocrine System: Conquer The Hormonal Imbalance"
+- list:
+  - listitem: • Top 4 most dangerous chemicals that disrupt your endocrine system and disorient your hormones. How two of these are still found in newborns even though they were banned back in 1970s
+  - listitem: • The little-known chemical you drink that causes weight gain. It’s not sugar
+  - listitem: "• The #1 cause of breast cancer and why the medical community doesn’t talk about it publicly"
+  - listitem: • Better treatment for infertility? Patients who started doing this got pregnant within a year
+  - listitem: • The KEY hormone for a healthy pregnancy. Most women are deficient in it. Here’s a simple and easy way to boost it
+  - listitem: • The things that turn your genes into the health terrorists and why you should know about them
+  - listitem: • Why 50% of miscarriages are not women’s fault. Here’s how to stop blaming yourself
+  - listitem: • Do you have a sluggish thyroid? Here’s what you should ask your doctor at the next appointment to find out the truth about your thyroid health
+- text: "5 episode Cancer & Toxicity: Unroot the Hidden Causes Behind Cancer"
+- list:
+  - listitem: "• Breaking NEWS: The Journal of American Medical Association Reveals: the levels of lead in our children are up to 50% higher than they should be. Here’s how you can keep your children safe"
+  - listitem: • Can a sudden drop in cholesterol levels be an alarm your body sends about cancer?
+  - listitem: • The common vitamin that could bulletproof your body against cancer
+  - listitem: • Do THIS to avoid being in the 25% of less fortunate cancer patients who don’t make it
+  - listitem: • Top three natural tools to add to your cancer treatment to ban cancer from coming back
+  - listitem: • Why most beauty products might be the real reasons for cancer development
+  - listitem: • Is it possible to avoid cancer remission at all? This doctor says YES! Here’s a step-by-step approach on how you can do that
+  - listitem: "• The “orphan” system in your body that’s the #1 cancer messenger. It tells you exactly where cancer is brewing"
+  - listitem: • Discover patient’s story of kicking out cancer through IV therapy (and which specific therapies are most effective)
+- text: "6 episode Little-Known Natural Therapies & Treatments: The “Silver Bullet” Against Cancer, Autoimmune Disease, Hormonal Imbalances, and more"
+- list:
+  - listitem: • Top 5 effective treatments in Europe that are banned in the United States
+  - listitem: • The worst medication we take every single day without realizing it. Here’s how to stop this “medication” from eating us on the inside
+  - listitem: • This simple detox method has been used for centuries in Korea, China, and Finland. Millions have used it. And now you can, too
+  - listitem: • Special Light Therapy? Sports medicine doctors have been using this therapy for years to help athletes recover and heal from injuries as fast as possible
+  - listitem: • Do you have difficulty swallowing? You might be deficient in one common mineral
+  - listitem: • Why diet and exercise aren't enough to protect your body from environmental toxins. Here’s what you can do to safeguard your health
+  - listitem: • The fastest way to stop the cruel hands of aging and maybe even reverse the common signs like weight gain, wrinkly skin, and getting sick
+  - listitem: "• Swedish study reveals: people who do THIS detox method once a week live up to 20 years longer than those who don’t"
+- text: 7 episode The Roadmap to Heal Yourself While Healing The Planet
+- list:
+  - listitem: • How to connect to the sacred rhythms of life and reach the highest state of wellbeing and vitality on planet earth
+  - listitem: • How to become part of the solution for your body and for your planet by changing one habit today (learn what it is)
+  - listitem: • Could this be the best way to save money on food? Studies suggest people who do this live healthy and long live
+  - listitem: • How by making one simple choice today you can save 2000 gallons of water (and it is not related to showering)
+  - listitem: • What is one of the greatest tragedy of our modern world and how one dietary change can make the difference between destruction and proliferation
+  - listitem: • How to escape the negative loop of pollution and depletion, and how to make sure your family always has food on the table
+  - listitem: • Why healing the planet is essential to healing our bodies, and how to create a thriving future for the next generations
+  - listitem: • Learn the true (and surprising) causes of climate change, and what actions you can take today to reverse the trend
+  - listitem: • Discover in which direction humanity is heading, and what you can do to preserve your health and that of the planet
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- img
+- text: Аri Whitten
+- paragraph: One of the primary (and least visible) causes of the epidemic of chronic diseases like cancer, heart disease, neurological disease, obesity, and diabetes are the 75,000+ man-made chemicals we're all regularly exposed to in our water, air, and food. If you want to be healthy, you need to fully understand this and what to do about it. This docuseries is a must-watch.
+- paragraph: Now, I must warn you.
+- paragraph: What you will find in this docuseries might sound controversial.
+- paragraph: It is because our experts come from all over the world.
+- paragraph: They use ancient long-forgotten, and brand-new European treatments alike...
+- paragraph: Treatments that big pharma, big petroleum companies, and the multi-billion dollar food and beauty industries don’t want you to know about.
+- paragraph: "That is why I urge you to:"
+- text: Secure Your Access Now, Before This 7-Part Groundbreaking Documentary Is Taken Down
+- paragraph
+- paragraph: Imagine how it would feel to finally have the energy, vigor, and love for life!
+- paragraph
+- paragraph
+- paragraph: How would it feel to finally let go of fear and feel safe…
+- paragraph
+- paragraph
+- paragraph: To know no matter what’s going on in the world…
+- paragraph
+- paragraph
+- paragraph: You and your family are protected from harmful aging toxins that turn our bodies against us.
+- paragraph
+- text: "And most importantly:"
+- paragraph
+- paragraph: How wonderful would it feel to wake up feeling fresh and light for decades to come…
+- paragraph
+- paragraph
+- paragraph: Free of the toxic burden that’s been weighing you down, without you even realizing it.
+- paragraph
+- paragraph
+- paragraph: How fantastic would it be to finally feel like your young self again even in your 60s, 70s, and 80s…
+- paragraph
+- paragraph
+- paragraph: To have a clear and sharp mind, bouts of long-lasting energy, and be free of pain.
+- paragraph
+- paragraph
+- paragraph: What would you give up to feel again in control of your health so you never have to face losing your identity, freedom, independence, and life?
+- paragraph
+- paragraph
+- paragraph: Just think about how different your life would be if you knew exactly how to protect your body from the toxins that cause aging…
+- paragraph
+- paragraph
+- paragraph: And never suffer from unexplainable mystery illnesses again.
+- paragraph
+- paragraph
+- paragraph: With each episode of this groundbreaking documentary series, you’ll feel that it’s possible to be in complete control of your health…
+- paragraph
+- text: That it IS possible to break free from the chains of environmental toxins that are taking over your health and quality of your life and causing premature aging!
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow Meet Our 33 Environmental Medicine Doctors And World Renowned Health Experts Featured In TOXIN FREE Ty Vincent, MD Low Dose Immunotherapy Pioneer Brian Vaszily Natural Health Researcher and Advocate for 20+ years Laura Frontiero, NP-BC Functional Medicine Practitioner Christopher Shade, PhD Personal Development & Human Behavior Expert Erin Lommen, ND Naturopathic Physician Ocean Robbins Co-founder, Food Revolution Network Joel Fuhrman, MD
+- paragraph: 7-time NY Times Bestselling Author, President of Nutritional Research Foundation
+- text: Aristo Vojdani, PhD, MSc, CLS Clinical Professor, Dep of Preventive Medicine, Loma Linda University Jeffrey A. Morrison, MD, CNS Board Certified Integrative Medicine Aumatma Simmons, ND Holistic Fertility Expert Tom Moorcroft, DO Board Certified in Family Medicine and Osteopathic Manipulative Treatment Kelly McCann, MD, IFMCP Board Certified Internal Medicine, Pediatrics & Integrative Medicine Afrouz Demeri, ND, IFMCP Former Director of Functional Medicine, University of California Irvine Lisa Saff Koche, MD, ABAARM Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Welman Shrader Jr, MD Board Certified in Environmental Medicine Secretary of Board of Governors for Environmental Medicine William A. Ingram, MD, FAAOA Board Certified Otolaryngology Head & Neck Surgery Diego Saporta, MD, FAAOA Past President of the Pan American Allergy Society Michael Bauerschmidt, MD Founder of Deeper Healing Medical Wellness Center Michelle Sands, ND Naturopathic Physician Co-founder of Glow Natural Wellness Angie Ates, BC-CAHP, MH Traditional Naturopath Founder Institute of Holistic Integrative Studies Jessica Tran , ND FAAEM Board Certified Environmental Medicine Robby Besner, BS, PSc.D Full Spectrum InfraRed Energy Medicine Specialist Paul Barattiero, ND, CHS Expert in Molecular Hydrogen and EMF Exposure Deb Matthew, MD America's Happy Hormones Doctor Wendie Trubow, MD, MBA Functional Medicine Gynecologist Nafysa Parpia, ND Chronic Illness Expert Sharon Stills, NMD Naturopathic Medical Doctor Michael Karlfeldt, ND, PhD Doctor of Integrative Medicine Robert Silverman, DC, MS Doctor of Chiropractic Alan McDaniel, MD Board Certified Otolaryngologist Anne Marie Fine, NMD, FAAEM Medical Director, Environmental Medicine Education International Brenden Cochran, ND Regenerative Medicine and Integrative Oncology Specialist Kathleen Prlich, Esq., RN Environmental Lawyer and Registered Nurse
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- img
+- text: Teodora Chrystie
+- paragraph: As a mother who cares about the health of my children as well as the state of the planet we leave behind for them, I’ve been deeply concerned about environmental toxins and how they affect our health in the short and long-term. I am so grateful I had the opportunity to hear the insights and experience of leading environmental doctors and health experts, delivered in an engaging and informative docuseries. I recommend this docuseries to anyone who cares about their health!
+- text: "Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning film filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- link "REGISTER FOR FREE NOW + GET YOUR FREE GIFT":
+  - /url: "#form-target"
+  - strong: REGISTER FOR FREE NOW
+  - text: + GET YOUR FREE GIFT
+- text: Register Today to Be Toxin Free Tomorrow
+- contentinfo:
+  - paragraph: © 2026 ZONIA
+  - list:
+    - listitem:
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+Failed step: user register in "tf_ev_meals" Opt In page
+Test failed on page: 'https://zonia-stg.com/mb2/tf-12-detox-meals'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/TF_Evergreen_nightly_--_@1.2__20261014-090600.png

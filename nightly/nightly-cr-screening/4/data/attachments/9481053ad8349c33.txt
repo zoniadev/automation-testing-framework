@@ -1,0 +1,46 @@
+Executing step: user is on the "cr_live" episode "12" page
+===> Navigated to http://staging.zonia.com/cr-episode-12-live-zm6v1xnak1
+===> Waiting for URL starting with "http://staging.zonia.com/cr-join-zonia-bonuses-ep12"
+===> URL successfully changed to "http://staging.zonia.com/cr-join-zonia-bonuses-ep12"
+Completed step: user is on the "cr_live" episode "12" page
+Executing step: user join Zonia
+===> Waiting for URL starting with "http://staging.zonia.com/cr-signup"
+===> URL successfully changed to "http://staging.zonia.com/cr-signup-bonuses"
+Completed step: user join Zonia
+Executing step: user sign up for "monthly" plan
+>>> Selected MONTHLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Howard-1770701591@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/cr-mini-masterclass-series"
+===> URL successfully changed to "http://staging.zonia.com/cr-mini-masterclass-series"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "monthly" plan
+Executing step: user makes following decision in docuseries "Booster Packages" Upsell page
+===> Skipping Booster Packages upsell because this flow is for bonus episode
+Completed step: user makes following decision in docuseries "Booster Packages" Upsell page
+Executing step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+>>> Selecting "buy" for masterclass...
+===> Waiting a bit to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+===> URL successfully changed to "http://staging.zonia.com/cr-restore-sleep-special-cancer-proof"
+>>> Successfully selected "buy" for masterclass
+Completed step: user makes following decision in docuseries "Masterclass Packages" Upsell page
+Executing step: user makes following decision in docuseries "Restore Sleep" Upsell page
+>>> Selecting "6" bottles and "upgrade" in upsell/downsell for Restore Sleep...
+===> Buying 6 bottle...
+===> Waiting to avoid payment method error...
+===> Waiting for URL starting with "http://staging.zonia.com/cr-rs-6-more-bottles"
+===> URL successfully changed to "http://staging.zonia.com/cr-rs-6-more-bottles?id=698ac354c884db6e5b2c7d07"
+===> Successfully bought 6 bottle/s
+Address popup should appear next page
+>>>Entering shipping details...
+>>>Successfully entered shipping details
+===> Waiting to avoid payment method error...
+===> Upgrading order...
+Address popup should appear next page
+===> Waiting for URL starting with "http://staging.zonia.com/cr-restore-life-special"
+===> URL successfully changed to "http://staging.zonia.com/cr-restore-life-special?id=698ac354c884db6e5b2c7d07"
+>>> Successfully selected "6" bottles and "upgrade" in upsell/downsell for Restore Sleep
+Completed step: user makes following decision in docuseries "Restore Sleep" Upsell page

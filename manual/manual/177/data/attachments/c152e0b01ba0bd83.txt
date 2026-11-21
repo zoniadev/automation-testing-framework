@@ -1,0 +1,19 @@
+Executing step: user starts "hh_ev" funnel from "ep11" bonus entry page
+Scenario will use "UnionPay" card "6221261111117766"
+===> Navigated to https://zonia-stg.com/hhmb5e/hh-join-zonia-bonuses-ep11
+>>> Starting funnel from bonus entry page (variant: ep11)...
+===> No cookie banner found or none matched known selectors.
+===> Waiting for URL starting with "https://zonia-stg.com/hhmb5e/hh-signup-bonuses"
+===> URL successfully changed to "https://zonia-stg.com/hhmb5e/hh-signup-bonuses"
+>>> Successfully started funnel from bonus entry page (variant: ep11)
+Completed step: user starts "hh_ev" funnel from "ep11" bonus entry page
+Executing step: user sign up for "quarterly" plan
+>>> Selected QUARTERLY plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Hooper-1791292192@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "https://zonia-stg.com/hh-mini-masterclass-series"
+===> URL successfully changed to "https://zonia-stg.com/hh-mini-masterclass-series"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "quarterly" plan

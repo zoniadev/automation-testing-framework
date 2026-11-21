@@ -1,0 +1,25 @@
+Executing step: user register in "km_ev_gut" Opt In page
+Scenario will use "JCB" card "3530111333300000"
+===> Navigated to http://staging.zonia.com/kmmb5e/km-inflammation
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-join-zonia"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-join-zonia"
+>>> Continuing with noramal flow!
+Completed step: user register in "km_ev_gut" Opt In page
+Executing step: user join Zonia
+>>> Joining Zonia...
+===> Waiting for URL starting with "http://staging.zonia.com/kmmb5e/km-signup"
+===> URL successfully changed to "http://staging.zonia.com/kmmb5e/km-signup"
+>>> Successfully joined Zonia
+Completed step: user join Zonia
+Executing step: user sign up for "lifetime" plan
+>>> Selected LIFETIME plan
+>>> Registering in Signup page...
+===> User email is: zoniat-v2Clark-1763847489@gmail.com
+Attempting CC number entry (Attempt 1/5)...
+✅ CC number entry successful, navigating away from payment form.
+===> Waiting for URL starting with "http://staging.zonia.com/km-booster-packages-lifetime"
+===> URL successfully changed to "http://staging.zonia.com/km-booster-packages-lifetime"
+>>> Successfully registered in Signup page
+Completed step: user sign up for "lifetime" plan

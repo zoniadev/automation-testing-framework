@@ -1,0 +1,6 @@
+Executing step: user starts "hh_live" funnel from "base" bonus entry page
+Scenario will use "Visa" card "4009348888881881"
+Failed step: user starts "hh_live" funnel from "base" bonus entry page
+Test failed on page: 'https://zonia-stg.com/hh-join-zonia-bonuses'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/HH_Live_funnel_via_bonus_entry_(full)_--_@1.1__20261118-140534.png

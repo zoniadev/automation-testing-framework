@@ -1,0 +1,833 @@
+Executing step: user register in "bb_ev_detox" Opt In page
+Scenario will use "American Express" card "378282246310005"
+===> Navigated to https://zonia-stg.com/bbmb5e/bb-detox
+===> No cookie banner found or none matched known selectors.
+>>> Registering in Main Opt in page...
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-join-zonia"
+>>> Navigation via bb_ev_join_zonia_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/bbmb5e/bb\\-join\\-zonia.*')'
+Actual value: https://zonia-stg.com/bbmb5e/bb-detox 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/bbmb5e/bb-detox"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to BEYOND THE BRAIN" [level=3]
+- heading "Revitalize Your Brain and Body with Effective Detox Strategies to Overcome Brain Fog, Inflammation, Neurodegenerative Conditions and More" [level=2]
+- heading "Discover insights and detoxification tips from 40 experts who treat so-called “incurable” diseases" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: November 15th
+  - text: when you get your Free Gift
+- paragraph:
+  - strong: (Valued at $27)
+- list:
+  - listitem: — Learn about the three herbs that support your liver’s natural detoxification and healing process (one of them may be in your pantry already!)
+  - listitem: — Find what toxic foods you should cut down (and out) from your diet
+  - listitem: — Discover the condition that is robbing you of your health and the methods to combat it
+- heading "Plus get your free ticket to BEYOND THE BRAIN" [level=5]:
+  - strong: Plus get your free ticket to BEYOND THE BRAIN
+- textbox "First Name*":
+  - /placeholder: " "
+  - text: AutomationCharles
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2price-1794708028@gmail.com
+- text: E-mail*
+- checkbox "Highly Recommended - Please sign me up for VIP alerts and text messages! E-mail E-mail"
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- textbox "Phone"
+- button "GET YOUR FREE GIFT+Register for BEYOND THE BRAIN now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: ". By checking the \"Please sign me up for VIP alerts and text messages\" box you agree to receive important updates, reminders, and promotional messages about events and products from Zonia. Message frequency varies. You can stop receiving messages at any time by texting STOP to 86753. Message and data rates may apply. By opting in for text messages, you authorize Zonia to deliver marketing messages using an automatic telephone dialing system. SMS opt-in is not a requirement for purchasing any property, goods, or services. By leaving the \"Please sign me up for VIP alerts and text messages\" box unchecked you will not be opted in for SMS messages at this time. See our Privacy Policy and Terms for more info. World Premiere Starts in 0 Days 22 hours 59 minutes 12 seconds Our 40 World-Renowned Medical Doctors and Brain Health Experts Have Been Featured on:"
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: If you’re like most people over 40, you’ve probably had your own share of mystery symptoms, aches, and pains.
+- paragraph: Maybe you're suddenly not handling certain foods well anymore.
+- paragraph: Or you’re experiencing ongoing mystery symptoms like joint pain, stomach problems, feeling faint.
+- paragraph: You might be struggling more often with tiredness and headaches.
+- paragraph: You’re frequently forgetting words or names of people and places you knew before.
+- paragraph: Or you feel exhausted and foggy in the morning even after a good night’s sleep.
+- paragraph: And more often than you’d like to admit, you’re NOT feeling as happy or as healthy as you’d like to.
+- paragraph: After all, your blood work looks fine, and things are working out for you in life…
+- paragraph: But why are you feeling so low?
+- paragraph: Your doctor gives you a brief checkup and sends you home with a bag of drugs to mask the symptoms...
+- paragraph: Not bothering to dig deeper.
+- paragraph: With a failing medical system and symptoms that keep getting worse, what will your future look like in 5, 10, or 20 years?
+- paragraph: Will you spend the next decades of your life enjoying time with your family, traveling, trying new hobbies, sharing stories with your grandchildren, and smiling while looking fondly at old photographs?
+- paragraph: Or become increasingly sick, crippled with inflammation and stress, losing your health and afraid for what the future holds?
+- paragraph: Unfortunately, the statistics are terrifying.
+- paragraph: In our modern world, we are confronted with more toxins than ever before.
+- paragraph: And even though our bodies evolved with the amazing ability to detoxify itself…
+- paragraph: Because of the overwhelming number of chemicals we ingest and absorb daily from our food, air, and water…
+- paragraph: Sadly, our natural detoxification abilities can no longer keep up.
+- paragraph: AND…
+- paragraph: Not only are we suffering but our children (and the next generations) are now being born with a toxic overload that is affecting their development.
+- text: 700,000toxic chemicals are consumed by the average person each day 52,000 Microplastics are ingested every year, per capita globally Heavy metaldeposits are found in Alzheimer's patients
+- paragraph: And it’s these toxins that are creating an unprecedented number of diseases and symptoms.
+- paragraph: By the year 2050…
+- paragraph: It is estimated that 50% of Americans will show symptoms of neurodegenerative disease.
+- paragraph: This means that...
+- paragraph: Taking control over our brain health has NEVER been more urgent.
+- paragraph: You cannot wait until you get your first symptoms. You need to act now.
+- paragraph: Because...
+- paragraph: A healthier present and brighter future is entirely in YOUR hands.
+- paragraph: You can start feeling better right away AND ensure your health in the future.
+- paragraph:
+  - strong: "Because as you're about to see, the key against:"
+- text: Brain Fog Depression Fatigue Sleep Issues Body Aches Memory Disturbance
+- paragraph:
+  - strong: has been hidden right inside your body this whole time.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Your Hidden Superhighway to Regaining Your Brain and Gut Health
+- paragraph: Scientists have discovered that your gut “sends messages” to your brain through a network of over 160,000 channels called the vagus nerve.
+- paragraph: This complex nerve and its network of channels - called 'fibers' in medical literature ....
+- paragraph: Travel from the gut to your brain...
+- paragraph: Go to your organs...
+- paragraph: And send “health” signals throughout your body.
+- paragraph: Even more, the vagus nerve influences neurogenesis, a process in which we grow new, healthy neurons...
+- paragraph: But because we are being overloaded with toxins, this superhighway is at risk.
+- paragraph: A compromised gut allows more toxins into your system…
+- paragraph: Interrupting the health signals and impeding your immune system.
+- paragraph: Those important “messages” can no longer travel from the gut to your brain.
+- paragraph: And being assaulted with an increasing number of toxins on a daily basis results in systemic inflammation, anxiety disorders, clinical depression, and a wide range of brain and chronic diseases.
+- paragraph: What this means is that...
+- text: When your gut is sick, your brain is sick, too.
+- paragraph: And did you know that 2 out of 3 people have their superhighway “broken,” which makes them vulnerable to brain and gut diseases?
+- paragraph: Unfortunately, every day we're disrupting this delicate relationship between the brain and the gut.
+- paragraph: Every single day, we're eating, drinking, and breathing chemicals our body can't process or eliminate.
+- text: And in fact, according to a study published by the University of Newcastle, the average person eats nearly 5,000 microplastics every week.
+- paragraph: This is the equivalent to eating one plastic bag every single week!
+- paragraph: What's worse...
+- paragraph: Multiple studies suggest heavy metals such as lead and mercury are abundant in our drinking water.
+- paragraph: Even our “healthy” foods like fruits, vegetables and leafy greens are poisoned with chemicals with names we can’t even pronounce.
+- paragraph: These are causing diseases in adults and brain defects in newborns.
+- paragraph: Pair that with the constant overstimulation from the news and our iPhones.... Plus persistent toxic relationships at home or at work....
+- paragraph: And you will get...
+- text: A planetary level disease making everyone sick!
+- paragraph: No wonder at some point the human body breaks down.
+- paragraph: The first symptoms people notice are feeling sluggish, fatigued, and emotionally drained, unable to enjoy life to the fullest.
+- paragraph: If our body had a battery, we could feel we’re drained to 50% or even less!
+- paragraph: Then there’s the bloating, the heartburn, the food sensitivities, and that post-meal crash that makes you want to curl under a blanket instead of giving you energy.
+- paragraph: It’s a sign your digestive system is under attack and in urgent need of detox and healing.
+- paragraph: Then there’s also the brain fog, memory slips, depression and anxiety…
+- paragraph: Like you can FEEL the wear and tear on your gut, body, and brain in every waking moment just getting worse.
+- paragraph: That’s your body and immune system sending you signals that you can’t ignore.
+- paragraph: Left untreated? These symptoms can turn into debilitating neurodegenerative, heart, autoimmune, and mental health diseases.
+- paragraph: Sometimes as early as in our late 30s or 40s.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Shivan Sarna Gut Health Advocate & Educator
+- paragraph: ‘Beyond the Brain’ is an empowering docuseries that unravels the root causes of brain and gut disorders. It showcases ground-breaking, yet simple protocols that allow you to take charge of your health, rebalance your gut microbiome and restore the synergy of the body’s systems. Every episode uncovers a new angle about the resilience of the human body and mind. Each topic feels like a new discovery and inspiration. The series lays out a clear, actionable path for a bright future - for each of us and our planet.
+- text: "But what scientists recently discovered could revolutionize how we take back control of our health with detoxification:"
+- paragraph: It turns out that repairing this “superhighway to health” can dramatically reduce inflammation, a key factor of Alzheimer's, dementia, heart disease, obesity and diabetes.
+- paragraph: Your vagus nerve, the superhighway to health, also helps regulate emotions, treats depression, and lowers chronic stress and anxiety.
+- paragraph: New studies prove it can even help treat brain injuries and brain diseases like Parkinson's disease, autism and traumatic brain injuries.
+- paragraph: In other words...
+- text: The power to heal has been inside us this whole time
+- paragraph: The best part? Healing your “superhighway” doesn't require expensive drugs and fancy therapies.
+- paragraph: Most of the protocols are free for everybody to discover and try out for themselves.
+- paragraph: And when you dig deeper into recent science, like our experts did... You will find even more tools for healing.
+- paragraph: Tools that are not currently known by 99% of the population who get sick every day.
+- paragraph: "But you're on this page, ready to embark on the journey of a lifetime:"
+- paragraph: "Imagine what discovering these tools can mean for your present and future:"
+- paragraph: Decades more of great emotional and physical health.
+- paragraph: Improving the symptoms or diseases you might be struggling with right now.
+- paragraph: Avoiding diseases that run in your family.
+- paragraph: Or simply spending your days happy, relaxed and energetic, enjoying every moment without the toxic burden causing aches, pains, depression, anxiety… or the threat of brain related diseases like Alzheimer’s and Parkinson’s.
+- paragraph: Completely trusting your body and brain on this wonderful journey of life.
+- paragraph: Decades more for making new memories, living life with purpose, or developing new hobbies.
+- paragraph: Spending your time and money traveling instead of on your doctor's bills.
+- paragraph: Most people think only “lucky” people or people with “good genes” live their lives in great health.
+- paragraph: But that's not true.
+- paragraph: We have power, and we can take back control.
+- paragraph: And as you're about to see for yourself...
+- text: There is information out there that can change your life
+- paragraph: You just need to be willing to be open to receive it and apply it in your daily life.
+- paragraph: In our newest documentary series, “Beyond the Brain”, we're revealing these tools to you.
+- paragraph: The nine episodes of the docuseries are a synergy between 40 of the most sought-after medical doctors and health experts in the world, sharing their best secrets at no cost to you.
+- paragraph: Unlike most traditional doctors, our functional medicine doctors and health experts went beyond traditional routes of treatment and helped cure incredible cases of gut and brain diseases.
+- paragraph: They're unconventional and innovative. They are progressive and cutting-edge.
+- paragraph: Most importantly, they are successful in what they do.
+- paragraph: You'll find out how their patients recovered from severe Alzheimer's and Parkinson's, or reversed dementia symptoms and chronic fatigue, reclaimed their energy, and took back control over their brain, their digestive system, and their overall health.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Why “Beyond the Brain” is Different—And the Most Important Docuseries You Will Ever Watch
+- paragraph: The gut and the brain are intimately connected.
+- paragraph: Our doctors and health experts will share little-known solutions to healing this fundamental relationship.
+- paragraph: You will discover effective steps and simple detoxification tips and methods that you can start immediately to fight against the toxins creating gut diseases and brain diseases – from digestive issues to depression, anxiety, memory loss, chronic fatigue, brain fog, Parkinson’s disease, Alzheimer's, dementia, and more…
+- paragraph: Without breaking the bank, and no matter where you are in your health journey.
+- paragraph: "The stories about overcoming the so-called “incurable” diseases will be proof of what's possible when you unlock the healing powers within you:"
+- list:
+  - listitem: Repairing your gut, your brain and your “superhighway” so you can enjoy rock-solid digestion and a clear mind at any age and decade of your life
+  - listitem: Getting rid of toxins and preventing future exposure to life-threatening chemicals from your food, home, and environment that kill your brain and body cells
+  - listitem: Improving or even curing common mental and physical health symptoms that have been bothering you for a while by lightening your body’s toxic burden and overload... Allowing you to focus on what’s truly important
+  - listitem: Giving yourself and your family the best possible future to live a long, happy, healthy life, without debilitating disease
+  - listitem: Becoming the most vibrant and positive person in your group and a role model for your friends and family
+  - listitem: Achieving a fulfilling, empowering and purposeful life now and for the next 10, 20, 30, 40 or more decades ahead, where your health is a source of strength
+- paragraph: And much more.
+- paragraph: Are you ready?
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Nathan Crane Award-Winning Author and Cancer Coach
+- paragraph: ‘Beyond the Brain’ feels like a journey around your body, and you’re always guided by real brain health experts. Not only that, the series also reveals the close link between our brain and other organs, which might surprise a lot of people. You also have to give credit to how well the series is structured - starting with an overview of the most common conditions, and then equipping the viewer with testing tools, protocols, and specific action steps. With such knowledge, reversing dementia and other diseases truly becomes possible.
+- text: "When you watch this 9-episode docuseries, you will discover:"
+- list:
+  - listitem: Fatigue, joint pain, muscle pain, headaches, and food sensitivities? These symptoms might mean “nothing” for your doctor but should concern YOU. What to do ASAP if you notice symptoms
+  - listitem: "“Bodies don’t break for no reason”: Why 99% of people with a chronic disease have at least 3 toxins in their body"
+  - listitem: "How to check your toxic burden with a few simple tests: Best urine and blood tests to uncover the root causes of your disease"
+  - listitem: Where to get the specialized test that can reveal if harmful toxins are clinging to your DNA
+  - listitem: "Watch out: These 2 common heavy metals could be hijacking your brain and your emotions every single day"
+  - listitem: How to “force” your brain to kickstart the production of self-healing compounds in less than 24 hours
+- list:
+  - listitem: "Brick walls for the brain: The most important brain supplements to incorporate in your diet now"
+- list:
+  - listitem: Why it’s called “the second force of the universe” - and the FDA approved it to treat resistant depression. It stimulates tissue energy, decreases inflammation and increases circulation in the brain
+  - listitem: "A doctor's path to self-healing: discover our expert’s journey on wiping off depression and reclaiming joy using a serotonin-boosting natural compound"
+  - listitem: The gold-standard therapy technique to stop negative thinking - and an incredibly powerful tool that can “erase” trauma from your brain
+  - listitem: "The #1 disease-causing toxin in the US: make sure you are not among its victims"
+  - listitem: Why your gut can release toxins in the brain, and the secret link between your gut and Alzheimer’s and Parkinson’s disease
+  - listitem: Three major ways in which toxins change your nervous system and how to reverse the damage
+  - listitem: A revolutionary device that significantly improves sleep quality, memory and cognitive function
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to Heal Your Brain and Beyond What You Will Find in Each Episode of This Unique 9-Part Docuseries Beyond the Brain episode 1 The Silent Assault on Our Brain: Are We Doomed to a Mass Brain Meltdown?"
+- list:
+  - listitem: "The link between everyday foods and brain disease, multiple sclerosis, autism and Parkinson's: What corporations don't want you to know"
+  - listitem: "Doctors warn: There's an epidemic of brain dysfunction in the world starting as early as in our 40s"
+  - listitem: Suffering from poor memory, hazy thoughts, depression and anxiety? See why these might be symptoms of toxin overload
+  - listitem: Dementia is incurable, right? Wrong! See how functional medicine doctors are reversing dementia in their practice, and why traditional doctors don't tell you this
+  - listitem: Is it normal to have memory problems as you age? Not at all. In fact, there's something else happening in your body
+  - listitem: "Warning: See why 2 servings of store-bought pastries or fast food per week can DOUBLE your chances for anxiety and depression - and why kids who eat candy have a higher risk of getting arrested in adulthood"
+  - listitem: Feeling “meh”? How food might block your ability to feel happy and full of life ... Plus the dangerous “hamster wheel” most Americans are into
+  - listitem: Why your gut can release toxins in the brain, and the secret link between your gut and Alzheimer's and Parkinson's disease
+  - listitem: Can anxiety, depression, OCD, schizophrenia, and bipolar disorder actually be another disease caused by your food?
+  - listitem: "The root cause of rheumatoid arthritis and brain dysfunction: Fix this before you do anything else"
+- paragraph: “We have seen an incredible and alarming increase in the rise of every single chronic and neurodegenerative disease across the board over the last 50 to 60 years.”
+- text: "Dr. Elena Villanueva DC, MHHCP, Doctor of Holistic Medicine episode 2 Household Under Siege: The Hidden Toxic Sources of Your Pain, Fatigue & Brain Fog"
+- list:
+  - listitem: Is your home toxic? See where mold and other toxins may be hiding in plain sight and what to do if your home is contaminated
+  - listitem: Discover how to properly test for environmental toxins and how to safely eliminate them, one by one
+  - listitem: Do you have an “environmentally acquired illness”? How chronic inflammation can cause disease in the body
+  - listitem: Is mold exposure a HUGE cause of suicide and depression in the US? See proof from our experts
+  - listitem: Can bottled water damage the IQ of developing brains? Experts weigh in and give you healthier water options
+  - listitem: "Watch out: These 2 common heavy metals could be hijacking your brain and your emotions every single day"
+  - listitem: Discover the connection between leaky gut and autoimmune disease PLUS the most effective detox solutions to recover from inflammation
+  - listitem: The most critical antioxidant you can use to detox the liver and fight against free radicals
+  - listitem: "Big Food's secrets exposed: shocking truths about the pesticides, herbicides, and antibiotics in everyday food staples"
+  - listitem: The ancestral secrets to perfect gut health found in the highlands of Papua New Guinea
+  - listitem: This “flamethrower” ingredient damages your brain and your cells. It's found in all packaged, processed foods. Plus, a guide to detox
+- paragraph: “It's everywhere, it's in people's households. We've all been exposed to it, we constantly get re-exposed to it.”
+- text: "Kiran Krishnan Research Microbiologist, Human Microbiome Expert episode 3 The Wildfire in Your Brain: #1 Cause of Brain & Mental Health Deterioration (and How to Reclaim Your Health)"
+- list:
+  - listitem: Could memory loss, ADHD, developmental issues and brain diseases have the same root cause? Our experts connect the dots traditional doctors are missing
+  - listitem: Three major ways in which toxins change your nervous system and how to reverse the damage
+  - listitem: Could a traumatic childhood predispose you to the early onset of dementia?
+  - listitem: Why fatigue, brain fog, and weight gain are intimately connected, and how to repair the root cause
+  - listitem: "The #1 root cause of all brain diseases finally uncovered: Alzheimer's, depression, anxiety, or bipolar disorders. Plus: the roadmap to protect yourself"
+  - listitem: "Toxic toothpaste: See how certain brands can affect our brain, by disrupting our endocrine system"
+  - listitem: One missing mineral causes hypothyroidism, and why traditional doctors don't check for this
+  - listitem: "One hidden toxin that's contributing to major diseases found in most US households. Warning: It can cause muscle and nerve damage"
+  - listitem: "Why people who have issues with their sinuses are more at risk for developing allergies and dementia and the #1 advice for healthy sinuses"
+  - listitem: Which heavy metal causes Parkinson's symptoms and leads to misdiagnosis
+  - listitem: Is bread healthy? See how to know if you're gluten sensitive, and what to know about gluten even if you're perfectly fine after eating bread and pastries
+- paragraph: "\"Oftentimes, you get this miscellaneous variety of symptoms that you don't really understand that are causing neurological problems.\""
+- text: "Dr. Darin Ingels ND, FAAEM Fellow, American Academy of Environmental Medicine episode 4 Sick Gut, Sick Brain: Overcoming the Origin of All Disease"
+- list:
+  - listitem: "The many faces of a troubled gut: Discover how your gut impacts chronic disease, fertility, thyroid function and hormones"
+  - listitem: "Key to reversing depression: Why 70% - 90% of your “happy hormone” is made in your gut"
+  - listitem: Are OCD, bipolar disorder, schizophrenia created in the gut? And can bloating be a precursor to an autoimmune condition?
+  - listitem: The secret to why some family members are always healthy while everybody else keeps getting sick
+  - listitem: The devastating truth about water quality in the US, and why 75% of tap water can give you a leaky gut in 15 minutes
+  - listitem: "Fatty liver: Why 25% of Americans have it and the root cause doctors don't talk about"
+  - listitem: Why you should stop using mouthwash immediately - plus the top 5 tips to ensure perfectly clean and healthy mouth and gut
+  - listitem: Harvard declares 'all diseases begin in the gut', but traditional medicine still needs to catch up
+  - listitem: Get tested in 5 minutes to protect yourself against this gut bacteria which destroys your microbiome, promotes cancer and inflammation. One in two people have it!
+  - listitem: Do you have food sensitivities? Fix this one root cause and watch those food sensitivities go away
+  - listitem: Why 80% of women after 40 have toxic, sluggish bile, and the link between a sick bile and osteoporosis
+  - listitem: "The #1 gut-healing nutrient you can find everywhere at a decent price (and which specific form you need)"
+- paragraph: “All disease begins in the gut. When the gut is inflamed, nothing functions the way it's supposed to.”
+- text: "Dr. Tom O'Bryan DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine episode 5 Toxin Detectives: The Tests That Will Uncover the Root Cause and Save Your Brain & Life"
+- list:
+  - listitem: "Unlock the #1 rule to detox your body, according to a toxicology expert"
+  - listitem: Top 3 toxin groups that lead to autoimmunity and how to get properly tested
+  - listitem: Discover the ultimate blood tests that reveal the hidden toxins in your body — and a popular test method you must avoid
+  - listitem: "Tired and gaining weight? It's not your fault: How to target the toxic root cause of weight gain and chronic fatigue"
+  - listitem: "If I have normal blood tests, am I healthy? Not necessarily: Why trusting the “normal range” values could be sabotaging your health, according to doctors."
+  - listitem: "The generational curse of a 1930s chemical: Unveil how this cancer-causing agent from the past is haunting the present generations and how you can break free from its chain"
+  - listitem: "The hormone disruptor in our water: Discover a startling substance in your water supply you should avoid"
+  - listitem: "Where to get the specialized test that can reveal if harmful toxins are clinging to your DNA; PLUS: Three different tests to see if you have heavy metals"
+  - listitem: "“Bodies don't break for no reason”: Why 99% of people with a chronic disease have at least 3 toxins in their body"
+  - listitem: "The unexpected link between Parkinson's and disinfectants: A doctor reverses his Parkinson's diagnosis by getting rid of two dangerous chemicals"
+  - listitem: One neurotransmitter that can “fry out” your brain, and how it's known to increase to dangerous levels after exposure to toxins
+  - listitem: Provocation-Neutralization technique to diagnose and treat individuals with sensitivities and intolerances
+- paragraph: “So when you're told that your labs are normal, it definitely does not mean you're healthy. It means you're like nine out of ten people.”
+- text: "Dr. M. Yvonne Karney MD, ABAARM, FACOG, Board-Certified Regenerative Medicine & Gynecology episode 6 Emotional Detox: How To Let Go of Stress and Negative Emotions and Find Your Joy and Freedom"
+- list:
+  - listitem: The three toxic emotions that ruin our body—and what can we learn from a surge in heart attacks which started in the 60's
+  - listitem: Understanding the deep ties between stress, aggression, fear, and bodily inflammation and how to unlock the secrets to untangle this destructive cycle
+  - listitem: "Ancient Chinese Medicine Secrets: How every emotion affects different organs, and how to use these insights to protect your mind and body"
+  - listitem: Why emotional trauma resembles a brain injury in brain scans
+  - listitem: "Undiagnosed root causes: Why most doctors overlook trauma, but how understanding your “big” and “small” traumas can be a game-changer in your personal health journey"
+  - listitem: "Overextended, overburdened, overscheduled: How to reclaim your health in a culture that reinforces constant productivity and achievement at all costs"
+  - listitem: "Doctors share the #1 sign of emerging emotional problems: How to stay one step ahead of anxiety and depression"
+  - listitem: Can stress and negative emotions be the most dangerous toxins of all? Learn how to cope with difficult feelings and stressors in a healthy way
+  - listitem: The easiest, simplest way to start exercising more... Plus the Japanese principle that can make any habit stick for life
+  - listitem: What happens when you lose the ultimate ‘weapon’ of your mind? And how to reclaim it – revealed by a Buddhist teacher
+  - listitem: "How to go from reactive to proactive: Steps to reclaim your freedom from anything that's happening around you and a simple breathing exercise to get you off fight or flight response"
+  - listitem: The innovative 5-step blueprint that is your golden key to improved health and happiness
+- paragraph: “The most important factor in our health is our consciousness”
+- text: "Dr. Thomas Alexander MD, Internal Medicine, Researcher on The Role of Consciousness in Health episode 7 Complex Brain Diseases: Blueprints for Reversing Brain Fog, Chronic Fatigue and Dementia"
+- list:
+  - listitem: Throw the painkillers away and ease up migraines and headaches with this amazing natural therapy
+  - listitem: Is it allergy, or is it mast cell activation? These symptoms may lead you to the root cause of your allergies
+  - listitem: Is it a mental health issue or a toxicity issue? Experts weigh in on disturbing infections linked to depression and anxiety
+  - listitem: "“A huge gift for your brain”: How to help prevent memory loss, brain disorder and mood disorders if you're a woman over 40"
+  - listitem: Are you a woman over 35? Check a specific hormone that might cause anxiety, insomnia and depression
+  - listitem: "Heal chronic fatigue once and for all: From four root causes to complete recovery"
+  - listitem: "A case for reversing dementia: what we've learned in the past 40 years about how the brain can heal itself"
+  - listitem: One diet change that could heal your brain from brain fog, memory loss and cognitive decline
+  - listitem: Memory loss or sleep apnea? Here's how you might be unknowingly damaging your brain during sleep
+  - listitem: "Discover Linda's emotional story: From severe dementia to getting her life back in a matter of weeks"
+  - listitem: The two steps that foster miraculous healing that traditional medicine thinks are impossible
+  - listitem: Learn about STAINES framework for detecting the root cause and 3D-3M-3S protocol for healing and reversing brain decline
+  - listitem: Why 1 in 2 Americans will have symptoms of brain disease by 2050 and what we can do now to prevent our brains from declining
+- paragraph: “Our bodies are designed to heal. It’s just a matter of getting the junk out of the way and the right support in. And it has been miraculous.”
+- text: "Dr. Heather Sandison Naturopathic Doctor episode 8 Superfoods and Superhabits: How to Kickstart Brain & Body Healing in Less Than 24 Hours"
+- list:
+  - listitem: The most important secret to avoiding pesticides, antibiotics and other chemicals in your food
+  - listitem: How to “force” your brain to kickstart the production of self-healing compounds in less than 24 hours
+  - listitem: "How to give yourself new brain cells on command: This simple habit prevents disease and creates more brain cells"
+  - listitem: "The master antioxidant: It repairs the whole body and expels toxins from your system"
+  - listitem: "The real dangers behind our smartphone use: Could bluelight hinder your ability to heal?"
+  - listitem: Is your home an electrical “prison”? Learn how one simple effective change in your household can enable deep sleep
+  - listitem: Do you suffer from “toxic hunger”? Here's why most people eat when they're not hungry, and simple steps to ditch the habit
+  - listitem: One crucial detox food you need to eat daily with your lunch and dinner, plus the tasty veggies that heal the gut
+  - listitem: Why America uses more chemicals than every other country in the world, including dangerous ones that are banned in the EU and Canada
+  - listitem: The best prebiotic dessert on the planet takes just a few minutes to prepare, and you will love it
+  - listitem: "Brick walls for the brain: The most important brain supplements to incorporate in your diet now"
+  - listitem: One supplement that can reduce brain injury with up to 75%, and the “master antioxidant” that can decrease brain damage up to 70%
+  - listitem: "The miracle compound for healthy muscles and energy production: How one doctor healed his muscle disease with one daily tablet of it"
+- paragraph: “If we switch to organic food and avoid pesticides, the pesticides are gone from our body within a couple of days, a week at the most.”
+- text: "Dr. Kelly McCann MD, MPH&TM, IFMCP, Board Certified Internal Medicine, Pediatrics & Integrative Medicine episode 9 Healed Against All Odds: Cutting-Edge Therapies and Miraculous Cases"
+- list:
+  - listitem: Discover the gold-standard therapy technique to stop negative thinking - and an incredibly powerful tool that can “erase” trauma from your brain
+  - listitem: "Multiple layers of healing: Game-changing peptide therapies are taking the world by storm and supporting muscle, gut and brain health"
+  - listitem: How light therapy is science-backed to reduce mortality, increase wellbeing and relax the body while getting rid of toxins
+  - listitem: Expert-vetted therapies that bring balance and healing to the brain and body— plus the three “fertilizers” of your brain cells
+  - listitem: Discover the quickest, simplest ways to detoxify your body using inexpensive minerals and a crucial ingredient that guarantees the proper expulsion of toxins.
+  - listitem: The “Nobel-prize” winning natural drink that helps heal and soothe your gut lining, feeding your microbiota
+  - listitem: It's called “the second force of the universe” - and the FDA approved it to treat resistant depression. It stimulates tissue energy, decrease inflammation and increase circulation in the brain
+  - listitem: Discover a 100-years old method that originally treated scuba-divers and is now a popular solution to numerous brain ailments
+  - listitem: "Plant medicine: Two amazing stories of patients using Ayahuasca and Psilocybin mushrooms to overcome depression and obesity"
+  - listitem: Hear the emotional story of a patient who healed her debilitating Parkinson's disease that started in her 40s, and the progress she's made using natural therapies - now completely healed
+  - listitem: Discover more heartwarming Tales of Recovery from 'Incurable' Diseases using cutting edge interventions
+- paragraph: “Neurofeedback is incredibly powerful because it helps you see in real time your brain function.”
+- text: Dr. Jill Carnahan MD, ABIHM, ABoIM, IFMCP, Medical Director, Flatiron Functional Medicine
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Sarah Otto Nutritionist & Health Docuseries Filmmaker
+- paragraph: Stefan has produced astonishing health docuseries that have changed the lives of millions of people for the better, and ‘BEYOND THE BRAIN’ is no exception. His unwavering passion and relentless drive to create insightful, yet easy-to-follow educational content that empowers others are evident in all of his work – but especially here. By featuring trusted professionals and published experts, Stefan has created a space where people’s questions are finally addressed, and brain health is no longer a mystery
+- text: "67% of Americans Are at Great Risk Because of Their Broken \"Superhighway\" — Here's How You Can Beat the Odds:"
+- paragraph: According to a survey performed by a leading research company, 2 in 3 Americans suffer from gut issues like gas, bloating and abdominal pain.
+- paragraph: "For almost 70 million Americans, things are even worse: they're suffering from gastroesophageal reflux disease (GERD) or irritable bowel syndrome (IBS)."
+- paragraph: What this means is that their brain-gut connection is compromised.
+- paragraph: What's worse...
+- paragraph: They’re completely unaware that their gut issues and toxin overload dramatically increase their chances of Alzheimer’s and dementia, autoimmunity, inflammation, and even depression and anxiety.
+- paragraph: But because you're on this page, you are already way ahead of the curve.
+- paragraph: If you're the type of person who takes action, now is the time to start repairing, rejuvenating and reclaiming your health.
+- paragraph: Don't wait until your symptoms transform into a life-long disease.
+- paragraph: And don't wait for your diseases to become crippling.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- paragraph: After implementing the advice from our experts, you'll not only learn how to heal your brain-gut connection...
+- paragraph: How to protect yourself from the silent toxic war against your brain and your body...
+- paragraph: How to repair the superhighway to health...
+- paragraph: You'll also learn how to take back control over your mind and body.
+- paragraph: You will be part of a select group of people who have access to knowledge that makes them powerful beyond belief.
+- text: No More depending on prescriptions just to get through your day. No More worry about the future. No More being just a number of a dire national statistic. No More toxin overload interfering with signals along the gut-brain superhighway allowing your body to naturally do what it was designed to do. No More struggling with gut issues, brain issues, or mental health issues that you can ameliorate or even reverse altogether through an effective detoxification program..
+- paragraph: Thanks to the work of our experts, this can become your reality sooner and easier than you thought possible.
+- paragraph: Imagine how great it will be to have answers for yourself and your loved ones.
+- paragraph: We all have someone in our families who is struggling...
+- paragraph: Our parents, spouses, children and friends in need of relief and answers.
+- paragraph: With each episode, we're striving to give you the most up-to-date and effective knowledge you need to start healing without second-guessing.
+- paragraph: "It all starts with a simple step:"
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Meet Our 40 World-Renowned Medical Doctors and Brain Health Experts Featured in Beyond the Brain Joel Fuhrman, MD 7-time NY Times Bestselling Author, President of Nutritional Research Foundation Jill Carnahan, MD, ABIHM, ABoIM, IFMCP Medical Director, Flatiron Functional Medicine Jeffrey Bland, PhD, FACN, CNS Founder of Personalized Lifestyle Medicine Institute (PLMI) Tom O'Bryan, DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine Laura Frontiero, NP-BC Functional Medicine Practitioner Jaquel Patterson, ND, MBA Licensed Naturopathic Physician, Past President of American Association of Naturopathic Physicians Austin Perlmutter, MD, ABIM Board-Certified Internal Medicine, New York Times Bestselling Author Janette Hope, MD, FAAEM, DABEM, DABFM Diplomat of the American Board of Environmental Medicine, Diplomat of the American Board of Integrative Medicine Barry Smeltzer, MPAS, PA-C, FAAEM Adj. Professor, Univ. of Texas Health Sciences, Fellow of the American Academy of Environmental Medicine Aristo Vojdani, PhD, MSc, CLS Clinical Professor, Dep of Preventive Medicine, Loma Linda University Robert Silverman, DC, MS, DCBCN Doctor of Chiropractic Heather Sandison, ND Naturopathic Doctor Cheng Ruan, MD Board-Certified Internal Medicine Physician Trina Felber, RN, BSN, MSN, CRNA Natural Oral & Skincare Wellness Expert Kiran Krishnan Research Microbiologist, Human Microbiome Expert M. Yvonne Karney, MD, ABAARM, FACOG Board-Certified Regenerative Medicine & Gynecology Robin A. Bernhoft, MD, FACS, DABEM FAAEM Environmental Medicine Expert Sinclair Kennally, CNHP, CNC Chronic Digestive Disorder Specialist Thomas Alexander, MD Internal Medicine, Researcher on The Role of Consciousness in Health Amelia Scott Barrett, MD Neurologist and Founder of Migraine Relief Code Paul Barattiero, CHS, CNHP Expert in Molecular Hydrogen and EMF Exposure Irene Cop, MD, DC Elite Performance Trainer, Founder of the Success S.H.I.F.T. Institute Frederick 'Tim' Guilford, MD Integrative Medicine Clinician and Researcher, Liposomal Glutathione Expert Lisa Lavine Nagy, MD, FAAEM Medical Director of the Environmental Health Center of Martha's Vineyard Kelly McCann, MD, MPH&TM, IFMCP Board Certified Internal Medicine, Pediatrics & Integrative Medicine Kalpana Patel, MD Gastroenterologist Elena Villanueva, DC, MHHCP Doctor of Holistic Medicine William Pawluk, MD, MSc PEMF Therapy Expert Keesha Ewers, ARNP, PhD Emotional Trauma Specialist Wendie Trubow, MD, MBA Functional Medicine Gynecologist Andrew W. Campbell, MD Clinical Immunology and Toxicology LeTrinh Hoang, DO Osteopathic Pediatrician Sharon Stills, NMD Naturopathic Medical Doctor Christopher Shade, PhD Environmental Scientist Wendy Myers, ND Naturopathic Doctor and Expert in Detoxification Rajka Milanovic Galbraith, MD, IFMCP Board-Certified Functional & Integrative Medicine Doctor Darin Ingels, ND, FAAEM Fellow, American Academy of Environmental Medicine Lisa Saff Koche, MD, ABAARM Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Lyn Patrick ND Naturopathic Physician,Environmental Medicine & Metal Toxicology Expert Master Acharavadee Wongsakon Meditation Master, President of the Knowing Buddha Foundation
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to Heal Your Brain and Beyond Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Secure Your Access Now, Before This 9-part Groundbreaking Documentary Is Taken Down
+- paragraph: “Beyond the Brain” is not just about you. It's also about your family...
+- paragraph: About your parents and spouse. About your best friends. About sharing new frontiers of medicine that could save the life of someone you cherish.
+- paragraph: You can share what you learn with other people in your life and help them take back control, too.
+- paragraph: And by learning about how to get rid of the toxins that are hindering your current and future well-being and beating the odds, you’ll set an example to the people in your circle.
+- paragraph: With each episode, you'll feel more inspired to make small but vital changes that will transform your health and the health of those closest to you.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+===> Waiting for URL starting with "https://zonia-stg.com/bbmb5e/bb-replay-weekend"
+>>> Navigation via bb_ev_rw_main_url failed: Page URL expected to be 're.compile('^https://zonia\\-stg\\.com/bbmb5e/bb\\-replay\\-weekend.*')'
+Actual value: https://zonia-stg.com/bbmb5e/bb-detox 
+Call log:
+  - Expect "to_have_url" with timeout 20000ms
+    42 × locator resolved to <html lang="en" class="zonia-termly-hide-banner zonia-termly-hide-us-banner zonia-termly-region-checked">…</html>
+       - unexpected value "https://zonia-stg.com/bbmb5e/bb-detox"
+
+Aria snapshot:
+- heading "Download Your Free Gift + Get Your Free Ticket to BEYOND THE BRAIN" [level=3]
+- heading "Revitalize Your Brain and Body with Effective Detox Strategies to Overcome Brain Fog, Inflammation, Neurodegenerative Conditions and More" [level=2]
+- heading "Discover insights and detoxification tips from 40 experts who treat so-called “incurable” diseases" [level=4]
+- iframe
+- img
+- text: Click for sound
+- paragraph:
+  - text: Get access to the LIVE Worldwide Premiere on
+  - strong: November 15th
+  - text: when you get your Free Gift
+- paragraph:
+  - strong: (Valued at $27)
+- list:
+  - listitem: — Learn about the three herbs that support your liver’s natural detoxification and healing process (one of them may be in your pantry already!)
+  - listitem: — Find what toxic foods you should cut down (and out) from your diet
+  - listitem: — Discover the condition that is robbing you of your health and the methods to combat it
+- heading "Plus get your free ticket to BEYOND THE BRAIN" [level=5]:
+  - strong: Plus get your free ticket to BEYOND THE BRAIN
+- textbox "First Name*":
+  - /placeholder: " "
+  - text: AutomationCharles
+- text: First Name*
+- textbox "E-mail* E-mail* E-mail*":
+  - /placeholder: " "
+  - text: zoniat-v2price-1794708028@gmail.com
+- text: E-mail*
+- checkbox "Highly Recommended - Please sign me up for VIP alerts and text messages! E-mail E-mail"
+- text: Highly Recommended - Please sign me up for VIP alerts and text messages!
+- textbox "Phone"
+- button "GET YOUR FREE GIFT+Register for BEYOND THE BRAIN now"
+- text: By clicking "Register for Free Now" you agree to receive marketing emails from Zonia about products, events, and promotions. You may unsubscribe at any time. By proceeding with the registration, you agree to our
+- link "Privacy Policy":
+  - /url: https://zonia.com/privacy_cookie
+- text: ". By checking the \"Please sign me up for VIP alerts and text messages\" box you agree to receive important updates, reminders, and promotional messages about events and products from Zonia. Message frequency varies. You can stop receiving messages at any time by texting STOP to 86753. Message and data rates may apply. By opting in for text messages, you authorize Zonia to deliver marketing messages using an automatic telephone dialing system. SMS opt-in is not a requirement for purchasing any property, goods, or services. By leaving the \"Please sign me up for VIP alerts and text messages\" box unchecked you will not be opted in for SMS messages at this time. See our Privacy Policy and Terms for more info. World Premiere Starts in 0 Days 22 hours 58 minutes 52 seconds Our 40 World-Renowned Medical Doctors and Brain Health Experts Have Been Featured on:"
+- list:
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+  - listitem
+- text: If you’re like most people over 40, you’ve probably had your own share of mystery symptoms, aches, and pains.
+- paragraph: Maybe you're suddenly not handling certain foods well anymore.
+- paragraph: Or you’re experiencing ongoing mystery symptoms like joint pain, stomach problems, feeling faint.
+- paragraph: You might be struggling more often with tiredness and headaches.
+- paragraph: You’re frequently forgetting words or names of people and places you knew before.
+- paragraph: Or you feel exhausted and foggy in the morning even after a good night’s sleep.
+- paragraph: And more often than you’d like to admit, you’re NOT feeling as happy or as healthy as you’d like to.
+- paragraph: After all, your blood work looks fine, and things are working out for you in life…
+- paragraph: But why are you feeling so low?
+- paragraph: Your doctor gives you a brief checkup and sends you home with a bag of drugs to mask the symptoms...
+- paragraph: Not bothering to dig deeper.
+- paragraph: With a failing medical system and symptoms that keep getting worse, what will your future look like in 5, 10, or 20 years?
+- paragraph: Will you spend the next decades of your life enjoying time with your family, traveling, trying new hobbies, sharing stories with your grandchildren, and smiling while looking fondly at old photographs?
+- paragraph: Or become increasingly sick, crippled with inflammation and stress, losing your health and afraid for what the future holds?
+- paragraph: Unfortunately, the statistics are terrifying.
+- paragraph: In our modern world, we are confronted with more toxins than ever before.
+- paragraph: And even though our bodies evolved with the amazing ability to detoxify itself…
+- paragraph: Because of the overwhelming number of chemicals we ingest and absorb daily from our food, air, and water…
+- paragraph: Sadly, our natural detoxification abilities can no longer keep up.
+- paragraph: AND…
+- paragraph: Not only are we suffering but our children (and the next generations) are now being born with a toxic overload that is affecting their development.
+- text: 700,000toxic chemicals are consumed by the average person each day 52,000 Microplastics are ingested every year, per capita globally Heavy metaldeposits are found in Alzheimer's patients
+- paragraph: And it’s these toxins that are creating an unprecedented number of diseases and symptoms.
+- paragraph: By the year 2050…
+- paragraph: It is estimated that 50% of Americans will show symptoms of neurodegenerative disease.
+- paragraph: This means that...
+- paragraph: Taking control over our brain health has NEVER been more urgent.
+- paragraph: You cannot wait until you get your first symptoms. You need to act now.
+- paragraph: Because...
+- paragraph: A healthier present and brighter future is entirely in YOUR hands.
+- paragraph: You can start feeling better right away AND ensure your health in the future.
+- paragraph:
+  - strong: "Because as you're about to see, the key against:"
+- text: Brain Fog Depression Fatigue Sleep Issues Body Aches Memory Disturbance
+- paragraph:
+  - strong: has been hidden right inside your body this whole time.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Your Hidden Superhighway to Regaining Your Brain and Gut Health
+- paragraph: Scientists have discovered that your gut “sends messages” to your brain through a network of over 160,000 channels called the vagus nerve.
+- paragraph: This complex nerve and its network of channels - called 'fibers' in medical literature ....
+- paragraph: Travel from the gut to your brain...
+- paragraph: Go to your organs...
+- paragraph: And send “health” signals throughout your body.
+- paragraph: Even more, the vagus nerve influences neurogenesis, a process in which we grow new, healthy neurons...
+- paragraph: But because we are being overloaded with toxins, this superhighway is at risk.
+- paragraph: A compromised gut allows more toxins into your system…
+- paragraph: Interrupting the health signals and impeding your immune system.
+- paragraph: Those important “messages” can no longer travel from the gut to your brain.
+- paragraph: And being assaulted with an increasing number of toxins on a daily basis results in systemic inflammation, anxiety disorders, clinical depression, and a wide range of brain and chronic diseases.
+- paragraph: What this means is that...
+- text: When your gut is sick, your brain is sick, too.
+- paragraph: And did you know that 2 out of 3 people have their superhighway “broken,” which makes them vulnerable to brain and gut diseases?
+- paragraph: Unfortunately, every day we're disrupting this delicate relationship between the brain and the gut.
+- paragraph: Every single day, we're eating, drinking, and breathing chemicals our body can't process or eliminate.
+- text: And in fact, according to a study published by the University of Newcastle, the average person eats nearly 5,000 microplastics every week.
+- paragraph: This is the equivalent to eating one plastic bag every single week!
+- paragraph: What's worse...
+- paragraph: Multiple studies suggest heavy metals such as lead and mercury are abundant in our drinking water.
+- paragraph: Even our “healthy” foods like fruits, vegetables and leafy greens are poisoned with chemicals with names we can’t even pronounce.
+- paragraph: These are causing diseases in adults and brain defects in newborns.
+- paragraph: Pair that with the constant overstimulation from the news and our iPhones.... Plus persistent toxic relationships at home or at work....
+- paragraph: And you will get...
+- text: A planetary level disease making everyone sick!
+- paragraph: No wonder at some point the human body breaks down.
+- paragraph: The first symptoms people notice are feeling sluggish, fatigued, and emotionally drained, unable to enjoy life to the fullest.
+- paragraph: If our body had a battery, we could feel we’re drained to 50% or even less!
+- paragraph: Then there’s the bloating, the heartburn, the food sensitivities, and that post-meal crash that makes you want to curl under a blanket instead of giving you energy.
+- paragraph: It’s a sign your digestive system is under attack and in urgent need of detox and healing.
+- paragraph: Then there’s also the brain fog, memory slips, depression and anxiety…
+- paragraph: Like you can FEEL the wear and tear on your gut, body, and brain in every waking moment just getting worse.
+- paragraph: That’s your body and immune system sending you signals that you can’t ignore.
+- paragraph: Left untreated? These symptoms can turn into debilitating neurodegenerative, heart, autoimmune, and mental health diseases.
+- paragraph: Sometimes as early as in our late 30s or 40s.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Shivan Sarna Gut Health Advocate & Educator
+- paragraph: ‘Beyond the Brain’ is an empowering docuseries that unravels the root causes of brain and gut disorders. It showcases ground-breaking, yet simple protocols that allow you to take charge of your health, rebalance your gut microbiome and restore the synergy of the body’s systems. Every episode uncovers a new angle about the resilience of the human body and mind. Each topic feels like a new discovery and inspiration. The series lays out a clear, actionable path for a bright future - for each of us and our planet.
+- text: "But what scientists recently discovered could revolutionize how we take back control of our health with detoxification:"
+- paragraph: It turns out that repairing this “superhighway to health” can dramatically reduce inflammation, a key factor of Alzheimer's, dementia, heart disease, obesity and diabetes.
+- paragraph: Your vagus nerve, the superhighway to health, also helps regulate emotions, treats depression, and lowers chronic stress and anxiety.
+- paragraph: New studies prove it can even help treat brain injuries and brain diseases like Parkinson's disease, autism and traumatic brain injuries.
+- paragraph: In other words...
+- text: The power to heal has been inside us this whole time
+- paragraph: The best part? Healing your “superhighway” doesn't require expensive drugs and fancy therapies.
+- paragraph: Most of the protocols are free for everybody to discover and try out for themselves.
+- paragraph: And when you dig deeper into recent science, like our experts did... You will find even more tools for healing.
+- paragraph: Tools that are not currently known by 99% of the population who get sick every day.
+- paragraph: "But you're on this page, ready to embark on the journey of a lifetime:"
+- paragraph: "Imagine what discovering these tools can mean for your present and future:"
+- paragraph: Decades more of great emotional and physical health.
+- paragraph: Improving the symptoms or diseases you might be struggling with right now.
+- paragraph: Avoiding diseases that run in your family.
+- paragraph: Or simply spending your days happy, relaxed and energetic, enjoying every moment without the toxic burden causing aches, pains, depression, anxiety… or the threat of brain related diseases like Alzheimer’s and Parkinson’s.
+- paragraph: Completely trusting your body and brain on this wonderful journey of life.
+- paragraph: Decades more for making new memories, living life with purpose, or developing new hobbies.
+- paragraph: Spending your time and money traveling instead of on your doctor's bills.
+- paragraph: Most people think only “lucky” people or people with “good genes” live their lives in great health.
+- paragraph: But that's not true.
+- paragraph: We have power, and we can take back control.
+- paragraph: And as you're about to see for yourself...
+- text: There is information out there that can change your life
+- paragraph: You just need to be willing to be open to receive it and apply it in your daily life.
+- paragraph: In our newest documentary series, “Beyond the Brain”, we're revealing these tools to you.
+- paragraph: The nine episodes of the docuseries are a synergy between 40 of the most sought-after medical doctors and health experts in the world, sharing their best secrets at no cost to you.
+- paragraph: Unlike most traditional doctors, our functional medicine doctors and health experts went beyond traditional routes of treatment and helped cure incredible cases of gut and brain diseases.
+- paragraph: They're unconventional and innovative. They are progressive and cutting-edge.
+- paragraph: Most importantly, they are successful in what they do.
+- paragraph: You'll find out how their patients recovered from severe Alzheimer's and Parkinson's, or reversed dementia symptoms and chronic fatigue, reclaimed their energy, and took back control over their brain, their digestive system, and their overall health.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Why “Beyond the Brain” is Different—And the Most Important Docuseries You Will Ever Watch
+- paragraph: The gut and the brain are intimately connected.
+- paragraph: Our doctors and health experts will share little-known solutions to healing this fundamental relationship.
+- paragraph: You will discover effective steps and simple detoxification tips and methods that you can start immediately to fight against the toxins creating gut diseases and brain diseases – from digestive issues to depression, anxiety, memory loss, chronic fatigue, brain fog, Parkinson’s disease, Alzheimer's, dementia, and more…
+- paragraph: Without breaking the bank, and no matter where you are in your health journey.
+- paragraph: "The stories about overcoming the so-called “incurable” diseases will be proof of what's possible when you unlock the healing powers within you:"
+- list:
+  - listitem: Repairing your gut, your brain and your “superhighway” so you can enjoy rock-solid digestion and a clear mind at any age and decade of your life
+  - listitem: Getting rid of toxins and preventing future exposure to life-threatening chemicals from your food, home, and environment that kill your brain and body cells
+  - listitem: Improving or even curing common mental and physical health symptoms that have been bothering you for a while by lightening your body’s toxic burden and overload... Allowing you to focus on what’s truly important
+  - listitem: Giving yourself and your family the best possible future to live a long, happy, healthy life, without debilitating disease
+  - listitem: Becoming the most vibrant and positive person in your group and a role model for your friends and family
+  - listitem: Achieving a fulfilling, empowering and purposeful life now and for the next 10, 20, 30, 40 or more decades ahead, where your health is a source of strength
+- paragraph: And much more.
+- paragraph: Are you ready?
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Nathan Crane Award-Winning Author and Cancer Coach
+- paragraph: ‘Beyond the Brain’ feels like a journey around your body, and you’re always guided by real brain health experts. Not only that, the series also reveals the close link between our brain and other organs, which might surprise a lot of people. You also have to give credit to how well the series is structured - starting with an overview of the most common conditions, and then equipping the viewer with testing tools, protocols, and specific action steps. With such knowledge, reversing dementia and other diseases truly becomes possible.
+- text: "When you watch this 9-episode docuseries, you will discover:"
+- list:
+  - listitem: Fatigue, joint pain, muscle pain, headaches, and food sensitivities? These symptoms might mean “nothing” for your doctor but should concern YOU. What to do ASAP if you notice symptoms
+  - listitem: "“Bodies don’t break for no reason”: Why 99% of people with a chronic disease have at least 3 toxins in their body"
+  - listitem: "How to check your toxic burden with a few simple tests: Best urine and blood tests to uncover the root causes of your disease"
+  - listitem: Where to get the specialized test that can reveal if harmful toxins are clinging to your DNA
+  - listitem: "Watch out: These 2 common heavy metals could be hijacking your brain and your emotions every single day"
+  - listitem: How to “force” your brain to kickstart the production of self-healing compounds in less than 24 hours
+- list:
+  - listitem: "Brick walls for the brain: The most important brain supplements to incorporate in your diet now"
+- list:
+  - listitem: Why it’s called “the second force of the universe” - and the FDA approved it to treat resistant depression. It stimulates tissue energy, decreases inflammation and increases circulation in the brain
+  - listitem: "A doctor's path to self-healing: discover our expert’s journey on wiping off depression and reclaiming joy using a serotonin-boosting natural compound"
+  - listitem: The gold-standard therapy technique to stop negative thinking - and an incredibly powerful tool that can “erase” trauma from your brain
+  - listitem: "The #1 disease-causing toxin in the US: make sure you are not among its victims"
+  - listitem: Why your gut can release toxins in the brain, and the secret link between your gut and Alzheimer’s and Parkinson’s disease
+  - listitem: Three major ways in which toxins change your nervous system and how to reverse the damage
+  - listitem: A revolutionary device that significantly improves sleep quality, memory and cognitive function
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to Heal Your Brain and Beyond What You Will Find in Each Episode of This Unique 9-Part Docuseries Beyond the Brain episode 1 The Silent Assault on Our Brain: Are We Doomed to a Mass Brain Meltdown?"
+- list:
+  - listitem: "The link between everyday foods and brain disease, multiple sclerosis, autism and Parkinson's: What corporations don't want you to know"
+  - listitem: "Doctors warn: There's an epidemic of brain dysfunction in the world starting as early as in our 40s"
+  - listitem: Suffering from poor memory, hazy thoughts, depression and anxiety? See why these might be symptoms of toxin overload
+  - listitem: Dementia is incurable, right? Wrong! See how functional medicine doctors are reversing dementia in their practice, and why traditional doctors don't tell you this
+  - listitem: Is it normal to have memory problems as you age? Not at all. In fact, there's something else happening in your body
+  - listitem: "Warning: See why 2 servings of store-bought pastries or fast food per week can DOUBLE your chances for anxiety and depression - and why kids who eat candy have a higher risk of getting arrested in adulthood"
+  - listitem: Feeling “meh”? How food might block your ability to feel happy and full of life ... Plus the dangerous “hamster wheel” most Americans are into
+  - listitem: Why your gut can release toxins in the brain, and the secret link between your gut and Alzheimer's and Parkinson's disease
+  - listitem: Can anxiety, depression, OCD, schizophrenia, and bipolar disorder actually be another disease caused by your food?
+  - listitem: "The root cause of rheumatoid arthritis and brain dysfunction: Fix this before you do anything else"
+- paragraph: “We have seen an incredible and alarming increase in the rise of every single chronic and neurodegenerative disease across the board over the last 50 to 60 years.”
+- text: "Dr. Elena Villanueva DC, MHHCP, Doctor of Holistic Medicine episode 2 Household Under Siege: The Hidden Toxic Sources of Your Pain, Fatigue & Brain Fog"
+- list:
+  - listitem: Is your home toxic? See where mold and other toxins may be hiding in plain sight and what to do if your home is contaminated
+  - listitem: Discover how to properly test for environmental toxins and how to safely eliminate them, one by one
+  - listitem: Do you have an “environmentally acquired illness”? How chronic inflammation can cause disease in the body
+  - listitem: Is mold exposure a HUGE cause of suicide and depression in the US? See proof from our experts
+  - listitem: Can bottled water damage the IQ of developing brains? Experts weigh in and give you healthier water options
+  - listitem: "Watch out: These 2 common heavy metals could be hijacking your brain and your emotions every single day"
+  - listitem: Discover the connection between leaky gut and autoimmune disease PLUS the most effective detox solutions to recover from inflammation
+  - listitem: The most critical antioxidant you can use to detox the liver and fight against free radicals
+  - listitem: "Big Food's secrets exposed: shocking truths about the pesticides, herbicides, and antibiotics in everyday food staples"
+  - listitem: The ancestral secrets to perfect gut health found in the highlands of Papua New Guinea
+  - listitem: This “flamethrower” ingredient damages your brain and your cells. It's found in all packaged, processed foods. Plus, a guide to detox
+- paragraph: “It's everywhere, it's in people's households. We've all been exposed to it, we constantly get re-exposed to it.”
+- text: "Kiran Krishnan Research Microbiologist, Human Microbiome Expert episode 3 The Wildfire in Your Brain: #1 Cause of Brain & Mental Health Deterioration (and How to Reclaim Your Health)"
+- list:
+  - listitem: Could memory loss, ADHD, developmental issues and brain diseases have the same root cause? Our experts connect the dots traditional doctors are missing
+  - listitem: Three major ways in which toxins change your nervous system and how to reverse the damage
+  - listitem: Could a traumatic childhood predispose you to the early onset of dementia?
+  - listitem: Why fatigue, brain fog, and weight gain are intimately connected, and how to repair the root cause
+  - listitem: "The #1 root cause of all brain diseases finally uncovered: Alzheimer's, depression, anxiety, or bipolar disorders. Plus: the roadmap to protect yourself"
+  - listitem: "Toxic toothpaste: See how certain brands can affect our brain, by disrupting our endocrine system"
+  - listitem: One missing mineral causes hypothyroidism, and why traditional doctors don't check for this
+  - listitem: "One hidden toxin that's contributing to major diseases found in most US households. Warning: It can cause muscle and nerve damage"
+  - listitem: "Why people who have issues with their sinuses are more at risk for developing allergies and dementia and the #1 advice for healthy sinuses"
+  - listitem: Which heavy metal causes Parkinson's symptoms and leads to misdiagnosis
+  - listitem: Is bread healthy? See how to know if you're gluten sensitive, and what to know about gluten even if you're perfectly fine after eating bread and pastries
+- paragraph: "\"Oftentimes, you get this miscellaneous variety of symptoms that you don't really understand that are causing neurological problems.\""
+- text: "Dr. Darin Ingels ND, FAAEM Fellow, American Academy of Environmental Medicine episode 4 Sick Gut, Sick Brain: Overcoming the Origin of All Disease"
+- list:
+  - listitem: "The many faces of a troubled gut: Discover how your gut impacts chronic disease, fertility, thyroid function and hormones"
+  - listitem: "Key to reversing depression: Why 70% - 90% of your “happy hormone” is made in your gut"
+  - listitem: Are OCD, bipolar disorder, schizophrenia created in the gut? And can bloating be a precursor to an autoimmune condition?
+  - listitem: The secret to why some family members are always healthy while everybody else keeps getting sick
+  - listitem: The devastating truth about water quality in the US, and why 75% of tap water can give you a leaky gut in 15 minutes
+  - listitem: "Fatty liver: Why 25% of Americans have it and the root cause doctors don't talk about"
+  - listitem: Why you should stop using mouthwash immediately - plus the top 5 tips to ensure perfectly clean and healthy mouth and gut
+  - listitem: Harvard declares 'all diseases begin in the gut', but traditional medicine still needs to catch up
+  - listitem: Get tested in 5 minutes to protect yourself against this gut bacteria which destroys your microbiome, promotes cancer and inflammation. One in two people have it!
+  - listitem: Do you have food sensitivities? Fix this one root cause and watch those food sensitivities go away
+  - listitem: Why 80% of women after 40 have toxic, sluggish bile, and the link between a sick bile and osteoporosis
+  - listitem: "The #1 gut-healing nutrient you can find everywhere at a decent price (and which specific form you need)"
+- paragraph: “All disease begins in the gut. When the gut is inflamed, nothing functions the way it's supposed to.”
+- text: "Dr. Tom O'Bryan DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine episode 5 Toxin Detectives: The Tests That Will Uncover the Root Cause and Save Your Brain & Life"
+- list:
+  - listitem: "Unlock the #1 rule to detox your body, according to a toxicology expert"
+  - listitem: Top 3 toxin groups that lead to autoimmunity and how to get properly tested
+  - listitem: Discover the ultimate blood tests that reveal the hidden toxins in your body — and a popular test method you must avoid
+  - listitem: "Tired and gaining weight? It's not your fault: How to target the toxic root cause of weight gain and chronic fatigue"
+  - listitem: "If I have normal blood tests, am I healthy? Not necessarily: Why trusting the “normal range” values could be sabotaging your health, according to doctors."
+  - listitem: "The generational curse of a 1930s chemical: Unveil how this cancer-causing agent from the past is haunting the present generations and how you can break free from its chain"
+  - listitem: "The hormone disruptor in our water: Discover a startling substance in your water supply you should avoid"
+  - listitem: "Where to get the specialized test that can reveal if harmful toxins are clinging to your DNA; PLUS: Three different tests to see if you have heavy metals"
+  - listitem: "“Bodies don't break for no reason”: Why 99% of people with a chronic disease have at least 3 toxins in their body"
+  - listitem: "The unexpected link between Parkinson's and disinfectants: A doctor reverses his Parkinson's diagnosis by getting rid of two dangerous chemicals"
+  - listitem: One neurotransmitter that can “fry out” your brain, and how it's known to increase to dangerous levels after exposure to toxins
+  - listitem: Provocation-Neutralization technique to diagnose and treat individuals with sensitivities and intolerances
+- paragraph: “So when you're told that your labs are normal, it definitely does not mean you're healthy. It means you're like nine out of ten people.”
+- text: "Dr. M. Yvonne Karney MD, ABAARM, FACOG, Board-Certified Regenerative Medicine & Gynecology episode 6 Emotional Detox: How To Let Go of Stress and Negative Emotions and Find Your Joy and Freedom"
+- list:
+  - listitem: The three toxic emotions that ruin our body—and what can we learn from a surge in heart attacks which started in the 60's
+  - listitem: Understanding the deep ties between stress, aggression, fear, and bodily inflammation and how to unlock the secrets to untangle this destructive cycle
+  - listitem: "Ancient Chinese Medicine Secrets: How every emotion affects different organs, and how to use these insights to protect your mind and body"
+  - listitem: Why emotional trauma resembles a brain injury in brain scans
+  - listitem: "Undiagnosed root causes: Why most doctors overlook trauma, but how understanding your “big” and “small” traumas can be a game-changer in your personal health journey"
+  - listitem: "Overextended, overburdened, overscheduled: How to reclaim your health in a culture that reinforces constant productivity and achievement at all costs"
+  - listitem: "Doctors share the #1 sign of emerging emotional problems: How to stay one step ahead of anxiety and depression"
+  - listitem: Can stress and negative emotions be the most dangerous toxins of all? Learn how to cope with difficult feelings and stressors in a healthy way
+  - listitem: The easiest, simplest way to start exercising more... Plus the Japanese principle that can make any habit stick for life
+  - listitem: What happens when you lose the ultimate ‘weapon’ of your mind? And how to reclaim it – revealed by a Buddhist teacher
+  - listitem: "How to go from reactive to proactive: Steps to reclaim your freedom from anything that's happening around you and a simple breathing exercise to get you off fight or flight response"
+  - listitem: The innovative 5-step blueprint that is your golden key to improved health and happiness
+- paragraph: “The most important factor in our health is our consciousness”
+- text: "Dr. Thomas Alexander MD, Internal Medicine, Researcher on The Role of Consciousness in Health episode 7 Complex Brain Diseases: Blueprints for Reversing Brain Fog, Chronic Fatigue and Dementia"
+- list:
+  - listitem: Throw the painkillers away and ease up migraines and headaches with this amazing natural therapy
+  - listitem: Is it allergy, or is it mast cell activation? These symptoms may lead you to the root cause of your allergies
+  - listitem: Is it a mental health issue or a toxicity issue? Experts weigh in on disturbing infections linked to depression and anxiety
+  - listitem: "“A huge gift for your brain”: How to help prevent memory loss, brain disorder and mood disorders if you're a woman over 40"
+  - listitem: Are you a woman over 35? Check a specific hormone that might cause anxiety, insomnia and depression
+  - listitem: "Heal chronic fatigue once and for all: From four root causes to complete recovery"
+  - listitem: "A case for reversing dementia: what we've learned in the past 40 years about how the brain can heal itself"
+  - listitem: One diet change that could heal your brain from brain fog, memory loss and cognitive decline
+  - listitem: Memory loss or sleep apnea? Here's how you might be unknowingly damaging your brain during sleep
+  - listitem: "Discover Linda's emotional story: From severe dementia to getting her life back in a matter of weeks"
+  - listitem: The two steps that foster miraculous healing that traditional medicine thinks are impossible
+  - listitem: Learn about STAINES framework for detecting the root cause and 3D-3M-3S protocol for healing and reversing brain decline
+  - listitem: Why 1 in 2 Americans will have symptoms of brain disease by 2050 and what we can do now to prevent our brains from declining
+- paragraph: “Our bodies are designed to heal. It’s just a matter of getting the junk out of the way and the right support in. And it has been miraculous.”
+- text: "Dr. Heather Sandison Naturopathic Doctor episode 8 Superfoods and Superhabits: How to Kickstart Brain & Body Healing in Less Than 24 Hours"
+- list:
+  - listitem: The most important secret to avoiding pesticides, antibiotics and other chemicals in your food
+  - listitem: How to “force” your brain to kickstart the production of self-healing compounds in less than 24 hours
+  - listitem: "How to give yourself new brain cells on command: This simple habit prevents disease and creates more brain cells"
+  - listitem: "The master antioxidant: It repairs the whole body and expels toxins from your system"
+  - listitem: "The real dangers behind our smartphone use: Could bluelight hinder your ability to heal?"
+  - listitem: Is your home an electrical “prison”? Learn how one simple effective change in your household can enable deep sleep
+  - listitem: Do you suffer from “toxic hunger”? Here's why most people eat when they're not hungry, and simple steps to ditch the habit
+  - listitem: One crucial detox food you need to eat daily with your lunch and dinner, plus the tasty veggies that heal the gut
+  - listitem: Why America uses more chemicals than every other country in the world, including dangerous ones that are banned in the EU and Canada
+  - listitem: The best prebiotic dessert on the planet takes just a few minutes to prepare, and you will love it
+  - listitem: "Brick walls for the brain: The most important brain supplements to incorporate in your diet now"
+  - listitem: One supplement that can reduce brain injury with up to 75%, and the “master antioxidant” that can decrease brain damage up to 70%
+  - listitem: "The miracle compound for healthy muscles and energy production: How one doctor healed his muscle disease with one daily tablet of it"
+- paragraph: “If we switch to organic food and avoid pesticides, the pesticides are gone from our body within a couple of days, a week at the most.”
+- text: "Dr. Kelly McCann MD, MPH&TM, IFMCP, Board Certified Internal Medicine, Pediatrics & Integrative Medicine episode 9 Healed Against All Odds: Cutting-Edge Therapies and Miraculous Cases"
+- list:
+  - listitem: Discover the gold-standard therapy technique to stop negative thinking - and an incredibly powerful tool that can “erase” trauma from your brain
+  - listitem: "Multiple layers of healing: Game-changing peptide therapies are taking the world by storm and supporting muscle, gut and brain health"
+  - listitem: How light therapy is science-backed to reduce mortality, increase wellbeing and relax the body while getting rid of toxins
+  - listitem: Expert-vetted therapies that bring balance and healing to the brain and body— plus the three “fertilizers” of your brain cells
+  - listitem: Discover the quickest, simplest ways to detoxify your body using inexpensive minerals and a crucial ingredient that guarantees the proper expulsion of toxins.
+  - listitem: The “Nobel-prize” winning natural drink that helps heal and soothe your gut lining, feeding your microbiota
+  - listitem: It's called “the second force of the universe” - and the FDA approved it to treat resistant depression. It stimulates tissue energy, decrease inflammation and increase circulation in the brain
+  - listitem: Discover a 100-years old method that originally treated scuba-divers and is now a popular solution to numerous brain ailments
+  - listitem: "Plant medicine: Two amazing stories of patients using Ayahuasca and Psilocybin mushrooms to overcome depression and obesity"
+  - listitem: Hear the emotional story of a patient who healed her debilitating Parkinson's disease that started in her 40s, and the progress she's made using natural therapies - now completely healed
+  - listitem: Discover more heartwarming Tales of Recovery from 'Incurable' Diseases using cutting edge interventions
+- paragraph: “Neurofeedback is incredibly powerful because it helps you see in real time your brain function.”
+- text: Dr. Jill Carnahan MD, ABIHM, ABoIM, IFMCP, Medical Director, Flatiron Functional Medicine
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- img
+- text: Sarah Otto Nutritionist & Health Docuseries Filmmaker
+- paragraph: Stefan has produced astonishing health docuseries that have changed the lives of millions of people for the better, and ‘BEYOND THE BRAIN’ is no exception. His unwavering passion and relentless drive to create insightful, yet easy-to-follow educational content that empowers others are evident in all of his work – but especially here. By featuring trusted professionals and published experts, Stefan has created a space where people’s questions are finally addressed, and brain health is no longer a mystery
+- text: "67% of Americans Are at Great Risk Because of Their Broken \"Superhighway\" — Here's How You Can Beat the Odds:"
+- paragraph: According to a survey performed by a leading research company, 2 in 3 Americans suffer from gut issues like gas, bloating and abdominal pain.
+- paragraph: "For almost 70 million Americans, things are even worse: they're suffering from gastroesophageal reflux disease (GERD) or irritable bowel syndrome (IBS)."
+- paragraph: What this means is that their brain-gut connection is compromised.
+- paragraph: What's worse...
+- paragraph: They’re completely unaware that their gut issues and toxin overload dramatically increase their chances of Alzheimer’s and dementia, autoimmunity, inflammation, and even depression and anxiety.
+- paragraph: But because you're on this page, you are already way ahead of the curve.
+- paragraph: If you're the type of person who takes action, now is the time to start repairing, rejuvenating and reclaiming your health.
+- paragraph: Don't wait until your symptoms transform into a life-long disease.
+- paragraph: And don't wait for your diseases to become crippling.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- paragraph: After implementing the advice from our experts, you'll not only learn how to heal your brain-gut connection...
+- paragraph: How to protect yourself from the silent toxic war against your brain and your body...
+- paragraph: How to repair the superhighway to health...
+- paragraph: You'll also learn how to take back control over your mind and body.
+- paragraph: You will be part of a select group of people who have access to knowledge that makes them powerful beyond belief.
+- text: No More depending on prescriptions just to get through your day. No More worry about the future. No More being just a number of a dire national statistic. No More toxin overload interfering with signals along the gut-brain superhighway allowing your body to naturally do what it was designed to do. No More struggling with gut issues, brain issues, or mental health issues that you can ameliorate or even reverse altogether through an effective detoxification program..
+- paragraph: Thanks to the work of our experts, this can become your reality sooner and easier than you thought possible.
+- paragraph: Imagine how great it will be to have answers for yourself and your loved ones.
+- paragraph: We all have someone in our families who is struggling...
+- paragraph: Our parents, spouses, children and friends in need of relief and answers.
+- paragraph: With each episode, we're striving to give you the most up-to-date and effective knowledge you need to start healing without second-guessing.
+- paragraph: "It all starts with a simple step:"
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Meet Our 40 World-Renowned Medical Doctors and Brain Health Experts Featured in Beyond the Brain Joel Fuhrman, MD 7-time NY Times Bestselling Author, President of Nutritional Research Foundation Jill Carnahan, MD, ABIHM, ABoIM, IFMCP Medical Director, Flatiron Functional Medicine Jeffrey Bland, PhD, FACN, CNS Founder of Personalized Lifestyle Medicine Institute (PLMI) Tom O'Bryan, DC, CCN, DACBN, CIFM Faculty, Institute for Functional Medicine Laura Frontiero, NP-BC Functional Medicine Practitioner Jaquel Patterson, ND, MBA Licensed Naturopathic Physician, Past President of American Association of Naturopathic Physicians Austin Perlmutter, MD, ABIM Board-Certified Internal Medicine, New York Times Bestselling Author Janette Hope, MD, FAAEM, DABEM, DABFM Diplomat of the American Board of Environmental Medicine, Diplomat of the American Board of Integrative Medicine Barry Smeltzer, MPAS, PA-C, FAAEM Adj. Professor, Univ. of Texas Health Sciences, Fellow of the American Academy of Environmental Medicine Aristo Vojdani, PhD, MSc, CLS Clinical Professor, Dep of Preventive Medicine, Loma Linda University Robert Silverman, DC, MS, DCBCN Doctor of Chiropractic Heather Sandison, ND Naturopathic Doctor Cheng Ruan, MD Board-Certified Internal Medicine Physician Trina Felber, RN, BSN, MSN, CRNA Natural Oral & Skincare Wellness Expert Kiran Krishnan Research Microbiologist, Human Microbiome Expert M. Yvonne Karney, MD, ABAARM, FACOG Board-Certified Regenerative Medicine & Gynecology Robin A. Bernhoft, MD, FACS, DABEM FAAEM Environmental Medicine Expert Sinclair Kennally, CNHP, CNC Chronic Digestive Disorder Specialist Thomas Alexander, MD Internal Medicine, Researcher on The Role of Consciousness in Health Amelia Scott Barrett, MD Neurologist and Founder of Migraine Relief Code Paul Barattiero, CHS, CNHP Expert in Molecular Hydrogen and EMF Exposure Irene Cop, MD, DC Elite Performance Trainer, Founder of the Success S.H.I.F.T. Institute Frederick 'Tim' Guilford, MD Integrative Medicine Clinician and Researcher, Liposomal Glutathione Expert Lisa Lavine Nagy, MD, FAAEM Medical Director of the Environmental Health Center of Martha's Vineyard Kelly McCann, MD, MPH&TM, IFMCP Board Certified Internal Medicine, Pediatrics & Integrative Medicine Kalpana Patel, MD Gastroenterologist Elena Villanueva, DC, MHHCP Doctor of Holistic Medicine William Pawluk, MD, MSc PEMF Therapy Expert Keesha Ewers, ARNP, PhD Emotional Trauma Specialist Wendie Trubow, MD, MBA Functional Medicine Gynecologist Andrew W. Campbell, MD Clinical Immunology and Toxicology LeTrinh Hoang, DO Osteopathic Pediatrician Sharon Stills, NMD Naturopathic Medical Doctor Christopher Shade, PhD Environmental Scientist Wendy Myers, ND Naturopathic Doctor and Expert in Detoxification Rajka Milanovic Galbraith, MD, IFMCP Board-Certified Functional & Integrative Medicine Doctor Darin Ingels, ND, FAAEM Fellow, American Academy of Environmental Medicine Lisa Saff Koche, MD, ABAARM Triple Board-Certified in Internal Medicine, Bariatrics, and Anti-Aging and Regenerative Medicine Lyn Patrick ND Naturopathic Physician,Environmental Medicine & Metal Toxicology Expert Master Acharavadee Wongsakon Meditation Master, President of the Knowing Buddha Foundation
+- link "Register for free now":
+  - /url: "#form-target"
+- text: "Register For Free Today to Heal Your Brain and Beyond Meet Your Host:"
+- paragraph: Stefan Apostolov is a lifestyle coach and award-winning filmmaker specializing in highly impactful video content.
+- paragraph: Throughout his life, Stefan focused on building healthy habits and adopting a good nutrition and exercise regime.
+- paragraph: He is the CEO of Zonia, a video-streaming platform that helps people change their life and reach their highest potential, both physically and mentally.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond Secure Your Access Now, Before This 9-part Groundbreaking Documentary Is Taken Down
+- paragraph: “Beyond the Brain” is not just about you. It's also about your family...
+- paragraph: About your parents and spouse. About your best friends. About sharing new frontiers of medicine that could save the life of someone you cherish.
+- paragraph: You can share what you learn with other people in your life and help them take back control, too.
+- paragraph: And by learning about how to get rid of the toxins that are hindering your current and future well-being and beating the odds, you’ll set an example to the people in your circle.
+- paragraph: With each episode, you'll feel more inspired to make small but vital changes that will transform your health and the health of those closest to you.
+- link "Register for free now":
+  - /url: "#form-target"
+- text: Register For Free Today to Heal Your Brain and Beyond
+- contentinfo:
+  - list:
+    - listitem: © 2026 ZONIA
+    - listitem:
+      - text: "|"
+      - link "Terms of use":
+        - /url: /terms_use
+    - listitem:
+      - text: "|"
+      - link "Privacy Policy":
+        - /url: /privacy_cookie
+    - listitem:
+      - text: "|"
+      - link "Disclaimer":
+        - /url: /disclaimer
+    - listitem:
+      - link "Do not sell or share my personal information":
+        - /url: /opt-out
+- text: Processing...
+Failed step: user register in "bb_ev_detox" Opt In page
+Test failed on page: 'https://zonia-stg.com/bbmb5e/bb-detox'
+Taking screenshot
+Screenshot saved: /home/runner/work/automation-testing-framework/automation-testing-framework/screenshots/BB_Evergreen_funnel_--_@1.2__20261115-020119.png
